@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Shader</h1>
+  class SF::Shader
 
+<span class="type-permalink">[<a href="../SF/Shader.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Shader.html">SF::Shader</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -81,31 +79,43 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#from_file%28vertex_shader_filename%20%3A%20String%2C%20fragment_shader_filename%20%3A%20String%29-class-method" class="signature"><strong>.from_file</strong>(vertex_shader_filename : String, fragment_shader_filename : String)</a>
+        <a href="#available%3F-class-method" class="signature"><strong>.available?</strong></a>
+        
+          <div class="summary"><p>Tell whether or not the system supports shaders</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bind%28shader%3AShader%7C%3A%3ANil%29-class-method" class="signature"><strong>.bind</strong>(shader : Shader | ::Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_file%28vertex_shader_filename%3AString%2Cfragment_shader_filename%3AString%29-class-method" class="signature"><strong>.from_file</strong>(vertex_shader_filename : String, fragment_shader_filename : String)</a>
         
           <div class="summary"><p>Load both the vertex and fragment shaders from files</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_file%28filename%20%3A%20String%2C%20type%20%3A%20Type%29-class-method" class="signature"><strong>.from_file</strong>(filename : String, type : Type)</a>
+        <a href="#from_file%28filename%3AString%2Ctype%3AType%29-class-method" class="signature"><strong>.from_file</strong>(filename : String, type : Type)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28vertex_shader%20%3A%20String%2C%20fragment_shader%20%3A%20String%29-class-method" class="signature"><strong>.from_memory</strong>(vertex_shader : String, fragment_shader : String)</a>
+        <a href="#from_memory%28shader%3AString%2Ctype%3AType%29-class-method" class="signature"><strong>.from_memory</strong>(shader : String, type : Type)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_memory%28vertex_shader%3AString%2Cfragment_shader%3AString%29-class-method" class="signature"><strong>.from_memory</strong>(vertex_shader : String, fragment_shader : String)</a>
         
           <div class="summary"><p>Load both the vertex and fragment shaders from source codes in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28shader%20%3A%20String%2C%20type%20%3A%20Type%29-class-method" class="signature"><strong>.from_memory</strong>(shader : String, type : Type)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_stream%28vertex_shader_stream%20%3A%20%3A%3APointer%28InputStream%29%2C%20fragment_shader_stream%20%3A%20%3A%3APointer%28InputStream%29%29-class-method" class="signature"><strong>.from_stream</strong>(vertex_shader_stream : ::Pointer(InputStream), fragment_shader_stream : ::Pointer(InputStream))</a>
+        <a href="#from_stream%28vertex_shader_stream%3A%3A%3APointer%28InputStream%29%2Cfragment_shader_stream%3A%3A%3APointer%28InputStream%29%29-class-method" class="signature"><strong>.from_stream</strong>(vertex_shader_stream : ::Pointer(InputStream), fragment_shader_stream : ::Pointer(InputStream))</a>
         
           <div class="summary"><p>Load both the vertex and fragment shaders from custom streams</p></div>
         
@@ -114,26 +124,7 @@
       <li class="entry-summary">
         <a href="#is_available-class-method" class="signature"><strong>.is_available</strong></a>
         
-          <div class="summary"><p>Tell whether or not the system supports shaders</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Shader.html{method.anchor}">.available?</a></code></p></div>
         
       </li>
     
@@ -152,7 +143,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#current_texture_parameter%3D%28name%20%3A%20String%29-instance-method" class="signature"><strong>#current_texture_parameter=</strong>(name : String)</a>
+        <a href="#current_texture_parameter%3D%28name%3AString%29-instance-method" class="signature"><strong>#current_texture_parameter=</strong>(name : String)</a>
         
           <div class="summary"><p>Change a texture parameter of a shader</p></div>
         
@@ -173,77 +164,70 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20texture%20%3A%20Texture%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, texture : Texture)</a>
-        
-          <div class="summary"><p>Change a texture parameter of a shader</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20transform%20%3A%20Transform%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, transform : Transform)</a>
+        <a href="#set_parameter%28name%3AString%2Ctransform%3ATransform%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, transform : Transform)</a>
         
           <div class="summary"><p>Change a matrix parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20vector%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, vector)</a>
+        <a href="#set_parameter%28name%3AString%2Ctexture%3ATexture%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, texture : Texture)</a>
+        
+          <div class="summary"><p>Change a texture parameter of a shader</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_parameter%28name%3AString%2Cvector%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, vector)</a>
         
           <div class="summary"><p>Change a 2-components vector parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number)</a>
+        <a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number)</a>
         
           <div class="summary"><p>Change a 2-components vector parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20current_texture%20%3A%20CurrentTextureType%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, current_texture : CurrentTextureType)</a>
+        <a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number, z : Number)</a>
+        
+          <div class="summary"><p>Change a 3-components vector parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%2C%20z%20%3A%20Number%2C%20w%20%3A%20Number%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number, z : Number, w : Number)</a>
+        <a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%2Cw%3ANumber%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number, z : Number, w : Number)</a>
         
           <div class="summary"><p>Change a 4-components vector parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%2C%20z%20%3A%20Number%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number, y : Number, z : Number)</a>
-        
-          <div class="summary"><p>Change a 3-components vector parameter of a shader</p></div>
+        <a href="#set_parameter%28name%3AString%2Ccurrent_texture%3ACurrentTextureType%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, current_texture : CurrentTextureType)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20vector%20%3A%20Vector3f%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, vector : Vector3f)</a>
-        
-          <div class="summary"><p>Change a 3-components vector parameter of a shader</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20color%20%3A%20Color%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, color : Color)</a>
+        <a href="#set_parameter%28name%3AString%2Ccolor%3AColor%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, color : Color)</a>
         
           <div class="summary"><p>Change a color parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number)</a>
+        <a href="#set_parameter%28name%3AString%2Cvector%3AVector3f%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, vector : Vector3f)</a>
         
-          <div class="summary"><p>Change a float parameter of a shader</p></div>
+          <div class="summary"><p>Change a 3-components vector parameter of a shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
+        <a href="#set_parameter%28name%3AString%2Cx%3ANumber%29-instance-method" class="signature"><strong>#set_parameter</strong>(name : String, x : Number)</a>
         
-          <div class="summary"><p>Get the underlying pointer</p></div>
+          <div class="summary"><p>Change a float parameter of a shader</p></div>
         
       </li>
     
@@ -257,7 +241,47 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="from_file%28vertex_shader_filename%20%3A%20String%2C%20fragment_shader_filename%20%3A%20String%29-class-method">
+      <div class="signature" id="available?-class-method">
+        
+        def self.<strong>available?</strong>
+      </div>
+      
+        <div class="doc"><p>Tell whether or not the system supports shaders</p>
+
+<p>This function should always be called before using
+the shader features. If it returns false, then
+any attempt to use Shader will fail.</p>
+
+<p><em>Returns</em>: True if the system can use shaders, False otherwise</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1793" target="_blank">View source</a>]
+        
+        [<a href="#available%3F-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="bind(shader:Shader|::Nil)-class-method">
+        
+        def self.<strong>bind</strong>(shader : <a href="../SF/Shader.html">Shader</a> | Nil)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L307" target="_blank">View source</a>]
+        
+        [<a href="#bind%28shader%3AShader%7C%3A%3ANil%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="from_file(vertex_shader_filename:String,fragment_shader_filename:String)-class-method">
         
         def self.<strong>from_file</strong>(vertex_shader_filename : String, fragment_shader_filename : String)
       </div>
@@ -276,30 +300,52 @@ for it before writing your own shaders.</p>
 
 <ul><li><code>vertex_shader_filename</code>: Path of the vertex shader file to load, or NULL to skip this shader</li><li><code>fragment_shader_filename</code>: Path of the fragment shader file to load, or NULL to skip this shader</li></ul>
 
-<p><em>Returns</em>: A new Shader object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Shader object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1486" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1514" target="_blank">View source</a>]
+        
+        [<a href="#from_file%28vertex_shader_filename%3AString%2Cfragment_shader_filename%3AString%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="from_file%28filename%20%3A%20String%2C%20type%20%3A%20Type%29-class-method">
+      <div class="signature" id="from_file(filename:String,type:Type)-class-method">
         
         def self.<strong>from_file</strong>(filename : String, type : <a href="../SF/Shader/Type.html">Type</a>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L279" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L284" target="_blank">View source</a>]
+        
+        [<a href="#from_file%28filename%3AString%2Ctype%3AType%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="from_memory%28vertex_shader%20%3A%20String%2C%20fragment_shader%20%3A%20String%29-class-method">
+      <div class="signature" id="from_memory(shader:String,type:Type)-class-method">
+        
+        def self.<strong>from_memory</strong>(shader : String, type : <a href="../SF/Shader/Type.html">Type</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L291" target="_blank">View source</a>]
+        
+        [<a href="#from_memory%28shader%3AString%2Ctype%3AType%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="from_memory(vertex_shader:String,fragment_shader:String)-class-method">
         
         def self.<strong>from_memory</strong>(vertex_shader : String, fragment_shader : String)
       </div>
@@ -318,30 +364,20 @@ writing your own shaders.</p>
 
 <ul><li><code>vertex_shader</code>: String containing the source code of the vertex shader, or NULL to skip this shader</li><li><code>fragment_shader</code>: String containing the source code of the fragment shader, or NULL to skip this shader</li></ul>
 
-<p><em>Returns</em>: A new Shader object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Shader object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1506" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="from_memory%28shader%20%3A%20String%2C%20type%20%3A%20Type%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>from_memory</strong>(shader : String, type : <a href="../SF/Shader/Type.html">Type</a>)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1534" target="_blank">View source</a>]
+        
+        [<a href="#from_memory%28vertex_shader%3AString%2Cfragment_shader%3AString%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L286" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="from_stream%28vertex_shader_stream%20%3A%20%3A%3APointer%28InputStream%29%2C%20fragment_shader_stream%20%3A%20%3A%3APointer%28InputStream%29%29-class-method">
+      <div class="signature" id="from_stream(vertex_shader_stream:::Pointer(InputStream),fragment_shader_stream:::Pointer(InputStream))-class-method">
         
         def self.<strong>from_stream</strong>(vertex_shader_stream : ::Pointer(<a href="../SF/InputStream.html">InputStream</a>), fragment_shader_stream : ::Pointer(<a href="../SF/InputStream.html">InputStream</a>))
       </div>
@@ -360,12 +396,15 @@ it before writing your own shaders.</p>
 
 <ul><li><code>vertex_shader_stream</code>: Source stream to read the vertex shader from, or NULL to skip this shader</li><li><code>fragment_shader_stream</code>: Source stream to read the fragment shader from, or NULL to skip this shader</li></ul>
 
-<p><em>Returns</em>: A new Shader object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Shader object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1526" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1554" target="_blank">View source</a>]
+        
+        [<a href="#from_stream%28vertex_shader_stream%3A%3A%3APointer%28InputStream%29%2Cfragment_shader_stream%3A%3A%3APointer%28InputStream%29%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -375,63 +414,15 @@ it before writing your own shaders.</p>
         def self.<strong>is_available</strong>
       </div>
       
-        <div class="doc"><p>Tell whether or not the system supports shaders</p>
-
-<p>This function should always be called before using
-the shader features. If it returns false, then
-any attempt to use Shader will fail.</p>
-
-<p><em>Returns</em>: True if the system can use shaders, False otherwise</p></div>
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Shader.html{method.anchor}">.available?</a></code></p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1765" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1468" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1798" target="_blank">View source</a>]
         
-        def self.<strong>wrap_ptr</strong>(ptr)
+        [<a href="#is_available-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1468" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1468" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -456,15 +447,18 @@ mix Shader with OpenGL code.</p>
 
 <ul><li><code>shader</code>: Shader to bind, can be null to use no shader</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1754" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1782" target="_blank">View source</a>]
+        
+        [<a href="#bind-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="current_texture_parameter%3D%28name%20%3A%20String%29-instance-method">
+      <div class="signature" id="current_texture_parameter=(name:String)-instance-method">
         
         def <strong>current_texture_parameter=</strong>(name : String)
       </div>
@@ -481,10 +475,13 @@ The corresponding parameter in the shader must be a 2D texture
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the texture in the shader</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1725" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1753" target="_blank">View source</a>]
+        
+        [<a href="#current_texture_parameter%3D%28name%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -500,10 +497,13 @@ The corresponding parameter in the shader must be a 2D texture
 
 <ul><li><code>shader</code>: Shader to delete</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1535" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1563" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -525,15 +525,44 @@ or implement a temporary workaround until a bug is fixed.</p>
 
 <p><em>Returns</em>: OpenGL handle of the shader or 0 if not yet loaded</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1740" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1768" target="_blank">View source</a>]
+        
+        [<a href="#native_handle-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20texture%20%3A%20Texture%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,transform:Transform)-instance-method">
+        
+        def <strong>set_parameter</strong>(name : String, transform : <a href="../SF/Transform.html">Transform</a>)
+      </div>
+      
+        <div class="doc"><p>Change a matrix parameter of a shader</p>
+
+<p><code>name</code> is the name of the variable to change in the shader.
+The corresponding parameter in the shader must be a 4x4 matrix
+(mat4 GLSL type).</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>transform</code>: Transform to assign</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1714" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Ctransform%3ATransform%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_parameter(name:String,texture:Texture)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, texture : <a href="../SF/Texture.html">Texture</a>)
       </div>
@@ -555,38 +584,18 @@ Shader_setCurrentTextureParameter:</p>
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the texture in the shader</li><li><code>texture</code>: Texture to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1708" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20transform%20%3A%20Transform%29-instance-method">
+      <br/>
+      <div>
         
-        def <strong>set_parameter</strong>(name : String, transform : <a href="../SF/Transform.html">Transform</a>)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1736" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Ctexture%3ATexture%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Change a matrix parameter of a shader</p>
-
-<p><code>name</code> is the name of the variable to change in the shader.
-The corresponding parameter in the shader must be a 4x4 matrix
-(mat4 GLSL type).</p>
-
-<p><em>Arguments</em>:</p>
-
-<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>transform</code>: Transform to assign</li></ul></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1686" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20vector%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,vector)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, vector)
       </div>
@@ -601,15 +610,18 @@ The corresponding parameter in the shader must be a 2x1 vector
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>vector</code>: Vector to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1631" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1659" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Cvector%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,x:Number,y:Number)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, x : Number, y : Number)
       </div>
@@ -624,51 +636,18 @@ The corresponding parameter in the shader must be a 2x1 vector
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>x</code>: First component of the value to assign</li><li><code>y</code>: Second component of the value to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1569" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20current_texture%20%3A%20CurrentTextureType%29-instance-method">
+      <br/>
+      <div>
         
-        def <strong>set_parameter</strong>(name : String, current_texture : <a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a>)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L298" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%2C%20z%20%3A%20Number%2C%20w%20%3A%20Number%29-instance-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1597" target="_blank">View source</a>]
         
-        def <strong>set_parameter</strong>(name : String, x : Number, y : Number, z : Number, w : Number)
+        [<a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Change a 4-components vector parameter of a shader</p>
-
-<p><code>name</code> is the name of the variable to change in the shader.
-The corresponding parameter in the shader must be a 4x1 vector
-(vec4 GLSL type).</p>
-
-<p><em>Arguments</em>:</p>
-
-<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>x</code>: First component of the value to assign</li><li><code>y</code>: Second component of the value to assign</li><li><code>z</code>: Third component of the value to assign</li><li><code>w</code>: Fourth component of the value to assign</li></ul></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1611" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%2C%20y%20%3A%20Number%2C%20z%20%3A%20Number%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,x:Number,y:Number,z:Number)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, x : Number, y : Number, z : Number)
       </div>
@@ -683,38 +662,60 @@ The corresponding parameter in the shader must be a 3x1 vector
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>x</code>: First component of the value to assign</li><li><code>y</code>: Second component of the value to assign</li><li><code>z</code>: Third component of the value to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1589" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1617" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20vector%20%3A%20Vector3f%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,x:Number,y:Number,z:Number,w:Number)-instance-method">
         
-        def <strong>set_parameter</strong>(name : String, vector : <a href="../SF/Vector3f.html">Vector3f</a>)
+        def <strong>set_parameter</strong>(name : String, x : Number, y : Number, z : Number, w : Number)
       </div>
       
-        <div class="doc"><p>Change a 3-components vector parameter of a shader</p>
+        <div class="doc"><p>Change a 4-components vector parameter of a shader</p>
 
 <p><code>name</code> is the name of the variable to change in the shader.
-The corresponding parameter in the shader must be a 3x1 vector
-(vec3 GLSL type).</p>
+The corresponding parameter in the shader must be a 4x1 vector
+(vec4 GLSL type).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>vector</code>: Vector to assign</li></ul></div>
+<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>x</code>: First component of the value to assign</li><li><code>y</code>: Second component of the value to assign</li><li><code>z</code>: Third component of the value to assign</li><li><code>w</code>: Fourth component of the value to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1648" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1639" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%2Cw%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20color%20%3A%20Color%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,current_texture:CurrentTextureType)-instance-method">
+        
+        def <strong>set_parameter</strong>(name : String, current_texture : <a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L303" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Ccurrent_texture%3ACurrentTextureType%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_parameter(name:String,color:Color)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, color : <a href="../SF/Color.html">Color</a>)
       </div>
@@ -735,15 +736,44 @@ to a vec4(1.0, 0.5, 0.0, 1.0) in the shader.</p>
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>color</code>: Color to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1670" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1698" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Ccolor%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_parameter%28name%20%3A%20String%2C%20x%20%3A%20Number%29-instance-method">
+      <div class="signature" id="set_parameter(name:String,vector:Vector3f)-instance-method">
+        
+        def <strong>set_parameter</strong>(name : String, vector : <a href="../SF/Vector3f.html">Vector3f</a>)
+      </div>
+      
+        <div class="doc"><p>Change a 3-components vector parameter of a shader</p>
+
+<p><code>name</code> is the name of the variable to change in the shader.
+The corresponding parameter in the shader must be a 3x1 vector
+(vec3 GLSL type).</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>vector</code>: Vector to assign</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1676" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Cvector%3AVector3f%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_parameter(name:String,x:Number)-instance-method">
         
         def <strong>set_parameter</strong>(name : String, x : Number)
       </div>
@@ -758,25 +788,13 @@ The corresponding parameter in the shader must be a float
 
 <ul><li><code>shader</code>: Shader object</li><li><code>name</code>: Name of the parameter in the shader</li><li><code>x</code>: Value to assign</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1551" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1579" target="_blank">View source</a>]
+        
+        [<a href="#set_parameter%28name%3AString%2Cx%3ANumber%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1468" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   

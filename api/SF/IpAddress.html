@@ -10,21 +10,28 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::IpAddress</h1>
+  struct SF::IpAddress
 
+<span class="type-permalink">[<a href="../SF/IpAddress.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
   <h2>Overview</h2>
 
   <p>Encapsulate an IPv4 network address</p>
 
+<ul><li>address : <code>UInt8[16]</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
 
 
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/IpAddress.html">CSFML::IpAddress</a></code>
 
 
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/IpAddress.html">SF::IpAddress</a></div>
 
 
 
@@ -40,23 +47,230 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr" target="_blank">network_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr" target="_blank">network.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr" target="_blank">network_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr" target="_blank">network_obj.cr</a>
     
     <br/>
   
 
 
 
+  
+    <h2>Constant Summary</h2>
+  
+  <ul>
+    
+      <li class="entry-const">
+        <strong>Broadcast</strong> = <code><span class="t">SF</span>.ip_address(<span class="n">255</span>, <span class="n">255</span>, <span class="n">255</span>, <span class="n">255</span>)</code>
+        
+      </li>
+    
+      <li class="entry-const">
+        <strong>LocalHost</strong> = <code><span class="t">SF</span>.ip_address(<span class="n">127</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">1</span>)</code>
+        
+      </li>
+    
+      <li class="entry-const">
+        <strong>None</strong> = <code><span class="t">SF</span>.ip_address</code>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#get_local_address-class-method" class="signature"><strong>.get_local_address</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/IpAddress.html{method.anchor}">.local_address</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_public_address%28timeout%3ATime%29-class-method" class="signature"><strong>.get_public_address</strong>(timeout : Time)</a>
+        
+          <div class="summary"><p>Get the computer's public address</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#local_address-class-method" class="signature"><strong>.local_address</strong></a>
+        
+          <div class="summary"><p>Get the computer's local address</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#to_integer-instance-method" class="signature"><strong>#to_integer</strong></a>
+        
+          <div class="summary"><p>Get an integer representation of the address</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+      </li>
+    
+  </ul>
 
 
 
 
 
 
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_local_address-class-method">
+        
+        def self.<strong>get_local_address</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/IpAddress.html{method.anchor}">.local_address</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L46" target="_blank">View source</a>]
+        
+        [<a href="#get_local_address-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_public_address(timeout:Time)-class-method">
+        
+        def self.<strong>get_public_address</strong>(timeout : <a href="../SF/Time.html">Time</a>)
+      </div>
+      
+        <div class="doc"><p>Get the computer's public address</p>
+
+<p>The public address is the address of the computer from the
+internet point of view, i.e. something like 89.54.1.169.
+It is necessary for communications over the world wide web.
+The only way to get a public address is to ask it to a
+distant website; as a consequence, this function depends on
+both your network connection and the server, and may be
+very slow. You should use it as few as possible. Because
+this function depends on the network connection and on a distant
+server, you may use a time limit if you don't want your program
+to be possibly stuck waiting in case there is a problem; use
+0 to deactivate this limit.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>timeout</code>: Maximum time to wait</li></ul>
+
+<p><em>Returns</em>: Public IP address of the computer</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L69" target="_blank">View source</a>]
+        
+        [<a href="#get_public_address%28timeout%3ATime%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="local_address-class-method">
+        
+        def self.<strong>local_address</strong>
+      </div>
+      
+        <div class="doc"><p>Get the computer's local address</p>
+
+<p>The local address is the address of the computer from the
+LAN point of view, i.e. something like 192.168.1.56. It is
+meaningful only for communications over the local network.
+Unlike IpAddress_getPublicAddress, this function is fast
+and may be used safely anywhere.</p>
+
+<p><em>Returns</em>: Local IP address of the computer</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L41" target="_blank">View source</a>]
+        
+        [<a href="#local_address-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="to_integer-instance-method">
+        
+        def <strong>to_integer</strong>
+      </div>
+      
+        <div class="doc"><p>Get an integer representation of the address</p>
 
+<p>The returned number is the internal representation of the
+address, and should be used for optimization purposes only
+(like sending the address through a socket).
+The integer produced by this function can then be converted
+back to a IpAddress with IpAddress_FromInteger.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>address</code>: Address object</li></ul>
+
+<p><em>Returns</em>: 32-bits unsigned integer representation of the address</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L28" target="_blank">View source</a>]
+        
+        [<a href="#to_integer-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="to_s-instance-method">
+        
+        def <strong>to_s</strong>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L48" target="_blank">View source</a>]
+        
+        [<a href="#to_s-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

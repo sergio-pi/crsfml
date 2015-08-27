@@ -10,17 +10,26 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::IntRect</h1>
+  struct SF::IntRect
 
-
-
-
-
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/IntRect.html">CSFML::IntRect</a></code>
+<span class="type-permalink">[<a href="../SF/IntRect.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
+  <h2>Overview</h2>
+
+  <ul><li>left : <code>Int32</code></li><li>top : <code>Int32</code></li><li>width : <code>Int32</code></li><li>height : <code>Int32</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
+
+
+
+
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/IntRect.html">SF::IntRect</a></div>
 
 
 
@@ -36,7 +45,17 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -47,12 +66,104 @@
 
 
 
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#contains%28point%29-instance-method" class="signature"><strong>#contains</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contains%28x%3AInt%2Cy%3AInt%29-instance-method" class="signature"><strong>#contains</strong>(x : Int, y : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#intersects%28other%3AIntRect%29-instance-method" class="signature"><strong>#intersects</strong>(other : IntRect)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#intersects%28rect2%2Cintersection%3A%3A%3APointer%28IntRect%29%29-instance-method" class="signature"><strong>#intersects</strong>(rect2, intersection : ::Pointer(IntRect))</a>
+        
+      </li>
+    
+  </ul>
 
 
 
 
 
 
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="contains(point)-instance-method">
+        
+        def <strong>contains</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L73" target="_blank">View source</a>]
+        
+        [<a href="#contains%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="contains(x:Int,y:Int)-instance-method">
+        
+        def <strong>contains</strong>(x : Int, y : Int)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L163" target="_blank">View source</a>]
+        
+        [<a href="#contains%28x%3AInt%2Cy%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="intersects(other:IntRect)-instance-method">
+        
+        def <strong>intersects</strong>(other : <a href="../SF/IntRect.html">IntRect</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L77" target="_blank">View source</a>]
+        
+        [<a href="#intersects%28other%3AIntRect%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="intersects(rect2,intersection:::Pointer(IntRect))-instance-method">
+        
+        def <strong>intersects</strong>(rect2, intersection : ::Pointer(<a href="../SF/IntRect.html">IntRect</a>))
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L170" target="_blank">View source</a>]
+        
+        [<a href="#intersects%28rect2%2Cintersection%3A%3A%3APointer%28IntRect%29%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

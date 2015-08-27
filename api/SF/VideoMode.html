@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::VideoMode</h1>
+  struct SF::VideoMode
 
+<span class="type-permalink">[<a href="../SF/VideoMode.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
   <h2>Overview</h2>
@@ -21,12 +24,16 @@
 and provides functions for getting modes supported
 by the display device</p>
 
+<ul><li>width : <code>Int32</code></li><li>height : <code>Int32</code></li><li>bits_per_pixel : <code>Int32</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
 
 
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/VideoMode.html">CSFML::VideoMode</a></code>
 
 
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/VideoMode.html">SF::VideoMode</a></div>
 
 
 
@@ -42,7 +49,17 @@ by the display device</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/window_obj.cr" target="_blank">window_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window.cr" target="_blank">window.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr" target="_blank">window_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr" target="_blank">window_obj.cr</a>
     
     <br/>
   
@@ -51,14 +68,177 @@ by the display device</p>
 
 
 
+  <h2>Class Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#desktop_mode-class-method" class="signature"><strong>.desktop_mode</strong></a>
+        
+          <div class="summary"><p>Get the current desktop video mode</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fullscreen_modes-class-method" class="signature"><strong>.fullscreen_modes</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_desktop_mode-class-method" class="signature"><strong>.get_desktop_mode</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/VideoMode.html{method.anchor}">.desktop_mode</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_fullscreen_modes%28count%3A%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method" class="signature"><strong>.get_fullscreen_modes</strong>(count : ::Pointer(LibC::SizeT))</a>
+        
+          <div class="summary"><p>Retrieve all the video modes supported in fullscreen mode</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#valid%3F-instance-method" class="signature"><strong>#valid?</strong></a>
+        
+          <div class="summary"><p>Tell whether or not a video mode is valid</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
 
 
 
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="desktop_mode-class-method">
+        
+        def self.<strong>desktop_mode</strong>
+      </div>
+      
+        <div class="doc"><p>Get the current desktop video mode</p>
+
+<p><em>Returns</em>: Current desktop video mode</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1131" target="_blank">View source</a>]
+        
+        [<a href="#desktop_mode-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="fullscreen_modes-class-method">
+        
+        def self.<strong>fullscreen_modes</strong>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window.cr#L63" target="_blank">View source</a>]
+        
+        [<a href="#fullscreen_modes-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_desktop_mode-class-method">
+        
+        def self.<strong>get_desktop_mode</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/VideoMode.html{method.anchor}">.desktop_mode</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1136" target="_blank">View source</a>]
+        
+        [<a href="#get_desktop_mode-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_fullscreen_modes(count:::Pointer(LibC::SizeT))-class-method">
+        
+        def self.<strong>get_fullscreen_modes</strong>(count : ::Pointer(LibC::SizeT))
+      </div>
+      
+        <div class="doc"><p>Retrieve all the video modes supported in fullscreen mode</p>
+
+<p>When creating a fullscreen window, the video mode is restricted
+to be compatible with what the graphics driver and monitor
+support. This function returns the complete list of all video
+modes that can be used in fullscreen mode.
+The returned array is sorted from best to worst, so that
+the first element will always give the best mode (higher
+width, height and bits-per-pixel).</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>count</code>: Pointer to a variable that will be filled with the number of modes in the array</li></ul>
+
+<p><em>Returns</em>: Pointer to an array containing all the supported fullscreen modes</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1155" target="_blank">View source</a>]
+        
+        [<a href="#get_fullscreen_modes%28count%3A%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="valid?-instance-method">
+        
+        def <strong>valid?</strong>
+      </div>
+      
+        <div class="doc"><p>Tell whether or not a video mode is valid</p>
+
+<p>The validity of video modes is only relevant when using
+fullscreen windows; otherwise any video mode can be used
+with no restriction.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>mode</code>: Video mode</li></ul>
+
+<p><em>Returns</em>: True if the video mode is valid for fullscreen mode</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1171" target="_blank">View source</a>]
+        
+        [<a href="#valid%3F-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::RenderTexture</h1>
+  class SF::RenderTexture
 
+<span class="type-permalink">[<a href="../SF/RenderTexture.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/RenderTexture.html">SF::RenderTexture</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -59,33 +57,14 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28width%20%3A%20Int%2C%20height%20%3A%20Int%2C%20depth_buffer%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, depth_buffer : Bool)</a>
+        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%29-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, depth_buffer : Bool)</a>
         
           <div class="summary"><p>Construct a new render texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28width%2C%20height%29-class-method" class="signature"><strong>.new</strong>(width, height)</a>
+        <a href="#new%28width%2Cheight%29-class-method" class="signature"><strong>.new</strong>(width, height)</a>
         
       </li>
     
@@ -97,14 +76,14 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#active%3D%28active%20%3A%20Bool%29-instance-method" class="signature"><strong>#active=</strong>(active : Bool)</a>
+        <a href="#active%3D%28active%3ABool%29-instance-method" class="signature"><strong>#active=</strong>(active : Bool)</a>
         
           <div class="summary"><p>Activate or deactivate a render texture as the current target for rendering</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#clear%28color%20%3A%20Color%29-instance-method" class="signature"><strong>#clear</strong>(color : Color)</a>
+        <a href="#clear%28color%3AColor%29-instance-method" class="signature"><strong>#clear</strong>(color : Color)</a>
         
           <div class="summary"><p>Clear the rendertexture with the given color</p></div>
         
@@ -125,56 +104,56 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28drawable%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(drawable, states = CSFML::RenderStates::Default)</a>
+        <a href="#draw%28drawable%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(drawable, states = CSFML::RenderStates::Default)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28vertices%2C%20type%20%3A%20PrimitiveType%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(vertices, type : PrimitiveType, states = CSFML::RenderStates::Default)</a>
+        <a href="#draw%28vertices%2Ctype%3APrimitiveType%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(vertices, type : PrimitiveType, states = CSFML::RenderStates::Default)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_circle_shape%28object%20%3A%20CircleShape%2C%20states%29-instance-method" class="signature"><strong>#draw_circle_shape</strong>(object : CircleShape, states)</a>
+        <a href="#draw_circle_shape%28object%3ACircleShape%2Cstates%29-instance-method" class="signature"><strong>#draw_circle_shape</strong>(object : CircleShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_convex_shape%28object%20%3A%20ConvexShape%2C%20states%29-instance-method" class="signature"><strong>#draw_convex_shape</strong>(object : ConvexShape, states)</a>
+        <a href="#draw_convex_shape%28object%3AConvexShape%2Cstates%29-instance-method" class="signature"><strong>#draw_convex_shape</strong>(object : ConvexShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_primitives%28vertices%2C%20vertex_count%20%3A%20Int%2C%20type%20%3A%20PrimitiveType%2C%20states%29-instance-method" class="signature"><strong>#draw_primitives</strong>(vertices, vertex_count : Int, type : PrimitiveType, states)</a>
+        <a href="#draw_primitives%28vertices%2Cvertex_count%3AInt%2Ctype%3APrimitiveType%2Cstates%29-instance-method" class="signature"><strong>#draw_primitives</strong>(vertices, vertex_count : Int, type : PrimitiveType, states)</a>
         
           <div class="summary"><p>Draw primitives defined by an array of vertices to a render texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_rectangle_shape%28object%20%3A%20RectangleShape%2C%20states%29-instance-method" class="signature"><strong>#draw_rectangle_shape</strong>(object : RectangleShape, states)</a>
+        <a href="#draw_rectangle_shape%28object%3ARectangleShape%2Cstates%29-instance-method" class="signature"><strong>#draw_rectangle_shape</strong>(object : RectangleShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_shape%28object%20%3A%20Shape%2C%20states%29-instance-method" class="signature"><strong>#draw_shape</strong>(object : Shape, states)</a>
+        <a href="#draw_shape%28object%3AShape%2Cstates%29-instance-method" class="signature"><strong>#draw_shape</strong>(object : Shape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_sprite%28object%20%3A%20Sprite%2C%20states%29-instance-method" class="signature"><strong>#draw_sprite</strong>(object : Sprite, states)</a>
+        <a href="#draw_sprite%28object%3ASprite%2Cstates%29-instance-method" class="signature"><strong>#draw_sprite</strong>(object : Sprite, states)</a>
         
           <div class="summary"><p>Draw a drawable object to the render-target</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_text%28object%20%3A%20Text%2C%20states%29-instance-method" class="signature"><strong>#draw_text</strong>(object : Text, states)</a>
+        <a href="#draw_text%28object%3AText%2Cstates%29-instance-method" class="signature"><strong>#draw_text</strong>(object : Text, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_vertex_array%28object%20%3A%20VertexArray%2C%20states%29-instance-method" class="signature"><strong>#draw_vertex_array</strong>(object : VertexArray, states)</a>
+        <a href="#draw_vertex_array%28object%3AVertexArray%2Cstates%29-instance-method" class="signature"><strong>#draw_vertex_array</strong>(object : VertexArray, states)</a>
         
       </li>
     
@@ -186,21 +165,31 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_viewport%28view%20%3A%20View%29-instance-method" class="signature"><strong>#get_viewport</strong>(view : View)</a>
+        <a href="#get_viewport%28view%3AView%29-instance-method" class="signature"><strong>#get_viewport</strong>(view : View)</a>
         
           <div class="summary"><p>Get the viewport of a view applied to this target</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#map_coords_to_pixel%28point%2C%20view%20%3A%20View%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point, view : View)</a>
+        <a href="#map_coords_to_pixel%28point%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#map_coords_to_pixel%28point%2Cview%3AView%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point, view : View)</a>
         
           <div class="summary"><p>Convert a point from world coordinates to texture coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#map_pixel_to_coords%28point%2C%20view%20%3A%20View%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point, view : View)</a>
+        <a href="#map_pixel_to_coords%28point%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#map_pixel_to_coords%28point%2Cview%3AView%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point, view : View)</a>
         
           <div class="summary"><p>Convert a point from texture coordinates to world coordinates</p></div>
         
@@ -221,7 +210,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#repeated%3D%28repeated%20%3A%20Bool%29-instance-method" class="signature"><strong>#repeated=</strong>(repeated : Bool)</a>
+        <a href="#repeated%3D%28repeated%3ABool%29-instance-method" class="signature"><strong>#repeated=</strong>(repeated : Bool)</a>
         
           <div class="summary"><p>Enable or disable texture repeating</p></div>
         
@@ -249,7 +238,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#smooth%3D%28smooth%20%3A%20Bool%29-instance-method" class="signature"><strong>#smooth=</strong>(smooth : Bool)</a>
+        <a href="#smooth%3D%28smooth%3ABool%29-instance-method" class="signature"><strong>#smooth=</strong>(smooth : Bool)</a>
         
           <div class="summary"><p>Enable or disable the smooth filter on a render texture</p></div>
         
@@ -270,13 +259,6 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#view-instance-method" class="signature"><strong>#view</strong></a>
         
           <div class="summary"><p>Get the current active view of a render texture</p></div>
@@ -284,7 +266,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#view%3D%28view%20%3A%20View%29-instance-method" class="signature"><strong>#view=</strong>(view : View)</a>
+        <a href="#view%3D%28view%3AView%29-instance-method" class="signature"><strong>#view=</strong>(view : View)</a>
         
           <div class="summary"><p>Change the current active view of a render texture</p></div>
         
@@ -300,39 +282,7 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2201" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2201" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28width%20%3A%20Int%2C%20height%20%3A%20Int%2C%20depth_buffer%20%3A%20Bool%29-class-method">
+      <div class="signature" id="new(width:Int,height:Int,depth_buffer:Bool)-class-method">
         
         def self.<strong>new</strong>(width : Int, height : Int, depth_buffer : Bool)
       </div>
@@ -343,38 +293,31 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>width</code>: Width of the render texture</li><li><code>height</code>: Height of the render texture</li><li><code>depth_buffer</code>: Do you want a depth-buffer attached? (useful only if you're doing 3D OpenGL on the rendertexture)</li></ul>
 
-<p><em>Returns</em>: A new RenderTexture object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new RenderTexture object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2212" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>new</strong>(this, owned : Bool)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2245" target="_blank">View source</a>]
+        
+        [<a href="#new%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2201" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="new%28width%2C%20height%29-class-method">
+      <div class="signature" id="new(width,height)-class-method">
         
         def self.<strong>new</strong>(width, height)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L335" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L344" target="_blank">View source</a>]
+        
+        [<a href="#new%28width%2Cheight%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -384,7 +327,7 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
   <h2>Instance Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="active%3D%28active%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="active=(active:Bool)-instance-method">
         
         def <strong>active=</strong>(active : Bool)
       </div>
@@ -397,15 +340,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: True if operation was successful, false otherwise</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2248" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2281" target="_blank">View source</a>]
+        
+        [<a href="#active%3D%28active%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="clear%28color%20%3A%20Color%29-instance-method">
+      <div class="signature" id="clear(color:Color)-instance-method">
         
         def <strong>clear</strong>(color : <a href="../SF/Color.html">Color</a>)
       </div>
@@ -416,10 +362,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>render_texture</code>: Render texture object</li><li><code>color</code>: Fill color</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2268" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2301" target="_blank">View source</a>]
+        
+        [<a href="#clear%28color%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -437,10 +386,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Default view of the rendertexture</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2300" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2333" target="_blank">View source</a>]
+        
+        [<a href="#default_view-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -456,67 +408,82 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>render_texture</code>: Render texture object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2258" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2291" target="_blank">View source</a>]
+        
+        [<a href="#display-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw%28drawable%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method">
+      <div class="signature" id="draw(drawable,states=CSFML::RenderStates::Default)-instance-method">
         
         def <strong>draw</strong>(drawable, states = <span class="t">CSFML</span><span class="t">::</span><span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L339" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L348" target="_blank">View source</a>]
+        
+        [<a href="#draw%28drawable%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw%28vertices%2C%20type%20%3A%20PrimitiveType%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method">
+      <div class="signature" id="draw(vertices,type:PrimitiveType,states=CSFML::RenderStates::Default)-instance-method">
         
         def <strong>draw</strong>(vertices, type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states = <span class="t">CSFML</span><span class="t">::</span><span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L342" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L351" target="_blank">View source</a>]
+        
+        [<a href="#draw%28vertices%2Ctype%3APrimitiveType%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_circle_shape%28object%20%3A%20CircleShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_circle_shape(object:CircleShape,states)-instance-method">
         
         def <strong>draw_circle_shape</strong>(object : <a href="../SF/CircleShape.html">CircleShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2401" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2434" target="_blank">View source</a>]
+        
+        [<a href="#draw_circle_shape%28object%3ACircleShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_convex_shape%28object%20%3A%20ConvexShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_convex_shape(object:ConvexShape,states)-instance-method">
         
         def <strong>draw_convex_shape</strong>(object : <a href="../SF/ConvexShape.html">ConvexShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2408" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2441" target="_blank">View source</a>]
+        
+        [<a href="#draw_convex_shape%28object%3AConvexShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_primitives%28vertices%2C%20vertex_count%20%3A%20Int%2C%20type%20%3A%20PrimitiveType%2C%20states%29-instance-method">
+      <div class="signature" id="draw_primitives(vertices,vertex_count:Int,type:PrimitiveType,states)-instance-method">
         
         def <strong>draw_primitives</strong>(vertices, vertex_count : Int, type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states)
       </div>
@@ -527,41 +494,50 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>render_texture</code>: Render texture object</li><li><code>vertices</code>: Pointer to the vertices</li><li><code>vertex_count</code>: Number of vertices in the array</li><li><code>type</code>: Type of primitives to draw</li><li><code>states</code>: Render states to use for drawing (NULL to use the default states)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2438" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2471" target="_blank">View source</a>]
+        
+        [<a href="#draw_primitives%28vertices%2Cvertex_count%3AInt%2Ctype%3APrimitiveType%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_rectangle_shape%28object%20%3A%20RectangleShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_rectangle_shape(object:RectangleShape,states)-instance-method">
         
         def <strong>draw_rectangle_shape</strong>(object : <a href="../SF/RectangleShape.html">RectangleShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2415" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2448" target="_blank">View source</a>]
+        
+        [<a href="#draw_rectangle_shape%28object%3ARectangleShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_shape%28object%20%3A%20Shape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_shape(object:Shape,states)-instance-method">
         
         def <strong>draw_shape</strong>(object : <a href="../SF/Shape.html">Shape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2394" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2427" target="_blank">View source</a>]
+        
+        [<a href="#draw_shape%28object%3AShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_sprite%28object%20%3A%20Sprite%2C%20states%29-instance-method">
+      <div class="signature" id="draw_sprite(object:Sprite,states)-instance-method">
         
         def <strong>draw_sprite</strong>(object : <a href="../SF/Sprite.html">Sprite</a>, states)
       </div>
@@ -572,36 +548,45 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>render_texture</code>: Render texture object</li><li><code>object</code>: Object to draw</li><li><code>states</code>: Render states to use for drawing (NULL to use the default states)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2380" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2413" target="_blank">View source</a>]
+        
+        [<a href="#draw_sprite%28object%3ASprite%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_text%28object%20%3A%20Text%2C%20states%29-instance-method">
+      <div class="signature" id="draw_text(object:Text,states)-instance-method">
         
         def <strong>draw_text</strong>(object : <a href="../SF/Text.html">Text</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2387" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2420" target="_blank">View source</a>]
+        
+        [<a href="#draw_text%28object%3AText%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_vertex_array%28object%20%3A%20VertexArray%2C%20states%29-instance-method">
+      <div class="signature" id="draw_vertex_array(object:VertexArray,states)-instance-method">
         
         def <strong>draw_vertex_array</strong>(object : <a href="../SF/VertexArray.html">VertexArray</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2422" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2455" target="_blank">View source</a>]
+        
+        [<a href="#draw_vertex_array%28object%3AVertexArray%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -617,15 +602,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>render_texture</code>: Render texture to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2225" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2258" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_viewport%28view%20%3A%20View%29-instance-method">
+      <div class="signature" id="get_viewport(view:View)-instance-method">
         
         def <strong>get_viewport</strong>(view : <a href="../SF/View.html">View</a>)
       </div>
@@ -634,19 +622,38 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_texture</code>: Render texture object</li><li><code><a href="../SF/RenderTexture.html#view-instance-method">#view</a></code>: Target view</li></ul>
+<ul><li><code>render_texture</code>: Render texture object</li><li><code><a href="../SF/RenderTexture.html{method.anchor}">#view</a></code>: Target view</li></ul>
 
 <p><em>Returns</em>: Viewport rectangle, expressed in pixels in the current target</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2312" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2345" target="_blank">View source</a>]
+        
+        [<a href="#get_viewport%28view%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="map_coords_to_pixel%28point%2C%20view%20%3A%20View%29-instance-method">
+      <div class="signature" id="map_coords_to_pixel(point)-instance-method">
+        
+        def <strong>map_coords_to_pixel</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L364" target="_blank">View source</a>]
+        
+        [<a href="#map_coords_to_pixel%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="map_coords_to_pixel(point,view:View)-instance-method">
         
         def <strong>map_coords_to_pixel</strong>(point, view : <a href="../SF/View.html">View</a>)
       </div>
@@ -669,19 +676,38 @@ render-texture.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_texture</code>: Render texture object</li><li><code>point</code>: Point to convert</li><li><code><a href="../SF/RenderTexture.html#view-instance-method">#view</a></code>: The view to use for converting the point</li></ul>
+<ul><li><code>render_texture</code>: Render texture object</li><li><code>point</code>: Point to convert</li><li><code><a href="../SF/RenderTexture.html{method.anchor}">#view</a></code>: The view to use for converting the point</li></ul>
 
 <p><em>Returns</em>: The converted point, in target coordinates (pixels)</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2368" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2401" target="_blank">View source</a>]
+        
+        [<a href="#map_coords_to_pixel%28point%2Cview%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="map_pixel_to_coords%28point%2C%20view%20%3A%20View%29-instance-method">
+      <div class="signature" id="map_pixel_to_coords(point)-instance-method">
+        
+        def <strong>map_pixel_to_coords</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L360" target="_blank">View source</a>]
+        
+        [<a href="#map_pixel_to_coords%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="map_pixel_to_coords(point,view:View)-instance-method">
         
         def <strong>map_pixel_to_coords</strong>(point, view : <a href="../SF/View.html">View</a>)
       </div>
@@ -705,14 +731,17 @@ render-texture.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_texture</code>: Render texture object</li><li><code>point</code>: Pixel to convert</li><li><code><a href="../SF/RenderTexture.html#view-instance-method">#view</a></code>: The view to use for converting the point</li></ul>
+<ul><li><code>render_texture</code>: Render texture object</li><li><code>point</code>: Pixel to convert</li><li><code><a href="../SF/RenderTexture.html{method.anchor}">#view</a></code>: The view to use for converting the point</li></ul>
 
 <p><em>Returns</em>: The converted point, in "world" units</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2340" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2373" target="_blank">View source</a>]
+        
+        [<a href="#map_pixel_to_coords%28point%2Cview%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -731,10 +760,13 @@ description of these functions.</p>
 
 <ul><li><code>render_texture</code>: Render texture object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2481" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2514" target="_blank">View source</a>]
+        
+        [<a href="#pop_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -765,15 +797,18 @@ function if you do so.</p>
 
 <ul><li><code>render_texture</code>: Render texture object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2469" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2502" target="_blank">View source</a>]
+        
+        [<a href="#push_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="repeated%3D%28repeated%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="repeated=(repeated:Bool)-instance-method">
         
         def <strong>repeated=</strong>(repeated : Bool)
       </div>
@@ -784,15 +819,18 @@ function if you do so.</p>
 
 <ul><li><code>render_texture</code>: Render texture object</li><li><code>repeated</code>: True to enable repeating, False to disable it</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2539" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2572" target="_blank">View source</a>]
+        
+        [<a href="#repeated%3D%28repeated%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="repeated%3F-instance-method">
+      <div class="signature" id="repeated?-instance-method">
         
         def <strong>repeated?</strong>
       </div>
@@ -805,10 +843,13 @@ function if you do so.</p>
 
 <p><em>Returns</em>: True if repeat mode is enabled, False if it is disabled</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2551" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2584" target="_blank">View source</a>]
+        
+        [<a href="#repeated%3F-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -830,10 +871,13 @@ calls will work as expected.</p>
 
 <ul><li><code>render_texture</code>: Render texture object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2496" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2529" target="_blank">View source</a>]
+        
+        [<a href="#reset_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -851,15 +895,18 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Size in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2236" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2269" target="_blank">View source</a>]
+        
+        [<a href="#size-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="smooth%3D%28smooth%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="smooth=(smooth:Bool)-instance-method">
         
         def <strong>smooth=</strong>(smooth : Bool)
       </div>
@@ -870,15 +917,18 @@ calls will work as expected.</p>
 
 <ul><li><code>render_texture</code>: Render texture object</li><li><code>smooth</code>: True to enable smoothing, False to disable it</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2517" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2550" target="_blank">View source</a>]
+        
+        [<a href="#smooth%3D%28smooth%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="smooth%3F-instance-method">
+      <div class="signature" id="smooth?-instance-method">
         
         def <strong>smooth?</strong>
       </div>
@@ -891,10 +941,13 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: True if smoothing is enabled, False if it is disabled</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2529" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2562" target="_blank">View source</a>]
+        
+        [<a href="#smooth%3F-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -912,25 +965,13 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Pointer to the target texture</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2507" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2540" target="_blank">View source</a>]
+        
+        [<a href="#texture-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2201" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -948,15 +989,18 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Current active view</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2289" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2322" target="_blank">View source</a>]
+        
+        [<a href="#view-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="view%3D%28view%20%3A%20View%29-instance-method">
+      <div class="signature" id="view=(view:View)-instance-method">
         
         def <strong>view=</strong>(view : <a href="../SF/View.html">View</a>)
       </div>
@@ -965,12 +1009,15 @@ calls will work as expected.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_texture</code>: Render texture object</li><li><code><a href="../SF/RenderTexture.html#view-instance-method">#view</a></code>: Pointer to the new view</li></ul></div>
+<ul><li><code>render_texture</code>: Render texture object</li><li><code><a href="../SF/RenderTexture.html{method.anchor}">#view</a></code>: Pointer to the new view</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2278" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2311" target="_blank">View source</a>]
+        
+        [<a href="#view%3D%28view%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

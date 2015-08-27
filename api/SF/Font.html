@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Font</h1>
+  class SF::Font
 
+<span class="type-permalink">[<a href="../SF/Font.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Font.html">SF::Font</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,7 +39,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -54,42 +52,23 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#from_file%28filename%20%3A%20String%29-class-method" class="signature"><strong>.from_file</strong>(filename : String)</a>
+        <a href="#from_file%28filename%3AString%29-class-method" class="signature"><strong>.from_file</strong>(filename : String)</a>
         
           <div class="summary"><p>Create a new font from a file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28data%20%3A%20%3A%3APointer%28Void%29%2C%20size_in_bytes%20%3A%20Int%29-class-method" class="signature"><strong>.from_memory</strong>(data : ::Pointer(Void), size_in_bytes : Int)</a>
+        <a href="#from_memory%28data%3A%3A%3APointer%28Void%29%2Csize_in_bytes%3AInt%29-class-method" class="signature"><strong>.from_memory</strong>(data : ::Pointer(Void), size_in_bytes : Int)</a>
         
           <div class="summary"><p>Create a new image font a file in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28stream%20%3A%20%3A%3APointer%28InputStream%29%29-class-method" class="signature"><strong>.from_stream</strong>(stream : ::Pointer(InputStream))</a>
+        <a href="#from_stream%28stream%3A%3A%3APointer%28InputStream%29%29-class-method" class="signature"><strong>.from_stream</strong>(stream : ::Pointer(InputStream))</a>
         
           <div class="summary"><p>Create a new image font a custom stream</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
         
       </li>
     
@@ -115,42 +94,42 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_glyph%28code_point%20%3A%20Char%2C%20character_size%20%3A%20Int%2C%20bold%20%3A%20Bool%29-instance-method" class="signature"><strong>#get_glyph</strong>(code_point : Char, character_size : Int, bold : Bool)</a>
+        <a href="#get_glyph%28code_point%3AChar%2Ccharacter_size%3AInt%2Cbold%3ABool%29-instance-method" class="signature"><strong>#get_glyph</strong>(code_point : Char, character_size : Int, bold : Bool)</a>
         
           <div class="summary"><p>Get a glyph in a font</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_kerning%28first%20%3A%20Char%2C%20second%20%3A%20Char%2C%20character_size%20%3A%20Int%29-instance-method" class="signature"><strong>#get_kerning</strong>(first : Char, second : Char, character_size : Int)</a>
+        <a href="#get_kerning%28first%3AChar%2Csecond%3AChar%2Ccharacter_size%3AInt%29-instance-method" class="signature"><strong>#get_kerning</strong>(first : Char, second : Char, character_size : Int)</a>
         
           <div class="summary"><p>Get the kerning value corresponding to a given pair of characters in a font</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_line_spacing%28character_size%20%3A%20Int%29-instance-method" class="signature"><strong>#get_line_spacing</strong>(character_size : Int)</a>
+        <a href="#get_line_spacing%28character_size%3AInt%29-instance-method" class="signature"><strong>#get_line_spacing</strong>(character_size : Int)</a>
         
           <div class="summary"><p>Get the line spacing value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_texture%28character_size%20%3A%20Int%29-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int)</a>
+        <a href="#get_texture%28character_size%3AInt%29-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int)</a>
         
           <div class="summary"><p>Get the texture containing the glyphs of a given size in a font</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_underline_position%28character_size%20%3A%20Int%29-instance-method" class="signature"><strong>#get_underline_position</strong>(character_size : Int)</a>
+        <a href="#get_underline_position%28character_size%3AInt%29-instance-method" class="signature"><strong>#get_underline_position</strong>(character_size : Int)</a>
         
           <div class="summary"><p>Get the position of the underline</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_underline_thickness%28character_size%20%3A%20Int%29-instance-method" class="signature"><strong>#get_underline_thickness</strong>(character_size : Int)</a>
+        <a href="#get_underline_thickness%28character_size%3AInt%29-instance-method" class="signature"><strong>#get_underline_thickness</strong>(character_size : Int)</a>
         
           <div class="summary"><p>Get the thickness of the underline</p></div>
         
@@ -160,13 +139,6 @@
         <a href="#info-instance-method" class="signature"><strong>#info</strong></a>
         
           <div class="summary"><p>Get the font information</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
         
       </li>
     
@@ -180,7 +152,7 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="from_file%28filename%20%3A%20String%29-class-method">
+      <div class="signature" id="from_file(filename:String)-class-method">
         
         def self.<strong>from_file</strong>(filename : String)
       </div>
@@ -191,17 +163,20 @@
 
 <ul><li><code>filename</code>: Path of the font file to load</li></ul>
 
-<p><em>Returns</em>: A new Font object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Font object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1041" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1069" target="_blank">View source</a>]
+        
+        [<a href="#from_file%28filename%3AString%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="from_memory%28data%20%3A%20%3A%3APointer%28Void%29%2C%20size_in_bytes%20%3A%20Int%29-class-method">
+      <div class="signature" id="from_memory(data:::Pointer(Void),size_in_bytes:Int)-class-method">
         
         def self.<strong>from_memory</strong>(data : ::Pointer(Void), size_in_bytes : Int)
       </div>
@@ -212,17 +187,20 @@
 
 <ul><li><code>data</code>: Pointer to the file data in memory</li><li><code>size_in_bytes</code>: Size of the data to load, in bytes</li></ul>
 
-<p><em>Returns</em>: A new Font object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Font object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1053" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1081" target="_blank">View source</a>]
+        
+        [<a href="#from_memory%28data%3A%3A%3APointer%28Void%29%2Csize_in_bytes%3AInt%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="from_stream%28stream%20%3A%20%3A%3APointer%28InputStream%29%29-class-method">
+      <div class="signature" id="from_stream(stream:::Pointer(InputStream))-class-method">
         
         def self.<strong>from_stream</strong>(stream : ::Pointer(<a href="../SF/InputStream.html">InputStream</a>))
       </div>
@@ -233,57 +211,15 @@
 
 <ul><li><code>stream</code>: Source stream to read from</li></ul>
 
-<p><em>Returns</em>: A new Font object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new Font object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1065" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1032" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1093" target="_blank">View source</a>]
         
-        def self.<strong>wrap_ptr</strong>(ptr)
+        [<a href="#from_stream%28stream%3A%3A%3APointer%28InputStream%29%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1032" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1032" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -306,10 +242,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Copied object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1076" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1104" target="_blank">View source</a>]
+        
+        [<a href="#dup-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -325,15 +264,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>font</code>: Font to delete</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1085" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1113" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_glyph%28code_point%20%3A%20Char%2C%20character_size%20%3A%20Int%2C%20bold%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="get_glyph(code_point:Char,character_size:Int,bold:Bool)-instance-method">
         
         def <strong>get_glyph</strong>(code_point : Char, character_size : Int, bold : Bool)
       </div>
@@ -346,15 +288,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: The corresponding glyph</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1099" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1127" target="_blank">View source</a>]
+        
+        [<a href="#get_glyph%28code_point%3AChar%2Ccharacter_size%3AInt%2Cbold%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_kerning%28first%20%3A%20Char%2C%20second%20%3A%20Char%2C%20character_size%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_kerning(first:Char,second:Char,character_size:Int)-instance-method">
         
         def <strong>get_kerning</strong>(first : Char, second : Char, character_size : Int)
       </div>
@@ -367,15 +312,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Kerning offset, in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1115" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1143" target="_blank">View source</a>]
+        
+        [<a href="#get_kerning%28first%3AChar%2Csecond%3AChar%2Ccharacter_size%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_line_spacing%28character_size%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_line_spacing(character_size:Int)-instance-method">
         
         def <strong>get_line_spacing</strong>(character_size : Int)
       </div>
@@ -388,15 +336,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Line spacing, in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1128" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1156" target="_blank">View source</a>]
+        
+        [<a href="#get_line_spacing%28character_size%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_texture%28character_size%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_texture(character_size:Int)-instance-method">
         
         def <strong>get_texture</strong>(character_size : Int)
       </div>
@@ -409,15 +360,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Read-only pointer to the texture</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1172" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1200" target="_blank">View source</a>]
+        
+        [<a href="#get_texture%28character_size%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_underline_position%28character_size%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_underline_position(character_size:Int)-instance-method">
         
         def <strong>get_underline_position</strong>(character_size : Int)
       </div>
@@ -433,15 +387,18 @@ baseline and the underline.</p>
 
 <p><em>Returns</em>: Underline position, in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1144" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1172" target="_blank">View source</a>]
+        
+        [<a href="#get_underline_position%28character_size%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_underline_thickness%28character_size%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_underline_thickness(character_size:Int)-instance-method">
         
         def <strong>get_underline_thickness</strong>(character_size : Int)
       </div>
@@ -456,10 +413,13 @@ baseline and the underline.</p>
 
 <p><em>Returns</em>: Underline thickness, in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1159" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1187" target="_blank">View source</a>]
+        
+        [<a href="#get_underline_thickness%28character_size%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -481,25 +441,13 @@ is returned.</p>
 
 <p><em>Returns</em>: A structure that holds the font information</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1188" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1216" target="_blank">View source</a>]
+        
+        [<a href="#info-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1032" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   

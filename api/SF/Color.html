@@ -10,21 +10,28 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::Color</h1>
+  struct SF::Color
 
+<span class="type-permalink">[<a href="../SF/Color.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
   <h2>Overview</h2>
 
   <p>Utility class for manpulating RGBA colors</p>
 
+<ul><li>r : <code>UInt8</code></li><li>g : <code>UInt8</code></li><li>b : <code>UInt8</code></li><li>a : <code>UInt8</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
 
 
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/Color.html">CSFML::Color</a></code>
 
 
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/Color.html">SF::Color</a></div>
 
 
 
@@ -40,7 +47,17 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -103,12 +120,224 @@
 
 
 
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#%2A%28other%3Aself%29-instance-method" class="signature"><strong>#*</strong>(other : self)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2B%28other%3Aself%29-instance-method" class="signature"><strong>#+</strong>(other : self)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#-%28other%3Aself%29-instance-method" class="signature"><strong>#-</strong>(other : self)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%3D%3D%28other%3Aself%29-instance-method" class="signature"><strong>#==</strong>(other : self)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#add%28color2%3AColor%29-instance-method" class="signature"><strong>#add</strong>(color2 : Color)</a>
+        
+          <div class="summary"><p>Add two colors</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#modulate%28color2%3AColor%29-instance-method" class="signature"><strong>#modulate</strong>(color2 : Color)</a>
+        
+          <div class="summary"><p>Modulate two colors</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subtract%28color2%3AColor%29-instance-method" class="signature"><strong>#subtract</strong>(color2 : Color)</a>
+        
+          <div class="summary"><p>Subtract two colors</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_integer-instance-method" class="signature"><strong>#to_integer</strong></a>
+        
+          <div class="summary"><p>Convert a color to a 32-bit unsigned integer</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
 
 
 
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="*(other:self)-instance-method">
+        
+        def <strong>*</strong>(other : self)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L46" target="_blank">View source</a>]
+        
+        [<a href="#%2A%28other%3Aself%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="+(other:self)-instance-method">
+        
+        def <strong>+</strong>(other : self)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L43" target="_blank">View source</a>]
+        
+        [<a href="#%2B%28other%3Aself%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="-(other:self)-instance-method">
+        
+        def <strong>-</strong>(other : self)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L49" target="_blank">View source</a>]
+        
+        [<a href="#-%28other%3Aself%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="==(other:self)-instance-method">
+        
+        def <strong>==</strong>(other : self)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L40" target="_blank">View source</a>]
+        
+        [<a href="#%3D%3D%28other%3Aself%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="add(color2:Color)-instance-method">
+        
+        def <strong>add</strong>(color2 : <a href="../SF/Color.html">Color</a>)
+      </div>
+      
+        <div class="doc"><p>Add two colors</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>color1</code>: First color</li><li><code>color2</code>: Second color</li></ul>
+
+<p><em>Returns</em>: Component-wise saturated addition of the two colors</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L80" target="_blank">View source</a>]
+        
+        [<a href="#add%28color2%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="modulate(color2:Color)-instance-method">
+        
+        def <strong>modulate</strong>(color2 : <a href="../SF/Color.html">Color</a>)
+      </div>
+      
+        <div class="doc"><p>Modulate two colors</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>color1</code>: First color</li><li><code>color2</code>: Second color</li></ul>
+
+<p><em>Returns</em>: Component-wise multiplication of the two colors</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L104" target="_blank">View source</a>]
+        
+        [<a href="#modulate%28color2%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="subtract(color2:Color)-instance-method">
+        
+        def <strong>subtract</strong>(color2 : <a href="../SF/Color.html">Color</a>)
+      </div>
+      
+        <div class="doc"><p>Subtract two colors</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>color1</code>: First color</li><li><code>color2</code>: Second color</li></ul>
+
+<p><em>Returns</em>: Component-wise saturated subtraction of the two colors</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L92" target="_blank">View source</a>]
+        
+        [<a href="#subtract%28color2%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="to_integer-instance-method">
+        
+        def <strong>to_integer</strong>
+      </div>
+      
+        <div class="doc"><p>Convert a color to a 32-bit unsigned integer</p>
+
+<p><em>Returns</em>: Color represented as a 32-bit unsigned integer</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L68" target="_blank">View source</a>]
+        
+        [<a href="#to_integer-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

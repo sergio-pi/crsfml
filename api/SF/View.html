@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::View</h1>
+  class SF::View
 
+<span class="type-permalink">[<a href="../SF/View.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/View.html">SF::View</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -59,33 +57,14 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#from_rect%28rectangle%20%3A%20FloatRect%29-class-method" class="signature"><strong>.from_rect</strong>(rectangle : FloatRect)</a>
+        <a href="#from_rect%28rectangle%3AFloatRect%29-class-method" class="signature"><strong>.from_rect</strong>(rectangle : FloatRect)</a>
         
           <div class="summary"><p>Construct a view from a rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28center%2C%20size%29-class-method" class="signature"><strong>.new</strong>(center, size)</a>
+        <a href="#new%28center%2Csize%29-class-method" class="signature"><strong>.new</strong>(center, size)</a>
         
       </li>
     
@@ -139,14 +118,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#reset%28rectangle%20%3A%20FloatRect%29-instance-method" class="signature"><strong>#reset</strong>(rectangle : FloatRect)</a>
+        <a href="#reset%28rectangle%3AFloatRect%29-instance-method" class="signature"><strong>#reset</strong>(rectangle : FloatRect)</a>
         
           <div class="summary"><p>Reset a view to the given rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotate%28angle%20%3A%20Number%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
+        <a href="#rotate%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
         
           <div class="summary"><p>Rotate a view relatively to its current orientation</p></div>
         
@@ -160,7 +139,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3D%28angle%20%3A%20Number%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
+        <a href="#rotation%3D%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
         
           <div class="summary"><p>Set the orientation of a view</p></div>
         
@@ -181,13 +160,6 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#viewport-instance-method" class="signature"><strong>#viewport</strong></a>
         
           <div class="summary"><p>Get the target viewport rectangle of a view</p></div>
@@ -195,14 +167,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#viewport%3D%28viewport%20%3A%20FloatRect%29-instance-method" class="signature"><strong>#viewport=</strong>(viewport : FloatRect)</a>
+        <a href="#viewport%3D%28viewport%3AFloatRect%29-instance-method" class="signature"><strong>#viewport=</strong>(viewport : FloatRect)</a>
         
           <div class="summary"><p>Set the target viewport of a view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#zoom%28factor%20%3A%20Number%29-instance-method" class="signature"><strong>#zoom</strong>(factor : Number)</a>
+        <a href="#zoom%28factor%3ANumber%29-instance-method" class="signature"><strong>#zoom</strong>(factor : Number)</a>
         
           <div class="summary"><p>Resize a view rectangle relatively to its current size</p></div>
         
@@ -218,7 +190,7 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="from_rect%28rectangle%20%3A%20FloatRect%29-class-method">
+      <div class="signature" id="from_rect(rectangle:FloatRect)-class-method">
         
         def self.<strong>from_rect</strong>(rectangle : <a href="../SF/FloatRect.html">FloatRect</a>)
       </div>
@@ -231,68 +203,29 @@
 
 <p><em>Returns</em>: A new View object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4900" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4881" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4938" target="_blank">View source</a>]
         
-        def self.<strong>wrap_ptr</strong>(ptr)
+        [<a href="#from_rect%28rectangle%3AFloatRect%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4881" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4881" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28center%2C%20size%29-class-method">
+      <div class="signature" id="new(center,size)-class-method">
         
         def self.<strong>new</strong>(center, size)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L327" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L336" target="_blank">View source</a>]
+        
+        [<a href="#new%28center%2Csize%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -308,10 +241,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: A new View object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4888" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4926" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -334,15 +270,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Center of the view</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4995" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5033" target="_blank">View source</a>]
+        
+        [<a href="#center-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="center%3D%28center%29-instance-method">
+      <div class="signature" id="center=(center)-instance-method">
         
         def <strong>center=</strong>(center)
       </div>
@@ -351,12 +290,15 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html#center-instance-method">#center</a></code>: New center</li></ul></div>
+<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html{method.anchor}">#center</a></code>: New center</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4930" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4968" target="_blank">View source</a>]
+        
+        [<a href="#center%3D%28center%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -374,10 +316,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Copied object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4911" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4949" target="_blank">View source</a>]
+        
+        [<a href="#dup-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -393,15 +338,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>view</code>: View to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4920" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4958" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="move%28offset%29-instance-method">
+      <div class="signature" id="move(offset)-instance-method">
         
         def <strong>move</strong>(offset)
       </div>
@@ -412,15 +360,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>view</code>: View object</li><li><code>offset</code>: Offset</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5038" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5076" target="_blank">View source</a>]
+        
+        [<a href="#move%28offset%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="reset%28rectangle%20%3A%20FloatRect%29-instance-method">
+      <div class="signature" id="reset(rectangle:FloatRect)-instance-method">
         
         def <strong>reset</strong>(rectangle : <a href="../SF/FloatRect.html">FloatRect</a>)
       </div>
@@ -433,15 +384,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>view</code>: View object</li><li><code>rectangle</code>: Rectangle defining the zone to display</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4984" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5022" target="_blank">View source</a>]
+        
+        [<a href="#reset%28rectangle%3AFloatRect%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="rotate%28angle%20%3A%20Number%29-instance-method">
+      <div class="signature" id="rotate(angle:Number)-instance-method">
         
         def <strong>rotate</strong>(angle : Number)
       </div>
@@ -452,10 +406,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>view</code>: View object</li><li><code>angle</code>: Angle to rotate, in degrees</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5049" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5087" target="_blank">View source</a>]
+        
+        [<a href="#rotate%28angle%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -473,15 +430,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Rotation angle of the view, in degrees</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5017" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5055" target="_blank">View source</a>]
+        
+        [<a href="#rotation-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="rotation%3D%28angle%20%3A%20Number%29-instance-method">
+      <div class="signature" id="rotation=(angle:Number)-instance-method">
         
         def <strong>rotation=</strong>(angle : Number)
       </div>
@@ -494,10 +454,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>view</code>: View object</li><li><code>angle</code>: New angle, in degrees</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4954" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4992" target="_blank">View source</a>]
+        
+        [<a href="#rotation%3D%28angle%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -515,15 +478,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Size of the view</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5006" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5044" target="_blank">View source</a>]
+        
+        [<a href="#size-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="size%3D%28size%29-instance-method">
+      <div class="signature" id="size=(size)-instance-method">
         
         def <strong>size=</strong>(size)
       </div>
@@ -532,27 +498,15 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html#size-instance-method">#size</a></code>: New size of the view</li></ul></div>
+<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html{method.anchor}">#size</a></code>: New size of the view</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4941" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4979" target="_blank">View source</a>]
+        
+        [<a href="#size%3D%28size%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4881" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -570,15 +524,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Viewport rectangle, expressed as a factor of the target size</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5028" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5066" target="_blank">View source</a>]
+        
+        [<a href="#viewport-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="viewport%3D%28viewport%20%3A%20FloatRect%29-instance-method">
+      <div class="signature" id="viewport=(viewport:FloatRect)-instance-method">
         
         def <strong>viewport=</strong>(viewport : <a href="../SF/FloatRect.html">FloatRect</a>)
       </div>
@@ -594,17 +551,20 @@ By default, a view has a viewport which covers the entire target.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html#viewport-instance-method">#viewport</a></code>: New viewport rectangle</li></ul></div>
+<ul><li><code>view</code>: View object</li><li><code><a href="../SF/View.html{method.anchor}">#viewport</a></code>: New viewport rectangle</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4972" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5010" target="_blank">View source</a>]
+        
+        [<a href="#viewport%3D%28viewport%3AFloatRect%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="zoom%28factor%20%3A%20Number%29-instance-method">
+      <div class="signature" id="zoom(factor:Number)-instance-method">
         
         def <strong>zoom</strong>(factor : Number)
       </div>
@@ -622,10 +582,13 @@ screen grows or shrinks.
 
 <ul><li><code>view</code>: View object</li><li><code>factor</code>: Zoom factor to apply</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5067" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5105" target="_blank">View source</a>]
+        
+        [<a href="#zoom%28factor%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

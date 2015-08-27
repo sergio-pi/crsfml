@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Http</h1>
+  class SF::Http
 
+<span class="type-permalink">[<a href="../SF/Http.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Http.html">SF::Http</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network.cr" target="_blank">network.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr" target="_blank">network.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr" target="_blank">network_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr" target="_blank">network_obj.cr</a>
     
     <br/>
   
@@ -59,26 +57,7 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28host%20%3A%20String%2C%20port%20%3D%200%29-class-method" class="signature"><strong>.new</strong>(host : String, port = 0)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
+        <a href="#new%28host%3AString%2Cport%3D0%29-class-method" class="signature"><strong>.new</strong>(host : String, port = 0)</a>
         
       </li>
     
@@ -104,33 +83,26 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#send_request%28request%20%3A%20SF%3A%3AHttpRequest%29-instance-method" class="signature"><strong>#send_request</strong>(request : SF::HttpRequest)</a>
+        <a href="#send_request%28request%3ASF%3A%3AHttpRequest%29-instance-method" class="signature"><strong>#send_request</strong>(request : SF::HttpRequest)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send_request%28request%20%3A%20HttpRequest%2C%20timeout%20%3A%20Time%29-instance-method" class="signature"><strong>#send_request</strong>(request : HttpRequest, timeout : Time)</a>
+        <a href="#send_request%28request%3AHttpRequest%2Ctimeout%3ATime%29-instance-method" class="signature"><strong>#send_request</strong>(request : HttpRequest, timeout : Time)</a>
         
           <div class="summary"><p>Send a HTTP request and return the server's response.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_host%28host%20%3A%20String%2C%20port%20%3A%20Int%29-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int)</a>
+        <a href="#set_host%28host%3AString%2Cport%3AInt%29-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int)</a>
         
           <div class="summary"><p>Set the target host of a HTTP object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_host%28host%20%3A%20String%29-instance-method" class="signature"><strong>#set_host</strong>(host : String)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
+        <a href="#set_host%28host%3AString%29-instance-method" class="signature"><strong>#set_host</strong>(host : String)</a>
         
       </li>
     
@@ -144,60 +116,18 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L767" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L767" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28host%20%3A%20String%2C%20port%20%3D%200%29-class-method">
+      <div class="signature" id="new(host:String,port=0)-class-method">
         
         def self.<strong>new</strong>(host : String, port = <span class="n">0</span>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network.cr#L28" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>new</strong>(this, owned : Bool)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L57" target="_blank">View source</a>]
+        
+        [<a href="#new%28host%3AString%2Cport%3D0%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L767" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -211,10 +141,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: A new Http object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L772" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L788" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -235,28 +168,34 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>http</code>: Http object to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L782" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L798" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="send_request%28request%20%3A%20SF%3A%3AHttpRequest%29-instance-method">
+      <div class="signature" id="send_request(request:SF::HttpRequest)-instance-method">
         
         def <strong>send_request</strong>(request : <a href="../SF/HttpRequest.html">SF::HttpRequest</a>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network.cr#L36" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L65" target="_blank">View source</a>]
+        
+        [<a href="#send_request%28request%3ASF%3A%3AHttpRequest%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="send_request%28request%20%3A%20HttpRequest%2C%20timeout%20%3A%20Time%29-instance-method">
+      <div class="signature" id="send_request(request:HttpRequest,timeout:Time)-instance-method">
         
         def <strong>send_request</strong>(request : <a href="../SF/HttpRequest.html">HttpRequest</a>, timeout : <a href="../SF/Time.html">Time</a>)
       </div>
@@ -278,15 +217,18 @@ of 0 means that the client will use the system defaut timeout
 
 <p><em>Returns</em>: Server's response</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L824" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L840" target="_blank">View source</a>]
+        
+        [<a href="#send_request%28request%3AHttpRequest%2Ctimeout%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_host%28host%20%3A%20String%2C%20port%20%3A%20Int%29-instance-method">
+      <div class="signature" id="set_host(host:String,port:Int)-instance-method">
         
         def <strong>set_host</strong>(host : String, port : Int)
       </div>
@@ -305,38 +247,29 @@ than the standard one, or use an unknown protocol.</p>
 
 <ul><li><code>http</code>: Http object</li><li><code>host</code>: Web server to connect to</li><li><code>port</code>: Port to use for connection</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L801" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L817" target="_blank">View source</a>]
+        
+        [<a href="#set_host%28host%3AString%2Cport%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_host%28host%20%3A%20String%29-instance-method">
+      <div class="signature" id="set_host(host:String)-instance-method">
         
         def <strong>set_host</strong>(host : String)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network.cr#L32" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L61" target="_blank">View source</a>]
+        
+        [<a href="#set_host%28host%3AString%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L767" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   

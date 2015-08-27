@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::SoundRecorder</h1>
+  class SF::SoundRecorder
 
+<span class="type-permalink">[<a href="../SF/SoundRecorder.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio.cr" target="_blank">audio.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio.cr" target="_blank">audio.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
     
     <br/>
   
@@ -59,12 +57,26 @@
   <ul>
     
       <li class="entry-summary">
+        <a href="#available%3F-class-method" class="signature"><strong>.available?</strong></a>
+        
+          <div class="summary"><p>Check if the system supports audio capture</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#available_devices-class-method" class="signature"><strong>.available_devices</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_available_devices%28count%20%3A%20%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method" class="signature"><strong>.get_available_devices</strong>(count : ::Pointer(LibC::SizeT))</a>
+        <a href="#default_device-class-method" class="signature"><strong>.default_device</strong></a>
+        
+          <div class="summary"><p>Get the name of the default audio capture device</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_available_devices%28count%3A%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method" class="signature"><strong>.get_available_devices</strong>(count : ::Pointer(LibC::SizeT))</a>
         
           <div class="summary"><p>Get a list of the names of all availabe audio capture devices</p></div>
         
@@ -73,40 +85,21 @@
       <li class="entry-summary">
         <a href="#get_default_device-class-method" class="signature"><strong>.get_default_device</strong></a>
         
-          <div class="summary"><p>Get the name of the default audio capture device</p></div>
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/SoundRecorder.html{method.anchor}">.default_device</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#is_available-class-method" class="signature"><strong>.is_available</strong></a>
         
-          <div class="summary"><p>Check if the system supports audio capture</p></div>
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/SoundRecorder.html{method.anchor}">.available?</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28on_start%20%3A%20SoundRecorderStartCallback%2C%20on_process%20%3A%20SoundRecorderProcessCallback%2C%20on_stop%20%3A%20SoundRecorderStopCallback%2C%20user_data%20%3A%20%3A%3APointer%28Void%29%29-class-method" class="signature"><strong>.new</strong>(on_start : SoundRecorderStartCallback, on_process : SoundRecorderProcessCallback, on_stop : SoundRecorderStopCallback, user_data : ::Pointer(Void))</a>
+        <a href="#new%28on_start%3ASoundRecorderStartCallback%2Con_process%3ASoundRecorderProcessCallback%2Con_stop%3ASoundRecorderStopCallback%2Cuser_data%3A%3A%3APointer%28Void%29%29-class-method" class="signature"><strong>.new</strong>(on_start : SoundRecorderStartCallback, on_process : SoundRecorderProcessCallback, on_stop : SoundRecorderStopCallback, user_data : ::Pointer(Void))</a>
         
           <div class="summary"><p>Construct a new sound recorder from callback functions</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
         
       </li>
     
@@ -125,7 +118,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#device%3D%28name%20%3A%20String%29-instance-method" class="signature"><strong>#device=</strong>(name : String)</a>
+        <a href="#device%3D%28name%3AString%29-instance-method" class="signature"><strong>#device=</strong>(name : String)</a>
         
           <div class="summary"><p>Set the audio capture device</p></div>
         
@@ -139,7 +132,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#processing_interval%3D%28interval%20%3A%20Time%29-instance-method" class="signature"><strong>#processing_interval=</strong>(interval : Time)</a>
+        <a href="#processing_interval%3D%28interval%3ATime%29-instance-method" class="signature"><strong>#processing_interval=</strong>(interval : Time)</a>
         
           <div class="summary"><p>Set the processing interval</p></div>
         
@@ -153,9 +146,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#start%28sample_rate%20%3A%20Int%29-instance-method" class="signature"><strong>#start</strong>(sample_rate : Int)</a>
+        <a href="#start%28sample_rate%3AInt%29-instance-method" class="signature"><strong>#start</strong>(sample_rate : Int)</a>
         
           <div class="summary"><p>Start the capture of a sound recorder</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#start-instance-method" class="signature"><strong>#start</strong></a>
         
       </li>
     
@@ -163,13 +161,6 @@
         <a href="#stop-instance-method" class="signature"><strong>#stop</strong></a>
         
           <div class="summary"><p>Stop the capture of a sound recorder</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
         
       </li>
     
@@ -183,20 +174,70 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
+      <div class="signature" id="available?-class-method">
+        
+        def self.<strong>available?</strong>
+      </div>
+      
+        <div class="doc"><p>Check if the system supports audio capture</p>
+
+<p>This function should always be called before using
+the audio capture features. If it returns false, then
+any attempt to use SoundRecorder will fail.</p>
+
+<p><em>Returns</em>: True if audio capture is supported, False otherwise</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1187" target="_blank">View source</a>]
+        
+        [<a href="#available%3F-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
       <div class="signature" id="available_devices-class-method">
         
         def self.<strong>available_devices</strong>
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio.cr#L34" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio.cr#L34" target="_blank">View source</a>]
+        
+        [<a href="#available_devices-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_available_devices%28count%20%3A%20%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method">
+      <div class="signature" id="default_device-class-method">
+        
+        def self.<strong>default_device</strong>
+      </div>
+      
+        <div class="doc"><p>Get the name of the default audio capture device</p>
+
+<p>This function returns the name of the default audio
+capture device. If none is available, NULL is returned.</p>
+
+<p><em>Returns</em>: The name of the default audio capture device (null terminated)</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1237" target="_blank">View source</a>]
+        
+        [<a href="#default_device-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_available_devices(count:::Pointer(LibC::SizeT))-class-method">
         
         def self.<strong>get_available_devices</strong>(count : ::Pointer(LibC::SizeT))
       </div>
@@ -213,10 +254,13 @@ If no devices are available then NULL is returned.</p>
 
 <p><em>Returns</em>: An array of strings containing the names</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1182" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1227" target="_blank">View source</a>]
+        
+        [<a href="#get_available_devices%28count%3A%3A%3APointer%28LibC%3A%3ASizeT%29%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -226,17 +270,15 @@ If no devices are available then NULL is returned.</p>
         def self.<strong>get_default_device</strong>
       </div>
       
-        <div class="doc"><p>Get the name of the default audio capture device</p>
-
-<p>This function returns the name of the default audio
-capture device. If none is available, NULL is returned.</p>
-
-<p><em>Returns</em>: The name of the default audio capture device (null terminated)</p></div>
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/SoundRecorder.html{method.anchor}">.default_device</a></code></p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1192" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1243" target="_blank">View source</a>]
+        
+        [<a href="#get_default_device-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -246,55 +288,20 @@ capture device. If none is available, NULL is returned.</p>
         def self.<strong>is_available</strong>
       </div>
       
-        <div class="doc"><p>Check if the system supports audio capture</p>
-
-<p>This function should always be called before using
-the audio capture features. If it returns false, then
-any attempt to use SoundRecorder will fail.</p>
-
-<p><em>Returns</em>: True if audio capture is supported, False otherwise</p></div>
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/SoundRecorder.html{method.anchor}">.available?</a></code></p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1147" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1070" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1192" target="_blank">View source</a>]
         
-        def self.<strong>wrap_ptr</strong>(ptr)
+        [<a href="#is_available-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1070" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="new%28on_start%20%3A%20SoundRecorderStartCallback%2C%20on_process%20%3A%20SoundRecorderProcessCallback%2C%20on_stop%20%3A%20SoundRecorderStopCallback%2C%20user_data%20%3A%20%3A%3APointer%28Void%29%29-class-method">
+      <div class="signature" id="new(on_start:SoundRecorderStartCallback,on_process:SoundRecorderProcessCallback,on_stop:SoundRecorderStopCallback,user_data:::Pointer(Void))-class-method">
         
         def self.<strong>new</strong>(on_start : SoundRecorderStartCallback, on_process : SoundRecorderProcessCallback, on_stop : SoundRecorderStopCallback, user_data : ::Pointer(Void))
       </div>
@@ -305,25 +312,15 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>on_start</code>: Callback function which will be called when a new capture starts (can be NULL)</li><li><code>on_process</code>: Callback function which will be called each time there's audio data to process</li><li><code>on_stop</code>: Callback function which will be called when the current capture stops (can be NULL)</li><li><code>user_data</code>: Data to pass to the callback function (can be NULL)</li></ul>
 
-<p><em>Returns</em>: A new SoundRecorder object (NULL if failed)</p></div>
+<p><em>Returns</em>: A new SoundRecorder object (raises <code><a href="../SF/NullResult.html">NullResult</a></code> if failed)</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1082" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>new</strong>(this, owned : Bool)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1122" target="_blank">View source</a>]
+        
+        [<a href="#new%28on_start%3ASoundRecorderStartCallback%2Con_process%3ASoundRecorderProcessCallback%2Con_stop%3ASoundRecorderStopCallback%2Cuser_data%3A%3A%3APointer%28Void%29%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1070" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -346,15 +343,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: The name of the current audio capture device</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1220" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1272" target="_blank">View source</a>]
+        
+        [<a href="#device-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="device%3D%28name%20%3A%20String%29-instance-method">
+      <div class="signature" id="device=(name:String)-instance-method">
         
         def <strong>device=</strong>(name : String)
       </div>
@@ -372,10 +372,13 @@ opening the device fails, it stops the recording.</p>
 
 <p><em>Returns</em>: True, if it was able to set the requested device</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1209" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1261" target="_blank">View source</a>]
+        
+        [<a href="#device%3D%28name%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -391,15 +394,18 @@ opening the device fails, it stops the recording.</p>
 
 <ul><li><code>sound_recorder</code>: Sound recorder to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1092" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1132" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="processing_interval%3D%28interval%20%3A%20Time%29-instance-method">
+      <div class="signature" id="processing_interval=(interval:Time)-instance-method">
         
         def <strong>processing_interval=</strong>(interval : <a href="../SF/Time.html">Time</a>)
       </div>
@@ -420,10 +426,13 @@ So don't rely on this parameter to implement precise timing.</p>
 
 <ul><li><code>sound_recorder</code>: Sound recorder object</li><li><code>interval</code>: Processing interval</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1167" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1212" target="_blank">View source</a>]
+        
+        [<a href="#processing_interval%3D%28interval%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -445,22 +454,25 @@ captured per second. The higher, the better the quality
 
 <p><em>Returns</em>: Sample rate, in samples per second</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1136" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1176" target="_blank">View source</a>]
+        
+        [<a href="#sample_rate-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="start%28sample_rate%20%3A%20Int%29-instance-method">
+      <div class="signature" id="start(sample_rate:Int)-instance-method">
         
         def <strong>start</strong>(sample_rate : Int)
       </div>
       
         <div class="doc"><p>Start the capture of a sound recorder</p>
 
-<p>The <code><a href="../SF/SoundRecorder.html#sample_rate-instance-method">#sample_rate</a></code> parameter defines the number of audio samples
+<p>The <code><a href="../SF/SoundRecorder.html{method.anchor}">#sample_rate</a></code> parameter defines the number of audio samples
 captured per second. The higher, the better the quality
 (for example, 44100 samples/sec is CD quality).
 This function uses its own thread so that it doesn't block
@@ -469,14 +481,33 @@ Please note that only one capture can happen at the same time.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound_recorder</code>: Sound recorder object</li><li><code><a href="../SF/SoundRecorder.html#sample_rate-instance-method">#sample_rate</a></code>: Desired capture rate, in number of samples per second</li></ul>
+<ul><li><code>sound_recorder</code>: Sound recorder object</li><li><code><a href="../SF/SoundRecorder.html{method.anchor}">#sample_rate</a></code>: Desired capture rate, in number of samples per second</li></ul>
 
 <p><em>Returns</em>: True, if start of capture was successful</p></div>
       
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1151" target="_blank">View source</a>]
+        
+        [<a href="#start%28sample_rate%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="start-instance-method">
+        
+        def <strong>start</strong>
+      </div>
       
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1111" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio.cr#L39" target="_blank">View source</a>]
+        
+        [<a href="#start-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -492,25 +523,13 @@ Please note that only one capture can happen at the same time.</p>
 
 <ul><li><code>sound_recorder</code>: Sound recorder object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1121" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L1161" target="_blank">View source</a>]
+        
+        [<a href="#stop-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L1070" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   

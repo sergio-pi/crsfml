@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::RenderWindow</h1>
+  class SF::RenderWindow
 
+<span class="type-permalink">[<a href="../SF/RenderWindow.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/RenderWindow.html">SF::RenderWindow</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -59,40 +57,21 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#from_handle%28handle%20%3A%20WindowHandle%2C%20settings%29-class-method" class="signature"><strong>.from_handle</strong>(handle : WindowHandle, settings)</a>
+        <a href="#from_handle%28handle%3AWindowHandle%2Csettings%29-class-method" class="signature"><strong>.from_handle</strong>(handle : WindowHandle, settings)</a>
         
           <div class="summary"><p>Construct a render window from an existing control</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28mode%20%3A%20VideoMode%2C%20title%20%3A%20String%2C%20style%20%3A%20WindowStyle%2C%20settings%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : WindowStyle, settings)</a>
+        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AWindowStyle%2Csettings%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : WindowStyle, settings)</a>
         
           <div class="summary"><p>Construct a new render window (with a UTF-32 title)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28mode%20%3A%20VideoMode%2C%20title%20%3A%20String%2C%20style%20%3D%20CSFML%3A%3AWindowStyle%3A%3ADefault%2C%20settings%20%3D%20SF.context_settings%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style = CSFML::WindowStyle::Default, settings = SF.context_settings)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
+        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3DCSFML%3A%3AWindowStyle%3A%3ADefault%2Csettings%3DSF.context_settings%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style = CSFML::WindowStyle::Default, settings = SF.context_settings)</a>
         
       </li>
     
@@ -104,7 +83,7 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#active%3D%28active%20%3A%20Bool%29-instance-method" class="signature"><strong>#active=</strong>(active : Bool)</a>
+        <a href="#active%3D%28active%3ABool%29-instance-method" class="signature"><strong>#active=</strong>(active : Bool)</a>
         
           <div class="summary"><p>Activate or deactivate a render window as the current target for rendering</p></div>
         
@@ -118,14 +97,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#clear-instance-method" class="signature"><strong>#clear</strong></a>
+        <a href="#clear%28color%3AColor%29-instance-method" class="signature"><strong>#clear</strong>(color : Color)</a>
+        
+          <div class="summary"><p>Clear a render window with the given color</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#clear%28color%20%3A%20Color%29-instance-method" class="signature"><strong>#clear</strong>(color : Color)</a>
-        
-          <div class="summary"><p>Clear a render window with the given color</p></div>
+        <a href="#clear-instance-method" class="signature"><strong>#clear</strong></a>
         
       </li>
     
@@ -151,56 +130,56 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28vertices%2C%20type%20%3A%20PrimitiveType%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(vertices, type : PrimitiveType, states = CSFML::RenderStates::Default)</a>
+        <a href="#draw%28drawable%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(drawable, states = CSFML::RenderStates::Default)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28drawable%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(drawable, states = CSFML::RenderStates::Default)</a>
+        <a href="#draw%28vertices%2Ctype%3APrimitiveType%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(vertices, type : PrimitiveType, states = CSFML::RenderStates::Default)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_circle_shape%28object%20%3A%20CircleShape%2C%20states%29-instance-method" class="signature"><strong>#draw_circle_shape</strong>(object : CircleShape, states)</a>
+        <a href="#draw_circle_shape%28object%3ACircleShape%2Cstates%29-instance-method" class="signature"><strong>#draw_circle_shape</strong>(object : CircleShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_convex_shape%28object%20%3A%20ConvexShape%2C%20states%29-instance-method" class="signature"><strong>#draw_convex_shape</strong>(object : ConvexShape, states)</a>
+        <a href="#draw_convex_shape%28object%3AConvexShape%2Cstates%29-instance-method" class="signature"><strong>#draw_convex_shape</strong>(object : ConvexShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_primitives%28vertices%2C%20vertex_count%20%3A%20Int%2C%20type%20%3A%20PrimitiveType%2C%20states%29-instance-method" class="signature"><strong>#draw_primitives</strong>(vertices, vertex_count : Int, type : PrimitiveType, states)</a>
+        <a href="#draw_primitives%28vertices%2Cvertex_count%3AInt%2Ctype%3APrimitiveType%2Cstates%29-instance-method" class="signature"><strong>#draw_primitives</strong>(vertices, vertex_count : Int, type : PrimitiveType, states)</a>
         
           <div class="summary"><p>Draw primitives defined by an array of vertices to a render window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_rectangle_shape%28object%20%3A%20RectangleShape%2C%20states%29-instance-method" class="signature"><strong>#draw_rectangle_shape</strong>(object : RectangleShape, states)</a>
+        <a href="#draw_rectangle_shape%28object%3ARectangleShape%2Cstates%29-instance-method" class="signature"><strong>#draw_rectangle_shape</strong>(object : RectangleShape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_shape%28object%20%3A%20Shape%2C%20states%29-instance-method" class="signature"><strong>#draw_shape</strong>(object : Shape, states)</a>
+        <a href="#draw_shape%28object%3AShape%2Cstates%29-instance-method" class="signature"><strong>#draw_shape</strong>(object : Shape, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_sprite%28object%20%3A%20Sprite%2C%20states%29-instance-method" class="signature"><strong>#draw_sprite</strong>(object : Sprite, states)</a>
+        <a href="#draw_sprite%28object%3ASprite%2Cstates%29-instance-method" class="signature"><strong>#draw_sprite</strong>(object : Sprite, states)</a>
         
           <div class="summary"><p>Draw a drawable object to the render-target</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_text%28object%20%3A%20Text%2C%20states%29-instance-method" class="signature"><strong>#draw_text</strong>(object : Text, states)</a>
+        <a href="#draw_text%28object%3AText%2Cstates%29-instance-method" class="signature"><strong>#draw_text</strong>(object : Text, states)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw_vertex_array%28object%20%3A%20VertexArray%2C%20states%29-instance-method" class="signature"><strong>#draw_vertex_array</strong>(object : VertexArray, states)</a>
+        <a href="#draw_vertex_array%28object%3AVertexArray%2Cstates%29-instance-method" class="signature"><strong>#draw_vertex_array</strong>(object : VertexArray, states)</a>
         
       </li>
     
@@ -212,14 +191,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#framerate_limit%3D%28limit%20%3A%20Int%29-instance-method" class="signature"><strong>#framerate_limit=</strong>(limit : Int)</a>
+        <a href="#framerate_limit%3D%28limit%3AInt%29-instance-method" class="signature"><strong>#framerate_limit=</strong>(limit : Int)</a>
         
           <div class="summary"><p>Limit the framerate to a maximum fixed frequency for a render window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_viewport%28view%20%3A%20View%29-instance-method" class="signature"><strong>#get_viewport</strong>(view : View)</a>
+        <a href="#get_viewport%28view%3AView%29-instance-method" class="signature"><strong>#get_viewport</strong>(view : View)</a>
         
           <div class="summary"><p>Get the viewport of a view applied to this target</p></div>
         
@@ -233,35 +212,45 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#joystick_threshold%3D%28threshold%20%3A%20Number%29-instance-method" class="signature"><strong>#joystick_threshold=</strong>(threshold : Number)</a>
+        <a href="#joystick_threshold%3D%28threshold%3ANumber%29-instance-method" class="signature"><strong>#joystick_threshold=</strong>(threshold : Number)</a>
         
           <div class="summary"><p>Change the joystick threshold, ie.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#key_repeat_enabled%3D%28enabled%20%3A%20Bool%29-instance-method" class="signature"><strong>#key_repeat_enabled=</strong>(enabled : Bool)</a>
+        <a href="#key_repeat_enabled%3D%28enabled%3ABool%29-instance-method" class="signature"><strong>#key_repeat_enabled=</strong>(enabled : Bool)</a>
         
           <div class="summary"><p>Enable or disable automatic key-repeat for keydown events</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#map_coords_to_pixel%28point%2C%20view%20%3A%20View%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point, view : View)</a>
+        <a href="#map_coords_to_pixel%28point%2Cview%3AView%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point, view : View)</a>
         
           <div class="summary"><p>Convert a point from world coordinates to window coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#map_pixel_to_coords%28point%2C%20view%20%3A%20View%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point, view : View)</a>
+        <a href="#map_coords_to_pixel%28point%29-instance-method" class="signature"><strong>#map_coords_to_pixel</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#map_pixel_to_coords%28point%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#map_pixel_to_coords%28point%2Cview%3AView%29-instance-method" class="signature"><strong>#map_pixel_to_coords</strong>(point, view : View)</a>
         
           <div class="summary"><p>Convert a point from window coordinates to world coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mouse_cursor_visible%3D%28show%20%3A%20Bool%29-instance-method" class="signature"><strong>#mouse_cursor_visible=</strong>(show : Bool)</a>
+        <a href="#mouse_cursor_visible%3D%28show%3ABool%29-instance-method" class="signature"><strong>#mouse_cursor_visible=</strong>(show : Bool)</a>
         
           <div class="summary"><p>Show or hide the mouse cursor on a render window</p></div>
         
@@ -275,14 +264,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#poll_event%28event%20%3A%20%3A%3APointer%28Event%29%29-instance-method" class="signature"><strong>#poll_event</strong>(event : ::Pointer(Event))</a>
-        
-          <div class="summary"><p>Get the event on top of event queue of a render window, if any, and pop it</p></div>
+        <a href="#poll_event-instance-method" class="signature"><strong>#poll_event</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#poll_event-instance-method" class="signature"><strong>#poll_event</strong></a>
+        <a href="#poll_event%28event%3A%3A%3APointer%28Event%29%29-instance-method" class="signature"><strong>#poll_event</strong>(event : ::Pointer(Event))</a>
+        
+          <div class="summary"><p>Get the event on top of event queue of a render window, if any, and pop it</p></div>
         
       </li>
     
@@ -329,7 +318,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#set_icon%28width%20%3A%20Int%2C%20height%20%3A%20Int%2C%20pixels%29-instance-method" class="signature"><strong>#set_icon</strong>(width : Int, height : Int, pixels)</a>
+        <a href="#set_icon%28width%3AInt%2Cheight%3AInt%2Cpixels%29-instance-method" class="signature"><strong>#set_icon</strong>(width : Int, height : Int, pixels)</a>
         
           <div class="summary"><p>Change a render window's icon</p></div>
         
@@ -364,21 +353,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#title%3D%28title%20%3A%20String%29-instance-method" class="signature"><strong>#title=</strong>(title : String)</a>
+        <a href="#title%3D%28title%3AString%29-instance-method" class="signature"><strong>#title=</strong>(title : String)</a>
         
           <div class="summary"><p>Change the title of a render window (with a UTF-32 string)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#vertical_sync_enabled%3D%28enabled%20%3A%20Bool%29-instance-method" class="signature"><strong>#vertical_sync_enabled=</strong>(enabled : Bool)</a>
+        <a href="#vertical_sync_enabled%3D%28enabled%3ABool%29-instance-method" class="signature"><strong>#vertical_sync_enabled=</strong>(enabled : Bool)</a>
         
           <div class="summary"><p>Enable / disable vertical synchronization on a render window</p></div>
         
@@ -392,21 +374,21 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#view%3D%28view%20%3A%20View%29-instance-method" class="signature"><strong>#view=</strong>(view : View)</a>
+        <a href="#view%3D%28view%3AView%29-instance-method" class="signature"><strong>#view=</strong>(view : View)</a>
         
           <div class="summary"><p>Change the current active view of a render window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#visible%3D%28visible%20%3A%20Bool%29-instance-method" class="signature"><strong>#visible=</strong>(visible : Bool)</a>
+        <a href="#visible%3D%28visible%3ABool%29-instance-method" class="signature"><strong>#visible=</strong>(visible : Bool)</a>
         
           <div class="summary"><p>Show or hide a render window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#wait_event%28event%20%3A%20%3A%3APointer%28Event%29%29-instance-method" class="signature"><strong>#wait_event</strong>(event : ::Pointer(Event))</a>
+        <a href="#wait_event%28event%3A%3A%3APointer%28Event%29%29-instance-method" class="signature"><strong>#wait_event</strong>(event : ::Pointer(Event))</a>
         
           <div class="summary"><p>Wait for an event and return it</p></div>
         
@@ -427,7 +409,7 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="from_handle%28handle%20%3A%20WindowHandle%2C%20settings%29-class-method">
+      <div class="signature" id="from_handle(handle:WindowHandle,settings)-class-method">
         
         def self.<strong>from_handle</strong>(handle : WindowHandle, settings)
       </div>
@@ -436,49 +418,20 @@
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>handle</code>: Platform-specific handle of the control</li><li><code><a href="../SF/RenderWindow.html#settings-instance-method">#settings</a></code>: Creation settings (pass NULL to use default values)</li></ul></div>
+<ul><li><code>handle</code>: Platform-specific handle of the control</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#settings</a></code>: Creation settings (pass NULL to use default values)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2583" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2558" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2616" target="_blank">View source</a>]
         
-        def self.<strong>wrap_ptr</strong>(ptr)
+        [<a href="#from_handle%28handle%3AWindowHandle%2Csettings%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2558" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="new%28mode%20%3A%20VideoMode%2C%20title%20%3A%20String%2C%20style%20%3A%20WindowStyle%2C%20settings%29-class-method">
+      <div class="signature" id="new(mode:VideoMode,title:String,style:WindowStyle,settings)-class-method">
         
         def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/WindowStyle.html">WindowStyle</a>, settings)
       </div>
@@ -487,38 +440,31 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>mode</code>: Video mode to use</li><li><code>title</code>: Title of the window (UTF-32)</li><li><code>style</code>: Window style</li><li><code><a href="../SF/RenderWindow.html#settings-instance-method">#settings</a></code>: Creation settings (pass NULL to use default values)</li></ul></div>
+<ul><li><code>mode</code>: Video mode to use</li><li><code>title</code>: Title of the window (UTF-32)</li><li><code>style</code>: Window style</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#settings</a></code>: Creation settings (pass NULL to use default values)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2568" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2601" target="_blank">View source</a>]
+        
+        [<a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AWindowStyle%2Csettings%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="new%28mode%20%3A%20VideoMode%2C%20title%20%3A%20String%2C%20style%20%3D%20CSFML%3A%3AWindowStyle%3A%3ADefault%2C%20settings%20%3D%20SF.context_settings%29-class-method">
+      <div class="signature" id="new(mode:VideoMode,title:String,style=CSFML::WindowStyle::Default,settings=SF.context_settings)-class-method">
         
         def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style = <span class="t">CSFML</span><span class="t">::</span><span class="t">WindowStyle</span><span class="t">::</span><span class="t">Default</span>, settings = <span class="t">SF</span>.context_settings)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L353" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>new</strong>(this, owned : Bool)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L371" target="_blank">View source</a>]
+        
+        [<a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3DCSFML%3A%3AWindowStyle%3A%3ADefault%2Csettings%3DSF.context_settings%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2558" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -528,7 +474,7 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
   <h2>Instance Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="active%3D%28active%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="active=(active:Bool)-instance-method">
         
         def <strong>active=</strong>(active : Bool)
       </div>
@@ -541,10 +487,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: True if operation was successful, false otherwise</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2780" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2813" target="_blank">View source</a>]
+        
+        [<a href="#active%3D%28active%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -570,28 +519,18 @@ RenderWindow class.</p>
 
 <p><em>Returns</em>: New image containing the captured contents</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3107" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="clear-instance-method">
+      <br/>
+      <div>
         
-        def <strong>clear</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3140" target="_blank">View source</a>]
+        
+        [<a href="#capture-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L380" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="clear%28color%20%3A%20Color%29-instance-method">
+      <div class="signature" id="clear(color:Color)-instance-method">
         
         def <strong>clear</strong>(color : <a href="../SF/Color.html">Color</a>)
       </div>
@@ -602,10 +541,29 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>color</code>: Fill color</li></ul></div>
       
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2890" target="_blank">View source</a>]
+        
+        [<a href="#clear%28color%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="clear-instance-method">
+        
+        def <strong>clear</strong>
+      </div>
       
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2857" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L398" target="_blank">View source</a>]
+        
+        [<a href="#clear-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -621,10 +579,13 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: Render window to close</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2604" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2637" target="_blank">View source</a>]
+        
+        [<a href="#close-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -642,10 +603,13 @@ RenderWindow class.</p>
 
 <p><em>Returns</em>: Default view of the render window</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2889" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2922" target="_blank">View source</a>]
+        
+        [<a href="#default_view-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -661,67 +625,82 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: Render window object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2814" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="draw%28vertices%2C%20type%20%3A%20PrimitiveType%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method">
+      <br/>
+      <div>
         
-        def <strong>draw</strong>(vertices, type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states = <span class="t">CSFML</span><span class="t">::</span><span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2847" target="_blank">View source</a>]
+        
+        [<a href="#display-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L360" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw%28drawable%2C%20states%20%3D%20CSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method">
+      <div class="signature" id="draw(drawable,states=CSFML::RenderStates::Default)-instance-method">
         
         def <strong>draw</strong>(drawable, states = <span class="t">CSFML</span><span class="t">::</span><span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L357" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L375" target="_blank">View source</a>]
+        
+        [<a href="#draw%28drawable%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_circle_shape%28object%20%3A%20CircleShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw(vertices,type:PrimitiveType,states=CSFML::RenderStates::Default)-instance-method">
+        
+        def <strong>draw</strong>(vertices, type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states = <span class="t">CSFML</span><span class="t">::</span><span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L378" target="_blank">View source</a>]
+        
+        [<a href="#draw%28vertices%2Ctype%3APrimitiveType%2Cstates%3DCSFML%3A%3ARenderStates%3A%3ADefault%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="draw_circle_shape(object:CircleShape,states)-instance-method">
         
         def <strong>draw_circle_shape</strong>(object : <a href="../SF/CircleShape.html">CircleShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2993" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3026" target="_blank">View source</a>]
+        
+        [<a href="#draw_circle_shape%28object%3ACircleShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_convex_shape%28object%20%3A%20ConvexShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_convex_shape(object:ConvexShape,states)-instance-method">
         
         def <strong>draw_convex_shape</strong>(object : <a href="../SF/ConvexShape.html">ConvexShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3000" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3033" target="_blank">View source</a>]
+        
+        [<a href="#draw_convex_shape%28object%3AConvexShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_primitives%28vertices%2C%20vertex_count%20%3A%20Int%2C%20type%20%3A%20PrimitiveType%2C%20states%29-instance-method">
+      <div class="signature" id="draw_primitives(vertices,vertex_count:Int,type:PrimitiveType,states)-instance-method">
         
         def <strong>draw_primitives</strong>(vertices, vertex_count : Int, type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states)
       </div>
@@ -732,41 +711,50 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: render window object</li><li><code>vertices</code>: Pointer to the vertices</li><li><code>vertex_count</code>: Number of vertices in the array</li><li><code>type</code>: Type of primitives to draw</li><li><code>states</code>: Render states to use for drawing (NULL to use the default states)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3030" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3063" target="_blank">View source</a>]
+        
+        [<a href="#draw_primitives%28vertices%2Cvertex_count%3AInt%2Ctype%3APrimitiveType%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_rectangle_shape%28object%20%3A%20RectangleShape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_rectangle_shape(object:RectangleShape,states)-instance-method">
         
         def <strong>draw_rectangle_shape</strong>(object : <a href="../SF/RectangleShape.html">RectangleShape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3007" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3040" target="_blank">View source</a>]
+        
+        [<a href="#draw_rectangle_shape%28object%3ARectangleShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_shape%28object%20%3A%20Shape%2C%20states%29-instance-method">
+      <div class="signature" id="draw_shape(object:Shape,states)-instance-method">
         
         def <strong>draw_shape</strong>(object : <a href="../SF/Shape.html">Shape</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2986" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3019" target="_blank">View source</a>]
+        
+        [<a href="#draw_shape%28object%3AShape%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_sprite%28object%20%3A%20Sprite%2C%20states%29-instance-method">
+      <div class="signature" id="draw_sprite(object:Sprite,states)-instance-method">
         
         def <strong>draw_sprite</strong>(object : <a href="../SF/Sprite.html">Sprite</a>, states)
       </div>
@@ -777,36 +765,45 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: render window object</li><li><code>object</code>: Object to draw</li><li><code>states</code>: Render states to use for drawing (NULL to use the default states)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2972" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3005" target="_blank">View source</a>]
+        
+        [<a href="#draw_sprite%28object%3ASprite%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_text%28object%20%3A%20Text%2C%20states%29-instance-method">
+      <div class="signature" id="draw_text(object:Text,states)-instance-method">
         
         def <strong>draw_text</strong>(object : <a href="../SF/Text.html">Text</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2979" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3012" target="_blank">View source</a>]
+        
+        [<a href="#draw_text%28object%3AText%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw_vertex_array%28object%20%3A%20VertexArray%2C%20states%29-instance-method">
+      <div class="signature" id="draw_vertex_array(object:VertexArray,states)-instance-method">
         
         def <strong>draw_vertex_array</strong>(object : <a href="../SF/VertexArray.html">VertexArray</a>, states)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3014" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3047" target="_blank">View source</a>]
+        
+        [<a href="#draw_vertex_array%28object%3AVertexArray%2Cstates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -822,15 +819,18 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: Render window to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2595" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2628" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="framerate_limit%3D%28limit%20%3A%20Int%29-instance-method">
+      <div class="signature" id="framerate_limit=(limit:Int)-instance-method">
         
         def <strong>framerate_limit=</strong>(limit : Int)
       </div>
@@ -841,15 +841,18 @@ RenderWindow class.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>limit</code>: Framerate limit, in frames per seconds (use 0 to disable limit)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2824" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2857" target="_blank">View source</a>]
+        
+        [<a href="#framerate_limit%3D%28limit%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_viewport%28view%20%3A%20View%29-instance-method">
+      <div class="signature" id="get_viewport(view:View)-instance-method">
         
         def <strong>get_viewport</strong>(view : <a href="../SF/View.html">View</a>)
       </div>
@@ -858,14 +861,17 @@ RenderWindow class.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html#view-instance-method">#view</a></code>: Target view</li></ul>
+<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#view</a></code>: Target view</li></ul>
 
 <p><em>Returns</em>: Viewport rectangle, expressed in pixels in the current target</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2901" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2934" target="_blank">View source</a>]
+        
+        [<a href="#get_viewport%28view%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -883,15 +889,18 @@ events.</p>
 
 <p><em>Returns</em>: True if window has focus, false otherwise</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2805" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2838" target="_blank">View source</a>]
+        
+        [<a href="#has_focus-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="joystick_threshold%3D%28threshold%20%3A%20Number%29-instance-method">
+      <div class="signature" id="joystick_threshold=(threshold:Number)-instance-method">
         
         def <strong>joystick_threshold=</strong>(threshold : Number)
       </div>
@@ -902,15 +911,18 @@ events.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>threshold</code>: New threshold, in range [0, 100]</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2835" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2868" target="_blank">View source</a>]
+        
+        [<a href="#joystick_threshold%3D%28threshold%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="key_repeat_enabled%3D%28enabled%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="key_repeat_enabled=(enabled:Bool)-instance-method">
         
         def <strong>key_repeat_enabled=</strong>(enabled : Bool)
       </div>
@@ -923,15 +935,18 @@ events.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>enabled</code>: True to enable, False to disable</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2767" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2800" target="_blank">View source</a>]
+        
+        [<a href="#key_repeat_enabled%3D%28enabled%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="map_coords_to_pixel%28point%2C%20view%20%3A%20View%29-instance-method">
+      <div class="signature" id="map_coords_to_pixel(point,view:View)-instance-method">
         
         def <strong>map_coords_to_pixel</strong>(point, view : <a href="../SF/View.html">View</a>)
       </div>
@@ -954,19 +969,54 @@ render-window.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code>point</code>: Point to convert</li><li><code><a href="../SF/RenderWindow.html#view-instance-method">#view</a></code>: The view to use for converting the point</li></ul>
+<ul><li><code>render_window</code>: Render window object</li><li><code>point</code>: Point to convert</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#view</a></code>: The view to use for converting the point</li></ul>
 
 <p><em>Returns</em>: The converted point, in target coordinates (pixels)</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2960" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2993" target="_blank">View source</a>]
+        
+        [<a href="#map_coords_to_pixel%28point%2Cview%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="map_pixel_to_coords%28point%2C%20view%20%3A%20View%29-instance-method">
+      <div class="signature" id="map_coords_to_pixel(point)-instance-method">
+        
+        def <strong>map_coords_to_pixel</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L406" target="_blank">View source</a>]
+        
+        [<a href="#map_coords_to_pixel%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="map_pixel_to_coords(point)-instance-method">
+        
+        def <strong>map_pixel_to_coords</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L402" target="_blank">View source</a>]
+        
+        [<a href="#map_pixel_to_coords%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="map_pixel_to_coords(point,view:View)-instance-method">
         
         def <strong>map_pixel_to_coords</strong>(point, view : <a href="../SF/View.html">View</a>)
       </div>
@@ -993,19 +1043,22 @@ render-window.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code>point</code>: Pixel to convert</li><li><code><a href="../SF/RenderWindow.html#view-instance-method">#view</a></code>: The view to use for converting the point</li></ul>
+<ul><li><code>render_window</code>: Render window object</li><li><code>point</code>: Pixel to convert</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#view</a></code>: The view to use for converting the point</li></ul>
 
 <p><em>Returns</em>: The converted point, in "world" units</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2932" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2965" target="_blank">View source</a>]
+        
+        [<a href="#map_pixel_to_coords%28point%2Cview%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="mouse_cursor_visible%3D%28show%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="mouse_cursor_visible=(show:Bool)-instance-method">
         
         def <strong>mouse_cursor_visible=</strong>(show : Bool)
       </div>
@@ -1016,15 +1069,18 @@ render-window.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>show</code>: True to show, False to hide</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2743" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2776" target="_blank">View source</a>]
+        
+        [<a href="#mouse_cursor_visible%3D%28show%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="open%3F-instance-method">
+      <div class="signature" id="open?-instance-method">
         
         def <strong>open?</strong>
       </div>
@@ -1035,15 +1091,34 @@ render-window.</p>
 
 <ul><li><code>render_window</code>: Render window object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2613" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2646" target="_blank">View source</a>]
+        
+        [<a href="#open%3F-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="poll_event%28event%20%3A%20%3A%3APointer%28Event%29%29-instance-method">
+      <div class="signature" id="poll_event-instance-method">
+        
+        def <strong>poll_event</strong>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L387" target="_blank">View source</a>]
+        
+        [<a href="#poll_event-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="poll_event(event:::Pointer(Event))-instance-method">
         
         def <strong>poll_event</strong>(event : ::Pointer(<a href="../SF/Event.html">Event</a>))
       </div>
@@ -1056,23 +1131,13 @@ render-window.</p>
 
 <p><em>Returns</em>: True if an event was returned, False if event queue was empty</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2636" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="poll_event-instance-method">
+      <br/>
+      <div>
         
-        def <strong>poll_event</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2669" target="_blank">View source</a>]
+        
+        [<a href="#poll_event%28event%3A%3A%3APointer%28Event%29%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L369" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -1091,10 +1156,13 @@ description of these functions.</p>
 
 <ul><li><code>render_window</code>: render window object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3073" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3106" target="_blank">View source</a>]
+        
+        [<a href="#pop_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1112,15 +1180,18 @@ description of these functions.</p>
 
 <p><em>Returns</em>: Position in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2659" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2692" target="_blank">View source</a>]
+        
+        [<a href="#position-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="position%3D%28position%29-instance-method">
+      <div class="signature" id="position=(position)-instance-method">
         
         def <strong>position=</strong>(position)
       </div>
@@ -1131,12 +1202,15 @@ description of these functions.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html#position-instance-method">#position</a></code>: New position, in pixels</li></ul></div>
+<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#position</a></code>: New position, in pixels</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2671" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2704" target="_blank">View source</a>]
+        
+        [<a href="#position%3D%28position%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1167,10 +1241,13 @@ function if you do so.</p>
 
 <ul><li><code>render_window</code>: render window object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3061" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3094" target="_blank">View source</a>]
+        
+        [<a href="#push_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1190,10 +1267,13 @@ system, that it would like to be focused. The operating system
 is free to deny the request.
 This is not to be confused with Window_setActive().</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2794" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2827" target="_blank">View source</a>]
+        
+        [<a href="#request_focus-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1215,15 +1295,18 @@ calls will work as expected.</p>
 
 <ul><li><code>render_window</code>: render window object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L3088" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L3121" target="_blank">View source</a>]
+        
+        [<a href="#reset_gl_states-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_icon%28width%20%3A%20Int%2C%20height%20%3A%20Int%2C%20pixels%29-instance-method">
+      <div class="signature" id="set_icon(width:Int,height:Int,pixels)-instance-method">
         
         def <strong>set_icon</strong>(width : Int, height : Int, pixels)
       </div>
@@ -1234,10 +1317,13 @@ calls will work as expected.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>width</code>: Icon's width, in pixels</li><li><code>height</code>: Icon's height, in pixels</li><li><code>pixels</code>: Pointer to the pixels in memory, format must be RGBA 32 bits</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2717" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2750" target="_blank">View source</a>]
+        
+        [<a href="#set_icon%28width%3AInt%2Cheight%3AInt%2Cpixels%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1255,10 +1341,13 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Settings used to create the window</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2624" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2657" target="_blank">View source</a>]
+        
+        [<a href="#settings-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1276,15 +1365,18 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Size in pixels</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2683" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2716" target="_blank">View source</a>]
+        
+        [<a href="#size-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="size%3D%28size%29-instance-method">
+      <div class="signature" id="size=(size)-instance-method">
         
         def <strong>size=</strong>(size)
       </div>
@@ -1293,12 +1385,15 @@ calls will work as expected.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html#size-instance-method">#size</a></code>: New size, in pixels</li></ul></div>
+<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#size</a></code>: New size, in pixels</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2693" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2726" target="_blank">View source</a>]
+        
+        [<a href="#size%3D%28size%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1316,15 +1411,18 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Window handle</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2847" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2880" target="_blank">View source</a>]
+        
+        [<a href="#system_handle-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="title%3D%28title%20%3A%20String%29-instance-method">
+      <div class="signature" id="title=(title:String)-instance-method">
         
         def <strong>title=</strong>(title : String)
       </div>
@@ -1335,30 +1433,18 @@ calls will work as expected.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>title</code>: New title</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2704" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2737" target="_blank">View source</a>]
+        
+        [<a href="#title%3D%28title%3AString%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2558" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="vertical_sync_enabled%3D%28enabled%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="vertical_sync_enabled=(enabled:Bool)-instance-method">
         
         def <strong>vertical_sync_enabled=</strong>(enabled : Bool)
       </div>
@@ -1369,10 +1455,13 @@ calls will work as expected.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>enabled</code>: True to enable v-sync, False to deactivate</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2754" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2787" target="_blank">View source</a>]
+        
+        [<a href="#vertical_sync_enabled%3D%28enabled%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1390,15 +1479,18 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: Current active view</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2878" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2911" target="_blank">View source</a>]
+        
+        [<a href="#view-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="view%3D%28view%20%3A%20View%29-instance-method">
+      <div class="signature" id="view=(view:View)-instance-method">
         
         def <strong>view=</strong>(view : <a href="../SF/View.html">View</a>)
       </div>
@@ -1407,17 +1499,20 @@ calls will work as expected.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html#view-instance-method">#view</a></code>: Pointer to the new view</li></ul></div>
+<ul><li><code>render_window</code>: Render window object</li><li><code><a href="../SF/RenderWindow.html{method.anchor}">#view</a></code>: Pointer to the new view</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2867" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2900" target="_blank">View source</a>]
+        
+        [<a href="#view%3D%28view%3AView%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="visible%3D%28visible%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="visible=(visible:Bool)-instance-method">
         
         def <strong>visible=</strong>(visible : Bool)
       </div>
@@ -1428,15 +1523,18 @@ calls will work as expected.</p>
 
 <ul><li><code>render_window</code>: Render window object</li><li><code>visible</code>: True to show the window, False to hide it</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2732" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2765" target="_blank">View source</a>]
+        
+        [<a href="#visible%3D%28visible%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="wait_event%28event%20%3A%20%3A%3APointer%28Event%29%29-instance-method">
+      <div class="signature" id="wait_event(event:::Pointer(Event))-instance-method">
         
         def <strong>wait_event</strong>(event : ::Pointer(<a href="../SF/Event.html">Event</a>))
       </div>
@@ -1449,10 +1547,13 @@ calls will work as expected.</p>
 
 <p><em>Returns</em>: False if an error occured</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L2648" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L2681" target="_blank">View source</a>]
+        
+        [<a href="#wait_event%28event%3A%3A%3APointer%28Event%29%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1462,10 +1563,13 @@ calls will work as expected.</p>
         def <strong>wait_event</strong>
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L374" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L392" target="_blank">View source</a>]
+        
+        [<a href="#wait_event-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

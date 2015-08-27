@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::VertexArray</h1>
+  class SF::VertexArray
 
+<span class="type-permalink">[<a href="../SF/VertexArray.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/VertexArray.html">SF::VertexArray</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -59,26 +57,7 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28primitive_type%20%3A%20PrimitiveType%2C%20vertex_count%20%3D%200%29-class-method" class="signature"><strong>.new</strong>(primitive_type : PrimitiveType, vertex_count = 0)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
+        <a href="#new%28primitive_type%3APrimitiveType%2Cvertex_count%3D0%29-class-method" class="signature"><strong>.new</strong>(primitive_type : PrimitiveType, vertex_count = 0)</a>
         
       </li>
     
@@ -102,12 +81,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#%5B%5D%3D%28index%2C%20vertex%29-instance-method" class="signature"><strong>#[]=</strong>(index, vertex)</a>
+        <a href="#%5B%5D%3D%28index%2Cvertex%29-instance-method" class="signature"><strong>#[]=</strong>(index, vertex)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#append%28vertex%20%3A%20Vertex%29-instance-method" class="signature"><strong>#append</strong>(vertex : Vertex)</a>
+        <a href="#append%28vertex%3AVertex%29-instance-method" class="signature"><strong>#append</strong>(vertex : Vertex)</a>
         
           <div class="summary"><p>Add a vertex to a vertex array array</p></div>
         
@@ -128,7 +107,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28target%2C%20states%20%3A%20RenderStates%29-instance-method" class="signature"><strong>#draw</strong>(target, states : RenderStates)</a>
+        <a href="#draw%28target%2Cstates%3ARenderStates%29-instance-method" class="signature"><strong>#draw</strong>(target, states : RenderStates)</a>
         
       </li>
     
@@ -147,7 +126,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_vertex%28index%20%3A%20Int%29-instance-method" class="signature"><strong>#get_vertex</strong>(index : Int)</a>
+        <a href="#get_vertex%28index%3AInt%29-instance-method" class="signature"><strong>#get_vertex</strong>(index : Int)</a>
         
           <div class="summary"><p>Get access to a vertex by its index</p></div>
         
@@ -161,23 +140,16 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#primitive_type%3D%28type%20%3A%20PrimitiveType%29-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
+        <a href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
         
           <div class="summary"><p>Set the type of primitives of a vertex array</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#resize%28vertex_count%20%3A%20Int%29-instance-method" class="signature"><strong>#resize</strong>(vertex_count : Int)</a>
+        <a href="#resize%28vertex_count%3AInt%29-instance-method" class="signature"><strong>#resize</strong>(vertex_count : Int)</a>
         
           <div class="summary"><p>Resize the vertex array</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
         
       </li>
     
@@ -198,60 +170,18 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4736" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4736" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28primitive_type%20%3A%20PrimitiveType%2C%20vertex_count%20%3D%200%29-class-method">
+      <div class="signature" id="new(primitive_type:PrimitiveType,vertex_count=0)-class-method">
         
         def self.<strong>new</strong>(primitive_type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, vertex_count = <span class="n">0</span>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L308" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>new</strong>(this, owned : Bool)
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L317" target="_blank">View source</a>]
+        
+        [<a href="#new%28primitive_type%3APrimitiveType%2Cvertex_count%3D0%29-class-method" target="_blank">Permalink</a>]
       </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4736" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -265,10 +195,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: A new VertexArray object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4741" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4779" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -278,33 +211,39 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
   <h2>Instance Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="%5B%5D%28index%29-instance-method">
+      <div class="signature" id="[](index)-instance-method">
         
         def <strong>[]</strong>(index)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L314" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L323" target="_blank">View source</a>]
+        
+        [<a href="#%5B%5D%28index%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="%5B%5D%3D%28index%2C%20vertex%29-instance-method">
+      <div class="signature" id="[]=(index,vertex)-instance-method">
         
         def <strong>[]=</strong>(index, vertex)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L317" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L326" target="_blank">View source</a>]
+        
+        [<a href="#%5B%5D%3D%28index%2Cvertex%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="append%28vertex%20%3A%20Vertex%29-instance-method">
+      <div class="signature" id="append(vertex:Vertex)-instance-method">
         
         def <strong>append</strong>(vertex : <a href="../SF/Vertex.html">Vertex</a>)
       </div>
@@ -315,10 +254,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <ul><li><code>vertex_array</code>: Vertex array objet</li><li><code>vertex</code>: Vertex to add</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4831" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4869" target="_blank">View source</a>]
+        
+        [<a href="#append%28vertex%3AVertex%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -339,10 +281,13 @@ contains all the vertices of the array.</p>
 
 <p><em>Returns</em>: Bounding rectangle of the vertex array</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4874" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4912" target="_blank">View source</a>]
+        
+        [<a href="#bounds-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -363,23 +308,29 @@ reallocating all the memory.</p>
 
 <ul><li><code>vertex_array</code>: Vertex array object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4804" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4842" target="_blank">View source</a>]
+        
+        [<a href="#clear-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw%28target%2C%20states%20%3A%20RenderStates%29-instance-method">
+      <div class="signature" id="draw(target,states:RenderStates)-instance-method">
         
         def <strong>draw</strong>(target, states : <a href="../SF/RenderStates.html">RenderStates</a>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L321" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L330" target="_blank">View source</a>]
+        
+        [<a href="#draw%28target%2Cstates%3ARenderStates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -397,10 +348,13 @@ reallocating all the memory.</p>
 
 <p><em>Returns</em>: Copied object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4753" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4791" target="_blank">View source</a>]
+        
+        [<a href="#dup-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -416,15 +370,18 @@ reallocating all the memory.</p>
 
 <ul><li><code>vertex_array</code>: Vertex array to delete</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4762" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4800" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_vertex%28index%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_vertex(index:Int)-instance-method">
         
         def <strong>get_vertex</strong>(index : Int)
       </div>
@@ -441,10 +398,13 @@ otherwise.</p>
 
 <p><em>Returns</em>: Pointer to the index-th vertex</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4789" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4827" target="_blank">View source</a>]
+        
+        [<a href="#get_vertex%28index%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -462,15 +422,18 @@ otherwise.</p>
 
 <p><em>Returns</em>: Primitive type</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4860" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4898" target="_blank">View source</a>]
+        
+        [<a href="#primitive_type-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="primitive_type%3D%28type%20%3A%20PrimitiveType%29-instance-method">
+      <div class="signature" id="primitive_type=(type:PrimitiveType)-instance-method">
         
         def <strong>primitive_type=</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
       </div>
@@ -489,50 +452,41 @@ The default primitive type is Points.</p>
 
 <ul><li><code>vertex_array</code>: Vertex array objet</li><li><code>type</code>: Type of primitive</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4849" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4887" target="_blank">View source</a>]
+        
+        [<a href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="resize%28vertex_count%20%3A%20Int%29-instance-method">
+      <div class="signature" id="resize(vertex_count:Int)-instance-method">
         
         def <strong>resize</strong>(vertex_count : Int)
       </div>
       
         <div class="doc"><p>Resize the vertex array</p>
 
-<p>If <code><a href="../SF/VertexArray.html#vertex_count-instance-method">#vertex_count</a></code> is greater than the current size, the previous
+<p>If <code><a href="../SF/VertexArray.html{method.anchor}">#vertex_count</a></code> is greater than the current size, the previous
 vertices are kept and new (default-constructed) vertices are
 added.
-If <code><a href="../SF/VertexArray.html#vertex_count-instance-method">#vertex_count</a></code> is less than the current size, existing vertices
+If <code><a href="../SF/VertexArray.html{method.anchor}">#vertex_count</a></code> is less than the current size, existing vertices
 are removed from the array.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>vertex_array</code>: Vertex array objet</li><li><code><a href="../SF/VertexArray.html#vertex_count-instance-method">#vertex_count</a></code>: New size of the array (number of vertices)</li></ul></div>
+<ul><li><code>vertex_array</code>: Vertex array objet</li><li><code><a href="../SF/VertexArray.html{method.anchor}">#vertex_count</a></code>: New size of the array (number of vertices)</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4820" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4858" target="_blank">View source</a>]
+        
+        [<a href="#resize%28vertex_count%3AInt%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4736" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -550,10 +504,13 @@ are removed from the array.</p>
 
 <p><em>Returns</em>: Number of vertices in the array</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L4773" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L4811" target="_blank">View source</a>]
+        
+        [<a href="#vertex_count-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

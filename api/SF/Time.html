@@ -10,23 +10,35 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::Time</h1>
+  struct SF::Time
 
+<span class="type-permalink">[<a href="../SF/Time.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
   <h2>Overview</h2>
 
   <p>Represents a time value</p>
 
+<ul><li>microseconds : <code>Int64</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
 
 
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/Time.html">CSFML::Time</a></code>
 
 
 
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/Time.html">SF::Time</a></div>
 
+
+
+  <h2>Included Modules</h2>
+  
+    Comparable(Time)
+  
 
 
 
@@ -40,7 +52,17 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/system_obj.cr" target="_blank">system_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr" target="_blank">system.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr" target="_blank">system_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr" target="_blank">system_obj.cr</a>
     
     <br/>
   
@@ -53,7 +75,72 @@
   <ul>
     
       <li class="entry-const">
-        <strong>Zero</strong> = <code>milliseconds(<span class="n">0</span>)</code>
+        <strong>Zero</strong> = <code><span class="t">SF</span>.microseconds(<span class="n">0</span>)</code>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#%2A%28other%3ANumber%29-instance-method" class="signature"><strong>#*</strong>(other : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2B%28other%3ATime%29-instance-method" class="signature"><strong>#+</strong>(other : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#--instance-method" class="signature"><strong>#-</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#-%28other%3ATime%29-instance-method" class="signature"><strong>#-</strong>(other : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2F%28other%3ATime%29-instance-method" class="signature"><strong>#/</strong>(other : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2F%28other%3ANumber%29-instance-method" class="signature"><strong>#/</strong>(other : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%3C%3D%3E%28other%3ATime%29-instance-method" class="signature"><strong>#<=></strong>(other : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#as_microseconds-instance-method" class="signature"><strong>#as_microseconds</strong></a>
+        
+          <div class="summary"><p>Return a time value as a number of microseconds</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#as_milliseconds-instance-method" class="signature"><strong>#as_milliseconds</strong></a>
+        
+          <div class="summary"><p>Return a time value as a number of milliseconds</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#as_seconds-instance-method" class="signature"><strong>#as_seconds</strong></a>
+        
+          <div class="summary"><p>Return a time value as a number of seconds</p></div>
         
       </li>
     
@@ -66,9 +153,192 @@
 
 
 
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="*(other:Number)-instance-method">
+        
+        def <strong>*</strong>(other : Number)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L157" target="_blank">View source</a>]
+        
+        [<a href="#%2A%28other%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="+(other:Time)-instance-method">
+        
+        def <strong>+</strong>(other : <a href="../SF/Time.html">Time</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L151" target="_blank">View source</a>]
+        
+        [<a href="#%2B%28other%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="--instance-method">
+        
+        def <strong>-</strong>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L148" target="_blank">View source</a>]
+        
+        [<a href="#--instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="-(other:Time)-instance-method">
+        
+        def <strong>-</strong>(other : <a href="../SF/Time.html">Time</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L154" target="_blank">View source</a>]
+        
+        [<a href="#-%28other%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="/(other:Time)-instance-method">
+        
+        def <strong>/</strong>(other : <a href="../SF/Time.html">Time</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L163" target="_blank">View source</a>]
+        
+        [<a href="#%2F%28other%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="/(other:Number)-instance-method">
+        
+        def <strong>/</strong>(other : Number)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L160" target="_blank">View source</a>]
+        
+        [<a href="#%2F%28other%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="&lt;=&gt;(other:Time)-instance-method">
+        
+        def <strong><=></strong>(other : <a href="../SF/Time.html">Time</a>)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L144" target="_blank">View source</a>]
+        
+        [<a href="#%3C%3D%3E%28other%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="as_microseconds-instance-method">
+        
+        def <strong>as_microseconds</strong>
+      </div>
+      
+        <div class="doc"><p>Return a time value as a number of microseconds</p>
 
+<p><em>Arguments</em>:</p>
 
+<ul><li><code>time</code>: Time value</li></ul>
 
+<p><em>Returns</em>: Time in microseconds</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L44" target="_blank">View source</a>]
+        
+        [<a href="#as_microseconds-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="as_milliseconds-instance-method">
+        
+        def <strong>as_milliseconds</strong>
+      </div>
+      
+        <div class="doc"><p>Return a time value as a number of milliseconds</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>time</code>: Time value</li></ul>
+
+<p><em>Returns</em>: Time in milliseconds</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L33" target="_blank">View source</a>]
+        
+        [<a href="#as_milliseconds-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="as_seconds-instance-method">
+        
+        def <strong>as_seconds</strong>
+      </div>
+      
+        <div class="doc"><p>Return a time value as a number of seconds</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>time</code>: Time value</li></ul>
+
+<p><em>Returns</em>: Time in seconds</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L22" target="_blank">View source</a>]
+        
+        [<a href="#as_seconds-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

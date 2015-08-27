@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Ftp</h1>
+  class SF::Ftp
 
+<span class="type-permalink">[<a href="../SF/Ftp.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Ftp.html">SF::Ftp</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,7 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr" target="_blank">network_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr" target="_blank">network.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr" target="_blank">network_obj.cr</a>
     
     <br/>
   
@@ -76,25 +79,6 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
           <div class="summary"><p>Create a new Ftp object</p></div>
@@ -109,35 +93,40 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#change_directory%28directory%20%3A%20String%29-instance-method" class="signature"><strong>#change_directory</strong>(directory : String)</a>
+        <a href="#change_directory%28directory%3AString%29-instance-method" class="signature"><strong>#change_directory</strong>(directory : String)</a>
         
           <div class="summary"><p>Change the current working directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#connect%28server%20%3A%20IpAddress%2C%20port%20%3A%20Int%2C%20timeout%20%3A%20Time%29-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int, timeout : Time)</a>
+        <a href="#connect%28server%3AIpAddress%2Cport%3AInt%2Ctimeout%3ATime%29-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int, timeout : Time)</a>
         
           <div class="summary"><p>Connect to the specified FTP server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_directory%28name%20%3A%20String%29-instance-method" class="signature"><strong>#create_directory</strong>(name : String)</a>
+        <a href="#connect%28server%3AIpAddress%2Cport%3D21%3AInt%29-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port = 21 : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_directory%28name%3AString%29-instance-method" class="signature"><strong>#create_directory</strong>(name : String)</a>
         
           <div class="summary"><p>Create a new directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_directory%28name%20%3A%20String%29-instance-method" class="signature"><strong>#delete_directory</strong>(name : String)</a>
+        <a href="#delete_directory%28name%3AString%29-instance-method" class="signature"><strong>#delete_directory</strong>(name : String)</a>
         
           <div class="summary"><p>Remove an existing directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_file%28name%20%3A%20String%29-instance-method" class="signature"><strong>#delete_file</strong>(name : String)</a>
+        <a href="#delete_file%28name%3AString%29-instance-method" class="signature"><strong>#delete_file</strong>(name : String)</a>
         
           <div class="summary"><p>Remove an existing file</p></div>
         
@@ -151,7 +140,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#download%28distant_file%20%3A%20String%2C%20dest_path%20%3A%20String%2C%20mode%20%3A%20FtpTransferMode%29-instance-method" class="signature"><strong>#download</strong>(distant_file : String, dest_path : String, mode : FtpTransferMode)</a>
+        <a href="#download%28distant_file%3AString%2Cdest_path%3AString%2Cmode%3AFtpTransferMode%29-instance-method" class="signature"><strong>#download</strong>(distant_file : String, dest_path : String, mode : FtpTransferMode)</a>
         
           <div class="summary"><p>Download a file from a FTP server</p></div>
         
@@ -165,9 +154,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_directory_listing%28directory%20%3A%20String%29-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String)</a>
+        <a href="#get_directory_listing%28directory%3AString%29-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String)</a>
         
           <div class="summary"><p>Get the contents of the given directory</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_directory_listing-instance-method" class="signature"><strong>#get_directory_listing</strong></a>
         
       </li>
     
@@ -179,9 +173,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#login%28user_name%20%3A%20String%2C%20password%20%3A%20String%29-instance-method" class="signature"><strong>#login</strong>(user_name : String, password : String)</a>
+        <a href="#login%28user_name%3AString%2Cpassword%3AString%29-instance-method" class="signature"><strong>#login</strong>(user_name : String, password : String)</a>
         
           <div class="summary"><p>Log in using a username and a password</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#login-instance-method" class="signature"><strong>#login</strong></a>
         
       </li>
     
@@ -200,21 +199,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#rename_file%28file%20%3A%20String%2C%20new_name%20%3A%20String%29-instance-method" class="signature"><strong>#rename_file</strong>(file : String, new_name : String)</a>
+        <a href="#rename_file%28file%3AString%2Cnew_name%3AString%29-instance-method" class="signature"><strong>#rename_file</strong>(file : String, new_name : String)</a>
         
           <div class="summary"><p>Rename an existing file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#upload%28local_file%20%3A%20String%2C%20dest_path%20%3A%20String%2C%20mode%20%3A%20FtpTransferMode%29-instance-method" class="signature"><strong>#upload</strong>(local_file : String, dest_path : String, mode : FtpTransferMode)</a>
+        <a href="#upload%28local_file%3AString%2Cdest_path%3AString%2Cmode%3AFtpTransferMode%29-instance-method" class="signature"><strong>#upload</strong>(local_file : String, dest_path : String, mode : FtpTransferMode)</a>
         
           <div class="summary"><p>Upload a file to a FTP server</p></div>
         
@@ -237,51 +229,6 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L295" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L295" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L295" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
       <div class="signature" id="new-class-method">
         
         def self.<strong>new</strong>
@@ -291,10 +238,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: A new Ftp object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L303" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L317" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -304,7 +254,7 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
   <h2>Instance Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="change_directory%28directory%20%3A%20String%29-instance-method">
+      <div class="signature" id="change_directory(directory:String)-instance-method">
         
         def <strong>change_directory</strong>(directory : String)
       </div>
@@ -319,15 +269,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L437" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L451" target="_blank">View source</a>]
+        
+        [<a href="#change_directory%28directory%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="connect%28server%20%3A%20IpAddress%2C%20port%20%3A%20Int%2C%20timeout%20%3A%20Time%29-instance-method">
+      <div class="signature" id="connect(server:IpAddress,port:Int,timeout:Time)-instance-method">
         
         def <strong>connect</strong>(server : <a href="../SF/IpAddress.html">IpAddress</a>, port : Int, timeout : <a href="../SF/Time.html">Time</a>)
       </div>
@@ -349,15 +302,34 @@ system timeout will be used (which is usually pretty long).</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L336" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L350" target="_blank">View source</a>]
+        
+        [<a href="#connect%28server%3AIpAddress%2Cport%3AInt%2Ctimeout%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="create_directory%28name%20%3A%20String%29-instance-method">
+      <div class="signature" id="connect(server:IpAddress,port=21:Int)-instance-method">
+        
+        def <strong>connect</strong>(server : <a href="../SF/IpAddress.html">IpAddress</a>, port = <span class="n">21</span> : Int)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L28" target="_blank">View source</a>]
+        
+        [<a href="#connect%28server%3AIpAddress%2Cport%3D21%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="create_directory(name:String)-instance-method">
         
         def <strong>create_directory</strong>(name : String)
       </div>
@@ -373,15 +345,18 @@ working directory.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L463" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L477" target="_blank">View source</a>]
+        
+        [<a href="#create_directory%28name%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="delete_directory%28name%20%3A%20String%29-instance-method">
+      <div class="signature" id="delete_directory(name:String)-instance-method">
         
         def <strong>delete_directory</strong>(name : String)
       </div>
@@ -399,15 +374,18 @@ be removed permanently!</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L480" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L494" target="_blank">View source</a>]
+        
+        [<a href="#delete_directory%28name%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="delete_file%28name%20%3A%20String%29-instance-method">
+      <div class="signature" id="delete_file(name:String)-instance-method">
         
         def <strong>delete_file</strong>(name : String)
       </div>
@@ -425,10 +403,13 @@ removed permanently!</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L513" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L527" target="_blank">View source</a>]
+        
+        [<a href="#delete_file%28name%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -446,15 +427,18 @@ removed permanently!</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L378" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L392" target="_blank">View source</a>]
+        
+        [<a href="#disconnect-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="download%28distant_file%20%3A%20String%2C%20dest_path%20%3A%20String%2C%20mode%20%3A%20FtpTransferMode%29-instance-method">
+      <div class="signature" id="download(distant_file:String,dest_path:String,mode:FtpTransferMode)-instance-method">
         
         def <strong>download</strong>(distant_file : String, dest_path : String, mode : <a href="../SF/FtpTransferMode.html">FtpTransferMode</a>)
       </div>
@@ -472,10 +456,13 @@ of your application.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L532" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L546" target="_blank">View source</a>]
+        
+        [<a href="#download%28distant_file%3AString%2Cdest_path%3AString%2Cmode%3AFtpTransferMode%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -491,15 +478,18 @@ of your application.</p>
 
 <ul><li><code>ftp</code>: Ftp object to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L313" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L327" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_directory_listing%28directory%20%3A%20String%29-instance-method">
+      <div class="signature" id="get_directory_listing(directory:String)-instance-method">
         
         def <strong>get_directory_listing</strong>(directory : String)
       </div>
@@ -517,10 +507,29 @@ working directory.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L437" target="_blank">View source</a>]
+        
+        [<a href="#get_directory_listing%28directory%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_directory_listing-instance-method">
+        
+        def <strong>get_directory_listing</strong>
+      </div>
       
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L423" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L35" target="_blank">View source</a>]
+        
+        [<a href="#get_directory_listing-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -541,15 +550,18 @@ connection automatically if no command is sent.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L392" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L406" target="_blank">View source</a>]
+        
+        [<a href="#keep_alive-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="login%28user_name%20%3A%20String%2C%20password%20%3A%20String%29-instance-method">
+      <div class="signature" id="login(user_name:String,password:String)-instance-method">
         
         def <strong>login</strong>(user_name : String, password : String)
       </div>
@@ -565,10 +577,29 @@ Users that are not logged in cannot perform any operation.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L381" target="_blank">View source</a>]
+        
+        [<a href="#login%28user_name%3AString%2Cpassword%3AString%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="login-instance-method">
+        
+        def <strong>login</strong>
+      </div>
       
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L367" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network.cr#L31" target="_blank">View source</a>]
+        
+        [<a href="#login-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -589,10 +620,13 @@ Users that are not logged in cannot perform any operation.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L351" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L365" target="_blank">View source</a>]
+        
+        [<a href="#login_anonymous-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -610,15 +644,18 @@ Users that are not logged in cannot perform any operation.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L448" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L462" target="_blank">View source</a>]
+        
+        [<a href="#parent_directory-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="rename_file%28file%20%3A%20String%2C%20new_name%20%3A%20String%29-instance-method">
+      <div class="signature" id="rename_file(file:String,new_name:String)-instance-method">
         
         def <strong>rename_file</strong>(file : String, new_name : String)
       </div>
@@ -634,30 +671,18 @@ directory.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L496" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L510" target="_blank">View source</a>]
+        
+        [<a href="#rename_file%28file%3AString%2Cnew_name%3AString%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L295" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="upload%28local_file%20%3A%20String%2C%20dest_path%20%3A%20String%2C%20mode%20%3A%20FtpTransferMode%29-instance-method">
+      <div class="signature" id="upload(local_file:String,dest_path:String,mode:FtpTransferMode)-instance-method">
         
         def <strong>upload</strong>(local_file : String, dest_path : String, mode : <a href="../SF/FtpTransferMode.html">FtpTransferMode</a>)
       </div>
@@ -675,10 +700,13 @@ FTP server.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L551" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L565" target="_blank">View source</a>]
+        
+        [<a href="#upload%28local_file%3AString%2Cdest_path%3AString%2Cmode%3AFtpTransferMode%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -699,10 +727,13 @@ operations involving directories and/or filenames.</p>
 
 <p><em>Returns</em>: Server response to the request</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/network_obj.cr#L406" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/network_obj.cr#L420" target="_blank">View source</a>]
+        
+        [<a href="#working_directory-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

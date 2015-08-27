@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+    var pathToIndex = "../index.html"
+  </script>
+  <script type="text/javascript" src="../js/type.js"></script>
+</head>
+<body>
+
+<h1>
+
+  class SF::Thread
+
+<span class="type-permalink">[<a href="../SF/Thread.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
+
+
+
+
+
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Thread.html">SF::Thread</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr" target="_blank">system.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr" target="_blank">system_obj.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#new%28function%3A-%3E%29-class-method" class="signature"><strong>.new</strong>(function : -> )</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Destroy a thread</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#launch-instance-method" class="signature"><strong>#launch</strong></a>
+        
+          <div class="summary"><p>Run a thread</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#terminate-instance-method" class="signature"><strong>#terminate</strong></a>
+        
+          <div class="summary"><p>Terminate a thread</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#wait-instance-method" class="signature"><strong>#wait</strong></a>
+        
+          <div class="summary"><p>Wait until a thread finishes</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="new(function:-&gt;)-class-method">
+        
+        def self.<strong>new</strong>(function :  -> )
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system.cr#L169" target="_blank">View source</a>]
+        
+        [<a href="#new%28function%3A-%3E%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="finalize-instance-method">
+        
+        def <strong>finalize</strong>
+      </div>
+      
+        <div class="doc"><p>Destroy a thread</p>
+
+<p>This function calls Thread_wait, so that the internal thread
+cannot survive after the Thread object is destroyed.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>thread</code>: Thread to destroy</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L163" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="launch-instance-method">
+        
+        def <strong>launch</strong>
+      </div>
+      
+        <div class="doc"><p>Run a thread</p>
+
+<p>This function starts the entry point passed to the
+thread's constructor, and returns immediately.
+After this function returns, the thread's function is
+running in parallel to the calling code.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>thread</code>: Thread object</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L177" target="_blank">View source</a>]
+        
+        [<a href="#launch-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="terminate-instance-method">
+        
+        def <strong>terminate</strong>
+      </div>
+      
+        <div class="doc"><p>Terminate a thread</p>
+
+<p>This function immediately stops the thread, without waiting
+for its function to finish.
+Terminating a thread with this function is not safe,
+and can lead to local variables not being destroyed
+on some operating systems. You should rather try to make
+the thread function terminate by itself.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>thread</code>: Thread object</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L209" target="_blank">View source</a>]
+        
+        [<a href="#terminate-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="wait-instance-method">
+        
+        def <strong>wait</strong>
+      </div>
+      
+        <div class="doc"><p>Wait until a thread finishes</p>
+
+<p>This function will block the execution until the
+thread's function ends.
+Warning: if the thread function never ends, the calling
+thread will block forever.
+If this function is called from its owner thread, it
+returns without doing anything.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>thread</code>: Thread object</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/system_obj.cr#L193" target="_blank">View source</a>]
+        
+        [<a href="#wait-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+
+
+
+
+
+</body>
+</html>

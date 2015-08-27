@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Touch</h1>
+  class SF::Touch
 
+<span class="type-permalink">[<a href="../SF/Touch.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -36,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/window_obj.cr" target="_blank">window_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr" target="_blank">window_obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -54,21 +57,21 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#get_position%28finger%20%3A%20Int%2C%20relative_to%20%3A%20RenderWindow%29-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : RenderWindow)</a>
+        <a href="#get_position%28finger%3AInt%2Crelative_to%3ARenderWindow%29-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : RenderWindow)</a>
         
           <div class="summary"><p>Get the current position of a touch in window coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_position%28finger%20%3A%20Int%2C%20relative_to%20%3A%20Window%29-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : Window)</a>
+        <a href="#get_position%28finger%3AInt%2Crelative_to%3AWindow%29-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : Window)</a>
         
           <div class="summary"><p>Get the current position of a touch in window coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#is_down%28finger%20%3A%20Int%29-class-method" class="signature"><strong>.is_down</strong>(finger : Int)</a>
+        <a href="#is_down%28finger%3AInt%29-class-method" class="signature"><strong>.is_down</strong>(finger : Int)</a>
         
           <div class="summary"><p>Check if a touch event is currently down</p></div>
         
@@ -86,7 +89,7 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="get_position%28finger%20%3A%20Int%2C%20relative_to%20%3A%20RenderWindow%29-class-method">
+      <div class="signature" id="get_position(finger:Int,relative_to:RenderWindow)-class-method">
         
         def self.<strong>get_position</strong>(finger : Int, relative_to : <a href="../SF/RenderWindow.html">RenderWindow</a>)
       </div>
@@ -102,15 +105,18 @@ relative to the given render window, or desktop if NULL is passed.</p>
 
 <p><em>Returns</em>: Current position of <code>finger</code>, or undefined if it's not down</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L5343" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5418" target="_blank">View source</a>]
+        
+        [<a href="#get_position%28finger%3AInt%2Crelative_to%3ARenderWindow%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_position%28finger%20%3A%20Int%2C%20relative_to%20%3A%20Window%29-class-method">
+      <div class="signature" id="get_position(finger:Int,relative_to:Window)-class-method">
         
         def self.<strong>get_position</strong>(finger : Int, relative_to : <a href="../SF/Window.html">Window</a>)
       </div>
@@ -126,15 +132,18 @@ relative to the given window, or desktop if NULL is passed.</p>
 
 <p><em>Returns</em>: Current position of <code>finger</code>, or undefined if it's not down</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/window_obj.cr#L1023" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1109" target="_blank">View source</a>]
+        
+        [<a href="#get_position%28finger%3AInt%2Crelative_to%3AWindow%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="is_down%28finger%20%3A%20Int%29-class-method">
+      <div class="signature" id="is_down(finger:Int)-class-method">
         
         def self.<strong>is_down</strong>(finger : Int)
       </div>
@@ -147,10 +156,13 @@ relative to the given window, or desktop if NULL is passed.</p>
 
 <p><em>Returns</em>: True if <code>finger</code> is currently touching the screen, False otherwise</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/window_obj.cr#L1007" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/window_obj.cr#L1093" target="_blank">View source</a>]
+        
+        [<a href="#is_down%28finger%3AInt%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

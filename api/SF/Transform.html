@@ -10,21 +10,28 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>alias SF::Transform</h1>
+  struct SF::Transform
 
+<span class="type-permalink">[<a href="../SF/Transform.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
   <h2>Overview</h2>
 
   <p>Encapsulate a 3x3 transform matrix</p>
 
+<ul><li>matrix : <code>Float32[9]</code></li></ul>
+
+<p>Do not use <code>.new</code>; <code><a href="../SF.html">SF</a></code> namespace may contain constructor methods for this struct.</p>
 
 
-  <h2>Alias Definition</h2>
-  <code><a href="../CSFML/Transform.html">CSFML::Transform</a></code>
 
 
+
+  <h2>Superclass hierarchy</h2>
+  <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Value</div><div style="padding-left: 40px">Struct</div><div style="padding-left: 60px"><a href="../SF/Transform.html">SF::Transform</a></div>
 
 
 
@@ -40,7 +47,17 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -63,12 +80,511 @@
 
 
 
+  <h2>Instance Method Summary</h2>
+  <ul>
+    
+      <li class="entry-summary">
+        <a href="#%2A%28other%3Aself%29-instance-method" class="signature"><strong>#*</strong>(other : self)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2A%28point%29-instance-method" class="signature"><strong>#*</strong>(point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#combine%28other%29-instance-method" class="signature"><strong>#combine</strong>(other)</a>
+        
+          <div class="summary"><p>Combine two transforms</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_matrix%28matrix%3A%3A%3APointer%28Float32%29%29-instance-method" class="signature"><strong>#get_matrix</strong>(matrix : ::Pointer(Float32))</a>
+        
+          <div class="summary"><p>Return the 4x4 matrix of a transform</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_matrix-instance-method" class="signature"><strong>#get_matrix</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inverse-instance-method" class="signature"><strong>#inverse</strong></a>
+        
+          <div class="summary"><p>Return the inverse of a transform</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rotate%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
+        
+          <div class="summary"><p>Combine the current transform with a rotation</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rotate%28angle%3ANumber%2Ccenter_x%3ANumber%2Ccenter_y%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number, center_x : Number, center_y : Number)</a>
+        
+          <div class="summary"><p>Combine the current transform with a rotation</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rotate%28angle%3ANumber%2Ccenter%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number, center)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28factors%29-instance-method" class="signature"><strong>#scale</strong>(factors)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%2Ccenter_x%3ANumber%2Ccenter_y%3ANumber%29-instance-method" class="signature"><strong>#scale</strong>(scale_x : Number, scale_y : Number, center_x : Number, center_y : Number)</a>
+        
+          <div class="summary"><p>Combine the current transform with a scaling</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29-instance-method" class="signature"><strong>#scale</strong>(scale_x : Number, scale_y : Number)</a>
+        
+          <div class="summary"><p>Combine the current transform with a scaling</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28factors%2Ccenter%3ANumber%29-instance-method" class="signature"><strong>#scale</strong>(factors, center : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transform_point%28point%29-instance-method" class="signature"><strong>#transform_point</strong>(point)</a>
+        
+          <div class="summary"><p>Apply a transform to a 2D point</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transform_point%28x%2Cy%29-instance-method" class="signature"><strong>#transform_point</strong>(x, y)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transform_rect%28rectangle%3AFloatRect%29-instance-method" class="signature"><strong>#transform_rect</strong>(rectangle : FloatRect)</a>
+        
+          <div class="summary"><p>Apply a transform to a rectangle</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#translate%28offset%29-instance-method" class="signature"><strong>#translate</strong>(offset)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#translate%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="signature"><strong>#translate</strong>(x : Number, y : Number)</a>
+        
+          <div class="summary"><p>Combine a transform with a translation</p></div>
+        
+      </li>
+    
+  </ul>
 
 
 
 
 
 
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail">
+      <div class="signature" id="*(other:self)-instance-method">
+        
+        def <strong>*</strong>(other : self)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L111" target="_blank">View source</a>]
+        
+        [<a href="#%2A%28other%3Aself%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="*(point)-instance-method">
+        
+        def <strong>*</strong>(point)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L116" target="_blank">View source</a>]
+        
+        [<a href="#%2A%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="combine(other)-instance-method">
+        
+        def <strong>combine</strong>(other)
+      </div>
+      
+        <div class="doc"><p>Combine two transforms</p>
+
+<p>The result is a transform that is equivalent to applying
+<code>transform</code> followed by <code>other</code>. Mathematically, it is
+equivalent to a matrix multiplication.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>right</code>: Transform to combine to <code>transform</code></li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5193" target="_blank">View source</a>]
+        
+        [<a href="#combine%28other%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_matrix(matrix:::Pointer(Float32))-instance-method">
+        
+        def <strong>get_matrix</strong>(matrix : ::Pointer(Float32))
+      </div>
+      
+        <div class="doc"><p>Return the 4x4 matrix of a transform</p>
+
+<p>This function fills an array of 16 floats with the transform
+converted as a 4x4 matrix, which is directly compatible with
+OpenGL functions.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>matrix</code>: Pointer to the 16-element array to fill with the matrix</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5131" target="_blank">View source</a>]
+        
+        [<a href="#get_matrix%28matrix%3A%3A%3APointer%28Float32%29%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_matrix-instance-method">
+        
+        def <strong>get_matrix</strong>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L120" target="_blank">View source</a>]
+        
+        [<a href="#get_matrix-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="inverse-instance-method">
+        
+        def <strong>inverse</strong>
+      </div>
+      
+        <div class="doc"><p>Return the inverse of a transform</p>
+
+<p>If the inverse cannot be computed, a new identity transform
+is returned.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li></ul>
+
+<p><em>Returns</em>: The inverse matrix</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5145" target="_blank">View source</a>]
+        
+        [<a href="#inverse-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="rotate(angle:Number)-instance-method">
+        
+        def <strong>rotate</strong>(angle : Number)
+      </div>
+      
+        <div class="doc"><p>Combine the current transform with a rotation</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>angle</code>: Rotation angle, in degrees</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5225" target="_blank">View source</a>]
+        
+        [<a href="#rotate%28angle%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="rotate(angle:Number,center_x:Number,center_y:Number)-instance-method">
+        
+        def <strong>rotate</strong>(angle : Number, center_x : Number, center_y : Number)
+      </div>
+      
+        <div class="doc"><p>Combine the current transform with a rotation</p>
+
+<p>The center of rotation is provided for convenience as a second
+argument, so that you can build rotations around arbitrary points
+more easily (and efficiently) than the usual
+[translate(-center), rotate(angle), translate(center)].</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>angle</code>: Rotation angle, in degrees</li><li><code>centerX</code>: X coordinate of the center of rotation</li><li><code>centerY</code>: Y coordinate of the center of rotation</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5246" target="_blank">View source</a>]
+        
+        [<a href="#rotate%28angle%3ANumber%2Ccenter_x%3ANumber%2Ccenter_y%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="rotate(angle:Number,center)-instance-method">
+        
+        def <strong>rotate</strong>(angle : Number, center)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L97" target="_blank">View source</a>]
+        
+        [<a href="#rotate%28angle%3ANumber%2Ccenter%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="scale(factors)-instance-method">
+        
+        def <strong>scale</strong>(factors)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L101" target="_blank">View source</a>]
+        
+        [<a href="#scale%28factors%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="scale(scale_x:Number,scale_y:Number,center_x:Number,center_y:Number)-instance-method">
+        
+        def <strong>scale</strong>(scale_x : Number, scale_y : Number, center_x : Number, center_y : Number)
+      </div>
+      
+        <div class="doc"><p>Combine the current transform with a scaling</p>
+
+<p>The center of scaling is provided for convenience as a second
+argument, so that you can build scaling around arbitrary points
+more easily (and efficiently) than the usual
+[translate(-center), scale(factors), translate(center)]</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>scaleX</code>: Scaling factor on X axis</li><li><code>scaleY</code>: Scaling factor on Y axis</li><li><code>centerX</code>: X coordinate of the center of scaling</li><li><code>centerY</code>: Y coordinate of the center of scaling</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5286" target="_blank">View source</a>]
+        
+        [<a href="#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%2Ccenter_x%3ANumber%2Ccenter_y%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="scale(scale_x:Number,scale_y:Number)-instance-method">
+        
+        def <strong>scale</strong>(scale_x : Number, scale_y : Number)
+      </div>
+      
+        <div class="doc"><p>Combine the current transform with a scaling</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>scaleX</code>: Scaling factor on the X axis</li><li><code>scaleY</code>: Scaling factor on the Y axis</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5263" target="_blank">View source</a>]
+        
+        [<a href="#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="scale(factors,center:Number)-instance-method">
+        
+        def <strong>scale</strong>(factors, center : Number)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L105" target="_blank">View source</a>]
+        
+        [<a href="#scale%28factors%2Ccenter%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="transform_point(point)-instance-method">
+        
+        def <strong>transform_point</strong>(point)
+      </div>
+      
+        <div class="doc"><p>Apply a transform to a 2D point</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>point</code>: Point to transform</li></ul>
+
+<p><em>Returns</em>: Transformed point</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5158" target="_blank">View source</a>]
+        
+        [<a href="#transform_point%28point%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="transform_point(x,y)-instance-method">
+        
+        def <strong>transform_point</strong>(x, y)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L90" target="_blank">View source</a>]
+        
+        [<a href="#transform_point%28x%2Cy%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="transform_rect(rectangle:FloatRect)-instance-method">
+        
+        def <strong>transform_rect</strong>(rectangle : <a href="../SF/FloatRect.html">FloatRect</a>)
+      </div>
+      
+        <div class="doc"><p>Apply a transform to a rectangle</p>
+
+<p>Since SFML doesn't provide support for oriented rectangles,
+the result of this function is always an axis-aligned
+rectangle. Which means that if the transform contains a
+rotation, the bounding rectangle of the transformed rectangle
+is returned.</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>rectangle</code>: Rectangle to transform</li></ul>
+
+<p><em>Returns</em>: Transformed rectangle</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5178" target="_blank">View source</a>]
+        
+        [<a href="#transform_rect%28rectangle%3AFloatRect%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="translate(offset)-instance-method">
+        
+        def <strong>translate</strong>(offset)
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L93" target="_blank">View source</a>]
+        
+        [<a href="#translate%28offset%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="translate(x:Number,y:Number)-instance-method">
+        
+        def <strong>translate</strong>(x : Number, y : Number)
+      </div>
+      
+        <div class="doc"><p>Combine a transform with a translation</p>
+
+<p><em>Arguments</em>:</p>
+
+<ul><li><code>transform</code>: Transform object</li><li><code>x</code>: Offset to apply on X axis</li><li><code>y</code>: Offset to apply on Y axis</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L5210" target="_blank">View source</a>]
+        
+        [<a href="#translate%28x%3ANumber%2Cy%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
 
 
 

@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::ConvexShape</h1>
+  class SF::ConvexShape
 
+<span class="type-permalink">[<a href="../SF/ConvexShape.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/ConvexShape.html">SF::ConvexShape</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr" target="_blank">graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr" target="_blank">graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -59,26 +57,7 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28point_count%20%3A%20Int%29-class-method" class="signature"><strong>.new</strong>(point_count : Int)</a>
+        <a href="#new%28point_count%3AInt%29-class-method" class="signature"><strong>.new</strong>(point_count : Int)</a>
         
       </li>
     
@@ -102,12 +81,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#%5B%5D%3D%28index%2C%20point%29-instance-method" class="signature"><strong>#[]=</strong>(index, point)</a>
+        <a href="#%5B%5D%3D%28index%2Cpoint%29-instance-method" class="signature"><strong>#[]=</strong>(index, point)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28target%2C%20states%20%3A%20RenderStates%29-instance-method" class="signature"><strong>#draw</strong>(target, states : RenderStates)</a>
+        <a href="#draw%28target%2Cstates%3ARenderStates%29-instance-method" class="signature"><strong>#draw</strong>(target, states : RenderStates)</a>
         
       </li>
     
@@ -126,7 +105,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#fill_color%3D%28color%20%3A%20Color%29-instance-method" class="signature"><strong>#fill_color=</strong>(color : Color)</a>
+        <a href="#fill_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#fill_color=</strong>(color : Color)</a>
         
           <div class="summary"><p>Set the fill color of a convex shape</p></div>
         
@@ -140,7 +119,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_point%28index%20%3A%20Int%29-instance-method" class="signature"><strong>#get_point</strong>(index : Int)</a>
+        <a href="#get_point%28index%3AInt%29-instance-method" class="signature"><strong>#get_point</strong>(index : Int)</a>
         
           <div class="summary"><p>Get a point of a convex shape</p></div>
         
@@ -196,7 +175,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_color%3D%28color%20%3A%20Color%29-instance-method" class="signature"><strong>#outline_color=</strong>(color : Color)</a>
+        <a href="#outline_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#outline_color=</strong>(color : Color)</a>
         
           <div class="summary"><p>Set the outline color of a convex shape</p></div>
         
@@ -210,7 +189,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_thickness%3D%28thickness%20%3A%20Number%29-instance-method" class="signature"><strong>#outline_thickness=</strong>(thickness : Number)</a>
+        <a href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method" class="signature"><strong>#outline_thickness=</strong>(thickness : Number)</a>
         
           <div class="summary"><p>Set the thickness of a convex shape's outline</p></div>
         
@@ -224,7 +203,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#point_count%3D%28count%20%3A%20Int%29-instance-method" class="signature"><strong>#point_count=</strong>(count : Int)</a>
+        <a href="#point_count%3D%28count%3AInt%29-instance-method" class="signature"><strong>#point_count=</strong>(count : Int)</a>
         
           <div class="summary"><p>Set the number of points of a convex shap</p></div>
         
@@ -245,7 +224,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#rotate%28angle%20%3A%20Number%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
+        <a href="#rotate%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
         
           <div class="summary"><p>Rotate a convex shape</p></div>
         
@@ -259,7 +238,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3D%28angle%20%3A%20Number%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
+        <a href="#rotation%3D%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
         
           <div class="summary"><p>Set the orientation of a convex shape</p></div>
         
@@ -287,14 +266,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#set_point%28index%20%3A%20Int%2C%20point%29-instance-method" class="signature"><strong>#set_point</strong>(index : Int, point)</a>
+        <a href="#set_point%28index%3AInt%2Cpoint%29-instance-method" class="signature"><strong>#set_point</strong>(index : Int, point)</a>
         
           <div class="summary"><p>Set the position of a point in a convex shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_texture%28texture%20%3A%20Texture%2C%20reset_rect%20%3A%20Bool%29-instance-method" class="signature"><strong>#set_texture</strong>(texture : Texture, reset_rect : Bool)</a>
+        <a href="#set_texture%28texture%3ATexture%2Creset_rect%3ABool%29-instance-method" class="signature"><strong>#set_texture</strong>(texture : Texture, reset_rect : Bool)</a>
         
           <div class="summary"><p>Change the source texture of a convex shape</p></div>
         
@@ -315,16 +294,9 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#texture_rect%3D%28rect%20%3A%20IntRect%29-instance-method" class="signature"><strong>#texture_rect=</strong>(rect : IntRect)</a>
+        <a href="#texture_rect%3D%28rect%3AIntRect%29-instance-method" class="signature"><strong>#texture_rect=</strong>(rect : IntRect)</a>
         
           <div class="summary"><p>Set the sub-rectangle of the texture that a convex shape will display</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
         
       </li>
     
@@ -345,60 +317,18 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L593" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L593" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L593" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28point_count%20%3A%20Int%29-class-method">
+      <div class="signature" id="new(point_count:Int)-class-method">
         
         def self.<strong>new</strong>(point_count : Int)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L216" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L217" target="_blank">View source</a>]
+        
+        [<a href="#new%28point_count%3AInt%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -410,12 +340,15 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
       
         <div class="doc"><p>Create a new convex shape</p>
 
-<p><em>Returns</em>: A new ConvexShape object, or NULL if it failed</p></div>
+<p><em>Returns</em>: A new ConvexShape object, or raises <code><a href="../SF/NullResult.html">NullResult</a></code> if it failed</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L598" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L626" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -425,41 +358,50 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
   <h2>Instance Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="%5B%5D%28index%29-instance-method">
+      <div class="signature" id="[](index)-instance-method">
         
         def <strong>[]</strong>(index)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L221" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L222" target="_blank">View source</a>]
+        
+        [<a href="#%5B%5D%28index%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="%5B%5D%3D%28index%2C%20point%29-instance-method">
+      <div class="signature" id="[]=(index,point)-instance-method">
         
         def <strong>[]=</strong>(index, point)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L224" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L225" target="_blank">View source</a>]
+        
+        [<a href="#%5B%5D%3D%28index%2Cpoint%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="draw%28target%2C%20states%20%3A%20RenderStates%29-instance-method">
+      <div class="signature" id="draw(target,states:RenderStates)-instance-method">
         
         def <strong>draw</strong>(target, states : <a href="../SF/RenderStates.html">RenderStates</a>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics.cr#L228" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics.cr#L229" target="_blank">View source</a>]
+        
+        [<a href="#draw%28target%2Cstates%3ARenderStates%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -477,10 +419,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Copied object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L610" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L638" target="_blank">View source</a>]
+        
+        [<a href="#dup-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -498,15 +443,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Fill color of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L911" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L939" target="_blank">View source</a>]
+        
+        [<a href="#fill_color-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="fill_color%3D%28color%20%3A%20Color%29-instance-method">
+      <div class="signature" id="fill_color=(color:Color)-instance-method">
         
         def <strong>fill_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
       </div>
@@ -524,10 +472,13 @@ By default, the shape's fill color is opaque white.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>color</code>: New color of the shape</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L846" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L874" target="_blank">View source</a>]
+        
+        [<a href="#fill_color%3D%28color%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -543,15 +494,18 @@ By default, the shape's fill color is opaque white.</p>
 
 <ul><li><code><a href="../SF/Shape.html">Shape</a></code>: Shape to delete</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L619" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L647" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_point%28index%20%3A%20Int%29-instance-method">
+      <div class="signature" id="get_point(index:Int)-instance-method">
         
         def <strong>get_point</strong>(index : Int)
       </div>
@@ -566,10 +520,13 @@ By default, the shape's fill color is opaque white.</p>
 
 <p><em>Returns</em>: Index-th point of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L958" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L986" target="_blank">View source</a>]
+        
+        [<a href="#get_point%28index%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -593,10 +550,13 @@ sprite in the global 2D world's coordinate system.</p>
 
 <p><em>Returns</em>: Global bounding rectangle of the entity</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1025" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1053" target="_blank">View source</a>]
+        
+        [<a href="#global_bounds-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -614,10 +574,13 @@ sprite in the global 2D world's coordinate system.</p>
 
 <p><em>Returns</em>: Inverse of the combined transformations applied to the object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L792" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L820" target="_blank">View source</a>]
+        
+        [<a href="#inverse_transform-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -641,15 +604,18 @@ entity in the entity's coordinate system.</p>
 
 <p><em>Returns</em>: Local bounding rectangle of the entity</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L1008" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1036" target="_blank">View source</a>]
+        
+        [<a href="#local_bounds-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="move%28offset%29-instance-method">
+      <div class="signature" id="move(offset)-instance-method">
         
         def <strong>move</strong>(offset)
       </div>
@@ -663,10 +629,13 @@ unlike ConvexShape_setPosition which overwrites it.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>offset</code>: Offset</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L741" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L769" target="_blank">View source</a>]
+        
+        [<a href="#move%28offset%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -684,15 +653,18 @@ unlike ConvexShape_setPosition which overwrites it.</p>
 
 <p><em>Returns</em>: Current origin</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L728" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L756" target="_blank">View source</a>]
+        
+        [<a href="#origin-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="origin%3D%28origin%29-instance-method">
+      <div class="signature" id="origin=(origin)-instance-method">
         
         def <strong>origin=</strong>(origin)
       </div>
@@ -708,12 +680,15 @@ The default origin of a circle Shape object is (0, 0).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html#origin-instance-method">#origin</a></code>: New origin</li></ul></div>
+<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html{method.anchor}">#origin</a></code>: New origin</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L681" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L709" target="_blank">View source</a>]
+        
+        [<a href="#origin%3D%28origin%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -731,15 +706,18 @@ The default origin of a circle Shape object is (0, 0).</p>
 
 <p><em>Returns</em>: Outline color of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L922" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L950" target="_blank">View source</a>]
+        
+        [<a href="#outline_color-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="outline_color%3D%28color%20%3A%20Color%29-instance-method">
+      <div class="signature" id="outline_color=(color:Color)-instance-method">
         
         def <strong>outline_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
       </div>
@@ -753,10 +731,13 @@ By default, the shape's outline color is opaque white.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>color</code>: New outline color of the shape</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L859" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L887" target="_blank">View source</a>]
+        
+        [<a href="#outline_color%3D%28color%3AColor%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -774,15 +755,18 @@ By default, the shape's outline color is opaque white.</p>
 
 <p><em>Returns</em>: Outline thickness of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L933" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L961" target="_blank">View source</a>]
+        
+        [<a href="#outline_thickness-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="outline_thickness%3D%28thickness%20%3A%20Number%29-instance-method">
+      <div class="signature" id="outline_thickness=(thickness:Number)-instance-method">
         
         def <strong>outline_thickness=</strong>(thickness : Number)
       </div>
@@ -797,10 +781,13 @@ By default, the outline thickness is 0.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>thickness</code>: New outline thickness</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L873" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L901" target="_blank">View source</a>]
+        
+        [<a href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -818,15 +805,18 @@ By default, the outline thickness is 0.</p>
 
 <p><em>Returns</em>: Number of points of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L944" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L972" target="_blank">View source</a>]
+        
+        [<a href="#point_count-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="point_count%3D%28count%20%3A%20Int%29-instance-method">
+      <div class="signature" id="point_count=(count:Int)-instance-method">
         
         def <strong>point_count=</strong>(count : Int)
       </div>
@@ -839,10 +829,13 @@ By default, the outline thickness is 0.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>count</code>: New number of points of the shape</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L971" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L999" target="_blank">View source</a>]
+        
+        [<a href="#point_count%3D%28count%3AInt%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -860,15 +853,18 @@ By default, the outline thickness is 0.</p>
 
 <p><em>Returns</em>: Current position</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L693" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L721" target="_blank">View source</a>]
+        
+        [<a href="#position-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="position%3D%28position%29-instance-method">
+      <div class="signature" id="position=(position)-instance-method">
         
         def <strong>position=</strong>(position)
       </div>
@@ -881,17 +877,20 @@ The default position of a circle Shape object is (0, 0).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html#position-instance-method">#position</a></code>: New position</li></ul></div>
+<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html{method.anchor}">#position</a></code>: New position</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L633" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L661" target="_blank">View source</a>]
+        
+        [<a href="#position%3D%28position%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="rotate%28angle%20%3A%20Number%29-instance-method">
+      <div class="signature" id="rotate(angle:Number)-instance-method">
         
         def <strong>rotate</strong>(angle : Number)
       </div>
@@ -905,10 +904,13 @@ unlike ConvexShape_setRotation which overwrites it.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>angle</code>: Angle of rotation, in degrees</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L755" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L783" target="_blank">View source</a>]
+        
+        [<a href="#rotate%28angle%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -928,15 +930,18 @@ unlike ConvexShape_setRotation which overwrites it.</p>
 
 <p><em>Returns</em>: Current rotation, in degrees</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L706" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L734" target="_blank">View source</a>]
+        
+        [<a href="#rotation-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="rotation%3D%28angle%20%3A%20Number%29-instance-method">
+      <div class="signature" id="rotation=(angle:Number)-instance-method">
         
         def <strong>rotation=</strong>(angle : Number)
       </div>
@@ -951,15 +956,18 @@ The default rotation of a circle Shape object is 0.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>angle</code>: New rotation, in degrees</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L648" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L676" target="_blank">View source</a>]
+        
+        [<a href="#rotation%3D%28angle%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="scale%28factors%29-instance-method">
+      <div class="signature" id="scale(factors)-instance-method">
         
         def <strong>scale</strong>(factors)
       </div>
@@ -973,10 +981,13 @@ unlike ConvexShape_setScale which overwrites it.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>factors</code>: Scale factors</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L769" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L797" target="_blank">View source</a>]
+        
+        [<a href="#scale%28factors%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -994,15 +1005,18 @@ unlike ConvexShape_setScale which overwrites it.</p>
 
 <p><em>Returns</em>: Current scale factors</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L717" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L745" target="_blank">View source</a>]
+        
+        [<a href="#scale-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="scale%3D%28scale%29-instance-method">
+      <div class="signature" id="scale=(scale)-instance-method">
         
         def <strong>scale=</strong>(scale)
       </div>
@@ -1015,17 +1029,20 @@ The default scale of a circle Shape object is (1, 1).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html#scale-instance-method">#scale</a></code>: New scale factors</li></ul></div>
+<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html{method.anchor}">#scale</a></code>: New scale factors</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L663" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L691" target="_blank">View source</a>]
+        
+        [<a href="#scale%3D%28scale%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_point%28index%20%3A%20Int%2C%20point%29-instance-method">
+      <div class="signature" id="set_point(index:Int,point)-instance-method">
         
         def <strong>set_point</strong>(index : Int, point)
       </div>
@@ -1042,40 +1059,46 @@ of the valid range.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>index</code>: Index of the point to change, in range [0 .. GetPointCount() - 1]</li><li><code>point</code>: New point</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L989" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L1017" target="_blank">View source</a>]
+        
+        [<a href="#set_point%28index%3AInt%2Cpoint%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_texture%28texture%20%3A%20Texture%2C%20reset_rect%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="set_texture(texture:Texture,reset_rect:Bool)-instance-method">
         
         def <strong>set_texture</strong>(texture : <a href="../SF/Texture.html">Texture</a>, reset_rect : Bool)
       </div>
       
         <div class="doc"><p>Change the source texture of a convex shape</p>
 
-<p>The <code><a href="../SF/ConvexShape.html#texture-instance-method">#texture</a></code> argument refers to a texture that must
+<p>The <code><a href="../SF/ConvexShape.html{method.anchor}">#texture</a></code> argument refers to a texture that must
 exist as long as the shape uses it. Indeed, the shape
 doesn't store its own copy of the texture, but rather keeps
 a pointer to the one that you passed to this function.
 If the source texture is destroyed and the shape tries to
 use it, the behaviour is undefined.
-<code><a href="../SF/ConvexShape.html#texture-instance-method">#texture</a></code> can be NULL to disable texturing.
+<code><a href="../SF/ConvexShape.html{method.anchor}">#texture</a></code> can be NULL to disable texturing.
 If <code>reset_rect</code> is true, the TextureRect property of
 the shape is automatically adjusted to the size of the new
 texture. If it is false, the texture rect is left unchanged.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html#texture-instance-method">#texture</a></code>: New texture</li><li><code>reset_rect</code>: Should the texture rect be reset to the size of the new texture?</li></ul></div>
+<ul><li><code>shape</code>: Shape object</li><li><code><a href="../SF/ConvexShape.html{method.anchor}">#texture</a></code>: New texture</li><li><code>reset_rect</code>: Should the texture rect be reset to the size of the new texture?</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L814" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L842" target="_blank">View source</a>]
+        
+        [<a href="#set_texture%28texture%3ATexture%2Creset_rect%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1097,10 +1120,13 @@ modify the texture when you retrieve it with this function.</p>
 
 <p><em>Returns</em>: Pointer to the shape's texture</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L889" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L917" target="_blank">View source</a>]
+        
+        [<a href="#texture-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -1118,15 +1144,18 @@ modify the texture when you retrieve it with this function.</p>
 
 <p><em>Returns</em>: Texture rectangle of the shape</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L900" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L928" target="_blank">View source</a>]
+        
+        [<a href="#texture_rect-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="texture_rect%3D%28rect%20%3A%20IntRect%29-instance-method">
+      <div class="signature" id="texture_rect=(rect:IntRect)-instance-method">
         
         def <strong>texture_rect=</strong>(rect : <a href="../SF/IntRect.html">IntRect</a>)
       </div>
@@ -1141,25 +1170,13 @@ By default, the texture rect covers the entire texture.</p>
 
 <ul><li><code>shape</code>: Shape object</li><li><code>rect</code>: Rectangle defining the region of the texture to display</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L829" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L857" target="_blank">View source</a>]
+        
+        [<a href="#texture_rect%3D%28rect%3AIntRect%29-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L593" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -1177,10 +1194,13 @@ By default, the texture rect covers the entire texture.</p>
 
 <p><em>Returns</em>: Transform combining the position/rotation/scale/origin of the object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/graphics_obj.cr#L781" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr#L809" target="_blank">View source</a>]
+        
+        [<a href="#transform-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

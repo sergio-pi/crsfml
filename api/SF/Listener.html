@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Listener</h1>
+  class SF::Listener
 
+<span class="type-permalink">[<a href="../SF/Listener.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -36,7 +39,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
     
     <br/>
   
@@ -49,56 +52,112 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#get_direction-class-method" class="signature"><strong>.get_direction</strong></a>
+        <a href="#direction-class-method" class="signature"><strong>.direction</strong></a>
         
           <div class="summary"><p>Get the current forward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_global_volume-class-method" class="signature"><strong>.get_global_volume</strong></a>
-        
-          <div class="summary"><p>Get the current value of the global volume</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#get_position-class-method" class="signature"><strong>.get_position</strong></a>
-        
-          <div class="summary"><p>Get the current position of the listener in the scene</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#get_up_vector-class-method" class="signature"><strong>.get_up_vector</strong></a>
-        
-          <div class="summary"><p>Get the current upward vector of the listener in the scene</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#set_direction%28direction%20%3A%20Vector3f%29-class-method" class="signature"><strong>.set_direction</strong>(direction : Vector3f)</a>
+        <a href="#direction%3D%28direction%3AVector3f%29-class-method" class="signature"><strong>.direction=</strong>(direction : Vector3f)</a>
         
           <div class="summary"><p>Set the orientation of the forward vector in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_global_volume%28volume%20%3A%20Number%29-class-method" class="signature"><strong>.set_global_volume</strong>(volume : Number)</a>
+        <a href="#get_direction-class-method" class="signature"><strong>.get_direction</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.direction</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_global_volume-class-method" class="signature"><strong>.get_global_volume</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.global_volume</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_position-class-method" class="signature"><strong>.get_position</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.position</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_up_vector-class-method" class="signature"><strong>.get_up_vector</strong></a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.up_vector</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#global_volume-class-method" class="signature"><strong>.global_volume</strong></a>
+        
+          <div class="summary"><p>Get the current value of the global volume</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#global_volume%3D%28volume%3ANumber%29-class-method" class="signature"><strong>.global_volume=</strong>(volume : Number)</a>
         
           <div class="summary"><p>Change the global volume of all the sounds and musics</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_position%28position%20%3A%20Vector3f%29-class-method" class="signature"><strong>.set_position</strong>(position : Vector3f)</a>
+        <a href="#position-class-method" class="signature"><strong>.position</strong></a>
+        
+          <div class="summary"><p>Get the current position of the listener in the scene</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#position%3D%28position%3AVector3f%29-class-method" class="signature"><strong>.position=</strong>(position : Vector3f)</a>
         
           <div class="summary"><p>Set the position of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_up_vector%28up_vector%20%3A%20Vector3f%29-class-method" class="signature"><strong>.set_up_vector</strong>(up_vector : Vector3f)</a>
+        <a href="#set_direction%28vector3f%3ADirection%29-class-method" class="signature"><strong>.set_direction</strong>(vector3f : Direction)</a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.direction=</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_global_volume%28number%3AVolume%29-class-method" class="signature"><strong>.set_global_volume</strong>(number : Volume)</a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.global_volume=</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_position%28vector3f%3APosition%29-class-method" class="signature"><strong>.set_position</strong>(vector3f : Position)</a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.position=</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_up_vector%28vector3f%3AUp_vector%29-class-method" class="signature"><strong>.set_up_vector</strong>(vector3f : Up_vector)</a>
+        
+          <div class="summary"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.up_vector=</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#up_vector-class-method" class="signature"><strong>.up_vector</strong></a>
+        
+          <div class="summary"><p>Get the current upward vector of the listener in the scene</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#up_vector%3D%28up_vector%3AVector3f%29-class-method" class="signature"><strong>.up_vector=</strong>(up_vector : Vector3f)</a>
         
           <div class="summary"><p>Set the upward vector of the listener in the scene</p></div>
         
@@ -116,77 +175,29 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="get_direction-class-method">
+      <div class="signature" id="direction-class-method">
         
-        def self.<strong>get_direction</strong>
+        def self.<strong>direction</strong>
       </div>
       
         <div class="doc"><p>Get the current forward vector of the listener in the scene</p>
 
 <p><em>Returns</em>: Listener's forward vector (not normalized)</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L66" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="get_global_volume-class-method">
+      <br/>
+      <div>
         
-        def self.<strong>get_global_volume</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L91" target="_blank">View source</a>]
+        
+        [<a href="#direction-class-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the current value of the global volume</p>
-
-<p><em>Returns</em>: Current global volume, in the range [0, 100]</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L25" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="get_position-class-method">
+      <div class="signature" id="direction=(direction:Vector3f)-class-method">
         
-        def self.<strong>get_position</strong>
-      </div>
-      
-        <div class="doc"><p>Get the current position of the listener in the scene</p>
-
-<p><em>Returns</em>: The listener's position</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L43" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="get_up_vector-class-method">
-        
-        def self.<strong>get_up_vector</strong>
-      </div>
-      
-        <div class="doc"><p>Get the current upward vector of the listener in the scene</p>
-
-<p><em>Returns</em>: Listener's upward vector (not normalized)</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L89" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="set_direction%28direction%20%3A%20Vector3f%29-class-method">
-        
-        def self.<strong>set_direction</strong>(direction : <a href="../SF/Vector3f.html">Vector3f</a>)
+        def self.<strong>direction=</strong>(direction : <a href="../SF/Vector3f.html">Vector3f</a>)
       </div>
       
         <div class="doc"><p>Set the orientation of the forward vector in the scene</p>
@@ -200,19 +211,114 @@ The default listener's direction is (0, 0, -1).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>direction</code>: New listener's direction</li></ul></div>
+<ul><li><code><a href="../SF/Listener.html{method.anchor}">.direction</a></code>: New listener's direction</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L59" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L79" target="_blank">View source</a>]
+        
+        [<a href="#direction%3D%28direction%3AVector3f%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_global_volume%28volume%20%3A%20Number%29-class-method">
+      <div class="signature" id="get_direction-class-method">
         
-        def self.<strong>set_global_volume</strong>(volume : Number)
+        def self.<strong>get_direction</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.direction</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L96" target="_blank">View source</a>]
+        
+        [<a href="#get_direction-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_global_volume-class-method">
+        
+        def self.<strong>get_global_volume</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.global_volume</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L35" target="_blank">View source</a>]
+        
+        [<a href="#get_global_volume-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_position-class-method">
+        
+        def self.<strong>get_position</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.position</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L63" target="_blank">View source</a>]
+        
+        [<a href="#get_position-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="get_up_vector-class-method">
+        
+        def self.<strong>get_up_vector</strong>
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.up_vector</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L129" target="_blank">View source</a>]
+        
+        [<a href="#get_up_vector-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="global_volume-class-method">
+        
+        def self.<strong>global_volume</strong>
+      </div>
+      
+        <div class="doc"><p>Get the current value of the global volume</p>
+
+<p><em>Returns</em>: Current global volume, in the range [0, 100]</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L30" target="_blank">View source</a>]
+        
+        [<a href="#global_volume-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="global_volume=(volume:Number)-class-method">
+        
+        def self.<strong>global_volume=</strong>(volume : Number)
       </div>
       
         <div class="doc"><p>Change the global volume of all the sounds and musics</p>
@@ -225,17 +331,40 @@ The default value for the volume is 100 (maximum).</p>
 
 <ul><li><code>volume</code>: New global volume, in the range [0, 100]</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L17" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L17" target="_blank">View source</a>]
+        
+        [<a href="#global_volume%3D%28volume%3ANumber%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_position%28position%20%3A%20Vector3f%29-class-method">
+      <div class="signature" id="position-class-method">
         
-        def self.<strong>set_position</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
+        def self.<strong>position</strong>
+      </div>
+      
+        <div class="doc"><p>Get the current position of the listener in the scene</p>
+
+<p><em>Returns</em>: The listener's position</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L58" target="_blank">View source</a>]
+        
+        [<a href="#position-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="position=(position:Vector3f)-class-method">
+        
+        def self.<strong>position=</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
       </div>
       
         <div class="doc"><p>Set the position of the listener in the scene</p>
@@ -244,19 +373,114 @@ The default value for the volume is 100 (maximum).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>position</code>: New position of the listener</li></ul></div>
+<ul><li><code><a href="../SF/Listener.html{method.anchor}">.position</a></code>: New position of the listener</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L36" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L46" target="_blank">View source</a>]
+        
+        [<a href="#position%3D%28position%3AVector3f%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="set_up_vector%28up_vector%20%3A%20Vector3f%29-class-method">
+      <div class="signature" id="set_direction(vector3f:Direction)-class-method">
         
-        def self.<strong>set_up_vector</strong>(up_vector : <a href="../SF/Vector3f.html">Vector3f</a>)
+        def self.<strong>set_direction</strong>(vector3f : Direction)
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.direction=</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L84" target="_blank">View source</a>]
+        
+        [<a href="#set_direction%28vector3f%3ADirection%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_global_volume(number:Volume)-class-method">
+        
+        def self.<strong>set_global_volume</strong>(number : Volume)
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.global_volume=</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L23" target="_blank">View source</a>]
+        
+        [<a href="#set_global_volume%28number%3AVolume%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_position(vector3f:Position)-class-method">
+        
+        def self.<strong>set_position</strong>(vector3f : Position)
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.position=</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L51" target="_blank">View source</a>]
+        
+        [<a href="#set_position%28vector3f%3APosition%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="set_up_vector(vector3f:Up_vector)-class-method">
+        
+        def self.<strong>set_up_vector</strong>(vector3f : Up_vector)
+      </div>
+      
+        <div class="doc"><p>Deprecated alias to <code><a href="../SF/Listener.html{method.anchor}">.up_vector=</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L117" target="_blank">View source</a>]
+        
+        [<a href="#set_up_vector%28vector3f%3AUp_vector%29-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="up_vector-class-method">
+        
+        def self.<strong>up_vector</strong>
+      </div>
+      
+        <div class="doc"><p>Get the current upward vector of the listener in the scene</p>
+
+<p><em>Returns</em>: Listener's upward vector (not normalized)</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L124" target="_blank">View source</a>]
+        
+        [<a href="#up_vector-class-method" target="_blank">Permalink</a>]
+      </div>
+    </div>
+    <hr/>
+  
+    <div class="entry-detail">
+      <div class="signature" id="up_vector=(up_vector:Vector3f)-class-method">
+        
+        def self.<strong>up_vector=</strong>(up_vector : <a href="../SF/Vector3f.html">Vector3f</a>)
       </div>
       
         <div class="doc"><p>Set the upward vector of the listener in the scene</p>
@@ -270,12 +494,15 @@ not necessary to change it, especially in 2D scenarios.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>up_vector</code>: New listener's up vector</li></ul></div>
+<ul><li><code><a href="../SF/Listener.html{method.anchor}">.up_vector</a></code>: New listener's up vector</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L82" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L112" target="_blank">View source</a>]
+        
+        [<a href="#up_vector%3D%28up_vector%3AVector3f%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   

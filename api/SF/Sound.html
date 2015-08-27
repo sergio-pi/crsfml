@@ -10,9 +10,12 @@
 </head>
 <body>
 
+<h1>
 
-  <h1>class SF::Sound</h1>
+  class SF::Sound
 
+<span class="type-permalink">[<a href="../SF/Sound.html" class="permalink" target="_blank">permalink</a>]</span>
+</h1>
 
 
 
@@ -23,11 +26,6 @@
   <div style="padding-left: 0px">Object</div><div style="padding-left: 20px">Reference</div><div style="padding-left: 40px"><a href="../SF/Sound.html">SF::Sound</a></div>
 
 
-
-  <h2>Included Modules</h2>
-  
-    <a href="../SF/Wrapper.html">SF::Wrapper</a>
-  
 
 
 
@@ -41,12 +39,12 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio.cr" target="_blank">audio.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio.cr" target="_blank">audio.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr" target="_blank">audio_obj.cr</a>
     
     <br/>
   
@@ -59,26 +57,7 @@
   <ul>
     
       <li class="entry-summary">
-        <a href="#transfer_ptr%28ptr%29-class-method" class="signature"><strong>.transfer_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Transfer ownership of the pointer to the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wrap_ptr%28ptr%29-class-method" class="signature"><strong>.wrap_ptr</strong>(ptr)</a>
-        
-          <div class="summary"><p>Put the pointer into the wrapper object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28this%2C%20owned%20%3A%20Bool%29-class-method" class="signature"><strong>.new</strong>(this, owned : Bool)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28buffer%20%3A%20SoundBuffer%29-class-method" class="signature"><strong>.new</strong>(buffer : SoundBuffer)</a>
+        <a href="#new%28buffer%3ASoundBuffer%29-class-method" class="signature"><strong>.new</strong>(buffer : SoundBuffer)</a>
         
       </li>
     
@@ -104,7 +83,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#attenuation%3D%28attenuation%20%3A%20Number%29-instance-method" class="signature"><strong>#attenuation=</strong>(attenuation : Number)</a>
+        <a href="#attenuation%3D%28attenuation%3ANumber%29-instance-method" class="signature"><strong>#attenuation=</strong>(attenuation : Number)</a>
         
           <div class="summary"><p>Set the attenuation factor of a sound</p></div>
         
@@ -118,7 +97,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#buffer%3D%28buffer%20%3A%20SoundBuffer%29-instance-method" class="signature"><strong>#buffer=</strong>(buffer : SoundBuffer)</a>
+        <a href="#buffer%3D%28buffer%3ASoundBuffer%29-instance-method" class="signature"><strong>#buffer=</strong>(buffer : SoundBuffer)</a>
         
           <div class="summary"><p>Set the source buffer containing the audio data to play</p></div>
         
@@ -146,7 +125,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#loop%3D%28loop%20%3A%20Bool%29-instance-method" class="signature"><strong>#loop=</strong>(loop : Bool)</a>
+        <a href="#loop%3D%28loop%3ABool%29-instance-method" class="signature"><strong>#loop=</strong>(loop : Bool)</a>
         
           <div class="summary"><p>Set whether or not a sound should loop after reaching the end</p></div>
         
@@ -160,7 +139,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#min_distance%3D%28distance%20%3A%20Number%29-instance-method" class="signature"><strong>#min_distance=</strong>(distance : Number)</a>
+        <a href="#min_distance%3D%28distance%3ANumber%29-instance-method" class="signature"><strong>#min_distance=</strong>(distance : Number)</a>
         
           <div class="summary"><p>Set the minimum distance of a sound</p></div>
         
@@ -181,7 +160,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#pitch%3D%28pitch%20%3A%20Number%29-instance-method" class="signature"><strong>#pitch=</strong>(pitch : Number)</a>
+        <a href="#pitch%3D%28pitch%3ANumber%29-instance-method" class="signature"><strong>#pitch=</strong>(pitch : Number)</a>
         
           <div class="summary"><p>Set the pitch of a sound</p></div>
         
@@ -202,7 +181,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#playing_offset%3D%28time_offset%20%3A%20Time%29-instance-method" class="signature"><strong>#playing_offset=</strong>(time_offset : Time)</a>
+        <a href="#playing_offset%3D%28time_offset%3ATime%29-instance-method" class="signature"><strong>#playing_offset=</strong>(time_offset : Time)</a>
         
           <div class="summary"><p>Change the current playing position of a sound</p></div>
         
@@ -216,14 +195,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3D%28position%20%3A%20Vector3f%29-instance-method" class="signature"><strong>#position=</strong>(position : Vector3f)</a>
+        <a href="#position%3D%28position%3AVector3f%29-instance-method" class="signature"><strong>#position=</strong>(position : Vector3f)</a>
         
           <div class="summary"><p>Set the 3D position of a sound in the audio scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#relative_to_listener%3D%28relative%20%3A%20Bool%29-instance-method" class="signature"><strong>#relative_to_listener=</strong>(relative : Bool)</a>
+        <a href="#relative_to_listener%3D%28relative%3ABool%29-instance-method" class="signature"><strong>#relative_to_listener=</strong>(relative : Bool)</a>
         
           <div class="summary"><p>Make the sound's position relative to the listener or absolute</p></div>
         
@@ -251,13 +230,6 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe-instance-method" class="signature"><strong>#to_unsafe</strong></a>
-        
-          <div class="summary"><p>Get the underlying pointer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#volume-instance-method" class="signature"><strong>#volume</strong></a>
         
           <div class="summary"><p>Get the volume of a sound</p></div>
@@ -265,7 +237,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#volume%3D%28volume%20%3A%20Number%29-instance-method" class="signature"><strong>#volume=</strong>(volume : Number)</a>
+        <a href="#volume%3D%28volume%3ANumber%29-instance-method" class="signature"><strong>#volume=</strong>(volume : Number)</a>
         
           <div class="summary"><p>Set the volume of a sound</p></div>
         
@@ -281,60 +253,18 @@
   <h2>Class Method Detail</h2>
   
     <div class="entry-detail">
-      <div class="signature" id="transfer_ptr%28ptr%29-class-method">
-        
-        def self.<strong>transfer_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Transfer ownership of the pointer to the wrapper object.
-The pointer will be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L483" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="wrap_ptr%28ptr%29-class-method">
-        
-        def self.<strong>wrap_ptr</strong>(ptr)
-      </div>
-      
-        <div class="doc"><p>Put the pointer into the wrapper object.
-The pointer will <strong>not</strong> be freed on GC.</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L483" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28this%2C%20owned%20%3A%20Bool%29-class-method">
-        
-        def self.<strong>new</strong>(this, owned : Bool)
-      </div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L483" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="new%28buffer%20%3A%20SoundBuffer%29-class-method">
+      <div class="signature" id="new(buffer:SoundBuffer)-class-method">
         
         def self.<strong>new</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
       </div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio.cr#L27" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio.cr#L27" target="_blank">View source</a>]
+        
+        [<a href="#new%28buffer%3ASoundBuffer%29-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -348,10 +278,13 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: A new Sound object</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L488" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L528" target="_blank">View source</a>]
+        
+        [<a href="#new-class-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -374,15 +307,18 @@ The pointer will <strong>not</strong> be freed on GC.</p></div>
 
 <p><em>Returns</em>: Attenuation factor of the sound</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L792" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L832" target="_blank">View source</a>]
+        
+        [<a href="#attenuation-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="attenuation%3D%28attenuation%20%3A%20Number%29-instance-method">
+      <div class="signature" id="attenuation=(attenuation:Number)-instance-method">
         
         def <strong>attenuation=</strong>(attenuation : Number)
       </div>
@@ -400,12 +336,15 @@ The default value of the attenuation is 1.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#attenuation-instance-method">#attenuation</a></code>: New attenuation factor of the sound</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#attenuation</a></code>: New attenuation factor of the sound</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L711" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L751" target="_blank">View source</a>]
+        
+        [<a href="#attenuation%3D%28attenuation%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -423,15 +362,18 @@ The default value of the attenuation is 1.</p>
 
 <p><em>Returns</em>: Sound buffer attached to the sound (can be NULL)</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L574" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L614" target="_blank">View source</a>]
+        
+        [<a href="#buffer-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="buffer%3D%28buffer%20%3A%20SoundBuffer%29-instance-method">
+      <div class="signature" id="buffer=(buffer:SoundBuffer)-instance-method">
         
         def <strong>buffer=</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
       </div>
@@ -444,12 +386,15 @@ as it is attached to the sound.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#buffer-instance-method">#buffer</a></code>: Sound buffer to attach to the sound</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#buffer</a></code>: Sound buffer to attach to the sound</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L563" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L603" target="_blank">View source</a>]
+        
+        [<a href="#buffer%3D%28buffer%3ASoundBuffer%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -467,10 +412,13 @@ as it is attached to the sound.</p>
 
 <p><em>Returns</em>: A new Sound object which is a copy of <code>sound</code></p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L500" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L540" target="_blank">View source</a>]
+        
+        [<a href="#dup-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -486,10 +434,13 @@ as it is attached to the sound.</p>
 
 <ul><li><code>sound</code>: Sound to destroy</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L509" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L549" target="_blank">View source</a>]
+        
+        [<a href="#finalize-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -507,15 +458,18 @@ as it is attached to the sound.</p>
 
 <p><em>Returns</em>: True if the sound is looping, False otherwise</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L601" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L641" target="_blank">View source</a>]
+        
+        [<a href="#loop-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="loop%3D%28loop%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="loop=(loop:Bool)-instance-method">
         
         def <strong>loop=</strong>(loop : Bool)
       </div>
@@ -529,12 +483,15 @@ The default looping state for sounds is false.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#loop-instance-method">#loop</a></code>: True to play in loop, False to play once</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#loop</a></code>: True to play in loop, False to play once</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L589" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L629" target="_blank">View source</a>]
+        
+        [<a href="#loop%3D%28loop%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -552,15 +509,18 @@ The default looping state for sounds is false.</p>
 
 <p><em>Returns</em>: Minimum distance of the sound</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L781" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L821" target="_blank">View source</a>]
+        
+        [<a href="#min_distance-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="min_distance%3D%28distance%20%3A%20Number%29-instance-method">
+      <div class="signature" id="min_distance=(distance:Number)-instance-method">
         
         def <strong>min_distance=</strong>(distance : Number)
       </div>
@@ -578,10 +538,13 @@ The default value of the minimum distance is 1.</p>
 
 <ul><li><code>sound</code>: Sound object</li><li><code>distance</code>: New minimum distance of the sound</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L691" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L731" target="_blank">View source</a>]
+        
+        [<a href="#min_distance%3D%28distance%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -600,10 +563,13 @@ otherwise (sound already paused or stopped) it has no effect.</p>
 
 <ul><li><code>sound</code>: Sound object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L536" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L576" target="_blank">View source</a>]
+        
+        [<a href="#pause-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -621,15 +587,18 @@ otherwise (sound already paused or stopped) it has no effect.</p>
 
 <p><em>Returns</em>: Pitch of the sound</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L736" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L776" target="_blank">View source</a>]
+        
+        [<a href="#pitch-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="pitch%3D%28pitch%20%3A%20Number%29-instance-method">
+      <div class="signature" id="pitch=(pitch:Number)-instance-method">
         
         def <strong>pitch=</strong>(pitch : Number)
       </div>
@@ -644,12 +613,15 @@ The default value for the pitch is 1.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#pitch-instance-method">#pitch</a></code>: New pitch to apply to the sound</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#pitch</a></code>: New pitch to apply to the sound</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L628" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L668" target="_blank">View source</a>]
+        
+        [<a href="#pitch%3D%28pitch%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -671,10 +643,13 @@ the rest of the program while the sound is played.</p>
 
 <ul><li><code>sound</code>: Sound object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L524" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L564" target="_blank">View source</a>]
+        
+        [<a href="#play-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -692,15 +667,18 @@ the rest of the program while the sound is played.</p>
 
 <p><em>Returns</em>: Current playing position</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L803" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L843" target="_blank">View source</a>]
+        
+        [<a href="#playing_offset-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="playing_offset%3D%28time_offset%20%3A%20Time%29-instance-method">
+      <div class="signature" id="playing_offset=(time_offset:Time)-instance-method">
         
         def <strong>playing_offset=</strong>(time_offset : <a href="../SF/Time.html">Time</a>)
       </div>
@@ -714,10 +692,13 @@ either paused or playing.</p>
 
 <ul><li><code>sound</code>: Sound object</li><li><code>time_offset</code>: New playing position</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L725" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L765" target="_blank">View source</a>]
+        
+        [<a href="#playing_offset%3D%28time_offset%3ATime%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -735,15 +716,18 @@ either paused or playing.</p>
 
 <p><em>Returns</em>: Position of the sound in the world</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L758" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L798" target="_blank">View source</a>]
+        
+        [<a href="#position-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="position%3D%28position%20%3A%20Vector3f%29-instance-method">
+      <div class="signature" id="position=(position:Vector3f)-instance-method">
         
         def <strong>position=</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
       </div>
@@ -756,17 +740,20 @@ The default position of a sound is (0, 0, 0).</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#position-instance-method">#position</a></code>: Position of the sound in the scene</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#position</a></code>: Position of the sound in the scene</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L657" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L697" target="_blank">View source</a>]
+        
+        [<a href="#position%3D%28position%3AVector3f%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="relative_to_listener%3D%28relative%20%3A%20Bool%29-instance-method">
+      <div class="signature" id="relative_to_listener=(relative:Bool)-instance-method">
         
         def <strong>relative_to_listener=</strong>(relative : Bool)
       </div>
@@ -783,15 +770,18 @@ The default value is false (position is absolute).</p>
 
 <ul><li><code>sound</code>: Sound object</li><li><code>relative</code>: True to set the position relative, False to set it absolute</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L673" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L713" target="_blank">View source</a>]
+        
+        [<a href="#relative_to_listener%3D%28relative%3ABool%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="relative_to_listener%3F-instance-method">
+      <div class="signature" id="relative_to_listener?-instance-method">
         
         def <strong>relative_to_listener?</strong>
       </div>
@@ -805,10 +795,13 @@ listener or is absolute</p>
 
 <p><em>Returns</em>: True if the position is relative, False if it's absolute</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L770" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L810" target="_blank">View source</a>]
+        
+        [<a href="#relative_to_listener%3F-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -826,10 +819,13 @@ listener or is absolute</p>
 
 <p><em>Returns</em>: Current status</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L612" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L652" target="_blank">View source</a>]
+        
+        [<a href="#status-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
@@ -849,25 +845,13 @@ It also resets the playing position (unlike Sound_pause).</p>
 
 <ul><li><code>sound</code>: Sound object</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L549" target="_blank">View source</a>]</div>
-      
-    </div>
-    <hr/>
-  
-    <div class="entry-detail">
-      <div class="signature" id="to_unsafe-instance-method">
+      <br/>
+      <div>
         
-        def <strong>to_unsafe</strong>
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L589" target="_blank">View source</a>]
+        
+        [<a href="#stop-instance-method" target="_blank">Permalink</a>]
       </div>
-      
-        <div class="doc"><p>Get the underlying pointer</p></div>
-      
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L483" target="_blank">View source</a>]</div>
-      
     </div>
     <hr/>
   
@@ -885,15 +869,18 @@ It also resets the playing position (unlike Sound_pause).</p>
 
 <p><em>Returns</em>: Volume of the sound, in the range [0, 100]</p></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L747" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L787" target="_blank">View source</a>]
+        
+        [<a href="#volume-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
     <div class="entry-detail">
-      <div class="signature" id="volume%3D%28volume%20%3A%20Number%29-instance-method">
+      <div class="signature" id="volume=(volume:Number)-instance-method">
         
         def <strong>volume=</strong>(volume : Number)
       </div>
@@ -905,12 +892,15 @@ The default value for the volume is 100.</p>
 
 <p><em>Arguments</em>:</p>
 
-<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html#volume-instance-method">#volume</a></code>: Volume of the sound</li></ul></div>
+<ul><li><code>sound</code>: Sound object</li><li><code><a href="../SF/Sound.html{method.anchor}">#volume</a></code>: Volume of the sound</li></ul></div>
       
-      
-        <br/>
-        <div>[<a href="https://github.com/BlaXpirit/crsfml/blob/v2.3.1/src/audio_obj.cr#L642" target="_blank">View source</a>]</div>
-      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/audio_obj.cr#L682" target="_blank">View source</a>]
+        
+        [<a href="#volume%3D%28volume%3ANumber%29-instance-method" target="_blank">Permalink</a>]
+      </div>
     </div>
     <hr/>
   
