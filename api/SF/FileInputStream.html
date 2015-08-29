@@ -5,7 +5,7 @@
   <meta id="repository-name" content="github.com/BlaXpirit/crsfml">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="../js/doc.js"></script>
-  <title>SF::Event - github.com/BlaXpirit/crsfml</title>
+  <title>SF::FileInputStream - github.com/BlaXpirit/crsfml</title>
 </head>
 <body>
 
@@ -80,7 +80,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/BlaXpirit/crsfml/SF/Event" data-name="sf::event">
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Event" data-name="sf::event">
       <a href="../SF/Event.html">Event</a>
       
     </li>
@@ -90,7 +90,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FileInputStream" data-name="sf::fileinputstream">
+  <li class=" current" data-id="github.com/BlaXpirit/crsfml/SF/FileInputStream" data-name="sf::fileinputstream">
       <a href="../SF/FileInputStream.html">FileInputStream</a>
       
     </li>
@@ -567,19 +567,15 @@
 <div id="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> <a href="http://www.sfml-dev.org/documentation/2.3/classsf_1_1Event.php" title="Go to SFML documentation for Event">SF::Event</a>
+  <span class="kind">class</span> <a href="http://www.sfml-dev.org/documentation/2.3/classsf_1_1FileInputStream.php" title="Go to SFML documentation for FileInputStream">SF::FileInputStream</a>
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../SF/Event.html">SF::Event</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../SF/FileInputStream.html">SF::FileInputStream</a></li><li class="superclass"><a href="../SF/InputStream.html">SF::InputStream</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
-
-  <h2>Overview</h2>
-
-  <p>Event defines a system event and its parameters</p>
 
 
 
@@ -597,151 +593,29 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr" target="_blank">window.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window_obj.cr" target="_blank">window_obj.cr</a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window_obj.cr" target="_blank">window_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr" target="_blank">system.cr</a>
     
     <br/>
   
 
 
 
-  
-    <h2>Constant Summary</h2>
-  
-  <dl>
-    
-      <dt class="entry-const">
-        <strong>Closed</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">Closed</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>Count</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">Count</span>.value</code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>GainedFocus</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">GainedFocus</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>JoystickButtonPressed</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">JoystickButtonPressed</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>JoystickButtonReleased</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">JoystickButtonReleased</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>JoystickConnected</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">JoystickConnected</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>JoystickDisconnected</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">JoystickDisconnected</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>JoystickMoved</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">JoystickMoved</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>KeyPressed</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">KeyPressed</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>KeyReleased</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">KeyReleased</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>LostFocus</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">LostFocus</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseButtonPressed</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseButtonPressed</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseButtonReleased</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseButtonReleased</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseEntered</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseEntered</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseLeft</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseLeft</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseMoved</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseMoved</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseWheelMoved</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseWheelMoved</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>MouseWheelScrolled</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">MouseWheelScrolled</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>Resized</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">Resized</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>SensorChanged</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">SensorChanged</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>TextEntered</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">TextEntered</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>TouchBegan</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">TouchBegan</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>TouchEnded</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">TouchEnded</span></code>
-      </dt>
-      
-    
-      <dt class="entry-const">
-        <strong>TouchMoved</strong> = <code><span class="t">CSFML</span><span class="t">::</span><span class="t">EventType</span><span class="t">::</span><span class="t">TouchMoved</span></code>
-      </dt>
-      
-    
-  </dl>
 
 
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#open%28filename%29-class-method" class="signature"><strong>.open</strong>(filename)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28io%29-class-method" class="signature"><strong>.new</strong>(io)</a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -749,97 +623,32 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#alt-instance-method" class="signature"><strong>#alt</strong></a>
+        <a href="#io-instance-method" class="signature"><strong>#io</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#axis-instance-method" class="signature"><strong>#axis</strong></a>
+        <a href="#io%3D%28io%29-instance-method" class="signature"><strong>#io=</strong>(io)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#button-instance-method" class="signature"><strong>#button</strong></a>
+        <a href="#read%28buffer%29-instance-method" class="signature"><strong>#read</strong>(buffer)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#code-instance-method" class="signature"><strong>#code</strong></a>
+        <a href="#seek%28position%29-instance-method" class="signature"><strong>#seek</strong>(position)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#control-instance-method" class="signature"><strong>#control</strong></a>
+        <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delta-instance-method" class="signature"><strong>#delta</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#finger-instance-method" class="signature"><strong>#finger</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#height-instance-method" class="signature"><strong>#height</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#joystick_id-instance-method" class="signature"><strong>#joystick_id</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#position-instance-method" class="signature"><strong>#position</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#sensor_type-instance-method" class="signature"><strong>#sensor_type</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#shift-instance-method" class="signature"><strong>#shift</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#system-instance-method" class="signature"><strong>#system</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#unicode-instance-method" class="signature"><strong>#unicode</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#wheel-instance-method" class="signature"><strong>#wheel</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#width-instance-method" class="signature"><strong>#width</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#x-instance-method" class="signature"><strong>#x</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#y-instance-method" class="signature"><strong>#y</strong></a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#z-instance-method" class="signature"><strong>#z</strong></a>
+        <a href="#tell-instance-method" class="signature"><strong>#tell</strong></a>
         
       </li>
     
@@ -850,310 +659,133 @@
 
 
 
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="open(filename)-class-method">
+      <div class="signature">
+        
+        def self.<strong>open</strong>(filename)
+
+        <a class="method-permalink" href="#open%28filename%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(io)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(io)
+
+        <a class="method-permalink" href="#new%28io%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L226" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="alt-instance-method">
+    <div class="entry-detail" id="io-instance-method">
       <div class="signature">
         
-        def <strong>alt</strong>
+        def <strong>io</strong>
 
-        <a class="method-permalink" href="#alt-instance-method">#</a>
+        <a class="method-permalink" href="#io-instance-method">#</a>
       </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="axis-instance-method">
+    <div class="entry-detail" id="io=(io)-instance-method">
       <div class="signature">
         
-        def <strong>axis</strong>
+        def <strong>io=</strong>(io)
 
-        <a class="method-permalink" href="#axis-instance-method">#</a>
+        <a class="method-permalink" href="#io%3D%28io%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L90" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="button-instance-method">
+    <div class="entry-detail" id="read(buffer)-instance-method">
       <div class="signature">
         
-        def <strong>button</strong>
+        def <strong>read</strong>(buffer)
 
-        <a class="method-permalink" href="#button-instance-method">#</a>
+        <a class="method-permalink" href="#read%28buffer%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="code-instance-method">
+    <div class="entry-detail" id="seek(position)-instance-method">
       <div class="signature">
         
-        def <strong>code</strong>
+        def <strong>seek</strong>(position)
 
-        <a class="method-permalink" href="#code-instance-method">#</a>
+        <a class="method-permalink" href="#seek%28position%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="control-instance-method">
+    <div class="entry-detail" id="size-instance-method">
       <div class="signature">
         
-        def <strong>control</strong>
+        def <strong>size</strong>
 
-        <a class="method-permalink" href="#control-instance-method">#</a>
+        <a class="method-permalink" href="#size-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L105" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L245" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delta-instance-method">
+    <div class="entry-detail" id="tell-instance-method">
       <div class="signature">
         
-        def <strong>delta</strong>
+        def <strong>tell</strong>
 
-        <a class="method-permalink" href="#delta-instance-method">#</a>
+        <a class="method-permalink" href="#tell-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L108" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="finger-instance-method">
-      <div class="signature">
-        
-        def <strong>finger</strong>
-
-        <a class="method-permalink" href="#finger-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L117" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="height-instance-method">
-      <div class="signature">
-        
-        def <strong>height</strong>
-
-        <a class="method-permalink" href="#height-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L120" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="joystick_id-instance-method">
-      <div class="signature">
-        
-        def <strong>joystick_id</strong>
-
-        <a class="method-permalink" href="#joystick_id-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L123" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="position-instance-method">
-      <div class="signature">
-        
-        def <strong>position</strong>
-
-        <a class="method-permalink" href="#position-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L134" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="sensor_type-instance-method">
-      <div class="signature">
-        
-        def <strong>sensor_type</strong>
-
-        <a class="method-permalink" href="#sensor_type-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L137" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="shift-instance-method">
-      <div class="signature">
-        
-        def <strong>shift</strong>
-
-        <a class="method-permalink" href="#shift-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L140" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="system-instance-method">
-      <div class="signature">
-        
-        def <strong>system</strong>
-
-        <a class="method-permalink" href="#system-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L143" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="unicode-instance-method">
-      <div class="signature">
-        
-        def <strong>unicode</strong>
-
-        <a class="method-permalink" href="#unicode-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L146" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="wheel-instance-method">
-      <div class="signature">
-        
-        def <strong>wheel</strong>
-
-        <a class="method-permalink" href="#wheel-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L149" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="width-instance-method">
-      <div class="signature">
-        
-        def <strong>width</strong>
-
-        <a class="method-permalink" href="#width-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L152" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="x-instance-method">
-      <div class="signature">
-        
-        def <strong>x</strong>
-
-        <a class="method-permalink" href="#x-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L155" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="y-instance-method">
-      <div class="signature">
-        
-        def <strong>y</strong>
-
-        <a class="method-permalink" href="#y-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L172" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="z-instance-method">
-      <div class="signature">
-        
-        def <strong>z</strong>
-
-        <a class="method-permalink" href="#z-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/window.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/system.cr#L242" target="_blank">View source</a>]
         
       </div>
     </div>

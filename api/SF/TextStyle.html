@@ -2,20 +2,577 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/BlaXpirit/crsfml">
   <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript">
-    var pathToIndex = "../index.html"
-  </script>
-  <script type="text/javascript" src="../js/type.js"></script>
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>SF::TextStyle - github.com/BlaXpirit/crsfml</title>
 </head>
 <body>
 
-<h1>
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
 
-  enum SF::TextStyle
+  <ul>
+    <li><a href="https://github.com/BlaXpirit/crsfml"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/master/logo.png" alt="CrSFML" height="64"/></a></li>
+  </ul>
 
-<span class="type-permalink">[<a href="../SF/TextStyle.html" class="permalink" target="_blank">permalink</a>]</span>
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/BlaXpirit/crsfml/SF" data-name="sf">
+      <a href="../SF.html">SF</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/BlendEquation" data-name="sf::blendequation">
+      <a href="../SF/BlendEquation.html">BlendEquation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/BlendFactor" data-name="sf::blendfactor">
+      <a href="../SF/BlendFactor.html">BlendFactor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/BlendMode" data-name="sf::blendmode">
+      <a href="../SF/BlendMode.html">BlendMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/CircleShape" data-name="sf::circleshape">
+      <a href="../SF/CircleShape.html">CircleShape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Clock" data-name="sf::clock">
+      <a href="../SF/Clock.html">Clock</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Color" data-name="sf::color">
+      <a href="../SF/Color.html">Color</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Context" data-name="sf::context">
+      <a href="../SF/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/ContextAttribute" data-name="sf::contextattribute">
+      <a href="../SF/ContextAttribute.html">ContextAttribute</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/ContextSettings" data-name="sf::contextsettings">
+      <a href="../SF/ContextSettings.html">ContextSettings</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/ConvexShape" data-name="sf::convexshape">
+      <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Error" data-name="sf::error">
+      <a href="../SF/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Event" data-name="sf::event">
+      <a href="../SF/Event.html">Event</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/EventType" data-name="sf::eventtype">
+      <a href="../SF/EventType.html">EventType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FileInputStream" data-name="sf::fileinputstream">
+      <a href="../SF/FileInputStream.html">FileInputStream</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FloatRect" data-name="sf::floatrect">
+      <a href="../SF/FloatRect.html">FloatRect</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Font" data-name="sf::font">
+      <a href="../SF/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FontInfo" data-name="sf::fontinfo">
+      <a href="../SF/FontInfo.html">FontInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Ftp" data-name="sf::ftp">
+      <a href="../SF/Ftp.html">Ftp</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FtpDirectoryResponse" data-name="sf::ftpdirectoryresponse">
+      <a href="../SF/FtpDirectoryResponse.html">FtpDirectoryResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FtpListingResponse" data-name="sf::ftplistingresponse">
+      <a href="../SF/FtpListingResponse.html">FtpListingResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FtpResponse" data-name="sf::ftpresponse">
+      <a href="../SF/FtpResponse.html">FtpResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FtpStatus" data-name="sf::ftpstatus">
+      <a href="../SF/FtpStatus.html">FtpStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/FtpTransferMode" data-name="sf::ftptransfermode">
+      <a href="../SF/FtpTransferMode.html">FtpTransferMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Glyph" data-name="sf::glyph">
+      <a href="../SF/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Http" data-name="sf::http">
+      <a href="../SF/Http.html">Http</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/HttpMethod" data-name="sf::httpmethod">
+      <a href="../SF/HttpMethod.html">HttpMethod</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/HttpRequest" data-name="sf::httprequest">
+      <a href="../SF/HttpRequest.html">HttpRequest</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/HttpResponse" data-name="sf::httpresponse">
+      <a href="../SF/HttpResponse.html">HttpResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/HttpStatus" data-name="sf::httpstatus">
+      <a href="../SF/HttpStatus.html">HttpStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Image" data-name="sf::image">
+      <a href="../SF/Image.html">Image</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/InputStream" data-name="sf::inputstream">
+      <a href="../SF/InputStream.html">InputStream</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/IntRect" data-name="sf::intrect">
+      <a href="../SF/IntRect.html">IntRect</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/IpAddress" data-name="sf::ipaddress">
+      <a href="../SF/IpAddress.html">IpAddress</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Joystick" data-name="sf::joystick">
+      <a href="../SF/Joystick.html">Joystick</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/JoystickAxis" data-name="sf::joystickaxis">
+      <a href="../SF/JoystickAxis.html">JoystickAxis</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/JoystickButtonEvent" data-name="sf::joystickbuttonevent">
+      <a href="../SF/JoystickButtonEvent.html">JoystickButtonEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/JoystickConnectEvent" data-name="sf::joystickconnectevent">
+      <a href="../SF/JoystickConnectEvent.html">JoystickConnectEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/JoystickIdentification" data-name="sf::joystickidentification">
+      <a href="../SF/JoystickIdentification.html">JoystickIdentification</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/JoystickMoveEvent" data-name="sf::joystickmoveevent">
+      <a href="../SF/JoystickMoveEvent.html">JoystickMoveEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Keyboard" data-name="sf::keyboard">
+      <a href="../SF/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/KeyCode" data-name="sf::keycode">
+      <a href="../SF/KeyCode.html">KeyCode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/KeyEvent" data-name="sf::keyevent">
+      <a href="../SF/KeyEvent.html">KeyEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Listener" data-name="sf::listener">
+      <a href="../SF/Listener.html">Listener</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Lock" data-name="sf::lock">
+      <a href="../SF/Lock.html">Lock</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MemoryInputStream" data-name="sf::memoryinputstream">
+      <a href="../SF/MemoryInputStream.html">MemoryInputStream</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Mouse" data-name="sf::mouse">
+      <a href="../SF/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseButton" data-name="sf::mousebutton">
+      <a href="../SF/MouseButton.html">MouseButton</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseButtonEvent" data-name="sf::mousebuttonevent">
+      <a href="../SF/MouseButtonEvent.html">MouseButtonEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseMoveEvent" data-name="sf::mousemoveevent">
+      <a href="../SF/MouseMoveEvent.html">MouseMoveEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseWheel" data-name="sf::mousewheel">
+      <a href="../SF/MouseWheel.html">MouseWheel</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseWheelEvent" data-name="sf::mousewheelevent">
+      <a href="../SF/MouseWheelEvent.html">MouseWheelEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/MouseWheelScrollEvent" data-name="sf::mousewheelscrollevent">
+      <a href="../SF/MouseWheelScrollEvent.html">MouseWheelScrollEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Music" data-name="sf::music">
+      <a href="../SF/Music.html">Music</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Mutex" data-name="sf::mutex">
+      <a href="../SF/Mutex.html">Mutex</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/NullResult" data-name="sf::nullresult">
+      <a href="../SF/NullResult.html">NullResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Packet" data-name="sf::packet">
+      <a href="../SF/Packet.html">Packet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/PrimitiveType" data-name="sf::primitivetype">
+      <a href="../SF/PrimitiveType.html">PrimitiveType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/RectangleShape" data-name="sf::rectangleshape">
+      <a href="../SF/RectangleShape.html">RectangleShape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/RenderStates" data-name="sf::renderstates">
+      <a href="../SF/RenderStates.html">RenderStates</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/RenderTexture" data-name="sf::rendertexture">
+      <a href="../SF/RenderTexture.html">RenderTexture</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/RenderWindow" data-name="sf::renderwindow">
+      <a href="../SF/RenderWindow.html">RenderWindow</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Sensor" data-name="sf::sensor">
+      <a href="../SF/Sensor.html">Sensor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SensorEvent" data-name="sf::sensorevent">
+      <a href="../SF/SensorEvent.html">SensorEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SensorType" data-name="sf::sensortype">
+      <a href="../SF/SensorType.html">SensorType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/BlaXpirit/crsfml/SF/Shader" data-name="sf::shader">
+      <a href="../SF/Shader.html">Shader</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Shader/CurrentTextureType" data-name="sf::shader::currenttexturetype">
+      <a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Shader/Type" data-name="sf::shader::type">
+      <a href="../SF/Shader/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Shape" data-name="sf::shape">
+      <a href="../SF/Shape.html">Shape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SizeEvent" data-name="sf::sizeevent">
+      <a href="../SF/SizeEvent.html">SizeEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Socket" data-name="sf::socket">
+      <a href="../SF/Socket.html">Socket</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SocketSelector" data-name="sf::socketselector">
+      <a href="../SF/SocketSelector.html">SocketSelector</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SocketStatus" data-name="sf::socketstatus">
+      <a href="../SF/SocketStatus.html">SocketStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Sound" data-name="sf::sound">
+      <a href="../SF/Sound.html">Sound</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundBuffer" data-name="sf::soundbuffer">
+      <a href="../SF/SoundBuffer.html">SoundBuffer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundBufferRecorder" data-name="sf::soundbufferrecorder">
+      <a href="../SF/SoundBufferRecorder.html">SoundBufferRecorder</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundRecorder" data-name="sf::soundrecorder">
+      <a href="../SF/SoundRecorder.html">SoundRecorder</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundSource" data-name="sf::soundsource">
+      <a href="../SF/SoundSource.html">SoundSource</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundStatus" data-name="sf::soundstatus">
+      <a href="../SF/SoundStatus.html">SoundStatus</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/SoundStream" data-name="sf::soundstream">
+      <a href="../SF/SoundStream.html">SoundStream</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Sprite" data-name="sf::sprite">
+      <a href="../SF/Sprite.html">Sprite</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/TcpListener" data-name="sf::tcplistener">
+      <a href="../SF/TcpListener.html">TcpListener</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/TcpSocket" data-name="sf::tcpsocket">
+      <a href="../SF/TcpSocket.html">TcpSocket</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Text" data-name="sf::text">
+      <a href="../SF/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/TextEvent" data-name="sf::textevent">
+      <a href="../SF/TextEvent.html">TextEvent</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/BlaXpirit/crsfml/SF/TextStyle" data-name="sf::textstyle">
+      <a href="../SF/TextStyle.html">TextStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Texture" data-name="sf::texture">
+      <a href="../SF/Texture.html">Texture</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Thread" data-name="sf::thread">
+      <a href="../SF/Thread.html">Thread</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Time" data-name="sf::time">
+      <a href="../SF/Time.html">Time</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Touch" data-name="sf::touch">
+      <a href="../SF/Touch.html">Touch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/TouchEvent" data-name="sf::touchevent">
+      <a href="../SF/TouchEvent.html">TouchEvent</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Transform" data-name="sf::transform">
+      <a href="../SF/Transform.html">Transform</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Transformable" data-name="sf::transformable">
+      <a href="../SF/Transformable.html">Transformable</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/TransformableM" data-name="sf::transformablem">
+      <a href="../SF/TransformableM.html">TransformableM</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/UdpSocket" data-name="sf::udpsocket">
+      <a href="../SF/UdpSocket.html">UdpSocket</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vector2" data-name="sf::vector2(t)">
+      <a href="../SF/Vector2.html">Vector2</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vector2f" data-name="sf::vector2f">
+      <a href="../SF/Vector2f.html">Vector2f</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vector2i" data-name="sf::vector2i">
+      <a href="../SF/Vector2i.html">Vector2i</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vector2M" data-name="sf::vector2m(t)">
+      <a href="../SF/Vector2M.html">Vector2M</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vector3f" data-name="sf::vector3f">
+      <a href="../SF/Vector3f.html">Vector3f</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Vertex" data-name="sf::vertex">
+      <a href="../SF/Vertex.html">Vertex</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/VertexArray" data-name="sf::vertexarray">
+      <a href="../SF/VertexArray.html">VertexArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/VideoMode" data-name="sf::videomode">
+      <a href="../SF/VideoMode.html">VideoMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/View" data-name="sf::view">
+      <a href="../SF/View.html">View</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/Window" data-name="sf::window">
+      <a href="../SF/Window.html">Window</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/BlaXpirit/crsfml/SF/WindowStyle" data-name="sf::windowstyle">
+      <a href="../SF/WindowStyle.html">WindowStyle</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> SF::TextStyle
+
 </h1>
+
+
+
 
 
   <h2>Overview</h2>
@@ -35,12 +592,10 @@
 
 
 
-
-
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/4e4184a7f5a07e6730bc3071bb213defa626bddd/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/91a85de43d6c102aded147867aa9d309f1eec1a2/src/graphics_obj.cr" target="_blank">graphics_obj.cr</a>
     
     <br/>
   
@@ -61,6 +616,7 @@
 
 
 
+</div>
 
 </body>
 </html>
