@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Text and fonts | CrSFML Tutorials</title>
+        <title>Web requests with HTTP | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="./graphics-shape.html" />
+    <link rel="next" href="./network-ftp.html" />
     
     
-    <link rel="prev" href="./graphics-sprite.html" />
+    <link rel="prev" href="./network-packet.html" />
     
 
         <!-- head:end -->
@@ -40,7 +40,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.3" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="6.3" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
@@ -289,7 +289,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.3" data-path="graphics-text.html">
+        <li class="chapter " data-level="4.3" data-path="graphics-text.html">
             
                 
                     <a href="./graphics-text.html">
@@ -495,7 +495,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.3" data-path="network-http.html">
+        <li class="chapter active" data-level="6.3" data-path="network-http.html">
             
                 
                     <a href="./network-http.html">
@@ -629,64 +629,94 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="text-and-fonts">Text and fonts</h1>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/typing.cr" target="_blank">typing</a></strong></p>
-<h2 id="loading-a-font">Loading a font</h2>
-<p>Before drawing any text, you need to have an available font, just like any other program that prints text. Fonts are encapsulated in the <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> class, which provides three main features: loading a font, getting glyphs (i.e. visual characters) from it, and reading its attributes. In a typical program, you&apos;ll only have to make use of the first feature, loading the font, so let&apos;s focus on that first.</p>
-<p>The most common way of loading a font is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<pre><code class="lang-ruby">font = <span class="hljs-constant">SF::Font</span>.from_file(<span class="hljs-string">&quot;DejaVuSans.ttf&quot;</span>)
+                        <h1 id="web-requests-with-http">Web requests with HTTP</h1>
+<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/shader.cr" target="_blank">shader</a></strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>CrSFML provides a simple HTTP client class which you can use to communicate with HTTP servers. &quot;Simple&quot; means that it supports the most basic features of HTTP: POST, GET and HEAD request types, accessing HTTP header fields, and reading/writing the pages body.</p>
+<p>If you need more advanced features, such as secured HTTP (HTTPS) for example, you&apos;re better off using a true HTTP library.</p>
+<p>For basic interaction between your program and an HTTP server, it should be enough.</p>
+<h2 id="sf-http">SF::Http</h2>
+<p>To communicate with an HTTP server you must use the <a href="http://blaxpirit.github.io/crsfml/api/SF/Http.html" target="_blank">Http</a> class.</p>
+<pre><code class="lang-ruby">http = <span class="hljs-constant">SF::Http</span>.new
+http.set_host(<span class="hljs-string">&quot;http://www.some-server.org/&quot;</span>)
+
+<span class="hljs-comment"># or</span>
+http = <span class="hljs-constant">SF::Http</span>.new(<span class="hljs-string">&quot;http://www.some-server.org/&quot;</span>)
 </code></pre>
-<p>Note that SFML won&apos;t load your system fonts automatically, i.e. <code>SF::Font.from_file(&quot;Courier New&quot;)</code> won&apos;t work. Firstly, because SFML requires <em>file names</em>, not font names, and secondly because SFML doesn&apos;t have magical access to your system&apos;s font folder. If you want to load a font, you will need to include the font file with your application, just like every other resource (images, sounds, ...).</p>
-<p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder. However, when you launch your program from your IDE (Visual Studio, Code::Blocks, ...) the working directory might sometimes be set to the <em>project</em> directory instead. This can usually be changed quite easily in the project settings.</p>
-<p>You can also load a font file from memory (<code>loadFromMemory</code>), or from a <a href="system-stream.html" title="Input streams tutorial">custom input stream</a> (<code>loadFromStream</code>).</p>
-<p>SFML supports most common font formats. The full list is available in the API documentation.</p>
-<p>That&apos;s all you need to do. Once your font is loaded, you can start drawing text.</p>
-<h2 id="drawing-text">Drawing text</h2>
-<p>To draw text, you will be using the <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> class. It&apos;s very simple to use:</p>
-<pre><code class="lang-ruby">text = <span class="hljs-constant">SF::Text</span>.new
-
-<span class="hljs-comment"># select the font</span>
-text.font = font <span class="hljs-comment"># font is a SF::Font</span>
-
-<span class="hljs-comment"># set the string to display</span>
-text.string = <span class="hljs-string">&quot;Hello world&quot;</span>
-
-<span class="hljs-comment"># set the character size</span>
-text.character_size = <span class="hljs-number">24</span> <span class="hljs-comment"># in pixels, not points!</span>
-
-<span class="hljs-comment"># set the color</span>
-text.color = <span class="hljs-constant">SF::Color::Red</span>
-
-<span class="hljs-comment"># set the text style</span>
-text.style = (<span class="hljs-constant">SF::Text::Bold</span> | <span class="hljs-constant">SF::Text::Underlined</span>)
-
-...
-
-<span class="hljs-comment"># inside the main loop, between window.clear() and window.display()</span>
-window.draw(text)
+<p>Note that setting the host doesn&apos;t trigger any connection. A temporary connection is created for each request.</p>
+<p>The only other method in <a href="http://blaxpirit.github.io/crsfml/api/SF/Http.html" target="_blank">Http</a>, sends requests. This is basically all that the class does.</p>
+<pre><code class="lang-ruby">request = <span class="hljs-constant">SF::HttpRequest</span>.new
+<span class="hljs-comment"># fill the request...</span>
+response = http.send_request(request)
 </code></pre>
-<p><img src="images/graphics-text-draw.png" alt=""></p>
-<p>Text can also be transformed: They have a position, an orientation and a scale. The methods involved are the same as for the <a href="http://blaxpirit.github.io/crsfml/api/SF/Sprite.html" target="_blank">Sprite</a> class and other CrSFML entities. They are explained in the <a href="graphics-transform.html" title="&apos;Transforming entities&apos; tutorial">Transforming entities</a> tutorial.</p>
-<h2 id="making-your-own-text-class">Making your own text class</h2>
-<p>If <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> is too limited, or if you want to do something else with pre-rendered glyphs, <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> provides everything that you need.</p>
-<p>You can retrieve the texture which contains all the pre-rendered glyphs of a certain size:</p>
-<pre><code class="lang-ruby">texture = font.get_texture(character_size)
-</code></pre>
-<p>It is important to note that glyphs are added to the texture when they are requested. There are so many characters (remember, more than 100000) that they can&apos;t all be generated when you load the font. Instead, they are rendered on the fly when you call the <code>get_glyph</code> method (see below).</p>
-<p>To do something meaningful with the font texture, you must get the texture coordinates of glyphs that are contained in it:</p>
-<pre><code class="lang-ruby">glyph = font.get_glyph(character, character_size, bold)
-</code></pre>
-<p><code>character</code> is the character, the glyph of which you want to get. You must also specify the character size, and whether you want the bold or the regular version of the glyph.</p>
-<p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/Glyph.html" target="_blank">Glyph</a> structure contains three members:</p>
+<h2 id="requests">Requests</h2>
+<p>An HTTP request, represented by the <a href="http://blaxpirit.github.io/crsfml/api/SF/HttpRequest.html" target="_blank">HttpRequest</a> class, contains the following information:</p>
 <ul>
-<li><code>texture_rect</code> contains the texture coordinates of the glyph within the texture</li>
-<li><code>bounds</code> contains the bounding rectangle of the glyph, which helps position it relative to the baseline of the text</li>
-<li><code>advance</code> is the horizontal offset to apply to get the starting position of the next glyph in the text</li>
+<li>The method: POST (send content), GET (retrieve a resource), HEAD (retrieve a resource header, without its body)</li>
+<li>The URI: the address of the resource (page, image, ...) to get/post, relative to the root directory</li>
+<li>The HTTP version (it is 1.0 by default but you can choose a different version if you use specific features)</li>
+<li>The header: a set of fields with key and value</li>
+<li>The body of the page (used only with the POST method)</li>
 </ul>
-<p>You can also get some of the font&apos;s other metrics, such as the kerning between two characters or the line spacing (always for a certain character size):</p>
-<pre><code class="lang-ruby">line_spacing = font.get_line_spacing(character_size)
+<pre><code class="lang-ruby">request = <span class="hljs-constant">SF::HttpRequest</span>.new
+request.method = <span class="hljs-constant">SF::HttpRequest::Post</span>
+request.uri = <span class="hljs-string">&quot;/page.html&quot;</span>
+request.set_http_version(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <span class="hljs-comment"># HTTP 1.1</span>
+request.set_field(<span class="hljs-string">&quot;From&quot;</span>, <span class="hljs-string">&quot;me&quot;</span>)
+request.set_field(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>)
+request.body = <span class="hljs-string">&quot;para1=value1&amp;param2=value2&quot;</span>
 
-kerning = font.get_kerning(character_1, character_2, character_size)
+response = http.send_request(request)
+</code></pre>
+<p>SFML automatically fills mandatory header fields, such as &quot;Host&quot;, &quot;Content-Length&quot;, etc. You can send your requests without worrying about them. SFML will do its best to make sure they are valid.</p>
+<h2 id="responses">Responses</h2>
+<p>If the <a href="http://blaxpirit.github.io/crsfml/api/SF/Http.html" target="_blank">Http</a> class could successfully connect to the host and send the request, a response is sent back and returned to the user, encapsulated in an instance of the <a href="http://blaxpirit.github.io/crsfml/api/SF/HttpResponse.html" target="_blank">HttpResponse</a> class. Responses contain the following members:</p>
+<ul>
+<li>A status code which precisely indicates how the server processed the request (OK, redirected, not found, etc.)</li>
+<li>The HTTP version of the server</li>
+<li>The header: a set of fields with key and value</li>
+<li>The body of the response</li>
+</ul>
+<pre><code class="lang-ruby">response = http.send_request(request)
+puts <span class="hljs-string">&quot;status: <span class="hljs-subst">#{response.status}</span>&quot;</span>
+puts <span class="hljs-string">&quot;HTTP version: <span class="hljs-subst">#{response.major_version}</span>.{response.minor_version}
+puts &quot;</span><span class="hljs-constant">Content</span>-<span class="hljs-constant">Type</span> <span class="hljs-symbol">header:</span><span class="hljs-string">&quot; + response.get_field(&quot;</span><span class="hljs-constant">Content</span>-<span class="hljs-constant">Type</span><span class="hljs-string">&quot;)
+puts &quot;</span><span class="hljs-symbol">body:</span> <span class="hljs-string">&quot; + response.body
+</span></code></pre>
+<p>The status code can be used to check whether the request was successfully processed or not: codes 2xx represent success, codes 3xx represent a redirection, codes 4xx represent client errors, codes 5xx represent server errors, and codes 10xx represent SFML specific errors which are <em>not</em> part of the HTTP standard.</p>
+<h2 id="example-sending-scores-to-an-online-server">Example: sending scores to an online server</h2>
+<p>Here is a short example that demonstrates how to perform a simple task: Sending a score to an online database.</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>send_score(score, name)
+  <span class="hljs-comment"># prepare the request</span>
+  request = <span class="hljs-constant">SF::HttpRequest</span>.new(<span class="hljs-string">&quot;/send-score.html&quot;</span>, <span class="hljs-constant">SF::HttpRequest::Post</span>)
+
+  <span class="hljs-comment"># encode the parameters in the request body</span>
+  request.body = <span class="hljs-string">&quot;name=&quot;</span> + name + <span class="hljs-string">&quot;&amp;score=&quot;</span> + score
+
+  <span class="hljs-comment"># send the request</span>
+  http = <span class="hljs-constant">SF::Http</span>.new(<span class="hljs-string">&quot;http://www.myserver.com/&quot;</span>)
+  response = http.send_request(request)
+
+  <span class="hljs-comment"># check the status</span>
+  <span class="hljs-keyword">if</span> (response.status == <span class="hljs-constant">SF::HttpResponse::Ok</span>)
+    <span class="hljs-comment"># check the contents of the response</span>
+    puts response.body
+  <span class="hljs-keyword">else</span>
+    puts <span class="hljs-string">&quot;request failed&quot;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Of course, this is a very simple way to handle online scores. There&apos;s no protection: Anybody could easily send a false score. A more robust approach would probably involve an extra parameter, like a hash code that ensures that the request was sent by the program. That is beyond the scope of this tutorial.</p>
+<p>And finally, here is a very simple example of what the PHP page on server might look like.</p>
+<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
+<span class="hljs-variable">$name</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">&apos;name&apos;</span>];
+<span class="hljs-variable">$score</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">&apos;score&apos;</span>];
+
+<span class="hljs-keyword">if</span> (write_to_database(<span class="hljs-variable">$name</span>, <span class="hljs-variable">$score</span>)) { <span class="hljs-comment">// this is not a PHP tutorial :)</span>
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;name and score added!&apos;</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;failed to write name and score to database...&apos;</span>;
+}
 </code></pre>
 
                     
@@ -698,10 +728,10 @@ kerning = font.get_kerning(character_1, character_2, character_size)
         </div>
 
         
-        <a href="./graphics-sprite.html" class="navigation navigation-prev " aria-label="Previous page: Sprites and textures"><i class="fa fa-angle-left"></i></a>
+        <a href="./network-packet.html" class="navigation navigation-prev " aria-label="Previous page: Using packets"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./graphics-shape.html" class="navigation navigation-next " aria-label="Next page: Shapes"><i class="fa fa-angle-right"></i></a>
+        <a href="./network-ftp.html" class="navigation navigation-next " aria-label="Next page: File transfers with FTP"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

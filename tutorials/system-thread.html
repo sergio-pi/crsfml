@@ -40,7 +40,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.2" data-basepath="." data-revision="Fri Aug 28 2015 22:17:37 GMT+0300 (EEST)">
+    <div class="book" data-level="2.2" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
@@ -424,7 +424,15 @@
     
         <li class="chapter " data-level="5.3" data-path="audio-streams.html">
             
-            <span><b>5.3.</b> Custom audio streams</span>
+                
+                    <a href="./audio-streams.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Custom audio streams
+                    </a>
             
             
         </li>
@@ -459,21 +467,45 @@
     
         <li class="chapter " data-level="6.1" data-path="network-socket.html">
             
-            <span><b>6.1.</b> Communication using sockets</span>
+                
+                    <a href="./network-socket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Communication using sockets
+                    </a>
             
             
         </li>
     
         <li class="chapter " data-level="6.2" data-path="network-packet.html">
             
-            <span><b>6.2.</b> Using and extending packets</span>
+                
+                    <a href="./network-packet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Using packets
+                    </a>
             
             
         </li>
     
         <li class="chapter " data-level="6.3" data-path="network-http.html">
             
-            <span><b>6.3.</b> Web requests with HTTP</span>
+                
+                    <a href="./network-http.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Web requests with HTTP
+                    </a>
             
             
         </li>
@@ -603,7 +635,7 @@
 <p>A thread is basically a sequence of instructions that run in parallel to other threads. Every program is made of at least one thread: the main one, which runs the top level code in your program. Programs that only use the main thread are <em>single-threaded</em>, if you add one or more threads they become <em>multi-threaded</em>.</p>
 <p>So, in short, threads are a way to do multiple things at the same time. This can be useful, for example, to display an animation and reacting to user input while loading images or sounds. Threads are also widely used in network programming, to wait for data to be received while continuing to update and draw the application.</p>
 <h2 id="sfml-threads-or-alternatives">SFML threads or alternatives?</h2>
-<p>Multithreaded code is inherently unsafe. Crystal itself has a <code>Thread</code> class, but it is classified as internal, because better ways to do concurrency are being developed. Crystal&apos;s standard library is not intended to be used with raw threads. Exceptions break in additional threads...</p>
+<p>Multithreaded code is inherently unsafe. Crystal itself has a <code>Thread</code> class, but it is classified as internal, because better ways to do concurrency are being developed. Crystal&apos;s standard library is not intended to be used with raw threads. <strong>Garbage collection in additional thread causes crashes.</strong> Exceptions don&apos;t work either.</p>
 <p>Please make sure you know what you&apos;re doing before choosing SFML threads.</p>
 <h2 id="creating-a-thread-with-crsfml">Creating a thread with CrSFML</h2>
 <p>Enough talk, let&apos;s see some code. The class that makes it possible to create threads in CrSFML is <a href="http://blaxpirit.github.io/crsfml/api/SF/Thread.html" target="_blank">Thread</a>, and here is what it looks like in action:</p>

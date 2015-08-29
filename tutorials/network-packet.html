@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Text and fonts | CrSFML Tutorials</title>
+        <title>Using packets | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -29,10 +29,10 @@
         
     
     
-    <link rel="next" href="./graphics-shape.html" />
+    <link rel="next" href="./network-http.html" />
     
     
-    <link rel="prev" href="./graphics-sprite.html" />
+    <link rel="prev" href="./network-socket.html" />
     
 
         <!-- head:end -->
@@ -40,7 +40,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.3" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="6.2" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
@@ -289,7 +289,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.3" data-path="graphics-text.html">
+        <li class="chapter " data-level="4.3" data-path="graphics-text.html">
             
                 
                     <a href="./graphics-text.html">
@@ -480,7 +480,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="network-packet.html">
+        <li class="chapter active" data-level="6.2" data-path="network-packet.html">
             
                 
                     <a href="./network-packet.html">
@@ -629,66 +629,83 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="text-and-fonts">Text and fonts</h1>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/typing.cr" target="_blank">typing</a></strong></p>
-<h2 id="loading-a-font">Loading a font</h2>
-<p>Before drawing any text, you need to have an available font, just like any other program that prints text. Fonts are encapsulated in the <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> class, which provides three main features: loading a font, getting glyphs (i.e. visual characters) from it, and reading its attributes. In a typical program, you&apos;ll only have to make use of the first feature, loading the font, so let&apos;s focus on that first.</p>
-<p>The most common way of loading a font is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<pre><code class="lang-ruby">font = <span class="hljs-constant">SF::Font</span>.from_file(<span class="hljs-string">&quot;DejaVuSans.ttf&quot;</span>)
+                        <h1 id="using-packets">Using packets</h1>
+<h2 id="problems-that-need-to-be-solved">Problems that need to be solved</h2>
+<p>Exchanging data on a network is more tricky than it seems. The reason is that different machines, with different operating systems and processors, can be involved. Several problems arise if you want to exchange data reliably between these different machines.</p>
+<p>The first problem is the endianness. The endianness is the order in which a particular processor interprets the bytes of primitive types that occupy more than a single byte (integers and floating point numbers). There are two main families: &quot;big endian&quot; processors, which store the most significant byte first, and &quot;little endian&quot; processors, which store the least significant byte first. There are other, more exotic byte orders, but you&apos;ll probably never have to deal with them.<br>The problem is obvious: If you send a variable between two computers whose endianness doesn&apos;t match, they won&apos;t see the same value. For example, the 16-bit integer &quot;42&quot; in big endian notation is 00000000 00101010, but if you send this to a little endian machine, it will be interpreted as &quot;10752&quot;.</p>
+<p>The second problem is specific to how the TCP protocol works. Because it doesn&apos;t preserve message boundaries, and can split or combine chunks of data, receivers must properly reconstruct incoming messages before interpreting them. Otherwise bad things might happen, like reading incomplete variables, or ignoring useful bytes.</p>
+<p>You may of course face other problems with network programming, but these are the lowest-level ones, that almost everybody will have to solve. This is the reason why SFML provides some simple tools to avoid them.</p>
+<h2 id="packets">Packets</h2>
+<p>The two problems (endianness and message boundaries) are solved by using a specific class to pack your data: <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a>. As a bonus, it provides a much nicer interface than plain old byte arrays.</p>
+<p>Packets have a programming interface similar to standard streams: you can insert data with the &lt;&lt; operator, and extract data with the &gt;&gt; operator.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># on sending side</span>
+x = <span class="hljs-number">10</span>u16
+s = <span class="hljs-string">&quot;hello&quot;</span>
+d = <span class="hljs-number">0</span>.<span class="hljs-number">6</span>
+
+packet = <span class="hljs-constant">SF::Packet</span>.new()
+packet.write_uint16(x)
+packet.write_string(s)
+packet.write_double(d)
 </code></pre>
-<p>Note that SFML won&apos;t load your system fonts automatically, i.e. <code>SF::Font.from_file(&quot;Courier New&quot;)</code> won&apos;t work. Firstly, because SFML requires <em>file names</em>, not font names, and secondly because SFML doesn&apos;t have magical access to your system&apos;s font folder. If you want to load a font, you will need to include the font file with your application, just like every other resource (images, sounds, ...).</p>
-<p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder. However, when you launch your program from your IDE (Visual Studio, Code::Blocks, ...) the working directory might sometimes be set to the <em>project</em> directory instead. This can usually be changed quite easily in the project settings.</p>
-<p>You can also load a font file from memory (<code>loadFromMemory</code>), or from a <a href="system-stream.html" title="Input streams tutorial">custom input stream</a> (<code>loadFromStream</code>).</p>
-<p>SFML supports most common font formats. The full list is available in the API documentation.</p>
-<p>That&apos;s all you need to do. Once your font is loaded, you can start drawing text.</p>
-<h2 id="drawing-text">Drawing text</h2>
-<p>To draw text, you will be using the <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> class. It&apos;s very simple to use:</p>
-<pre><code class="lang-ruby">text = <span class="hljs-constant">SF::Text</span>.new
-
-<span class="hljs-comment"># select the font</span>
-text.font = font <span class="hljs-comment"># font is a SF::Font</span>
-
-<span class="hljs-comment"># set the string to display</span>
-text.string = <span class="hljs-string">&quot;Hello world&quot;</span>
-
-<span class="hljs-comment"># set the character size</span>
-text.character_size = <span class="hljs-number">24</span> <span class="hljs-comment"># in pixels, not points!</span>
-
-<span class="hljs-comment"># set the color</span>
-text.color = <span class="hljs-constant">SF::Color::Red</span>
-
-<span class="hljs-comment"># set the text style</span>
-text.style = (<span class="hljs-constant">SF::Text::Bold</span> | <span class="hljs-constant">SF::Text::Underlined</span>)
-
-...
-
-<span class="hljs-comment"># inside the main loop, between window.clear() and window.display()</span>
-window.draw(text)
+<pre><code class="lang-ruby"><span class="hljs-comment"># on receiving side</span>
+x = packet.read_uint16()
+s = packet.read_string()
+d = packet.read_double()
 </code></pre>
-<p><img src="images/graphics-text-draw.png" alt=""></p>
-<p>Text can also be transformed: They have a position, an orientation and a scale. The methods involved are the same as for the <a href="http://blaxpirit.github.io/crsfml/api/SF/Sprite.html" target="_blank">Sprite</a> class and other CrSFML entities. They are explained in the <a href="graphics-transform.html" title="&apos;Transforming entities&apos; tutorial">Transforming entities</a> tutorial.</p>
-<h2 id="making-your-own-text-class">Making your own text class</h2>
-<p>If <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> is too limited, or if you want to do something else with pre-rendered glyphs, <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> provides everything that you need.</p>
-<p>You can retrieve the texture which contains all the pre-rendered glyphs of a certain size:</p>
-<pre><code class="lang-ruby">texture = font.get_texture(character_size)
+<p>Unlike writing, reading from a packet can fail if you try to extract more bytes than the packet contains. If a reading operation fails, the packet error flag is set. To check the error flag of a packet, use the <code>can_read</code> method:</p>
+<pre><code class="lang-ruby">x = packet.read_int32()
+<span class="hljs-keyword">unless</span> packet.can_read
+  <span class="hljs-comment"># error</span>
+<span class="hljs-keyword">end</span>
 </code></pre>
-<p>It is important to note that glyphs are added to the texture when they are requested. There are so many characters (remember, more than 100000) that they can&apos;t all be generated when you load the font. Instead, they are rendered on the fly when you call the <code>get_glyph</code> method (see below).</p>
-<p>To do something meaningful with the font texture, you must get the texture coordinates of glyphs that are contained in it:</p>
-<pre><code class="lang-ruby">glyph = font.get_glyph(character, character_size, bold)
+<p>Sending and receiving packets is as easy as sending/receiving an array of bytes: sockets have <code>send_packet</code> and <code>receive_packet</code> methods that directly accept a <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a>.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># with a TCP socket</span>
+tcp_socket.send_packet(packet)
+packet = tcp_socket.receive_packet()
 </code></pre>
-<p><code>character</code> is the character, the glyph of which you want to get. You must also specify the character size, and whether you want the bold or the regular version of the glyph.</p>
-<p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/Glyph.html" target="_blank">Glyph</a> structure contains three members:</p>
-<ul>
-<li><code>texture_rect</code> contains the texture coordinates of the glyph within the texture</li>
-<li><code>bounds</code> contains the bounding rectangle of the glyph, which helps position it relative to the baseline of the text</li>
-<li><code>advance</code> is the horizontal offset to apply to get the starting position of the next glyph in the text</li>
-</ul>
-<p>You can also get some of the font&apos;s other metrics, such as the kerning between two characters or the line spacing (always for a certain character size):</p>
-<pre><code class="lang-ruby">line_spacing = font.get_line_spacing(character_size)
+<pre><code class="lang-ruby"><span class="hljs-comment"># with a UDP socket</span>
+udp_socket.send_packet(packet, recipient_address, recipient_port)
+packet, sender_address, sender_port = udp_socket.receive_packet()
+</code></pre>
+<p>Packets solve the &quot;message boundaries&quot; problem, which means that when you send a packet on a TCP socket, you receive the exact same packet on the other end, it cannot contain less bytes, or bytes from the next packet that you send. However, it has a slight drawback: To preserve message boundaries, <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a> has to send some extra bytes along with your data, which implies that you can only receive them with a <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a> if you want them to be properly decoded. Simply put, you can&apos;t send an SFML packet to a non-SFML packet recipient, it has to use an SFML packet for receiving too. Note that this applies to TCP only, UDP is fine since the protocol itself preserves message boundaries.</p>
+<!--
 
-kerning = font.get_kerning(character_1, character_2, character_size)
-</code></pre>
+## Extending packets to handle user types
 
+Packets have overloads of their operators for all the primitive types and the most common standard types, but what about your own classes? As with standard streams, you can make a type "compatible" with [Packet](http://blaxpirit.github.io/crsfml/api/SF/Packet.html) by providing an overload of the &lt;&lt; and &gt;&gt; operators.
+
+```
+struct Character
+{
+    SF::Uint8 age;
+    std::string name;
+    float weight;
+};
+
+SF::Packet& operator <<(SF::Packet& packet, const Character& character)
+{
+    return packet << character.age << character.name << character.weight;
+}
+
+SF::Packet& operator >>(SF::Packet& packet, Character& character)
+{
+    return packet >> character.age >> character.name >> character.weight;
+}
+```
+
+Both operators return a reference to the packet: This allows chaining insertion and extraction of data.
+
+Now that these operators are defined, you can insert/extract a `Character` instance to/from a packet like any other primitive type:
+
+```
+Character bob;
+
+packet << bob;
+packet >> bob;
+```
+
+-->
                     
                     </section>
                 
@@ -698,10 +715,10 @@ kerning = font.get_kerning(character_1, character_2, character_size)
         </div>
 
         
-        <a href="./graphics-sprite.html" class="navigation navigation-prev " aria-label="Previous page: Sprites and textures"><i class="fa fa-angle-left"></i></a>
+        <a href="./network-socket.html" class="navigation navigation-prev " aria-label="Previous page: Communication using sockets"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./graphics-shape.html" class="navigation navigation-next " aria-label="Next page: Shapes"><i class="fa fa-angle-right"></i></a>
+        <a href="./network-http.html" class="navigation navigation-next " aria-label="Next page: Web requests with HTTP"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
