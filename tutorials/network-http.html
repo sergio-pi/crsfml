@@ -8,7 +8,7 @@
         <title>Web requests with HTTP | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="6.3" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="6.3" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -686,7 +692,7 @@ puts &quot;</span><span class="hljs-symbol">body:</span> <span class="hljs-strin
 <p>The status code can be used to check whether the request was successfully processed or not: codes 2xx represent success, codes 3xx represent a redirection, codes 4xx represent client errors, codes 5xx represent server errors, and codes 10xx represent SFML specific errors which are <em>not</em> part of the HTTP standard.</p>
 <h2 id="example-sending-scores-to-an-online-server">Example: sending scores to an online server</h2>
 <p>Here is a short example that demonstrates how to perform a simple task: Sending a score to an online database.</p>
-<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> </span>send_score(score, name)
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">send_score</span><span class="hljs-params">(score, name)</span></span>
   <span class="hljs-comment"># prepare the request</span>
   request = <span class="hljs-constant">SF::HttpRequest</span>.new(<span class="hljs-string">&quot;/send-score.html&quot;</span>, <span class="hljs-constant">SF::HttpRequest::Post</span>)
 

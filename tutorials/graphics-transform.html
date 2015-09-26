@@ -8,7 +8,7 @@
         <title>Position, rotation, scale: transforming entities | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.6" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="4.6" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -772,7 +778,7 @@ other_box = ...
 
   <span class="hljs-comment"># ... methods to manage the node&apos;s children</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>draw(target, parent_transform)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, parent_transform)</span></span>
     <span class="hljs-comment"># combine the parent transform with the node&apos;s one</span>
     combined_transform = parent_transform * <span class="hljs-variable">@transform</span>
 
@@ -785,7 +791,7 @@ other_box = ...
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_draw(target, transform)
+  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span><span class="hljs-params">(target, transform)</span></span>
     ...
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
@@ -794,7 +800,7 @@ other_box = ...
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpriteNode</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Node</span></span></span>
   <span class="hljs-comment"># .. methods to define the sprite</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_draw(target, transform)
+  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span><span class="hljs-params">(target, transform)</span></span>
     target.draw(<span class="hljs-variable">@sprite</span>, transform)
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>

@@ -8,7 +8,7 @@
         <title>Shapes | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.4" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="4.4" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -753,22 +759,22 @@ window.draw(line, <span class="hljs-constant">SF::Lines</span>)
 <p>You must also call the <code>update()</code> method whenever any point in your shape changes, so that the base class is informed and can update its internal geometry.</p>
 <p>Here is a complete example of a custom shape class: <code>EllipseShape</code>.</p>
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EllipseShape</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::Shape</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(<span class="hljs-variable">@radius</span> = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@radius</span> = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)</span>)</span>
     <span class="hljs-keyword">super</span>()
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>radius
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">radius</span></span>
     <span class="hljs-variable">@radius</span>
   <span class="hljs-keyword">end</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>radius=(radius)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">radius=</span><span class="hljs-params">(radius)</span></span>
     <span class="hljs-variable">@radius</span> = radius
     update
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>point_count
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">point_count</span></span>
     <span class="hljs-number">30</span>  <span class="hljs-comment"># fixed, but could be an attribute of the class if needed</span>
   <span class="hljs-keyword">end</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>get_point(index)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_point</span><span class="hljs-params">(index)</span></span>
     pi = <span class="hljs-constant">Math::PI</span>
 
     angle = index * <span class="hljs-number">2</span> * pi / point_count - pi / <span class="hljs-number">2</span>

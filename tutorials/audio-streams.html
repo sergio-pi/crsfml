@@ -8,7 +8,7 @@
         <title>Custom audio streams | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="5.3" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="5.3" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -638,16 +644,16 @@
 <h2 id="sf-soundstream">SF::SoundStream</h2>
 <p>In order to define your own audio stream, you need to inherit from the <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundStream.html" target="_blank">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_get_data()
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span><span class="hljs-params">()</span></span>
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_seek(time_offset)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span><span class="hljs-params">(time_offset)</span></span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
 <p><code>on_get_data</code> is called by the base class whenever it runs out of audio samples and needs more of them. You must provide new audio samples by filling the <code>data</code> argument:</p>
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>get_data()
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_data</span><span class="hljs-params">()</span></span>
     samples_array.to_slice
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
@@ -674,7 +680,7 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
   <span class="hljs-variable">@current_sample</span> = <span class="hljs-number">0</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(buffer)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(buffer)</span></span>
     <span class="hljs-comment"># extract the audio samples from the sound buffer to our own container</span>
     <span class="hljs-variable">@samples</span> = buffer.to_slice
 
@@ -685,7 +691,7 @@
     <span class="hljs-keyword">super</span>(buffer.channel_count, buffer.sample_rate)
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_get_data()
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span><span class="hljs-params">()</span></span>
     <span class="hljs-comment"># number of samples to stream every time the function is called;</span>
     <span class="hljs-comment"># in a more robust implementation, it should be a fixed</span>
     <span class="hljs-comment"># amount of time rather than an arbitrary number of samples</span>
@@ -702,7 +708,7 @@
     result
   <span class="hljs-keyword">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> </span>on_seek(time_offset)
+  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span><span class="hljs-params">(time_offset)</span></span>
     <span class="hljs-variable">@current_sample</span> = (time_offset.as_seconds * sample_rate * channel_count).to_i
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>

@@ -8,7 +8,7 @@
         <title>Designing your own entities with vertex arrays | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="4.5" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="4.5" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -767,7 +773,7 @@ window.draw(vertices, states)
 <h2 id="creating-an-sfml-like-entity">Creating an SFML-like entity</h2>
 <p>Now that you know how to define your own textured/colored/transformed entity, wouldn&apos;t it be nice to wrap it in a CrSFML-style class? Writing a <code>draw</code> method allows you to draw instances of your class the same way as CrSFML classes:</p>
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEntity</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>draw(target, states)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 
@@ -781,7 +787,7 @@ window.draw(entity) <span class="hljs-comment"># internally calls entity.draw</s
 
   <span class="hljs-comment"># add methods to play with the entity&apos;s geometry / colors / texturing...</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>draw(target, states)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
     <span class="hljs-comment"># apply the entity&apos;s transform -- combine it with the one that was passed by the caller</span>
     states.transform *= transform <span class="hljs-comment"># transform() is defined by SF::Transformable</span>
 
@@ -811,7 +817,7 @@ window.draw(entity)
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TileMap</span></span>
   <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>load(tileset, tile_size, tiles, width, height)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load</span><span class="hljs-params">(tileset, tile_size, tiles, width, height)</span></span>
     <span class="hljs-comment"># load the tileset texture</span>
     <span class="hljs-variable">@tileset</span> = <span class="hljs-constant">SF::Texture</span>.from_file(tileset)
 
@@ -841,7 +847,7 @@ window.draw(entity)
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>draw(target, states)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
     <span class="hljs-comment"># apply the transform</span>
     states.transform *= transform()
 
@@ -893,7 +899,7 @@ map.load(<span class="hljs-string">&quot;tileset.png&quot;</span>, <span class="
 <h2 id="example-particle-system">Example: particle system</h2>
 <p>This second example implements another common entity: The particle system. This one is very simple, with no texture and as few parameters as possible. It demonstrates the use of the <code>SF::Points</code> primitive type with a dynamic vertex array which changes every frame.</p>
 <pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Particle</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(<span class="hljs-variable">@velocity</span>, <span class="hljs-variable">@lifetime</span>, <span class="hljs-variable">@position</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@velocity</span>, <span class="hljs-variable">@lifetime</span>, <span class="hljs-variable">@position</span>)</span></span>
     <span class="hljs-variable">@total_lifetime</span> = <span class="hljs-variable">@lifetime</span>
   <span class="hljs-keyword">end</span>
   property velocity, lifetime, position
@@ -903,14 +909,14 @@ map.load(<span class="hljs-string">&quot;tileset.png&quot;</span>, <span class="
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParticleSystem</span></span>
   <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(<span class="hljs-variable">@count</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@count</span>)</span></span>
     <span class="hljs-variable">@particles</span> = [] of <span class="hljs-constant">Particle</span>
     <span class="hljs-variable">@emitter</span> = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
   <span class="hljs-keyword">end</span>
 
   property emitter
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>update(elapsed)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">(elapsed)</span></span>
     <span class="hljs-variable">@particles</span>.reject! <span class="hljs-keyword">do</span> |p|
       <span class="hljs-comment"># update the position of the particle</span>
       p.position += p.velocity * elapsed.as_seconds
@@ -925,7 +931,7 @@ map.load(<span class="hljs-string">&quot;tileset.png&quot;</span>, <span class="
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> </span>draw(target, states)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
     vertices = <span class="hljs-variable">@particles</span>.map <span class="hljs-keyword">do</span> |p|
       <span class="hljs-comment"># set the alpha (transparency) of the particle according to its lifetime</span>
       ratio = p.lifetime / p.total_lifetime
@@ -944,7 +950,7 @@ map.load(<span class="hljs-string">&quot;tileset.png&quot;</span>, <span class="
     target.draw(vertices, <span class="hljs-constant">SF::Points</span>, states)
   <span class="hljs-keyword">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> </span>new_particle
+  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_particle</span></span>
     <span class="hljs-comment"># give a random velocity and lifetime to the particle</span>
     angle = rand(<span class="hljs-number">360</span>) * <span class="hljs-constant">Math::PI</span> / <span class="hljs-number">180.0</span>
     speed = rand(<span class="hljs-number">50</span>) + <span class="hljs-number">50.0</span>

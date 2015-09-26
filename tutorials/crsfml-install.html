@@ -8,7 +8,7 @@
         <title>Installing CrSFML | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,10 @@
     
         
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
         
     
     
@@ -40,29 +44,30 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="1.1" data-basepath="." data-revision="Sun Aug 30 2015 02:10:24 GMT+0300 (EEST)">
+    <div class="book" data-level="1.1" data-basepath="." data-revision="Sat Sep 26 2015 15:48:23 GMT+0300 (EEST)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Type to search" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
             
-            <li>
-                <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
-            </li>
-        
-        
+            
+            
+                
+                <li>
+                    <a href="http://github.com/BlaXpirit/crsfml" target="blank" class="custom-link">CrSFML</a>
+                </li>
+            
+            
 
-        
-        <li class="divider"></li>
-        
+            
+            <li class="divider"></li>
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -532,20 +537,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
@@ -623,7 +629,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -637,11 +643,11 @@
 <p>Please find the relevant information at the CrSFML wiki: <strong><a href="https://github.com/BlaXpirit/crsfml/wiki/Installing-CSFML" target="_blank">Installing CSFML</a></strong></p>
 <h3 id="test-program">Test Program</h3>
 <p>If you&apos;re having problems making CrSFML work, the most likely cause is incorrectly installed dependencies. So first make sure that you can run the following C program. It should display a closable, resizable black window.</p>
-<pre><code class="lang-c"><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> &lt;SFML/Window.h&gt;</span>
+<pre><code class="lang-c"><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;SFML/Window.h&gt;</span></span>
 
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
     sfVideoMode mode = {<span class="hljs-number">800</span>, <span class="hljs-number">600</span>, <span class="hljs-number">32</span>};
-    sfWindow* window = sfWindow_create(mode, <span class="hljs-string">&quot;CSFML works!&quot;</span>, sfDefaultStyle, NULL);
+    sfWindow* window = sfWindow_create(mode, <span class="hljs-string">&quot;CSFML works!&quot;</span>, sfDefaultStyle, <span class="hljs-literal">NULL</span>);
     <span class="hljs-keyword">while</span> (sfWindow_isOpen(window)) {
         sfEvent event;
         <span class="hljs-keyword">while</span> (sfWindow_pollEvent(window, &amp;event)) {
@@ -658,12 +664,14 @@
 <p>One of the typical problems is incompatible versions of SFML and CSFML. CSFML lags behind with updates, so you may need to get an older matching version of SFML.</p>
 <h2 id="installing-crsfml">Installing CrSFML</h2>
 <p>Source libraries for Crystal are not installed globally. To use CrSFML in your project you need to have its source files available in the <em>libs/crsfml</em> subfolder.</p>
-<p>The easiest way to do this is to create a <em>Projectfile</em> in your project&apos;s folder (or add to it) with the following contents:</p>
-<pre><code class="lang-ruby">deps <span class="hljs-keyword">do</span>
-  github <span class="hljs-string">&quot;BlaXpirit/crsfml&quot;</span>
-<span class="hljs-keyword">end</span>
+<p>To do this manually: get <a href="https://github.com/BlaXpirit/crsfml/tree/master/src" target="_blank">the <em>src</em> folder</a>, rename it to <em>crsfml</em> and put it into <em>libs</em> folder in your project&apos;s folder.</p>
+<p>The proper way to do this is to create a <em>shard.yml</em> file in your project&apos;s folder (or add to it) with the following contents:</p>
+<pre><code class="lang-yaml">name: awesome-game
+
+dependencies:
+  crsfml:
+    github: BlaXpirit/crsfml
 </code></pre>
-<p><strong><a href="https://github.com/BlaXpirit/crsfml-examples/blob/master/cube/Projectfile" target="_blank">An example Projectfile</a></strong></p>
 <p>Then running <code>crystal deps</code> downloads and puts CrSFML in the mentioned subfolder automatically.</p>
 <h3 id="test-program">Test Program</h3>
 <p>Make a file with the following contents and run it using Crystal. It should display a closable, resizable black window.</p>
