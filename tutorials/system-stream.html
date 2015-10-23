@@ -44,7 +44,7 @@
     <body>
         <!-- body:start -->
         
-    <div class="book" data-level="2.3" data-basepath="." data-revision="Fri Oct 23 2015 16:22:52 GMT+0000 (UTC)">
+    <div class="book" data-level="2.3" data-basepath="." data-revision="Fri Oct 23 2015 19:08:50 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -649,7 +649,7 @@
   abstract <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">size</span><span class="hljs-params">()</span>: <span class="hljs-title">Int</span></span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p><strong>read</strong> must extract <em>buffer.length</em> bytes of data from the stream, and copy them to the supplied <em>buffer</em> slice. It returns the number of bytes read, or -1 on error.</p>
+<p><strong>read</strong> must extract <em>buffer.size</em> bytes of data from the stream, and copy them to the supplied <em>buffer</em> slice. It returns the number of bytes read, or -1 on error.</p>
 <p><strong>seek</strong> must change the current reading position in the stream. Its <em>position</em> argument is the absolute byte offset to jump to (so it is relative to the beginning of the data, not to the current position). It returns the new position, or -1 on error.</p>
 <p><strong>tell</strong> must return the current reading position (in bytes) in the stream, or -1 on error.</p>
 <p><strong>size</strong> must return the total size (in bytes) of the data which is contained in the stream, or -1 on error.</p>
