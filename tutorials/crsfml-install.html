@@ -8,7 +8,7 @@
         <title>Installing CrSFML | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Installing CrSFML"
         data-filepath="crsfml-install.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -587,22 +587,22 @@
 <p>Please find the relevant information at the CrSFML wiki: <strong><a href="https://github.com/BlaXpirit/crsfml/wiki/Installing-CSFML" target="_blank">Installing CSFML</a></strong></p>
 <h3 id="test-program">Test Program</h3>
 <p>If you&apos;re having problems making CrSFML work, the most likely cause is incorrectly installed dependencies. So first make sure that you can run the following C program. It should display a closable, resizable black window.</p>
-<pre><code class="lang-c"><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;SFML/Window.h&gt;</span></span>
+<pre><code class="lang-c"><span class="cp">#include</span> <span class="cpf">&lt;SFML/Window.h&gt;</span><span class="cp"></span>
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    sfVideoMode mode = {<span class="hljs-number">800</span>, <span class="hljs-number">600</span>, <span class="hljs-number">32</span>};
-    sfWindow* window = sfWindow_create(mode, <span class="hljs-string">&quot;CSFML works!&quot;</span>, sfDefaultStyle, <span class="hljs-literal">NULL</span>);
-    <span class="hljs-keyword">while</span> (sfWindow_isOpen(window)) {
-        sfEvent event;
-        <span class="hljs-keyword">while</span> (sfWindow_pollEvent(window, &amp;event)) {
-            <span class="hljs-keyword">if</span> (event.type == sfEvtClosed)
-                sfWindow_close(window);
-        }
-        sfWindow_display(window);
-    }
-    sfWindow_destroy(window);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">sfVideoMode</span> <span class="n">mode</span> <span class="o">=</span> <span class="p">{</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">32</span><span class="p">};</span>
+    <span class="n">sfWindow</span><span class="o">*</span> <span class="n">window</span> <span class="o">=</span> <span class="n">sfWindow_create</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="s">&quot;CSFML works!&quot;</span><span class="p">,</span> <span class="n">sfDefaultStyle</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">sfWindow_isOpen</span><span class="p">(</span><span class="n">window</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">sfEvent</span> <span class="n">event</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">sfWindow_pollEvent</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">event</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">sfEvtClosed</span><span class="p">)</span>
+                <span class="n">sfWindow_close</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">sfWindow_display</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">sfWindow_destroy</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
 <p>Compile with <code>gcc -lcsfml-window -lcsfml-system -lsfml-window -lsfml-system main.c</code> or same with <code>clang</code>.</p>
 <p>One of the typical problems is incompatible versions of SFML and CSFML. CSFML lags behind with updates, so you may need to get an older matching version of SFML.</p>
@@ -610,27 +610,27 @@
 <p>Source libraries for Crystal are not installed globally. To use CrSFML in your project you need to have its source files available in the <em>libs/crsfml</em> subfolder.</p>
 <p>To do this manually: get <a href="https://github.com/BlaXpirit/crsfml/tree/master/src" target="_blank">the <em>src</em> folder</a>, rename it to <em>crsfml</em> and put it into <em>libs</em> folder in your project&apos;s folder.</p>
 <p>The proper way to do this is to create a <em>shard.yml</em> file in your project&apos;s folder (or add to it) with the following contents:</p>
-<pre><code class="lang-yaml">name: awesome-game
+<pre><code class="lang-yaml"><span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">awesome-game</span>
 
-dependencies:
-  crsfml:
-    github: BlaXpirit/crsfml
+<span class="l l-Scalar l-Scalar-Plain">dependencies</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">crsfml</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">github</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">BlaXpirit/crsfml</span>
 </code></pre>
 <p>Then running <code>crystal deps</code> downloads and puts CrSFML in the mentioned subfolder automatically.</p>
 <h3 id="test-program">Test Program</h3>
 <p>Make a file with the following contents and run it using Crystal. It should display a closable, resizable black window.</p>
-<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml/window&quot;</span>
+<pre><code class="lang-crystal"><span class="k">require</span> <span class="s2">&quot;crsfml/window&quot;</span>
 
-window = <span class="hljs-constant">SF::Window</span>.new(<span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;CrSFML works!&quot;</span>)
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Window</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;CrSFML works!&quot;</span><span class="p">)</span>
 
-<span class="hljs-keyword">while</span> window.open?
-  <span class="hljs-keyword">while</span> event = window.poll_event()
-    <span class="hljs-keyword">if</span> event.type == <span class="hljs-constant">SF::Event::Closed</span>
-      window.close()
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
-  window.display()
-<span class="hljs-keyword">end</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">Event</span><span class="o">::</span><span class="no">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="k">end</span>
 </code></pre>
 <p><strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples" target="_blank">Try some other examples</a></strong></p>
 
@@ -671,16 +671,12 @@ window = <span class="hljs-constant">SF::Window</span>.new(<span class="hljs-con
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

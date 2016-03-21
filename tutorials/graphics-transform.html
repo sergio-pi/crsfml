@@ -8,7 +8,7 @@
         <title>Position, rotation, scale: transforming entities | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Position, rotation, scale: transforming entities"
         data-filepath="graphics-transform.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -586,72 +586,72 @@
 <p><a href="http://blaxpirit.github.io/crsfml/api/SF/TransformableM.html" target="_blank">TransformableM</a> (and all classes that include it) defines four properties: <strong>position</strong>, <strong>rotation</strong>, <strong>scale</strong> and <strong>origin</strong>. They all have their respective getters and setters. These transformation components are all independent of one another: If you want to change the orientation of the entity, you just have to set its rotation property, you don&apos;t have to care about the current position and scale.</p>
 <h3 id="position">Position</h3>
 <p>The position is the... position of the entity in the 2D world. I don&apos;t think it needs more explanation :).</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre><code class="lang-crystal"><span class="c1"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-<span class="hljs-comment"># set the absolute position of the entity</span>
-entity.position = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+<span class="c1"># set the absolute position of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
-<span class="hljs-comment"># move the entity relatively to its current position</span>
-entity.move(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>))
+<span class="c1"># move the entity relatively to its current position</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-<span class="hljs-comment"># retrieve the absolute position of the entity</span>
-position = entity.position <span class="hljs-comment"># = (15, 55)</span>
+<span class="c1"># retrieve the absolute position of the entity</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="c1"># = (15, 55)</span>
 </code></pre>
 <p><img src="images/graphics-transform-position.png" alt="A translated entity"></p>
 <p>By default, entities are positioned relative to their top-left corner. We&apos;ll see how to change that with the &apos;origin&apos; property later.</p>
 <h3 id="rotation">Rotation</h3>
 <p>The rotation is the orientation of the entity in the 2D world. It is defined in <em>degrees</em>, in clockwise order (because the Y axis is pointing down in SFML).</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre><code class="lang-crystal"><span class="c1"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-<span class="hljs-comment"># set the absolute rotation of the entity</span>
-entity.rotation = <span class="hljs-number">45</span>
+<span class="c1"># set the absolute rotation of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span>
 
-<span class="hljs-comment"># rotate the entity relatively to its current orientation</span>
-entity.rotate(<span class="hljs-number">10</span>)
+<span class="c1"># rotate the entity relatively to its current orientation</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="hljs-comment"># retrieve the absolute rotation of the entity</span>
-rotation = entity.rotation <span class="hljs-comment"># = 55</span>
+<span class="c1"># retrieve the absolute rotation of the entity</span>
+<span class="n">rotation</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="c1"># = 55</span>
 </code></pre>
 <p><img src="images/graphics-transform-rotation.png" alt="A rotated entity"></p>
 <p>Note that SFML always returns an angle in range [0, 360) when you call <code>rotation</code>.</p>
 <p>As with the position, the rotation is performed around the top-left corner by default, but this can be changed by setting the origin.</p>
 <h3 id="scale">Scale</h3>
 <p>The scale factor allows the entity to be resized. The default scale is 1. Setting it to a value less than 1 makes the entity smaller, greater than 1 makes it bigger. Negative scale values are also allowed, so that you can mirror the entity.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre><code class="lang-crystal"><span class="c1"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-<span class="hljs-comment"># set the absolute scale of the entity</span>
-entity.scale = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">4.0</span>, <span class="hljs-number">1.6</span>)
+<span class="c1"># set the absolute scale of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">.</span><span class="mi">6</span><span class="p">)</span>
 
-<span class="hljs-comment"># scale the entity relatively to its current scale</span>
-entity.scale(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>.<span class="hljs-number">5</span>, <span class="hljs-number">0</span>.<span class="hljs-number">5</span>))
+<span class="c1"># scale the entity relatively to its current scale</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="p">))</span>
 
-<span class="hljs-comment"># retrieve the absolute scale of the entity</span>
-scale = entity.scale <span class="hljs-comment"># = (2, 0.8)</span>
+<span class="c1"># retrieve the absolute scale of the entity</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="c1"># = (2, 0.8)</span>
 </code></pre>
 <p><img src="images/graphics-transform-scale.png" alt="A scaled entity"></p>
 <h3 id="origin">Origin</h3>
 <p>The origin is the center point of the three other transformations. The entity&apos;s position is the position of its origin, its rotation is performed around the origin, and the scale is applied relative to the origin as well. By default, it is the top-left corner of the entity (point (0, 0)), but you can set it to the center of the entity, or any other corner of the entity for example.</p>
 <p>To keep things simple, there&apos;s only a single origin for all three transformation components. This means that you can&apos;t position an entity relative to its top-left corner while rotating it around its center for example. If you need to do such things, have a look at the next chapters.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre><code class="lang-crystal"><span class="c1"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-<span class="hljs-comment"># set the origin of the entity</span>
-entity.origin = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)
+<span class="c1"># set the origin of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-<span class="hljs-comment"># retrieve the origin of the entity</span>
-origin = entity.origin <span class="hljs-comment"># = (10, 20)</span>
+<span class="c1"># retrieve the origin of the entity</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">origin</span> <span class="c1"># = (10, 20)</span>
 </code></pre>
 <p>Note that changing the origin also changes where the entity is drawn on screen, even though its position property hasn&apos;t changed. If you don&apos;t understand why, read this tutorial one more time!</p>
 <h2 id="transforming-your-own-classes">Transforming your own classes</h2>
 <p><a href="http://blaxpirit.github.io/crsfml/api/SF/TransformableM.html" target="_blank">TransformableM</a> is not only made for CrSFML classes, it can also be included in your own classes (or be a member, using <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a>).</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyGraphicalEntity</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">MyGraphicalEntity</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="no">TransformableM</span>
 
-  <span class="hljs-comment"># ...</span>
-<span class="hljs-keyword">end</span>
+  <span class="c1"># ...</span>
+<span class="k">end</span>
 
-entity.position = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
-entity.rotation = <span class="hljs-number">110</span>
-entity.scale = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>.<span class="hljs-number">5</span>, <span class="hljs-number">0</span>.<span class="hljs-number">2</span>)
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">110</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
 </code></pre>
 <p>To retrieve the final transform of the entity (commonly needed when drawing it), call the <code>transform</code> method. This method returns a <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a> object. See below for an explanation about it, and how to use it to transform an SFML entity.</p>
 <p>If you don&apos;t need/want the complete set of methods provided by the <a href="http://blaxpirit.github.io/crsfml/api/SF/TransformableM.html" target="_blank">TransformableM</a> interface, don&apos;t hesitate to simply use it as a member instead and provide your own methods on top of it. It is not abstract, so it is possible to instantiate it (<a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a>) instead of only being able to use it as a module.</p>
@@ -664,30 +664,30 @@ entity.scale = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-n
 <li>by specifying its 9 elements directly</li>
 </ul>
 <p>Here are a few examples:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># the identity transform (does nothing)</span>
-t1 = <span class="hljs-constant">SF::Transform::Identity</span>
+<pre><code class="lang-crystal"><span class="c1"># the identity transform (does nothing)</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Transform</span><span class="o">::</span><span class="no">Identity</span>
 
-<span class="hljs-comment"># a rotation transform</span>
-t2 = <span class="hljs-constant">SF</span>.transform
-t2.rotate(<span class="hljs-number">45</span>)
+<span class="c1"># a rotation transform</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">transform</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
-<span class="hljs-comment"># a custom matrix</span>
-t3 = <span class="hljs-constant">SF</span>.transform(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+<span class="c1"># a custom matrix</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="hljs-comment"># a combined transform</span>
-t4 = t1 * t2 * t3
+<span class="c1"># a combined transform</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">*</span> <span class="n">t2</span> <span class="o">*</span> <span class="n">t3</span>
 </code></pre>
 <p>You can apply several predefined transformations to the same transform as well. They will all be combined sequentially:</p>
-<pre><code class="lang-ruby">t = <span class="hljs-constant">SF</span>.transform
-t.translate(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>)
-t.rotate(<span class="hljs-number">90</span>)
-t.translate(-<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-t.scale(<span class="hljs-number">0</span>.<span class="hljs-number">5</span>, <span class="hljs-number">0</span>.<span class="hljs-number">75</span>)
+<pre><code class="lang-crystal"><span class="n">t</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">transform</span>
+<span class="n">t</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="o">.</span><span class="mi">75</span><span class="p">)</span>
 </code></pre>
 <p>Back to the point: How can a custom transform be applied to a graphical entity? Simple: Pass it to the draw method.</p>
-<pre><code class="lang-ruby">states = <span class="hljs-constant">SF::RenderStates</span>.new
-states.transform = transform
-window.draw(entity, states)
+<pre><code class="lang-crystal"><span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
 </code></pre>
 <p>If your entity is a <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> (sprite, text, shape), which contains its own internal transform, both the internal and the passed transform are combined to produce the final transform.</p>
 <h2 id="bounding-boxes">Bounding boxes</h2>
@@ -695,59 +695,59 @@ window.draw(entity, states)
 <p>SFML entities can give you their bounding box. The bounding box is the minimal rectangle that contains all points belonging to the entity, with sides aligned to the X and Y axes.</p>
 <p><img src="images/graphics-transform-bounds.png" alt="Bounding box of entities"></p>
 <p>The bounding box is very useful when implementing collision detection: Checks against a point or another axis-aligned rectangle can be done very quickly, and its area is close enough to that of the real entity to provide a good approximation.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># get the bounding box of the entity</span>
-bounding_box = entity.global_bounds
+<pre><code class="lang-crystal"><span class="c1"># get the bounding box of the entity</span>
+<span class="n">bounding_box</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">global_bounds</span>
 
-<span class="hljs-comment"># check collision with a point</span>
-point = ...
+<span class="c1"># check collision with a point</span>
+<span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="hljs-keyword">if</span> bounding_box.contains(point)
-  <span class="hljs-comment"># collision!</span>
-<span class="hljs-keyword">end</span>
+<span class="k">if</span> <span class="n">bounding_box</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+  <span class="c1"># collision!</span>
+<span class="k">end</span>
 
-<span class="hljs-comment"># check collision with another box (like the bounding box of another entity)</span>
-other_box = ...
+<span class="c1"># check collision with another box (like the bounding box of another entity)</span>
+<span class="n">other_box</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="hljs-keyword">if</span> bounding_box.intersects(other_box)
-  <span class="hljs-comment"># collision!</span>
-<span class="hljs-keyword">end</span>
+<span class="k">if</span> <span class="n">bounding_box</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">other_box</span><span class="p">)</span>
+  <span class="c1"># collision!</span>
+<span class="k">end</span>
 </code></pre>
 <p>The method is named <code>global_bounds</code> because it returns the bounding box of the entity in the global coordinate system, i.e. after all of its transformations (position, rotation, scale) have been applied.</p>
 <p>There&apos;s another method that returns the bounding box of the entity in its <em>local</em> coordinate system (before its transformations are applied): <code>local_bounds</code>. This method can be used to get the initial size of an entity, for example, or to perform more specific calculations.</p>
 <h2 id="object-hierarchies-scene-graph">Object hierarchies (scene graph)</h2>
 <p>With the custom transforms seen previously, it becomes easy to implement a hierarchy of objects in which children are transformed relative to their parent. All you have to do is pass the combined transform from parent to children when you draw them, all the way until you reach the final drawable entities (sprites, text, shapes, vertex arrays or your own drawables).</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># the abstract base class</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
-  <span class="hljs-comment"># ... methods to transform the node</span>
+<pre><code class="lang-crystal"><span class="c1"># the abstract base class</span>
+<span class="k">class</span> <span class="nc">Node</span>
+  <span class="c1"># ... methods to transform the node</span>
 
-  <span class="hljs-comment"># ... methods to manage the node&apos;s children</span>
+  <span class="c1"># ... methods to manage the node&apos;s children</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, parent_transform)</span></span>
-    <span class="hljs-comment"># combine the parent transform with the node&apos;s one</span>
-    combined_transform = parent_transform * <span class="hljs-variable">@transform</span>
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">parent_transform</span><span class="p">)</span>
+    <span class="c1"># combine the parent transform with the node&apos;s one</span>
+    <span class="n">combined_transform</span> <span class="o">=</span> <span class="n">parent_transform</span> <span class="o">*</span> <span class="vi">@transform</span>
 
-    <span class="hljs-comment"># let the node draw itself</span>
-    on_draw(target, combined_transform)
+    <span class="c1"># let the node draw itself</span>
+    <span class="n">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">combined_transform</span><span class="p">)</span>
 
-    <span class="hljs-comment"># draw its children</span>
-    <span class="hljs-variable">@children</span>.each <span class="hljs-keyword">do</span> |child|
-      child.draw(target, combined_transform)
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+    <span class="c1"># draw its children</span>
+    <span class="vi">@children</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">child</span><span class="o">|</span>
+      <span class="n">child</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">combined_transform</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span><span class="hljs-params">(target, transform)</span></span>
-    ...
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+    <span class="o">...</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-<span class="hljs-comment"># a simple derived class: a node that draws a sprite</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpriteNode</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Node</span></span></span>
-  <span class="hljs-comment"># .. methods to define the sprite</span>
+<span class="c1"># a simple derived class: a node that draws a sprite</span>
+<span class="k">class</span> <span class="nc">SpriteNode</span> <span class="o">&lt;</span> <span class="no">Node</span>
+  <span class="c1"># .. methods to define the sprite</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span><span class="hljs-params">(target, transform)</span></span>
-    target.draw(<span class="hljs-variable">@sprite</span>, transform)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@sprite</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 
                     
@@ -787,16 +787,12 @@ other_box = ...
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

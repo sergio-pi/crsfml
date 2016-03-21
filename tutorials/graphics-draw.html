@@ -8,7 +8,7 @@
         <title>Drawing 2D stuff | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Drawing 2D stuff"
         data-filepath="graphics-draw.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -587,30 +587,30 @@
 <p>To draw the entities provided by the graphics module, you must use a specialized window class: <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a>. This class is derived from <a href="http://blaxpirit.github.io/crsfml/api/SF/Window.html" target="_blank">Window</a>, and inherits all its methods. Everything that you&apos;ve learnt about <a href="http://blaxpirit.github.io/crsfml/api/SF/Window.html" target="_blank">Window</a> (creation, event handling, controlling the framerate, mixing with OpenGL, etc.) is applicable to <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a> as well.</p>
 <p>On top of that, <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a> adds high-level methods to help you draw things easily. In this tutorial we&apos;ll focus on two of these methods: <code>clear</code> and <code>draw</code>. They are as simple as their name implies: <code>clear</code> clears the whole window with the chosen color, and <code>draw</code> draws whatever object you pass to it.</p>
 <p>Here is what a typical main loop looks like with a render window:</p>
-<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml&quot;</span>
+<pre><code class="lang-crystal"><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
-<span class="hljs-comment"># create the window</span>
-window = <span class="hljs-constant">SF::RenderWindow</span>.new(<span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;My window&quot;</span>)
+<span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># run the program as long as the window is open</span>
-<span class="hljs-keyword">while</span> window.open?
-  <span class="hljs-comment"># check all the window&apos;s events that were triggered since the last iteration of the loop</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-comment"># &quot;close requested&quot; event: we close the window</span>
-    <span class="hljs-keyword">if</span> event.type == <span class="hljs-constant">SF::Event::Closed</span>
-      window.close
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+<span class="c1"># run the program as long as the window is open</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="c1"># check all the window&apos;s events that were triggered since the last iteration of the loop</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="c1"># &quot;close requested&quot; event: we close the window</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">Event</span><span class="o">::</span><span class="no">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  <span class="hljs-comment"># clear the window with black color</span>
-  window.clear(<span class="hljs-constant">SF::Color::Black</span>)
+  <span class="c1"># clear the window with black color</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Black</span><span class="p">)</span>
 
-  <span class="hljs-comment"># draw everything here...</span>
-  window.draw(...)
+  <span class="c1"># draw everything here...</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-  <span class="hljs-comment"># end the current frame</span>
-  window.display
-<span class="hljs-keyword">end</span>
+  <span class="c1"># end the current frame</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
 </code></pre>
 <p>Calling <code>clear</code> before drawing anything is mandatory, otherwise the contents from previous frames will be present behind anything you draw. The only exception is when you cover the entire window with what you draw, so that no pixel is not drawn to. In this case you can avoid calling <code>clear</code> (although it won&apos;t have a noticeable impact on performance).</p>
 <p>Calling <code>display</code> is also mandatory, it takes what was drawn since the last call to <code>display</code> and displays it on the window. Indeed, things are not drawn directly to the window, but to a hidden buffer. This buffer is then copied to the window when you call <code>display</code> &#x2013; this is called <em>double-buffering</em>.</p>
@@ -627,51 +627,51 @@ window = <span class="hljs-constant">SF::RenderWindow</span>.new(<span class="hl
 </ul>
 <h2 id="offscreen-drawing">Off-screen drawing</h2>
 <p>SFML also provides a way to draw to a texture instead of directly to a window. To do so, use a <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderTexture.html" target="_blank">RenderTexture</a> instead of a <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a>. It has the same methods for drawing, inherited from their common base: <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderTarget.html" target="_blank">RenderTarget</a>.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create a 500x500 render-texture</span>
-render_texture = <span class="hljs-constant">SF::RenderTexture</span>.new(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>)
+<pre><code class="lang-crystal"><span class="c1"># create a 500x500 render-texture</span>
+<span class="n">render_texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
-<span class="hljs-comment"># drawing uses the same methods</span>
-render_texture.clear(<span class="hljs-constant">SF::Color::Blue</span>)
-render_texture.draw(sprite) <span class="hljs-comment"># or any other drawable</span>
-render_texture.display
+<span class="c1"># drawing uses the same methods</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Blue</span><span class="p">)</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span> <span class="c1"># or any other drawable</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">display</span>
 
-<span class="hljs-comment"># get the target texture (where the stuff has been drawn)</span>
-texture = render_texture.texture
+<span class="c1"># get the target texture (where the stuff has been drawn)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">render_texture</span><span class="o">.</span><span class="n">texture</span>
 
-<span class="hljs-comment"># draw it to the window</span>
-sprite = <span class="hljs-constant">SF::Sprite</span>.new(texture)
-window.draw(sprite)
+<span class="c1"># draw it to the window</span>
+<span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
 </code></pre>
 <p>The <code>texture</code> method returns a read-only texture, which means that you can only use it, not modify it. If you need to modify it before using it, you can copy it to your own <a href="http://blaxpirit.github.io/crsfml/api/SF/Texture.html" target="_blank">Texture</a> instance and modify that instead.</p>
 <p><a href="http://blaxpirit.github.io/crsfml/api/SF/RenderTexture.html" target="_blank">RenderTexture</a> also has the same methods as <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a> for handling views and OpenGL (see the corresponding tutorials for more details). If you use OpenGL to draw to the render-texture, you can request creation of a depth buffer by using the third optional argument of the constructor.</p>
-<pre><code class="lang-ruby"><span class="hljs-constant">SF::RenderTexture</span>.new(<span class="hljs-number">500</span>, <span class="hljs-number">500</span>, <span class="hljs-keyword">true</span>) <span class="hljs-comment"># enable depth buffer</span>
+<pre><code class="lang-crystal"><span class="no">SF</span><span class="o">::</span><span class="no">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1"># enable depth buffer</span>
 </code></pre>
 <h2 id="drawing-from-threads">Drawing from threads</h2>
 <p>CrSFML supports multi-threaded drawing, and you don&apos;t even have to do anything to make it work. The only thing to remember is to deactivate a window before using it in another thread. That&apos;s because a window (more precisely its OpenGL context) cannot be active in more than one thread at the same time.</p>
-<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">render_thread</span><span class="hljs-params">(window)</span></span>
-  <span class="hljs-comment"># the rendering loop</span>
-  <span class="hljs-keyword">while</span> window.open?
-    <span class="hljs-comment"># draw...</span>
+<pre><code class="lang-crystal"><span class="k">def</span> <span class="nf">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+  <span class="c1"># the rendering loop</span>
+  <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+    <span class="c1"># draw...</span>
 
-    <span class="hljs-comment"># end the current frame</span>
-    window.display
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+    <span class="c1"># end the current frame</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-<span class="hljs-comment"># create the window (remember: it&apos;s safer to create it in the main thread due to OS limitations)</span>
-window = <span class="hljs-constant">SF::RenderWindow</span>.new(<span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;OpenGL&quot;</span>)
+<span class="c1"># create the window (remember: it&apos;s safer to create it in the main thread due to OS limitations)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># deactivate its OpenGL context</span>
-window.active = <span class="hljs-keyword">false</span>
+<span class="c1"># deactivate its OpenGL context</span>
+<span class="n">window</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">false</span>
 
-<span class="hljs-comment"># launch the rendering thread</span>
-thread = <span class="hljs-constant">SF::Thread</span>.new(-&gt;{ render_thread(window) })
-thread.launch
+<span class="c1"># launch the rendering thread</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="p">{</span> <span class="n">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="p">})</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">launch</span>
 
-<span class="hljs-comment"># the event/logic/whatever loop</span>
-<span class="hljs-keyword">while</span> window.open?
-  ...
-<span class="hljs-keyword">end</span>
+<span class="c1"># the event/logic/whatever loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="o">...</span>
+<span class="k">end</span>
 </code></pre>
 <p>As you can see, you don&apos;t even need to bother with the activation of the window in the rendering thread, CrSFML does it automatically for you whenever it needs to be done.</p>
 <p>Remember to always create the window and handle its events in the main thread for maximum portability. This is explained in the <a href="window-window.html" title="Window tutorial">window tutorial</a>.</p>
@@ -713,16 +713,12 @@ thread.launch
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

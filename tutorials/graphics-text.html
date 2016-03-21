@@ -8,7 +8,7 @@
         <title>Text and fonts | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Text and fonts"
         data-filepath="graphics-text.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -584,7 +584,7 @@
 <h2 id="loading-a-font">Loading a font</h2>
 <p>Before drawing any text, you need to have an available font, just like any other program that prints text. Fonts are encapsulated in the <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> class, which provides three main features: loading a font, getting glyphs (i.e. visual characters) from it, and reading its attributes. In a typical program, you&apos;ll only have to make use of the first feature, loading the font, so let&apos;s focus on that first.</p>
 <p>The most common way of loading a font is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<pre><code class="lang-ruby">font = <span class="hljs-constant">SF::Font</span>.from_file(<span class="hljs-string">&quot;DejaVuSans.ttf&quot;</span>)
+<pre><code class="lang-crystal"><span class="n">font</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;DejaVuSans.ttf&quot;</span><span class="p">)</span>
 </code></pre>
 <p>Note that SFML won&apos;t load your system fonts automatically, i.e. <code>SF::Font.from_file(&quot;Courier New&quot;)</code> won&apos;t work. Firstly, because SFML requires <em>file names</em>, not font names, and secondly because SFML doesn&apos;t have magical access to your system&apos;s font folder. If you want to load a font, you will need to include the font file with your application, just like every other resource (images, sounds, ...).</p>
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder. However, when you launch your program from your IDE (Visual Studio, Code::Blocks, ...) the working directory might sometimes be set to the <em>project</em> directory instead. This can usually be changed quite easily in the project settings.</p>
@@ -593,38 +593,38 @@
 <p>That&apos;s all you need to do. Once your font is loaded, you can start drawing text.</p>
 <h2 id="drawing-text">Drawing text</h2>
 <p>To draw text, you will be using the <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> class. It&apos;s very simple to use:</p>
-<pre><code class="lang-ruby">text = <span class="hljs-constant">SF::Text</span>.new
+<pre><code class="lang-crystal"><span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Text</span><span class="o">.</span><span class="n">new</span>
 
-<span class="hljs-comment"># select the font</span>
-text.font = font <span class="hljs-comment"># font is a SF::Font</span>
+<span class="c1"># select the font</span>
+<span class="n">text</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">font</span> <span class="c1"># font is a SF::Font</span>
 
-<span class="hljs-comment"># set the string to display</span>
-text.string = <span class="hljs-string">&quot;Hello world&quot;</span>
+<span class="c1"># set the string to display</span>
+<span class="n">text</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Hello world&quot;</span>
 
-<span class="hljs-comment"># set the character size</span>
-text.character_size = <span class="hljs-number">24</span> <span class="hljs-comment"># in pixels, not points!</span>
+<span class="c1"># set the character size</span>
+<span class="n">text</span><span class="o">.</span><span class="n">character_size</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># in pixels, not points!</span>
 
-<span class="hljs-comment"># set the color</span>
-text.color = <span class="hljs-constant">SF::Color::Red</span>
+<span class="c1"># set the color</span>
+<span class="n">text</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Red</span>
 
-<span class="hljs-comment"># set the text style</span>
-text.style = (<span class="hljs-constant">SF::Text::Bold</span> | <span class="hljs-constant">SF::Text::Underlined</span>)
+<span class="c1"># set the text style</span>
+<span class="n">text</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Text</span><span class="o">::</span><span class="no">Bold</span> <span class="o">|</span> <span class="no">SF</span><span class="o">::</span><span class="no">Text</span><span class="o">::</span><span class="no">Underlined</span><span class="p">)</span>
 
-...
+<span class="o">...</span>
 
-<span class="hljs-comment"># inside the main loop, between window.clear() and window.display()</span>
-window.draw(text)
+<span class="c1"># inside the main loop, between window.clear() and window.display()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-text-draw.png" alt=""></p>
 <p>Text can also be transformed: They have a position, an orientation and a scale. The methods involved are the same as for the <a href="http://blaxpirit.github.io/crsfml/api/SF/Sprite.html" target="_blank">Sprite</a> class and other CrSFML entities. They are explained in the <a href="graphics-transform.html" title="&apos;Transforming entities&apos; tutorial">Transforming entities</a> tutorial.</p>
 <h2 id="making-your-own-text-class">Making your own text class</h2>
 <p>If <a href="http://blaxpirit.github.io/crsfml/api/SF/Text.html" target="_blank">Text</a> is too limited, or if you want to do something else with pre-rendered glyphs, <a href="http://blaxpirit.github.io/crsfml/api/SF/Font.html" target="_blank">Font</a> provides everything that you need.</p>
 <p>You can retrieve the texture which contains all the pre-rendered glyphs of a certain size:</p>
-<pre><code class="lang-ruby">texture = font.get_texture(character_size)
+<pre><code class="lang-crystal"><span class="n">texture</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_texture</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
 </code></pre>
 <p>It is important to note that glyphs are added to the texture when they are requested. There are so many characters (remember, more than 100000) that they can&apos;t all be generated when you load the font. Instead, they are rendered on the fly when you call the <code>get_glyph</code> method (see below).</p>
 <p>To do something meaningful with the font texture, you must get the texture coordinates of glyphs that are contained in it:</p>
-<pre><code class="lang-ruby">glyph = font.get_glyph(character, character_size, bold)
+<pre><code class="lang-crystal"><span class="n">glyph</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_glyph</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">character_size</span><span class="p">,</span> <span class="n">bold</span><span class="p">)</span>
 </code></pre>
 <p><code>character</code> is the character, the glyph of which you want to get. You must also specify the character size, and whether you want the bold or the regular version of the glyph.</p>
 <p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/Glyph.html" target="_blank">Glyph</a> structure contains three members:</p>
@@ -634,9 +634,9 @@ window.draw(text)
 <li><code>advance</code> is the horizontal offset to apply to get the starting position of the next glyph in the text</li>
 </ul>
 <p>You can also get some of the font&apos;s other metrics, such as the kerning between two characters or the line spacing (always for a certain character size):</p>
-<pre><code class="lang-ruby">line_spacing = font.get_line_spacing(character_size)
+<pre><code class="lang-crystal"><span class="n">line_spacing</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_line_spacing</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
 
-kerning = font.get_kerning(character_1, character_2, character_size)
+<span class="n">kerning</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_kerning</span><span class="p">(</span><span class="n">character_1</span><span class="p">,</span> <span class="n">character_2</span><span class="p">,</span> <span class="n">character_size</span><span class="p">)</span>
 </code></pre>
 
                     
@@ -676,16 +676,12 @@ kerning = font.get_kerning(character_1, character_2, character_size)
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

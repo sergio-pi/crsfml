@@ -8,7 +8,7 @@
         <title>Web requests with HTTP | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Web requests with HTTP"
         data-filepath="network-http.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -587,17 +587,17 @@
 <p>For basic interaction between your program and an HTTP server, it should be enough.</p>
 <h2 id="sfhttp">SF::Http</h2>
 <p>To communicate with an HTTP server you must use the <a href="http://blaxpirit.github.io/crsfml/api/SF/Http.html" target="_blank">Http</a> class.</p>
-<pre><code class="lang-ruby">http = <span class="hljs-constant">SF::Http</span>.new
-http.set_host(<span class="hljs-string">&quot;http://www.some-server.org/&quot;</span>)
+<pre><code class="lang-crystal"><span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Http</span><span class="o">.</span><span class="n">new</span>
+<span class="n">http</span><span class="o">.</span><span class="n">set_host</span><span class="p">(</span><span class="s2">&quot;http://www.some-server.org/&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># or</span>
-http = <span class="hljs-constant">SF::Http</span>.new(<span class="hljs-string">&quot;http://www.some-server.org/&quot;</span>)
+<span class="c1"># or</span>
+<span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://www.some-server.org/&quot;</span><span class="p">)</span>
 </code></pre>
 <p>Note that setting the host doesn&apos;t trigger any connection. A temporary connection is created for each request.</p>
 <p>The only other method in <a href="http://blaxpirit.github.io/crsfml/api/SF/Http.html" target="_blank">Http</a>, sends requests. This is basically all that the class does.</p>
-<pre><code class="lang-ruby">request = <span class="hljs-constant">SF::HttpRequest</span>.new
-<span class="hljs-comment"># fill the request...</span>
-response = http.send_request(request)
+<pre><code class="lang-crystal"><span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpRequest</span><span class="o">.</span><span class="n">new</span>
+<span class="c1"># fill the request...</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </code></pre>
 <h2 id="requests">Requests</h2>
 <p>An HTTP request, represented by the <a href="http://blaxpirit.github.io/crsfml/api/SF/HttpRequest.html" target="_blank">HttpRequest</a> class, contains the following information:</p>
@@ -608,15 +608,15 @@ response = http.send_request(request)
 <li>The header: a set of fields with key and value</li>
 <li>The body of the page (used only with the POST method)</li>
 </ul>
-<pre><code class="lang-ruby">request = <span class="hljs-constant">SF::HttpRequest</span>.new
-request.method = <span class="hljs-constant">SF::HttpRequest::Post</span>
-request.uri = <span class="hljs-string">&quot;/page.html&quot;</span>
-request.set_http_version(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) <span class="hljs-comment"># HTTP 1.1</span>
-request.set_field(<span class="hljs-string">&quot;From&quot;</span>, <span class="hljs-string">&quot;me&quot;</span>)
-request.set_field(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>)
-request.body = <span class="hljs-string">&quot;para1=value1&amp;param2=value2&quot;</span>
+<pre><code class="lang-crystal"><span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpRequest</span><span class="o">.</span><span class="n">new</span>
+<span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpRequest</span><span class="o">::</span><span class="no">Post</span>
+<span class="n">request</span><span class="o">.</span><span class="n">uri</span> <span class="o">=</span> <span class="s2">&quot;/page.html&quot;</span>
+<span class="n">request</span><span class="o">.</span><span class="n">set_http_version</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># HTTP 1.1</span>
+<span class="n">request</span><span class="o">.</span><span class="n">set_field</span><span class="p">(</span><span class="s2">&quot;From&quot;</span><span class="p">,</span> <span class="s2">&quot;me&quot;</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">set_field</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;para1=value1&amp;param2=value2&quot;</span>
 
-response = http.send_request(request)
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </code></pre>
 <p>SFML automatically fills mandatory header fields, such as &quot;Host&quot;, &quot;Content-Length&quot;, etc. You can send your requests without worrying about them. SFML will do its best to make sure they are valid.</p>
 <h2 id="responses">Responses</h2>
@@ -627,46 +627,46 @@ response = http.send_request(request)
 <li>The header: a set of fields with key and value</li>
 <li>The body of the response</li>
 </ul>
-<pre><code class="lang-ruby">response = http.send_request(request)
-puts <span class="hljs-string">&quot;status: <span class="hljs-subst">#{response.status}</span>&quot;</span>
-puts <span class="hljs-string">&quot;HTTP version: <span class="hljs-subst">#{response.major_version}</span>.{response.minor_version}
-puts &quot;</span><span class="hljs-constant">Content</span>-<span class="hljs-constant">Type</span> <span class="hljs-symbol">header:</span><span class="hljs-string">&quot; + response.get_field(&quot;</span><span class="hljs-constant">Content</span>-<span class="hljs-constant">Type</span><span class="hljs-string">&quot;)
-puts &quot;</span><span class="hljs-symbol">body:</span> <span class="hljs-string">&quot; + response.body
-</span></code></pre>
+<pre><code class="lang-crystal"><span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="s2">&quot;status: </span><span class="si">#{</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;HTTP version: </span><span class="si">#{</span><span class="n">response</span><span class="o">.</span><span class="n">major_version</span><span class="si">}</span><span class="s2">.{response.minor_version}</span>
+<span class="s2">puts &quot;</span><span class="no">Content</span><span class="o">-</span><span class="no">Type</span> <span class="ss">header</span><span class="p">:</span><span class="s2">&quot; + response.get_field(&quot;</span><span class="no">Content</span><span class="o">-</span><span class="no">Type</span><span class="s2">&quot;)</span>
+<span class="s2">puts &quot;</span><span class="ss">body</span><span class="p">:</span> <span class="s2">&quot; + response.body</span>
+</code></pre>
 <p>The status code can be used to check whether the request was successfully processed or not: codes 2xx represent success, codes 3xx represent a redirection, codes 4xx represent client errors, codes 5xx represent server errors, and codes 10xx represent SFML specific errors which are <em>not</em> part of the HTTP standard.</p>
 <h2 id="example-sending-scores-to-an-online-server">Example: sending scores to an online server</h2>
 <p>Here is a short example that demonstrates how to perform a simple task: Sending a score to an online database.</p>
-<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">send_score</span><span class="hljs-params">(score, name)</span></span>
-  <span class="hljs-comment"># prepare the request</span>
-  request = <span class="hljs-constant">SF::HttpRequest</span>.new(<span class="hljs-string">&quot;/send-score.html&quot;</span>, <span class="hljs-constant">SF::HttpRequest::Post</span>)
+<pre><code class="lang-crystal"><span class="k">def</span> <span class="nf">send_score</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+  <span class="c1"># prepare the request</span>
+  <span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpRequest</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/send-score.html&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpRequest</span><span class="o">::</span><span class="no">Post</span><span class="p">)</span>
 
-  <span class="hljs-comment"># encode the parameters in the request body</span>
-  request.body = <span class="hljs-string">&quot;name=&quot;</span> + name + <span class="hljs-string">&quot;&amp;score=&quot;</span> + score
+  <span class="c1"># encode the parameters in the request body</span>
+  <span class="n">request</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;name=&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;&amp;score=&quot;</span> <span class="o">+</span> <span class="n">score</span>
 
-  <span class="hljs-comment"># send the request</span>
-  http = <span class="hljs-constant">SF::Http</span>.new(<span class="hljs-string">&quot;http://www.myserver.com/&quot;</span>)
-  response = http.send_request(request)
+  <span class="c1"># send the request</span>
+  <span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://www.myserver.com/&quot;</span><span class="p">)</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 
-  <span class="hljs-comment"># check the status</span>
-  <span class="hljs-keyword">if</span> (response.status == <span class="hljs-constant">SF::HttpResponse::Ok</span>)
-    <span class="hljs-comment"># check the contents of the response</span>
-    puts response.body
-  <span class="hljs-keyword">else</span>
-    puts <span class="hljs-string">&quot;request failed&quot;</span>
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  <span class="c1"># check the status</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">HttpResponse</span><span class="o">::</span><span class="no">Ok</span><span class="p">)</span>
+    <span class="c1"># check the contents of the response</span>
+    <span class="nb">puts</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">&quot;request failed&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p>Of course, this is a very simple way to handle online scores. There&apos;s no protection: Anybody could easily send a false score. A more robust approach would probably involve an extra parameter, like a hash code that ensures that the request was sent by the program. That is beyond the scope of this tutorial.</p>
 <p>And finally, here is a very simple example of what the PHP page on server might look like.</p>
-<pre><code class="lang-php"><span class="hljs-preprocessor">&lt;?php</span>
-<span class="hljs-variable">$name</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">&apos;name&apos;</span>];
-<span class="hljs-variable">$score</span> = <span class="hljs-variable">$_POST</span>[<span class="hljs-string">&apos;score&apos;</span>];
+<pre><code class="lang-php"><span class="cp">&lt;?php</span>
+<span class="nv">$name</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&apos;name&apos;</span><span class="p">];</span>
+<span class="nv">$score</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&apos;score&apos;</span><span class="p">];</span>
 
-<span class="hljs-keyword">if</span> (write_to_database(<span class="hljs-variable">$name</span>, <span class="hljs-variable">$score</span>)) { <span class="hljs-comment">// this is not a PHP tutorial :)</span>
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;name and score added!&apos;</span>;
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;failed to write name and score to database...&apos;</span>;
-}
+<span class="k">if</span> <span class="p">(</span><span class="nx">write_to_database</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$score</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// this is not a PHP tutorial :)</span>
+    <span class="k">echo</span> <span class="s1">&apos;name and score added!&apos;</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&apos;failed to write name and score to database...&apos;</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
 
                     
@@ -706,16 +706,12 @@ puts &quot;</span><span class="hljs-symbol">body:</span> <span class="hljs-strin
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

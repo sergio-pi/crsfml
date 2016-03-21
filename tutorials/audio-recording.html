@@ -8,7 +8,7 @@
         <title>Recording audio | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Recording audio"
         data-filepath="audio-recording.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -584,25 +584,25 @@
 <h2 id="recording-to-a-sound-buffer">Recording to a sound buffer</h2>
 <p>The most common use for captured audio data is for it to be saved to a sound buffer (<a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBuffer.html" target="_blank">SoundBuffer</a>) so that it can either be played or saved to a file.</p>
 <p>This can be achieved with the very simple interface of the <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBufferRecorder.html" target="_blank">SoundBufferRecorder</a> class:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># first check if an input audio device is available on the system</span>
-<span class="hljs-keyword">unless</span> <span class="hljs-constant">SF::SoundBufferRecorder</span>.available?
-  <span class="hljs-comment"># error: audio capture is not available on this system</span>
-  ...
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="c1"># first check if an input audio device is available on the system</span>
+<span class="k">unless</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
+  <span class="c1"># error: audio capture is not available on this system</span>
+  <span class="o">...</span>
+<span class="k">end</span>
 
-<span class="hljs-comment"># create the recorder</span>
-recorder = <span class="hljs-constant">SF::SoundBufferRecorder</span>.new
+<span class="c1"># create the recorder</span>
+<span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
 
-<span class="hljs-comment"># start the capture</span>
-recorder.start
+<span class="c1"># start the capture</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">start</span>
 
-<span class="hljs-comment"># wait...</span>
+<span class="c1"># wait...</span>
 
-<span class="hljs-comment"># stop the capture</span>
-recorder.stop
+<span class="c1"># stop the capture</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">stop</span>
 
-<span class="hljs-comment"># retrieve the buffer that contains the captured audio data</span>
-buffer = recorder.buffer
+<span class="c1"># retrieve the buffer that contains the captured audio data</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="n">recorder</span><span class="o">.</span><span class="n">buffer</span>
 </code></pre>
 <p>The <code>SoundBufferRecorder.available?</code> class method checks if audio recording is supported by the system. It if returns <code>false</code>, you won&apos;t be able to use the <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBufferRecorder.html" target="_blank">SoundBufferRecorder</a> class at all.</p>
 <p>The <code>start</code> and <code>stop</code> methods are self-explanatory. The capture runs in its own thread, which means that you can do whatever you want between start and stop. After the end of the capture, the recorded audio data is available in a sound buffer that you can get with the <code>buffer</code> method.</p>
@@ -610,20 +610,20 @@ buffer = recorder.buffer
 <ul>
 <li>Save it to a file</li>
 </ul>
-<pre><code class="lang-ruby">buffer.save_to_file(<span class="hljs-string">&quot;my_record.ogg&quot;</span>)
+<pre><code class="lang-crystal"><span class="n">buffer</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">&quot;my_record.ogg&quot;</span><span class="p">)</span>
 </code></pre>
 <ul>
 <li>Play it directly</li>
 </ul>
-<pre><code class="lang-ruby">sound = <span class="hljs-constant">SF::Sound</span>.new(buffer)
-sound.play
+<pre><code class="lang-crystal"><span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 </code></pre>
 <ul>
 <li>Access the raw audio data and analyze it, transform it, etc.</li>
 </ul>
-<pre><code class="lang-ruby">samples = buffer.samples
-count = buffer.sample_count
-do_something(samples, count)
+<pre><code class="lang-crystal"><span class="n">samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">samples</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">sample_count</span>
+<span class="n">do_something</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
 </code></pre>
 <p>If you want to use the captured audio data after the recorder is destroyed or restarted, don&apos;t forget to make a <em>copy</em> of the buffer.</p>
 <!--
@@ -642,7 +642,7 @@ There are also two additional virtual functions that you can optionally override
 
 Here is the skeleton of a complete derived class:
 
-```ruby
+```crystal
 class MyRecorder < SF::SoundRecorder
   def on_start # optional
     # initialize whatever has to be done before the capture starts
@@ -669,7 +669,7 @@ end
 
 The `available?`/`start`/`stop` functions are defined in the [SoundRecorder](http://blaxpirit.github.io/crsfml/api/SF/SoundRecorder.html) base, and thus inherited in every derived classes. This means that you can use any recorder class exactly the same way as the [SoundBufferRecorder](http://blaxpirit.github.io/crsfml/api/SF/SoundBufferRecorder.html) class above.
 
-```ruby
+```crystal
 unless MyRecorder.available?
   # error...
 end
@@ -691,6 +691,7 @@ If your recorder uses data that may be accessed *concurrently* in both the calle
 If you're not familiar enough with threading, you can refer to the [corresponding tutorial](system-thread.md "Threading tutorial") for more information.
 
 -->
+
                     
                     </section>
                 
@@ -728,16 +729,12 @@ If you're not familiar enough with threading, you can refer to the [correspondin
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

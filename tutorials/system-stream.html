@@ -8,7 +8,7 @@
         <title>User data streams | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="User data streams"
         data-filepath="system-stream.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -586,12 +586,12 @@
 <p>In this tutorial you&apos;ll learn how to write and use your own derived input stream.</p>
 <h2 id="inputstream">InputStream</h2>
 <p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/InputStream.html" target="_blank">InputStream</a> class declares four virtual methods:</p>
-<pre><code class="lang-ruby">abstract <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputStream</span></span>
-  abstract <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(<span class="hljs-symbol">buffer:</span> <span class="hljs-constant">Slice</span>(<span class="hljs-constant">UInt8</span>)</span>): <span class="hljs-title">Int</span></span>
-  abstract <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">seek</span><span class="hljs-params">(<span class="hljs-symbol">position:</span> <span class="hljs-constant">Int</span>)</span>: <span class="hljs-title">Int</span></span>
-  abstract <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tell</span><span class="hljs-params">()</span>: <span class="hljs-title">Int</span></span>
-  abstract <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">size</span><span class="hljs-params">()</span>: <span class="hljs-title">Int</span></span>
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">abstract</span> <span class="k">class</span> <span class="nc">InputStream</span>
+  <span class="k">abstract</span> <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="ss">buffer</span><span class="p">:</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)):</span> <span class="nb">Int</span>
+  <span class="k">abstract</span> <span class="k">def</span> <span class="nf">seek</span><span class="p">(</span><span class="ss">position</span><span class="p">:</span> <span class="nb">Int</span><span class="p">):</span> <span class="nb">Int</span>
+  <span class="k">abstract</span> <span class="k">def</span> <span class="nf">tell</span><span class="p">():</span> <span class="nb">Int</span>
+  <span class="k">abstract</span> <span class="k">def</span> <span class="nf">size</span><span class="p">():</span> <span class="nb">Int</span>
+<span class="k">end</span>
 </code></pre>
 <p><strong>read</strong> must extract <em>buffer.size</em> bytes of data from the stream, and copy them to the supplied <em>buffer</em> slice. It returns the number of bytes read, or -1 on error.</p>
 <p><strong>seek</strong> must change the current reading position in the stream. Its <em>position</em> argument is the absolute byte offset to jump to (so it is relative to the beginning of the data, not to the current position). It returns the new position, or -1 on error.</p>
@@ -602,16 +602,16 @@
 <p><code>SF::FileInputStream</code> provides the read-only data stream of a file, while <code>SF::MemoryInputStream</code> serves the read-only stream from memory. Both are derived from <code>SF::InputStream</code>.</p>
 <h2 id="using-an-inputstream">Using an InputStream</h2>
 <p>Using a custom stream class is straight-forward: instantiate it, and pass it to the <code>from_stream</code> class method of the object that you want to load.</p>
-<pre><code class="lang-ruby">stream = <span class="hljs-constant">SF::FileInputStream</span>.open(<span class="hljs-string">&quot;image.png&quot;</span>)
-texture = <span class="hljs-constant">SF::Texture</span>.from_stream(stream)
+<pre><code class="lang-crystal"><span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">FileInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Texture</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre>
-<pre><code class="lang-ruby">file = <span class="hljs-constant">File</span>.open(<span class="hljs-string">&quot;music.ogg&quot;</span>, <span class="hljs-string">&quot;rb&quot;</span>)
-stream = <span class="hljs-constant">SF::FileInputStream</span>.new(file)
-music = <span class="hljs-constant">SF::Music</span>.from_stream(stream)
+<pre><code class="lang-crystal"><span class="n">file</span> <span class="o">=</span> <span class="nb">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">FileInputStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Music</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre>
-<pre><code class="lang-ruby">string = <span class="hljs-constant">File</span>.read(<span class="hljs-string">&quot;image.png&quot;</span>)
-stream = <span class="hljs-constant">SF::MemoryInputStream</span>.new(string.to_slice)
-texture = <span class="hljs-constant">SF::Texture</span>.from_stream(stream)
+<pre><code class="lang-crystal"><span class="n">string</span> <span class="o">=</span> <span class="nb">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">MemoryInputStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">to_slice</span><span class="p">)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Texture</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre>
 <p>Note that the examples above are redundant, because <code>from_file</code> can be used instead. The real use cases are if you want to implement custom loading of resources. Option 1: read from file, extract into memory, use <a href="http://blaxpirit.github.io/crsfml/api/SF/MemoryInputStream.html" target="_blank">MemoryInputStream</a>. Option 2: implement a custom stream that reads and extracts on the fly.</p>
 <h2 id="examples">Examples</h2>
@@ -658,16 +658,12 @@ texture = <span class="hljs-constant">SF::Texture</span>.from_stream(stream)
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

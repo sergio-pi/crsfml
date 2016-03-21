@@ -8,7 +8,7 @@
         <title>Using packets | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Using packets"
         data-filepath="network-packet.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -588,35 +588,35 @@
 <h2 id="packets">Packets</h2>
 <p>The two problems (endianness and message boundaries) are solved by using a specific class to pack your data: <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a>. As a bonus, it provides a much nicer interface than plain old byte arrays.</p>
 <p>Packets have a programming interface similar to standard streams: you can insert data with the &lt;&lt; operator, and extract data with the &gt;&gt; operator.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># on sending side</span>
-x = <span class="hljs-number">10</span>u16
-s = <span class="hljs-string">&quot;hello&quot;</span>
-d = <span class="hljs-number">0</span>.<span class="hljs-number">6</span>
+<pre><code class="lang-crystal"><span class="c1"># on sending side</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="n">u16</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">0</span><span class="o">.</span><span class="mi">6</span>
 
-packet = <span class="hljs-constant">SF::Packet</span>.new()
-packet.write_uint16(x)
-packet.write_string(s)
-packet.write_double(d)
+<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Packet</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write_uint16</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write_double</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </code></pre>
-<pre><code class="lang-ruby"><span class="hljs-comment"># on receiving side</span>
-x = packet.read_uint16()
-s = packet.read_string()
-d = packet.read_double()
+<pre><code class="lang-crystal"><span class="c1"># on receiving side</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read_uint16</span><span class="p">()</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read_string</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read_double</span><span class="p">()</span>
 </code></pre>
 <p>Unlike writing, reading from a packet can fail if you try to extract more bytes than the packet contains. If a reading operation fails, the packet error flag is set. To check the error flag of a packet, use the <code>can_read</code> method:</p>
-<pre><code class="lang-ruby">x = packet.read_int32()
-<span class="hljs-keyword">unless</span> packet.can_read
-  <span class="hljs-comment"># error</span>
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read_int32</span><span class="p">()</span>
+<span class="k">unless</span> <span class="n">packet</span><span class="o">.</span><span class="n">can_read</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
 </code></pre>
 <p>Sending and receiving packets is as easy as sending/receiving an array of bytes: sockets have <code>send_packet</code> and <code>receive_packet</code> methods that directly accept a <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a>.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># with a TCP socket</span>
-tcp_socket.send_packet(packet)
-packet = tcp_socket.receive_packet()
+<pre><code class="lang-crystal"><span class="c1"># with a TCP socket</span>
+<span class="n">tcp_socket</span><span class="o">.</span><span class="n">send_packet</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+<span class="n">packet</span> <span class="o">=</span> <span class="n">tcp_socket</span><span class="o">.</span><span class="n">receive_packet</span><span class="p">()</span>
 </code></pre>
-<pre><code class="lang-ruby"><span class="hljs-comment"># with a UDP socket</span>
-udp_socket.send_packet(packet, recipient_address, recipient_port)
-packet, sender_address, sender_port = udp_socket.receive_packet()
+<pre><code class="lang-crystal"><span class="c1"># with a UDP socket</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">send_packet</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">recipient_address</span><span class="p">,</span> <span class="n">recipient_port</span><span class="p">)</span>
+<span class="n">packet</span><span class="p">,</span> <span class="n">sender_address</span><span class="p">,</span> <span class="n">sender_port</span> <span class="o">=</span> <span class="n">udp_socket</span><span class="o">.</span><span class="n">receive_packet</span><span class="p">()</span>
 </code></pre>
 <p>Packets solve the &quot;message boundaries&quot; problem, which means that when you send a packet on a TCP socket, you receive the exact same packet on the other end, it cannot contain less bytes, or bytes from the next packet that you send. However, it has a slight drawback: To preserve message boundaries, <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a> has to send some extra bytes along with your data, which implies that you can only receive them with a <a href="http://blaxpirit.github.io/crsfml/api/SF/Packet.html" target="_blank">Packet</a> if you want them to be properly decoded. Simply put, you can&apos;t send an SFML packet to a non-SFML packet recipient, it has to use an SFML packet for receiving too. Note that this applies to TCP only, UDP is fine since the protocol itself preserves message boundaries.</p>
 <!--
@@ -656,6 +656,7 @@ packet >> bob;
 ```
 
 -->
+
                     
                     </section>
                 
@@ -693,16 +694,12 @@ packet >> bob;
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

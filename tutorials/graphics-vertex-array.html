@@ -8,7 +8,7 @@
         <title>Designing your own entities with vertex arrays | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Designing your own entities with vertex arrays"
         data-filepath="graphics-vertex-array.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -589,44 +589,44 @@
 <p>Now you understand why we always talk about vertex arrays, and not vertices alone.</p>
 <h2 id="a-simple-vertex-array">A simple vertex array</h2>
 <p>Let&apos;s have a look at the <a href="http://blaxpirit.github.io/crsfml/api/SF/Vertex.html" target="_blank">Vertex</a> class now. It&apos;s simply a container which contains three public members and no functions besides its constructors. These constructors allow you to construct vertices from the set of attributes you care about -- you don&apos;t always need to color or texture your entity.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create a new vertex</span>
-vertex = <span class="hljs-constant">SF</span>.vertex
+<pre><code class="lang-crystal"><span class="c1"># create a new vertex</span>
+<span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span>
 
-<span class="hljs-comment"># set its position</span>
-vertex.position = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+<span class="c1"># set its position</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
-<span class="hljs-comment"># set its color</span>
-vertex.color = <span class="hljs-constant">SF::Color::Red</span>
+<span class="c1"># set its color</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Red</span>
 
-<span class="hljs-comment"># set its texture coordinates</span>
-vertex.tex_coords = <span class="hljs-constant">SF</span>.vector2f(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+<span class="c1"># set its texture coordinates</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">tex_coords</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre>
 <p>... or, using the correct constructor:</p>
-<pre><code class="lang-ruby">vertext = <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>), <span class="hljs-constant">SF::Color::Red</span>, <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>))
+<pre><code class="lang-crystal"><span class="n">vertext</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Red</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </code></pre>
 <p>Now, let&apos;s define a primitive. Remember, a primitive consists of several vertices, therefore we need a vertex array. CrSFML provides a simple wrapper for this: <a href="http://blaxpirit.github.io/crsfml/api/SF/VertexArray.html" target="_blank">VertexArray</a>. It provides the semantics of an array, and also stores the type of primitive its vertices define.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create an array of 3 vertices that define a triangle primitive</span>
-triangle = <span class="hljs-constant">SF::VertexArray</span>.new(<span class="hljs-constant">SF::Triangles</span>, <span class="hljs-number">3</span>)
+<pre><code class="lang-crystal"><span class="c1"># create an array of 3 vertices that define a triangle primitive</span>
+<span class="n">triangle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Triangles</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-<span class="hljs-comment"># define the positions and colors of the triangle&apos;s points</span>
-triangle[<span class="hljs-number">0</span>] = <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2f(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>), <span class="hljs-constant">SF::Color::Red</span>)
-triangle[<span class="hljs-number">1</span>] = <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2f(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>), <span class="hljs-constant">SF::Color::Blue</span>)
-triangle[<span class="hljs-number">2</span>] = <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2f(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-constant">SF::Color::Green</span>)
+<span class="c1"># define the positions and colors of the triangle&apos;s points</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Red</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Blue</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="no">Color</span><span class="o">::</span><span class="no">Green</span><span class="p">)</span>
 
-<span class="hljs-comment"># no texture coordinates here, we&apos;ll see that later</span>
+<span class="c1"># no texture coordinates here, we&apos;ll see that later</span>
 </code></pre>
 <p>Your triangle is ready and you can now draw it. Drawing a vertex array can be done similar to drawing any other CrSFML entity, by using the <code>draw</code> function:</p>
-<pre><code class="lang-ruby">window.draw(triangle)
+<pre><code class="lang-crystal"><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-vertex-array-triangle.png" alt="A triangle made with vertices"></p>
 <p>You can see that the vertices&apos; color is interpolated to fill the primitive. This is a nice way of creating gradients.</p>
 <p>Note that you don&apos;t have to use the <a href="http://blaxpirit.github.io/crsfml/api/SF/VertexArray.html" target="_blank">VertexArray</a> class. It&apos;s just defined for convenience, it&apos;s nothing more than an array along with a <code>SF::PrimitiveType</code>. If you need more flexibility, or a normal (or static) array, you can use your own storage. You must then use the overload of the <code>draw</code> function which takes an array of vertices and the primitive type.</p>
-<pre><code class="lang-ruby">vertices = [
-  <span class="hljs-constant">SF</span>.vertex(...),
-  <span class="hljs-constant">SF</span>.vertex(...)
-]
+<pre><code class="lang-crystal"><span class="n">vertices</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="o">]</span>
 
-window.draw(vertices, <span class="hljs-constant">SF::Lines</span>)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="no">Lines</span><span class="p">)</span>
 </code></pre>
 <h2 id="primitive-types">Primitive types</h2>
 <p>Let&apos;s pause for a while and see what kind of primitives you can create. As explained above, you can define the most basic 2D primitives: Point, line, triangle and quad (quad exists merely as a convenience, internally the graphics card breaks it into two triangles). There are also &quot;chained&quot; variants of these primitive types which allow for sharing of vertices among two consecutive primitives. This can be useful because consecutive primitives are often connected in some way.</p>
@@ -679,266 +679,266 @@ window.draw(vertices, <span class="hljs-constant">SF::Lines</span>)
 </table>
 <h2 id="texturing">Texturing</h2>
 <p>Like other SFML entities, vertex arrays can also be textured. To do so, you&apos;ll need to manipulate the <code>tex_coords</code> attribute of the vertices. This attribute defines which pixel of the texture is mapped to the vertex.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create a quad</span>
-quad = <span class="hljs-constant">SF::VertexArray</span>.new(<span class="hljs-constant">SF::Quads</span>, <span class="hljs-number">4</span>)
+<pre><code class="lang-crystal"><span class="c1"># create a quad</span>
+<span class="n">quad</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Quads</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="hljs-comment"># define it as a rectangle, located at (10, 10) and with size 100x100</span>
-<span class="hljs-comment"># define its texture area to be a 25x50 rectangle starting at (0, 0)</span>
-quad.append <span class="hljs-constant">SF</span>.vertex({ <span class="hljs-number">10</span>,  <span class="hljs-number">10</span>}, <span class="hljs-symbol">tex_coords:</span> { <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>})
-quad.append <span class="hljs-constant">SF</span>.vertex({<span class="hljs-number">110</span>,  <span class="hljs-number">10</span>}, <span class="hljs-symbol">tex_coords:</span> {<span class="hljs-number">25</span>,  <span class="hljs-number">0</span>})
-quad.append <span class="hljs-constant">SF</span>.vertex({<span class="hljs-number">110</span>, <span class="hljs-number">110</span>}, <span class="hljs-symbol">tex_coords:</span> {<span class="hljs-number">25</span>, <span class="hljs-number">50</span>})
-quad.append <span class="hljs-constant">SF</span>.vertex({ <span class="hljs-number">10</span>, <span class="hljs-number">110</span>}, <span class="hljs-symbol">tex_coords:</span> { <span class="hljs-number">0</span>, <span class="hljs-number">50</span>})
+<span class="c1"># define it as a rectangle, located at (10, 10) and with size 100x100</span>
+<span class="c1"># define its texture area to be a 25x50 rectangle starting at (0, 0)</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">10</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span><span class="mi">110</span><span class="p">,</span>  <span class="mi">10</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span><span class="mi">25</span><span class="p">,</span>  <span class="mi">0</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span><span class="mi">110</span><span class="p">,</span> <span class="mi">110</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">})</span>
 </code></pre>
 <p>Texture coordinates are defined in <em>pixels</em> (just like the <code>texture_rect</code> of sprites and shapes). They are <em>not</em> normalized (between 0 and 1), as people who are used to OpenGL programming might expect.</p>
 <p>Vertex arrays are low-level entities, they only deal with geometry and do not store additional attributes like a texture. To draw a vertex array with a texture, you must pass it directly to the <code>draw</code> method, through a <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderStates.html" target="_blank">RenderStates</a> object:</p>
-<pre><code class="lang-ruby">vertices = ... <span class="hljs-comment"># SF::VertexArray</span>
-texture = ... <span class="hljs-comment"># SF::Texture</span>
+<pre><code class="lang-crystal"><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Texture</span>
 
-...
+<span class="o">...</span>
 
-states = <span class="hljs-constant">SF::RenderStates</span>.new
-states.texture = texture
+<span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="n">texture</span>
 
-window.draw(vertices, states)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
 </code></pre>
 <h2 id="transforming-a-vertex-array">Transforming a vertex array</h2>
 <p>Transforming is similar to texturing. The transform is not stored in the vertex array, you must pass it to the <code>draw</code> method.</p>
-<pre><code class="lang-ruby">vertices = ... <span class="hljs-comment"># SF::VertexArray</span>
-transform = ... <span class="hljs-comment"># SF::Transform</span>
+<pre><code class="lang-crystal"><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<span class="n">transform</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Transform</span>
 
-...
+<span class="o">...</span>
 
-states = <span class="hljs-constant">SF::RenderStates</span>.new
-states.transform = transform
+<span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
 
-window.draw(vertices, states)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
 </code></pre>
 <p>To know more about transformations and the <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a> class, you can read the tutorial on <a href="graphics-transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <h2 id="creating-an-sfmllike-entity">Creating an SFML-like entity</h2>
 <p>Now that you know how to define your own textured/colored/transformed entity, wouldn&apos;t it be nice to wrap it in a CrSFML-style class? Writing a <code>draw</code> method allows you to draw instances of your class the same way as CrSFML classes:</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEntity</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">MyEntity</span>
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-entity = <span class="hljs-constant">MyEntity</span>.new
-window.draw(entity) <span class="hljs-comment"># internally calls entity.draw</span>
+<span class="n">entity</span> <span class="o">=</span> <span class="no">MyEntity</span><span class="o">.</span><span class="n">new</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span> <span class="c1"># internally calls entity.draw</span>
 </code></pre>
 <p>Including the <a href="http://blaxpirit.github.io/crsfml/api/SF/TransformableM.html" target="_blank">TransformableM</a> module automatically adds the same transformation methods to your class as other CrSFML classes (<code>position=</code>, <code>rotation=</code>, <code>move</code>, <code>scale</code>, ...). You can learn more about this in the tutorial on <a href="graphics-transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <p>Using these two features and a vertex array (in this example we&apos;ll also add a texture), here is what a typical CrSFML-like graphical class would look like:</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEntity</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">MyEntity</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="no">TransformableM</span>
 
-  <span class="hljs-comment"># add methods to play with the entity&apos;s geometry / colors / texturing...</span>
+  <span class="c1"># add methods to play with the entity&apos;s geometry / colors / texturing...</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
-    <span class="hljs-comment"># apply the entity&apos;s transform -- combine it with the one that was passed by the caller</span>
-    states.transform *= transform <span class="hljs-comment"># transform() is defined by SF::Transformable</span>
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="c1"># apply the entity&apos;s transform -- combine it with the one that was passed by the caller</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span> <span class="c1"># transform() is defined by SF::Transformable</span>
 
-    <span class="hljs-comment"># apply the texture</span>
-    states.texture = <span class="hljs-variable">@texture</span>
+    <span class="c1"># apply the texture</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="vi">@texture</span>
 
-    <span class="hljs-comment"># you may also override states.shader or states.blend_mode if you want</span>
+    <span class="c1"># you may also override states.shader or states.blend_mode if you want</span>
 
-    <span class="hljs-comment"># draw the vertex array</span>
-    target.draw(<span class="hljs-variable">@vertices</span>, states)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p>You can then use this class as if it were a built-in CrSFML class:</p>
-<pre><code class="lang-ruby">entity = <span class="hljs-constant">MyEntity</span>.new
+<pre><code class="lang-crystal"><span class="n">entity</span> <span class="o">=</span> <span class="no">MyEntity</span><span class="o">.</span><span class="n">new</span>
 
-<span class="hljs-comment"># you can transform it</span>
-entity.position = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-entity.rotation = <span class="hljs-number">45</span>
+<span class="c1"># you can transform it</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span>
 
-<span class="hljs-comment"># you can draw it</span>
-window.draw(entity)
+<span class="c1"># you can draw it</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
 </code></pre>
 <h2 id="example-tile-map">Example: tile map</h2>
 <p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml-examples/tree/master/minesweeper" target="_blank">minesweeper</a></strong></p>
 <p>With what we&apos;ve seen above, let&apos;s create a class that encapsulates a tile map. The whole map will be contained in a single vertex array, therefore it will be super fast to draw. Note that we can apply this strategy only if the whole tile set can fit into a single texture. Otherwise, we would have to use at least one vertex array per texture.</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TileMap</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">TileMap</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="no">TransformableM</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">load</span><span class="hljs-params">(tileset, tile_size, tiles, width, height)</span></span>
-    <span class="hljs-comment"># load the tileset texture</span>
-    <span class="hljs-variable">@tileset</span> = <span class="hljs-constant">SF::Texture</span>.from_file(tileset)
+  <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">tileset</span><span class="p">,</span> <span class="n">tile_size</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+    <span class="c1"># load the tileset texture</span>
+    <span class="vi">@tileset</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">tileset</span><span class="p">)</span>
 
-    <span class="hljs-comment"># resize the vertex array to fit the level size</span>
-    <span class="hljs-variable">@vertices</span> = <span class="hljs-constant">SF::VertexArray</span>.new(<span class="hljs-constant">SF::Quads</span>)
+    <span class="c1"># resize the vertex array to fit the level size</span>
+    <span class="vi">@vertices</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="no">Quads</span><span class="p">)</span>
 
-    <span class="hljs-comment"># populate the vertex array, with one quad per tile</span>
-    (<span class="hljs-number">0</span>...width).each <span class="hljs-keyword">do</span> |i|
-      (<span class="hljs-number">0</span>...height).each <span class="hljs-keyword">do</span> |j|
-        <span class="hljs-comment"># get the current tile number</span>
-        tile_number = tiles[i + j * width]
+    <span class="c1"># populate the vertex array, with one quad per tile</span>
+    <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">width</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+      <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">j</span><span class="o">|</span>
+        <span class="c1"># get the current tile number</span>
+        <span class="n">tile_number</span> <span class="o">=</span> <span class="n">tiles</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">*</span> <span class="n">width</span><span class="o">]</span>
 
-        <span class="hljs-comment"># find its position in the tileset texture</span>
-        tu = tile_number % (<span class="hljs-variable">@tileset</span>.size.x / tile_size.x)
-        tv = tile_number / (<span class="hljs-variable">@tileset</span>.size.x / tile_size.x)
+        <span class="c1"># find its position in the tileset texture</span>
+        <span class="n">tu</span> <span class="o">=</span> <span class="n">tile_number</span> <span class="o">%</span> <span class="p">(</span><span class="vi">@tileset</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">x</span> <span class="o">/</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">tv</span> <span class="o">=</span> <span class="n">tile_number</span> <span class="o">/</span> <span class="p">(</span><span class="vi">@tileset</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">x</span> <span class="o">/</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
 
-        <span class="hljs-comment"># define its 4 corners and texture coordinates</span>
-        <span class="hljs-variable">@vertices</span>.append <span class="hljs-constant">SF</span>.vertex({i * tile_size.x, j * tile_size.y},
-          tex_coords={tu * tile_size.x, tv * tile_size.y})
-        <span class="hljs-variable">@vertices</span>.append <span class="hljs-constant">SF</span>.vertex({(i + <span class="hljs-number">1</span>) * tile_size.x, j * tile_size.y},
-          tex_coords={(tu + <span class="hljs-number">1</span>) * tile_size.x, tv * tile_size.y})
-        <span class="hljs-variable">@vertices</span>.append <span class="hljs-constant">SF</span>.vertex({(i + <span class="hljs-number">1</span>) * tile_size.x, (j + <span class="hljs-number">1</span>) * tile_size.y},
-          tex_coords={(tu + <span class="hljs-number">1</span>) * tile_size.x, (tv + <span class="hljs-number">1</span>) * tile_size.y)})
-        <span class="hljs-variable">@vertices</span>.append <span class="hljs-constant">SF</span>.vertex({i * tile_size.x, (j + <span class="hljs-number">1</span>) * tile_size.y},
-          tex_coords={tu * tile_size.x, (tv + <span class="hljs-number">1</span>) * tile_size.y})
-      <span class="hljs-keyword">end</span>
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+        <span class="c1"># define its 4 corners and texture coordinates</span>
+        <span class="vi">@vertices</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span><span class="n">i</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">j</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">},</span>
+          <span class="n">tex_coords</span><span class="o">=</span><span class="p">{</span><span class="n">tu</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">tv</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">})</span>
+        <span class="vi">@vertices</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">j</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">},</span>
+          <span class="n">tex_coords</span><span class="o">=</span><span class="p">{(</span><span class="n">tu</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">tv</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">})</span>
+        <span class="vi">@vertices</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">},</span>
+          <span class="n">tex_coords</span><span class="o">=</span><span class="p">{(</span><span class="n">tu</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">tv</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">)})</span>
+        <span class="vi">@vertices</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">({</span><span class="n">i</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">},</span>
+          <span class="n">tex_coords</span><span class="o">=</span><span class="p">{</span><span class="n">tu</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">tv</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">y</span><span class="p">})</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
-    <span class="hljs-comment"># apply the transform</span>
-    states.transform *= transform()
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="c1"># apply the transform</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span><span class="p">()</span>
 
-    <span class="hljs-comment"># apply the tileset texture</span>
-    states.texture = <span class="hljs-variable">@tileset</span>
+    <span class="c1"># apply the tileset texture</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="vi">@tileset</span>
 
-    <span class="hljs-comment"># draw the vertex array</span>
-    target.draw(<span class="hljs-variable">@vertices</span>, states)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p>And now, the application that uses it:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create the window</span>
-window = <span class="hljs-constant">SF::RenderWindow</span>.new(<span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">512</span>, <span class="hljs-number">256</span>), <span class="hljs-string">&quot;Tilemap&quot;</span>)
+<pre><code class="lang-crystal"><span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="s2">&quot;Tilemap&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># define the level with an array of tile indices</span>
-level = [
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>
-]
+<span class="c1"># define the level with an array of tile indices</span>
+<span class="n">level</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="o">]</span>
 
-<span class="hljs-comment"># create the tilemap from the level definition</span>
-map = <span class="hljs-constant">TileMap</span>.new
-map.load(<span class="hljs-string">&quot;tileset.png&quot;</span>, <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">32</span>, <span class="hljs-number">32</span>), level, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>)
+<span class="c1"># create the tilemap from the level definition</span>
+<span class="n">map</span> <span class="o">=</span> <span class="no">TileMap</span><span class="o">.</span><span class="n">new</span>
+<span class="n">map</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;tileset.png&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="n">level</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 
-<span class="hljs-comment"># run the main loop</span>
-<span class="hljs-keyword">while</span> window.open?
+<span class="c1"># run the main loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
 
-  <span class="hljs-comment"># handle events</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-keyword">if</span> event.type == <span class="hljs-constant">SF::Event::Closed</span>
-      window.close
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+  <span class="c1"># handle events</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">Event</span><span class="o">::</span><span class="no">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  <span class="hljs-comment"># draw the map</span>
-  window.clear
-  window.draw(map)
-  window.display
-<span class="hljs-keyword">end</span>
+  <span class="c1"># draw the map</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">map</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
 </code></pre>
 <p><img src="images/graphics-vertex-array-tilemap.png" alt="The tilemap example"></p>
 <h2 id="example-particle-system">Example: particle system</h2>
 <p>This second example implements another common entity: The particle system. This one is very simple, with no texture and as few parameters as possible. It demonstrates the use of the <code>SF::Points</code> primitive type with a dynamic vertex array which changes every frame.</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Particle</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@velocity</span>, <span class="hljs-variable">@lifetime</span>, <span class="hljs-variable">@position</span>)</span></span>
-    <span class="hljs-variable">@total_lifetime</span> = <span class="hljs-variable">@lifetime</span>
-  <span class="hljs-keyword">end</span>
-  property velocity, lifetime, position
-  getter total_lifetime
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">Particle</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@velocity</span><span class="p">,</span> <span class="vi">@lifetime</span><span class="p">,</span> <span class="vi">@position</span><span class="p">)</span>
+    <span class="vi">@total_lifetime</span> <span class="o">=</span> <span class="vi">@lifetime</span>
+  <span class="k">end</span>
+  <span class="bp">property</span> <span class="n">velocity</span><span class="p">,</span> <span class="n">lifetime</span><span class="p">,</span> <span class="n">position</span>
+  <span class="bp">getter</span> <span class="n">total_lifetime</span>
+<span class="k">end</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParticleSystem</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-constant">SF::TransformableM</span>
+<span class="k">class</span> <span class="nc">ParticleSystem</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="no">TransformableM</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@count</span>)</span></span>
-    <span class="hljs-variable">@particles</span> = [] of <span class="hljs-constant">Particle</span>
-    <span class="hljs-variable">@emitter</span> = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
-  <span class="hljs-keyword">end</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@count</span><span class="p">)</span>
+    <span class="vi">@particles</span> <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="no">Particle</span>
+    <span class="vi">@emitter</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  property emitter
+  <span class="bp">property</span> <span class="n">emitter</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">(elapsed)</span></span>
-    <span class="hljs-variable">@particles</span>.reject! <span class="hljs-keyword">do</span> |p|
-      <span class="hljs-comment"># update the position of the particle</span>
-      p.position += p.velocity * elapsed.as_seconds
+  <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
+    <span class="vi">@particles</span><span class="o">.</span><span class="n">reject!</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+      <span class="c1"># update the position of the particle</span>
+      <span class="nb">p</span><span class="o">.</span><span class="n">position</span> <span class="o">+=</span> <span class="nb">p</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">as_seconds</span>
 
-      <span class="hljs-comment"># update the particle lifetime</span>
-      p.lifetime -= elapsed
-      <span class="hljs-comment"># if the particle is dead, remove it</span>
-      p.lifetime &lt;= <span class="hljs-constant">SF::Time::Zero</span>
-    <span class="hljs-keyword">end</span>
-    <span class="hljs-keyword">while</span> <span class="hljs-variable">@particles</span>.size &lt; <span class="hljs-variable">@count</span>
-      <span class="hljs-variable">@particles</span> &lt;&lt; new_particle
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+      <span class="c1"># update the particle lifetime</span>
+      <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">-=</span> <span class="n">elapsed</span>
+      <span class="c1"># if the particle is dead, remove it</span>
+      <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">&lt;=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span><span class="o">::</span><span class="no">Zero</span>
+    <span class="k">end</span>
+    <span class="k">while</span> <span class="vi">@particles</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="vi">@count</span>
+      <span class="vi">@particles</span> <span class="o">&lt;&lt;</span> <span class="n">new_particle</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(target, states)</span></span>
-    vertices = <span class="hljs-variable">@particles</span>.map <span class="hljs-keyword">do</span> |p|
-      <span class="hljs-comment"># set the alpha (transparency) of the particle according to its lifetime</span>
-      ratio = p.lifetime / p.total_lifetime
-      color = <span class="hljs-constant">SF</span>.color(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, (ratio * <span class="hljs-number">255</span>).to_u8)
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="n">vertices</span> <span class="o">=</span> <span class="vi">@particles</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+      <span class="c1"># set the alpha (transparency) of the particle according to its lifetime</span>
+      <span class="n">ratio</span> <span class="o">=</span> <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">/</span> <span class="nb">p</span><span class="o">.</span><span class="n">total_lifetime</span>
+      <span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="p">(</span><span class="n">ratio</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">to_u8</span><span class="p">)</span>
 
-      <span class="hljs-constant">SF</span>.vertex(p.position, color)
-    <span class="hljs-keyword">end</span>
+      <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="nb">p</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+    <span class="k">end</span>
 
-    <span class="hljs-comment">#apply the transform</span>
-    states.transform *= transform()
+    <span class="c1">#apply the transform</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span><span class="p">()</span>
 
-    <span class="hljs-comment"># our particles don&apos;t use a texture</span>
-    states.texture = <span class="hljs-keyword">nil</span>
+    <span class="c1"># our particles don&apos;t use a texture</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="kc">nil</span>
 
-    <span class="hljs-comment"># draw the vertex array</span>
-    target.draw(vertices, <span class="hljs-constant">SF::Points</span>, states)
-  <span class="hljs-keyword">end</span>
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="no">Points</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_particle</span></span>
-    <span class="hljs-comment"># give a random velocity and lifetime to the particle</span>
-    angle = rand(<span class="hljs-number">360</span>) * <span class="hljs-constant">Math::PI</span> / <span class="hljs-number">180.0</span>
-    speed = rand(<span class="hljs-number">50</span>) + <span class="hljs-number">50.0</span>
-    velocity = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-constant">Math</span>.cos(angle) * speed, <span class="hljs-constant">Math</span>.sin(angle) * speed)
-    lifetime = <span class="hljs-constant">SF</span>.milliseconds(rand(<span class="hljs-number">2000</span>) + <span class="hljs-number">1000</span>)
-    position = <span class="hljs-variable">@emitter</span>
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">new_particle</span>
+    <span class="c1"># give a random velocity and lifetime to the particle</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">360</span><span class="p">)</span> <span class="o">*</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">180</span><span class="o">.</span><span class="mi">0</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span><span class="o">.</span><span class="mi">0</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="no">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">speed</span><span class="p">,</span> <span class="no">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="n">lifetime</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="vi">@emitter</span>
 
-    <span class="hljs-constant">Particle</span>.new(velocity, lifetime, <span class="hljs-variable">@emitter</span>)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+    <span class="no">Particle</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">lifetime</span><span class="p">,</span> <span class="vi">@emitter</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p>And a little demo that uses it:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create the window</span>
-window = <span class="hljs-constant">SF::RenderWindow</span>.new(<span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;Particles&quot;</span>)
+<pre><code class="lang-crystal"><span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;Particles&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># create the particle system</span>
-particles = <span class="hljs-constant">ParticleSystem</span>.new(<span class="hljs-number">1000</span>)
+<span class="c1"># create the particle system</span>
+<span class="n">particles</span> <span class="o">=</span> <span class="no">ParticleSystem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 
-<span class="hljs-comment"># create a clock to track the elapsed time</span>
-clock = <span class="hljs-constant">SF::Clock</span>.new
+<span class="c1"># create a clock to track the elapsed time</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Clock</span><span class="o">.</span><span class="n">new</span>
 
-<span class="hljs-comment"># run the main loop</span>
-<span class="hljs-keyword">while</span> window.open?
+<span class="c1"># run the main loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
 
-  <span class="hljs-comment"># handle events</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-keyword">if</span> event.type == <span class="hljs-constant">SF::Event::Closed</span>
-      window.close
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+  <span class="c1"># handle events</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">Event</span><span class="o">::</span><span class="no">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  <span class="hljs-comment"># make the particle system emitter follow the mouse</span>
-  mouse = <span class="hljs-constant">SF::Mouse</span>.get_position(window)
-  particles.emitter = window.map_pixel_to_coords(mouse)
+  <span class="c1"># make the particle system emitter follow the mouse</span>
+  <span class="n">mouse</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Mouse</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+  <span class="n">particles</span><span class="o">.</span><span class="n">emitter</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">map_pixel_to_coords</span><span class="p">(</span><span class="n">mouse</span><span class="p">)</span>
 
-  <span class="hljs-comment"># update it</span>
-  elapsed = clock.restart
-  particles.update(elapsed)
+  <span class="c1"># update it</span>
+  <span class="n">elapsed</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">restart</span>
+  <span class="n">particles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
 
-  <span class="hljs-comment"># draw it</span>
-  window.clear
-  window.draw(particles)
-  window.display
-<span class="hljs-keyword">end</span>
+  <span class="c1"># draw it</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">particles</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
 </code></pre>
 <p><img src="images/graphics-vertex-array-particles.png" alt="The particles example"></p>
 
@@ -979,16 +979,12 @@ clock = <span class="hljs-constant">SF::Clock</span>.new
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

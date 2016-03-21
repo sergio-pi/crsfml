@@ -8,7 +8,7 @@
         <title>Custom audio streams | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Custom audio streams"
         data-filepath="audio-streams.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -587,27 +587,27 @@
 <p>Since we&apos;re talking about <em>streaming</em>, we&apos;ll deal with audio data that cannot be loaded entirely in memory, and will instead be loaded in small chunks while it is being played. If your sound can be loaded completely and can fit in memory, then audio streams won&apos;t help you: Just load the audio data into a <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBuffer.html" target="_blank">SoundBuffer</a> and use a regular <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a> to play it.</p>
 <h2 id="sfsoundstream">SF::SoundStream</h2>
 <p>In order to define your own audio stream, you need to inherit from the <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundStream.html" target="_blank">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span><span class="hljs-params">()</span></span>
-  <span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundStream</span>
+  <span class="k">def</span> <span class="nf">on_get_data</span><span class="p">()</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span><span class="hljs-params">(time_offset)</span></span>
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  <span class="k">def</span> <span class="nf">on_seek</span><span class="p">(</span><span class="n">time_offset</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p><code>on_get_data</code> is called by the base class whenever it runs out of audio samples and needs more of them. You must provide new audio samples by filling the <code>data</code> argument:</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_data</span><span class="hljs-params">()</span></span>
-    samples_array.to_slice
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundStream</span>
+  <span class="k">def</span> <span class="nf">get_data</span><span class="p">()</span>
+    <span class="n">samples_array</span><span class="o">.</span><span class="n">to_slice</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p>You must return a non-empty slice when everything is all right, or an empty one if playback must be stopped, either because an error has occurred or because there&apos;s simply no more audio data to play.</p>
 <p>SFML makes an internal copy of the audio samples as soon as <code>on_get_data</code> returns, so you don&apos;t have to keep the original data alive if you don&apos;t want to.</p>
 <p>The <code>on_seek</code> method is called when the <code>playing_offset=</code> public method is called. Its purpose is to change the current playing position in the source data. The parameter is a time value representing the new position, from the beginning of the sound (<em>not</em> from the current position). This method is sometimes impossible to implement. In those cases leave it empty, and tell the users of your class that changing the playing position is not supported.</p>
 <p>Now your class is almost ready to work. The only thing that <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundStream.html" target="_blank">SoundStream</a> needs to know now is the channel count and sample rate of your stream, so that it can be played as expected.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># where this is done totally depends on how your stream class is designed</span>
-<span class="hljs-constant">MyAudioStream</span>.new(<span class="hljs-symbol">channel_count:</span> ..., <span class="hljs-symbol">sample_rate:</span> ...)
+<pre><code class="lang-crystal"><span class="c1"># where this is done totally depends on how your stream class is designed</span>
+<span class="no">MyAudioStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">channel_count</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="ss">sample_rate</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
 </code></pre>
 <h2 id="threading-issues">Threading issues</h2>
 <p>Audio streams are always played in a separate thread, therefore it is important to know what happens exactly, and where.</p>
@@ -617,57 +617,57 @@
 <p>Now that you have defined your own audio stream class, let&apos;s see how to use it. In fact, things are very similar to what&apos;s shown in the <a href="audio-sounds.html" title="Playing sounds and musics">tutorial about SF::Music</a>. You can control playback with the <code>play</code>, <code>pause</code>, <code>stop</code> and <code>playing_offset=</code> methods. You can also play with the sound&apos;s properties, such as the volume or the pitch. You can refer to the API documentation or to the other audio tutorials for more details.</p>
 <h2 id="a-simple-example">A simple example</h2>
 <p>Here is a very simple example of a custom audio stream class which plays the data of a sound buffer. Such a class might seem totally useless, but the point here is to focus on how the data is streamed by the class, regardless of where it comes from.</p>
-<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml/system&quot;</span>
-<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml/audio&quot;</span>
+<pre><code class="lang-crystal"><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<span class="k">require</span> <span class="s2">&quot;crsfml/audio&quot;</span>
 
-<span class="hljs-comment"># custom audio stream that plays a loaded buffer</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyStream</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::SoundStream</span></span></span>
-  <span class="hljs-variable">@current_sample</span> = <span class="hljs-number">0</span>
+<span class="c1"># custom audio stream that plays a loaded buffer</span>
+<span class="k">class</span> <span class="nc">MyStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundStream</span>
+  <span class="vi">@current_sample</span> <span class="o">=</span> <span class="mi">0</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(buffer)</span></span>
-    <span class="hljs-comment"># extract the audio samples from the sound buffer to our own container</span>
-    <span class="hljs-variable">@samples</span> = buffer.to_slice
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+    <span class="c1"># extract the audio samples from the sound buffer to our own container</span>
+    <span class="vi">@samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">to_slice</span>
 
-    <span class="hljs-comment"># reset the current playing position</span>
-    <span class="hljs-variable">@current_sample</span> = <span class="hljs-number">0</span>
+    <span class="c1"># reset the current playing position</span>
+    <span class="vi">@current_sample</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="hljs-comment"># initialize the base class</span>
-    <span class="hljs-keyword">super</span>(buffer.channel_count, buffer.sample_rate)
-  <span class="hljs-keyword">end</span>
+    <span class="c1"># initialize the base class</span>
+    <span class="k">super</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">channel_count</span><span class="p">,</span> <span class="n">buffer</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span><span class="hljs-params">()</span></span>
-    <span class="hljs-comment"># number of samples to stream every time the function is called;</span>
-    <span class="hljs-comment"># in a more robust implementation, it should be a fixed</span>
-    <span class="hljs-comment"># amount of time rather than an arbitrary number of samples</span>
-    samples_to_stream = <span class="hljs-number">50000</span>
+  <span class="k">def</span> <span class="nf">on_get_data</span><span class="p">()</span>
+    <span class="c1"># number of samples to stream every time the function is called;</span>
+    <span class="c1"># in a more robust implementation, it should be a fixed</span>
+    <span class="c1"># amount of time rather than an arbitrary number of samples</span>
+    <span class="n">samples_to_stream</span> <span class="o">=</span> <span class="mi">50000</span>
 
-    <span class="hljs-comment"># get the number of slices to stream</span>
-    finish = <span class="hljs-constant">Math</span>.min(<span class="hljs-variable">@current_sample</span> + samples_to_stream, <span class="hljs-variable">@samples</span>.size)
-    count = finish - <span class="hljs-variable">@current_sample</span>
+    <span class="c1"># get the number of slices to stream</span>
+    <span class="n">finish</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="vi">@current_sample</span> <span class="o">+</span> <span class="n">samples_to_stream</span><span class="p">,</span> <span class="vi">@samples</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="vi">@current_sample</span>
 
-    <span class="hljs-comment"># the next audio samples to be played</span>
-    result = (<span class="hljs-variable">@samples</span>.to_unsafe + <span class="hljs-variable">@current_sample</span>).to_slice(count)
-    <span class="hljs-variable">@current_sample</span> += count
+    <span class="c1"># the next audio samples to be played</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="vi">@samples</span><span class="o">.</span><span class="n">to_unsafe</span> <span class="o">+</span> <span class="vi">@current_sample</span><span class="p">)</span><span class="o">.</span><span class="n">to_slice</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+    <span class="vi">@current_sample</span> <span class="o">+=</span> <span class="n">count</span>
 
-    result
-  <span class="hljs-keyword">end</span>
+    <span class="n">result</span>
+  <span class="k">end</span>
 
-  private <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span><span class="hljs-params">(time_offset)</span></span>
-    <span class="hljs-variable">@current_sample</span> = (time_offset.as_seconds * sample_rate * channel_count).to_i
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">on_seek</span><span class="p">(</span><span class="n">time_offset</span><span class="p">)</span>
+    <span class="vi">@current_sample</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_offset</span><span class="o">.</span><span class="n">as_seconds</span> <span class="o">*</span> <span class="n">sample_rate</span> <span class="o">*</span> <span class="n">channel_count</span><span class="p">)</span><span class="o">.</span><span class="n">to_i</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-<span class="hljs-comment"># load an audio buffer from a sound file</span>
-buffer = <span class="hljs-constant">SF::SoundBuffer</span>.from_file(<span class="hljs-string">&quot;canary.wav&quot;</span>)
+<span class="c1"># load an audio buffer from a sound file</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;canary.wav&quot;</span><span class="p">)</span>
 
-<span class="hljs-comment"># initialize and play our custom stream</span>
-stream = <span class="hljs-constant">MyStream</span>.new(buffer)
-stream.play
+<span class="c1"># initialize and play our custom stream</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="no">MyStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">play</span>
 
-<span class="hljs-comment"># let it play until it is finished</span>
-<span class="hljs-keyword">while</span> stream.status == <span class="hljs-constant">SF::SoundSource::Playing</span>
-  <span class="hljs-constant">SF</span>.sleep(<span class="hljs-constant">SF</span>.seconds(<span class="hljs-number">0</span>.<span class="hljs-number">1</span>))
-<span class="hljs-keyword">end</span>
+<span class="c1"># let it play until it is finished</span>
+<span class="k">while</span> <span class="n">stream</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="no">SoundSource</span><span class="o">::</span><span class="no">Playing</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">end</span>
 </code></pre>
 
                     
@@ -707,16 +707,12 @@ stream.play
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

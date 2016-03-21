@@ -8,7 +8,7 @@
         <title>Playing sounds and music | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Playing sounds and music"
         data-filepath="audio-sounds.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -588,28 +588,28 @@
 <p>As mentioned above, the sound data is not stored directly in <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a> but in a separate class named <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBuffer.html" target="_blank">SoundBuffer</a>. This class encapsulates the audio data, which is basically an array of 16-bit signed integers (called &quot;audio samples&quot;). A sample is the amplitude of the sound signal at a given point in time, and an array of samples therefore represents a full sound.</p>
 <p>In fact, the <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a>/<a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBuffer.html" target="_blank">Sound</a> classes work the same way as <a href="http://blaxpirit.github.io/crsfml/api/SF/Sprite.html" target="_blank">Sprite</a>/<a href="http://blaxpirit.github.io/crsfml/api/SF/Texture.html" target="_blank">Texture</a> from the graphics module. So if you understand how sprites and textures work together, you can apply the same concept to sounds and sound buffers.</p>
 <p>You can load a sound buffer from a file on disk with its <code>from_file</code> class method:</p>
-<pre><code class="lang-ruby"><span class="hljs-constant">SF::SoundBuffer</span>.from_file(<span class="hljs-string">&quot;sound.wav&quot;</span>)
+<pre><code class="lang-crystal"><span class="no">SF</span><span class="o">::</span><span class="no">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;sound.wav&quot;</span><span class="p">)</span>
 </code></pre>
 <p>As with everything else, you can also load an audio file from memory (<code>from_memory</code>) or from a <a href="system-stream.html" title="Input streams tutorial">custom input stream</a> (<code>from_stream</code>).</p>
 <p>SFML supports the audio file formats WAV, OGG/Vorbis and FLAC. Due to licensing issues MP3 is <strong>not</strong> supported.</p>
 <p>You can also load a sound buffer directly from an array of samples, in the case they originate from another source:</p>
-<pre><code class="lang-ruby">buffer.from_samples(samples, samples.size, <span class="hljs-number">2</span>, <span class="hljs-number">44100</span>)
+<pre><code class="lang-crystal"><span class="n">buffer</span><span class="o">.</span><span class="n">from_samples</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">44100</span><span class="p">)</span>
 </code></pre>
 <p>Since <code>from_samples</code> loads a raw array of samples rather than an audio file, it requires additional arguments in order to have a complete description of the sound. The first one (third argument) is the number of channels; 1 channel defines a mono sound, 2 channels define a stereo sound, etc. The second additional attribute (fourth argument) is the sample rate; it defines how many samples must be played per second in order to reconstruct the original sound.</p>
 <p>Now that the audio data is loaded, we can play it with a <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a> instance.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># load something into the sound buffer...</span>
-buffer = ...
+<pre><code class="lang-crystal"><span class="c1"># load something into the sound buffer...</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="o">...</span>
 
-sound = <span class="hljs-constant">SF::Sound</span>.new(buffer)
-sound.play
+<span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 </code></pre>
 <p>The cool thing is that you can assign the same sound buffer to multiple sounds if you want. You can even play them together without any issues.</p>
 <p>Sounds (and music) are played in a separate thread. This means that you are free to do whatever you want after calling <code>play</code> (except destroying the sound or its data, of course), the sound will continue to play until it&apos;s finished or explicitly stopped.</p>
 <h2 id="playing-a-music">Playing a music</h2>
 <p>Unlike <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a>, <a href="http://blaxpirit.github.io/crsfml/api/SF/Music.html" target="_blank">Music</a> doesn&apos;t pre-load the audio data, instead it streams the data directly from the source. The initialization of music is thus more direct:</p>
-<pre><code class="lang-ruby">music = <span class="hljs-constant">SF::Music</span>.from_file(<span class="hljs-string">&quot;music.ogg&quot;</span>)
+<pre><code class="lang-crystal"><span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Music</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">)</span>
 
-music.play
+<span class="n">music</span><span class="o">.</span><span class="n">play</span>
 </code></pre>
 <p>It is important to note that, unlike all other SFML resources, the loading class method only opens the file. The music is not really loaded, this method merely opens it. The data is only loaded later, when the music is played. It also helps to keep in mind that the audio file has to remain available as long as it is played.
 The other loading methods of <a href="http://blaxpirit.github.io/crsfml/api/SF/Music.html" target="_blank">Music</a> follow the same convention: <code>from_memory</code>, <code>from_stream</code>.</p>
@@ -623,31 +623,31 @@ The other loading methods of <a href="http://blaxpirit.github.io/crsfml/api/SF/M
 <li><code>playing_offset=</code> changes the current playing position</li>
 </ul>
 <p>Example:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># start playback</span>
-sound.play
+<pre><code class="lang-crystal"><span class="c1"># start playback</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 
-<span class="hljs-comment"># advance to 2 seconds</span>
-sound.playing_offset = <span class="hljs-constant">SF</span>.seconds(<span class="hljs-number">2</span>)
+<span class="c1"># advance to 2 seconds</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">playing_offset</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="hljs-comment"># pause playback</span>
-sound.pause
+<span class="c1"># pause playback</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">pause</span>
 
-<span class="hljs-comment"># resume playback</span>
-sound.play
+<span class="c1"># resume playback</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 
-<span class="hljs-comment"># stop playback and rewind</span>
-sound.stop
+<span class="c1"># stop playback and rewind</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">stop</span>
 </code></pre>
 <p>The <code>status</code> method returns the current status of a sound or music, you can use it to know whether it is stopped, playing or paused.</p>
 <p>Sound and music playback is also controlled by a few attributes which can be changed at any moment.</p>
 <p>The <em>pitch</em> is a factor that changes the perceived frequency of the sound: greater than 1 plays the sound at a higher pitch, less than 1 plays the sound at a lower pitch, and 1 leaves it unchanged. Changing the pitch has a side effect: it impacts the playing speed.</p>
-<pre><code class="lang-ruby">sound.pitch = <span class="hljs-number">1.2</span>
+<pre><code class="lang-crystal"><span class="n">sound</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">2</span>
 </code></pre>
 <p>The <em>volume</em> is... the volume. The value ranges from 0 (mute) to 100 (full volume). The default value is 100, which means that you can&apos;t make a sound louder than its initial volume.</p>
-<pre><code class="lang-ruby">sound.volume = <span class="hljs-number">50</span>
+<pre><code class="lang-crystal"><span class="n">sound</span><span class="o">.</span><span class="n">volume</span> <span class="o">=</span> <span class="mi">50</span>
 </code></pre>
 <p>The <em>loop</em> attribute controls whether the sound/music automatically loops or not. If it loops, it will restart playing from the beginning when it&apos;s finished, again and again until you explicitly call <code>stop</code>. If not set to loop, it will stop automatically when it&apos;s finished.</p>
-<pre><code class="lang-ruby">sound.loop = <span class="hljs-keyword">true</span>
+<pre><code class="lang-crystal"><span class="n">sound</span><span class="o">.</span><span class="n">loop</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre>
 <p>More attributes are available, but they are related to spatialization and are explained in the <a href="audio-spatialization.html" title="Spatialization tutorial">corresponding tutorial</a>.</p>
 <h2 id="common-mistakes">Common mistakes</h2>
@@ -655,17 +655,17 @@ sound.stop
 <p>One source of error is when you try to create a huge number of sounds. SFML internally has a limit; it can vary depending on the OS, but you should never exceed 256. This limit is the number of <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a> and <a href="http://blaxpirit.github.io/crsfml/api/SF/Music.html" target="_blank">Music</a> instances that can exist simultaneously. A good way to stay below the limit is to destroy (or recycle) unused sounds when they are no longer needed. This only applies if you have to manage a really large amount of sounds and music, of course.</p>
 <h3 id="destroying-the-music-source-while-it-plays">Destroying the music source while it plays</h3>
 <p>Remember that a music needs its source as long as it is played. A music file on your disk probably won&apos;t be deleted or moved while your application plays it, however things get more complicated when you play a music from a file in memory, or from a custom input stream:</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># we start with a music file in memory (imagine that we extracted it from a zip archive)</span>
-file_data = ...
+<pre><code class="lang-crystal"><span class="c1"># we start with a music file in memory (imagine that we extracted it from a zip archive)</span>
+<span class="n">file_data</span> <span class="o">=</span> <span class="o">...</span>
 
-<span class="hljs-comment"># we play it</span>
-music = <span class="hljs-constant">SF::Music</span>.from_memory(file_data, file_data.size)
-music.play
+<span class="c1"># we play it</span>
+<span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">Music</span><span class="o">.</span><span class="n">from_memory</span><span class="p">(</span><span class="n">file_data</span><span class="p">,</span> <span class="n">file_data</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">music</span><span class="o">.</span><span class="n">play</span>
 
-<span class="hljs-comment"># &quot;ok, it seems that we don&apos;t need the source file any longer&quot;</span>
-file_data.clear
+<span class="c1"># &quot;ok, it seems that we don&apos;t need the source file any longer&quot;</span>
+<span class="n">file_data</span><span class="o">.</span><span class="n">clear</span>
 
-<span class="hljs-comment"># ERROR: the music was still streaming the contents of file_data! The behavior is now undefined</span>
+<span class="c1"># ERROR: the music was still streaming the contents of file_data! The behavior is now undefined</span>
 </code></pre>
 
                     
@@ -705,16 +705,12 @@ file_data.clear
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

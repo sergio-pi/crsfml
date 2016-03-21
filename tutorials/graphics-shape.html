@@ -8,7 +8,7 @@
         <title>Shapes | CrSFML Tutorials</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.6">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="gitbook/style.css">
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-pygments/website.css">
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
         
     
         
@@ -57,7 +57,7 @@
         data-chapter-title="Shapes"
         data-filepath="graphics-shape.md"
         data-basepath="."
-        data-revision="Fri Dec 18 2015 10:05:32 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 18:54:39 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -587,91 +587,91 @@
 <p>These properties are common to all the CrSFML graphical classes, so they are explained in a separate tutorial: <a href="graphics-transform.html" title="&apos;Transforming entities&apos; tutorial">Transforming entities</a>.</p>
 <h3 id="color">Color</h3>
 <p>One of the basic properties of a shape is its color. You can change with the <code>fill_color=</code> method.</p>
-<pre><code class="lang-ruby">shape = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">50</span>)
+<pre><code class="lang-crystal"><span class="n">shape</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 
-<span class="hljs-comment"># set the shape color to green</span>
-shape.fill_color = <span class="hljs-constant">SF</span>.color(<span class="hljs-number">100</span>, <span class="hljs-number">250</span>, <span class="hljs-number">50</span>)
+<span class="c1"># set the shape color to green</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">fill_color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-color.png" alt="A colored shape"></p>
 <h3 id="outline">Outline</h3>
 <p>Shapes can have an outline. You can set the thickness and color of the outline with the <code>outline_thickness=</code> and <code>outline_color=</code> methods.</p>
-<pre><code class="lang-ruby">shape = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">50</span>)
-shape.fill_color = <span class="hljs-constant">SF</span>.color(<span class="hljs-number">150</span>, <span class="hljs-number">50</span>, <span class="hljs-number">250</span>)
+<pre><code class="lang-crystal"><span class="n">shape</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">fill_color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
 
-<span class="hljs-comment"># set a 10-pixel wide orange outline</span>
-shape.outline_thickness = <span class="hljs-number">10</span>
-shape.outline_color = <span class="hljs-constant">SF</span>.color(<span class="hljs-number">250</span>, <span class="hljs-number">150</span>, <span class="hljs-number">100</span>)
+<span class="c1"># set a 10-pixel wide orange outline</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">outline_thickness</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">outline_color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-outline.png" alt="An outlined shape"></p>
 <p>By default, the outline is extruded outwards from the shape (e.g. if you have a circle with a radius of 10 and an outline thickness of 5, the total radius of the circle will be 15). You can make it extrude towards the center of the shape instead, by setting a negative thickness.</p>
 <p>To disable the outline, set its thickness to 0. If you only want the outline, you can set the fill color to <code>SF::Color::Transparent</code>.</p>
 <h3 id="texture">Texture</h3>
 <p>Shapes can also be textured, just like sprites. To specify a part of the texture to be mapped to the shape, you must use the <code>texture_rect=</code> method. It takes the texture rectangle to map to the bounding rectangle of the shape. This method doesn&apos;t offer maximum flexibility, but it is much easier to use than individually setting the texture coordinates of each point of the shape.</p>
-<pre><code class="lang-ruby">shape = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">50</span>)
+<pre><code class="lang-crystal"><span class="n">shape</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 
-<span class="hljs-comment"># map a 100x100 textured rectangle to the shape</span>
-reset_rect = <span class="hljs-keyword">false</span> <span class="hljs-comment"># reset texture rect?</span>
-shape.set_texture(texture, reset_rect) <span class="hljs-comment"># texture is a SF::Texture</span>
-shape.texture_rect = <span class="hljs-constant">SF</span>.int_rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+<span class="c1"># map a 100x100 textured rectangle to the shape</span>
+<span class="n">reset_rect</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1"># reset texture rect?</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">set_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">reset_rect</span><span class="p">)</span> <span class="c1"># texture is a SF::Texture</span>
+<span class="n">shape</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-texture.png" alt="A textured shape"></p>
 <p>Note that the outline is not textured.<br>It is important to know that the texture is modulated (multiplied) with the shape&apos;s fill color. If its fill color is SF::Color::White, the texture will appear unmodified.<br>To disable texturing, call <code>set_texture(nil, false)</code>.</p>
 <h2 id="drawing-a-shape">Drawing a shape</h2>
 <p>Drawing a shape is as simple as drawing any other SFML entity:</p>
-<pre><code class="lang-ruby">window.draw(shape)
+<pre><code class="lang-crystal"><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </code></pre>
 <h2 id="builtin-shape-types">Built-in shape types</h2>
 <h3 id="rectangles">Rectangles</h3>
 <p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml-examples/tree/master/tetrominos" target="_blank">tetrominos</a></strong></p>
 <p>To draw rectangles, you can use the <a href="http://blaxpirit.github.io/crsfml/api/SF/RectangleShape.html" target="_blank">RectangleShape</a> class. It has a single attribute: The size of the rectangle.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># define a 120x50 rectangle</span>
-rectangle = <span class="hljs-constant">SF::RectangleShape</span>.new(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">120</span>, <span class="hljs-number">50</span>))
+<pre><code class="lang-crystal"><span class="c1"># define a 120x50 rectangle</span>
+<span class="n">rectangle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RectangleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
 
-<span class="hljs-comment"># change the size to 100x100</span>
-rectangle.size = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
+<span class="c1"># change the size to 100x100</span>
+<span class="n">rectangle</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-rectangle.png" alt="A rectangle shape"></p>
 <h3 id="circles">Circles</h3>
 <p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/snakes.cr" target="_blank">snakes</a></strong></p>
 <p>Circles are represented by the <a href="http://blaxpirit.github.io/crsfml/api/SF/CircleShape.html" target="_blank">CircleShape</a> class. It has two attributes: The radius and the number of sides. The number of sides is an optional attribute, it allows you to adjust the &quot;quality&quot; of the circle: Circles have to be approximated by polygons with many sides (the graphics card is unable to draw a perfect circle directly), and this attribute defines how many sides your circle approximation will have. If you draw small circles, you&apos;ll probably only need a few sides. If you draw big circles, or zoom on regular circles, you&apos;ll most likely need more sides.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># define a circle with radius = 200</span>
-circle = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">200</span>)
+<pre><code class="lang-crystal"><span class="c1"># define a circle with radius = 200</span>
+<span class="n">circle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 
-<span class="hljs-comment"># change the radius to 40</span>
-circle.radius = <span class="hljs-number">40</span>
+<span class="c1"># change the radius to 40</span>
+<span class="n">circle</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">40</span>
 
-<span class="hljs-comment"># change the number of sides (points) to 100</span>
-circle.point_count = <span class="hljs-number">100</span>
+<span class="c1"># change the number of sides (points) to 100</span>
+<span class="n">circle</span><span class="o">.</span><span class="n">point_count</span> <span class="o">=</span> <span class="mi">100</span>
 </code></pre>
 <p><img src="images/graphics-shape-circle.png" alt="A circle shape"></p>
 <h3 id="regular-polygons">Regular polygons</h3>
 <p>There&apos;s no dedicated class for regular polygons, in fact you can represent a regular polygon with any number of sides using the <a href="http://blaxpirit.github.io/crsfml/api/SF/CircleShape.html" target="_blank">CircleShape</a> class: Since circles are approximated by polygons with many sides, you just have to play with the number of sides to get the desired polygons. A <a href="http://blaxpirit.github.io/crsfml/api/SF/CircleShape.html" target="_blank">CircleShape</a> with 3 points is a triangle, with 4 points it&apos;s a square, etc.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># define a triangle</span>
-triangle = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">80</span>, <span class="hljs-number">3</span>)
+<pre><code class="lang-crystal"><span class="c1"># define a triangle</span>
+<span class="n">triangle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-<span class="hljs-comment"># define a square</span>
-square = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">80</span>, <span class="hljs-number">4</span>)
+<span class="c1"># define a square</span>
+<span class="n">square</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="hljs-comment"># define an octagon</span>
-octagon = <span class="hljs-constant">SF::CircleShape</span>.new(<span class="hljs-number">80</span>, <span class="hljs-number">8</span>)
+<span class="c1"># define an octagon</span>
+<span class="n">octagon</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">CircleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-regular.png" alt="Regular polygons"></p>
 <h3 id="convex-shapes">Convex shapes</h3>
 <p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml-examples/tree/master/2048/rounded_rectangle.cr" target="_blank">rounded_rectangle</a></strong></p>
 <p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/ConvexShape.html" target="_blank">ConvexShape</a> class is the ultimate shape class: It allows you to define any <em>convex</em> shape. SFML is unable to draw concave shapes. If you need to draw a concave shape, you&apos;ll have to split it into multiple convex polygons.</p>
 <p>To construct a convex shape, you must first set the number of points it should have and then define the points.</p>
-<pre><code class="lang-ruby"><span class="hljs-comment"># create an empty shape</span>
-convex = <span class="hljs-constant">SF::ConvexShape</span>.new
+<pre><code class="lang-crystal"><span class="c1"># create an empty shape</span>
+<span class="n">convex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">ConvexShape</span><span class="o">.</span><span class="n">new</span>
 
-<span class="hljs-comment"># resize it to 5 points</span>
-convex.point_count = <span class="hljs-number">5</span>
+<span class="c1"># resize it to 5 points</span>
+<span class="n">convex</span><span class="o">.</span><span class="n">point_count</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="hljs-comment"># define the points</span>
-convex[<span class="hljs-number">0</span>] = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
-convex[<span class="hljs-number">1</span>] = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">150</span>, <span class="hljs-number">10</span>)
-convex[<span class="hljs-number">2</span>] = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">120</span>, <span class="hljs-number">90</span>)
-convex[<span class="hljs-number">3</span>] = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">30</span>, <span class="hljs-number">100</span>)
-convex[<span class="hljs-number">4</span>] = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>)
+<span class="c1"># define the points</span>
+<span class="n">convex</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">convex</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">convex</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">convex</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">convex</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 </code></pre>
 <p>The order in which you define the points is very important. They must <em>all</em> be defined either in clockwise or counter-clockwise order. If you define them in an inconsistent order, the shape will be constructed incorrectly.</p>
 <p><img src="images/graphics-shape-convex.png" alt="A convex shape"></p>
@@ -679,17 +679,17 @@ convex[<span class="hljs-number">4</span>] = <span class="hljs-constant">SF</spa
 <h3 id="lines">Lines</h3>
 <p>There&apos;s no shape class for lines. The reason is simple: If your line has a thickness, it is a rectangle. If it doesn&apos;t, it can be drawn with a line primitive.</p>
 <p>Line with thickness:</p>
-<pre><code class="lang-ruby">line = <span class="hljs-constant">SF::RectangleShape</span>.new(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">150</span>, <span class="hljs-number">5</span>))
-line.rotate(<span class="hljs-number">45</span>)
+<pre><code class="lang-crystal"><span class="n">line</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RectangleShape</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">line</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-line-rectangle.png" alt="A line shape drawn as a rectangle"></p>
 <p>Line without thickness:</p>
-<pre><code class="lang-ruby">line = [
-  <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)),
-  <span class="hljs-constant">SF</span>.vertex(<span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">150</span>, <span class="hljs-number">150</span>))
-]
+<pre><code class="lang-crystal"><span class="n">line</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">vertex</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">))</span>
+<span class="o">]</span>
 
-window.draw(line, <span class="hljs-constant">SF::Lines</span>)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="no">Lines</span><span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-line-primitive.png" alt="A line shape drawn as a primitive"></p>
 <p>To learn more about vertices and primitives, you can read the tutorial on <a href="graphics-vertex-array.html" title="&apos;Vertex arrays&apos; tutorial">vertex arrays</a>.</p>
@@ -702,42 +702,42 @@ window.draw(line, <span class="hljs-constant">SF::Lines</span>)
 </ul>
 <p>You must also call the <code>update()</code> method whenever any point in your shape changes, so that the base class is informed and can update its internal geometry.</p>
 <p>Here is a complete example of a custom shape class: <code>EllipseShape</code>.</p>
-<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EllipseShape</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">SF::Shape</span></span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(<span class="hljs-variable">@radius</span> = <span class="hljs-constant">SF</span>.vector2(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)</span>)</span>
-    <span class="hljs-keyword">super</span>()
-  <span class="hljs-keyword">end</span>
+<pre><code class="lang-crystal"><span class="k">class</span> <span class="nc">EllipseShape</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="no">Shape</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@radius</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="k">super</span><span class="p">()</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">radius</span></span>
-    <span class="hljs-variable">@radius</span>
-  <span class="hljs-keyword">end</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">radius=</span><span class="hljs-params">(radius)</span></span>
-    <span class="hljs-variable">@radius</span> = radius
-    update
-  <span class="hljs-keyword">end</span>
+  <span class="k">def</span> <span class="nf">radius</span>
+    <span class="vi">@radius</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">radius</span><span class="o">=</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
+    <span class="vi">@radius</span> <span class="o">=</span> <span class="n">radius</span>
+    <span class="n">update</span>
+  <span class="k">end</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">point_count</span></span>
-    <span class="hljs-number">30</span>  <span class="hljs-comment"># fixed, but could be an attribute of the class if needed</span>
-  <span class="hljs-keyword">end</span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_point</span><span class="hljs-params">(index)</span></span>
-    pi = <span class="hljs-constant">Math::PI</span>
+  <span class="k">def</span> <span class="nf">point_count</span>
+    <span class="mi">30</span>  <span class="c1"># fixed, but could be an attribute of the class if needed</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">get_point</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span>
 
-    angle = index * <span class="hljs-number">2</span> * pi / point_count - pi / <span class="hljs-number">2</span>
-    x = <span class="hljs-constant">Math</span>.cos(angle) * <span class="hljs-variable">@radius</span>.x
-    y = <span class="hljs-constant">Math</span>.sin(angle) * <span class="hljs-variable">@radius</span>.y
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">index</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">point_count</span> <span class="o">-</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="vi">@radius</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="no">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="vi">@radius</span><span class="o">.</span><span class="n">y</span>
 
-    <span class="hljs-constant">SF</span>.vector2(<span class="hljs-variable">@radius</span>.x + x, <span class="hljs-variable">@radius</span>.y + y)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+    <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="vi">@radius</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span> <span class="vi">@radius</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre>
 <p><img src="images/graphics-shape-ellipse.png" alt="An ellipse shape"></p>
 <h2 id="antialiased-shapes">Antialiased shapes</h2>
 <p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/snakes.cr" target="_blank">snakes</a></strong></p>
 <p>There&apos;s no option to anti-alias a single shape. To get anti-aliased shapes (i.e. shapes with smoothed edges), you have to enable anti-aliasing globally when you create the window, with the corresponding attribute of the structure.</p>
-<pre><code class="lang-ruby">window = <span class="hljs-constant">SF::RenderWindow</span>.new(
-  <span class="hljs-constant">SF</span>.video_mode(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>),
-  <span class="hljs-string">&quot;SFML shapes&quot;</span>,
-  <span class="hljs-symbol">settings:</span> <span class="hljs-constant">SF</span>.context_settings(<span class="hljs-symbol">depth_bits:</span> <span class="hljs-number">24</span>, <span class="hljs-symbol">antialiasing:</span> <span class="hljs-number">8</span>)
-)
+<pre><code class="lang-crystal"><span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="no">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">video_mode</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span>
+  <span class="s2">&quot;SFML shapes&quot;</span><span class="p">,</span>
+  <span class="ss">settings</span><span class="p">:</span> <span class="no">SF</span><span class="o">.</span><span class="n">context_settings</span><span class="p">(</span><span class="ss">depth_bits</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="ss">antialiasing</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">)</span>
 </code></pre>
 <p><img src="images/graphics-shape-antialiasing.png" alt="Aliased vs antialiased shape"></p>
 <p>Remember that anti-aliasing availability depends on the graphics card: It might not support it, or have it forced to disabled in the driver settings.<br>Sometimes antialiasing does not work if <code>depth_bits</code> is not specified (use 24 if unsure).</p>
@@ -779,16 +779,12 @@ window.draw(line, <span class="hljs-constant">SF::Lines</span>)
     
 
     
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
     <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"ungrey":{},"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"pygments":{},"ungrey":{},"toggle-chapters":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
