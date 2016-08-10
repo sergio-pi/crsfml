@@ -889,12 +889,12 @@ and regular SFML drawing commands. If you need a depth buffer for
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4760" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4847" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/graphics.cr#L115" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L115" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -930,7 +930,7 @@ and regular SFML drawing commands. If you need a depth buffer for
       <li class="entry-summary">
         <a href="#active%3D%28active%3ABool%3D%3Cspanclass%3D%22n%22%3Etrue%3C%2Fspan%3E%29%3ABool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
         
-          <div class="summary"><p>Activate of deactivate the render-texture for rendering</p></div>
+          <div class="summary"><p>Activate or deactivate the render-texture for rendering</p></div>
         
       </li>
     
@@ -957,6 +957,13 @@ and regular SFML drawing commands. If you need a depth buffer for
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
         
           <div class="summary"><p>Destructor</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#generate_mipmap%3ABool-instance-method" class="signature"><strong>#generate_mipmap</strong> : Bool</a>
+        
+          <div class="summary"><p>Generate a mipmap using the current texture data</p></div>
         
       </li>
     
@@ -1122,7 +1129,7 @@ and regular SFML drawing commands. If you need a depth buffer for
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4798" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4885" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,7 +1152,7 @@ call create to have a valid render-texture.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4768" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4855" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,7 +1170,7 @@ call create to have a valid render-texture.</p>
         <a class="method-permalink" href="#active%3D%28active%3ABool%3D%3Cspanclass%3D%22n%22%3Etrue%3C%2Fspan%3E%29%3ABool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Activate of deactivate the render-texture for rendering</p>
+        <div class="doc"><p>Activate or deactivate the render-texture for rendering</p>
 
 <p>This function makes the render-texture's context current for
 future OpenGL rendering operations (so you shouldn't care
@@ -1179,7 +1186,7 @@ want to draw OpenGL geometry to another render target
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4857" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4959" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,7 +1216,7 @@ leave this parameter to false (which is its default value).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4791" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4878" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1232,7 +1239,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4867" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4969" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1248,7 +1255,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/graphics.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,7 +1273,35 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4773" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4860" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="generate_mipmap:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>generate_mipmap</strong> : Bool
+
+        <a class="method-permalink" href="#generate_mipmap%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generate a mipmap using the current texture data</p>
+
+<p>This function is similar to Texture::generateMipmap and operates
+on the texture used as the target for drawing.
+Be aware that any draw operation may modify the base level image data.
+For this reason, calling this function only makes sense after all
+drawing is completed and display has been called. Not calling display
+after subsequent drawing will lead to undefined behavior if a mipmap
+had been previously generated.</p>
+
+<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4943" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1291,7 +1326,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4833" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4920" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,7 +1348,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4841" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4928" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1336,7 +1371,7 @@ the create function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4876" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4978" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1361,7 +1396,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4813" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4900" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1383,7 +1418,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4821" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4908" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1411,7 +1446,7 @@ modified.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L4892" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4994" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -922,12 +922,12 @@ while (window.isOpen())
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5081" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5184" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/graphics.cr#L110" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L110" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -1143,6 +1143,11 @@ while (window.isOpen())
     key_repeat_enabled=</a>, 
     
   
+    <a href="../SF/Window.html#mouse_cursor_grabbed%3D%28grabbed%3ABool%29-instance-method" class="tooltip">
+      <span>mouse_cursor_grabbed=(grabbed : Bool)</span>
+    mouse_cursor_grabbed=</a>, 
+    
+  
     <a href="../SF/Window.html#mouse_cursor_visible%3D%28visible%3ABool%29-instance-method" class="tooltip">
       <span>mouse_cursor_visible=(visible : Bool)</span>
     mouse_cursor_visible=</a>, 
@@ -1279,7 +1284,7 @@ while (window.isOpen())
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5179" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5293" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,7 +1302,7 @@ while (window.isOpen())
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5169" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5283" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1327,7 +1332,7 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5108" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5211" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1359,7 +1364,7 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5229" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,7 +1385,7 @@ use the other constructors or call create() to do so.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5087" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5190" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1400,6 +1405,16 @@ use the other constructors or call create() to do so.</p></div>
       
         <div class="doc"><p>Copy the current contents of the window to an image</p>
 
+<p><em>Deprecated:</em>
+Use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its <code><a href="../SF/Texture.html">SF::Texture</a>::update</code>(const Window&)
+function and copy its contents into an <code><a href="../SF/Image.html">SF::Image</a></code> instead.</p>
+
+<pre><code class='language-c++'>sf::Vector2u windowSize = window.getSize();
+sf::Texture texture;
+texture.create(windowSize.x, windowSize.y);
+texture.update(window);
+sf::Image screenshot = texture.copyToImage();</code></pre>
+
 <p>This is a slow operation, whose main purpose is to make
 screenshots of the application. If you want to update an
 image with the contents of the window and then use it for
@@ -1413,7 +1428,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5159" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5273" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1429,7 +1444,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/graphics.cr#L111" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L111" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1449,7 +1464,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5134" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1472,7 +1487,7 @@ of the window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L5143" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L5246" target="_blank">View source</a>]
         
       </div>
     </div>

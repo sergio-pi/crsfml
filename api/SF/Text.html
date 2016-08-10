@@ -881,7 +881,7 @@ window.draw(text);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6320" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6417" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -931,19 +931,33 @@ window.draw(text);</code></pre>
       <li class="entry-summary">
         <a href="#color%3AColor-instance-method" class="signature"><strong>#color</strong> : Color</a>
         
-          <div class="summary"><p>Get the global color of the text</p></div>
+          <div class="summary"><p>Get the fill color of the text</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#color=</strong>(color : Color)</a>
         
-          <div class="summary"><p>Set the global color of the text</p></div>
+          <div class="summary"><p>Set the fill color of the text</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fill_color%3AColor-instance-method" class="signature"><strong>#fill_color</strong> : Color</a>
+        
+          <div class="summary"><p>Get the fill color of the text</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fill_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#fill_color=</strong>(color : Color)</a>
+        
+          <div class="summary"><p>Set the fill color of the text</p></div>
         
       </li>
     
@@ -972,6 +986,34 @@ window.draw(text);</code></pre>
         <a href="#local_bounds%3AFloatRect-instance-method" class="signature"><strong>#local_bounds</strong> : FloatRect</a>
         
           <div class="summary"><p>Get the local bounding rectangle of the entity</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#outline_color%3AColor-instance-method" class="signature"><strong>#outline_color</strong> : Color</a>
+        
+          <div class="summary"><p>Get the outline color of the text</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#outline_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#outline_color=</strong>(color : Color)</a>
+        
+          <div class="summary"><p>Set the outline color of the text</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#outline_thickness%3AFloat32-instance-method" class="signature"><strong>#outline_thickness</strong> : Float32</a>
+        
+          <div class="summary"><p>Get the outline thickness of the text</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method" class="signature"><strong>#outline_thickness=</strong>(thickness : Number)</a>
+        
+          <div class="summary"><p>Set the thickness of the text's outline</p></div>
         
       </li>
     
@@ -1173,7 +1215,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6357" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6454" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1193,7 +1235,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6340" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6437" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,7 +1262,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6473" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6611" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1251,7 +1293,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6413" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6510" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1264,16 +1306,20 @@ font that supports that size is used.</p>
         <a class="method-permalink" href="#color%3AColor-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the global color of the text</p>
+        <div class="doc"><p>Get the fill color of the text</p>
 
-<p><em>Returns:</em> Global color of the text</p>
+<p><em>Returns:</em> Fill color of the text</p>
 
-<p><em>See also:</em> setColor</p></div>
+<p><em>See also:</em> setFillColor</p>
+
+<p><em>Deprecated:</em> There is now fill and outline colors instead
+of a single global color.
+Use getFillColor() or getOutlineColor() instead.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6491" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6633" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1286,18 +1332,24 @@ font that supports that size is used.</p>
         <a class="method-permalink" href="#color%3D%28color%3AColor%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the global color of the text</p>
+        <div class="doc"><p>Set the fill color of the text</p>
 
-<p>By default, the text's color is opaque white.</p>
+<p>By default, the text's fill color is opaque white.
+Setting the fill color to a transparent color with an outline
+will cause the outline to be displayed in the fill area of the text.</p>
 
-<ul><li><em>color</em> - New color of the text</li></ul>
+<ul><li><em>color</em> - New fill color of the text</li></ul>
 
-<p><em>See also:</em> getColor</p></div>
+<p><em>See also:</em> getFillColor</p>
+
+<p><em>Deprecated:</em> There is now fill and outline colors instead
+of a single global color.
+Use setFillColor() or setOutlineColor() instead.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6435" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6538" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,7 +1365,55 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6661" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6832" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fill_color:Color-instance-method">
+      <div class="signature">
+        
+        def <strong>fill_color</strong> : <a href="../SF/Color.html">Color</a>
+
+        <a class="method-permalink" href="#fill_color%3AColor-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the fill color of the text</p>
+
+<p><em>Returns:</em> Fill color of the text</p>
+
+<p><em>See also:</em> setFillColor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6643" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fill_color&#61;&#40;color:Color&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>fill_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
+
+        <a class="method-permalink" href="#fill_color%3D%28color%3AColor%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the fill color of the text</p>
+
+<p>By default, the text's fill color is opaque white.
+Setting the fill color to a transparent color with an outline
+will cause the outline to be displayed in the fill area of the text.</p>
+
+<ul><li><em>color</em> - New fill color of the text</li></ul>
+
+<p><em>See also:</em> getFillColor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6550" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1342,7 +1442,7 @@ the string is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6508" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6679" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,7 +1471,7 @@ use it, the behavior is undefined.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6394" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6491" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1397,7 +1497,7 @@ text in the global 2D world's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6536" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6707" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1423,7 +1523,102 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6522" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6693" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="outline_color:Color-instance-method">
+      <div class="signature">
+        
+        def <strong>outline_color</strong> : <a href="../SF/Color.html">Color</a>
+
+        <a class="method-permalink" href="#outline_color%3AColor-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the outline color of the text</p>
+
+<p><em>Returns:</em> Outline color of the text</p>
+
+<p><em>See also:</em> setOutlineColor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6653" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="outline_color&#61;&#40;color:Color&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>outline_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
+
+        <a class="method-permalink" href="#outline_color%3D%28color%3AColor%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the outline color of the text</p>
+
+<p>By default, the text's outline color is opaque black.</p>
+
+<ul><li><em>color</em> - New outline color of the text</li></ul>
+
+<p><em>See also:</em> getOutlineColor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6560" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="outline_thickness:Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>outline_thickness</strong> : Float32
+
+        <a class="method-permalink" href="#outline_thickness%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the outline thickness of the text</p>
+
+<p><em>Returns:</em> Outline thickness of the text, in pixels</p>
+
+<p><em>See also:</em> setOutlineThickness</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6663" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="outline_thickness&#61;&#40;thickness:Number&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>outline_thickness=</strong>(thickness : Number)
+
+        <a class="method-permalink" href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the thickness of the text's outline</p>
+
+<p>By default, the outline thickness is 0.</p>
+
+<p>Be aware that using a negative value for the outline
+thickness will cause distorted rendering.</p>
+
+<ul><li><em>thickness</em> - New outline thickness, in pixels</li></ul>
+
+<p><em>See also:</em> getOutlineThickness</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6573" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1453,7 +1648,7 @@ std::wstring s3 = text.getString();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6452" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6590" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1486,7 +1681,7 @@ text.setString(std::wstring(L"hello"));</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6379" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6476" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1508,7 +1703,7 @@ text.setString(std::wstring(L"hello"));</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6482" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6620" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1534,7 +1729,7 @@ The default style is <code><a href="../SF/Text.html">SF::Text</a>::Regular</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L6425" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6522" target="_blank">View source</a>]
         
       </div>
     </div>

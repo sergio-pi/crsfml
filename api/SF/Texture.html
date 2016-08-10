@@ -923,7 +923,7 @@ sf::Texture::bind(NULL);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3119" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3127" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -1025,6 +1025,13 @@ sf::Texture::bind(NULL);</code></pre>
       </li>
     
       <li class="entry-summary">
+        <a href="#generate_mipmap%3ABool-instance-method" class="signature"><strong>#generate_mipmap</strong> : Bool</a>
+        
+          <div class="summary"><p>Generate a mipmap using the current texture data</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#load_from_file%28filename%3AString%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
         
           <div class="summary"><p>Load the texture from a file on disk</p></div>
@@ -1091,6 +1098,20 @@ sf::Texture::bind(NULL);</code></pre>
         <a href="#smooth%3F%3ABool-instance-method" class="signature"><strong>#smooth?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether the smooth filter is enabled or not</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#srgb%3D%28s_rgb%3ABool%29-instance-method" class="signature"><strong>#srgb=</strong>(s_rgb : Bool)</a>
+        
+          <div class="summary"><p>Enable or disable conversion from sRGB</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#srgb%3F%3ABool-instance-method" class="signature"><strong>#srgb?</strong> : Bool</a>
+        
+          <div class="summary"><p>Tell whether the texture source is converted from sRGB or not</p></div>
         
       </li>
     
@@ -1207,7 +1228,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3534" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3598" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,7 +1248,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3195" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3203" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1247,7 +1268,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3309" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3317" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,7 +1288,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3236" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1287,7 +1308,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3276" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3284" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,15 +1327,12 @@ to compute normalized values.</p>
 You can expect a value of 512 pixels for low-end graphics
 card, and up to 8192 pixels or more for newer hardware.</p>
 
-<p>Note: The first call to this function, whether by your
-code or SFML will result in a context switch.</p>
-
 <p><em>Returns:</em> Maximum size allowed for textures, in pixels</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3547" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3608" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,7 +1352,7 @@ code or SFML will result in a context switch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3155" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3163" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1354,7 +1372,7 @@ code or SFML will result in a context switch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3132" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3140" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,7 +1404,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3334" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3342" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1410,7 +1428,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3148" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1426,7 +1444,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3566" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3627" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1444,7 +1462,44 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3137" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3145" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="generate_mipmap:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>generate_mipmap</strong> : Bool
+
+        <a class="method-permalink" href="#generate_mipmap%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generate a mipmap using the current texture data</p>
+
+<p>Mipmaps are pre-computed chains of optimized textures. Each
+level of texture in a mipmap is generated by halving each of
+the previous level's dimensions. This is done until the final
+level has the size of 1x1. The textures generated in this process may
+make use of more advanced filters which might improve the visual quality
+of textures when they are applied to objects much smaller than they are.
+This is known as minification. Because fewer texels (texture elements)
+have to be sampled from when heavily minified, usage of mipmaps
+can also improve rendering performance in certain scenarios.</p>
+
+<p>Mipmap generation relies on the necessary OpenGL extension being
+available. If it is unavailable or generation fails due to another
+reason, this function will return false. Mipmap data is only valid from
+the time it is generated until the next time the base level image is
+modified, at which point this function will have to be called again to
+regenerate it.</p>
+
+<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3555" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1485,7 +1540,7 @@ driver and can be retrieved with the getMaximumSize function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3188" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1520,7 +1575,7 @@ driver and can be retrieved with the getMaximumSize function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3302" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3310" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1561,7 +1616,7 @@ driver and can be retrieved with the getMaximumSize function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3229" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1602,7 +1657,7 @@ driver and can be retrieved with the getMaximumSize function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3269" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3277" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1626,7 +1681,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3502" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3566" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1662,7 +1717,7 @@ Repeating is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3483" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3523" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1684,7 +1739,7 @@ Repeating is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3491" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3531" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1704,7 +1759,7 @@ Repeating is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3319" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3327" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1732,7 +1787,7 @@ The smooth filter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3452" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3460" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1754,7 +1809,66 @@ The smooth filter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3460" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3468" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="srgb&#61;&#40;s_rgb:Bool&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>srgb=</strong>(s_rgb : Bool)
+
+        <a class="method-permalink" href="#srgb%3D%28s_rgb%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enable or disable conversion from sRGB</p>
+
+<p>When providing texture data from an image file or memory, it can
+either be stored in a linear color space or an sRGB color space.
+Most digital images account for gamma correction already, so they
+would need to be "uncorrected" back to linear color space before
+being processed by the hardware. The hardware can automatically
+convert it from the sRGB color space to a linear color space when
+it gets sampled. When the rendered image gets output to the final
+framebuffer, it gets converted back to sRGB.</p>
+
+<p>After enabling or disabling sRGB conversion, make sure to reload
+the texture data in order for the setting to take effect.</p>
+
+<p>This option is only useful in conjunction with an sRGB capable
+framebuffer. This can be requested during window creation.</p>
+
+<ul><li><em>s_rgb</em> - True to enable sRGB conversion, false to disable it</li></ul>
+
+<p><em>See also:</em> isSrgb</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3492" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="srgb?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>srgb?</strong> : Bool
+
+        <a class="method-permalink" href="#srgb%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Tell whether the texture source is converted from sRGB or not</p>
+
+<p><em>Returns:</em> True if the texture source is converted from sRGB, false if not</p>
+
+<p><em>See also:</em> setSrgb</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3500" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1781,7 +1895,7 @@ was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3438" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3446" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1808,7 +1922,7 @@ previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3405" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3413" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1838,7 +1952,7 @@ texture was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3372" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3380" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1870,7 +1984,7 @@ was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3423" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3431" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1902,7 +2016,7 @@ previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3390" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1932,7 +2046,7 @@ texture was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/graphics/obj.cr#L3352" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3360" target="_blank">View source</a>]
         
       </div>
     </div>

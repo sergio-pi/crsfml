@@ -908,7 +908,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2278" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2296" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -951,7 +951,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#bind%28port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#bind</strong>(port : Int) : Socket::Status</a>
+        <a href="#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#bind</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
         
           <div class="summary"><p>Bind the socket to a specific port</p></div>
         
@@ -1031,6 +1031,15 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
 
     
 
+  <h3>Class methods inherited from class <code><a href="../SF/Socket.html">SF::Socket</a></code></h3>
+  
+  
+    <a href="../SF/Socket.html#new%28type%3ASocket%3A%3AType%29-class-method" class="tooltip">
+      <span>new(type : Socket::Type)</span>
+    new</a>
+    
+  
+
 
   
     
@@ -1072,7 +1081,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2283" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2301" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1082,12 +1091,12 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="bind&#40;port:Int&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="bind&#40;port:Int,address:IpAddress&#61;&lt;spanclass&#61;&quot;t&quot;&gt;IpAddress&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Any&lt;/span&gt;&#41;:Socket::Status-instance-method">
       <div class="signature">
         
-        def <strong>bind</strong>(port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
+        def <strong>bind</strong>(port : Int, address : <a href="../SF/IpAddress.html">IpAddress</a> = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#bind%28port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Bind the socket to a specific port</p>
@@ -1098,7 +1107,7 @@ You can use the special value Socket::AnyPort to tell the
 system to automatically pick an available port, and then
 call getLocalPort to retrieve the chosen port.</p>
 
-<ul><li><em>port</em> - Port to bind the socket to</li></ul>
+<ul><li><em>port</em> -    Port to bind the socket to</li><li><em>address</em> - Address of the interface to bind to</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
@@ -1107,7 +1116,7 @@ call getLocalPort to retrieve the chosen port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2313" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1132,7 +1141,7 @@ returns 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2296" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2314" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,7 +1172,7 @@ be lost.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2363" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2382" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1190,7 +1199,7 @@ has been received.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2397" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2416" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1218,7 +1227,7 @@ fail and no data will be sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2381" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2400" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,7 +1255,7 @@ fail and no data will be sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2341" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2360" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1270,7 +1279,7 @@ socket is not bound to a port, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/network/obj.cr#L2324" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2343" target="_blank">View source</a>]
         
       </div>
     </div>

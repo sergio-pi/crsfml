@@ -865,7 +865,7 @@ resources.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/window/obj.cr#L208" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L220" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -876,6 +876,13 @@ resources.</p>
 
   <h2>Class Method Summary</h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#extension_available%3F%28name%3A%3A%3APointer%28UInt8%29%29%3ABool-class-method" class="signature"><strong>.extension_available?</strong>(name : ::Pointer(UInt8)) : Bool</a>
+        
+          <div class="summary"><p>Check whether a given OpenGL extension is available</p></div>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method" class="signature"><strong>.new</strong>(settings : ContextSettings, width : Int, height : Int)</a>
@@ -909,6 +916,13 @@ resources.</p>
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
         
           <div class="summary"><p>Destructor</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#settings%3AContextSettings-instance-method" class="signature"><strong>#settings</strong> : ContextSettings</a>
+        
+          <div class="summary"><p>Get the settings of the context</p></div>
         
       </li>
     
@@ -953,6 +967,28 @@ resources.</p>
 
   <h2>Class Method Detail</h2>
   
+    <div class="entry-detail" id="extension_available?&#40;name:::Pointer&#40;UInt8&#41;&#41;:Bool-class-method">
+      <div class="signature">
+        
+        def self.<strong>extension_available?</strong>(name : ::Pointer(UInt8)) : Bool
+
+        <a class="method-permalink" href="#extension_available%3F%28name%3A%3A%3APointer%28UInt8%29%29%3ABool-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check whether a given OpenGL extension is available</p>
+
+<ul><li><em>name</em> - Name of the extension to check for</li></ul>
+
+<p><em>Returns:</em> True if available, false if unavailable</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L261" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="new&#40;settings:ContextSettings,width:Int,height:Int&#41;-class-method">
       <div class="signature">
         
@@ -971,7 +1007,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/window/obj.cr#L240" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L279" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -991,7 +1027,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/window/obj.cr#L213" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1018,7 +1054,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/window/obj.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L240" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1038,7 +1074,31 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/53b0116cc2aafdf7081f6ef44833caa56190c68a/src/window/obj.cr#L220" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="settings:ContextSettings-instance-method">
+      <div class="signature">
+        
+        def <strong>settings</strong> : <a href="../SF/ContextSettings.html">ContextSettings</a>
+
+        <a class="method-permalink" href="#settings%3AContextSettings-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the settings of the context</p>
+
+<p>Note that these settings may be different than the ones
+passed to the constructor; they are indeed adjusted if the
+original settings are not directly supported by the system.</p>
+
+<p><em>Returns:</em> Structure containing the settings</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L251" target="_blank">View source</a>]
         
       </div>
     </div>
