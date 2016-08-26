@@ -868,7 +868,7 @@ music.play();</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L736" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L726" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -977,8 +977,8 @@ music.play();</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/SoundStream.html">SF::SoundStream</a></code></h3>
   
   
-    <a href="../SF/SoundStream.html#channel_count%3AUInt32-instance-method" class="tooltip">
-      <span>channel_count : UInt32</span>
+    <a href="../SF/SoundStream.html#channel_count%3AInt32-instance-method" class="tooltip">
+      <span>channel_count : Int32</span>
     channel_count</a>, 
     
   
@@ -1027,8 +1027,8 @@ music.play();</code></pre>
     playing_offset=</a>, 
     
   
-    <a href="../SF/SoundStream.html#sample_rate%3AUInt32-instance-method" class="tooltip">
-      <span>sample_rate : UInt32</span>
+    <a href="../SF/SoundStream.html#sample_rate%3AInt32-instance-method" class="tooltip">
+      <span>sample_rate : Int32</span>
     sample_rate</a>, 
     
   
@@ -1188,7 +1188,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L772" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L762" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1208,7 +1208,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L804" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L794" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1228,7 +1228,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L834" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L824" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,7 +1246,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L739" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L729" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1271,7 +1271,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L844" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L834" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1289,7 +1289,7 @@ music.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L746" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1314,7 +1314,7 @@ to read from the audio file.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L857" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L847" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,7 +1334,7 @@ to read from the audio file.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L862" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L852" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1362,12 +1362,12 @@ the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a new mus
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> openFromMemory, openFromStream</p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">#open_from_memory</a></code>, <code><a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#open_from_stream</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L765" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L755" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1396,12 +1396,12 @@ you can't deallocate the buffer right after calling this function.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> openFromFile, openFromStream</p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#open_from_stream</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L797" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L787" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1429,12 +1429,12 @@ until the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a n
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> openFromFile, openFromMemory</p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">#open_from_memory</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L827" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L817" target="_blank">View source</a>]
         
       </div>
     </div>

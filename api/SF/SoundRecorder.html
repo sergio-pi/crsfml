@@ -821,41 +821,41 @@ captured data to a sound buffer (see <code><a href="../SF/SoundBufferRecorder.ht
 
 <p>A derived class has only one virtual function to override:</p>
 
-<ul><li>onProcessSamples provides the new chunks of audio samples while the capture happens</li></ul>
+<ul><li>on_process_samples provides the new chunks of audio samples while the capture happens</li></ul>
 
 <p>Moreover, two additional virtual functions can be overridden
 as well if necessary:</p>
 
-<ul><li>onStart is called before the capture happens, to perform custom initializations</li><li>onStop is called after the capture ends, to perform custom cleanup</li></ul>
+<ul><li>on_start is called before the capture happens, to perform custom initializations</li><li>on_stop is called after the capture ends, to perform custom cleanup</li></ul>
 
-<p>A derived class can also control the frequency of the onProcessSamples
-calls, with the setProcessingInterval protected function. The default
+<p>A derived class can also control the frequency of the on_process_samples
+calls, with the processing_interval= protected function. The default
 interval is chosen so that recording thread doesn't consume too much
 CPU, but it can be changed to a smaller value if you need to process
 the recorded data in real time, for example.</p>
 
 <p>The audio capture feature may not be supported or activated
 on every platform, thus it is recommended to check its
-availability with the isAvailable() function. If it returns
+availability with the available?() function. If it returns
 false, then any attempt to use an audio recorder will fail.</p>
 
 <p>If you have multiple sound input devices connected to your
 computer (for example: microphone, external soundcard, webcam mic, ...)
 you can get a list of all available devices through the
-getAvailableDevices() function. You can then select a device
-by calling setDevice() with the appropriate device. Otherwise
+available_devices() function. You can then select a device
+by calling device=() with the appropriate device. Otherwise
 the default capturing device will be used.</p>
 
 <p>By default the recording is in 16-bit mono. Using the
-setChannelCount method you can change the number of channels
+channel_count= method you can change the number of channels
 used by the audio capture device to record. Note that you
 have to decide whether you want to record in mono or stereo
 before starting the recording.</p>
 
 <p>It is important to note that the audio capture happens in a
 separate thread, so that it doesn't block the rest of the
-program. In particular, the onProcessSamples virtual function
-(but not onStart and not onStop) will be called
+program. In particular, the on_process_samples virtual function
+(but not on_start and not on_stop) will be called
 from this separate thread. It is important to keep this in
 mind, because you may have to take care of synchronization
 issues if you share data between threads.
@@ -942,7 +942,7 @@ if (CustomRecorder::isAvailable())
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1594" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1578" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -990,7 +990,7 @@ if (CustomRecorder::isAvailable())
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_count%3AUInt32-instance-method" class="signature"><strong>#channel_count</strong> : UInt32</a>
+        <a href="#channel_count%3AInt32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of channels used by this recorder</p></div>
         
@@ -1053,7 +1053,7 @@ if (CustomRecorder::isAvailable())
       </li>
     
       <li class="entry-summary">
-        <a href="#sample_rate%3AUInt32-instance-method" class="signature"><strong>#sample_rate</strong> : UInt32</a>
+        <a href="#sample_rate%3AInt32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
         
           <div class="summary"><p>Get the sample rate</p></div>
         
@@ -1127,7 +1127,7 @@ classes will fail.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1717" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1701" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1150,7 +1150,7 @@ the names of all available audio capture devices.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1646" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1630" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1174,7 +1174,7 @@ is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1657" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1641" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1194,7 +1194,7 @@ is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1724" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1708" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,12 +1204,12 @@ is returned.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="channel_count:UInt32-instance-method">
+    <div class="entry-detail" id="channel_count:Int32-instance-method">
       <div class="signature">
         
-        def <strong>channel_count</strong> : UInt32
+        def <strong>channel_count</strong> : Int32
 
-        <a class="method-permalink" href="#channel_count%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#channel_count%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the number of channels used by this recorder</p>
@@ -1219,12 +1219,12 @@ value is either 1 (for mono) or 2 (for stereo).</p>
 
 <p><em>Returns:</em> Number of channels</p>
 
-<p><em>See also:</em> setChannelCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count%3D%28channel_count%3AInt%29-instance-method">#channel_count=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1705" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1689" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1247,12 +1247,12 @@ used for recording. Currently only 16-bit mono and
 
 <pre><code>                mono (<span class="n">1</span>) and stereo (<span class="n">2</span>) are supported.</code></pre>
 
-<p><em>See also:</em> getChannelCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count%3AInt32-instance-method">#channel_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1694" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1678" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1272,7 +1272,7 @@ used for recording. Currently only 16-bit mono and
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1680" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1664" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1296,12 +1296,12 @@ opening the device fails, it stops the recording.</p>
 
 <p><em>Returns:</em> True, if it was able to set the requested device</p>
 
-<p><em>See also:</em> getAvailableDevices, getDefaultDevice</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#available_devices%3AArray%28String%29-class-method">.available_devices</a></code>, <code><a href="../SF/SoundRecorder.html#default_device%3AString-class-method">.default_device</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1673" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1657" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1319,7 +1319,7 @@ opening the device fails, it stops the recording.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1597" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1581" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1346,7 +1346,7 @@ it over the network, etc.).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1768" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1752" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,7 +1371,7 @@ implementation does nothing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1753" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1737" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1394,7 +1394,7 @@ implementation does nothing.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1775" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1759" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1410,7 +1410,7 @@ implementation does nothing.</p></div>
         <div class="doc"><p>Set the processing interval</p>
 
 <p>The processing interval controls the period
-between calls to the onProcessSamples function. You may
+between calls to the on_process_samples function. You may
 want to use a small interval if you want to process the
 recorded data in real time, for example.</p>
 
@@ -1424,17 +1424,17 @@ So don't rely on this parameter to implement precise timing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1742" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1726" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="sample_rate:UInt32-instance-method">
+    <div class="entry-detail" id="sample_rate:Int32-instance-method">
       <div class="signature">
         
-        def <strong>sample_rate</strong> : UInt32
+        def <strong>sample_rate</strong> : Int32
 
-        <a class="method-permalink" href="#sample_rate%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#sample_rate%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the sample rate</p>
@@ -1448,7 +1448,7 @@ captured per second. The higher, the better the quality
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1636" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1620" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,21 +1470,21 @@ This function uses its own thread so that it doesn't block
 the rest of the program while the capture runs.
 Please note that only one capture can happen at the same time.
 You can select which capture device will be used, by passing
-the name to the setDevice() method. If none was selected
+the name to the device=() method. If none was selected
 before, the default capture device will be used. You can get a
 list of the names of all available capture devices by calling
-getAvailableDevices().</p>
+available_devices().</p>
 
 <ul><li><em>sample_rate</em> - Desired capture rate, in number of samples per second</li></ul>
 
 <p><em>Returns:</em> True, if start of capture was successful</p>
 
-<p><em>See also:</em> stop, getAvailableDevices</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#stop-instance-method">#stop</a></code>, <code><a href="../SF/SoundRecorder.html#available_devices%3AArray%28String%29-class-method">.available_devices</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1619" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1603" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1499,12 +1499,12 @@ getAvailableDevices().</p>
       
         <div class="doc"><p>Stop the capture</p>
 
-<p><em>See also:</em> start</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#start%28sample_rate%3AInt%3D%3Cspanclass%3D%22n%22%3E44100%3C%2Fspan%3E%29%3ABool-instance-method">#start</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1626" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1610" target="_blank">View source</a>]
         
       </div>
     </div>

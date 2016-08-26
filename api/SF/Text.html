@@ -881,7 +881,7 @@ window.draw(text);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6417" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6360" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -915,7 +915,7 @@ window.draw(text);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#character_size%3AUInt32-instance-method" class="signature"><strong>#character_size</strong> : UInt32</a>
+        <a href="#character_size%3AInt32-instance-method" class="signature"><strong>#character_size</strong> : Int32</a>
         
           <div class="summary"><p>Get the character size</p></div>
         
@@ -1215,7 +1215,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6454" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6397" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1235,7 +1235,7 @@ font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6437" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6380" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,24 +1245,24 @@ font that supports that size is used.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="character_size:UInt32-instance-method">
+    <div class="entry-detail" id="character_size:Int32-instance-method">
       <div class="signature">
         
-        def <strong>character_size</strong> : UInt32
+        def <strong>character_size</strong> : Int32
 
-        <a class="method-permalink" href="#character_size%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#character_size%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the character size</p>
 
 <p><em>Returns:</em> Size of the characters, in pixels</p>
 
-<p><em>See also:</em> setCharacterSize</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#character_size%3D%28size%3AInt%29-instance-method">#character_size=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6611" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6554" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,12 +1288,12 @@ font that supports that size is used.</p>
 
 <ul><li><em>size</em> - New character size, in pixels</li></ul>
 
-<p><em>See also:</em> getCharacterSize</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#character_size%3AInt32-instance-method">#character_size</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6510" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6453" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1310,16 +1310,16 @@ font that supports that size is used.</p>
 
 <p><em>Returns:</em> Fill color of the text</p>
 
-<p><em>See also:</em> setFillColor</p>
+<p><em>See also:</em> <code><a href="../SF/Text.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p>
 
 <p><em>Deprecated:</em> There is now fill and outline colors instead
 of a single global color.
-Use getFillColor() or getOutlineColor() instead.</p></div>
+Use fill_color() or outline_color() instead.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6633" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6576" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,16 +1340,16 @@ will cause the outline to be displayed in the fill area of the text.</p>
 
 <ul><li><em>color</em> - New fill color of the text</li></ul>
 
-<p><em>See also:</em> getFillColor</p>
+<p><em>See also:</em> <code><a href="../SF/Text.html#fill_color%3AColor-instance-method">#fill_color</a></code></p>
 
 <p><em>Deprecated:</em> There is now fill and outline colors instead
 of a single global color.
-Use setFillColor() or setOutlineColor() instead.</p></div>
+Use fill_color=() or outline_color=() instead.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6538" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6481" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,7 +1365,7 @@ Use setFillColor() or setOutlineColor() instead.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6832" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6775" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,12 +1382,12 @@ Use setFillColor() or setOutlineColor() instead.</p></div>
 
 <p><em>Returns:</em> Fill color of the text</p>
 
-<p><em>See also:</em> setFillColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6643" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6586" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1408,12 +1408,12 @@ will cause the outline to be displayed in the fill area of the text.</p>
 
 <ul><li><em>color</em> - New fill color of the text</li></ul>
 
-<p><em>See also:</em> getFillColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#fill_color%3AColor-instance-method">#fill_color</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6550" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6493" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1442,7 +1442,7 @@ the string is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6679" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6622" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1466,12 +1466,12 @@ use it, the behavior is undefined.</p>
 
 <ul><li><em>font</em> - New font</li></ul>
 
-<p><em>See also:</em> getFont</p></div>
+<p><em>See also:</em> <code>font</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6491" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6434" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1497,7 +1497,7 @@ text in the global 2D world's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6707" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6650" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1523,7 +1523,7 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6693" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6636" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1540,12 +1540,12 @@ entity in the entity's coordinate system.</p>
 
 <p><em>Returns:</em> Outline color of the text</p>
 
-<p><em>See also:</em> setOutlineColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#outline_color%3D%28color%3AColor%29-instance-method">#outline_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6653" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6596" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1564,12 +1564,12 @@ entity in the entity's coordinate system.</p>
 
 <ul><li><em>color</em> - New outline color of the text</li></ul>
 
-<p><em>See also:</em> getOutlineColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#outline_color%3AColor-instance-method">#outline_color</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6560" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6503" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1586,12 +1586,12 @@ entity in the entity's coordinate system.</p>
 
 <p><em>Returns:</em> Outline thickness of the text, in pixels</p>
 
-<p><em>See also:</em> setOutlineThickness</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#outline_thickness%3D%28thickness%3ANumber%29-instance-method">#outline_thickness=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6663" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6606" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1613,12 +1613,12 @@ thickness will cause distorted rendering.</p>
 
 <ul><li><em>thickness</em> - New outline thickness, in pixels</li></ul>
 
-<p><em>See also:</em> getOutlineThickness</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#outline_thickness%3AFloat32-instance-method">#outline_thickness</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6573" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6516" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1643,12 +1643,12 @@ std::wstring s3 = text.getString();</code></pre>
 
 <p><em>Returns:</em> Text's string</p>
 
-<p><em>See also:</em> setString</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#string%3D%28string%3AString%29-instance-method">#string=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6590" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6533" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1676,12 +1676,12 @@ text.setString(std::wstring(L"hello"));</code></pre>
 
 <ul><li><em>string</em> - New string</li></ul>
 
-<p><em>See also:</em> getString</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#string%3AString-instance-method">#string</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6476" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6419" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1698,12 +1698,12 @@ text.setString(std::wstring(L"hello"));</code></pre>
 
 <p><em>Returns:</em> Text's style</p>
 
-<p><em>See also:</em> setStyle</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#style%3D%28style%3AText%3A%3AStyle%29-instance-method">#style=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6620" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6563" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1724,12 +1724,12 @@ The default style is <code><a href="../SF/Text.html">SF::Text</a>::Regular</code
 
 <ul><li><em>style</em> - New style</li></ul>
 
-<p><em>See also:</em> getStyle</p></div>
+<p><em>See also:</em> <code><a href="../SF/Text.html#style%3AUInt32-instance-method">#style</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L6522" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L6465" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -821,10 +821,10 @@ and without errors (no data corrupted, lost or duplicated).</p>
 
 <p>When a socket is connected to a remote host, you can
 retrieve informations about this host with the
-getRemoteAddress and getRemotePort functions. You can
+remote_address and remote_port functions. You can
 also get the local port to which the socket is bound
 (which is automatically chosen when the socket is connected),
-with the getLocalPort function.</p>
+with the local_port function.</p>
 
 <p>Sending and receiving data can use either the low-level
 or the high-level functions. The low-level functions
@@ -898,7 +898,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L188" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L184" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1069,7 +1069,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L191" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,12 +1098,12 @@ If the socket was previously connected, it is first disconnected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> disconnect</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#disconnect-instance-method">#disconnect</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L246" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L242" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1121,12 +1121,12 @@ If the socket was previously connected, it is first disconnected.</p>
 <p>This function gracefully closes the connection. If the
 socket is not connected, this function has no effect.</p>
 
-<p><em>See also:</em> connect</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L256" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L252" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,12 +1145,12 @@ socket is not connected, this function has no effect.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> connect, getRemotePort</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code>, <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L203" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1173,12 +1173,12 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> send</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L336" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1201,12 +1201,12 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> send</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L304" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1226,12 +1226,12 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Address of the remote peer</p>
 
-<p><em>See also:</em> getRemotePort</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L215" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L211" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1251,12 +1251,12 @@ the socket is connected</p>
 
 <p><em>Returns:</em> Remote port to which the socket is connected</p>
 
-<p><em>See also:</em> getRemoteAddress</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_address%3AIpAddress-instance-method">#remote_address</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,12 +1277,12 @@ the socket is connected</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> receive</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L287" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L283" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1307,12 +1307,12 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> receive</p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L321" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L317" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -820,7 +820,7 @@ standard rate used for playing CDs). In short, audio samples
 are like texture pixels, and a <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> is similar to
 a <code><a href="../SF/Texture.html">SF::Texture</a></code>.</p>
 
-<p>A sound buffer can be loaded from a file (see loadFromFile()
+<p>A sound buffer can be loaded from a file (see load_from_file()
 for the complete list of supported formats), from memory, from
 a custom stream (see <code><a href="../SF/InputStream.html">SF::InputStream</a></code>) or directly from an array
 of samples. It can also be saved back to a file.</p>
@@ -894,7 +894,7 @@ sound2.play();</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1284" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1270" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -949,7 +949,7 @@ sound2.play();</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_count%3AUInt32-instance-method" class="signature"><strong>#channel_count</strong> : UInt32</a>
+        <a href="#channel_count%3AInt32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of channels used by the sound</p></div>
         
@@ -1005,7 +1005,7 @@ sound2.play();</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#sample_rate%3AUInt32-instance-method" class="signature"><strong>#sample_rate</strong> : UInt32</a>
+        <a href="#sample_rate%3AInt32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
         
           <div class="summary"><p>Get the sample rate of the sound</p></div>
         
@@ -1074,7 +1074,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1312" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1298" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1094,7 +1094,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1337" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1323" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1114,7 +1114,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1388" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1374" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1134,7 +1134,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1361" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1152,7 +1152,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1287" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1273" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1162,12 +1162,12 @@ sound2.play();</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="channel_count:UInt32-instance-method">
+    <div class="entry-detail" id="channel_count:Int32-instance-method">
       <div class="signature">
         
-        def <strong>channel_count</strong> : UInt32
+        def <strong>channel_count</strong> : Int32
 
-        <a class="method-permalink" href="#channel_count%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#channel_count%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the number of channels used by the sound</p>
@@ -1177,12 +1177,12 @@ be 1, 2 for stereo, etc.</p>
 
 <p><em>Returns:</em> Number of channels</p>
 
-<p><em>See also:</em> getSampleRate, getDuration</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate%3AInt32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#duration%3ATime-instance-method">#duration</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1455" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1441" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1199,12 +1199,12 @@ be 1, 2 for stereo, etc.</p>
 
 <p><em>Returns:</em> Sound duration</p>
 
-<p><em>See also:</em> getSampleRate, getChannelCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate%3AInt32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#channel_count%3AInt32-instance-method">#channel_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1464" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1450" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1222,7 +1222,7 @@ be 1, 2 for stereo, etc.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1292" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1244,12 +1244,12 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> loadFromMemory, loadFromStream, loadFromSamples, saveToFile</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file%28filename%3AString%29%3ABool-instance-method">#save_to_file</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1305" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1291" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1271,12 +1271,12 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> loadFromFile, loadFromStream, loadFromSamples</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1330" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1316" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1298,12 +1298,12 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> loadFromFile, loadFromMemory, saveToFile</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file%28filename%3AString%29%3ABool-instance-method">#save_to_file</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1381" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1367" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,12 +1325,12 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> loadFromFile, loadFromMemory, loadFromSamples</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1354" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1340" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,27 +1345,27 @@ of supported formats.</p>
       
         <div class="doc"><p>Get the number of samples stored in the buffer</p>
 
-<p>The array of samples can be accessed with the getSamples()
+<p>The array of samples can be accessed with the samples()
 function.</p>
 
 <p><em>Returns:</em> Number of samples</p>
 
-<p><em>See also:</em> getSamples</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#samples%3A%3A%3APointer%28Int16%29-instance-method">#samples</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1430" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1416" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="sample_rate:UInt32-instance-method">
+    <div class="entry-detail" id="sample_rate:Int32-instance-method">
       <div class="signature">
         
-        def <strong>sample_rate</strong> : UInt32
+        def <strong>sample_rate</strong> : Int32
 
-        <a class="method-permalink" href="#sample_rate%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#sample_rate%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the sample rate of the sound</p>
@@ -1376,12 +1376,12 @@ samples/s is CD quality).</p>
 
 <p><em>Returns:</em> Sample rate (number of samples per second)</p>
 
-<p><em>See also:</em> getChannelCount, getDuration</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#channel_count%3AInt32-instance-method">#channel_count</a></code>, <code><a href="../SF/SoundBuffer.html#duration%3ATime-instance-method">#duration</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1443" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1429" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1398,16 +1398,16 @@ samples/s is CD quality).</p>
 
 <p>The format of the returned samples is 16 bits signed integer
 (<code>SF::Int16</code>). The total number of samples in this array
-is given by the getSampleCount() function.</p>
+is given by the sample_count() function.</p>
 
 <p><em>Returns:</em> Read-only pointer to the array of sound samples</p>
 
-<p><em>See also:</em> getSampleCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_count%3AUInt64-instance-method">#sample_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1418" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1404" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1429,12 +1429,12 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if saving succeeded, false if it failed</p>
 
-<p><em>See also:</em> loadFromFile, loadFromMemory, loadFromSamples</p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1405" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1391" target="_blank">View source</a>]
         
       </div>
     </div>

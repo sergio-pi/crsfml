@@ -833,7 +833,7 @@ so that you don't need an image first for the most common cases.
 However, if you want to perform some modifications on the pixels
 before creating the final texture, you can load your file to a
 <code><a href="../SF/Image.html">SF::Image</a></code>, do whatever you need with the pixels, and then call
-Texture::loadFromImage.</p>
+Texture::load_from_image.</p>
 
 <p>Since they live in the graphics card memory, the pixels of a texture
 cannot be accessed without a slow copy first. And they cannot be
@@ -923,7 +923,7 @@ sf::Texture::bind(NULL);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3127" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3088" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -971,7 +971,7 @@ sf::Texture::bind(NULL);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#maximum_size%3AUInt32-class-method" class="signature"><strong>.maximum_size</strong> : UInt32</a>
+        <a href="#maximum_size%3AInt32-class-method" class="signature"><strong>.maximum_size</strong> : Int32</a>
         
           <div class="summary"><p>Get the maximum texture size allowed</p></div>
         
@@ -1060,7 +1060,7 @@ sf::Texture::bind(NULL);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#native_handle%3AUInt32-instance-method" class="signature"><strong>#native_handle</strong> : UInt32</a>
+        <a href="#native_handle%3AInt32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
         
           <div class="summary"><p>Get the underlying OpenGL handle of the texture.</p></div>
         
@@ -1228,7 +1228,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3598" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3559" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1248,7 +1248,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3203" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3164" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1268,7 +1268,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3317" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1288,7 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3244" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3205" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1308,17 +1308,17 @@ to compute normalized values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3284" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3245" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="maximum_size:UInt32-class-method">
+    <div class="entry-detail" id="maximum_size:Int32-class-method">
       <div class="signature">
         
-        def self.<strong>maximum_size</strong> : UInt32
+        def self.<strong>maximum_size</strong> : Int32
 
-        <a class="method-permalink" href="#maximum_size%3AUInt32-class-method">#</a>
+        <a class="method-permalink" href="#maximum_size%3AInt32-class-method">#</a>
       </div>
       
         <div class="doc"><p>Get the maximum texture size allowed</p>
@@ -1332,7 +1332,7 @@ card, and up to 8192 pixels or more for newer hardware.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3608" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3569" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,7 +1352,7 @@ card, and up to 8192 pixels or more for newer hardware.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3163" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3124" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1372,7 +1372,7 @@ card, and up to 8192 pixels or more for newer hardware.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3140" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1399,12 +1399,12 @@ to pixels if necessary (texture may be padded or flipped).</p>
 
 <p><em>Returns:</em> Image containing the texture's pixels</p>
 
-<p><em>See also:</em> loadFromImage</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_image</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3342" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3303" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1428,7 +1428,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3156" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1444,7 +1444,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3627" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3588" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1462,7 +1462,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3145" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3106" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1499,7 +1499,7 @@ regenerate it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3555" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3516" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1527,7 +1527,7 @@ If the <em>area</em> rectangle crosses the bounds of the image, it
 is adjusted to fit the image size.</p>
 
 <p>The maximum size for a texture depends on the graphics
-driver and can be retrieved with the getMaximumSize function.</p>
+driver and can be retrieved with the maximum_size function.</p>
 
 <p>If this function fails, the texture is left unchanged.</p>
 
@@ -1535,12 +1535,12 @@ driver and can be retrieved with the getMaximumSize function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> loadFromMemory, loadFromStream, loadFromImage</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_image</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3196" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1562,7 +1562,7 @@ If the <em>area</em> rectangle crosses the bounds of the image, it
 is adjusted to fit the image size.</p>
 
 <p>The maximum size for a texture depends on the graphics
-driver and can be retrieved with the getMaximumSize function.</p>
+driver and can be retrieved with the maximum_size function.</p>
 
 <p>If this function fails, the texture is left unchanged.</p>
 
@@ -1570,12 +1570,12 @@ driver and can be retrieved with the getMaximumSize function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> loadFromFile, loadFromMemory</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_memory</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3310" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3271" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1603,7 +1603,7 @@ If the <em>area</em> rectangle crosses the bounds of the image, it
 is adjusted to fit the image size.</p>
 
 <p>The maximum size for a texture depends on the graphics
-driver and can be retrieved with the getMaximumSize function.</p>
+driver and can be retrieved with the maximum_size function.</p>
 
 <p>If this function fails, the texture is left unchanged.</p>
 
@@ -1611,12 +1611,12 @@ driver and can be retrieved with the getMaximumSize function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> loadFromFile, loadFromStream, loadFromImage</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_image</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3237" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3198" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1644,7 +1644,7 @@ If the <em>area</em> rectangle crosses the bounds of the image, it
 is adjusted to fit the image size.</p>
 
 <p>The maximum size for a texture depends on the graphics
-driver and can be retrieved with the getMaximumSize function.</p>
+driver and can be retrieved with the maximum_size function.</p>
 
 <p>If this function fails, the texture is left unchanged.</p>
 
@@ -1652,22 +1652,22 @@ driver and can be retrieved with the getMaximumSize function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> loadFromFile, loadFromMemory, loadFromImage</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3ABool-instance-method">#load_from_image</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3277" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3238" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="native_handle:UInt32-instance-method">
+    <div class="entry-detail" id="native_handle:Int32-instance-method">
       <div class="signature">
         
-        def <strong>native_handle</strong> : UInt32
+        def <strong>native_handle</strong> : Int32
 
-        <a class="method-permalink" href="#native_handle%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#native_handle%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the underlying OpenGL handle of the texture.</p>
@@ -1681,7 +1681,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3566" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3527" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1712,12 +1712,12 @@ Repeating is disabled by default.</p>
 
 <ul><li><em>repeated</em> - True to repeat the texture, false to disable repeating</li></ul>
 
-<p><em>See also:</em> isRepeated</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated%3F%3ABool-instance-method">#repeated?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3523" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3484" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1734,12 +1734,12 @@ Repeating is disabled by default.</p>
 
 <p><em>Returns:</em> True if repeat mode is enabled, false if it is disabled</p>
 
-<p><em>See also:</em> setRepeated</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated%3D%28repeated%3ABool%29-instance-method">#repeated=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3531" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3492" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1759,7 +1759,7 @@ Repeating is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3327" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3288" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1782,12 +1782,12 @@ The smooth filter is disabled by default.</p>
 
 <ul><li><em>smooth</em> - True to enable smoothing, false to disable it</li></ul>
 
-<p><em>See also:</em> isSmooth</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth%3F%3ABool-instance-method">#smooth?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3460" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3421" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1804,12 +1804,12 @@ The smooth filter is disabled by default.</p>
 
 <p><em>Returns:</em> True if smoothing is enabled, false if it is disabled</p>
 
-<p><em>See also:</em> setSmooth</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth%3D%28smooth%3ABool%29-instance-method">#smooth=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3468" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3429" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1841,12 +1841,12 @@ framebuffer. This can be requested during window creation.</p>
 
 <ul><li><em>s_rgb</em> - True to enable sRGB conversion, false to disable it</li></ul>
 
-<p><em>See also:</em> isSrgb</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb%3F%3ABool-instance-method">#srgb?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3492" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3453" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1863,12 +1863,12 @@ framebuffer. This can be requested during window creation.</p>
 
 <p><em>Returns:</em> True if the texture source is converted from sRGB, false if not</p>
 
-<p><em>See also:</em> setSrgb</p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb%3D%28s_rgb%3ABool%29-instance-method">#srgb=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3500" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3461" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1895,7 +1895,7 @@ was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3446" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3407" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1922,7 +1922,7 @@ previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3413" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3374" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1952,7 +1952,7 @@ texture was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3380" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3341" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1984,7 +1984,7 @@ was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3431" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3392" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2016,7 +2016,7 @@ previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3398" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3359" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2046,7 +2046,7 @@ texture was not previously created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L3360" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L3321" target="_blank">View source</a>]
         
       </div>
     </div>

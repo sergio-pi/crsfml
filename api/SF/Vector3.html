@@ -807,6 +807,30 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>Utility generic struct for manipulating 2-dimensional vectors</p>
+
+<p><code><a href="../SF/Vector3.html">SF::Vector3</a></code> is a simple struct that defines a mathematical
+vector with three coordinates (x, y and z). It can be used to
+represent anything that has three dimensions: a size, a point,
+a velocity, etc.</p>
+
+<p>The generic parameter T is the type of the coordinates. It
+can be any type that supports arithmetic operations (+, -, /, *)
+and comparisons (==, !=), for example <code>Int</code> or <code>Float</code>.</p>
+
+<p>You generally don't have to care about the generic form,
+the most common specialization has a special alias:</p>
+
+<ul><li><code><a href="../SF/Vector3.html">SF::Vector3</a>(Float32)</code> is <code><a href="../SF/Vector3f.html">SF::Vector3f</a></code></li></ul>
+
+<p>The <code><a href="../SF/Vector3.html">SF::Vector3</a></code> struct has a small and simple interface, its
+<code><a href="../SF/Vector3.html#x%3AT-instance-method">#x</a></code>, <code><a href="../SF/Vector3.html#y%3AT-instance-method">#y</a></code>, <code><a href="../SF/Vector3.html#z%3AT-instance-method">#z</a></code> members can be accessed directly and it contains no
+mathematical function like dot product, cross product, length, etc.</p>
+
+<p>Note: for 2-dimensional vectors, see <code><a href="../SF/Vector2.html">SF::Vector2</a></code>.</p>
+
 
 
 
@@ -830,7 +854,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L106" target="_blank">system/system.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L181" target="_blank">system/system.cr</a>
     
     <br/>
   
@@ -845,6 +869,15 @@
       <li class="entry-summary">
         <a href="#new%28x%3AT%2Cy%3AT%2Cz%3AT%29-class-method" class="signature"><strong>.new</strong>(x : T, y : T, z : T)</a>
         
+          <div class="summary"><p>Construct the vector from its coordinates.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Default constructor: equivalent to <code><a href="../SF/Vector3.html#new%28x%3AT%2Cy%3AT%2Cz%3AT%29-class-method">.new(0, 0, 0)</a></code></p></div>
+        
       </li>
     
   </ul>
@@ -855,47 +888,107 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#%2A%28n%3ANumber%29-instance-method" class="signature"><strong>#*</strong>(n : Number)</a>
+        
+          <div class="summary"><p>Memberwise multiplication by a scalar</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2B%28other%29-instance-method" class="signature"><strong>#+</strong>(other)</a>
+        
+          <div class="summary"><p>Memberwise addition of two vectors</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#-%28other%29-instance-method" class="signature"><strong>#-</strong>(other)</a>
+        
+          <div class="summary"><p>Memberwise subtraction of two vectors</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#--instance-method" class="signature"><strong>#-</strong></a>
+        
+          <div class="summary"><p>Memberwise opposite of the vector</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2F%28n%3ANumber%29-instance-method" class="signature"><strong>#/</strong>(n : Number)</a>
+        
+          <div class="summary"><p>Memberwise division by a scalar</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%3D%3D%28other%3AVector3%29-instance-method" class="signature"><strong>#==</strong>(other : Vector3)</a>
+        
+          <div class="summary"><p>Returns true if all corresponding coordinates of two vectors are equal</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#%5B%5D%28i%29-instance-method" class="signature"><strong>#[]</strong>(i)</a>
+        
+          <div class="summary"><p>Get a coordinate by its index: 0 is <code><a href="../SF/Vector3.html#x%3AT-instance-method">#x</a></code>, 1 is <code><a href="../SF/Vector3.html#y%3AT-instance-method">#y</a></code>, 2 is <code><a href="../SF/Vector3.html#z%3AT-instance-method">#z</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
         
+          <div class="summary"><p>Yields <code><a href="../SF/Vector3.html#x%3AT-instance-method">#x</a></code>, then <code><a href="../SF/Vector3.html#y%3AT-instance-method">#y</a></code>, then <code><a href="../SF/Vector3.html#z%3AT-instance-method">#z</a></code></p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
+        
+          <div class="summary"><p>Returns <code>3</code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#x%3AT-instance-method" class="signature"><strong>#x</strong> : T</a>
         
+          <div class="summary"><p>The <em>x</em> coordinate</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#x%3D%28x%3AT%29-instance-method" class="signature"><strong>#x=</strong>(x : T)</a>
+        
+          <div class="summary"><p>The <em>x</em> coordinate</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#y%3AT-instance-method" class="signature"><strong>#y</strong> : T</a>
         
+          <div class="summary"><p>The <em>y</em> coordinate</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#y%3D%28y%3AT%29-instance-method" class="signature"><strong>#y=</strong>(y : T)</a>
+        
+          <div class="summary"><p>The <em>y</em> coordinate</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#z%3AT-instance-method" class="signature"><strong>#z</strong> : T</a>
         
+          <div class="summary"><p>The <em>z</em> coordinate</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#z%3D%28z%3AT%29-instance-method" class="signature"><strong>#z=</strong>(z : T)</a>
+        
+          <div class="summary"><p>The <em>z</em> coordinate</p></div>
         
       </li>
     
@@ -948,10 +1041,30 @@
         <a class="method-permalink" href="#new%28x%3AT%2Cy%3AT%2Cz%3AT%29-class-method">#</a>
       </div>
       
+        <div class="doc"><p>Construct the vector from its coordinates.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L111" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L196" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor: equivalent to <code><a href="../SF/Vector3.html#new%28x%3AT%2Cy%3AT%2Cz%3AT%29-class-method">.new(0, 0, 0)</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L192" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -961,6 +1074,114 @@
 
   <h2>Instance Method Detail</h2>
   
+    <div class="entry-detail" id="*&#40;n:Number&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>*</strong>(n : Number)
+
+        <a class="method-permalink" href="#%2A%28n%3ANumber%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Memberwise multiplication by a scalar</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L236" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="&#43;&#40;other&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>+</strong>(other)
+
+        <a class="method-permalink" href="#%2B%28other%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Memberwise addition of two vectors</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L222" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="-&#40;other&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>-</strong>(other)
+
+        <a class="method-permalink" href="#-%28other%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Memberwise subtraction of two vectors</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="--instance-method">
+      <div class="signature">
+        
+        def <strong>-</strong>
+
+        <a class="method-permalink" href="#--instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Memberwise opposite of the vector</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="/&#40;n:Number&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>/</strong>(n : Number)
+
+        <a class="method-permalink" href="#%2F%28n%3ANumber%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Memberwise division by a scalar</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L240" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="&#61;&#61;&#40;other:Vector3&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>==</strong>(other : <a href="../SF/Vector3.html">Vector3</a>)
+
+        <a class="method-permalink" href="#%3D%3D%28other%3AVector3%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns true if all corresponding coordinates of two vectors are equal</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L244" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="&#91;&#93;&#40;i&#41;-instance-method">
       <div class="signature">
         
@@ -969,10 +1190,14 @@
         <a class="method-permalink" href="#%5B%5D%28i%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Get a coordinate by its index: 0 is <code><a href="../SF/Vector3.html#x%3AT-instance-method">#x</a></code>, 1 is <code><a href="../SF/Vector3.html#y%3AT-instance-method">#y</a></code>, 2 is <code><a href="../SF/Vector3.html#z%3AT-instance-method">#z</a></code>.</p>
+
+<p>Raises <code>IndexError</code> for other indices.</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L122" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -985,10 +1210,12 @@
         <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Yields <code><a href="../SF/Vector3.html#x%3AT-instance-method">#x</a></code>, then <code><a href="../SF/Vector3.html#y%3AT-instance-method">#y</a></code>, then <code><a href="../SF/Vector3.html#z%3AT-instance-method">#z</a></code></p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L114" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L200" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1001,10 +1228,12 @@
         <a class="method-permalink" href="#size-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Returns <code>3</code></p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1017,10 +1246,12 @@
         <a class="method-permalink" href="#x%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>x</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L185" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1033,10 +1264,12 @@
         <a class="method-permalink" href="#x%3D%28x%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>x</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L185" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1049,10 +1282,12 @@
         <a class="method-permalink" href="#y%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>y</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1065,10 +1300,12 @@
         <a class="method-permalink" href="#y%3D%28y%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>y</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L187" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1081,10 +1318,12 @@
         <a class="method-permalink" href="#z%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>z</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1097,10 +1336,12 @@
         <a class="method-permalink" href="#z%3D%28z%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>The <em>z</em> coordinate</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L109" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>

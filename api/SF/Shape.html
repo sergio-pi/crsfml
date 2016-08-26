@@ -829,7 +829,7 @@ shape classes, a shape always has the following attributes:</p>
 <p>You can write your own derived shape class, there are only
 two virtual functions to override:</p>
 
-<ul><li>getPointCount must return the number of points of the shape</li><li>getPoint must return the points of the shape</li></ul>
+<ul><li>point_count must return the number of points of the shape</li><li>point must return the points of the shape</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/RectangleShape.html">SF::RectangleShape</a></code>, <code><a href="../SF/CircleShape.html">SF::CircleShape</a></code>, <code><a href="../SF/ConvexShape.html">SF::ConvexShape</a></code>, <code><a href="../SF/Transformable.html">SF::Transformable</a></code></p>
 
@@ -867,12 +867,12 @@ two virtual functions to override:</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1802" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1774" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L132" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L236" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -990,7 +990,7 @@ two virtual functions to override:</p>
       <li class="entry-summary">
         <a href="#texture%3D%28texture%3ATexture%29-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture)</a>
         
-          <div class="summary"><p>Alias of <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method">#set_texture</a></code></p></div>
+          <div class="summary"><p>Shorthand for <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method">#set_texture</a></code></p></div>
         
       </li>
     
@@ -1176,7 +1176,7 @@ two virtual functions to override:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1986" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1958" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1197,7 +1197,7 @@ two virtual functions to override:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2121" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2093" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1214,12 +1214,12 @@ two virtual functions to override:</p>
 
 <p><em>Returns:</em> Fill color of the shape</p>
 
-<p><em>See also:</em> setFillColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1907" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1879" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,12 +1243,12 @@ By default, the shape's fill color is opaque white.</p>
 
 <ul><li><em>color</em> - New color of the shape</li></ul>
 
-<p><em>See also:</em> getFillColor, setOutlineColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color%3AColor-instance-method">#fill_color</a></code>, <code><a href="../SF/Shape.html#outline_color%3D%28color%3AColor%29-instance-method">#outline_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1854" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1826" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,7 +1266,7 @@ By default, the shape's fill color is opaque white.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1805" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1777" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1286,16 +1286,16 @@ the shape's transforms (position, rotation, scale) are
 not taken into account.
 The result is undefined if <em>index</em> is out of the valid range.</p>
 
-<ul><li><em>index</em> - Index of the point to get, in range [0 .. getPointCount() - 1]</li></ul>
+<ul><li><em>index</em> - Index of the point to get, in range [0 .. point_count() - 1]</li></ul>
 
 <p><em>Returns:</em> index-th point of the shape</p>
 
-<p><em>See also:</em> getPointCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#point_count%3ALibC%3A%3ASizeT-instance-method">#point_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1949" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1921" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1328,7 +1328,7 @@ on top of that.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1980" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1952" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1354,7 +1354,7 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1959" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1931" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,12 +1371,12 @@ entity in the entity's coordinate system.</p>
 
 <p><em>Returns:</em> Outline color of the shape</p>
 
-<p><em>See also:</em> setOutlineColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color%3D%28color%3AColor%29-instance-method">#outline_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1917" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1889" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1395,12 +1395,12 @@ entity in the entity's coordinate system.</p>
 
 <ul><li><em>color</em> - New outline color of the shape</li></ul>
 
-<p><em>See also:</em> getOutlineColor, setFillColor</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color%3AColor-instance-method">#outline_color</a></code>, <code><a href="../SF/Shape.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1864" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1836" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1417,12 +1417,12 @@ entity in the entity's coordinate system.</p>
 
 <p><em>Returns:</em> Outline thickness of the shape</p>
 
-<p><em>See also:</em> setOutlineThickness</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness%3D%28thickness%3ANumber%29-instance-method">#outline_thickness=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1927" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1899" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1444,12 +1444,12 @@ By default, the outline thickness is 0.</p>
 
 <ul><li><em>thickness</em> - New outline thickness</li></ul>
 
-<p><em>See also:</em> getOutlineThickness</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness%3AFloat32-instance-method">#outline_thickness</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1877" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1849" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1466,12 +1466,12 @@ By default, the outline thickness is 0.</p>
 
 <p><em>Returns:</em> Number of points of the shape</p>
 
-<p><em>See also:</em> getPoint</p></div>
+<p><em>See also:</em> <code>point</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1936" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1908" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1499,12 +1499,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
 
 <ul><li><em>texture</em> -   New texture</li><li><em>reset_rect</em> - Should the texture rect be reset to the size of the new texture?</li></ul>
 
-<p><em>See also:</em> getTexture, setTextureRect</p></div>
+<p><em>See also:</em> <code>texture</code>, <code><a href="../SF/Shape.html#texture_rect%3D%28rect%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1825" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1797" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1517,12 +1517,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
         <a class="method-permalink" href="#texture%3D%28texture%3ATexture%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Alias of <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method">#set_texture</a></code></p></div>
+        <div class="doc"><p>Shorthand for <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method">#set_texture</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L134" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L238" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1539,12 +1539,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
 
 <p><em>Returns:</em> Texture rectangle of the shape</p>
 
-<p><em>See also:</em> setTextureRect</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect%3D%28rect%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1897" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1869" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1565,12 +1565,12 @@ By default, the texture rect covers the entire texture.</p>
 
 <ul><li><em>rect</em> - Rectangle defining the region of the texture to display</li></ul>
 
-<p><em>See also:</em> getTextureRect, setTexture</p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect%3AIntRect-instance-method">#texture_rect</a></code>, <code><a href="../SF/Shape.html#texture%3D%28texture%3ATexture%29-instance-method">#texture=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1839" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1811" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1587,12 +1587,12 @@ By default, the texture rect covers the entire texture.</p>
 
 <p>This function must be called by the derived class everytime
 the shape's points change (i.e. the result of either
-getPointCount or getPoint is different).</p></div>
+point_count or point is different).</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L1997" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1969" target="_blank">View source</a>]
         
       </div>
     </div>

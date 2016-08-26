@@ -889,7 +889,7 @@ custom transformations to the data before it is sent,
 and after it is received. This is typically used to
 handle automatic compression or encryption of the data.
 This is achieved by inheriting from <code><a href="../SF/Packet.html">SF::Packet</a></code>, and overriding
-the onSend and onReceive functions.</p>
+the on_send and on_receive functions.</p>
 
 <p>Here is an example:</p>
 
@@ -935,7 +935,7 @@ packet &lt;&lt; x &lt;&lt; s &lt;&lt; d;
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1675" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1663" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1181,7 +1181,7 @@ packet &lt;&lt; x &lt;&lt; s &lt;&lt; d;
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1680" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1668" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1203,12 +1203,12 @@ packet &lt;&lt; x &lt;&lt; s &lt;&lt; d;
 
 <ul><li><em>data</em> -        Pointer to the sequence of bytes to append</li><li><em>size_in_bytes</em> - Number of bytes to append</li></ul>
 
-<p><em>See also:</em> clear</p></div>
+<p><em>See also:</em> <code><a href="../SF/Packet.html#clear-instance-method">#clear</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1694" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1682" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1225,12 +1225,12 @@ packet &lt;&lt; x &lt;&lt; s &lt;&lt; d;
 
 <p>After calling Clear, the packet is empty.</p>
 
-<p><em>See also:</em> append</p></div>
+<p><em>See also:</em> <code><a href="../SF/Packet.html#append%28data%3ASlice%29-instance-method">#append</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1702" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1690" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,12 +1252,12 @@ The return pointer is NULL if the packet is empty.</p>
 
 <p><em>Returns:</em> Pointer to the data</p>
 
-<p><em>See also:</em> getDataSize</p></div>
+<p><em>See also:</em> <code><a href="../SF/Packet.html#data_size%3ALibC%3A%3ASizeT-instance-method">#data_size</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1715" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1703" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1273,16 +1273,16 @@ The return pointer is NULL if the packet is empty.</p>
         <div class="doc"><p>Get the size of the data contained in the packet</p>
 
 <p>This function returns the number of bytes pointed to by
-what getData returns.</p>
+what data returns.</p>
 
 <p><em>Returns:</em> Data size, in bytes</p>
 
-<p><em>See also:</em> getData</p></div>
+<p><em>See also:</em> <code><a href="../SF/Packet.html#data%3A%3A%3APointer%28Void%29-instance-method">#data</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1727" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1715" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1298,7 +1298,7 @@ what getData returns.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1895" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1883" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1319,12 +1319,12 @@ left to be read, without actually reading it.</p>
 
 <p><em>Returns:</em> True if all data was read, false otherwise</p>
 
-<p><em>See also:</em> operator bool</p></div>
+<p><em>See also:</em> <code>operator</code> <code>bool</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1740" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1728" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1342,7 +1342,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1685" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1673" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1358,7 +1358,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1816" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1804" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1374,7 +1374,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1812" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1800" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1390,7 +1390,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1808" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1796" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1406,7 +1406,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1828" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1816" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,7 +1422,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1824" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1812" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,7 +1438,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1820" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1808" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1454,7 +1454,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1792" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1780" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,7 +1470,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1788" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1776" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1488,7 +1488,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1784" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1772" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1504,7 +1504,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1804" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1792" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1520,7 +1520,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1800" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1788" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1536,7 +1536,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1796" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1784" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1582,12 +1582,12 @@ pointer types.</p>
 
 <p><em>Returns:</em> True if last data extraction from packet was successful</p>
 
-<p><em>See also:</em> endOfPacket</p></div>
+<p><em>See also:</em> <code><a href="../SF/Packet.html#end_of_packet%3ABool-instance-method">#end_of_packet</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1779" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1767" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1603,7 +1603,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1865" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1853" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1619,7 +1619,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1861" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1849" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1635,7 +1635,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1869" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1857" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1651,7 +1651,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1877" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1865" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1667,7 +1667,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1873" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1861" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1683,7 +1683,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1857" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1845" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1699,7 +1699,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1841" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1829" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1715,7 +1715,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1837" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1825" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1733,7 +1733,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1833" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1821" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1749,7 +1749,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1853" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1841" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1765,7 +1765,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1849" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1837" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1781,7 +1781,7 @@ pointer types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1845" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1833" target="_blank">View source</a>]
         
       </div>
     </div>

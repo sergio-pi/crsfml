@@ -807,6 +807,54 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>Utility struct for manipulating 2D axis aligned rectangles</p>
+
+<p>A rectangle is defined by its top-left corner and its size.
+It is a very simple struct defined for convenience, so
+its member variables (<code><a href="../SF/Rect.html#left%3AT-instance-method">#left</a></code>, <code><a href="../SF/Rect.html#top%3AT-instance-method">#top</a></code>, <code><a href="../SF/Rect.html#width%3AT-instance-method">#width</a></code> and <code><a href="../SF/Rect.html#height%3AT-instance-method">#height</a></code>)
+can be accessed directly, just like the vector classes
+(<code><a href="../SF/Vector2.html">Vector2</a></code> and <code><a href="../SF/Vector3.html">Vector3</a></code>).</p>
+
+<p>To keep things simple, <code><a href="../SF/Rect.html">SF::Rect</a></code> doesn't define
+functions to emulate the properties that are not directly
+members (such as right, bottom, center, etc.), it rather
+only provides intersection functions.</p>
+
+<p><code><a href="../SF/Rect.html">SF::Rect</a></code> uses the usual rules for its boundaries:</p>
+
+<ul><li>The left and top edges are included in the rectangle's area</li><li>The right (left + width) and bottom (top + height) edges are excluded from the rectangle's area</li></ul>
+
+<p>This means that <code>SF::IntRect.new(0, 0, 1, 1)</code> and
+<code>SF::IntRect.new(1, 1, 1, 1)</code> don't intersect.</p>
+
+<p><code><a href="../SF/Rect.html">SF::Rect</a></code> is a generic and may be used with any numeric type, but
+for simplicity the instantiations used by SFML are aliased:</p>
+
+<ul><li><code><a href="../SF/Rect.html">SF::Rect</a>(Int32)</code> is <code><a href="../SF/IntRect.html">SF::IntRect</a></code></li><li><code><a href="../SF/Rect.html">SF::Rect</a>(Float32)</code> is <code><a href="../SF/FloatRect.html">SF::FloatRect</a></code></li></ul>
+
+<p>So that you don't have to care about the template syntax.</p>
+
+<p>See also: <code><a href="../SF.html#int_rect%28left%3AInt%2Ctop%3AInt%2Cwidth%3AInt%2Cheight%3AInt%29-instance-method">SF.int_rect</a></code>, <code><a href="../SF.html#float_rect%28left%3ANumber%2Ctop%3ANumber%2Cwidth%3ANumber%2Cheight%3ANumber%29-instance-method">SF.float_rect</a></code>.</p>
+
+<p>Usage example:</p>
+
+<pre><code><span class="c"># Define a rectangle, located at &#40;0, 0&#41; with a size of 20x5</span>
+r1 <span class="o">=</span> <span class="t">SF</span>.int_rect(<span class="n">0</span>, <span class="n">0</span>, <span class="n">20</span>, <span class="n">5</span>)
+
+<span class="c"># Define another rectangle, located at &#40;4, 2&#41; with a size of 18x10</span>
+position <span class="o">=</span> <span class="t">SF</span>.vector2i(<span class="n">4</span>, <span class="n">2</span>)
+size <span class="o">=</span> <span class="t">SF</span>.vector2i(<span class="n">18</span>, <span class="n">10</span>)
+r2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IntRect</span>.<span class="k">new</span>(position, size)
+
+<span class="c"># Test intersections with the point &#40;3, 1&#41;</span>
+r1.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#&#61;&gt; true</span>
+r2.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#&#61;&gt; false</span>
+
+<span class="c"># Test the intersection between r1 and r2</span>
+r1.intersects?(r2) <span class="c">#&#61;&gt; &#40;4, 2, 16, 3&#41;</span></code></pre>
+
 
 
 
@@ -823,7 +871,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L2" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L48" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -838,15 +886,21 @@
       <li class="entry-summary">
         <a href="#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method" class="signature"><strong>.new</strong>(left : T, top : T, width : T, height : T)</a>
         
+          <div class="summary"><p>Construct the rectangle from its coordinates</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#new%28position%3ASF%3A%3AVector2%28T%29%2Csize%3ASF%3A%3AVector2%28T%29%29-class-method" class="signature"><strong>.new</strong>(position : SF::Vector2(T), size : SF::Vector2(T))</a>
         
+          <div class="summary"><p>Construct the rectangle from position and size</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Default constructor: equivalent to <code><a href="../SF/Rect.html#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method">.new(0, 0, 0, 0)</a></code></p></div>
         
       </li>
     
@@ -858,57 +912,86 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#contains%3F%28x%3ANumber%2Cy%3ANumber%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(x : Number, y : Number) : Bool</a>
+        <a href="#%3D%3D%28other%3Aself%29%3ABool-instance-method" class="signature"><strong>#==</strong>(other : self) : Bool</a>
+        
+          <div class="summary"><p>Returns true if all corresponding coordinates of two rects are equal</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#contains%3F%28point%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(point) : Bool</a>
+        <a href="#contains%3F%28x%3ANumber%2Cy%3ANumber%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(x : Number, y : Number) : Bool</a>
+        
+          <div class="summary"><p>Returns true if a point is inside the rectangle's area</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contains%3F%28point%3AVector2%7CTuple%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(point : Vector2 | Tuple) : Bool</a>
+        
+          <div class="summary"><p>Returns true if a point is inside the rectangle's area</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#height%3AT-instance-method" class="signature"><strong>#height</strong> : T</a>
         
+          <div class="summary"><p>Height of the rectangle</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#height%3D%28height%3AT%29-instance-method" class="signature"><strong>#height=</strong>(height : T)</a>
         
+          <div class="summary"><p>Height of the rectangle</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#intersects%3F%28other%3ARect%29%3ARect%7CNil-instance-method" class="signature"><strong>#intersects?</strong>(other : Rect) : Rect | Nil</a>
+        <a href="#intersects%3F%28other%3ASF%3A%3ARect%28T%29%29%3ASF%3A%3ARect%28T%29%7CNil-instance-method" class="signature"><strong>#intersects?</strong>(other : SF::Rect(T)) : SF::Rect(T) | Nil</a>
+        
+          <div class="summary"><p>Check the intersection between two rectangles</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#left%3AT-instance-method" class="signature"><strong>#left</strong> : T</a>
         
+          <div class="summary"><p>Left coordinate of the rectangle</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#left%3D%28left%3AT%29-instance-method" class="signature"><strong>#left=</strong>(left : T)</a>
+        
+          <div class="summary"><p>Left coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#top%3AT-instance-method" class="signature"><strong>#top</strong> : T</a>
         
+          <div class="summary"><p>Top coordinate of the rectangle</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#top%3D%28top%3AT%29-instance-method" class="signature"><strong>#top=</strong>(top : T)</a>
+        
+          <div class="summary"><p>Top coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#width%3AT-instance-method" class="signature"><strong>#width</strong> : T</a>
         
+          <div class="summary"><p>Width of the rectangle</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#width%3D%28width%3AT%29-instance-method" class="signature"><strong>#width=</strong>(width : T)</a>
+        
+          <div class="summary"><p>Width of the rectangle</p></div>
         
       </li>
     
@@ -954,10 +1037,15 @@
         <a class="method-permalink" href="#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method">#</a>
       </div>
       
+        <div class="doc"><p>Construct the rectangle from its coordinates</p>
+
+<p>Be careful, the last two parameters are the width
+and height, not the right and bottom coordinates!</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -970,10 +1058,15 @@
         <a class="method-permalink" href="#new%28position%3ASF%3A%3AVector2%28T%29%2Csize%3ASF%3A%3AVector2%28T%29%29-class-method">#</a>
       </div>
       
+        <div class="doc"><p>Construct the rectangle from position and size</p>
+
+<p>Be careful, the last parameter is the size,
+not the bottom-right corner!</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -986,10 +1079,12 @@
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
+        <div class="doc"><p>Default constructor: equivalent to <code><a href="../SF/Rect.html#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method">.new(0, 0, 0, 0)</a></code></p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -999,6 +1094,24 @@
 
   <h2>Instance Method Detail</h2>
   
+    <div class="entry-detail" id="&#61;&#61;&#40;other:self&#41;:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>==</strong>(other : self) : Bool
+
+        <a class="method-permalink" href="#%3D%3D%28other%3Aself%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns true if all corresponding coordinates of two rects are equal</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L103" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="contains?&#40;x:Number,y:Number&#41;:Bool-instance-method">
       <div class="signature">
         
@@ -1007,26 +1120,30 @@
         <a class="method-permalink" href="#contains%3F%28x%3ANumber%2Cy%3ANumber%29%3ABool-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L15" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="contains?&#40;point&#41;:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>contains?</strong>(point) : Bool
-
-        <a class="method-permalink" href="#contains%3F%28point%29%3ABool-instance-method">#</a>
-      </div>
+        <div class="doc"><p>Returns true if a point is inside the rectangle's area</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contains?&#40;point:Vector2|Tuple&#41;:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>contains?</strong>(point : <a href="../SF/Vector2.html">Vector2</a> | Tuple) : Bool
+
+        <a class="method-permalink" href="#contains%3F%28point%3AVector2%7CTuple%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns true if a point is inside the rectangle's area</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1039,10 +1156,12 @@
         <a class="method-permalink" href="#height%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Height of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1055,26 +1174,32 @@
         <a class="method-permalink" href="#height%3D%28height%3AT%29-instance-method">#</a>
       </div>
       
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="intersects?&#40;other:Rect&#41;:Rect|Nil-instance-method">
-      <div class="signature">
-        
-        def <strong>intersects?</strong>(other : <a href="../SF/Rect.html">Rect</a>) : <a href="../SF/Rect.html">Rect</a> | Nil
-
-        <a class="method-permalink" href="#intersects%3F%28other%3ARect%29%3ARect%7CNil-instance-method">#</a>
-      </div>
+        <div class="doc"><p>Height of the rectangle</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="intersects?&#40;other:SF::Rect&#40;T&#41;&#41;:SF::Rect&#40;T&#41;|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>intersects?</strong>(other : <a href="../SF/Rect.html">SF::Rect</a>(T)) : <a href="../SF/Rect.html">SF::Rect</a>(T) | Nil
+
+        <a class="method-permalink" href="#intersects%3F%28other%3ASF%3A%3ARect%28T%29%29%3ASF%3A%3ARect%28T%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Check the intersection between two rectangles</p>
+
+<p>Returns the overlapped rectangle or nil if there is no overlap.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1087,10 +1212,12 @@
         <a class="method-permalink" href="#left%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Left coordinate of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1103,10 +1230,12 @@
         <a class="method-permalink" href="#left%3D%28left%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Left coordinate of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,10 +1248,12 @@
         <a class="method-permalink" href="#top%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Top coordinate of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1135,10 +1266,12 @@
         <a class="method-permalink" href="#top%3D%28top%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Top coordinate of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1151,10 +1284,12 @@
         <a class="method-permalink" href="#width%3AT-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Width of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1167,10 +1302,12 @@
         <a class="method-permalink" href="#width%3D%28width%3AT%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Width of the rectangle</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>

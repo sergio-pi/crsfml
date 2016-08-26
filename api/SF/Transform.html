@@ -860,12 +860,12 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L279" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L273" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L121" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L224" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -880,6 +880,10 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       <dt class="entry-const" id="Identity">
         <strong>Identity</strong> = <code><span class="k">new</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The identity transform (does nothing)</p>
+      </dd>
       
     
   </dl>
@@ -1083,7 +1087,7 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L299" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L293" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1103,7 +1107,7 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L284" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1123,7 +1127,7 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       
         <div class="doc"><p>Overload of binary operator * to transform a point</p>
 
-<p>This call is equivalent to calling left.transformPoint(right).</p>
+<p>This call is equivalent to calling left.transform_point(right).</p>
 
 <ul><li><em>left</em> - Left operand (the transform)</li><li><em>right</em> - Right operand (the point to transform)</li></ul>
 
@@ -1132,7 +1136,7 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L611" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L603" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1156,7 +1160,7 @@ sf::FloatRect rect = transform.transformRect(sf::FloatRect(0, 0, 10, 100));</cod
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L597" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L590" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,7 +1186,7 @@ equivalent to a matrix multiplication.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L377" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L371" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,7 +1202,7 @@ equivalent to a matrix multiplication.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L627" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L619" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1221,7 +1225,7 @@ is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L325" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L319" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1248,7 +1252,7 @@ glLoadMatrixf(transform.getMatrix());</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L315" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L309" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1278,12 +1282,12 @@ transform.rotate(90, sf::Vector2f(8, 3)).translate(sf::Vector2f(50, 20));</code>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, scale</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29%3ATransform-instance-method">#scale</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L487" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L481" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1308,12 +1312,12 @@ transform.rotate(90).translate(50, 20);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, scale</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29%3ATransform-instance-method">#scale</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L436" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L430" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1343,12 +1347,12 @@ transform.rotate(90, 8, 3).translate(50, 20);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, scale</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29%3ATransform-instance-method">#scale</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L462" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L456" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1373,12 +1377,12 @@ transform.scale(2, 1).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, rotate</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L508" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L502" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1408,12 +1412,12 @@ transform.scale(sf::Vector2f(2, 1), sf::Vector2f(8, 3)).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, rotate</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L580" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L574" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,12 +1442,12 @@ transform.scale(sf::Vector2f(2, 1)).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, rotate</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L554" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L548" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1473,12 +1477,12 @@ transform.scale(2, 1, 8, 3).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> translate, rotate</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#translate%28x%3ANumber%2Cy%3ANumber%29%3ATransform-instance-method">#translate</a></code>, <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L535" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L529" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1500,7 +1504,7 @@ transform.scale(2, 1, 8, 3).rotate(45);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L346" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L340" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1522,7 +1526,7 @@ transform.scale(2, 1, 8, 3).rotate(45);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L336" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L330" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1550,7 +1554,7 @@ is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L363" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L357" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1575,12 +1579,12 @@ transform.translate(100, 200).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> rotate, scale</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code>, <code><a href="../SF/Transform.html#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29%3ATransform-instance-method">#scale</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L397" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L391" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1605,12 +1609,12 @@ transform.translate(sf::Vector2f(100, 200)).rotate(45);</code></pre>
 
 <p><em>Returns:</em> Reference to *this</p>
 
-<p><em>See also:</em> rotate, scale</p></div>
+<p><em>See also:</em> <code><a href="../SF/Transform.html#rotate%28angle%3ANumber%2Ccenter%3AVector2%7CTuple%29%3ATransform-instance-method">#rotate</a></code>, <code><a href="../SF/Transform.html#scale%28scale_x%3ANumber%2Cscale_y%3ANumber%29%3ATransform-instance-method">#scale</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L416" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L410" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -851,12 +851,12 @@ window.draw(polygon);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2424" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2392" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L93" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L180" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -885,10 +885,14 @@ window.draw(polygon);</code></pre>
       <li class="entry-summary">
         <a href="#%5B%5D%28index%29-instance-method" class="signature"><strong>#[]</strong>(index)</a>
         
+          <div class="summary"><p>Shorthand for <code><a href="../SF/ConvexShape.html#get_point%28index%3AInt%29%3AVector2f-instance-method">#get_point</a></code></p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#%5B%5D%3D%28index%2Cpoint%29-instance-method" class="signature"><strong>#[]=</strong>(index, point)</a>
+        
+          <div class="summary"><p>Shorthand for <code><a href="../SF/ConvexShape.html#set_point%28index%3AInt%2Cpoint%3AVector2%7CTuple%29-instance-method">#set_point</a></code></p></div>
         
       </li>
     
@@ -922,11 +926,6 @@ window.draw(polygon);</code></pre>
         <a href="#set_point%28index%3AInt%2Cpoint%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#set_point</strong>(index : Int, point : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Set the position of a point</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#texture%3D%28texture%3ATexture%29-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture)</a>
         
       </li>
     
@@ -1198,7 +1197,7 @@ window.draw(polygon);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2429" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2397" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1216,10 +1215,12 @@ window.draw(polygon);</code></pre>
         <a class="method-permalink" href="#%5B%5D%28index%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Shorthand for <code><a href="../SF/ConvexShape.html#get_point%28index%3AInt%29%3AVector2f-instance-method">#get_point</a></code></p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L94" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L182" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1232,10 +1233,12 @@ window.draw(polygon);</code></pre>
         <a class="method-permalink" href="#%5B%5D%3D%28index%2Cpoint%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Shorthand for <code><a href="../SF/ConvexShape.html#set_point%28index%3AInt%2Cpoint%3AVector2%7CTuple%29-instance-method">#set_point</a></code></p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1251,7 +1254,7 @@ window.draw(polygon);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2664" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2632" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1271,16 +1274,16 @@ the shape's transforms (position, rotation, scale) are
 not taken into account.
 The result is undefined if <em>index</em> is out of the valid range.</p>
 
-<ul><li><em>index</em> - Index of the point to get, in range [0 .. getPointCount() - 1]</li></ul>
+<ul><li><em>index</em> - Index of the point to get, in range [0 .. point_count() - 1]</li></ul>
 
 <p><em>Returns:</em> Position of the index-th point of the polygon</p>
 
-<p><em>See also:</em> setPoint</p></div>
+<p><em>See also:</em> <code>point=</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2482" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2450" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,12 +1300,12 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <p><em>Returns:</em> Number of points of the polygon</p>
 
-<p><em>See also:</em> setPointCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/ConvexShape.html#point_count%3D%28count%3AInt%29-instance-method">#point_count=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2450" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2418" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1321,12 +1324,12 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <ul><li><em>count</em> - New number of points of the polygon</li></ul>
 
-<p><em>See also:</em> getPointCount</p></div>
+<p><em>See also:</em> <code><a href="../SF/ConvexShape.html#point_count%3ALibC%3A%3ASizeT-instance-method">#point_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2442" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2410" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1343,34 +1346,18 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <p>Don't forget that the polygon must remain convex, and
 the points need to stay ordered!
-setPointCount must be called first in order to set the total
+point_count= must be called first in order to set the total
 number of points. The result is undefined if <em>index</em> is out
 of the valid range.</p>
 
-<ul><li><em>index</em> - Index of the point to change, in range [0 .. getPointCount() - 1]</li><li><em>point</em> - New position of the point</li></ul>
+<ul><li><em>index</em> - Index of the point to change, in range [0 .. point_count() - 1]</li><li><em>point</em> - New position of the point</li></ul>
 
-<p><em>See also:</em> getPoint</p></div>
+<p><em>See also:</em> <code>point</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L2466" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="texture&#61;&#40;texture:Texture&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>texture=</strong>(texture : <a href="../SF/Texture.html">Texture</a>)
-
-        <a class="method-permalink" href="#texture%3D%28texture%3ATexture%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2434" target="_blank">View source</a>]
         
       </div>
     </div>

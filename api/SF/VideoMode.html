@@ -823,13 +823,13 @@ creation will just fail.</p>
 
 <p><code><a href="../SF/VideoMode.html">SF::VideoMode</a></code> provides a static function for retrieving
 the list of all the video modes supported by the system:
-getFullscreenModes().</p>
+fullscreen_modes().</p>
 
 <p>A custom video mode can also be checked directly for
-fullscreen compatibility with its isValid() function.</p>
+fullscreen compatibility with its valid?() function.</p>
 
 <p>Additionally, <code><a href="../SF/VideoMode.html">SF::VideoMode</a></code> provides a static function
-to get the mode currently used by the desktop: getDesktopMode().
+to get the mode currently used by the desktop: desktop_mode().
 This allows to build windows with the same size or pixel
 depth as the current resolution.</p>
 
@@ -865,7 +865,7 @@ window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</c
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1816" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1796" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -1051,7 +1051,7 @@ window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</c
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1843" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1823" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,7 +1079,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1859" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1839" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1099,7 +1099,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1834" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1814" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,7 +1119,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1823" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1803" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1146,7 +1146,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1916" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1894" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1168,7 +1168,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1927" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1904" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1190,7 +1190,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1949" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1924" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,7 +1212,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1905" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1884" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,7 +1234,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1938" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1914" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1256,7 +1256,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1960" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1934" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1274,7 +1274,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1892" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1872" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1290,7 +1290,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1895" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1875" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,7 +1306,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1976" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1950" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1324,7 +1324,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1884" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1864" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,7 +1340,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1887" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1867" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,7 +1364,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1870" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1850" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,7 +1382,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1876" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1856" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1398,7 +1398,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L1879" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1859" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -889,12 +889,12 @@ and regular SFML drawing commands. If you need a depth buffer for
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4847" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4798" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L115" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L217" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -945,11 +945,6 @@ and regular SFML drawing commands. If you need a depth buffer for
         <a href="#display-instance-method" class="signature"><strong>#display</strong></a>
         
           <div class="summary"><p>Update the contents of the target texture</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#draw</strong>(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</a>
         
       </li>
     
@@ -1032,8 +1027,8 @@ and regular SFML drawing commands. If you need a depth buffer for
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="tooltip">
-      <span>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
+    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="tooltip">
+      <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
   
@@ -1129,7 +1124,7 @@ and regular SFML drawing commands. If you need a depth buffer for
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4885" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4836" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1147,12 +1142,12 @@ and regular SFML drawing commands. If you need a depth buffer for
 <p>Constructs an empty, invalid render-texture. You must
 call create to have a valid render-texture.</p>
 
-<p><em>See also:</em> create</p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3ABool-instance-method">#create</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4855" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4806" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1186,7 +1181,7 @@ want to draw OpenGL geometry to another render target
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4959" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4910" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1216,7 +1211,7 @@ leave this parameter to false (which is its default value).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4878" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4829" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1239,23 +1234,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4969" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="draw&#40;drawable:Drawable,states:RenderStates&#61;&lt;spanclass&#61;&quot;t&quot;&gt;RenderStates&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Default&lt;/span&gt;&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>draw</strong>(drawable : <a href="../SF/Drawable.html">Drawable</a>, states : <a href="../SF/RenderStates.html">RenderStates</a> = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
-
-        <a class="method-permalink" href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/graphics.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4920" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1273,7 +1252,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4860" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4811" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1267,7 @@ it may leave the texture in an undefined state.</p></div>
       
         <div class="doc"><p>Generate a mipmap using the current texture data</p>
 
-<p>This function is similar to Texture::generateMipmap and operates
+<p>This function is similar to Texture::generate_mipmap and operates
 on the texture used as the target for drawing.
 Be aware that any draw operation may modify the base level image data.
 For this reason, calling this function only makes sense after all
@@ -1301,7 +1280,7 @@ had been previously generated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4943" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4894" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,17 +1295,17 @@ had been previously generated.</p>
       
         <div class="doc"><p>Enable or disable texture repeating</p>
 
-<p>This function is similar to Texture::setRepeated.
+<p>This function is similar to Texture::repeated=.
 This parameter is disabled by default.</p>
 
 <ul><li><em>repeated</em> - True to enable repeating, false to disable it</li></ul>
 
-<p><em>See also:</em> isRepeated</p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#repeated%3F%3ABool-instance-method">#repeated?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4920" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4871" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1343,12 +1322,12 @@ This parameter is disabled by default.</p>
 
 <p><em>Returns:</em> True if texture is repeated</p>
 
-<p><em>See also:</em> setRepeated</p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#repeated%3D%28repeated%3ABool%29-instance-method">#repeated=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4928" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4879" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,7 +1350,7 @@ the create function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4978" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4929" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,17 +1365,17 @@ the create function.</p>
       
         <div class="doc"><p>Enable or disable texture smoothing</p>
 
-<p>This function is similar to Texture::setSmooth.
+<p>This function is similar to Texture::smooth=.
 This parameter is disabled by default.</p>
 
 <ul><li><em>smooth</em> - True to enable smoothing, false to disable it</li></ul>
 
-<p><em>See also:</em> isSmooth</p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#smooth%3F%3ABool-instance-method">#smooth?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4900" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4851" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1413,12 +1392,12 @@ This parameter is disabled by default.</p>
 
 <p><em>Returns:</em> True if texture smoothing is enabled</p>
 
-<p><em>See also:</em> setSmooth</p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#smooth%3D%28smooth%3ABool%29-instance-method">#smooth=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4908" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4859" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1446,7 +1425,7 @@ modified.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/graphics/obj.cr#L4994" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4945" target="_blank">View source</a>]
         
       </div>
     </div>

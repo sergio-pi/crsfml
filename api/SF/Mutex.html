@@ -881,12 +881,12 @@ called lock(). If you don't, the mutex won't be released.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L150" target="_blank">system/system.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L274" target="_blank">system/system.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/obj.cr#L803" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L771" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -928,6 +928,8 @@ called lock(). If you don't, the mutex won't be released.</p>
     
       <li class="entry-summary">
         <a href="#synchronize%28%26block%29-instance-method" class="signature"><strong>#synchronize</strong>(&block)</a>
+        
+          <div class="summary"><p>Lock the mutex, execute the block, then unlock the mutex (even if an exception is raised).</p></div>
         
       </li>
     
@@ -985,7 +987,7 @@ called lock(). If you don't, the mutex won't be released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/obj.cr#L806" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L774" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1008,7 +1010,7 @@ called lock(). If you don't, the mutex won't be released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/obj.cr#L811" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L779" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1027,12 +1029,12 @@ called lock(). If you don't, the mutex won't be released.</p>
 this call will block the execution until the mutex
 is released.</p>
 
-<p><em>See also:</em> unlock</p></div>
+<p><em>See also:</em> <code><a href="../SF/Mutex.html#unlock-instance-method">#unlock</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/obj.cr#L821" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L789" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1045,10 +1047,13 @@ is released.</p>
         <a class="method-permalink" href="#synchronize%28%26block%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Lock the mutex, execute the block, then unlock the mutex
+(even if an exception is raised).</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/system.cr#L151" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L277" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1063,12 +1068,12 @@ is released.</p>
       
         <div class="doc"><p>Unlock the mutex</p>
 
-<p><em>See also:</em> lock</p></div>
+<p><em>See also:</em> <code><a href="../SF/Mutex.html#lock-instance-method">#lock</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/system/obj.cr#L827" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L795" target="_blank">View source</a>]
         
       </div>
     </div>

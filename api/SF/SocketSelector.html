@@ -913,7 +913,7 @@ while (running)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1991" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1977" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1026,7 +1026,7 @@ while (running)
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1994" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1980" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1053,12 +1053,12 @@ This function does nothing if the socket is not valid.</p>
 
 <ul><li><em>socket</em> - Reference to the socket to add</li></ul>
 
-<p><em>See also:</em> remove, clear</p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#remove%28socket%3ASocket%29-instance-method">#remove</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2012" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1998" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1077,12 +1077,12 @@ This function does nothing if the socket is not valid.</p>
 removes all the references that the selector has to
 external sockets.</p>
 
-<p><em>See also:</em> add, remove</p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add%28socket%3ASocket%29-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#remove%28socket%3ASocket%29-instance-method">#remove</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2033" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2019" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,7 +1098,7 @@ external sockets.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2085" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2071" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1116,7 +1116,7 @@ external sockets.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L1999" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1985" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1142,12 +1142,12 @@ this means that it is ready to accept a new connection.</p>
 
 <p><em>Returns:</em> True if the socket is ready to read, false otherwise</p>
 
-<p><em>See also:</em> isReady</p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready%3F%28socket%3ASocket%29%3ABool-instance-method">#ready?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2067" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2053" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1167,12 +1167,12 @@ removes the reference that the selector has to it.</p>
 
 <ul><li><em>socket</em> - Reference to the socket to remove</li></ul>
 
-<p><em>See also:</em> add, clear</p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add%28socket%3ASocket%29-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2023" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2009" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1189,7 +1189,7 @@ removes the reference that the selector has to it.</p>
 
 <p>This function returns as soon as at least one socket has
 some data available to be received. To know which sockets are
-ready, use the isReady function.
+ready, use the ready? function.
 If you use a timeout and no socket is ready before the timeout
 is over, the function returns false.</p>
 
@@ -1197,12 +1197,12 @@ is over, the function returns false.</p>
 
 <p><em>Returns:</em> True if there are sockets ready, false otherwise</p>
 
-<p><em>See also:</em> isReady</p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready%3F%28socket%3ASocket%29%3ABool-instance-method">#ready?</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/network/obj.cr#L2049" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2035" target="_blank">View source</a>]
         
       </div>
     </div>

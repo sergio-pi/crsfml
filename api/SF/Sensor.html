@@ -822,7 +822,7 @@ store and update its current value on your side).</p>
 <p>Depending on the OS and hardware of the device (phone, tablet, ...),
 some sensor types may not be available. You should always check
 the availability of a sensor before trying to read it, with the
-<code><a href="../SF/Sensor.html">SF::Sensor</a>::isAvailable</code> function.</p>
+<code><a href="../SF/Sensor.html">SF::Sensor</a>::available?</code> function.</p>
 
 <p>You may wonder why some sensor types look so similar, for example
 Accelerometer and Gravity / UserAcceleration. The first one
@@ -834,7 +834,7 @@ are computed internally based on the raw acceleration and other sensors.
 This is exactly the same for Gyroscope vs Orientation.</p>
 
 <p>Because sensors consume a non-negligible amount of current, they are
-all disabled by default. You must call <code><a href="../SF/Sensor.html">SF::Sensor</a>::setEnabled</code> for each
+all disabled by default. You must call <code><a href="../SF/Sensor.html">SF::Sensor</a>::enabled=</code> for each
 sensor in which you are interested.</p>
 
 <p>Usage example:</p>
@@ -866,7 +866,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L937" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L923" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -931,7 +931,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L961" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L947" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -953,7 +953,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L983" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L969" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -979,7 +979,7 @@ sending events of the corresponding type.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/window/obj.cr#L975" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L961" target="_blank">View source</a>]
         
       </div>
     </div>

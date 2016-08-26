@@ -824,7 +824,7 @@ on streaming).</p>
 
 <p>In order to work, a sound must be given a buffer of audio
 data to play. Audio data (samples) is stored in <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code>,
-and attached to a sound with the setBuffer() function.
+and attached to a sound with the buffer=() function.
 The buffer object attached to a sound must remain alive
 as long as the sound uses it. Note that multiple sounds
 can use the same sound buffer at the same time.</p>
@@ -856,7 +856,7 @@ sound.play();</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1020" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1008" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -1112,7 +1112,7 @@ sound.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1031" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1019" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1130,7 +1130,7 @@ sound.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1023" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1011" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1155,7 +1155,7 @@ sound.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1112" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1176,12 +1176,12 @@ as it is attached to the sound.</p>
 
 <ul><li><em>buffer</em> - Sound buffer to attach to the sound</li></ul>
 
-<p><em>See also:</em> getBuffer</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#buffer%3ASoundBuffer%7CNil-instance-method">#buffer</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1080" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1068" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1199,7 +1199,7 @@ as it is attached to the sound.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1037" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1025" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1216,12 +1216,12 @@ as it is attached to the sound.</p>
 
 <p><em>Returns:</em> True if the sound is looping, false otherwise</p>
 
-<p><em>See also:</em> setLoop</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#loop%3D%28loop%3ABool%29-instance-method">#loop=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1122" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1110" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1238,17 +1238,17 @@ as it is attached to the sound.</p>
 
 <p>If set, the sound will restart from beginning after
 reaching the end and so on, until it is stopped or
-setLoop(false) is called.
+loop=(false) is called.
 The default looping state for sound is false.</p>
 
 <ul><li><em>loop</em> - True to play in loop, false to play once</li></ul>
 
-<p><em>See also:</em> getLoop</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#loop%3ABool-instance-method">#loop</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1093" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1081" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,12 +1266,12 @@ The default looping state for sound is false.</p>
 <p>This function pauses the sound if it was playing,
 otherwise (sound already paused or stopped) it has no effect.</p>
 
-<p><em>See also:</em> play, stop</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1058" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1046" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1292,12 +1292,12 @@ was it already playing.
 This function uses its own thread so that it doesn't block
 the rest of the program while the sound is played.</p>
 
-<p><em>See also:</em> pause, stop</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1049" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1037" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1314,12 +1314,12 @@ the rest of the program while the sound is played.</p>
 
 <p><em>Returns:</em> Current playing position, from the beginning of the sound</p>
 
-<p><em>See also:</em> setPlayingOffset</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset%3D%28time_offset%3ATime%29-instance-method">#playing_offset=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1131" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1119" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1341,12 +1341,12 @@ the sound will reset its position.</p>
 
 <ul><li><em>time_offset</em> - New playing position, from the beginning of the sound</li></ul>
 
-<p><em>See also:</em> getPlayingOffset</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset%3ATime-instance-method">#playing_offset</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1106" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1094" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1369,7 +1369,7 @@ the sound from using a dead buffer.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1149" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1137" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1389,7 +1389,7 @@ the sound from using a dead buffer.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1139" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1127" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1408,12 +1408,12 @@ the sound from using a dead buffer.</p></div>
 and does nothing if it was already stopped.
 It also resets the playing position (unlike pause()).</p>
 
-<p><em>See also:</em> play, pause</p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.0/src/audio/obj.cr#L1068" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1056" target="_blank">View source</a>]
         
       </div>
     </div>
