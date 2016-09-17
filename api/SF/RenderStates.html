@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -829,19 +829,17 @@ on top of each object's transform.</p>
 
 <p>Most objects, especially high-level drawables, can be drawn
 directly without defining render states explicitly -- the
-default set of states is ok in most cases.</p>
+default set of states is OK in most cases.</p>
 
-<pre><code class='language-c++'>window.draw(sprite);</code></pre>
+<pre><code>window.draw(sprite)</code></pre>
 
-<p>If you want to use a single specific render state,
-for example a shader, you can pass it directly to the Draw
-function: <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code> has an implicit one-argument
-constructor for each state.</p>
+<p>If you want to use a single specific render state, for example a
+shader, you can pass it to the constructor of <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code>.</p>
 
-<pre><code class='language-c++'>window.draw(sprite, shader);</code></pre>
+<pre><code>window.draw(sprite, <span class="t">SF</span><span class="t">::</span><span class="t">RenderStates</span>.<span class="k">new</span>(shader))</code></pre>
 
 <p>When you're inside the Draw function of a drawable
-object (inherited from <code><a href="../SF/Drawable.html">SF::Drawable</a></code>), you can
+object (one that includes <code><a href="../SF/Drawable.html">SF::Drawable</a></code>), you can
 either pass the render states unmodified, or change
 some of them.
 For example, a transformable object will combine the
@@ -866,12 +864,12 @@ set its texture. Etc.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L667" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L658" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L159" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L165" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -900,27 +898,6 @@ set its texture. Etc.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%7CNil%2Cshader%3AShader%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode, transform : Transform, texture : Texture | Nil, shader : Shader)</a>
-        
-          <div class="summary"><p>Construct a set of render states with all its attributes</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28blend_mode%3ABlendMode%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode)</a>
-        
-          <div class="summary"><p>Construct a default set of render states with a custom blend mode</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28transform%3ATransform%29-class-method" class="signature"><strong>.new</strong>(transform : Transform)</a>
-        
-          <div class="summary"><p>Construct a default set of render states with a custom transform</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#new%28texture%3ATexture%7CNil%29-class-method" class="signature"><strong>.new</strong>(texture : Texture | Nil)</a>
         
           <div class="summary"><p>Construct a default set of render states with a custom texture</p></div>
@@ -938,6 +915,27 @@ set its texture. Etc.</p>
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
           <div class="summary"><p>Default constructor</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%7CNil%2Cshader%3AShader%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode, transform : Transform, texture : Texture | Nil, shader : Shader)</a>
+        
+          <div class="summary"><p>Construct a set of render states with all its attributes</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28blend_mode%3ABlendMode%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode)</a>
+        
+          <div class="summary"><p>Construct a default set of render states with a custom blend mode</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28transform%3ATransform%29-class-method" class="signature"><strong>.new</strong>(transform : Transform)</a>
+        
+          <div class="summary"><p>Construct a default set of render states with a custom transform</p></div>
         
       </li>
     
@@ -962,6 +960,11 @@ set its texture. Etc.</p>
     
       <li class="entry-summary">
         <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inspect%28io%29-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
         
       </li>
     
@@ -1035,66 +1038,6 @@ set its texture. Etc.</p>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;blend_mode:BlendMode,transform:Transform,texture:Texture|Nil,shader:Shader&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>, transform : <a href="../SF/Transform.html">Transform</a>, texture : <a href="../SF/Texture.html">Texture</a> | Nil, shader : <a href="../SF/Shader.html">Shader</a>)
-
-        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%7CNil%2Cshader%3AShader%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a set of render states with all its attributes</p>
-
-<ul><li><em>the_blend_mode</em> - Blend mode to use</li><li><em>the_transform</em> - Transform to use</li><li><em>the_texture</em> -   Texture to use</li><li><em>the_shader</em> -    Shader to use</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L736" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;blend_mode:BlendMode&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>)
-
-        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a default set of render states with a custom blend mode</p>
-
-<ul><li><em>the_blend_mode</em> - Blend mode to use</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L691" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;transform:Transform&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(transform : <a href="../SF/Transform.html">Transform</a>)
-
-        <a class="method-permalink" href="#new%28transform%3ATransform%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a default set of render states with a custom transform</p>
-
-<ul><li><em>the_transform</em> - Transform to use</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L701" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new&#40;texture:Texture|Nil&#41;-class-method">
       <div class="signature">
         
@@ -1105,12 +1048,12 @@ set its texture. Etc.</p>
       
         <div class="doc"><p>Construct a default set of render states with a custom texture</p>
 
-<ul><li><em>the_texture</em> - Texture to use</li></ul></div>
+<ul><li><em>texture</em> - Texture to use</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L711" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L702" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1125,12 +1068,12 @@ set its texture. Etc.</p>
       
         <div class="doc"><p>Construct a default set of render states with a custom shader</p>
 
-<ul><li><em>the_shader</em> - Shader to use</li></ul></div>
+<ul><li><em>shader</em> - Shader to use</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L722" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L713" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1154,7 +1097,67 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L681" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L672" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;blend_mode:BlendMode,transform:Transform,texture:Texture|Nil,shader:Shader&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>, transform : <a href="../SF/Transform.html">Transform</a>, texture : <a href="../SF/Texture.html">Texture</a> | Nil, shader : <a href="../SF/Shader.html">Shader</a>)
+
+        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%7CNil%2Cshader%3AShader%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a set of render states with all its attributes</p>
+
+<ul><li><em>blend_mode</em> - Blend mode to use</li><li><em>transform</em> - Transform to use</li><li><em>texture</em> - Texture to use</li><li><em>shader</em> - Shader to use</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L727" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;blend_mode:BlendMode&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>)
+
+        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a default set of render states with a custom blend mode</p>
+
+<ul><li><em>blend_mode</em> - Blend mode to use</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L682" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;transform:Transform&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(transform : <a href="../SF/Transform.html">Transform</a>)
+
+        <a class="method-permalink" href="#new%28transform%3ATransform%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a default set of render states with a custom transform</p>
+
+<ul><li><em>transform</em> - Transform to use</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L692" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,7 +1180,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L747" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L738" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1193,7 +1196,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L750" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L741" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,7 +1212,23 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L794" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L785" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inspect&#40;io&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>inspect</strong>(io)
+
+        <a class="method-permalink" href="#inspect%28io%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,7 +1246,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L773" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L764" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,7 +1262,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L776" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L767" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1261,7 +1280,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L763" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L754" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,7 +1296,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L766" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L757" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1295,7 +1314,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L755" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L746" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1311,7 +1330,7 @@ The default set defines:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L758" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L749" target="_blank">View source</a>]
         
       </div>
     </div>

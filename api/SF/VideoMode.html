@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -835,19 +835,14 @@ depth as the current resolution.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Display the list of all the video modes available for fullscreen
-std::vector&lt;sf::VideoMode> modes = sf::VideoMode::getFullscreenModes();
-for (std::size_t i = 0; i &lt; modes.size(); ++i)
-{
-    sf::VideoMode mode = modes[i];
-    std::cout &lt;&lt; "Mode #" &lt;&lt; i &lt;&lt; ": "
-              &lt;&lt; mode.width &lt;&lt; "x" &lt;&lt; mode.height &lt;&lt; " - "
-              &lt;&lt; mode.bitsPerPixel &lt;&lt; " bpp" &lt;&lt; std::endl;
-}
+<pre><code><span class="c"># Display the list of all the video modes available for fullscreen</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.fullscreen_modes.each <span class="k">do</span> <span class="o">|</span>mode<span class="o">|</span>
+  puts <span class="s">&quot;Mode #</span><span class="i">#{</span></span>i<span class="s"><span class="i">}</span>: </span><span class="i">#{</span></span>mode.width<span class="s"><span class="i">}</span>x</span><span class="i">#{</span></span>mode.height<span class="s"><span class="i">}</span> - </span><span class="i">#{</span></span>mode.bits_per_pixel<span class="s"><span class="i">}</span> bpp&quot;</span>
+<span class="k">end</span>
 
-// Create a window with the same pixel depth as the desktop
-sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
-window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</code></pre>
+<span class="c"># Create a window with the same pixel depth as the desktop</span>
+desktop <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.desktop_mode
+window.create(<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.<span class="k">new</span>(<span class="n">1024</span>, <span class="n">768</span>, desktop.bits_per_pixel), <span class="s">&quot;SFML window&quot;</span>)</code></pre>
 
 
 
@@ -865,7 +860,7 @@ window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</c
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1796" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1778" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -892,7 +887,7 @@ window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</c
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D%3Cspanclass%3D%22n%22%3E32%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)</a>
+        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D32%29-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)</a>
         
           <div class="summary"><p>Construct the video mode with its attributes</p></div>
         
@@ -1051,7 +1046,7 @@ window.create(sf::VideoMode(1024, 768, desktop.bitsPerPixel), "SFML window");</c
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1823" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1805" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,27 +1074,27 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1839" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1821" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;width:Int,height:Int,bits_per_pixel:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;32&lt;/span&gt;&#41;-class-method">
+    <div class="entry-detail" id="new&#40;width:Int,height:Int,bits_per_pixel:Int&#61;32&#41;-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)
 
-        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D%3Cspanclass%3D%22n%22%3E32%3C%2Fspan%3E%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D32%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Construct the video mode with its attributes</p>
 
-<ul><li><em>mode_width</em> -        Width in pixels</li><li><em>mode_height</em> -       Height in pixels</li><li><em>mode_bits_per_pixel</em> - Pixel depths in bits per pixel</li></ul></div>
+<ul><li><em>width</em> - Width in pixels</li><li><em>height</em> - Height in pixels</li><li><em>bits_per_pixel</em> - Pixel depths in bits per pixel</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1814" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1796" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,7 +1114,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1803" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1785" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1139,14 +1134,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of != operator to compare two video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if modes are different</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1894" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1876" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1161,14 +1156,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of &lt; operator to compare video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1904" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1886" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1183,14 +1178,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of &lt;= operator to compare video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1924" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1906" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1205,14 +1200,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of == operator to compare two video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if modes are equal</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1884" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1866" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,14 +1222,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of &gt; operator to compare video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1914" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1896" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1249,14 +1244,14 @@ width, height and bits-per-pixel).</p>
       
         <div class="doc"><p>Overload of &gt;= operator to compare video modes</p>
 
-<ul><li><em>left</em> -  Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
+<ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
 <p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1934" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1916" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1274,7 +1269,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1872" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1854" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1290,7 +1285,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1875" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1857" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,7 +1301,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1950" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1932" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1324,7 +1319,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1864" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1846" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,7 +1335,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1867" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1849" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,7 +1359,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1850" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1832" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,7 +1377,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1856" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1838" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1398,7 +1393,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1859" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1841" target="_blank">View source</a>]
         
       </div>
     </div>

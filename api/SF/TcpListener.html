@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -832,22 +832,20 @@ function.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Create a listener socket and make it wait for new
-// connections on port 55001
-sf::TcpListener listener;
-listener.listen(55001);
+<pre><code><span class="c"># Create a listener socket and make it wait for new</span>
+<span class="c"># connections on port 55001</span>
+listener <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpListener</span>.<span class="k">new</span>
+listener.listen(<span class="n">55001</span>)
 
-// Endless loop that waits for new connections
-while (running)
-{
-    sf::TcpSocket client;
-    if (listener.accept(client) == sf::Socket::Done)
-    {
-        // A new client just connected!
-        std::cout &lt;&lt; "New connection received from " &lt;&lt; client.getRemoteAddress() &lt;&lt; std::endl;
-        doSomethingWith(client);
-    }
-}</code></pre>
+<span class="c"># Endless loop that waits for new connections</span>
+<span class="k">while</span> running
+  client <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>.<span class="k">new</span>
+  <span class="k">if</span> listener.accept(client) <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Socket</span><span class="t">::</span><span class="t">Done</span>
+    <span class="c"># A new client just connected&#33;</span>
+    puts <span class="s">&quot;New connection received from </span><span class="i">#{</span></span>client.remote_address<span class="s"><span class="i">}</span>&quot;</span>
+    do_something_with client
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/TcpSocket.html">SF::TcpSocket</a></code>, <code><a href="../SF/Socket.html">SF::Socket</a></code></p>
 
@@ -867,7 +865,7 @@ while (running)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2117" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2045" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -908,7 +906,7 @@ while (running)
       </li>
     
       <li class="entry-summary">
-        <a href="#listen%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#listen</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
+        <a href="#listen%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#listen</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
         
           <div class="summary"><p>Start listening for connections</p></div>
         
@@ -1003,7 +1001,7 @@ while (running)
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2120" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2048" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1030,12 +1028,12 @@ not return until a connection is actually received.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2173" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1053,22 +1051,22 @@ not return until a connection is actually received.</p>
 <p>This function gracefully stops the listener. If the
 socket is not listening, this function has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2160" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2088" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="listen&#40;port:Int,address:IpAddress&#61;&lt;spanclass&#61;&quot;t&quot;&gt;IpAddress&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Any&lt;/span&gt;&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="listen&#40;port:Int,address:IpAddress&#61;IpAddress::Any&#41;:Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>listen</strong>(port : Int, address : <a href="../SF/IpAddress.html">IpAddress</a> = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#listen%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#listen%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Start listening for connections</p>
@@ -1078,7 +1076,7 @@ port, waiting for new connections.
 If the socket was previously listening to another port,
 it will be stopped first and bound to the new port.</p>
 
-<ul><li><em>port</em> -    Port to listen for new connections</li><li><em>address</em> - Address of the interface to listen on</li></ul>
+<ul><li><em>port</em> - Port to listen for new connections</li><li><em>address</em> - Address of the interface to listen on</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
@@ -1087,7 +1085,7 @@ it will be stopped first and bound to the new port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2150" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2078" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1107,12 +1105,12 @@ returns 0.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpListener.html#listen%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#listen</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2133" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2061" target="_blank">View source</a>]
         
       </div>
     </div>

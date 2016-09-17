@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -830,15 +830,14 @@ resources.</p>
 <p>Usage example:</p>
 
 <pre><code class='language-c++'>void threadFunction(void*)
-{
-   sf::Context context;
-   // from now on, you have a valid context
+   SF::Context context
+   # from now on, you have a valid context
 
-   // you can make OpenGL calls
-   glClear(GL_DEPTH_BUFFER_BIT);
-}
-// the context is automatically deactivated and destroyed
-// by the sf::Context destructor</code></pre>
+   # you can make OpenGL calls
+   glClear(GL_DEPTH_BUFFER_BIT)
+end
+# the context is automatically deactivated and destroyed
+# by the SF::Context destructor</code></pre>
 
 
 
@@ -865,7 +864,7 @@ resources.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L214" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L208" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -885,16 +884,16 @@ resources.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method" class="signature"><strong>.new</strong>(settings : ContextSettings, width : Int, height : Int)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct a in-memory context</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method" class="signature"><strong>.new</strong>(settings : ContextSettings, width : Int, height : Int)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct a in-memory context</p></div>
         
       </li>
     
@@ -984,30 +983,7 @@ resources.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L255" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;settings:ContextSettings,width:Int,height:Int&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(settings : <a href="../SF/ContextSettings.html">ContextSettings</a>, width : Int, height : Int)
-
-        <a class="method-permalink" href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a in-memory context</p>
-
-<p>This constructor is for internal use, you don't need
-to bother with it.</p>
-
-<ul><li><em>settings</em> - Creation parameters</li><li><em>width</em> -    Back buffer width</li><li><em>height</em> -   Back buffer height</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L273" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L249" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1027,7 +1003,30 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L219" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;settings:ContextSettings,width:Int,height:Int&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(settings : <a href="../SF/ContextSettings.html">ContextSettings</a>, width : Int, height : Int)
+
+        <a class="method-permalink" href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a in-memory context</p>
+
+<p>This constructor is for internal use, you don't need
+to bother with it.</p>
+
+<ul><li><em>settings</em> - Creation parameters</li><li><em>width</em> - Back buffer width</li><li><em>height</em> - Back buffer height</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1054,7 +1053,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L234" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L228" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1074,7 +1073,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L226" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L220" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,7 +1097,7 @@ original settings are not directly supported by the system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L245" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>

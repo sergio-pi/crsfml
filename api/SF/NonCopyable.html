@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -807,34 +807,7 @@
 
   <h2>Overview</h2>
 
-  <p>Utility class that makes any derived
-class non-copyable</p>
-
-<p>This class makes its instances non-copyable, by explicitly
-disabling its copy constructor and its assignment operator.</p>
-
-<p>To create a non-copyable class, simply inherit from
-<code><a href="../SF/NonCopyable.html">SF::NonCopyable</a></code>.</p>
-
-<p>The type of inheritance (public or private) doesn't matter,
-the copy constructor and assignment operator are declared private
-in <code><a href="../SF/NonCopyable.html">SF::NonCopyable</a></code> so they will end up being inaccessible in both
-cases. Thus you can use a shorter syntax for inheriting from it
-(see below).</p>
-
-<p>Usage example:</p>
-
-<pre><code class='language-c++'>class MyNonCopyableClass : sf::NonCopyable
-{
-    ...
-};</code></pre>
-
-<p>Deciding whether the instances of a class can be copied
-or not is a very important design choice. You are strongly
-encouraged to think about it before writing a class,
-and to use <code><a href="../SF/NonCopyable.html">SF::NonCopyable</a></code> when necessary to prevent
-many potential future errors when using it. This is also
-a very important indication to users of your class.</p>
+  <p>Empty module that indicates the objects of the class can't be copied</p>
 
 
 
@@ -877,7 +850,7 @@ a very important indication to users of your class.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L512" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L473" target="_blank">system/obj.cr</a>
     
     <br/>
   

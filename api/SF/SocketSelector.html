@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -836,64 +836,49 @@ that they are alive as long as they are used in the selector.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Create a socket to listen to new connections
-sf::TcpListener listener;
-listener.listen(55001);
+<pre><code><span class="c"># Create a socket to listen to new connections</span>
+listener <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpListener</span>.<span class="k">new</span>
+listener.listen(<span class="n">55001</span>)
 
-// Create a list to store the future clients
-std::list&lt;sf::TcpSocket*> clients;
+<span class="c"># Create an array to store the future clients</span>
+clients <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>
 
-// Create a selector
-sf::SocketSelector selector;
+<span class="c"># Create a selector</span>
+selector <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">SocketSelector</span>.<span class="k">new</span>
 
-// Add the listener to the selector
-selector.add(listener);
+<span class="c"># Add the listener to the selector</span>
+selector.add listener
 
-// Endless loop that waits for new connections
-while (running)
-{
-    // Make the selector wait for data on any socket
-    if (selector.wait())
-    {
-        // Test the listener
-        if (selector.isReady(listener))
-        {
-            // The listener is ready: there is a pending connection
-            sf::TcpSocket* client = new sf::TcpSocket;
-            if (listener.accept(*client) == sf::Socket::Done)
-            {
-                // Add the new client to the clients list
-                clients.push_back(client);
+<span class="c"># Endless loop that waits for new connections</span>
+<span class="k">while</span> running
+  <span class="c"># Make the selector wait for data on any socket</span>
+  <span class="k">if</span> selector.wait()
+    <span class="c"># Test the listener</span>
+    <span class="k">if</span> selector.ready?(listener)
+      <span class="c"># The listener is ready: there is a pending connection</span>
+      client <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>.<span class="k">new</span>
+      <span class="k">if</span> listener.accept(client) <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Socket</span><span class="t">::</span><span class="t">Done</span>
+        <span class="c"># Add the new client to the clients list</span>
+        clients <span class="o"><<</span> client
 
-                // Add the new client to the selector so that we will
-                // be notified when he sends something
-                selector.add(*client);
-            }
-            else
-            {
-                // Error, we won't get a new connection, delete the socket
-                delete client;
-            }
-        }
-        else
-        {
-            // The listener socket is not ready, test all other sockets (the clients)
-            for (std::list&lt;sf::TcpSocket*>::iterator it = clients.begin(); it != clients.end(); ++it)
-            {
-                sf::TcpSocket& client = **it;
-                if (selector.isReady(client))
-                {
-                    // The client has sent some data, we can receive it
-                    sf::Packet packet;
-                    if (client.receive(packet) == sf::Socket::Done)
-                    {
-                        ...
-                    }
-                }
-            }
-        }
-    }
-}</code></pre>
+        <span class="c"># Add the new client to the selector so that we will</span>
+        <span class="c"># be notified when he sends something</span>
+        selector.add client
+      <span class="k">end</span>
+    <span class="k">else</span>
+      <span class="c"># The listener socket is not ready, test all other sockets &#40;the clients&#41;</span>
+      clients.each <span class="k">do</span> <span class="o">|</span>client<span class="o">|</span>
+        <span class="k">if</span> selector.ready?(client)
+          <span class="c"># The client has sent some data, we can receive it</span>
+          packet <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Packet</span>.<span class="k">new</span>
+          <span class="k">if</span> client.receive(packet) <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Socket</span><span class="t">::</span><span class="t">Done</span>
+              ...
+          <span class="k">end</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Socket.html">SF::Socket</a></code></p>
 
@@ -913,7 +898,7 @@ while (running)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1977" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1907" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -980,7 +965,7 @@ while (running)
       </li>
     
       <li class="entry-summary">
-        <a href="#wait%28timeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ABool-instance-method" class="signature"><strong>#wait</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool</a>
+        <a href="#wait%28timeout%3ATime%3DTime%3A%3AZero%29%3ABool-instance-method" class="signature"><strong>#wait</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool</a>
         
           <div class="summary"><p>Wait until one or more sockets are ready to receive</p></div>
         
@@ -1026,7 +1011,7 @@ while (running)
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1980" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1910" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1058,7 +1043,7 @@ This function does nothing if the socket is not valid.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1998" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1928" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1082,7 +1067,7 @@ external sockets.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2019" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1949" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,7 +1083,7 @@ external sockets.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2071" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2001" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1116,7 +1101,7 @@ external sockets.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1985" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1915" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1147,7 +1132,7 @@ this means that it is ready to accept a new connection.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2053" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1983" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,17 +1157,17 @@ removes the reference that the selector has to it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2009" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1939" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="wait&#40;timeout:Time&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Time&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Zero&lt;/span&gt;&#41;:Bool-instance-method">
+    <div class="entry-detail" id="wait&#40;timeout:Time&#61;Time::Zero&#41;:Bool-instance-method">
       <div class="signature">
         
         def <strong>wait</strong>(timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool
 
-        <a class="method-permalink" href="#wait%28timeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#wait%28timeout%3ATime%3DTime%3A%3AZero%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Wait until one or more sockets are ready to receive</p>
@@ -1202,7 +1187,7 @@ is over, the function returns false.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2035" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1965" target="_blank">View source</a>]
         
       </div>
     </div>

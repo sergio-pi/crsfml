@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -821,81 +821,78 @@ etc. See the documentation of <code><a href="../SF/Window.html">SF::Window</a></
 description of all these features, as well as code examples.</p>
 
 <p>On top of that, <code><a href="../SF/RenderWindow.html">SF::RenderWindow</a></code> adds more features related to
-2D drawing with the graphics module (see its base class
+2D drawing with the graphics module (see its base module
 <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code> for more details).
 Here is a typical rendering and event loop with a <code><a href="../SF/RenderWindow.html">SF::RenderWindow</a>:</code></p>
 
-<pre><code class='language-c++'>// Declare and create a new render-window
-sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+<pre><code><span class="c"># Declare and create a new render-window</span>
+window <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderWindow</span>.<span class="k">new</span>(<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.<span class="k">new</span>(<span class="n">800</span>, <span class="n">600</span>), <span class="s">&quot;SFML window&quot;</span>)
 
-// Limit the framerate to 60 frames per second (this step is optional)
-window.setFramerateLimit(60);
+<span class="c"># Limit the framerate to 60 frames per second &#40;this step is optional&#41;</span>
+window.framerate_limit <span class="o">=</span> <span class="n">60</span>
 
-// The main loop - ends as soon as the window is closed
-while (window.isOpen())
-{
-   // Event processing
-   sf::Event event;
-   while (window.pollEvent(event))
-   {
-       // Request for closing the window
-       if (event.type == sf::Event::Closed)
-           window.close();
-   }
+<span class="c"># The main loop - ends as soon as the window is closed</span>
+<span class="k">while</span> window.open?
+  <span class="c"># Event processing</span>
+  <span class="k">while</span> (event <span class="o">=</span> window.poll_event)
+    <span class="c"># Request for closing the window</span>
+    <span class="k">if</span> event.<span class="k">is_a?</span> <span class="t">SF</span><span class="t">::</span><span class="t">Event</span><span class="t">::</span><span class="t">Closed</span>
+      window.close()
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-   // Clear the whole window before rendering a new frame
-   window.clear();
+  <span class="c"># Clear the whole window before rendering a new frame</span>
+  window.clear()
 
-   // Draw some graphical entities
-   window.draw(sprite);
-   window.draw(circle);
-   window.draw(text);
+  <span class="c"># Draw some graphical entities</span>
+  window.draw sprite
+  window.draw circle
+  window.draw text
 
-   // End the current frame and display its contents on screen
-   window.display();
-}</code></pre>
+  <span class="c"># End the current frame and display its contents on screen</span>
+  window.display()
+<span class="k">end</span></code></pre>
 
 <p>Like <code><a href="../SF/Window.html">SF::Window</a></code>, <code><a href="../SF/RenderWindow.html">SF::RenderWindow</a></code> is still able to render direct
 OpenGL stuff. It is even possible to mix together OpenGL calls
 and regular SFML drawing commands.</p>
 
-<pre><code class='language-c++'>// Create the render window
-sf::RenderWindow window(sf::VideoMode(800, 600), "SFML OpenGL");
+<pre><code><span class="c"># Create the render window</span>
+window <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderWindow</span>.<span class="k">new</span>(<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.<span class="k">new</span>(<span class="n">800</span>, <span class="n">600</span>), <span class="s">&quot;SFML OpenGL&quot;</span>)
 
-// Create a sprite and a text to display
-sf::Sprite sprite;
-sf::Text text;
+<span class="c"># Create a sprite and a text to display</span>
+sprite <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sprite</span>.<span class="k">new</span>
+text <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
 ...
 
-// Perform OpenGL initializations
-glMatrixMode(GL_PROJECTION);
+<span class="c"># Perform OpenGL initializations</span>
+glMatrixMode(<span class="t">GL_PROJECTION</span>)
 ...
 
-// Start the rendering loop
-while (window.isOpen())
-{
-    // Process events
+<span class="c"># Start the rendering loop</span>
+<span class="k">while</span> window.open?
+  <span class="c"># Process events</span>
+  ...
+
+  <span class="c"># Draw a background sprite</span>
+  window.push_gl_states()
+  window.draw sprite
+  window.pop_gl_states()
+
+  <span class="c"># Draw a 3D object using OpenGL</span>
+  glBegin(<span class="t">GL_QUADS</span>)
+    glVertex3f(...)
     ...
+  glEnd()
 
-    // Draw a background sprite
-    window.pushGLStates();
-    window.draw(sprite);
-    window.popGLStates();
+  <span class="c"># Draw text on top of the 3D object</span>
+  window.push_gl_states()
+  window.draw text
+  window.pop_gl_states()
 
-    // Draw a 3D object using OpenGL
-    glBegin(GL_QUADS);
-        glVertex3f(...);
-        ...
-    glEnd();
-
-    // Draw text on top of the 3D object
-    window.pushGLStates();
-    window.draw(text);
-    window.popGLStates();
-
-    // Finally, display the rendered frame on screen
-    window.display();
-}</code></pre>
+  <span class="c"># Finally, display the rendered frame on screen</span>
+  window.display()
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Window.html">SF::Window</a></code>, <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code>, <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code>, <code><a href="../SF/View.html">SF::View</a></code></p>
 
@@ -922,12 +919,12 @@ while (window.isOpen())
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5133" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5073" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L211" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -940,37 +937,30 @@ while (window.isOpen())
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3Aself-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Default constructor</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3D%3Cspanclass%3D%22t%22%3EStyle%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3Aself-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3D%3Cspanclass%3D%22t%22%3EStyle%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
+        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct a new window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
+        <a href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct the window from an existing control</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -1015,7 +1005,7 @@ while (window.isOpen())
   <h3>Instance methods inherited from module <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></h3>
   
   
-    <a href="../SF/RenderTarget.html#clear%28color%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method" class="tooltip">
       <span>clear(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</span>
     clear</a>, 
     
@@ -1025,7 +1015,7 @@ while (window.isOpen())
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
       <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
@@ -1093,7 +1083,7 @@ while (window.isOpen())
   <h3>Instance methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
-    <a href="../SF/Window.html#active%3D%28active%3ABool%3D%3Cspanclass%3D%22n%22%3Etrue%3C%2Fspan%3E%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Window.html#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="tooltip">
       <span>active=(active : Bool = <span class="n">true</span>) : Bool</span>
     active=</a>, 
     
@@ -1103,7 +1093,7 @@ while (window.isOpen())
     close</a>, 
     
   
-    <a href="../SF/Window.html#create%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3D%3Cspanclass%3D%22t%22%3EStyle%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#create%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-instance-method" class="tooltip">
       <span>create(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>create(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</span>
     create</a>, 
     
@@ -1225,8 +1215,8 @@ while (window.isOpen())
   <h3>Class methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
-    <a href="../SF/Window.html#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3Aself-class-method" class="tooltip">
-      <span>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self<br/>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self<br/>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new</span>
+    <a href="../SF/Window.html#new-class-method" class="tooltip">
+      <span>new<br/>new(*args, **kwargs) : self<br/>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</span>
     new</a>
     
   
@@ -1266,104 +1256,6 @@ while (window.isOpen())
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;handle:WindowHandle,settings:ContextSettings&#61;&lt;spanclass&#61;&quot;t&quot;&gt;ContextSettings&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(handle : <a href="../SF/WindowHandle.html">WindowHandle</a>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self
-
-        <a class="method-permalink" href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5242" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Style&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Default&lt;/span&gt;,settings:ContextSettings&#61;&lt;spanclass&#61;&quot;t&quot;&gt;ContextSettings&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/Style.html">Style</a> = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>) : self
-
-        <a class="method-permalink" href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3D%3Cspanclass%3D%22t%22%3EStyle%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5232" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Style&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Default&lt;/span&gt;,settings:ContextSettings&#61;&lt;spanclass&#61;&quot;t&quot;&gt;ContextSettings&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/Style.html">Style</a> = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
-
-        <a class="method-permalink" href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3D%3Cspanclass%3D%22t%22%3EStyle%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a new window</p>
-
-<p>This constructor creates the window with the size and pixel
-depth defined in <em>mode.</em> An optional style can be passed to
-customize the look and behavior of the window (borders,
-title bar, resizable, closable, ...).</p>
-
-<p>The fourth parameter is an optional structure specifying
-advanced OpenGL context settings such as antialiasing,
-depth-buffer bits, etc. You shouldn't care about these
-parameters for a regular usage of the graphics module.</p>
-
-<ul><li><em>mode</em> -     Video mode to use (defines the width, height and depth of the rendering area of the window)</li><li><em>title</em> -    Title of the window</li><li><em>style</em> -    %Window style, a bitwise OR combination of <code><a href="../SF/Style.html">SF::Style</a></code> enumerators</li><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;handle:WindowHandle,settings:ContextSettings&#61;&lt;spanclass&#61;&quot;t&quot;&gt;ContextSettings&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(handle : <a href="../SF/WindowHandle.html">WindowHandle</a>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
-
-        <a class="method-permalink" href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3D%3Cspanclass%3D%22t%22%3EContextSettings%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct the window from an existing control</p>
-
-<p>Use this constructor if you want to create an SFML
-rendering area into an already existing control.</p>
-
-<p>The second parameter is an optional structure specifying
-advanced OpenGL context settings such as antialiasing,
-depth-buffer bits, etc. You shouldn't care about these
-parameters for a regular usage of the graphics module.</p>
-
-<ul><li><em>handle</em> -   Platform-specific handle of the control (<em>hwnd</em> on</li></ul>
-
-<pre><code>            <span class="t">Windows</span>, <span class="o">*</span><span class="o">%</span>window<span class="o">*</span> on <span class="t">Linux</span><span class="s">/FreeBSD, *ns_window* on OS X&#41;</code></pre>
-
-<ul><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5178" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
@@ -1380,7 +1272,87 @@ use the other constructors or call create() to do so.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5139" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5079" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(*args, **kwargs) : self
+
+        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;Style::Default,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/Style.html">Style</a> = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
+
+        <a class="method-permalink" href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a new window</p>
+
+<p>This constructor creates the window with the size and pixel
+depth defined in <em>mode.</em> An optional style can be passed to
+customize the look and behavior of the window (borders,
+title bar, resizable, closable, ...).</p>
+
+<p>The fourth parameter is an optional structure specifying
+advanced OpenGL context settings such as antialiasing,
+depth-buffer bits, etc. You shouldn't care about these
+parameters for a regular usage of the graphics module.</p>
+
+<ul><li><em>mode</em> - Video mode to use (defines the width, height and depth of the rendering area of the window)</li><li><em>title</em> - Title of the window</li><li><em>style</em> - Window style, a bitwise OR combination of <code><a href="../SF/Style.html">SF::Style</a></code> enumerators</li><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;handle:WindowHandle,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(handle : <a href="../SF/WindowHandle.html">WindowHandle</a>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
+
+        <a class="method-permalink" href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct the window from an existing control</p>
+
+<p>Use this constructor if you want to create an SFML
+rendering area into an already existing control.</p>
+
+<p>The second parameter is an optional structure specifying
+advanced OpenGL context settings such as antialiasing,
+depth-buffer bits, etc. You shouldn't care about these
+parameters for a regular usage of the graphics module.</p>
+
+<ul><li><em>handle</em> - Platform-specific handle of the control (<em>hwnd</em> on</li></ul>
+
+<pre><code>            <span class="t">Windows</span>, <span class="o">*</span><span class="o">%</span>window<span class="o">*</span> on <span class="t">Linux</span><span class="s">/FreeBSD, *ns_window* on OS X&#41;</code></pre>
+
+<ul><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1401,20 +1373,18 @@ use the other constructors or call create() to do so.</p></div>
         <div class="doc"><p>Copy the current contents of the window to an image</p>
 
 <p><em>Deprecated:</em>
-Use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its <code><a href="../SF/Texture.html">SF::Texture</a>::update</code>(const Window&)
-function and copy its contents into an <code><a href="../SF/Image.html">SF::Image</a></code> instead.</p>
+Use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its <code><a href="../SF/Texture.html#update%28window%3AWindow%29-instance-method">SF::Texture#update(window)</a></code>
+method and copy its contents into an <code><a href="../SF/Image.html">SF::Image</a></code> instead.</p>
 
-<pre><code class='language-c++'>sf::Vector2u windowSize = window.getSize();
-sf::Texture texture;
-texture.create(windowSize.x, windowSize.y);
-texture.update(window);
-sf::Image screenshot = texture.copyToImage();</code></pre>
+<pre><code>texture <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Texture</span>.<span class="k">new</span>(window.size.x, window.size.y)
+texture.update(window)
+screenshot <span class="o">=</span> texture.copy_to_image()</code></pre>
 
 <p>This is a slow operation, whose main purpose is to make
 screenshots of the application. If you want to update an
 image with the contents of the window and then use it for
 drawing, you should rather use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its
-update(Window&) function.
+<code>update(window)</code> method.
 You can also draw things directly to a texture with the
 <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code> class.</p>
 
@@ -1423,7 +1393,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5222" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1443,7 +1413,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5186" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1466,7 +1436,7 @@ of the window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5195" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5135" target="_blank">View source</a>]
         
       </div>
     </div>

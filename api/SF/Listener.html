@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -825,14 +825,14 @@ contains static functions and doesn't have to be instantiated.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Move the listener to the position (1, 0, -5)
-sf::Listener::setPosition(1, 0, -5);
+<pre><code><span class="c"># Move the listener to the position &#40;1, 0, -5&#41;</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Listener</span>.set_position(<span class="n">1</span>, <span class="n">0</span>, <span class="n">-5</span>)
 
-// Make it face the right axis (1, 0, 0)
-sf::Listener::setDirection(1, 0, 0);
+<span class="c"># Make it face the right axis &#40;1, 0, 0&#41;</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Listener</span>.direction <span class="o">=</span> <span class="t">SF</span>.vector3f(<span class="n">1</span>, <span class="n">0</span>, <span class="n">0</span>)
 
-// Reduce the global volume
-sf::Listener::setGlobalVolume(50);</code></pre>
+<span class="c"># Reduce the global volume</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Listener</span>.global_volume <span class="o">=</span> <span class="n">50</span></code></pre>
 
 
 
@@ -850,7 +850,7 @@ sf::Listener::setGlobalVolume(50);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L33" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L33" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -971,7 +971,7 @@ sf::Listener::setGlobalVolume(50);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L124" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L124" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1000,7 +1000,7 @@ The default listener's direction is (0, 0, -1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,14 +1015,14 @@ The default listener's direction is (0, 0, -1).</p>
       
         <div class="doc"><p>Get the current value of the global volume</p>
 
-<p><em>Returns:</em> Current global volume, in the range [0, 100]</p>
+<p><em>Returns:</em> Current global volume, in the range <code>0..100</code></p>
 
 <p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume%3D%28volume%3ANumber%29-class-method">.global_volume=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1041,14 +1041,14 @@ The default listener's direction is (0, 0, -1).</p>
 the individual volume of each sound / music.
 The default value for the volume is 100 (maximum).</p>
 
-<ul><li><em>volume</em> - New global volume, in the range [0, 100]</li></ul>
+<ul><li><em>volume</em> - New global volume, in the range <code>0..100</code></li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume%3AFloat32-class-method">.global_volume</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,7 +1070,7 @@ The default value for the volume is 100 (maximum).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1094,7 +1094,7 @@ The default value for the volume is 100 (maximum).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1123,7 +1123,7 @@ The default listener's direction is (0, 0, -1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1147,7 +1147,7 @@ The default listener's direction is (0, 0, -1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1176,7 +1176,7 @@ not necessary to change it, especially in 2D scenarios.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,7 +1198,7 @@ not necessary to change it, especially in 2D scenarios.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L166" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L166" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,7 +1227,7 @@ not necessary to change it, especially in 2D scenarios.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L158" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>

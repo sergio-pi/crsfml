@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -813,10 +813,10 @@
 mouse. It only contains static functions (a single
 mouse is assumed), so it's not meant to be instantiated.</p>
 
-<p>This class allows users to query the mouse state at any
+<p>This module allows users to query the mouse state at any
 time and directly, without having to deal with a window and
-its events. Compared to the MouseMoved, MouseButtonPressed
-and MouseButtonReleased events, <code><a href="../SF/Mouse.html">SF::Mouse</a></code> can retrieve the
+its events. Compared to the <code>MouseMoved</code>, <code>MouseButtonPressed</code>
+and <code>MouseButtonReleased</code> events, <code><a href="../SF/Mouse.html">SF::Mouse</a></code> can retrieve the
 state of the cursor and the buttons at any time
 (you don't need to store and update a boolean on your side
 in order to know if a button is pressed or released), and you
@@ -832,16 +832,15 @@ to the desktop) and one that operates in window coordinates
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-{
-    // left click...
-}
+<pre><code><span class="k">if</span> <span class="t">SF</span><span class="t">::</span><span class="t">Mouse</span>.button_pressed?(<span class="t">SF</span><span class="t">::</span><span class="t">Mouse</span><span class="t">::</span><span class="t">Left</span>)
+  <span class="c"># left click...</span>
+<span class="k">end</span>
 
-// get global mouse position
-sf::Vector2i position = sf::Mouse::getPosition();
+<span class="c"># get global mouse position</span>
+position <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Mouse</span>.position
 
-// set mouse position relative to a window
-sf::Mouse::setPosition(sf::Vector2i(100, 200), window);</code></pre>
+<span class="c"># set mouse position relative to a window</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Mouse</span>.set_position(<span class="t">SF</span>.vector2i(<span class="n">100</span>, <span class="n">200</span>), window)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Joystick.html">SF::Joystick</a></code>, <code><a href="../SF/Keyboard.html">SF::Keyboard</a></code>, <code><a href="../SF/Touch.html">SF::Touch</a></code></p>
 
@@ -861,7 +860,7 @@ sf::Mouse::setPosition(sf::Vector2i(100, 200), window);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L800" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L787" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -940,7 +939,7 @@ sf::Mouse::setPosition(sf::Vector2i(100, 200), window);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L830" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L817" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -965,7 +964,7 @@ cursor, relative to the given window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L853" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L840" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -988,7 +987,7 @@ cursor on the desktop.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L840" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L827" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1011,7 +1010,7 @@ cursor on the desktop.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L864" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L851" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1034,7 +1033,7 @@ cursor, relative to the given window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L875" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L862" target="_blank">View source</a>]
         
       </div>
     </div>

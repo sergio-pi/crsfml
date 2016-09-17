@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -823,46 +823,43 @@ texture rather than being show in a window.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Create a new render-window
-sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+<pre><code><span class="c"># Create a new render-window</span>
+window <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderWindow</span>.<span class="k">new</span>(<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.<span class="k">new</span>(<span class="n">800</span>, <span class="n">600</span>), <span class="s">&quot;SFML window&quot;</span>)
 
-// Create a new render-texture
-sf::RenderTexture texture;
-if (!texture.create(500, 500))
-    return -1;
+<span class="c"># Create a new render-texture</span>
+texture <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderTexture</span>.<span class="k">new</span>(<span class="n">500</span>, <span class="n">500</span>)
 
-// The main loop
-while (window.isOpen())
-{
-   // Event processing
-   // ...
+<span class="c"># The main loop</span>
+<span class="k">while</span> window.open?
+  <span class="c"># Event processing</span>
+  <span class="c"># ...</span>
 
-   // Clear the whole texture with red color
-   texture.clear(sf::Color::Red);
+  <span class="c"># Clear the whole texture with red color</span>
+  texture.clear(<span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Red</span>)
 
-   // Draw stuff to the texture
-   texture.draw(sprite);  // sprite is a sf::Sprite
-   texture.draw(shape);   // shape is a sf::Shape
-   texture.draw(text);    // text is a sf::Text
+  <span class="c"># Draw stuff to the texture</span>
+  texture.draw(sprite)  <span class="c"># sprite is a SF::Sprite</span>
+  texture.draw(shape)   <span class="c"># shape is a SF::Shape</span>
+  texture.draw(text)    <span class="c"># text is a SF::Text</span>
 
-   // We're done drawing to the texture
-   texture.display();
+  <span class="c"># We&#39;re done drawing to the texture</span>
+  texture.display()
 
-   // Now we start rendering to the window, clear it first
-   window.clear();
+  <span class="c"># Now we start rendering to the window, clear it first</span>
+  window.clear()
 
-   // Draw the texture
-   sf::Sprite sprite(texture.getTexture());
-   window.draw(sprite);
+  <span class="c"># Draw the texture</span>
+  sprite <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sprite</span>(texture.texture)
+  window.draw(sprite)
 
-   // End the current frame and display its contents on screen
-   window.display();
-}</code></pre>
+  <span class="c"># End the current frame and display its contents on screen</span>
+  window.display()
+<span class="k">end</span></code></pre>
 
 <p>Like <code><a href="../SF/RenderWindow.html">SF::RenderWindow</a></code>, <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code> is still able to render direct
 OpenGL stuff. It is even possible to mix together OpenGL calls
 and regular SFML drawing commands. If you need a depth buffer for
-3D rendering, don't forget to request it when calling RenderTexture::create.</p>
+3D rendering, don't forget to request it when calling RenderTexture.create.</p>
 
 <p><em>See also:</em> <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code>, <code><a href="../SF/RenderWindow.html">SF::RenderWindow</a></code>, <code><a href="../SF/View.html">SF::View</a></code>, <code><a href="../SF/Texture.html">SF::Texture</a></code></p>
 
@@ -889,12 +886,12 @@ and regular SFML drawing commands. If you need a depth buffer for
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4798" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4741" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L217" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L235" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -907,7 +904,7 @@ and regular SFML drawing commands. If you need a depth buffer for
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3Aself-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, depth_buffer : Bool = <span class="n">false</span>) : self</a>
+        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>render_texture = <a href="../SF/RenderTexture.html#new-class-method">RenderTexture.new</a>; render_texture.create(...); render_texture</code></p></div>
         
@@ -928,14 +925,14 @@ and regular SFML drawing commands. If you need a depth buffer for
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#active%3D%28active%3ABool%3D%3Cspanclass%3D%22n%22%3Etrue%3C%2Fspan%3E%29%3ABool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
+        <a href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
         
           <div class="summary"><p>Activate or deactivate the render-texture for rendering</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3ABool-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int, depth_buffer : Bool = <span class="n">false</span>) : Bool</a>
+        <a href="#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3Dfalse%29%3ABool-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int, depth_buffer : Bool = <span class="n">false</span>) : Bool</a>
         
           <div class="summary"><p>Create the render-texture</p></div>
         
@@ -1017,7 +1014,7 @@ and regular SFML drawing commands. If you need a depth buffer for
   <h3>Instance methods inherited from module <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></h3>
   
   
-    <a href="../SF/RenderTarget.html#clear%28color%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method" class="tooltip">
       <span>clear(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</span>
     clear</a>, 
     
@@ -1027,7 +1024,7 @@ and regular SFML drawing commands. If you need a depth buffer for
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
       <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
@@ -1109,12 +1106,12 @@ and regular SFML drawing commands. If you need a depth buffer for
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;width:Int,height:Int,depth_buffer:Bool&#61;&lt;spanclass&#61;&quot;n&quot;&gt;false&lt;/span&gt;&#41;:self-class-method">
+    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(width : Int, height : Int, depth_buffer : Bool = <span class="n">false</span>) : self
+        def self.<strong>new</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>render_texture = <a href="../SF/RenderTexture.html#new-class-method">RenderTexture.new</a>; render_texture.create(...); render_texture</code></p>
@@ -1124,7 +1121,7 @@ and regular SFML drawing commands. If you need a depth buffer for
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4836" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4779" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1142,12 +1139,12 @@ and regular SFML drawing commands. If you need a depth buffer for
 <p>Constructs an empty, invalid render-texture. You must
 call create to have a valid render-texture.</p>
 
-<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3ABool-instance-method">#create</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/RenderTexture.html#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3Dfalse%29%3ABool-instance-method">#create</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4806" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4749" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1157,12 +1154,12 @@ call create to have a valid render-texture.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="active&#61;&#40;active:Bool&#61;&lt;spanclass&#61;&quot;n&quot;&gt;true&lt;/span&gt;&#41;:Bool-instance-method">
+    <div class="entry-detail" id="active&#61;&#40;active:Bool&#61;true&#41;:Bool-instance-method">
       <div class="signature">
         
         def <strong>active=</strong>(active : Bool = <span class="n">true</span>) : Bool
 
-        <a class="method-permalink" href="#active%3D%28active%3ABool%3D%3Cspanclass%3D%22n%22%3Etrue%3C%2Fspan%3E%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Activate or deactivate the render-texture for rendering</p>
@@ -1181,17 +1178,17 @@ want to draw OpenGL geometry to another render target
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4910" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4853" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create&#40;width:Int,height:Int,depth_buffer:Bool&#61;&lt;spanclass&#61;&quot;n&quot;&gt;false&lt;/span&gt;&#41;:Bool-instance-method">
+    <div class="entry-detail" id="create&#40;width:Int,height:Int,depth_buffer:Bool&#61;false&#41;:Bool-instance-method">
       <div class="signature">
         
         def <strong>create</strong>(width : Int, height : Int, depth_buffer : Bool = <span class="n">false</span>) : Bool
 
-        <a class="method-permalink" href="#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#create%28width%3AInt%2Cheight%3AInt%2Cdepth_buffer%3ABool%3Dfalse%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Create the render-texture</p>
@@ -1204,14 +1201,14 @@ to use the render-texture for 3D OpenGL rendering that requires
 a depth buffer. Otherwise it is unnecessary, and you should
 leave this parameter to false (which is its default value).</p>
 
-<ul><li><em>width</em> -       Width of the render-texture</li><li><em>height</em> -      Height of the render-texture</li><li><em>depth_buffer</em> - Do you want this render-texture to have a depth buffer?</li></ul>
+<ul><li><em>width</em> - Width of the render-texture</li><li><em>height</em> - Height of the render-texture</li><li><em>depth_buffer</em> - Do you want this render-texture to have a depth buffer?</li></ul>
 
 <p><em>Returns:</em> True if creation has been successful</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4829" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4772" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,7 +1231,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4920" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4863" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,7 +1249,7 @@ it may leave the texture in an undefined state.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4811" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4754" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,7 +1264,7 @@ it may leave the texture in an undefined state.</p></div>
       
         <div class="doc"><p>Generate a mipmap using the current texture data</p>
 
-<p>This function is similar to Texture::generate_mipmap and operates
+<p>This function is similar to Texture.generate_mipmap and operates
 on the texture used as the target for drawing.
 Be aware that any draw operation may modify the base level image data.
 For this reason, calling this function only makes sense after all
@@ -1280,7 +1277,7 @@ had been previously generated.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4894" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4837" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1295,7 +1292,7 @@ had been previously generated.</p>
       
         <div class="doc"><p>Enable or disable texture repeating</p>
 
-<p>This function is similar to Texture::repeated=.
+<p>This function is similar to Texture.repeated=.
 This parameter is disabled by default.</p>
 
 <ul><li><em>repeated</em> - True to enable repeating, false to disable it</li></ul>
@@ -1305,7 +1302,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4871" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4814" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1327,7 +1324,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4879" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4822" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1350,7 +1347,7 @@ the create function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4929" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4872" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,7 +1362,7 @@ the create function.</p>
       
         <div class="doc"><p>Enable or disable texture smoothing</p>
 
-<p>This function is similar to Texture::smooth=.
+<p>This function is similar to Texture.smooth=.
 This parameter is disabled by default.</p>
 
 <ul><li><em>smooth</em> - True to enable smoothing, false to disable it</li></ul>
@@ -1375,7 +1372,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4851" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4794" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1397,7 +1394,7 @@ This parameter is disabled by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4859" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4802" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1425,7 +1422,7 @@ modified.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4945" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4888" target="_blank">View source</a>]
         
       </div>
     </div>

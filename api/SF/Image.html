@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -831,26 +831,22 @@ pass or return them to avoid useless copies.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Load an image file from a file
-sf::Image background;
-if (!background.loadFromFile("background.jpg"))
-    return -1;
+<pre><code><span class="c"># Load an image file from a file</span>
+background <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Image</span>.from_file(<span class="s">&quot;background.jpg&quot;</span>)
 
-// Create a 20x20 image filled with black color
-sf::Image image;
-image.create(20, 20, sf::Color::Black);
+<span class="c"># Create a 20x20 image filled with black color</span>
+image <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Image</span>.<span class="k">new</span>(<span class="n">20</span>, <span class="n">20</span>, <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Black</span>)
 
-// Copy image1 on image2 at position (10, 10)
-image.copy(background, 10, 10);
+<span class="c"># Copy image1 on image2 at position &#40;10, 10&#41;</span>
+image.copy(background, <span class="n">10</span>, <span class="n">10</span>)
 
-// Make the top-left pixel transparent
-sf::Color color = image.getPixel(0, 0);
-color.a = 0;
-image.setPixel(0, 0, color);
+<span class="c"># Make the top-left pixel transparent</span>
+color <span class="o">=</span> image.get_pixel(<span class="n">0</span>, <span class="n">0</span>)
+color.a <span class="o">=</span> <span class="n">128</span>
+image.set_pixel(<span class="n">0</span>, <span class="n">0</span>, color)
 
-// Save the image to a file
-if (!image.saveToFile("result.png"))
-    return -1;</code></pre>
+<span class="c"># Save the image to a file</span>
+image.save_to_file(<span class="s">&quot;result.png&quot;</span>) || error</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Texture.html">SF::Texture</a></code></p>
 
@@ -870,7 +866,7 @@ if (!image.saveToFile("result.png"))
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2743" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2706" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -883,35 +879,28 @@ if (!image.saveToFile("result.png"))
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28filename%3AString%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(filename : String) : self</a>
+        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; image</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28data%3ASlice%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(data : Slice) : self</a>
+        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; image</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28stream%3AInputStream%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(stream : InputStream) : self</a>
+        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; image</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cpixels%3A%3A%3APointer%28UInt8%29%29%3Aself-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, pixels : ::Pointer(UInt8)) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image.create(...); image</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%29%3Aself-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>)) : self</a>
+        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image.create(...); image</code></p></div>
         
@@ -932,7 +921,7 @@ if (!image.saveToFile("result.png"))
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#copy%28source%3AImage%2Cdest_x%3AInt%2Cdest_y%3AInt%2Csource_rect%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%2Capply_alpha%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#copy</strong>(source : Image, dest_x : Int, dest_y : Int, source_rect : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>), apply_alpha : Bool = <span class="n">false</span>)</a>
+        <a href="#copy%28source%3AImage%2Cdest_x%3AInt%2Cdest_y%3AInt%2Csource_rect%3AIntRect%3DIntRect.new%280%2C0%2C0%2C0%29%2Capply_alpha%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#copy</strong>(source : Image, dest_x : Int, dest_y : Int, source_rect : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>), apply_alpha : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Copy pixels from another image onto this one</p></div>
         
@@ -946,14 +935,14 @@ if (!image.saveToFile("result.png"))
       </li>
     
       <li class="entry-summary">
-        <a href="#create%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%29-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int, color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>))</a>
+        <a href="#create%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3DColor.new%280%2C0%2C0%29%29-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int, color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>))</a>
         
           <div class="summary"><p>Create the image and fill it with a unique color</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_mask_from_color%28color%3AColor%2Calpha%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#create_mask_from_color</strong>(color : Color, alpha : Int = <span class="n">0</span>)</a>
+        <a href="#create_mask_from_color%28color%3AColor%2Calpha%3AInt%3D0%29-instance-method" class="signature"><strong>#create_mask_from_color</strong>(color : Color, alpha : Int = <span class="n">0</span>)</a>
         
           <div class="summary"><p>Create a transparency mask from a specified color-key</p></div>
         
@@ -1068,12 +1057,12 @@ if (!image.saveToFile("result.png"))
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="from_file&#40;filename:String&#41;:self-class-method">
+    <div class="entry-detail" id="from_file&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(filename : String) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_file%28filename%3AString%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; image</code></p>
@@ -1083,17 +1072,17 @@ if (!image.saveToFile("result.png"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2808" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2771" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_memory&#40;data:Slice&#41;:self-class-method">
+    <div class="entry-detail" id="from_memory&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(data : Slice) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_memory%28data%3ASlice%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; image</code></p>
@@ -1103,17 +1092,17 @@ if (!image.saveToFile("result.png"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2835" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2797" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_stream&#40;stream:InputStream&#41;:self-class-method">
+    <div class="entry-detail" id="from_stream&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_stream%28stream%3AInputStream%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image<a href="../SF/Image.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; image</code></p>
@@ -1123,17 +1112,17 @@ if (!image.saveToFile("result.png"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2861" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2823" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;width:Int,height:Int,pixels:::Pointer&#40;UInt8&#41;&#41;:self-class-method">
+    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(width : Int, height : Int, pixels : ::Pointer(UInt8)) : self
+        def self.<strong>new</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Cpixels%3A%3A%3APointer%28UInt8%29%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image.create(...); image</code></p></div>
@@ -1141,25 +1130,7 @@ if (!image.saveToFile("result.png"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2784" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;width:Int,height:Int,color:Color&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Color&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#40;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(width : Int, height : Int, color : <a href="../SF/Color.html">Color</a> = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>)) : self
-
-        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>image = <a href="../SF/Image.html#new-class-method">Image.new</a>; image.create(...); image</code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2765" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2747" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1179,7 +1150,7 @@ if (!image.saveToFile("result.png"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2748" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2711" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1189,12 +1160,12 @@ if (!image.saveToFile("result.png"))
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="copy&#40;source:Image,dest_x:Int,dest_y:Int,source_rect:IntRect&#61;&lt;spanclass&#61;&quot;t&quot;&gt;IntRect&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#40;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;,apply_alpha:Bool&#61;&lt;spanclass&#61;&quot;n&quot;&gt;false&lt;/span&gt;&#41;-instance-method">
+    <div class="entry-detail" id="copy&#40;source:Image,dest_x:Int,dest_y:Int,source_rect:IntRect&#61;IntRect.new&#40;0,0,0,0&#41;,apply_alpha:Bool&#61;false&#41;-instance-method">
       <div class="signature">
         
         def <strong>copy</strong>(source : <a href="../SF/Image.html">Image</a>, dest_x : Int, dest_y : Int, source_rect : <a href="../SF/IntRect.html">IntRect</a> = <span class="t">IntRect</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>), apply_alpha : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#copy%28source%3AImage%2Cdest_x%3AInt%2Cdest_y%3AInt%2Csource_rect%3AIntRect%3D%3Cspanclass%3D%22t%22%3EIntRect%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%2Capply_alpha%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method">#</a>
+        <a class="method-permalink" href="#copy%28source%3AImage%2Cdest_x%3AInt%2Cdest_y%3AInt%2Csource_rect%3AIntRect%3DIntRect.new%280%2C0%2C0%2C0%29%2Capply_alpha%3ABool%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Copy pixels from another image onto this one</p>
@@ -1209,12 +1180,12 @@ If <em>apply_alpha</em> is set to true, the transparency of
 source pixels is applied. If it is false, the pixels are
 copied unchanged with their alpha value.</p>
 
-<ul><li><em>source</em> -     Source image to copy</li><li><em>dest_x</em> -      X coordinate of the destination position</li><li><em>dest_y</em> -      Y coordinate of the destination position</li><li><em>source_rect</em> - Sub-rectangle of the source image to copy</li><li><em>apply_alpha</em> - Should the copy take into account the source transparency?</li></ul></div>
+<ul><li><em>source</em> - Source image to copy</li><li><em>dest_x</em> - X coordinate of the destination position</li><li><em>dest_y</em> - Y coordinate of the destination position</li><li><em>source_rect</em> - Sub-rectangle of the source image to copy</li><li><em>apply_alpha</em> - Should the copy take into account the source transparency?</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2920" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2882" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,42 +1205,42 @@ and have the given <em>width</em> and <em>height.</em> If not, this is
 an undefined behavior.
 If <em>pixels</em> is null, an empty image is created.</p>
 
-<ul><li><em>width</em> -  Width of the image</li><li><em>height</em> - Height of the image</li><li><em>pixels</em> - Array of pixels to copy to the image</li></ul></div>
+<ul><li><em>width</em> - Width of the image</li><li><em>height</em> - Height of the image</li><li><em>pixels</em> - Array of pixels to copy to the image</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2780" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2743" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create&#40;width:Int,height:Int,color:Color&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Color&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#40;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;&#41;-instance-method">
+    <div class="entry-detail" id="create&#40;width:Int,height:Int,color:Color&#61;Color.new&#40;0,0,0&#41;&#41;-instance-method">
       <div class="signature">
         
         def <strong>create</strong>(width : Int, height : Int, color : <a href="../SF/Color.html">Color</a> = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>))
 
-        <a class="method-permalink" href="#create%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#create%28width%3AInt%2Cheight%3AInt%2Ccolor%3AColor%3DColor.new%280%2C0%2C0%29%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Create the image and fill it with a unique color</p>
 
-<ul><li><em>width</em> -  Width of the image</li><li><em>height</em> - Height of the image</li><li><em>color</em> -  Fill color</li></ul></div>
+<ul><li><em>width</em> - Width of the image</li><li><em>height</em> - Height of the image</li><li><em>color</em> - Fill color</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2761" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2724" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_mask_from_color&#40;color:Color,alpha:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;-instance-method">
+    <div class="entry-detail" id="create_mask_from_color&#40;color:Color,alpha:Int&#61;0&#41;-instance-method">
       <div class="signature">
         
         def <strong>create_mask_from_color</strong>(color : <a href="../SF/Color.html">Color</a>, alpha : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#create_mask_from_color%28color%3AColor%2Calpha%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method">#</a>
+        <a class="method-permalink" href="#create_mask_from_color%28color%3AColor%2Calpha%3AInt%3D0%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Create a transparency mask from a specified color-key</p>
@@ -1283,7 +1254,7 @@ become transparent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2900" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2862" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1299,7 +1270,7 @@ become transparent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2990" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2952" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,7 +1288,7 @@ become transparent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2753" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2716" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1335,7 +1306,7 @@ become transparent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2969" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2931" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,7 +1324,7 @@ become transparent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2973" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2935" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1381,7 +1352,7 @@ an undefined behavior.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2949" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2911" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1410,7 +1381,7 @@ If this function fails, the image is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2801" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2764" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1430,7 +1401,7 @@ psd, hdr and pic. Some format options are not supported,
 like progressive jpeg.
 If this function fails, the image is left unchanged.</p>
 
-<ul><li><em>data</em> - Pointer to the file data in memory</li><li><em>size</em> - Size of the data to load, in bytes</li></ul>
+<ul><li><em>data</em> - Slice containing the file data in memory</li></ul>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
@@ -1439,7 +1410,7 @@ If this function fails, the image is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2828" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2790" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1468,7 +1439,7 @@ If this function fails, the image is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2854" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2816" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1495,7 +1466,7 @@ If the image is empty, a null pointer is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2964" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2926" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1524,7 +1495,7 @@ if it already exists. This function fails if the image is empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2880" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2842" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1543,14 +1514,14 @@ if it already exists. This function fails if the image is empty.</p>
 coordinates, using out-of-range values will result in
 an undefined behavior.</p>
 
-<ul><li><em>x</em> -     X coordinate of pixel to change</li><li><em>y</em> -     Y coordinate of pixel to change</li><li><em>color</em> - New color of the pixel</li></ul>
+<ul><li><em>x</em> - X coordinate of pixel to change</li><li><em>y</em> - Y coordinate of pixel to change</li><li><em>color</em> - New color of the pixel</li></ul>
 
 <p><em>See also:</em> <code>pixel</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2934" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2896" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1570,7 +1541,7 @@ an undefined behavior.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2887" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2849" target="_blank">View source</a>]
         
       </div>
     </div>

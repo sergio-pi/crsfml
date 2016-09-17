@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -817,13 +817,13 @@ functions of <code><a href="../SF/Shape.html">SF::Shape</a></code> (outline, col
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>sf::CircleShape circle;
-circle.setRadius(150);
-circle.setOutlineColor(sf::Color::Red);
-circle.setOutlineThickness(5);
-circle.setPosition(10, 20);
+<pre><code>circle <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">CircleShape</span>.<span class="k">new</span>
+circle.radius <span class="o">=</span> <span class="n">150</span>
+circle.outline_color <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Red</span>
+circle.outline_thickness <span class="o">=</span> <span class="n">5</span>
+circle.position <span class="o">=</span> {<span class="n">10</span>, <span class="n">20</span>}
 ...
-window.draw(circle);</code></pre>
+window.draw circle</code></pre>
 
 <p>Since the graphics card can't draw perfect circles, we have to
 fake them with multiple triangles connected to each other. The
@@ -852,7 +852,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2124" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2091" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -865,7 +865,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28radius%3ANumber%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2Cpoint_count%3AInt%3D%3Cspanclass%3D%22n%22%3E30%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)</a>
+        <a href="#new%28radius%3ANumber%3D0%2Cpoint_count%3AInt%3D30%29-class-method" class="signature"><strong>.new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)</a>
         
           <div class="summary"><p>Default constructor</p></div>
         
@@ -891,7 +891,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#point_count%3ALibC%3A%3ASizeT-instance-method" class="signature"><strong>#point_count</strong> : LibC::SizeT</a>
+        <a href="#point_count%3AInt32-instance-method" class="signature"><strong>#point_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of points of the circle</p></div>
         
@@ -986,12 +986,12 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
     outline_thickness=</a>, 
     
   
-    <a href="../SF/Shape.html#point_count%3ALibC%3A%3ASizeT-instance-method" class="tooltip">
-      <span>point_count : LibC::SizeT</span>
+    <a href="../SF/Shape.html#point_count%3AInt32-instance-method" class="tooltip">
+      <span>point_count : Int32</span>
     point_count</a>, 
     
   
-    <a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3D%3Cspanclass%3D%22n%22%3Efalse%3C%2Fspan%3E%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#set_texture%28texture%3ATexture%7CNil%2Creset_rect%3ABool%3Dfalse%29-instance-method" class="tooltip">
       <span>set_texture(texture : Texture | Nil, reset_rect : Bool = <span class="n">false</span>)</span>
     set_texture</a>, 
     
@@ -1171,22 +1171,22 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;radius:Number&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,point_count:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;30&lt;/span&gt;&#41;-class-method">
+    <div class="entry-detail" id="new&#40;radius:Number&#61;0,point_count:Int&#61;30&#41;-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)
 
-        <a class="method-permalink" href="#new%28radius%3ANumber%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2Cpoint_count%3AInt%3D%3Cspanclass%3D%22n%22%3E30%3C%2Fspan%3E%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28radius%3ANumber%3D0%2Cpoint_count%3AInt%3D30%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Default constructor</p>
 
-<ul><li><em>radius</em> -     Radius of the circle</li><li><em>point_count</em> - Number of points composing the circle</li></ul></div>
+<ul><li><em>radius</em> - Radius of the circle</li><li><em>point_count</em> - Number of points composing the circle</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2130" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2097" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1207,7 +1207,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2362" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2329" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,24 +1227,24 @@ the shape's transforms (position, rotation, scale) are
 not taken into account.
 The result is undefined if <em>index</em> is out of the valid range.</p>
 
-<ul><li><em>index</em> - Index of the point to get, in range [0 .. point_count() - 1]</li></ul>
+<ul><li><em>index</em> - Index of the point to get, in range <code>0 ... point_count</code></li></ul>
 
 <p><em>Returns:</em> index-th point of the shape</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2180" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2147" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="point_count:LibC::SizeT-instance-method">
+    <div class="entry-detail" id="point_count:Int32-instance-method">
       <div class="signature">
         
-        def <strong>point_count</strong> : LibC::SizeT
+        def <strong>point_count</strong> : Int32
 
-        <a class="method-permalink" href="#point_count%3ALibC%3A%3ASizeT-instance-method">#</a>
+        <a class="method-permalink" href="#point_count%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the number of points of the circle</p>
@@ -1256,7 +1256,7 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2166" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1273,12 +1273,12 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <ul><li><em>count</em> - New number of points of the circle</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count%3ALibC%3A%3ASizeT-instance-method">#point_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count%3AInt32-instance-method">#point_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2158" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1300,7 +1300,7 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2149" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,7 +1322,7 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L2141" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L2108" target="_blank">View source</a>]
         
       </div>
     </div>

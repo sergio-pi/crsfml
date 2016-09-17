@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -850,40 +850,28 @@ center, for example. To do such things, use <code><a href="../SF/Transform.html"
 combined with <code><a href="../SF/Drawable.html">SF::Drawable</a></code> -- that's what SFML's sprites,
 texts and shapes do.</p>
 
-<pre><code class='language-c++'>class MyEntity : public sf::Transformable, public sf::Drawable
-{
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
-    {
-        states.transform *= getTransform();
-        target.draw(..., states);
-    }
-};
+<pre><code><span class="k">class</span> <span class="t">MyEntity</span> <span class="o"><</span> <span class="t">SF</span><span class="t">::</span><span class="t">Transformable</span>
+  <span class="k">include</span> <span class="t">SF</span><span class="t">::</span><span class="t">Drawable</span>
 
-MyEntity entity;
-entity.setPosition(10, 20);
-entity.setRotation(45);
-window.draw(entity);</code></pre>
+  <span class="k">def</span> <span class="m">draw</span>(target, states)
+    states.transform *= <span class="k">self</span>.transform
+    target.draw(..., states)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+entity <span class="o">=</span> <span class="t">MyEntity</span>.<span class="k">new</span>
+entity.position <span class="o">=</span> {<span class="n">10</span>, <span class="n">20</span>}
+entity.rotation <span class="o">=</span> <span class="n">45</span>
+window.draw entity</code></pre>
 
 <p>It can also be used as a member, if you don't want to use
 its API directly (because you don't need all its functions,
 or you have different naming conventions for example).</p>
 
-<pre><code class='language-c++'>class MyEntity
-{
-public:
-    void SetPosition(const MyVector& v)
-    {
-        myTransform.setPosition(v.x(), v.y());
-    }
-
-    void Draw(sf::RenderTarget& target) const
-    {
-        target.draw(..., myTransform.getTransform());
-    }
-
-private:
-    sf::Transformable myTransform;
-};</code></pre>
+<pre><code><span class="k">class</span> <span class="t">MyEntity</span>
+  @transform : <span class="t">SF</span><span class="t">::</span><span class="t">Transformable</span>
+  forward_missing_to @transform
+<span class="k">end</span></code></pre>
 
 <p>A note on coordinates and undistorted rendering:
 By default, SFML (or more exactly, OpenGL) may interpolate drawable objects
@@ -925,7 +913,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L937" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L909" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -1129,7 +1117,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L940" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L912" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1150,7 +1138,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1199" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1168,7 +1156,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L945" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L917" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1190,7 +1178,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1180" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1152" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,7 +1197,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
 unlike position= which overwrites it.
 Thus, it is equivalent to the following code:</p>
 
-<pre><code class='language-c++'>object.setPosition(object.getPosition() + offset);</code></pre>
+<pre><code>object.position += offset</code></pre>
 
 <ul><li><em>offset</em> - Offset</li></ul>
 
@@ -1218,7 +1206,7 @@ Thus, it is equivalent to the following code:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1114" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1086" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1237,8 +1225,8 @@ Thus, it is equivalent to the following code:</p>
 unlike position= which overwrites it.
 Thus, it is equivalent to the following code:</p>
 
-<pre><code class='language-c++'>sf::Vector2f pos = object.getPosition();
-object.setPosition(pos.x + offsetX, pos.y + offsetY);</code></pre>
+<pre><code>pos <span class="o">=</span> object.position
+object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="o">+</span> offset_y)</code></pre>
 
 <ul><li><em>offset_x</em> - X offset</li><li><em>offset_y</em> - Y offset</li></ul>
 
@@ -1247,7 +1235,7 @@ object.setPosition(pos.x + offsetX, pos.y + offsetY);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1099" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1071" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1269,7 +1257,7 @@ object.setPosition(pos.x + offsetX, pos.y + offsetY);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1080" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1052" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1298,7 +1286,7 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1040" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1012" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1320,7 +1308,7 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1049" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1021" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1346,7 +1334,7 @@ The default position of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L970" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L942" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,14 +1353,14 @@ The default position of a transformable object is (0, 0).</p>
 unlike rotation= which overwrites it.
 Thus, it is equivalent to the following code:</p>
 
-<pre><code class='language-c++'>object.setRotation(object.getRotation() + angle);</code></pre>
+<pre><code>object.rotation += angle</code></pre>
 
 <ul><li><em>angle</em> - Angle of rotation, in degrees</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1128" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1387,7 +1375,7 @@ Thus, it is equivalent to the following code:</p>
       
         <div class="doc"><p>get the orientation of the object</p>
 
-<p>The rotation is always in the range [0, 360].</p>
+<p>The rotation is always in the range <code>0.0 ... 360.0</code></p>
 
 <p><em>Returns:</em> Current rotation, in degrees</p>
 
@@ -1396,7 +1384,7 @@ Thus, it is equivalent to the following code:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1061" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1033" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,7 +1410,7 @@ The default rotation of a transformable object is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L983" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L955" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1444,7 +1432,7 @@ The default rotation of a transformable object is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1070" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1042" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1463,8 +1451,8 @@ The default rotation of a transformable object is 0.</p>
 unlike scale= which overwrites it.
 Thus, it is equivalent to the following code:</p>
 
-<pre><code class='language-c++'>sf::Vector2f scale = object.getScale();
-object.setScale(scale.x * factorX, scale.y * factorY);</code></pre>
+<pre><code>scale <span class="o">=</span> object.scale
+object.set_scale(scale.x <span class="o">*</span> factor_x, scale.y <span class="o">*</span> factor_y)</code></pre>
 
 <ul><li><em>factor_x</em> - Horizontal scale factor</li><li><em>factor_y</em> - Vertical scale factor</li></ul>
 
@@ -1473,7 +1461,7 @@ object.setScale(scale.x * factorX, scale.y * factorY);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1145" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1492,8 +1480,8 @@ object.setScale(scale.x * factorX, scale.y * factorY);</code></pre>
 unlike scale= which overwrites it.
 Thus, it is equivalent to the following code:</p>
 
-<pre><code class='language-c++'>sf::Vector2f scale = object.getScale();
-object.setScale(scale.x * factor.x, scale.y * factor.y);</code></pre>
+<pre><code>scale <span class="o">=</span> object.scale
+object.scale <span class="o">=</span> {scale.x <span class="o">*</span> factor.x, scale.y <span class="o">*</span> factor.y}</code></pre>
 
 <ul><li><em>factor</em> - Scale factors</li></ul>
 
@@ -1502,7 +1490,7 @@ object.setScale(scale.x * factor.x, scale.y * factor.y);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1161" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1133" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1528,7 +1516,7 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1008" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L980" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1557,7 +1545,7 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1025" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L997" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1583,7 +1571,7 @@ The default position of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L958" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L930" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1609,7 +1597,7 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L996" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L968" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1631,7 +1619,7 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1170" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1142" target="_blank">View source</a>]
         
       </div>
     </div>

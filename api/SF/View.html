@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -833,29 +833,29 @@ affected by the view until you use another view.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>sf::RenderWindow window;
-sf::View view;
+<pre><code>window <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderWindow</span>.<span class="k">new</span>
+view <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">View</span>.<span class="k">new</span>
 
-// Initialize the view to a rectangle located at (100, 100) and with a size of 400x200
-view.reset(sf::FloatRect(100, 100, 400, 200));
+<span class="c"># Initialize the view to a rectangle located at &#40;100, 100&#41; and with a size of 400x200</span>
+view.reset(<span class="t">SF</span>.float_rect(<span class="n">100</span>, <span class="n">100</span>, <span class="n">400</span>, <span class="n">200</span>))
 
-// Rotate it by 45 degrees
-view.rotate(45);
+<span class="c"># Rotate it by 45 degrees</span>
+view.rotate(<span class="n">45</span>)
 
-// Set its target viewport to be half of the window
-view.setViewport(sf::FloatRect(0.f, 0.f, 0.5f, 1.f));
+<span class="c"># Set its target viewport to be half of the window</span>
+view.viewport <span class="o">=</span> <span class="t">SF</span>.float_rect(<span class="n">0.0</span>, <span class="n">0.0</span>, <span class="n">0.5</span>, <span class="n">1.0</span>)
 
-// Apply it
-window.setView(view);
+<span class="c"># Apply it</span>
+window.view <span class="o">=</span> view
 
-// Render stuff
-window.draw(someSprite);
+<span class="c"># Render stuff</span>
+window.draw some_sprite
 
-// Set the default view back
-window.setView(window.getDefaultView());
+<span class="c"># Set the default view back</span>
+window.view <span class="o">=</span> window.default_view
 
-// Render stuff not affected by the view
-window.draw(someText);</code></pre>
+<span class="c"># Render stuff not affected by the view</span>
+window.draw some_text</code></pre>
 
 <p>See also the note on coordinates and undistorted rendering in <code><a href="../SF/Transformable.html">SF::Transformable</a></code>.</p>
 
@@ -877,7 +877,7 @@ window.draw(someText);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4231" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4177" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -890,9 +890,9 @@ window.draw(someText);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(center : Vector2 | Tuple, size : Vector2 | Tuple)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the view from its center and size</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -904,9 +904,9 @@ window.draw(someText);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(center : Vector2 | Tuple, size : Vector2 | Tuple)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the view from its center and size</p></div>
         
       </li>
     
@@ -1068,22 +1068,22 @@ window.draw(someText);</code></pre>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;center:Vector2|Tuple,size:Vector2|Tuple&#41;-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(center : <a href="../SF/Vector2.html">Vector2</a> | Tuple, size : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the view from its center and size</p>
+        <div class="doc"><p>Default constructor</p>
 
-<ul><li><em>center</em> - Center of the zone to display</li><li><em>size</em> -   Size of zone to display</li></ul></div>
+<p>This constructor creates a default view of (0, 0, 1000, 1000)</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4251" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4182" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1103,27 +1103,27 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4243" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4189" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new-class-method">
+    <div class="entry-detail" id="new&#40;center:Vector2|Tuple,size:Vector2|Tuple&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>
+        def self.<strong>new</strong>(center : <a href="../SF/Vector2.html">Vector2</a> | Tuple, size : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#new-class-method">#</a>
+        <a class="method-permalink" href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc"><p>Construct the view from its center and size</p>
 
-<p>This constructor creates a default view of (0, 0, 1000, 1000)</p></div>
+<ul><li><em>center</em> - Center of the zone to display</li><li><em>size</em> - Size of zone to display</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4236" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4197" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1150,7 +1150,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4333" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4279" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,7 +1172,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4271" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4217" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1188,7 +1188,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4446" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4392" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,7 +1212,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4427" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4373" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,7 +1234,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4373" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4319" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1256,7 +1256,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4381" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4327" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1280,7 +1280,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4325" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4271" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1302,7 +1302,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4390" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4336" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1324,7 +1324,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4353" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4299" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1348,7 +1348,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4300" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4246" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1370,7 +1370,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4263" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4209" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1385,14 +1385,14 @@ window.draw(someText);</code></pre>
       
         <div class="doc"><p>Set the size of the view</p>
 
-<ul><li><em>width</em> -  New width of the view</li><li><em>height</em> - New height of the view</li></ul>
+<ul><li><em>width</em> - New width of the view</li><li><em>height</em> - New height of the view</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4281" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4227" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1414,7 +1414,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4343" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4289" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1436,7 +1436,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4289" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4235" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1460,7 +1460,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4415" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4361" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1482,7 +1482,7 @@ window.draw(someText);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4362" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4308" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1511,7 +1511,7 @@ By default, a view has a viewport which covers the entire target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4315" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4261" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1537,7 +1537,7 @@ screen grows or shrinks.
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4405" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4351" target="_blank">View source</a>]
         
       </div>
     </div>

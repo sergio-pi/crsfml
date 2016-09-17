@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -828,11 +828,11 @@ you create your own algorithms that operate on an InputStream.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>void process(InputStream& stream);
+<pre><code><span class="k">def</span> <span class="m">process</span>(stream : <span class="t">InputStream</span>)
+<span class="k">end</span>
 
-MemoryInputStream stream;
-stream.open(thePtr, theSize);
-process(stream);</code></pre>
+stream <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">MemoryInputStream</span>.open(slice)
+process(stream)</code></pre>
 
 <p>InputStream, FileInputStream</p>
 
@@ -852,7 +852,7 @@ process(stream);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L646" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L606" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -865,16 +865,16 @@ process(stream);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#open%28data%3ASlice%29%3Aself-class-method" class="signature"><strong>.open</strong>(data : Slice) : self</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28data%3ASlice%29%3Aself-class-method">.open(...)</a>; memory_input_stream</code></p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.open</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">.open(...)</a>; memory_input_stream</code></p></div>
         
       </li>
     
@@ -997,24 +997,6 @@ process(stream);</code></pre>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="open&#40;data:Slice&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>open</strong>(data : Slice) : self
-
-        <a class="method-permalink" href="#open%28data%3ASlice%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28data%3ASlice%29%3Aself-class-method">.open(...)</a>; memory_input_stream</code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L662" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
@@ -1028,7 +1010,25 @@ process(stream);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L649" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L609" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open&#40;*args,**kwargs&#41;:self-class-method">
+      <div class="signature">
+        
+        def self.<strong>open</strong>(*args, **kwargs) : self
+
+        <a class="method-permalink" href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">.open(...)</a>; memory_input_stream</code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L621" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1049,7 +1049,7 @@ process(stream);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L718" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L676" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1064,12 +1064,12 @@ process(stream);</code></pre>
       
         <div class="doc"><p>Open the stream from its data</p>
 
-<ul><li><em>data</em> -        Pointer to the data in memory</li><li><em>size_in_bytes</em> - Size of the data, in bytes</li></ul></div>
+<ul><li><em>data</em> - Pointer to the data in memory</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L658" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L617" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1087,14 +1087,14 @@ process(stream);</code></pre>
 <p>After reading, the stream's reading position must be
 advanced by the amount of bytes read.</p>
 
-<ul><li><em>data</em> - Buffer where to copy the read data</li><li><em>size</em> - Desired number of bytes to read</li></ul>
+<ul><li><em>data</em> - Buffer where to copy the read data</li></ul>
 
 <p><em>Returns:</em> The number of bytes actually read, or -1 on error</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L676" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L634" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1116,7 +1116,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L685" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L643" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1136,7 +1136,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L699" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L657" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1156,7 +1156,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L692" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L650" target="_blank">View source</a>]
         
       </div>
     </div>

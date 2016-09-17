@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -843,42 +843,40 @@ the socket instance is still alive, you can call disconnect.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// ----- The client -----
+<pre><code><span class="c"># ----- The client -----</span>
 
-// Create a socket and connect it to 192.168.1.50 on port 55001
-sf::TcpSocket socket;
-socket.connect("192.168.1.50", 55001);
+<span class="c"># Create a socket and connect it to 192.168.1.50 on port 55001</span>
+socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>.<span class="k">new</span>
+socket.connect(<span class="s">&quot;192.168.1.50&quot;</span>, <span class="n">55001</span>)
 
-// Send a message to the connected host
-std::string message = "Hi, I am a client";
-socket.send(message.c_str(), message.size() + 1);
+<span class="c"># Send a message to the connected host</span>
+message <span class="o">=</span> <span class="s">&quot;Hi, I am a client&quot;</span>
+socket.send(message.to_slice)
 
-// Receive an answer from the server
-char buffer[1024];
-std::size_t received = 0;
-socket.receive(buffer, sizeof(buffer), received);
-std::cout &lt;&lt; "The server said: " &lt;&lt; buffer &lt;&lt; std::endl;
+<span class="c"># Receive an answer from the server</span>
+buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
+status, received <span class="o">=</span> socket.receive(buffer)
+puts <span class="s">&quot;The server said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
 
-// ----- The server -----
+<span class="c"># ----- The server -----</span>
 
-// Create a listener to wait for incoming connections on port 55001
-sf::TcpListener listener;
-listener.listen(55001);
+<span class="c"># Create a listener to wait for incoming connections on port 55001</span>
+listener <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpListener</span>.<span class="k">new</span>
+listener.listen(<span class="n">55001</span>)
 
-// Wait for a connection
-sf::TcpSocket socket;
-listener.accept(socket);
-std::cout &lt;&lt; "New client connected: " &lt;&lt; socket.getRemoteAddress() &lt;&lt; std::endl;
+<span class="c"># Wait for a connection</span>
+socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>.<span class="k">new</span>
+listener.accept(socket)
+puts <span class="s">&quot;New client connected: </span><span class="i">#{</span></span>socket.remote_address<span class="s"><span class="i">}</span>&quot;</span>
 
-// Receive a message from the client
-char buffer[1024];
-std::size_t received = 0;
-socket.receive(buffer, sizeof(buffer), received);
-std::cout &lt;&lt; "The client said: " &lt;&lt; buffer &lt;&lt; std::endl;
+<span class="c"># Receive a message from the client</span>
+buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
+status, received <span class="o">=</span> socket.receive(buffer)
+puts <span class="s">&quot;The client said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
 
-// Send an answer
-std::string message = "Welcome, client";
-socket.send(message.c_str(), message.size() + 1);</code></pre>
+<span class="c"># Send an answer</span>
+message <span class="o">=</span> <span class="s">&quot;Welcome, client&quot;</span>
+socket.send(message.to_slice)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Socket.html">SF::Socket</a></code>, <code><a href="../SF/UdpSocket.html">SF::UdpSocket</a></code>, <code><a href="../SF/Packet.html">SF::Packet</a></code></p>
 
@@ -898,7 +896,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L184" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L181" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -925,7 +923,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#connect</strong>(remote_address : IpAddress, remote_port : Int, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Socket::Status</a>
+        <a href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#connect</strong>(remote_address : IpAddress, remote_port : Int, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Socket::Status</a>
         
           <div class="summary"><p>Connect the socket to a remote peer</p></div>
         
@@ -953,7 +951,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, LibC::SizeT)</a>
+        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
         
           <div class="summary"><p>Receive raw data from the remote peer</p></div>
         
@@ -974,7 +972,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method" class="signature"><strong>#send</strong>(data : Slice) : ::Tuple(Socket::Status, LibC::SizeT)</a>
+        <a href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#send</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
         
           <div class="summary"><p>Send raw data to the remote peer</p></div>
         
@@ -1069,7 +1067,7 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,12 +1077,12 @@ socket.send(message.c_str(), message.size() + 1);</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="connect&#40;remote_address:IpAddress,remote_port:Int,timeout:Time&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Time&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Zero&lt;/span&gt;&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="connect&#40;remote_address:IpAddress,remote_port:Int,timeout:Time&#61;Time::Zero&#41;:Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>connect</strong>(remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Connect the socket to a remote peer</p>
@@ -1094,7 +1092,7 @@ if the remote peer is not reachable. The last parameter allows
 you to stop trying to connect after a given timeout.
 If the socket was previously connected, it is first disconnected.</p>
 
-<ul><li><em>remote_address</em> - Address of the remote peer</li><li><em>remote_port</em> -    Port of the remote peer</li><li><em>timeout</em> -       Optional maximum time to wait</li></ul>
+<ul><li><em>remote_address</em> - Address of the remote peer</li><li><em>remote_port</em> - Port of the remote peer</li><li><em>timeout</em> - Optional maximum time to wait</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
@@ -1103,7 +1101,7 @@ If the socket was previously connected, it is first disconnected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L242" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1121,12 +1119,12 @@ If the socket was previously connected, it is first disconnected.</p>
 <p>This function gracefully closes the connection. If the
 socket is not connected, this function has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L252" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L249" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,12 +1143,12 @@ socket is not connected, this function has no effect.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code>, <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code>, <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1173,22 +1171,22 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L332" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L329" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,LibC::SizeT&#41;-instance-method">
+    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32&#41;-instance-method">
       <div class="signature">
         
-        def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, LibC::SizeT)
+        def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
 
-        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#</a>
+        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Receive raw data from the remote peer</p>
@@ -1197,16 +1195,18 @@ This function will fail if the socket is not connected.</p>
 bytes are actually received.
 This function will fail if the socket is not connected.</p>
 
-<ul><li><em>data</em> -     Pointer to the array to fill with the received bytes</li><li><em>size</em> -     Maximum number of bytes that can be received</li><li><em>received</em> - This variable is filled with the actual number of bytes received</li></ul>
+<ul><li><em>data</em> - The slice to fill with the received bytes</li></ul>
 
-<p><em>Returns:</em> Status code</p>
+<p><em>Returns:</em></p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#send</a></code></p></div>
+<ul><li>Status code</li><li>The actual number of bytes received</li></ul>
+
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L300" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L297" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1231,7 +1231,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L211" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1256,33 +1256,35 @@ the socket is connected</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L224" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L221" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,LibC::SizeT&#41;-instance-method">
+    <div class="entry-detail" id="send&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32&#41;-instance-method">
       <div class="signature">
         
-        def <strong>send</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, LibC::SizeT)
+        def <strong>send</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
 
-        <a class="method-permalink" href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%29-instance-method">#</a>
+        <a class="method-permalink" href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Send raw data to the remote peer</p>
 
 <p>This function will fail if the socket is not connected.</p>
 
-<ul><li><em>data</em> - Pointer to the sequence of bytes to send</li><li><em>size</em> - Number of bytes to send</li><li><em>sent</em> - The number of bytes sent will be written here</li></ul>
+<ul><li><em>data</em> - Slice containing the bytes to send</li></ul>
 
-<p><em>Returns:</em> Status code</p>
+<p><em>Returns:</em></p>
+
+<ul><li>Status code</li><li>The number of bytes sent</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L283" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L280" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1312,7 +1314,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L317" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L314" target="_blank">View source</a>]
         
       </div>
     </div>

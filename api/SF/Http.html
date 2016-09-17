@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -837,28 +837,22 @@ from the server.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Create a new HTTP client
-sf::Http http;
+<pre><code><span class="c"># Create a new HTTP client</span>
+http <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Http</span>.<span class="k">new</span>(<span class="s">&quot;http://www.sfml-dev.org&quot;</span>)
 
-// We'll work on http://www.sfml-dev.org
-http.setHost("http://www.sfml-dev.org");
+<span class="c"># Prepare a request to get the &#39;features.php&#39; page</span>
+request <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Http</span><span class="t">::</span><span class="t">Request</span>.<span class="k">new</span>(<span class="s">&quot;features.php&quot;</span>)
 
-// Prepare a request to get the 'features.php' page
-sf::Http::Request request("features.php");
+<span class="c"># Send the request</span>
+response <span class="o">=</span> http.send_request request
 
-// Send the request
-sf::Http::Response response = http.sendRequest(request);
-
-// Check the status code and display the result
-sf::Http::Response::Status status = response.getStatus();
-if (status == sf::Http::Response::Ok)
-{
-    std::cout &lt;&lt; response.getBody() &lt;&lt; std::endl;
-}
-else
-{
-    std::cout &lt;&lt; "Error " &lt;&lt; status &lt;&lt; std::endl;
-}</code></pre>
+<span class="c"># Check the status code and display the result</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Http</span><span class="t">::</span><span class="t">Response</span><span class="t">::</span><span class="t">Status</span> status <span class="o">=</span> response.getStatus()
+<span class="k">if</span> response.status <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Http</span><span class="t">::</span><span class="t">Response</span><span class="t">::</span><span class="t">Ok</span>
+    puts response.body
+<span class="k">else</span>
+    puts <span class="s">&quot;Error </span><span class="i">#{</span></span>response.status<span class="s"><span class="i">}</span>&quot;</span>
+<span class="k">end</span></code></pre>
 
 
 
@@ -883,7 +877,7 @@ else
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1248" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1242" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -896,16 +890,16 @@ else
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28host%3AString%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the HTTP client with the target host</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the HTTP client with the target host</p></div>
         
       </li>
     
@@ -917,14 +911,14 @@ else
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3AHttp%3A%3AResponse-instance-method" class="signature"><strong>#send_request</strong>(request : Http::Request, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Http::Response</a>
+        <a href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AHttp%3A%3AResponse-instance-method" class="signature"><strong>#send_request</strong>(request : Http::Request, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Http::Response</a>
         
           <div class="summary"><p>Send a HTTP request and return the server's response.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_host%28host%3AString%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int = <span class="n">0</span>)</a>
+        <a href="#set_host%28host%3AString%2Cport%3AInt%3D0%29-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int = <span class="n">0</span>)</a>
         
           <div class="summary"><p>Set the target host</p></div>
         
@@ -964,12 +958,30 @@ else
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;host:String,port:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;-class-method">
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1478" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;host:String,port:Int&#61;0&#41;-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(host : String, port : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#new%28host%3AString%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method">#</a>
       </div>
       
         <div class="doc"><p>Construct the HTTP client with the target host</p>
@@ -986,25 +998,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1499" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1484" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1493" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1014,12 +1008,12 @@ standard one, or use an unknown protocol.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="send_request&#40;request:Http::Request,timeout:Time&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Time&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Zero&lt;/span&gt;&#41;:Http::Response-instance-method">
+    <div class="entry-detail" id="send_request&#40;request:Http::Request,timeout:Time&#61;Time::Zero&#41;:Http::Response-instance-method">
       <div class="signature">
         
         def <strong>send_request</strong>(request : <a href="../SF/Http/Request.html">Http::Request</a>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Http/Response.html">Http::Response</a>
 
-        <a class="method-permalink" href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3AHttp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AHttp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Send a HTTP request and return the server's response.</p>
@@ -1040,17 +1034,17 @@ of Time::Zero means that the client will use the system default timeout
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1533" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1527" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_host&#40;host:String,port:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;-instance-method">
+    <div class="entry-detail" id="set_host&#40;host:String,port:Int&#61;0&#41;-instance-method">
       <div class="signature">
         
         def <strong>set_host</strong>(host : String, port : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#set_host%28host%3AString%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_host%28host%3AString%2Cport%3AInt%3D0%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Set the target host</p>
@@ -1068,7 +1062,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L1515" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1509" target="_blank">View source</a>]
         
       </div>
     </div>

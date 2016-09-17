@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -824,22 +824,20 @@ one thread at a time to access a critical region of your code.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>Database database; // this is a critical resource that needs some protection
-sf::Mutex mutex;
+<pre><code>@database <span class="o">=</span> <span class="t">Database</span>.<span class="k">new</span> <span class="c"># this is a critical resource that needs some protection</span>
+@mutex <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Mutex</span>.<span class="k">new</span>
 
-void thread1()
-{
-    mutex.lock(); // this call will block the thread if the mutex is already locked by thread2
-    database.write(...);
-    mutex.unlock(); // if thread2 was waiting, it will now be unblocked
-}
+<span class="k">def</span> <span class="m">thread1</span>()
+  @mutex.lock() <span class="c"># this call will block the thread if the mutex is already locked by thread2</span>
+  @database.write(...)
+  @mutex.unlock() <span class="c"># if thread2 was waiting, it will now be unblocked</span>
+<span class="k">end</span>
 
-void thread2()
-{
-    mutex.lock(); // this call will block the thread if the mutex is already locked by thread1
-    database.write(...);
-    mutex.unlock(); // if thread1 was waiting, it will now be unblocked
-}</code></pre>
+<span class="k">def</span> <span class="m">thread2</span>()
+  @mutex.lock() <span class="c"># this call will block the thread if the mutex is already locked by thread1</span>
+  @database.write(...)
+  @mutex.unlock() <span class="c"># if thread1 was waiting, it will now be unblocked</span>
+<span class="k">end</span></code></pre>
 
 <p>Be very careful with mutexes. A bad usage can lead to bad problems,
 like deadlocks (two threads are waiting for each other and the
@@ -847,7 +845,7 @@ application is globally stuck).</p>
 
 <p>To make the usage of mutexes more robust, particularly in
 environments where exceptions can be thrown, you should
-use the helper class <code>SF::Lock</code> to lock/unlock mutexes.</p>
+use the helper method <code><a href="../SF/Mutex.html#synchronize%28%26block%29-instance-method">#synchronize</a></code> to lock/unlock mutexes.</p>
 
 <p>SFML mutexes are recursive, which means that you can lock
 a mutex multiple times in the same thread without creating
@@ -855,8 +853,6 @@ a deadlock. In this case, the first call to lock() behaves
 as usual, and the following ones have no effect.
 However, you must call unlock() exactly as many times as you
 called lock(). If you don't, the mutex won't be released.</p>
-
-<p><em>See also:</em> <code>SF::Lock</code></p>
 
 
 
@@ -881,12 +877,12 @@ called lock(). If you don't, the mutex won't be released.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L274" target="_blank">system/system.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/system.cr#L274" target="_blank">system/system.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L771" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L725" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -987,7 +983,7 @@ called lock(). If you don't, the mutex won't be released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L774" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L728" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1010,7 +1006,7 @@ called lock(). If you don't, the mutex won't be released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L779" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L733" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1034,7 +1030,7 @@ is released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L789" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L743" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1053,7 +1049,7 @@ is released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/system.cr#L277" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/system.cr#L277" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1073,7 +1069,7 @@ is released.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L795" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L749" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -813,16 +813,16 @@
 various sensors that a device provides. It only contains static
 functions, so it's not meant to be instantiated.</p>
 
-<p>This class allows users to query the sensors values at any
+<p>This module allows users to query the sensors values at any
 time and directly, without having to deal with a window and
-its events. Compared to the SensorChanged event, <code><a href="../SF/Sensor.html">SF::Sensor</a></code>
+its events. Compared to the <code>SensorChanged</code> event, <code><a href="../SF/Sensor.html">SF::Sensor</a></code>
 can retrieve the state of a sensor at any time (you don't need to
 store and update its current value on your side).</p>
 
 <p>Depending on the OS and hardware of the device (phone, tablet, ...),
 some sensor types may not be available. You should always check
 the availability of a sensor before trying to read it, with the
-<code><a href="../SF/Sensor.html">SF::Sensor</a>::available?</code> function.</p>
+<code><a href="../SF/Sensor.html#available%3F%28sensor%3ASensor%3A%3AType%29%3ABool-class-method">SF::Sensor.available?</a></code> function.</p>
 
 <p>You may wonder why some sensor types look so similar, for example
 Accelerometer and Gravity / UserAcceleration. The first one
@@ -834,21 +834,20 @@ are computed internally based on the raw acceleration and other sensors.
 This is exactly the same for Gyroscope vs Orientation.</p>
 
 <p>Because sensors consume a non-negligible amount of current, they are
-all disabled by default. You must call <code><a href="../SF/Sensor.html">SF::Sensor</a>::enabled=</code> for each
+all disabled by default. You must call <code>SF::Sensor.enabled=</code> for each
 sensor in which you are interested.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>if (sf::Sensor::isAvailable(sf::Sensor::Gravity))
-{
-    // gravity sensor is available
-}
+<pre><code><span class="k">if</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span>.available?(<span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span><span class="t">::</span><span class="t">Gravity</span>)
+  <span class="c"># gravity sensor is available</span>
+<span class="k">end</span>
 
-// enable the gravity sensor
-sf::Sensor::setEnabled(sf::Sensor::Gravity, true);
+<span class="c"># enable the gravity sensor</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span>.set_enabled(<span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span><span class="t">::</span><span class="t">Gravity</span>, <span class="n">true</span>)
 
-// get the current value of gravity
-sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
+<span class="c"># get the current value of gravity</span>
+gravity <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span>.get_value(<span class="t">SF</span><span class="t">::</span><span class="t">Sensor</span><span class="t">::</span><span class="t">Gravity</span>)</code></pre>
 
 
 
@@ -866,7 +865,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L923" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L909" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -931,7 +930,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L947" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L933" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -953,7 +952,7 @@ sf::Vector3f gravity = sf::Sensor::getValue(sf::Sensor::Gravity);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L969" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L955" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -974,12 +973,12 @@ sending events of the corresponding type.</p>
 
 <p>This function does nothing if the sensor is unavailable.</p>
 
-<ul><li><em>sensor</em> -  Sensor to enable</li><li><em>enabled</em> - True to enable, false to disable</li></ul></div>
+<ul><li><em>sensor</em> - Sensor to enable</li><li><em>enabled</em> - True to enable, false to disable</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L961" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L947" target="_blank">View source</a>]
         
       </div>
     </div>

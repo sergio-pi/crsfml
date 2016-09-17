@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -814,18 +814,18 @@
 <p><code><a href="../SF/VertexArray.html">SF::VertexArray</a></code> is a very simple wrapper around a dynamic
 array of vertices and a primitives type.</p>
 
-<p>It inherits <code><a href="../SF/Drawable.html">SF::Drawable</a></code>, but unlike other drawables it
+<p>It includes <code><a href="../SF/Drawable.html">SF::Drawable</a></code>, but unlike other drawables it
 is not transformable.</p>
 
 <p>Example:</p>
 
-<pre><code class='language-c++'>sf::VertexArray lines(sf::LineStrip, 4);
-lines[0].position = sf::Vector2f(10, 0);
-lines[1].position = sf::Vector2f(20, 0);
-lines[2].position = sf::Vector2f(30, 5);
-lines[3].position = sf::Vector2f(40, 2);
+<pre><code>lines <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">VertexArray</span>.<span class="k">new</span>(<span class="t">SF</span><span class="t">::</span><span class="t">LineStrip</span>, <span class="n">4</span>)
+lines[<span class="n">0</span>] <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Vertex</span>.<span class="k">new</span>(<span class="t">SF</span>.vector2f(<span class="n">10</span>, <span class="n">0</span>))
+lines[<span class="n">1</span>] <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Vertex</span>.<span class="k">new</span>(<span class="t">SF</span>.vector2f(<span class="n">20</span>, <span class="n">0</span>))
+lines[<span class="n">2</span>] <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Vertex</span>.<span class="k">new</span>(<span class="t">SF</span>.vector2f(<span class="n">30</span>, <span class="n">5</span>))
+lines[<span class="n">3</span>] <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Vertex</span>.<span class="k">new</span>(<span class="t">SF</span>.vector2f(<span class="n">40</span>, <span class="n">2</span>))
 
-window.draw(lines);</code></pre>
+window.draw(lines)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Vertex.html">SF::Vertex</a></code></p>
 
@@ -852,7 +852,7 @@ window.draw(lines);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1595" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1566" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -865,16 +865,16 @@ window.draw(lines);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, vertex_count : Int = <span class="n">0</span>)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the vertex array with a type and an initial number of vertices</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, vertex_count : Int = <span class="n">0</span>)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the vertex array with a type and an initial number of vertices</p></div>
         
       </li>
     
@@ -888,14 +888,14 @@ window.draw(lines);</code></pre>
       <li class="entry-summary">
         <a href="#%5B%5D%28index%3AInt%29%3AVertex-instance-method" class="signature"><strong>#[]</strong>(index : Int) : Vertex</a>
         
-          <div class="summary"><p>Get a read-only access to a vertex by its index</p></div>
+          <div class="summary"><p>Get the vertex by its index</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#%5B%5D%3D%28index%3AInt%2Cvalue%3AVertex%29-instance-method" class="signature"><strong>#[]=</strong>(index : Int, value : Vertex)</a>
         
-          <div class="summary"><p>Get a read-write access to a vertex by its index</p></div>
+          <div class="summary"><p>Set the vertex by its index</p></div>
         
       </li>
     
@@ -947,7 +947,7 @@ window.draw(lines);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#vertex_count%3ALibC%3A%3ASizeT-instance-method" class="signature"><strong>#vertex_count</strong> : LibC::SizeT</a>
+        <a href="#vertex_count%3AInt32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
         
           <div class="summary"><p>Return the vertex count</p></div>
         
@@ -996,26 +996,6 @@ window.draw(lines);</code></pre>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;type:PrimitiveType,vertex_count:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, vertex_count : Int = <span class="n">0</span>)
-
-        <a class="method-permalink" href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct the vertex array with a type and an initial number of vertices</p>
-
-<ul><li><em>type</em> -        Type of primitives</li><li><em>vertex_count</em> - Initial number of vertices in the array</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1608" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
@@ -1031,7 +1011,27 @@ window.draw(lines);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1600" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1571" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;type:PrimitiveType,vertex_count:Int&#61;0&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, vertex_count : Int = <span class="n">0</span>)
+
+        <a class="method-permalink" href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D0%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct the vertex array with a type and an initial number of vertices</p>
+
+<ul><li><em>type</em> - Type of primitives</li><li><em>vertex_count</em> - Initial number of vertices in the array</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1579" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1049,22 +1049,21 @@ window.draw(lines);</code></pre>
         <a class="method-permalink" href="#%5B%5D%28index%3AInt%29%3AVertex-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a read-only access to a vertex by its index</p>
+        <div class="doc"><p>Get the vertex by its index</p>
 
-<p>This function doesn't check <em>index,</em> it must be in range
-[0, vertex_count() - 1]. The behavior is undefined
-otherwise.</p>
+<p>This method doesn't check <em>index</em>, it must be in range
+<code>0 ... vertex_count</code>. The behavior is undefined otherwise.</p>
 
 <ul><li><em>index</em> - Index of the vertex to get</li></ul>
 
-<p><em>Returns:</em> Const reference to the index-th vertex</p>
+<p><em>Returns:</em> The index-th vertex</p>
 
-<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3ALibC%3A%3ASizeT-instance-method">#vertex_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3AInt32-instance-method">#vertex_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1644" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1611" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1077,22 +1076,19 @@ otherwise.</p>
         <a class="method-permalink" href="#%5B%5D%3D%28index%3AInt%2Cvalue%3AVertex%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a read-write access to a vertex by its index</p>
+        <div class="doc"><p>Set the vertex by its index</p>
 
-<p>This function doesn't check <em>index,</em> it must be in range
-[0, vertex_count() - 1]. The behavior is undefined
-otherwise.</p>
+<p>This method doesn't check <em>index</em>, it must be in range
+<code>0 ... vertex_count</code>. The behavior is undefined otherwise.</p>
 
-<ul><li><em>index</em> - Index of the vertex to get</li></ul>
+<ul><li><em>index</em> - Index of the vertex to set</li></ul>
 
-<p><em>Returns:</em> Reference to the index-th vertex</p>
-
-<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3ALibC%3A%3ASizeT-instance-method">#vertex_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3AInt32-instance-method">#vertex_count</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1630" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1598" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1112,7 +1108,7 @@ otherwise.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1673" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1640" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1135,7 +1131,7 @@ that contains all the vertices of the array.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1703" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1670" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1158,7 +1154,7 @@ reallocating all the memory.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1655" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1622" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1174,7 +1170,7 @@ reallocating all the memory.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1735" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1702" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1194,7 +1190,7 @@ reallocating all the memory.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1693" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1660" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1221,7 +1217,7 @@ when it's time to draw them:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1687" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1654" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1247,17 +1243,17 @@ are removed from the array.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1667" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1634" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vertex_count:LibC::SizeT-instance-method">
+    <div class="entry-detail" id="vertex_count:Int32-instance-method">
       <div class="signature">
         
-        def <strong>vertex_count</strong> : LibC::SizeT
+        def <strong>vertex_count</strong> : Int32
 
-        <a class="method-permalink" href="#vertex_count%3ALibC%3A%3ASizeT-instance-method">#</a>
+        <a class="method-permalink" href="#vertex_count%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Return the vertex count</p>
@@ -1267,7 +1263,7 @@ are removed from the array.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1615" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1586" target="_blank">View source</a>]
         
       </div>
     </div>

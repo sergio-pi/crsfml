@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -829,11 +829,11 @@ you create your own algorithms that operate on an InputStream.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>void process(InputStream& stream);
+<pre><code><span class="k">def</span> <span class="m">process</span>(stream : <span class="t">InputStream</span>)
+<span class="k">end</span>
 
-FileInputStream stream;
-if (stream.open("some_file.dat"))
-   process(stream);</code></pre>
+stream <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">FileInputStream</span>.open(<span class="s">&quot;some_file.dat&quot;</span>)
+process(stream)</code></pre>
 
 <p>InputStream, MemoryInputStream</p>
 
@@ -860,7 +860,7 @@ if (stream.open("some_file.dat"))
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L542" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L503" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -873,16 +873,16 @@ if (stream.open("some_file.dat"))
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#open%28filename%3AString%29%3Aself-class-method" class="signature"><strong>.open</strong>(filename : String) : self</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Shorthand for <code>file_input_stream = <a href="../SF/FileInputStream.html#new-class-method">FileInputStream.new</a>; file_input_stream<a href="../SF/FileInputStream.html#open%28filename%3AString%29%3Aself-class-method">.open(...)</a>; file_input_stream</code></p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.open</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Shorthand for <code>file_input_stream = <a href="../SF/FileInputStream.html#new-class-method">FileInputStream.new</a>; file_input_stream<a href="../SF/FileInputStream.html#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">.open(...)</a>; file_input_stream</code></p></div>
         
       </li>
     
@@ -1014,26 +1014,6 @@ if (stream.open("some_file.dat"))
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="open&#40;filename:String&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>open</strong>(filename : String) : self
-
-        <a class="method-permalink" href="#open%28filename%3AString%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>file_input_stream = <a href="../SF/FileInputStream.html#new-class-method">FileInputStream.new</a>; file_input_stream<a href="../SF/FileInputStream.html#open%28filename%3AString%29%3Aself-class-method">.open(...)</a>; file_input_stream</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L566" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
@@ -1047,7 +1027,27 @@ if (stream.open("some_file.dat"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L545" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L506" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open&#40;*args,**kwargs&#41;:self-class-method">
+      <div class="signature">
+        
+        def self.<strong>open</strong>(*args, **kwargs) : self
+
+        <a class="method-permalink" href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Shorthand for <code>file_input_stream = <a href="../SF/FileInputStream.html#new-class-method">FileInputStream.new</a>; file_input_stream<a href="../SF/FileInputStream.html#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">.open(...)</a>; file_input_stream</code></p>
+
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L527" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,7 +1070,7 @@ if (stream.open("some_file.dat"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L551" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L512" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1092,7 +1092,7 @@ if (stream.open("some_file.dat"))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L559" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L520" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1110,14 +1110,14 @@ if (stream.open("some_file.dat"))
 <p>After reading, the stream's reading position must be
 advanced by the amount of bytes read.</p>
 
-<ul><li><em>data</em> - Buffer where to copy the read data</li><li><em>size</em> - Desired number of bytes to read</li></ul>
+<ul><li><em>data</em> - Buffer where to copy the read data</li></ul>
 
 <p><em>Returns:</em> The number of bytes actually read, or -1 on error</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L582" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L542" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1139,7 +1139,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L591" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L551" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1159,7 +1159,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L605" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L565" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1179,7 +1179,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L598" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L558" target="_blank">View source</a>]
         
       </div>
     </div>

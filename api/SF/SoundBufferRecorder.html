@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -826,20 +826,19 @@ about this).</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>if (sf::SoundBufferRecorder::isAvailable())
-{
-    // Record some audio data
-    sf::SoundBufferRecorder recorder;
-    recorder.start();
-    ...
-    recorder.stop();
+<pre><code><span class="k">if</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundBufferRecorder</span>.available?
+  <span class="c"># Record some audio data</span>
+  recorder <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundBufferRecorder</span>.<span class="k">new</span>
+  recorder.start()
+  ...
+  recorder.stop()
 
-    // Get the buffer containing the captured audio data
-    const sf::SoundBuffer& buffer = recorder.getBuffer();
+  <span class="c"># Get the buffer containing the captured audio data</span>
+  buffer <span class="o">=</span> recorder.buffer
 
-    // Save it to a file (for example...)
-    buffer.saveToFile("my_record.ogg");
-}</code></pre>
+  <span class="c"># Save it to a file &#40;for example...&#41;</span>
+  buffer.save_to_file(<span class="s">&quot;my_record.ogg&quot;</span>)
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></code></p>
 
@@ -859,7 +858,7 @@ about this).</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1806" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1769" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -981,7 +980,7 @@ about this).</p>
     sample_rate</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#start%28sample_rate%3AInt%3D%3Cspanclass%3D%22n%22%3E44100%3C%2Fspan%3E%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#start%28sample_rate%3AInt%3D44100%29%3ABool-instance-method" class="tooltip">
       <span>start(sample_rate : Int = <span class="n">44100</span>) : Bool</span>
     start</a>, 
     
@@ -1058,7 +1057,7 @@ about this).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1808" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1771" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1088,7 +1087,7 @@ make any modification to it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1825" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1788" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1106,7 +1105,7 @@ make any modification to it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1814" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1777" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1121,14 +1120,14 @@ make any modification to it.</p>
       
         <div class="doc"><p>Process a new chunk of recorded samples</p>
 
-<ul><li><em>samples</em> -     Pointer to the new chunk of recorded samples</li><li><em>sample_count</em> - Number of samples pointed by <em>samples</em></li></ul>
+<ul><li><em>samples</em> - Pointer to the new chunk of recorded samples</li><li><em>sample_count</em> - Number of samples pointed by <em>samples</em></li></ul>
 
 <p><em>Returns:</em> True to continue the capture, or false to stop it</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1840" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1803" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1148,7 +1147,7 @@ make any modification to it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1832" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1795" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1166,7 +1165,7 @@ make any modification to it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1843" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1806" target="_blank">View source</a>]
         
       </div>
     </div>

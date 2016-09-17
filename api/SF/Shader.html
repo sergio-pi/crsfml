@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -811,18 +811,13 @@
 
   <p>Shader class (vertex, geometry and fragment)</p>
 
-<p>RAII object to save and restore the program
-binding while uniforms are being set</p>
-
-<p>Implementation is private in the .cpp file.</p>
-
 <p>Shaders are programs written using a specific language,
 executed directly by the graphics card and allowing
 to apply real-time operations to the rendered entities.</p>
 
 <p>There are three kinds of shaders:</p>
 
-<ul><li>%Vertex shaders, that process vertices</li><li>Geometry shaders, that process primitives</li><li>Fragment (pixel) shaders, that process pixels</li></ul>
+<ul><li>Vertex shaders, that process vertices</li><li>Geometry shaders, that process primitives</li><li>Fragment (pixel) shaders, that process pixels</li></ul>
 
 <p>A <code><a href="../SF/Shader.html">SF::Shader</a></code> can be composed of either a vertex shader
 alone, a geometry shader alone, a fragment shader alone,
@@ -838,50 +833,41 @@ for SFML.</p>
 called <em>uniforms</em> that you can set from your C++ application.
 <code><a href="../SF/Shader.html">SF::Shader</a></code> handles different types of uniforms:</p>
 
-<ul><li>scalars: \p float, \p int, \p bool</li><li>vectors (2, 3 or 4 components)</li><li>matrices (3x3 or 4x4)</li><li>samplers (textures)</li></ul>
+<ul><li>scalars: <code>float</code>, <code>int</code>, <code>bool</code></li><li>vectors (2, 3 or 4 components)</li><li>matrices (3x3 or 4x4)</li><li>samplers (textures)</li></ul>
 
 <p>Some SFML-specific types can be converted:</p>
 
-<ul><li><code><a href="../SF/Color.html">SF::Color</a></code> as a 4D vector (\p vec4)</li><li><code><a href="../SF/Transform.html">SF::Transform</a></code> as matrices (\p mat3 or \p mat4)</li></ul>
+<ul><li><code><a href="../SF/Color.html">SF::Color</a></code> as a 4D vector (<code>vec4</code>)</li><li><code><a href="../SF/Transform.html">SF::Transform</a></code> as matrices (<code>mat3</code> or <code>mat4</code>)</li></ul>
 
 <p>Every uniform variable in a shader can be set through one of the
-uniform=() or uniform_array=() overloads. For example, if you
+<code><a href="../SF/Shader.html#set_parameter%28name%3AString%2Ctransform%3ATransform%29-instance-method">#set_parameter</a></code> overloads, or through a shorthand. For example, if you
 have a shader with the following uniforms:</p>
 
-<pre><code class='language-c++'>uniform float offset;
-uniform vec3 point;
-uniform vec4 color;
-uniform mat4 matrix;
-uniform sampler2D overlay;
-uniform sampler2D current;</code></pre>
+<pre><code class='language-glsl'>uniform float offset
+uniform vec3 point
+uniform vec4 color
+uniform mat4 matrix
+uniform sampler2D overlay
+uniform sampler2D current</code></pre>
 
-<p>You can set their values from C++ code as follows, using the types
-defined in the <code>SF::Glsl</code> namespace:</p>
+<p>You can set their values from C++ code as follows:</p>
 
-<pre><code class='language-c++'>shader.setUniform("offset", 2.f);
-shader.setUniform("point", sf::Vector3f(0.5f, 0.8f, 0.3f));
-shader.setUniform("color", sf::Glsl::Vec4(color));          // color is a sf::Color
-shader.setUniform("matrix", sf::Glsl::Mat4(transform));     // transform is a sf::Transform
-shader.setUniform("overlay", texture);                      // texture is a sf::Texture
-shader.setUniform("current", sf::Shader::CurrentTexture);</code></pre>
-
-<p>The old parameter=() overloads are deprecated and will be removed in a
-future version. You should use their uniform=() equivalents instead.</p>
+<pre><code>shader.offset <span class="n">2.0</span>
+shader.point <span class="n">0.5</span>, <span class="n">0.8</span>, <span class="n">0.3</span>
+shader.color color          <span class="c"># color is a SF::Color</span>
+shader.matrix transform     <span class="c"># transform is a SF::Transform</span>
+shader.overlay texture      <span class="c"># texture is a SF::Texture</span>
+shader.current <span class="t">SF</span><span class="t">::</span><span class="t">Shader</span><span class="t">::</span><span class="t">CurrentTexture</span></code></pre>
 
 <p>The special Shader::CurrentTexture argument maps the
-given \p sampler2d uniform to the current texture of the
+given <code>sampler2d</code> uniform to the current texture of the
 object being drawn (which cannot be known in advance).</p>
 
 <p>To apply a shader to a drawable, you must pass it as an
-additional parameter to the \ref Window::draw() draw() function:</p>
+additional parameter to the <code>Window.draw</code> function:</p>
 
-<pre><code class='language-c++'>window.draw(sprite, &shader);</code></pre>
-
-<p>... which is in fact just a shortcut for this:</p>
-
-<pre><code class='language-c++'>sf::RenderStates states;
-states.shader = &shader;
-window.draw(sprite, states);</code></pre>
+<pre><code>states <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderStates</span>.<span class="k">new</span>(shader)
+window.draw(sprite, states)</code></pre>
 
 <p>In the code above we pass a pointer to the shader, because it may
 be null (which means "no shader").</p>
@@ -896,18 +882,10 @@ a big texture containing all the characters of the font in an
 arbitrary order; thus, texture lookups on pixels other than the
 current one may not give you the expected result.</p>
 
-<p>Shaders can also be used to apply global post-effects to the
-current contents of the target (like the old <code>SF::PostFx</code> class
-in SFML 1). This can be done in two different ways:</p>
+<p>Shaders can also be used to apply global post-effects to the current
+contents of the target. This can be done in two different ways:</p>
 
-<ul><li>draw everything to a <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code>, then draw it to</li></ul>
-
-<p>the main target using the shader</p>
-
-<ul><li>draw everything directly to the main target, then use</li></ul>
-
-<p><code><a href="../SF/Texture.html">SF::Texture</a>::update</code>(Window&) to copy its contents to a texture
-and draw it to the main target using the shader</p>
+<ul><li>draw everything to a <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code>, then draw it to the main target using the shader</li><li>draw everything directly to the main target, then use <code><a href="../SF/Texture.html#update%28window%3AWindow%29-instance-method">SF::Texture.update(window)</a></code> to copy its contents to a texture and draw it to the main target using the shader</li></ul>
 
 <p>The first technique is more optimized because it doesn't involve
 retrieving the target's pixels to system memory, but the
@@ -918,11 +896,9 @@ easily inserted anywhere without impacting all the code.</p>
 <code><a href="../SF/Shader.html">SF::Shader</a></code> can also be used directly as a raw shader for
 custom OpenGL geometry.</p>
 
-<pre><code class='language-c++'>sf::Shader::bind(&shader);
-... render OpenGL geometry ...
-sf::Shader::bind(NULL);</code></pre>
-
-<p><em>See also:</em> <code>SF::Glsl</code></p>
+<pre><code><span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind shader
+... render <span class="t">OpenGL</span> geometry ...
+<span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind <span class="n">nil</span></code></pre>
 
 
 
@@ -949,12 +925,12 @@ sf::Shader::bind(NULL);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5564" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5481" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L164" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L182" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -997,63 +973,21 @@ sf::Shader::bind(NULL);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#from_file%28vertex_shader_filename%3AString%2Cfragment_shader_filename%3AString%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(vertex_shader_filename : String, fragment_shader_filename : String) : self</a>
+        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_file%28vertex_shader_filename%3AString%2Cgeometry_shader_filename%3AString%2Cfragment_shader_filename%3AString%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(vertex_shader_filename : String, geometry_shader_filename : String, fragment_shader_filename : String) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_file%28filename%3AString%2Ctype%3AShader%3A%3AType%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(filename : String, type : Shader::Type) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_memory%28vertex_shader%3AString%2Cfragment_shader%3AString%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(vertex_shader : String, fragment_shader : String) : self</a>
+        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28vertex_shader%3AString%2Cgeometry_shader%3AString%2Cfragment_shader%3AString%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(vertex_shader : String, geometry_shader : String, fragment_shader : String) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_memory%28shader%3AString%2Ctype%3AShader%3A%3AType%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(shader : String, type : Shader::Type) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_stream%28vertex_shader_stream%3AInputStream%2Cfragment_shader_stream%3AInputStream%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(vertex_shader_stream : InputStream, fragment_shader_stream : InputStream) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_stream%28vertex_shader_stream%3AInputStream%2Cgeometry_shader_stream%3AInputStream%2Cfragment_shader_stream%3AInputStream%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(vertex_shader_stream : InputStream, geometry_shader_stream : InputStream, fragment_shader_stream : InputStream) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_stream%28stream%3AInputStream%2Ctype%3AShader%3A%3AType%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(stream : InputStream, type : Shader::Type) : self</a>
+        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p></div>
         
@@ -1069,7 +1003,7 @@ sf::Shader::bind(NULL);</code></pre>
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Special type that can be passed to uniform=(),        and that represents the texture of the object being drawn</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -1299,7 +1233,7 @@ any attempt to use <code><a href="../SF/Shader.html">SF::Shader</a></code> will 
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5967" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5858" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1318,31 +1252,32 @@ any attempt to use <code><a href="../SF/Shader.html">SF::Shader</a></code> will 
 used when drawing SFML entities. It must be used only if you
 mix <code><a href="../SF/Shader.html">SF::Shader</a></code> with OpenGL code.</p>
 
-<pre><code class='language-c++'>sf::Shader s1, s2;
+<pre><code>s1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.<span class="k">new</span>
+s2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.<span class="k">new</span>
 ...
-sf::Shader::bind(&s1);
-// draw OpenGL stuff that use s1...
-sf::Shader::bind(&s2);
-// draw OpenGL stuff that use s2...
-sf::Shader::bind(NULL);
-// draw OpenGL stuff that use no shader...</code></pre>
+<span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind s1
+<span class="c"># draw OpenGL stuff that use s1...</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind s2
+<span class="c"># draw OpenGL stuff that use s2...</span>
+<span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind <span class="n">nil</span>
+<span class="c"># draw OpenGL stuff that use no shader...</span></code></pre>
 
 <ul><li><em>shader</em> - Shader to bind, can be null to use no shader</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5957" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5848" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_file&#40;vertex_shader_filename:String,fragment_shader_filename:String&#41;:self-class-method">
+    <div class="entry-detail" id="from_file&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(vertex_shader_filename : String, fragment_shader_filename : String) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_file%28vertex_shader_filename%3AString%2Cfragment_shader_filename%3AString%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p>
@@ -1352,57 +1287,17 @@ sf::Shader::bind(NULL);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5649" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5588" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_file&#40;vertex_shader_filename:String,geometry_shader_filename:String,fragment_shader_filename:String&#41;:self-class-method">
+    <div class="entry-detail" id="from_memory&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(vertex_shader_filename : String, geometry_shader_filename : String, fragment_shader_filename : String) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_file%28vertex_shader_filename%3AString%2Cgeometry_shader_filename%3AString%2Cfragment_shader_filename%3AString%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5680" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_file&#40;filename:String,type:Shader::Type&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_file</strong>(filename : String, type : <a href="../SF/Shader/Type.html">Shader::Type</a>) : self
-
-        <a class="method-permalink" href="#from_file%28filename%3AString%2Ctype%3AShader%3A%3AType%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_file(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5619" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_memory&#40;vertex_shader:String,fragment_shader:String&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_memory</strong>(vertex_shader : String, fragment_shader : String) : self
-
-        <a class="method-permalink" href="#from_memory%28vertex_shader%3AString%2Cfragment_shader%3AString%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p>
@@ -1412,57 +1307,17 @@ sf::Shader::bind(NULL);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5739" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5678" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_memory&#40;vertex_shader:String,geometry_shader:String,fragment_shader:String&#41;:self-class-method">
+    <div class="entry-detail" id="from_stream&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(vertex_shader : String, geometry_shader : String, fragment_shader : String) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_memory%28vertex_shader%3AString%2Cgeometry_shader%3AString%2Cfragment_shader%3AString%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5770" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_memory&#40;shader:String,type:Shader::Type&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_memory</strong>(shader : String, type : <a href="../SF/Shader/Type.html">Shader::Type</a>) : self
-
-        <a class="method-permalink" href="#from_memory%28shader%3AString%2Ctype%3AShader%3A%3AType%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_memory(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5709" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_stream&#40;vertex_shader_stream:InputStream,fragment_shader_stream:InputStream&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_stream</strong>(vertex_shader_stream : <a href="../SF/InputStream.html">InputStream</a>, fragment_shader_stream : <a href="../SF/InputStream.html">InputStream</a>) : self
-
-        <a class="method-permalink" href="#from_stream%28vertex_shader_stream%3AInputStream%2Cfragment_shader_stream%3AInputStream%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p>
@@ -1472,47 +1327,7 @@ sf::Shader::bind(NULL);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5829" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_stream&#40;vertex_shader_stream:InputStream,geometry_shader_stream:InputStream,fragment_shader_stream:InputStream&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_stream</strong>(vertex_shader_stream : <a href="../SF/InputStream.html">InputStream</a>, geometry_shader_stream : <a href="../SF/InputStream.html">InputStream</a>, fragment_shader_stream : <a href="../SF/InputStream.html">InputStream</a>) : self
-
-        <a class="method-permalink" href="#from_stream%28vertex_shader_stream%3AInputStream%2Cgeometry_shader_stream%3AInputStream%2Cfragment_shader_stream%3AInputStream%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5860" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="from_stream&#40;stream:InputStream,type:Shader::Type&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>, type : <a href="../SF/Shader/Type.html">Shader::Type</a>) : self
-
-        <a class="method-permalink" href="#from_stream%28stream%3AInputStream%2Ctype%3AShader%3A%3AType%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>shader = <a href="../SF/Shader.html#new-class-method">Shader.new</a>; shader.load_from_stream(...); shader</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5799" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5768" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1543,7 +1358,7 @@ code or SFML will result in a context switch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5985" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5876" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1556,23 +1371,14 @@ code or SFML will result in a context switch.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Special type that can be passed to uniform=(),
-and that represents the texture of the object being drawn</p>
-
-<p><em>See also:</em> <code>uniform=</code>(<code>const</code> <code>std</code>::<code>string</code>&, <code><a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a></code>)</p>
-
-<p>Represents the texture of the object being drawn</p>
-
-<p><em>See also:</em> <code>uniform=</code>(<code>const</code> <code>std</code>::<code>string</code>&, <code><a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a></code>)</p>
-
-<p>Default constructor</p>
+        <div class="doc"><p>Default constructor</p>
 
 <p>This constructor creates an invalid shader.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5588" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5496" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1595,7 +1401,7 @@ and that represents the texture of the object being drawn</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5593" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5501" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1618,7 +1424,7 @@ in GLSL language. GLSL is a C-like language dedicated to
 OpenGL shaders; you'll probably need to read a good documentation
 for it before writing your own shaders.</p>
 
-<ul><li><em>vertex_shader_filename</em> -   Path of the vertex shader file to load</li><li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li></ul>
+<ul><li><em>vertex_shader_filename</em> - Path of the vertex shader file to load</li><li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1627,7 +1433,7 @@ for it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5642" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5550" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1650,7 +1456,7 @@ dedicated to OpenGL shaders; you'll probably need to
 read a good documentation for it before writing your
 own shaders.</p>
 
-<ul><li><em>filename</em> - Path of the vertex, geometry or fragment shader file to load</li><li><em>type</em> -     Type of shader (vertex, geometry or fragment)</li></ul>
+<ul><li><em>filename</em> - Path of the vertex, geometry or fragment shader file to load</li><li><em>type</em> - Type of shader (vertex, geometry or fragment)</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1659,7 +1465,7 @@ own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5612" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5520" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1682,7 +1488,7 @@ in GLSL language. GLSL is a C-like language dedicated to
 OpenGL shaders; you'll probably need to read a good documentation
 for it before writing your own shaders.</p>
 
-<ul><li><em>vertex_shader_filename</em> -   Path of the vertex shader file to load</li><li><em>geometry_shader_filename</em> - Path of the geometry shader file to load</li><li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li></ul>
+<ul><li><em>vertex_shader_filename</em> - Path of the vertex shader file to load</li><li><em>geometry_shader_filename</em> - Path of the geometry shader file to load</li><li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1691,7 +1497,7 @@ for it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5673" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5581" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1714,7 +1520,7 @@ a C-like language dedicated to OpenGL shaders; you'll
 probably need to read a good documentation for it before
 writing your own shaders.</p>
 
-<ul><li><em>vertex_shader</em> -   String containing the source code of the vertex shader</li><li><em>fragment_shader</em> - String containing the source code of the fragment shader</li></ul>
+<ul><li><em>vertex_shader</em> - String containing the source code of the vertex shader</li><li><em>fragment_shader</em> - String containing the source code of the fragment shader</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1723,7 +1529,7 @@ writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5732" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5640" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1741,11 +1547,11 @@ writing your own shaders.</p>
 <p>This function loads a single shader, vertex, geometry
 or fragment, identified by the second argument.
 The source code must be a valid shader in GLSL language.
-GLSL is a C-like language dedicated to OpenGL shaders;
+GLSL is a C-like language dedicated to OpenGL shaders
 you'll probably need to read a good documentation for
 it before writing your own shaders.</p>
 
-<ul><li><em>shader</em> - String containing the source code of the shader</li><li><em>type</em> -   Type of shader (vertex, geometry or fragment)</li></ul>
+<ul><li><em>shader</em> - String containing the source code of the shader</li><li><em>type</em> - Type of shader (vertex, geometry or fragment)</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1754,7 +1560,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5702" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5610" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1777,7 +1583,7 @@ a C-like language dedicated to OpenGL shaders; you'll
 probably need to read a good documentation for it before
 writing your own shaders.</p>
 
-<ul><li><em>vertex_shader</em> -   String containing the source code of the vertex shader</li><li><em>geometry_shader</em> - String containing the source code of the geometry shader</li><li><em>fragment_shader</em> - String containing the source code of the fragment shader</li></ul>
+<ul><li><em>vertex_shader</em> - String containing the source code of the vertex shader</li><li><em>geometry_shader</em> - String containing the source code of the geometry shader</li><li><em>fragment_shader</em> - String containing the source code of the fragment shader</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1786,7 +1592,7 @@ writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5763" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5671" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1805,11 +1611,11 @@ writing your own shaders.</p>
 shaders. If one of them fails to load, the shader is left
 empty (the valid shader is unloaded).
 The source codes must be valid shaders in GLSL language.
-GLSL is a C-like language dedicated to OpenGL shaders;
+GLSL is a C-like language dedicated to OpenGL shaders
 you'll probably need to read a good documentation for
 it before writing your own shaders.</p>
 
-<ul><li><em>vertex_shader_stream</em> -   Source stream to read the vertex shader from</li><li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li></ul>
+<ul><li><em>vertex_shader_stream</em> - Source stream to read the vertex shader from</li><li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1818,7 +1624,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5822" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5730" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1836,11 +1642,11 @@ it before writing your own shaders.</p>
 <p>This function loads a single shader, vertex, geometry
 or fragment, identified by the second argument.
 The source code must be a valid shader in GLSL language.
-GLSL is a C-like language dedicated to OpenGL shaders;
+GLSL is a C-like language dedicated to OpenGL shaders
 you'll probably need to read a good documentation for it
 before writing your own shaders.</p>
 
-<ul><li><em>stream</em> - Source stream to read from</li><li><em>type</em> -   Type of shader (vertex, geometry or fragment)</li></ul>
+<ul><li><em>stream</em> - Source stream to read from</li><li><em>type</em> - Type of shader (vertex, geometry or fragment)</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1849,7 +1655,7 @@ before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5792" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5700" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1868,11 +1674,11 @@ before writing your own shaders.</p>
 shaders. If one of them fails to load, the shader is left
 empty (the valid shader is unloaded).
 The source codes must be valid shaders in GLSL language.
-GLSL is a C-like language dedicated to OpenGL shaders;
+GLSL is a C-like language dedicated to OpenGL shaders
 you'll probably need to read a good documentation for
 it before writing your own shaders.</p>
 
-<ul><li><em>vertex_shader_stream</em> -   Source stream to read the vertex shader from</li><li><em>geometry_shader_stream</em> - Source stream to read the geometry shader from</li><li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li></ul>
+<ul><li><em>vertex_shader_stream</em> - Source stream to read the vertex shader from</li><li><em>geometry_shader_stream</em> - Source stream to read the geometry shader from</li><li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1881,7 +1687,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5853" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5761" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1905,7 +1711,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5935" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5825" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1918,14 +1724,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Ctransform%3ATransform%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a matrix parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Mat4&) instead.</p></div>
+        <div class="doc"><p>Change a matrix parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5913" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5807" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1938,14 +1742,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Ccolor%3AColor%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a color parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Vec4&) instead.</p></div>
+        <div class="doc"><p>Change a color parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5907" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5803" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1958,14 +1760,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cp1%3ACurrentTextureType%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a texture parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, CurrentTextureType) instead.</p></div>
+        <div class="doc"><p>Change a texture parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5925" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5815" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1978,14 +1778,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Ctexture%3ATexture%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a texture parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Texture&) instead.</p></div>
+        <div class="doc"><p>Change a texture parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5919" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5811" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1998,14 +1796,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cvector%3AVector3f%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a 3-components vector parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Vec3&) instead.</p></div>
+        <div class="doc"><p>Change a 3-components vector parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5901" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5799" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2018,14 +1814,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a 3-components vector parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Vec3&) instead.</p></div>
+        <div class="doc"><p>Change a 3-components vector parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5882" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5784" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2038,14 +1832,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%2Cw%3ANumber%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a 4-components vector parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Vec4&) instead.</p></div>
+        <div class="doc"><p>Change a 4-components vector parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5888" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5788" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2058,14 +1850,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a 2-components vector parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, const Glsl::Vec2&) instead.</p></div>
+        <div class="doc"><p>Change a 2-components vector parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5876" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5780" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2085,7 +1875,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5894" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5794" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2098,14 +1888,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         <a class="method-permalink" href="#set_parameter%28name%3AString%2Cx%3ANumber%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change a float parameter of the shader</p>
-
-<p><em>Deprecated:</em> Use uniform=(const std::string&, float) instead.</p></div>
+        <div class="doc"><p>Change a float parameter of the shader</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L5870" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5776" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2129,7 +1917,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L193" target="_blank">View source</a>]
         
       </div>
     </div>

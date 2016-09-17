@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -813,7 +813,7 @@
 
 <p><code><a href="../SF/Event.html">SF::Event</a></code> holds all the informations about a system event
 that just happened. Events are retrieved using the
-<code><a href="../SF/Window.html">SF::Window</a>::poll_event</code> and <code><a href="../SF/Window.html">SF::Window</a>::wait_event</code> functions.</p>
+<code><a href="../SF/Window.html#poll_event%3AEvent%7CNil-instance-method">SF::Window.poll_event</a></code> and <code><a href="../SF/Window.html#wait_event%3AEvent%7CNil-instance-method">SF::Window.wait_event</a></code> functions.</p>
 
 <p>A <code><a href="../SF/Event.html">SF::Event</a></code> instance contains the type of the event
 (mouse moved, key pressed, window closed, ...) as well
@@ -828,23 +828,25 @@ or event.text will have undefined values.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>sf::Event event;
-while (window.pollEvent(event))
-{
-    // Request for closing the window
-    if (event.type == sf::Event::Closed)
-        window.close();
+<pre><code><span class="k">while</span> (event <span class="o">=</span> window.poll_event())
+  <span class="k">case</span> event
+  <span class="c"># Request for closing the window</span>
+  <span class="k">when</span> <span class="t">SF</span><span class="t">::</span><span class="t">Event</span><span class="t">::</span><span class="t">Closed</span>
+    window.close()
 
-    // The escape key was pressed
-    if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
-        window.close();
+  <span class="c"># The escape key was pressed</span>
+  <span class="k">when</span> <span class="t">SF</span><span class="t">::</span><span class="t">Event</span><span class="t">::</span><span class="t">KeyPressed</span>
+    <span class="k">if</span> event.code <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span><span class="t">::</span><span class="t">Escape</span>
+      window.close()
+    <span class="k">end</span>
 
-    // The window was resized
-    if (event.type == sf::Event::Resized)
-        doSomethingWithTheNewSize(event.size.width, event.size.height);
+  <span class="c"># The window was resized</span>
+  <span class="k">case</span> <span class="t">SF</span><span class="t">::</span><span class="t">Event</span><span class="t">::</span><span class="t">Resized</span>
+    do_something(event.width, event.height)
 
-    // etc ...
-}</code></pre>
+  <span class="c"># etc ...</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
 
 
 
@@ -901,7 +903,7 @@ while (window.pollEvent(event))
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1012" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1000" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -967,7 +969,7 @@ while (window.pollEvent(event))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1671" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1659" target="_blank">View source</a>]
         
       </div>
     </div>

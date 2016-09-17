@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -807,49 +807,42 @@
 
   <h2>Overview</h2>
 
-  <p>Abstract base class for objects that can be drawn
+  <p>Abstract module for objects that can be drawn
 to a render target</p>
 
-<p><code><a href="../SF/Drawable.html">SF::Drawable</a></code> is a very simple base class that allows objects
+<p><code><a href="../SF/Drawable.html">SF::Drawable</a></code> is a very simple module that allows objects
 of derived classes to be drawn to a <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code>.</p>
 
-<p>All you have to do in your derived class is to override the
-draw virtual function.</p>
+<p>All you have to do in your derived class is to implement the
+<code><a href="../SF/Drawable.html#draw%28target%3ARenderTarget%2Cstates%3ARenderStates%29-instance-method">#draw</a></code> function.</p>
 
-<p>Note that inheriting from <code><a href="../SF/Drawable.html">SF::Drawable</a></code> is not mandatory,
-but it allows this nice syntax "window.draw(object)" rather
-than "object.draw(window)", which is more consistent with other
+<p>Note that including <code><a href="../SF/Drawable.html">SF::Drawable</a></code> is not mandatory,
+but it allows this nice syntax <code>window.draw(object)</code> rather
+than <code>object.draw(window)</code>, which is more consistent with other
 SFML classes.</p>
 
 <p>Example:</p>
 
-<pre><code class='language-c++'>class MyDrawable : public sf::Drawable
-{
-public:
+<pre><code><span class="k">class</span> <span class="t">MyDrawable</span>
+  <span class="k">include</span> <span class="t">SF</span><span class="t">::</span><span class="t">Drawable</span>
+  <span class="k">def</span> <span class="m">draw</span>(target : <span class="t">SF</span><span class="t">::</span><span class="t">RenderTarget</span>, states : <span class="t">SF</span><span class="t">::</span><span class="t">RenderStates</span>)
+    <span class="c"># You can draw other high-level objects</span>
+    target.draw(@sprite, states)
 
-   ...
+    <span class="c"># ... or use the low-level API</span>
+    states.texture <span class="o">=</span> @texture
+    target.draw(@vertices, states)
 
-private:
+    <span class="c"># ... or draw with OpenGL directly</span>
+    glBegin(<span class="t">GL_QUADS</span>)
+    ...
+    glEnd()
+  <span class="k">end</span>
 
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
-    {
-        // You can draw other high-level objects
-        target.draw(m_sprite, states);
-
-        // ... or use the low-level API
-        states.texture = &m_texture;
-        target.draw(m_vertices, states);
-
-        // ... or draw with OpenGL directly
-        glBegin(GL_QUADS);
-        ...
-        glEnd();
-    }
-
-    sf::Sprite m_sprite;
-    sf::Texture m_texture;
-    sf::VertexArray m_vertices;
-};</code></pre>
+  @sprite : <span class="t">SF</span><span class="t">::</span><span class="t">Sprite</span>
+  @texture : <span class="t">SF</span><span class="t">::</span><span class="t">Texture</span>
+  @vertices : <span class="t">SF</span><span class="t">::</span><span class="t">VertexArray</span>
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></p>
 
@@ -882,12 +875,12 @@ private:
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L844" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L828" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L191" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L209" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -941,7 +934,7 @@ including class to define how the drawable should be drawn.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L216" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -835,43 +835,38 @@ thread is finished, the destructor will wait (see wait())</p>
 
 <p>Usage examples:</p>
 
-<pre><code class='language-c++'>// example 1: non member function with one argument
+<pre><code class='language-c++'># example 1: non member function with one argument
 
 void threadFunc(int argument)
-{
     ...
-}
+end
 
-sf::Thread thread(&threadFunc, 5);
-thread.launch(); // start the thread (internally calls threadFunc(5))</code></pre>
+thread = SF::Thread.new(&threadFunc, 5)
+thread.launch() # start the thread (internally calls threadFunc(5))</code></pre>
 
-<pre><code class='language-c++'>// example 2: member function
+<pre><code class='language-c++'># example 2: member function
 
 class Task
-{
 public:
     void run()
-    {
         ...
-    }
-};
+    end
+end
 
-Task task;
-sf::Thread thread(&Task::run, &task);
-thread.launch(); // start the thread (internally calls task.run())</code></pre>
+Task task
+thread = SF::Thread.new(&Task.run, &task)
+thread.launch() # start the thread (internally calls task.run())</code></pre>
 
-<pre><code class='language-c++'>// example 3: functor
+<pre><code class='language-c++'># example 3: functor
 
 struct Task
-{
     void operator()()
-    {
         ...
-    }
-};
+    end
+end
 
-sf::Thread thread(Task());
-thread.launch(); // start the thread (internally calls operator() on the Task instance)</code></pre>
+thread = SF::Thread.new(Task())
+thread.launch() # start the thread (internally calls operator() on the Task instance)</code></pre>
 
 <p>Creating parallel threads of execution can be dangerous:
 all threads inside the same process share the same memory space,
@@ -904,7 +899,7 @@ kind of situations, you can use mutexes (see <code><a href="../SF/Mutex.html">SF
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L896" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L845" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -1009,14 +1004,13 @@ have any type (int, std::string, void*, Toto, ...).</p>
 
 <p>Use this constructor for this kind of function:</p>
 
-<pre><code class='language-c++'>void function(int arg);
+<pre><code class='language-c++'>void function(int arg)
 
-// --- or ----
+# --- or ----
 
 struct Functor
-{
-    void operator()(std::string arg);
-};</code></pre>
+    void operator()(std::string arg)
+end</code></pre>
 
 <p>Note: this does <em>not</em> run the thread, use launch().</p>
 
@@ -1025,7 +1019,7 @@ struct Functor
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L920" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L868" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1051,7 +1045,7 @@ cannot survive after its <code><a href="../SF/Thread.html">SF::Thread</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L929" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L877" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1074,7 +1068,7 @@ running in parallel to the calling code.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L938" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L886" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1099,7 +1093,7 @@ the thread function terminate by itself.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L960" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L908" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1124,7 +1118,7 @@ returns without doing anything.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L949" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L897" target="_blank">View source</a>]
         
       </div>
     </div>

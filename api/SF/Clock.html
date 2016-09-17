@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -821,11 +821,11 @@ changed.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>sf::Clock clock;
+<pre><code>clock <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Clock</span>.<span class="k">new</span>
 ...
-Time time1 = clock.getElapsedTime();
+time1 <span class="o">=</span> clock.elapsed_time
 ...
-Time time2 = clock.restart();</code></pre>
+time2 <span class="o">=</span> clock.restart()</code></pre>
 
 <p>The <code><a href="../SF/Time.html">SF::Time</a></code> value returned by the clock can then be
 converted to a number of seconds, milliseconds or even
@@ -849,7 +849,7 @@ microseconds.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L314" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L313" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -936,7 +936,7 @@ microseconds.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L319" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L318" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -957,7 +957,7 @@ microseconds.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L360" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L359" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -981,7 +981,7 @@ has not been called).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L330" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L329" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1004,7 +1004,7 @@ It also returns the time elapsed since the clock was started.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L341" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L340" target="_blank">View source</a>]
         
       </div>
     </div>

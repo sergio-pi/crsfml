@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -809,19 +809,19 @@
 
   <h2>Overview</h2>
 
-  <p>Utility class for manipulating RGBA colors</p>
+  <p>Utility struct for manipulating RGBA colors</p>
 
-<p><code><a href="../SF/Color.html">SF::Color</a></code> is a simple color class composed of 4 components:</p>
+<p><code><a href="../SF/Color.html">SF::Color</a></code> is a simple color struct composed of 4 components:</p>
 
 <ul><li>Red</li><li>Green</li><li>Blue</li><li>Alpha (opacity)</li></ul>
 
 <p>Each component is a public member, an unsigned integer in
-the range [0, 255]. Thus, colors can be constructed and
+the range <code>0..255</code>. Thus, colors can be constructed and
 manipulated very easily:</p>
 
-<pre><code class='language-c++'>sf::Color color(255, 0, 0); // red
-color.r = 0;                // make it black
-color.b = 128;              // make it dark blue</code></pre>
+<pre><code>color <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span>.<span class="k">new</span>(<span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>) <span class="c"># red</span>
+color.r <span class="o">=</span> <span class="n">0</span>                      <span class="c"># make it black</span>
+color.b <span class="o">=</span> <span class="n">128</span>                    <span class="c"># make it dark blue</span></code></pre>
 
 <p>The fourth component of colors, named "alpha", represents
 the opacity of the color. A color with an alpha value of
@@ -831,15 +831,15 @@ other components is.</p>
 
 <p>The most common colors are already defined as static variables:</p>
 
-<pre><code class='language-c++'>sf::Color black       = sf::Color::Black;
-sf::Color white       = sf::Color::White;
-sf::Color red         = sf::Color::Red;
-sf::Color green       = sf::Color::Green;
-sf::Color blue        = sf::Color::Blue;
-sf::Color yellow      = sf::Color::Yellow;
-sf::Color magenta     = sf::Color::Magenta;
-sf::Color cyan        = sf::Color::Cyan;
-sf::Color transparent = sf::Color::Transparent;</code></pre>
+<pre><code>black       <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Black</span>
+white       <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>
+red         <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Red</span>
+green       <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Green</span>
+blue        <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Blue</span>
+yellow      <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Yellow</span>
+magenta     <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Magenta</span>
+cyan        <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Cyan</span>
+transparent <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span></code></pre>
 
 <p>Colors can also be added and modulated (multiplied) using the
 overloaded operators + and *.</p>
@@ -860,12 +860,12 @@ overloaded operators + and *.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1242" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1214" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L134" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L134" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -966,9 +966,9 @@ overloaded operators + and *.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28red%3AInt%2Cgreen%3AInt%2Cblue%3AInt%2Calpha%3AInt%3D%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29-class-method" class="signature"><strong>.new</strong>(red : Int, green : Int, blue : Int, alpha : Int = <span class="n">255</span>)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the color from its 4 RGBA components</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -980,9 +980,9 @@ overloaded operators + and *.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28red%3AInt%2Cgreen%3AInt%2Cblue%3AInt%2Calpha%3AInt%3D255%29-class-method" class="signature"><strong>.new</strong>(red : Int, green : Int, blue : Int, alpha : Int = <span class="n">255</span>)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the color from its 4 RGBA components</p></div>
         
       </li>
     
@@ -1070,6 +1070,11 @@ overloaded operators + and *.</p>
       </li>
     
       <li class="entry-summary">
+        <a href="#inspect%28io%29-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#r%3AUInt8-instance-method" class="signature"><strong>#r</strong> : UInt8</a>
         
           <div class="summary"><p>Red component</p></div>
@@ -1122,22 +1127,23 @@ overloaded operators + and *.</p>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;red:Int,green:Int,blue:Int,alpha:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;255&lt;/span&gt;&#41;-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(red : Int, green : Int, blue : Int, alpha : Int = <span class="n">255</span>)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new%28red%3AInt%2Cgreen%3AInt%2Cblue%3AInt%2Calpha%3AInt%3D%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the color from its 4 RGBA components</p>
+        <div class="doc"><p>Default constructor</p>
 
-<ul><li><em>red</em> -   Red component (in the range [0, 255])</li><li><em>green</em> - Green component (in the range [0, 255])</li><li><em>blue</em> -  Blue component (in the range [0, 255])</li><li><em>alpha</em> - Alpha (opacity) component (in the range [0, 255])</li></ul></div>
+<p>Constructs an opaque black color. It is equivalent to
+<code><a href="../SF/Color.html">SF::Color</a></code>(0, 0, 0, 255).</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1264" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1223" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1157,28 +1163,27 @@ overloaded operators + and *.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1274" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1246" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new-class-method">
+    <div class="entry-detail" id="new&#40;red:Int,green:Int,blue:Int,alpha:Int&#61;255&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>
+        def self.<strong>new</strong>(red : Int, green : Int, blue : Int, alpha : Int = <span class="n">255</span>)
 
-        <a class="method-permalink" href="#new-class-method">#</a>
+        <a class="method-permalink" href="#new%28red%3AInt%2Cgreen%3AInt%2Cblue%3AInt%2Calpha%3AInt%3D255%29-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc"><p>Construct the color from its 4 RGBA components</p>
 
-<p>Constructs an opaque black color. It is equivalent to
-<code><a href="../SF/Color.html">SF::Color</a></code>(0, 0, 0, 255).</p></div>
+<ul><li><em>red</em> - Red component (in the range <code>0..255</code>)</li><li><em>green</em> - Green component (in the range <code>0..255</code>)</li><li><em>blue</em> - Blue component (in the range <code>0..255</code>)</li><li><em>alpha</em> - Alpha (opacity) component (in the range <code>0..255</code>)</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1251" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1200,14 +1205,14 @@ overloaded operators + and *.</p>
 
 <p>This operator compares two colors and check if they are different.</p>
 
-<ul><li><em>left</em> -  Left operand</li><li><em>right</em> - Right operand</li></ul>
+<ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
 <p><em>Returns:</em> True if colors are different, false if they are equal</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1340" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1312" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1225,16 +1230,16 @@ overloaded operators + and *.</p>
 <p>This operator returns the component-wise multiplication
 (also called "modulation") of two colors.
 Components are then divided by 255 so that the result is
-still in the range [0, 255].</p>
+still in the range <code>0 .. 255</code>.</p>
 
-<ul><li><em>left</em> -  Left operand</li><li><em>right</em> - Right operand</li></ul>
+<ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
 <p><em>Returns:</em> Result of <em>left</em> * <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1383" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,14 +1257,14 @@ still in the range [0, 255].</p>
 <p>This operator returns the component-wise sum of two colors.
 Components that exceed 255 are clamped to 255.</p>
 
-<ul><li><em>left</em> -  Left operand</li><li><em>right</em> - Right operand</li></ul>
+<ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
 <p><em>Returns:</em> Result of <em>left</em> + <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1353" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1325" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,14 +1282,14 @@ Components that exceed 255 are clamped to 255.</p>
 <p>This operator returns the component-wise subtraction of two colors.
 Components below 0 are clamped to 0.</p>
 
-<ul><li><em>left</em> -  Left operand</li><li><em>right</em> - Right operand</li></ul>
+<ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
 <p><em>Returns:</em> Result of <em>left</em> - <em>right</em></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1367" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1339" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1301,14 +1306,14 @@ Components below 0 are clamped to 0.</p>
 
 <p>This operator compares two colors and check if they are equal.</p>
 
-<ul><li><em>left</em> -  Left operand</li><li><em>right</em> - Right operand</li></ul>
+<ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
 <p><em>Returns:</em> True if colors are equal, false if they are different</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1328" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1326,7 +1331,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1314" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1286" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1342,7 +1347,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1317" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1289" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1360,7 +1365,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1306" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1376,7 +1381,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1309" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1281" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1392,7 +1397,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1401" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1373" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1410,7 +1415,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1298" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1270" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1426,7 +1431,23 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1301" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1273" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inspect&#40;io&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>inspect</strong>(io)
+
+        <a class="method-permalink" href="#inspect%28io%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1444,7 +1465,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1290" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1460,7 +1481,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1293" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1265" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1480,7 +1501,7 @@ Components below 0 are clamped to 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L1284" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1256" target="_blank">View source</a>]
         
       </div>
     </div>

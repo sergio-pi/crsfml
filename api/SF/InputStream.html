@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -824,41 +824,34 @@ their load_from_stream function.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// custom stream class that reads from inside a zip file
-class ZipStream : public sf::InputStream
-{
-public:
+<pre><code><span class="c"># custom stream class that reads from inside a zip file</span>
+<span class="k">class</span> <span class="t">ZipStream</span> <span class="o"><</span> <span class="t">SF</span><span class="t">::</span><span class="t">InputStream</span>
+    <span class="k">def</span> <span class="m">initialize</span>(archive : <span class="t">String</span>)
 
-    ZipStream(std::string archive);
+    <span class="k">def</span> <span class="m">open</span>(filename : <span class="t">String</span>)
 
-    bool open(std::string filename);
+    <span class="k">def</span> <span class="m">read</span>(data : <span class="t">Slice</span>) : <span class="t">Int64</span>
 
-    Int64 read(void* data, Int64 size);
+    <span class="k">def</span> <span class="m">seek</span>(position : <span class="t">Int</span>) : <span class="t">Int64</span>
 
-    Int64 seek(Int64 position);
+    <span class="k">def</span> <span class="m">tell</span>() : <span class="t">Int64</span>
 
-    Int64 tell();
-
-    Int64 getSize();
-
-private:
+    <span class="k">def</span> <span class="m">size</span>() : <span class="t">Int64</span>
 
     ...
-};
+<span class="k">end</span>
 
-// now you can load textures...
-sf::Texture texture;
-ZipStream stream("resources.zip");
-stream.open("images/img.png");
-texture.loadFromStream(stream);
+<span class="c"># now you can load textures...</span>
+stream <span class="o">=</span> <span class="t">ZipStream</span>.<span class="k">new</span>(<span class="s">&quot;resources.zip&quot;</span>)
+stream.open(<span class="s">&quot;images/img.png&quot;</span>)
+texture <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Texture</span>.from_stream(stream)
 
-// musics...
-sf::Music music;
-ZipStream stream("resources.zip");
-stream.open("musics/msc.ogg");
-music.openFromStream(stream);
+<span class="c"># musics...</span>
+stream <span class="o">=</span> <span class="t">ZipStream</span>.<span class="k">new</span>(<span class="s">&quot;resources.zip&quot;</span>)
+stream.open(<span class="s">&quot;musics/msc.ogg&quot;</span>)
+music <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Music</span>.from_stream(stream)
 
-// etc.</code></pre>
+<span class="c"># etc.</span></code></pre>
 
 
 
@@ -885,7 +878,7 @@ music.openFromStream(stream);
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L431" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L423" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -917,7 +910,7 @@ music.openFromStream(stream);
       <li class="entry-summary">
         <a href="#read%28data%3ASlice%29%3AInt64-instance-method" class="signature"><strong>#read</strong>(data : Slice) : Int64</a>
         
-          <div class="summary"><p>Virtual destructor</p></div>
+          <div class="summary"><p>Read data from the stream</p></div>
         
       </li>
     
@@ -980,7 +973,7 @@ music.openFromStream(stream);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L433" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L425" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1001,7 +994,7 @@ music.openFromStream(stream);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L479" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L468" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1014,21 +1007,19 @@ music.openFromStream(stream);
         <a class="method-permalink" href="#read%28data%3ASlice%29%3AInt64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Virtual destructor</p>
-
-<p>Read data from the stream</p>
+        <div class="doc"><p>Read data from the stream</p>
 
 <p>After reading, the stream's reading position must be
 advanced by the amount of bytes read.</p>
 
-<ul><li><em>data</em> - Buffer where to copy the read data</li><li><em>size</em> - Desired number of bytes to read</li></ul>
+<ul><li><em>data</em> - Buffer where to copy the read data</li></ul>
 
 <p><em>Returns:</em> The number of bytes actually read, or -1 on error</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L449" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L438" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1050,7 +1041,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L455" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L444" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,7 +1061,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L463" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L452" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1090,7 +1081,7 @@ advanced by the amount of bytes read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/system/obj.cr#L459" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L448" target="_blank">View source</a>]
         
       </div>
     </div>

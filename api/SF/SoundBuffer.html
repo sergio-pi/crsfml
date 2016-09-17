@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -845,29 +845,23 @@ uses a local <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> i
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Declare a new sound buffer
-sf::SoundBuffer buffer;
+<pre><code><span class="c"># Load a new sound buffer from a file</span>
+buffer <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundBuffer</span>.from_file(<span class="s">&quot;sound.wav&quot;</span>)
 
-// Load it from a file
-if (!buffer.loadFromFile("sound.wav"))
-{
-    // error...
-}
+<span class="c"># Create a sound source and bind it to the buffer</span>
+sound1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sound</span>.<span class="k">new</span>
+sound1.buffer <span class="o">=</span> buffer
 
-// Create a sound source and bind it to the buffer
-sf::Sound sound1;
-sound1.setBuffer(buffer);
+<span class="c"># Play the sound</span>
+sound1.play()
 
-// Play the sound
-sound1.play();
+<span class="c"># Create another sound source bound to the same buffer</span>
+sound2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sound</span>.<span class="k">new</span>
+sound2.buffer <span class="o">=</span> buffer
 
-// Create another sound source bound to the same buffer
-sf::Sound sound2;
-sound2.setBuffer(buffer);
-
-// Play it with a higher pitch -- the first sound remains unchanged
-sound2.setPitch(2);
-sound2.play();</code></pre>
+<span class="c"># Play it with a higher pitch -- the first sound remains unchanged</span>
+sound2.pitch <span class="o">=</span> <span class="n">2</span>
+sound2.play()</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Sound.html">SF::Sound</a></code>, <code><a href="../SF/SoundBufferRecorder.html">SF::SoundBufferRecorder</a></code></p>
 
@@ -894,7 +888,7 @@ sound2.play();</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1270" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1241" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -907,28 +901,28 @@ sound2.play();</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28filename%3AString%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(filename : String) : self</a>
+        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28data%3ASlice%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(data : Slice) : self</a>
+        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3Aself-class-method" class="signature"><strong>.from_samples</strong>(samples : Array(Int16) | Slice(Int16), channel_count : Int, sample_rate : Int) : self</a>
+        <a href="#from_samples%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_samples</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer.load_from_samples(...); sound_buffer</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28stream%3AInputStream%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(stream : InputStream) : self</a>
+        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
         
           <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p></div>
         
@@ -1059,12 +1053,12 @@ sound2.play();</code></pre>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="from_file&#40;filename:String&#41;:self-class-method">
+    <div class="entry-detail" id="from_file&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(filename : String) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_file%28filename%3AString%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p>
@@ -1074,17 +1068,17 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1298" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1269" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_memory&#40;data:Slice&#41;:self-class-method">
+    <div class="entry-detail" id="from_memory&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(data : Slice) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_memory%28data%3ASlice%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p>
@@ -1094,17 +1088,17 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1323" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1293" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_samples&#40;samples:Array&#40;Int16&#41;|Slice&#40;Int16&#41;,channel_count:Int,sample_rate:Int&#41;:self-class-method">
+    <div class="entry-detail" id="from_samples&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_samples</strong>(samples : Array(Int16) | Slice(Int16), channel_count : Int, sample_rate : Int) : self
+        def self.<strong>from_samples</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_samples%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer.load_from_samples(...); sound_buffer</code></p>
@@ -1114,17 +1108,17 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1374" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1344" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="from_stream&#40;stream:InputStream&#41;:self-class-method">
+    <div class="entry-detail" id="from_stream&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : self
 
-        <a class="method-permalink" href="#from_stream%28stream%3AInputStream%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
         <div class="doc"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p>
@@ -1134,7 +1128,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1347" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1317" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1152,7 +1146,7 @@ sound2.play();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1273" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,7 +1176,7 @@ be 1, 2 for stereo, etc.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1441" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1411" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,7 +1198,7 @@ be 1, 2 for stereo, etc.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1450" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1420" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1222,7 +1216,7 @@ be 1, 2 for stereo, etc.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1278" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1249" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1249,7 +1243,7 @@ of supported formats.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1291" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,7 +1261,7 @@ of supported formats.</p>
 <p>See the documentation of <code>SF::InputSoundFile</code> for the list
 of supported formats.</p>
 
-<ul><li><em>data</em> -        Pointer to the file data in memory</li><li><em>size_in_bytes</em> - Size of the data to load, in bytes</li></ul>
+<ul><li><em>data</em> - Slice containing the file data in memory</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1276,7 +1270,7 @@ of supported formats.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1316" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1286" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,7 +1288,7 @@ of supported formats.</p>
 <p>The assumed format of the audio samples is 16 bits signed integer
 (<code>SF::Int16</code>).</p>
 
-<ul><li><em>samples</em> -      Pointer to the array of samples in memory</li><li><em>sample_count</em> -  Number of samples in the array</li><li><em>channel_count</em> - Number of channels (1 = mono, 2 = stereo, ...)</li><li><em>sample_rate</em> -   Sample rate (number of samples to play per second)</li></ul>
+<ul><li><em>samples</em> - Pointer to the array of samples in memory</li><li><em>sample_count</em> - Number of samples in the array</li><li><em>channel_count</em> - Number of channels (1 = mono, 2 = stereo, ...)</li><li><em>sample_rate</em> - Sample rate (number of samples to play per second)</li></ul>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
@@ -1303,7 +1297,7 @@ of supported formats.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1367" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1337" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1330,7 +1324,7 @@ of supported formats.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1340" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1310" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1355,7 +1349,7 @@ function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1416" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1386" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1381,7 +1375,7 @@ samples/s is CD quality).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1429" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1399" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1407,7 +1401,7 @@ is given by the sample_count() function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1404" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1374" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1434,7 +1428,7 @@ of supported formats.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/audio/obj.cr#L1391" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/audio/obj.cr#L1361" target="_blank">View source</a>]
         
       </div>
     </div>

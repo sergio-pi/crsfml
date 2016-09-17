@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -811,9 +811,6 @@
 
   <p>A FTP client</p>
 
-<p>Utility class for exchanging datas with the server
-on the data channel</p>
-
 <p><code><a href="../SF/Ftp.html">SF::Ftp</a></code> is a very simple FTP client that allows you
 to communicate with a FTP server. The FTP protocol allows
 you to manipulate a remote file system (list files,
@@ -841,41 +838,47 @@ the task.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// Create a new FTP client
-sf::Ftp ftp;
+<pre><code><span class="c"># Create a new FTP client</span>
+ftp <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Ftp</span>.<span class="k">new</span>
 
-// Connect to the server
-sf::Ftp::Response response = ftp.connect("ftp://ftp.myserver.com");
-if (response.isOk())
-    std::cout &lt;&lt; "Connected" &lt;&lt; std::endl;
+<span class="c"># Connect to the server</span>
+response <span class="o">=</span> ftp.connect(<span class="s">&quot;ftp://ftp.myserver.com&quot;</span>)
+<span class="k">if</span> response.ok?
+  puts <span class="s">&quot;Connected&quot;</span>
+<span class="k">end</span>
 
-// Log in
-response = ftp.login("laurent", "dF6Zm89D");
-if (response.isOk())
-    std::cout &lt;&lt; "Logged in" &lt;&lt; std::endl;
+<span class="c"># Log in</span>
+response <span class="o">=</span> ftp.login(<span class="s">&quot;laurent&quot;</span>, <span class="s">&quot;dF6Zm89D&quot;</span>)
+<span class="k">if</span> response.ok?
+  puts <span class="s">&quot;Logged in&quot;</span>
+<span class="k">end</span>
 
-// Print the working directory
-sf::Ftp::DirectoryResponse directory = ftp.getWorkingDirectory();
-if (directory.isOk())
-    std::cout &lt;&lt; "Working directory: " &lt;&lt; directory.getDirectory() &lt;&lt; std::endl;
+<span class="c"># Print the working directory</span>
+directory <span class="o">=</span> ftp.working_directory()
+<span class="k">if</span> directory.ok?
+  puts <span class="s">&quot;Working directory: </span><span class="i">#{</span></span>directory.directory<span class="s"><span class="i">}</span>&quot;</span>
+<span class="k">end</span>
 
-// Create a new directory
-response = ftp.createDirectory("files");
-if (response.isOk())
-    std::cout &lt;&lt; "Created new directory" &lt;&lt; std::endl;
+<span class="c"># Create a new directory</span>
+response <span class="o">=</span> ftp.create_directory <span class="s">&quot;files&quot;</span>
+<span class="k">if</span> response.ok?
+  puts <span class="s">&quot;Created new directory&quot;</span>
+<span class="k">end</span>
 
-// Upload a file to this new directory
-response = ftp.upload("local-path/file.txt", "files", sf::Ftp::Ascii);
-if (response.isOk())
-    std::cout &lt;&lt; "File uploaded" &lt;&lt; std::endl;
+<span class="c"># Upload a file to this new directory</span>
+response <span class="o">=</span> ftp.upload(<span class="s">&quot;local-path/file.txt&quot;</span>, <span class="s">&quot;files&quot;</span>, <span class="t">SF</span><span class="t">::</span><span class="t">Ftp</span><span class="t">::</span><span class="t">Ascii</span>)
+<span class="k">if</span> response.ok?)
+  puts <span class="s">&quot;File uploaded&quot;</span>
+<span class="k">end</span>
 
-// Send specific commands (here: FEAT to list supported FTP features)
-response = ftp.sendCommand("FEAT");
-if (response.isOk())
-    std::cout &lt;&lt; "Feature list:\n" &lt;&lt; response.getMessage() &lt;&lt; std::endl;
+<span class="c"># Send specific commands &#40;here: FEAT to list supported FTP features&#41;</span>
+response <span class="o">=</span> ftp.send_command <span class="s">&quot;FEAT&quot;</span>
+<span class="k">if</span> response.ok?
+  puts <span class="s">&quot;Feature list:\n</span><span class="i">#{</span></span>response.message<span class="s"><span class="i">}</span>&quot;</span>
+<span class="k">end</span>
 
-// Disconnect from the server (optional)
-ftp.disconnect();</code></pre>
+<span class="c"># Disconnect from the server</span>
+ftp.disconnect()</code></pre>
 
 
 
@@ -900,7 +903,7 @@ ftp.disconnect();</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L424" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L424" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -932,7 +935,7 @@ ftp.disconnect();</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#connect%28server%3AIpAddress%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E21%3C%2Fspan%3E%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int = <span class="n">21</span>, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Ftp::Response</a>
+        <a href="#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int = <span class="n">21</span>, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Connect to the specified FTP server</p></div>
         
@@ -967,7 +970,7 @@ ftp.disconnect();</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#download</strong>(remote_file : String, local_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
+        <a href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#download</strong>(remote_file : String, local_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Download a file from the server</p></div>
         
@@ -981,7 +984,7 @@ ftp.disconnect();</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#get_directory_listing%28directory%3AString%3D%3Cspanclass%3D%22s%22%3E%26quot%3B%26quot%3B%3C%2Fspan%3E%29%3AFtp%3A%3AListingResponse-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : Ftp::ListingResponse</a>
+        <a href="#get_directory_listing%28directory%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AListingResponse-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : Ftp::ListingResponse</a>
         
           <div class="summary"><p>Get the contents of the given directory</p></div>
         
@@ -1023,14 +1026,14 @@ ftp.disconnect();</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#send_command%28command%3AString%2Cparameter%3AString%3D%3Cspanclass%3D%22s%22%3E%26quot%3B%26quot%3B%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : Ftp::Response</a>
+        <a href="#send_command%28command%3AString%2Cparameter%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Send a command to the FTP server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
+        <a href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Upload a file to the server</p></div>
         
@@ -1088,7 +1091,7 @@ ftp.disconnect();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L426" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L426" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,17 +1122,17 @@ ftp.disconnect();</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L810" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L810" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="connect&#40;server:IpAddress,port:Int&#61;&lt;spanclass&#61;&quot;n&quot;&gt;21&lt;/span&gt;,timeout:Time&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Time&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Zero&lt;/span&gt;&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="connect&#40;server:IpAddress,port:Int&#61;21,timeout:Time&#61;Time::Zero&#41;:Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>connect</strong>(server : <a href="../SF/IpAddress.html">IpAddress</a>, port : Int = <span class="n">21</span>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#connect%28server%3AIpAddress%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E21%3C%2Fspan%3E%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Connect to the specified FTP server</p>
@@ -1143,7 +1146,7 @@ reachable. To avoid blocking your application for too long,
 you can use a timeout. The default value, Time::Zero, means that the
 system timeout will be used (which is usually pretty long).</p>
 
-<ul><li><em>server</em> -  Name or address of the FTP server to connect to</li><li><em>port</em> -    Port used for the connection</li><li><em>timeout</em> - Maximum time to wait</li></ul>
+<ul><li><em>server</em> - Name or address of the FTP server to connect to</li><li><em>port</em> - Port used for the connection</li><li><em>timeout</em> - Maximum time to wait</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p>
 
@@ -1152,7 +1155,7 @@ system timeout will be used (which is usually pretty long).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L717" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L717" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1179,7 +1182,7 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L835" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L835" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1208,7 +1211,7 @@ be removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L852" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L852" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1237,7 +1240,7 @@ removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L885" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L885" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1254,22 +1257,22 @@ removed permanently!</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#connect%28server%3AIpAddress%2Cport%3AInt%3D%3Cspanclass%3D%22n%22%3E21%3C%2Fspan%3E%2Ctimeout%3ATime%3D%3Cspanclass%3D%22t%22%3ETime%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EZero%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#connect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method">#connect</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L727" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L727" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="download&#40;remote_file:String,local_path:String,mode:Ftp::TransferMode&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Binary&lt;/span&gt;&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="download&#40;remote_file:String,local_path:String,mode:Ftp::TransferMode&#61;Binary&#41;:Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>download</strong>(remote_file : String, local_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Download a file from the server</p>
@@ -1282,16 +1285,16 @@ If a file with the same filename as the distant file
 already exists in the local destination path, it will
 be overwritten.</p>
 
-<ul><li><em>remote_file</em> - Filename of the distant file to download</li><li><em>local_path</em> -  The directory in which to put the file on the local computer</li><li><em>mode</em> -       Transfer mode</li></ul>
+<ul><li><em>remote_file</em> - Filename of the distant file to download</li><li><em>local_path</em> - The directory in which to put the file on the local computer</li><li><em>mode</em> - Transfer mode</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#upload</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#upload</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L907" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L907" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1312,17 +1315,17 @@ it is still opened.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L696" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L696" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_directory_listing&#40;directory:String&#61;&lt;spanclass&#61;&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&#41;:Ftp::ListingResponse-instance-method">
+    <div class="entry-detail" id="get_directory_listing&#40;directory:String&#61;&amp;quot;&amp;quot;&#41;:Ftp::ListingResponse-instance-method">
       <div class="signature">
         
         def <strong>get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/ListingResponse.html">Ftp::ListingResponse</a>
 
-        <a class="method-permalink" href="#get_directory_listing%28directory%3AString%3D%3Cspanclass%3D%22s%22%3E%26quot%3B%26quot%3B%3C%2Fspan%3E%29%3AFtp%3A%3AListingResponse-instance-method">#</a>
+        <a class="method-permalink" href="#get_directory_listing%28directory%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AListingResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Get the contents of the given directory</p>
@@ -1341,7 +1344,7 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L796" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L796" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,7 +1367,7 @@ connection automatically if no command is sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L763" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L763" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,14 +1385,14 @@ connection automatically if no command is sent.</p>
 <p>Logging in is mandatory after connecting to the server.
 Users that are not logged in cannot perform any operation.</p>
 
-<ul><li><em>name</em> -     User name</li><li><em>password</em> - Password</li></ul>
+<ul><li><em>name</em> - User name</li><li><em>password</em> - Password</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L752" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L752" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,7 +1415,7 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L738" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L738" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1434,7 +1437,7 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L820" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L820" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1452,7 +1455,7 @@ Users that are not logged in cannot perform any operation.</p>
 <p>The filenames must be relative to the current working
 directory.</p>
 
-<ul><li><em>file</em> -    File to rename</li><li><em>new_name</em> - New name of the file</li></ul>
+<ul><li><em>file</em> - File to rename</li><li><em>new_name</em> - New name of the file</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p>
 
@@ -1461,17 +1464,17 @@ directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L868" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L868" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send_command&#40;command:String,parameter:String&#61;&lt;spanclass&#61;&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="send_command&#40;command:String,parameter:String&#61;&amp;quot;&amp;quot;&#41;:Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#send_command%28command%3AString%2Cparameter%3AString%3D%3Cspanclass%3D%22s%22%3E%26quot%3B%26quot%3B%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#send_command%28command%3AString%2Cparameter%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Send a command to the FTP server</p>
@@ -1481,26 +1484,26 @@ functions in the <code><a href="../SF/Ftp.html">SF::Ftp</a></code> class, this m
 to send any FTP command to the server. If the command
 requires one or more parameters, they can be specified
 in <em>parameter.</em> If the server returns information, you
-can extract it from the response using Response::message().</p>
+can extract it from the response using Response.message().</p>
 
-<ul><li><em>command</em> -   Command to send</li><li><em>parameter</em> - Command parameter</li></ul>
+<ul><li><em>command</em> - Command to send</li><li><em>parameter</em> - Command parameter</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L944" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L944" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="upload&#40;local_file:String,remote_path:String,mode:Ftp::TransferMode&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Binary&lt;/span&gt;&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="upload&#40;local_file:String,remote_path:String,mode:Ftp::TransferMode&#61;Binary&#41;:Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>upload</strong>(local_file : String, remote_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Upload a file to the server</p>
@@ -1510,16 +1513,16 @@ working directory of your application, and the
 remote path is relative to the current directory of the
 FTP server.</p>
 
-<ul><li><em>local_file</em> -  Path of the local file to upload</li><li><em>remote_path</em> - The directory in which to put the file on the server</li><li><em>mode</em> -       Transfer mode</li></ul>
+<ul><li><em>local_file</em> - Path of the local file to upload</li><li><em>remote_path</em> - The directory in which to put the file on the server</li><li><em>mode</em> - Transfer mode</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3D%3Cspanclass%3D%22t%22%3EBinary%3C%2Fspan%3E%29%3AFtp%3A%3AResponse-instance-method">#download</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#download</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L926" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L926" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1544,7 +1547,7 @@ operations involving directories and/or filenames.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L776" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L776" target="_blank">View source</a>]
         
       </div>
     </div>

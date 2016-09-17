@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -807,7 +807,7 @@
 
   <h2>Overview</h2>
 
-  <p>Base class for all render targets (window, texture, ...)</p>
+  <p>Base module for all render targets (window, texture, ...)</p>
 
 <p><code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code> defines the common behavior of all the
 2D render targets usable in the graphics module. It makes
@@ -819,7 +819,7 @@ which are a kind of 2D cameras. With views you can globally
 scroll, rotate or zoom everything that is drawn,
 without having to transform every single entity. See the
 documentation of <code><a href="../SF/View.html">SF::View</a></code> for more details and sample pieces of
-code about this class.</p>
+code about this module.</p>
 
 <p>On top of that, render targets are still able to render direct
 OpenGL stuff. It is even possible to mix together OpenGL calls
@@ -861,12 +861,12 @@ push_gl_states/pop_gl_states functions.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4471" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4417" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L201" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L219" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -881,7 +881,7 @@ push_gl_states/pop_gl_states functions.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#clear%28color%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29%29-instance-method" class="signature"><strong>#clear</strong>(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</a>
+        <a href="#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method" class="signature"><strong>#clear</strong>(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</a>
         
           <div class="summary"><p>Clear the entire target with a single color</p></div>
         
@@ -895,14 +895,14 @@ push_gl_states/pop_gl_states functions.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#draw</strong>(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</a>
+        <a href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</a>
         
           <div class="summary"><p>Draw a drawable object to the render target.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method" class="signature"><strong>#draw</strong>(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</a>
+        <a href="#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="signature"><strong>#draw</strong>(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</a>
         
           <div class="summary"><p>Draw primitives defined by an array of vertices</p></div>
         
@@ -1007,12 +1007,12 @@ push_gl_states/pop_gl_states functions.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="clear&#40;color:Color&#61;&lt;spanclass&#61;&quot;t&quot;&gt;Color&lt;/span&gt;.&lt;spanclass&#61;&quot;k&quot;&gt;new&lt;/span&gt;&#40;&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;0&lt;/span&gt;,&lt;spanclass&#61;&quot;n&quot;&gt;255&lt;/span&gt;&#41;&#41;-instance-method">
+    <div class="entry-detail" id="clear&#40;color:Color&#61;Color.new&#40;0,0,0,255&#41;&#41;-instance-method">
       <div class="signature">
         
         def <strong>clear</strong>(color : <a href="../SF/Color.html">Color</a> = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))
 
-        <a class="method-permalink" href="#clear%28color%3AColor%3D%3Cspanclass%3D%22t%22%3EColor%3C%2Fspan%3E.%3Cspanclass%3D%22k%22%3Enew%3C%2Fspan%3E%28%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E0%3C%2Fspan%3E%2C%3Cspanclass%3D%22n%22%3E255%3C%2Fspan%3E%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Clear the entire target with a single color</p>
@@ -1025,7 +1025,7 @@ to clear the previous contents of the target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4478" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4424" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1050,17 +1050,17 @@ and never changes after the target has been created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4518" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4464" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="draw&#40;drawable:Drawable,states:RenderStates&#61;&lt;spanclass&#61;&quot;t&quot;&gt;RenderStates&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Default&lt;/span&gt;&#41;-instance-method">
+    <div class="entry-detail" id="draw&#40;drawable:Drawable,states:RenderStates&#61;RenderStates::Default&#41;-instance-method">
       <div class="signature">
         
         def <strong>draw</strong>(drawable : <a href="../SF/Drawable.html">Drawable</a>, states : <a href="../SF/RenderStates.html">RenderStates</a> = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
 
-        <a class="method-permalink" href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method">#</a>
+        <a class="method-permalink" href="#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Draw a drawable object to the render target.</p>
@@ -1072,27 +1072,27 @@ and never changes after the target has been created.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/graphics.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L226" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="draw&#40;vertices:Array&#40;Vertex&#41;|Slice&#40;Vertex&#41;,type:PrimitiveType,states:RenderStates&#61;&lt;spanclass&#61;&quot;t&quot;&gt;RenderStates&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Default&lt;/span&gt;&#41;-instance-method">
+    <div class="entry-detail" id="draw&#40;vertices:Array&#40;Vertex&#41;|Slice&#40;Vertex&#41;,type:PrimitiveType,states:RenderStates&#61;RenderStates::Default&#41;-instance-method">
       <div class="signature">
         
         def <strong>draw</strong>(vertices : Array(<a href="../SF/Vertex.html">Vertex</a>) | Slice(<a href="../SF/Vertex.html">Vertex</a>), type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, states : <a href="../SF/RenderStates.html">RenderStates</a> = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)
 
-        <a class="method-permalink" href="#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3D%3Cspanclass%3D%22t%22%3ERenderStates%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EDefault%3C%2Fspan%3E%29-instance-method">#</a>
+        <a class="method-permalink" href="#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Draw primitives defined by an array of vertices</p>
 
-<ul><li><em>vertices</em> -    Pointer to the vertices</li><li><em>vertex_count</em> - Number of vertices in the array</li><li><em>type</em> -        Type of primitives to draw</li><li><em>states</em> -      Render states to use for drawing</li></ul></div>
+<ul><li><em>vertices</em> - Pointer to the vertices</li><li><em>vertex_count</em> - Number of vertices in the array</li><li><em>type</em> - Type of primitives to draw</li><li><em>states</em> - Render states to use for drawing</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4645" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4591" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,7 +1119,7 @@ actually covers in the target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4532" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4478" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1157,7 +1157,7 @@ render target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4633" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4579" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,7 +1177,7 @@ coordinates, using the current view</p>
 function that implicitly uses the current view.
 It is equivalent to:</p>
 
-<pre><code class='language-c++'>target.mapCoordsToPixel(point, target.getView());</code></pre>
+<pre><code>target.map_coords_to_pixel(point, target.view)</code></pre>
 
 <ul><li><em>point</em> - Point to convert</li></ul>
 
@@ -1188,7 +1188,7 @@ It is equivalent to:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4605" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4551" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,7 +1230,7 @@ render target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4584" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4530" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1250,7 +1250,7 @@ coordinates, using the current view</p>
 function that implicitly uses the current view.
 It is equivalent to:</p>
 
-<pre><code class='language-c++'>target.mapPixelToCoords(point, target.getView());</code></pre>
+<pre><code>target.map_pixel_to_coords(point, target.view)</code></pre>
 
 <ul><li><em>point</em> - Pixel to convert</li></ul>
 
@@ -1261,7 +1261,7 @@ It is equivalent to:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4552" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4498" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1284,7 +1284,7 @@ description of these functions.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4690" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4636" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1308,12 +1308,12 @@ it ensures that:</p>
 <p>More specifically, it must be used around code that
 calls Draw functions. Example:</p>
 
-<pre><code class='language-c++'>// OpenGL code here...
-window.pushGLStates();
-window.draw(...);
-window.draw(...);
-window.popGLStates();
-// OpenGL code here...</code></pre>
+<pre><code><span class="c"># OpenGL code here...</span>
+window.push_gl_states()
+window.draw(...)
+window.draw(...)
+window.pop_gl_states()
+<span class="c"># OpenGL code here...</span></code></pre>
 
 <p>Note that this function is quite expensive: it saves all the
 possible OpenGL states and matrices, even the ones you
@@ -1329,7 +1329,7 @@ function if you do so.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4681" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4627" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,18 +1352,18 @@ calls will work as expected.</p>
 
 <p>Example:</p>
 
-<pre><code class='language-c++'>// OpenGL code here...
-glPushAttrib(...);
-window.resetGLStates();
-window.draw(...);
-window.draw(...);
-glPopAttrib(...);
-// OpenGL code here...</code></pre></div>
+<pre><code><span class="c"># OpenGL code here...</span>
+glPushAttrib(...)
+window.reset_gl_states()
+window.draw(...)
+window.draw(...)
+glPopAttrib(...)
+<span class="c"># OpenGL code here...</span></code></pre></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4711" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4657" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1383,7 +1383,7 @@ glPopAttrib(...);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4651" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4597" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,7 +1405,7 @@ glPopAttrib(...);
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4506" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4452" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,7 +1438,7 @@ the result of default_view() to this function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/graphics/obj.cr#L4497" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L4443" target="_blank">View source</a>]
         
       </div>
     </div>

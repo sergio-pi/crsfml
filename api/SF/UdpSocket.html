@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -854,41 +854,35 @@ make the port available for other sockets.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>// ----- The client -----
+<pre><code><span class="c"># ----- The client -----</span>
 
-// Create a socket and bind it to the port 55001
-sf::UdpSocket socket;
-socket.bind(55001);
+<span class="c"># Create a socket and bind it to the port 55001</span>
+socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">UdpSocket</span>.<span class="k">new</span>
+socket.bind(<span class="n">55001</span>)
 
-// Send a message to 192.168.1.50 on port 55002
-std::string message = "Hi, I am " + sf::IpAddress::getLocalAddress().toString();
-socket.send(message.c_str(), message.size() + 1, "192.168.1.50", 55002);
+<span class="c"># Send a message to 192.168.1.50 on port 55002</span>
+message <span class="o">=</span> <span class="s">&quot;Hi, I am </span><span class="i">#{</span></span><span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.local_address<span class="s"><span class="i">}</span>&quot;</span>
+socket.send(message.to_slice, <span class="s">&quot;192.168.1.50&quot;</span>, <span class="n">55002</span>)
 
-// Receive an answer (most likely from 192.168.1.50, but could be anyone else)
-char buffer[1024];
-std::size_t received = 0;
-sf::IpAddress sender;
-unsigned short port;
-socket.receive(buffer, sizeof(buffer), received, sender, port);
-std::cout &lt;&lt; sender.ToString() &lt;&lt; " said: " &lt;&lt; buffer &lt;&lt; std::endl;
+<span class="c"># Receive an answer &#40;most likely from 192.168.1.50, but could be anyone else&#41;</span>
+buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
+status, received, sender, port <span class="o">=</span> socket.receive(buffer)
+puts <span class="s">&quot;</span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span> said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
 
-// ----- The server -----
+<span class="c"># ----- The server -----</span>
 
-// Create a socket and bind it to the port 55002
-sf::UdpSocket socket;
-socket.bind(55002);
+<span class="c"># Create a socket and bind it to the port 55002</span>
+socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">UdpSocket</span>.<span class="k">new</span>
+socket.bind(<span class="n">55002</span>)
 
-// Receive a message from anyone
-char buffer[1024];
-std::size_t received = 0;
-sf::IpAddress sender;
-unsigned short port;
-socket.receive(buffer, sizeof(buffer), received, sender, port);
-std::cout &lt;&lt; sender.ToString() &lt;&lt; " said: " &lt;&lt; buffer &lt;&lt; std::endl;
+<span class="c"># Receive a message from anyone</span>
+buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
+status, received, sender, port <span class="o">=</span> socket.receive(buffer)
+puts <span class="s">&quot;</span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span> said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
 
-// Send an answer
-std::string message = "Welcome " + sender.toString();
-socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
+<span class="c"># Send an answer</span>
+message <span class="o">=</span> <span class="s">&quot;Welcome </span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span>&quot;</span>
+socket.send(message.to_slice, sender, port)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Socket.html">SF::Socket</a></code>, <code><a href="../SF/TcpSocket.html">SF::TcpSocket</a></code>, <code><a href="../SF/Packet.html">SF::Packet</a></code></p>
 
@@ -908,7 +902,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2278" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2200" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -951,7 +945,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#bind</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
+        <a href="#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#bind</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
         
           <div class="summary"><p>Bind the socket to a specific port</p></div>
         
@@ -965,7 +959,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%2CIpAddress%2CUInt16%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, LibC::SizeT, IpAddress, UInt16)</a>
+        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32, IpAddress, UInt16)</a>
         
           <div class="summary"><p>Receive raw data from a remote peer</p></div>
         
@@ -1081,7 +1075,7 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2283" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2205" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1091,12 +1085,12 @@ socket.send(message.c_str(), message.size() + 1, sender, port);</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="bind&#40;port:Int,address:IpAddress&#61;&lt;spanclass&#61;&quot;t&quot;&gt;IpAddress&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;::&lt;/span&gt;&lt;spanclass&#61;&quot;t&quot;&gt;Any&lt;/span&gt;&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="bind&#40;port:Int,address:IpAddress&#61;IpAddress::Any&#41;:Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>bind</strong>(port : Int, address : <a href="../SF/IpAddress.html">IpAddress</a> = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Bind the socket to a specific port</p>
@@ -1107,7 +1101,7 @@ You can use the special value Socket::AnyPort to tell the
 system to automatically pick an available port, and then
 call local_port to retrieve the chosen port.</p>
 
-<ul><li><em>port</em> -    Port to bind the socket to</li><li><em>address</em> - Address of the interface to bind to</li></ul>
+<ul><li><em>port</em> - Port to bind the socket to</li><li><em>address</em> - Address of the interface to bind to</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
@@ -1116,7 +1110,7 @@ call local_port to retrieve the chosen port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2314" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1136,22 +1130,22 @@ returns 0.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2296" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2218" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,LibC::SizeT,IpAddress,UInt16&#41;-instance-method">
+    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32,IpAddress,UInt16&#41;-instance-method">
       <div class="signature">
         
-        def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, LibC::SizeT, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
+        def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
 
-        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%2CIpAddress%2CUInt16%29-instance-method">#</a>
+        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Receive raw data from a remote peer</p>
@@ -1163,16 +1157,18 @@ the data that you intend to receive, if it is too small
 then an error will be returned and <em>all</em> the data will
 be lost.</p>
 
-<ul><li><em>data</em> -          Pointer to the array to fill with the received bytes</li><li><em>size</em> -          Maximum number of bytes that can be received</li><li><em>received</em> -      This variable is filled with the actual number of bytes received</li><li><em>remote_address</em> - Address of the peer that sent the data</li><li><em>remote_port</em> -    Port of the peer that sent the data</li></ul>
+<ul><li><em>data</em> - The slice to fill with the received bytes</li></ul>
 
-<p><em>Returns:</em> Status code</p>
+<p><em>Returns:</em></p>
+
+<ul><li>Status code</li><li>The actual number of bytes received</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2364" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2285" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1190,16 +1186,18 @@ be lost.</p>
 <p>In blocking mode, this function will wait until the whole packet
 has been received.</p>
 
-<ul><li><em>packet</em> -        Packet to fill with the received data</li><li><em>remote_address</em> - Address of the peer that sent the data</li><li><em>remote_port</em> -    Port of the peer that sent the data</li></ul>
+<ul><li><em>packet</em> - Packet to fill with the received data</li></ul>
 
-<p><em>Returns:</em> Status code</p>
+<p><em>Returns:</em></p>
+
+<ul><li>Status code</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2398" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2320" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1218,16 +1216,16 @@ has been received.</p>
 UdpSocket::MaxDatagramSize, otherwise this function will
 fail and no data will be sent.</p>
 
-<ul><li><em>packet</em> -        Packet to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> -    Port of the receiver to send the data to</li></ul>
+<ul><li><em>packet</em> - Packet to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> - Port of the receiver to send the data to</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2382" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2303" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1242,20 +1240,20 @@ fail and no data will be sent.</p>
       
         <div class="doc"><p>Send raw data to a remote peer</p>
 
-<p>Make sure that <em>size</em> is not greater than
-UdpSocket::MaxDatagramSize, otherwise this function will
+<p>Make sure that <em>data</em> size is not greater than
+<code><a href="../SF/UdpSocket.html#MaxDatagramSize">UdpSocket::MaxDatagramSize</a></code>, otherwise this function will
 fail and no data will be sent.</p>
 
-<ul><li><em>data</em> -          Pointer to the sequence of bytes to send</li><li><em>size</em> -          Number of bytes to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> -    Port of the receiver to send the data to</li></ul>
+<ul><li><em>data</em> - Slice containing the sequence of bytes to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> - Port of the receiver to send the data to</li></ul>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CLibC%3A%3ASizeT%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2342" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2263" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1274,12 +1272,12 @@ fail and no data will be sent.</p>
 available after this function is called. If the
 socket is not bound to a port, this function has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3D%3Cspanclass%3D%22t%22%3EIpAddress%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3E%3A%3A%3C%2Fspan%3E%3Cspanclass%3D%22t%22%3EAny%3C%2Fspan%3E%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/network/obj.cr#L2325" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2247" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -813,9 +813,9 @@
 keyboard. It only contains static functions (a single
 keyboard is assumed), so it's not meant to be instantiated.</p>
 
-<p>This class allows users to query the keyboard state at any
+<p>This module allows users to query the keyboard state at any
 time and directly, without having to deal with a window and
-its events. Compared to the KeyPressed and KeyReleased events,
+its events. Compared to the <code>KeyPressed</code> and <code>KeyReleased</code> events,
 <code><a href="../SF/Keyboard.html">SF::Keyboard</a></code> can retrieve the state of a key at any time
 (you don't need to store and update a boolean on your side
 in order to know if a key is pressed or released), and you
@@ -825,18 +825,13 @@ event is triggered.</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-{
-    // move left...
-}
-else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-{
-    // move right...
-}
-else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-{
-    // quit...
-}</code></pre>
+<pre><code><span class="k">if</span> <span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span>.key_pressed?(<span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span><span class="t">::</span><span class="t">Left</span>)
+  <span class="c"># move left...</span>
+<span class="k">elsif</span> <span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span>.key_pressed?(<span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span><span class="t">::</span><span class="t">Right</span>)
+  <span class="c"># move right...</span>
+<span class="k">elsif</span> <span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span>.key_pressed?(<span class="t">SF</span><span class="t">::</span><span class="t">Keyboard</span><span class="t">::</span><span class="t">Escape</span>)
+  <span class="c"># quit...</span>
+<span class="k">end</span></code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Joystick.html">SF::Joystick</a></code>, <code><a href="../SF/Mouse.html">SF::Mouse</a></code>, <code><a href="../SF/Touch.html">SF::Touch</a></code></p>
 
@@ -856,7 +851,7 @@ else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L528" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L516" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -914,7 +909,7 @@ else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L744" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L732" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -941,7 +936,7 @@ nothing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L758" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L746" target="_blank">View source</a>]
         
       </div>
     </div>

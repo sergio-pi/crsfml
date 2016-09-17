@@ -15,7 +15,7 @@
   </div>
 
   <ul>
-    <li><a href="https://github.com/BlaXpirit/crsfml#readme"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" height="64"/></a></li>
+    <li><a href="https://github.com/BlaXpirit/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/BlaXpirit/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
   </ul>
 
   <ul>
@@ -813,7 +813,7 @@
 touches. It only contains static functions, so it's not
 meant to be instantiated.</p>
 
-<p>This class allows users to query the touches state at any
+<p>This module allows users to query the touches state at any
 time and directly, without having to deal with a window and
 its events. Compared to the TouchBegan, TouchMoved
 and TouchEnded events, <code><a href="../SF/Touch.html">SF::Touch</a></code> can retrieve the
@@ -837,16 +837,15 @@ is still down).</p>
 
 <p>Usage example:</p>
 
-<pre><code class='language-c++'>if (sf::Touch::isDown(0))
-{
-    // touch 0 is down
-}
+<pre><code><span class="k">if</span> <span class="t">SF</span><span class="t">::</span><span class="t">Touch</span>.down?(<span class="n">0</span>)
+  <span class="c"># touch 0 is down</span>
+<span class="k">end</span>
 
-// get global position of touch 1
-sf::Vector2i globalPos = sf::Touch::getPosition(1);
+<span class="c"># get global position of touch 1</span>
+global_pos <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Touch</span>.get_position(<span class="n">1</span>)
 
-// get position of touch 1 relative to a window
-sf::Vector2i relativePos = sf::Touch::getPosition(1, window);</code></pre>
+<span class="c"># get position of touch 1 relative to a window</span>
+relative_pos <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Touch</span>.get_position(<span class="n">1</span>, window)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Joystick.html">SF::Joystick</a></code>, <code><a href="../SF/Keyboard.html">SF::Keyboard</a></code>, <code><a href="../SF/Mouse.html">SF::Mouse</a></code></p>
 
@@ -866,7 +865,7 @@ sf::Vector2i relativePos = sf::Touch::getPosition(1, window);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1718" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1705" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -931,7 +930,7 @@ sf::Vector2i relativePos = sf::Touch::getPosition(1, window);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1724" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1711" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -956,7 +955,7 @@ in global (desktop) coordinates.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1736" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1723" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -981,7 +980,7 @@ relative to the given window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.1/src/window/obj.cr#L1750" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1737" target="_blank">View source</a>]
         
       </div>
     </div>
