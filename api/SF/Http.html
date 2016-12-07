@@ -819,20 +819,20 @@ not supported.</p>
 
 <p>The HTTP client is split into 3 classes:</p>
 
-<ul><li><code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Request.html">Request</a></code></li><li><code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Response.html">Response</a></code></li><li><code><a href="../SF/Http.html">SF::Http</a></code></li></ul>
+<ul><li><code><a href="../SF/Http.html">SF::Http</a>::Request</code></li><li><code><a href="../SF/Http.html">SF::Http</a>::Response</code></li><li><code><a href="../SF/Http.html">SF::Http</a></code></li></ul>
 
-<p><code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Request.html">Request</a></code> builds the request that will be
+<p><code><a href="../SF/Http.html">SF::Http</a>::Request</code> builds the request that will be
 sent to the server. A request is made of:</p>
 
 <ul><li>a method (what you want to do)</li><li>a target URI (usually the name of the web page or file)</li><li>one or more header fields (options that you can pass to the server)</li><li>an optional body (for POST requests)</li></ul>
 
-<p><code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Response.html">Response</a></code> parse the response from the web server
+<p><code><a href="../SF/Http.html">SF::Http</a>::Response</code> parse the response from the web server
 and provides getters to read them. The response contains:</p>
 
 <ul><li>a status code</li><li>header fields (that may be answers to the ones that you requested)</li><li>a body, which contains the contents of the requested resource</li></ul>
 
 <p><code><a href="../SF/Http.html">SF::Http</a></code> provides a simple function, SendRequest, to send a
-<code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Request.html">Request</a></code> and return the corresponding <code><a href="../SF/Http.html">SF::Http</a>::<a href="../SF/Http/Response.html">Response</a></code>
+<code><a href="../SF/Http.html">SF::Http</a>::Request</code> and return the corresponding <code><a href="../SF/Http.html">SF::Http</a>::Response</code>
 from the server.</p>
 
 <p>Usage example:</p>
@@ -877,7 +877,7 @@ response <span class="o">=</span> http.send_request request
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1242" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L1242" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -890,16 +890,16 @@ response <span class="o">=</span> http.send_request request
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the HTTP client with the target host</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the HTTP client with the target host</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -958,24 +958,6 @@ response <span class="o">=</span> http.send_request request
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1478" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new&#40;host:String,port:Int&#61;0&#41;-class-method">
       <div class="signature">
         
@@ -998,7 +980,25 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1493" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L1493" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L1478" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1034,7 +1034,7 @@ of Time::Zero means that the client will use the system default timeout
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1527" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L1527" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1062,7 +1062,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L1509" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L1509" target="_blank">View source</a>]
         
       </div>
     </div>

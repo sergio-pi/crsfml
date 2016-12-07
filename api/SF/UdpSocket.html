@@ -902,7 +902,7 @@ socket.send(message.to_slice, sender, port)</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2200" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2200" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -973,16 +973,16 @@ socket.send(message.to_slice, sender, port)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(packet : Packet, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
+        <a href="#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(data : Slice, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
         
-          <div class="summary"><p>Send a formatted packet of data to a remote peer</p></div>
+          <div class="summary"><p>Send raw data to a remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(data : Slice, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
+        <a href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(packet : Packet, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
         
-          <div class="summary"><p>Send raw data to a remote peer</p></div>
+          <div class="summary"><p>Send a formatted packet of data to a remote peer</p></div>
         
       </li>
     
@@ -1075,7 +1075,7 @@ socket.send(message.to_slice, sender, port)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2205" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2205" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1110,7 +1110,7 @@ call local_port to retrieve the chosen port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2236" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1135,7 +1135,7 @@ returns 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2218" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2218" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,12 +1163,12 @@ be lost.</p>
 
 <ul><li>Status code</li><li>The actual number of bytes received</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2285" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2287" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1192,40 +1192,12 @@ has been received.</p>
 
 <ul><li>Status code</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2320" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="send&#40;packet:Packet,remote_address:IpAddress,remote_port:Int&#41;:Socket::Status-instance-method">
-      <div class="signature">
-        
-        def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
-
-        <a class="method-permalink" href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Send a formatted packet of data to a remote peer</p>
-
-<p>Make sure that the packet size is not greater than
-UdpSocket::MaxDatagramSize, otherwise this function will
-fail and no data will be sent.</p>
-
-<ul><li><em>packet</em> - Packet to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> - Port of the receiver to send the data to</li></ul>
-
-<p><em>Returns:</em> Status code</p>
-
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2303" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2322" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1253,7 +1225,35 @@ fail and no data will be sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2263" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2265" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send&#40;packet:Packet,remote_address:IpAddress,remote_port:Int&#41;:Socket::Status-instance-method">
+      <div class="signature">
+        
+        def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
+
+        <a class="method-permalink" href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Send a formatted packet of data to a remote peer</p>
+
+<p>Make sure that the packet size is not greater than
+UdpSocket::MaxDatagramSize, otherwise this function will
+fail and no data will be sent.</p>
+
+<ul><li><em>packet</em> - Packet to send</li><li><em>remote_address</em> - Address of the receiver</li><li><em>remote_port</em> - Port of the receiver to send the data to</li></ul>
+
+<p><em>Returns:</em> Status code</p>
+
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2305" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1268,16 +1268,18 @@ fail and no data will be sent.</p>
       
         <div class="doc"><p>Unbind the socket from the local port to which it is bound</p>
 
-<p>The port that the socket was previously using is immediately
-available after this function is called. If the
-socket is not bound to a port, this function has no effect.</p>
+<p>The port that the socket was previously bound to is immediately
+made available to the operating system after this function is called.
+This means that a subsequent call to bind() will be able to re-bind
+the port if no other process has done so in the mean time.
+If the socket is not bound to a port, this function has no effect.</p>
 
 <p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L2247" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L2249" target="_blank">View source</a>]
         
       </div>
     </div>

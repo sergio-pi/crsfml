@@ -846,7 +846,7 @@ dst.a   <span class="o">=</span> alpha_src_factor <span class="o">*</span> src.a
 
 <p>In SFML, a blend mode can be specified every time you draw a <code><a href="../SF/Drawable.html">SF::Drawable</a></code>
 object to a render target. It is part of the <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code> compound
-that is passed to the member function <code><a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">SF::RenderTarget.draw</a></code>().</p>
+that is passed to the member function <code><a href="../SF/RenderTarget.html#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">SF::RenderTarget.draw</a></code>().</p>
 
 <p><em>See also:</em> <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code>, <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></p>
 
@@ -866,12 +866,12 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L51" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L51" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L272" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/graphics.cr#L272" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -927,9 +927,9 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method" class="signature"><strong>.new</strong>(color_source_factor : BlendMode::Factor, color_destination_factor : BlendMode::Factor, color_blend_equation : BlendMode::Equation, alpha_source_factor : BlendMode::Factor, alpha_destination_factor : BlendMode::Factor, alpha_blend_equation : BlendMode::Equation)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the blend mode given the factors and equation.</p></div>
         
       </li>
     
@@ -941,9 +941,9 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method" class="signature"><strong>.new</strong>(color_source_factor : BlendMode::Factor, color_destination_factor : BlendMode::Factor, color_blend_equation : BlendMode::Equation, alpha_source_factor : BlendMode::Factor, alpha_destination_factor : BlendMode::Factor, alpha_blend_equation : BlendMode::Equation)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the blend mode given the factors and equation.</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -1079,22 +1079,22 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new-class-method">
+    <div class="entry-detail" id="new&#40;color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>
+        def self.<strong>new</strong>(color_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>, alpha_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
 
-        <a class="method-permalink" href="#new-class-method">#</a>
+        <a class="method-permalink" href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc"><p>Construct the blend mode given the factors and equation.</p>
 
-<p>Constructs a blending mode that does alpha blending.</p></div>
+<ul><li><em>color_source_factor</em> - Specifies how to compute the source factor for the color channels.</li><li><em>color_destination_factor</em> - Specifies how to compute the destination factor for the color channels.</li><li><em>color_blend_equation</em> - Specifies how to combine the source and destination colors.</li><li><em>alpha_source_factor</em> - Specifies how to compute the source factor.</li><li><em>alpha_destination_factor</em> - Specifies how to compute the destination factor.</li><li><em>alpha_blend_equation</em> - Specifies how to combine the source and destination alphas.</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1117,27 +1117,27 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation&#41;-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(color_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>, alpha_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the blend mode given the factors and equation.</p>
+        <div class="doc"><p>Default constructor</p>
 
-<ul><li><em>color_source_factor</em> - Specifies how to compute the source factor for the color channels.</li><li><em>color_destination_factor</em> - Specifies how to compute the destination factor for the color channels.</li><li><em>color_blend_equation</em> - Specifies how to combine the source and destination colors.</li><li><em>alpha_source_factor</em> - Specifies how to compute the source factor.</li><li><em>alpha_destination_factor</em> - Specifies how to compute the destination factor.</li><li><em>alpha_blend_equation</em> - Specifies how to combine the source and destination alphas.</li></ul></div>
+<p>Constructs a blending mode that does alpha blending.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L135" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1164,7 +1164,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1186,7 +1186,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L198" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,7 +1204,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L178" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L178" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,7 +1220,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L181" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1238,7 +1238,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L186" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1254,7 +1254,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1272,7 +1272,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1288,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L173" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,7 +1306,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L154" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,7 +1322,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,7 +1340,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L162" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1356,7 +1356,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L165" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L165" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1374,7 +1374,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L146" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1390,7 +1390,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L149" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1406,7 +1406,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L227" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L227" target="_blank">View source</a>]
         
       </div>
     </div>

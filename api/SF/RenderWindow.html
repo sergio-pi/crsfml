@@ -919,12 +919,12 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5073" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5073" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -937,20 +937,6 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
         <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct a new window</p></div>
@@ -961,6 +947,20 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
         <a href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct the window from an existing control</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Default constructor</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
+        
+          <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
         
       </li>
     
@@ -1015,8 +1015,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
-      <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
+    <a href="../SF/RenderTarget.html#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
+      <span>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
   
@@ -1143,8 +1143,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     open?</a>, 
     
   
-    <a href="../SF/Window.html#poll_event%3AEvent%7CNil-instance-method" class="tooltip">
-      <span>poll_event : Event | Nil</span>
+    <a href="../SF/Window.html#poll_event%3AEvent%3F-instance-method" class="tooltip">
+      <span>poll_event : Event?</span>
     poll_event</a>, 
     
   
@@ -1203,8 +1203,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     visible=</a>, 
     
   
-    <a href="../SF/Window.html#wait_event%3AEvent%7CNil-instance-method" class="tooltip">
-      <span>wait_event : Event | Nil</span>
+    <a href="../SF/Window.html#wait_event%3AEvent%3F-instance-method" class="tooltip">
+      <span>wait_event : Event?</span>
     wait_event</a>
     
   
@@ -1215,8 +1215,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h3>Class methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
-    <a href="../SF/Window.html#new-class-method" class="tooltip">
-      <span>new<br/>new(*args, **kwargs) : self<br/>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</span>
+    <a href="../SF/Window.html#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="tooltip">
+      <span>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new<br/>new(*args, **kwargs) : self</span>
     new</a>
     
   
@@ -1256,45 +1256,6 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p>
-
-<p>This constructor doesn't actually create the window,
-use the other constructors or call create() to do so.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5079" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(*args, **kwargs) : self
-
-        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5180" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;Style::Default,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
       <div class="signature">
         
@@ -1320,7 +1281,7 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5100" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,7 +1313,46 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5118" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor</p>
+
+<p>This constructor doesn't actually create the window,
+use the other constructors or call create() to do so.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5079" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(*args, **kwargs) : self
+
+        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5180" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1393,7 +1393,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1413,7 +1413,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1436,7 +1436,7 @@ of the window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5135" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5135" target="_blank">View source</a>]
         
       </div>
     </div>

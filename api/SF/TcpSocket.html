@@ -896,7 +896,7 @@ socket.send(message.to_slice)</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L181" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L181" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -944,16 +944,16 @@ socket.send(message.to_slice)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : Socket::Status</a>
+        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
         
-          <div class="summary"><p>Receive a formatted packet of data from the remote peer</p></div>
+          <div class="summary"><p>Receive raw data from the remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
+        <a href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : Socket::Status</a>
         
-          <div class="summary"><p>Receive raw data from the remote peer</p></div>
+          <div class="summary"><p>Receive a formatted packet of data from the remote peer</p></div>
         
       </li>
     
@@ -1067,7 +1067,7 @@ socket.send(message.to_slice)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L184" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1101,7 +1101,7 @@ If the socket was previously connected, it is first disconnected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1124,7 +1124,7 @@ socket is not connected, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L249" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L249" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1148,35 +1148,7 @@ socket is not connected, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L196" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="receive&#40;packet:Packet&#41;:Socket::Status-instance-method">
-      <div class="signature">
-        
-        def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
-
-        <a class="method-permalink" href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Receive a formatted packet of data from the remote peer</p>
-
-<p>In blocking mode, this function will wait until the whole packet
-has been received.
-This function will fail if the socket is not connected.</p>
-
-<ul><li><em>packet</em> - Packet to fill with the received data</li></ul>
-
-<p><em>Returns:</em> Status code</p>
-
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L329" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1206,7 +1178,35 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L297" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L297" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="receive&#40;packet:Packet&#41;:Socket::Status-instance-method">
+      <div class="signature">
+        
+        def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
+
+        <a class="method-permalink" href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Receive a formatted packet of data from the remote peer</p>
+
+<p>In blocking mode, this function will wait until the whole packet
+has been received.
+This function will fail if the socket is not connected.</p>
+
+<ul><li><em>packet</em> - Packet to fill with the received data</li></ul>
+
+<p><em>Returns:</em> Status code</p>
+
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L329" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1231,7 +1231,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1244,8 +1244,9 @@ This function will fail if the socket is not connected.</p>
         <a class="method-permalink" href="#remote_port%3AUInt16-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the port of the connected peer to which
-the socket is connected</p>
+        <div class="doc"><p>Get the port of the connected peer to which</p>
+
+<pre><code>   the socket is connected</code></pre>
 
 <p>If the socket is not connected, this function returns 0.</p>
 
@@ -1256,7 +1257,7 @@ the socket is connected</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L221" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L221" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1279,12 +1280,12 @@ the socket is connected</p>
 
 <ul><li>Status code</li><li>The number of bytes sent</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L280" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L280" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1309,12 +1310,12 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#receive</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L314" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L314" target="_blank">View source</a>]
         
       </div>
     </div>

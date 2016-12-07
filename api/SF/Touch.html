@@ -865,7 +865,7 @@ relative_pos <span class="o">=</span> <span class="t">SF</span><span class="t">:
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1705" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/window/obj.cr#L1705" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -885,16 +885,16 @@ relative_pos <span class="o">=</span> <span class="t">SF</span><span class="t">:
       </li>
     
       <li class="entry-summary">
-        <a href="#get_position%28finger%3AInt%29%3AVector2i-class-method" class="signature"><strong>.get_position</strong>(finger : Int) : Vector2i</a>
+        <a href="#get_position%28finger%3AInt%2Crelative_to%3AWindow%29%3AVector2i-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : Window) : Vector2i</a>
         
-          <div class="summary"><p>Get the current position of a touch in desktop coordinates</p></div>
+          <div class="summary"><p>Get the current position of a touch in window coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_position%28finger%3AInt%2Crelative_to%3AWindow%29%3AVector2i-class-method" class="signature"><strong>.get_position</strong>(finger : Int, relative_to : Window) : Vector2i</a>
+        <a href="#get_position%28finger%3AInt%29%3AVector2i-class-method" class="signature"><strong>.get_position</strong>(finger : Int) : Vector2i</a>
         
-          <div class="summary"><p>Get the current position of a touch in window coordinates</p></div>
+          <div class="summary"><p>Get the current position of a touch in desktop coordinates</p></div>
         
       </li>
     
@@ -930,32 +930,7 @@ relative_pos <span class="o">=</span> <span class="t">SF</span><span class="t">:
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1711" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="get_position&#40;finger:Int&#41;:Vector2i-class-method">
-      <div class="signature">
-        
-        def self.<strong>get_position</strong>(finger : Int) : <a href="../SF/Vector2i.html">Vector2i</a>
-
-        <a class="method-permalink" href="#get_position%28finger%3AInt%29%3AVector2i-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Get the current position of a touch in desktop coordinates</p>
-
-<p>This function returns the current touch position
-in global (desktop) coordinates.</p>
-
-<ul><li><em>finger</em> - Finger index</li></ul>
-
-<p><em>Returns:</em> Current position of <em>finger,</em> or undefined if it's not down</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1723" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/window/obj.cr#L1711" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -980,7 +955,32 @@ relative to the given window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/window/obj.cr#L1737" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/window/obj.cr#L1737" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_position&#40;finger:Int&#41;:Vector2i-class-method">
+      <div class="signature">
+        
+        def self.<strong>get_position</strong>(finger : Int) : <a href="../SF/Vector2i.html">Vector2i</a>
+
+        <a class="method-permalink" href="#get_position%28finger%3AInt%29%3AVector2i-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the current position of a touch in desktop coordinates</p>
+
+<p>This function returns the current touch position
+in global (desktop) coordinates.</p>
+
+<ul><li><em>finger</em> - Finger index</li></ul>
+
+<p><em>Returns:</em> Current position of <em>finger,</em> or undefined if it's not down</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/window/obj.cr#L1723" target="_blank">View source</a>]
         
       </div>
     </div>

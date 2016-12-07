@@ -863,12 +863,12 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/system.cr#L269" target="_blank">system/system.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/system.cr#L269" target="_blank">system/system.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L45" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L45" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -925,14 +925,14 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       </li>
     
       <li class="entry-summary">
-        <a href="#%2A%28right%3AInt%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Int) : Time</a>
+        <a href="#%2A%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Number) : Time</a>
         
           <div class="summary"><p>Overload of binary * operator to scale a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2A%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Number) : Time</a>
+        <a href="#%2A%28right%3AInt%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Int) : Time</a>
         
           <div class="summary"><p>Overload of binary * operator to scale a time value</p></div>
         
@@ -960,6 +960,13 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       </li>
     
       <li class="entry-summary">
+        <a href="#%2F%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#/</strong>(right : Number) : Time</a>
+        
+          <div class="summary"><p>Overload of binary / operator to scale a time value</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#%2F%28right%3AInt%29%3ATime-instance-method" class="signature"><strong>#/</strong>(right : Int) : Time</a>
         
           <div class="summary"><p>Overload of binary / operator to scale a time value</p></div>
@@ -970,13 +977,6 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         <a href="#%2F%28right%3ATime%29%3AFloat32-instance-method" class="signature"><strong>#/</strong>(right : Time) : Float32</a>
         
           <div class="summary"><p>Overload of binary / operator to compute the ratio of two time values</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#%2F%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#/</strong>(right : Number) : Time</a>
-        
-          <div class="summary"><p>Overload of binary / operator to scale a time value</p></div>
         
       </li>
     
@@ -1090,7 +1090,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1117,7 +1117,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1139,29 +1139,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L234" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="*&#40;right:Int&#41;:Time-instance-method">
-      <div class="signature">
-        
-        def <strong>*</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
-
-        <a class="method-permalink" href="#%2A%28right%3AInt%29%3ATime-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Overload of binary * operator to scale a time value</p>
-
-<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
-
-<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L191" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L234" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1183,7 +1161,29 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L180" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L180" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="*&#40;right:Int&#41;:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>*</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
+
+        <a class="method-permalink" href="#%2A%28right%3AInt%29%3ATime-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Overload of binary * operator to scale a time value</p>
+
+<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
+
+<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1205,7 +1205,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L158" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,7 +1227,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L169" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1249,51 +1249,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L147" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="/&#40;right:Int&#41;:Time-instance-method">
-      <div class="signature">
-        
-        def <strong>/</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
-
-        <a class="method-permalink" href="#%2F%28right%3AInt%29%3ATime-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Overload of binary / operator to scale a time value</p>
-
-<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
-
-<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L213" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="/&#40;right:Time&#41;:Float32-instance-method">
-      <div class="signature">
-        
-        def <strong>/</strong>(right : <a href="../SF/Time.html">Time</a>) : Float32
-
-        <a class="method-permalink" href="#%2F%28right%3ATime%29%3AFloat32-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Overload of binary / operator to compute the ratio of two time values</p>
-
-<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
-
-<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L224" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L147" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1315,7 +1271,51 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L202" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L202" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="/&#40;right:Int&#41;:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>/</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
+
+        <a class="method-permalink" href="#%2F%28right%3AInt%29%3ATime-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Overload of binary / operator to scale a time value</p>
+
+<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
+
+<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="/&#40;right:Time&#41;:Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>/</strong>(right : <a href="../SF/Time.html">Time</a>) : Float32
+
+        <a class="method-permalink" href="#%2F%28right%3ATime%29%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Overload of binary / operator to compute the ratio of two time values</p>
+
+<ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
+
+<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1337,7 +1337,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L108" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L108" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1359,7 +1359,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L128" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1381,7 +1381,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1403,7 +1403,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1425,7 +1425,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L138" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1447,7 +1447,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,7 +1469,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1491,7 +1491,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1507,7 +1507,7 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/system/obj.cr#L249" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/system/obj.cr#L249" target="_blank">View source</a>]
         
       </div>
     </div>

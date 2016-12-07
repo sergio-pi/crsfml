@@ -861,7 +861,7 @@ drivers that are not able to process integer coordinates correctly.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1413" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1413" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -874,16 +874,16 @@ drivers that are not able to process integer coordinates correctly.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28position%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple)</a>
+        <a href="#new%28position%3AVector2%7CTuple%2Ccolor%3AColor%2Ctex_coords%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple, color : Color, tex_coords : Vector2 | Tuple)</a>
         
-          <div class="summary"><p>Construct the vertex from its position</p></div>
+          <div class="summary"><p>Construct the vertex from its position, color and texture coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28position%3AVector2%7CTuple%2Ccolor%3AColor%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple, color : Color)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the vertex from its position and color</p></div>
         
       </li>
     
@@ -895,16 +895,16 @@ drivers that are not able to process integer coordinates correctly.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28position%3AVector2%7CTuple%2Ccolor%3AColor%2Ctex_coords%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple, color : Color, tex_coords : Vector2 | Tuple)</a>
+        <a href="#new%28position%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple)</a>
         
-          <div class="summary"><p>Construct the vertex from its position, color and texture coordinates</p></div>
+          <div class="summary"><p>Construct the vertex from its position</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28position%3AVector2%7CTuple%2Ccolor%3AColor%29-class-method" class="signature"><strong>.new</strong>(position : Vector2 | Tuple, color : Color)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the vertex from its position and color</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -990,68 +990,6 @@ drivers that are not able to process integer coordinates correctly.</p>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
-
-        <a class="method-permalink" href="#new%28position%3AVector2%7CTuple%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct the vertex from its position</p>
-
-<p>The vertex color is white and texture coordinates are (0, 0).</p>
-
-<ul><li><em>position</em> - Vertex position</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1429" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1418" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple,tex_coords:Vector2|Tuple&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple, tex_coords : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
-
-        <a class="method-permalink" href="#new%28position%3AVector2%7CTuple%2Ctex_coords%3AVector2%7CTuple%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct the vertex from its position and texture coordinates</p>
-
-<p>The vertex color is white.</p>
-
-<ul><li><em>position</em> - Vertex position</li><li><em>tex_coords</em> - Vertex texture coordinates</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1455" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new&#40;position:Vector2|Tuple,color:Color,tex_coords:Vector2|Tuple&#41;-class-method">
       <div class="signature">
         
@@ -1067,7 +1005,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1468" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1468" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1089,7 +1027,69 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1442" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1442" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;position:Vector2|Tuple,tex_coords:Vector2|Tuple&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple, tex_coords : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
+
+        <a class="method-permalink" href="#new%28position%3AVector2%7CTuple%2Ctex_coords%3AVector2%7CTuple%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct the vertex from its position and texture coordinates</p>
+
+<p>The vertex color is white.</p>
+
+<ul><li><em>position</em> - Vertex position</li><li><em>tex_coords</em> - Vertex texture coordinates</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1455" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new&#40;position:Vector2|Tuple&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
+
+        <a class="method-permalink" href="#new%28position%3AVector2%7CTuple%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct the vertex from its position</p>
+
+<p>The vertex color is white and texture coordinates are (0, 0).</p>
+
+<ul><li><em>position</em> - Vertex position</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1429" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1418" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1112,7 +1112,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1487" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1487" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1128,7 +1128,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1490" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1490" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1144,7 +1144,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1514" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1514" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1162,7 +1162,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1478" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1478" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1178,7 +1178,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1481" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1481" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1196,7 +1196,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1495" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1495" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,7 +1212,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L1498" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L1498" target="_blank">View source</a>]
         
       </div>
     </div>

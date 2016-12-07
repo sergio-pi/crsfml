@@ -824,7 +824,7 @@ upload, download, create, remove, ...).</p>
 status code as well as a message from the server. Some
 commands such as working_directory() and directory_listing()
 return additional data, and use a class derived from
-<code><a href="../SF/Ftp.html">SF::Ftp</a>::<a href="../SF/Ftp/Response.html">Response</a></code> to provide this data. The most often used
+<code><a href="../SF/Ftp.html">SF::Ftp</a>::Response</code> to provide this data. The most often used
 commands are directly provided as member functions, but it is
 also possible to use specific commands with the send_command() function.</p>
 
@@ -903,7 +903,7 @@ ftp.disconnect()</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L424" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L424" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -998,16 +998,16 @@ ftp.disconnect()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#login%28name%3AString%2Cpassword%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong>(name : String, password : String) : Ftp::Response</a>
+        <a href="#login%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong> : Ftp::Response</a>
         
-          <div class="summary"><p>Log in using a username and a password</p></div>
+          <div class="summary"><p>Log in using an anonymous account</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#login%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong> : Ftp::Response</a>
+        <a href="#login%28name%3AString%2Cpassword%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong>(name : String, password : String) : Ftp::Response</a>
         
-          <div class="summary"><p>Log in using an anonymous account</p></div>
+          <div class="summary"><p>Log in using a username and a password</p></div>
         
       </li>
     
@@ -1091,7 +1091,7 @@ ftp.disconnect()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L426" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L426" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1122,7 +1122,7 @@ ftp.disconnect()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L810" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L810" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1155,7 +1155,7 @@ system timeout will be used (which is usually pretty long).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L717" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L717" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,7 +1182,7 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L835" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L835" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1211,7 +1211,7 @@ be removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L852" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L852" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,7 +1240,7 @@ removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L885" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L885" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1262,7 +1262,7 @@ removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L727" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L727" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,7 +1294,7 @@ be overwritten.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L907" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L907" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1315,7 +1315,7 @@ it is still opened.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L696" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L696" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1344,7 +1344,7 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L796" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L796" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1367,7 +1367,30 @@ connection automatically if no command is sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L763" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L763" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="login:Ftp::Response-instance-method">
+      <div class="signature">
+        
+        def <strong>login</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
+
+        <a class="method-permalink" href="#login%3AFtp%3A%3AResponse-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Log in using an anonymous account</p>
+
+<p>Logging in is mandatory after connecting to the server.
+Users that are not logged in cannot perform any operation.</p>
+
+<p><em>Returns:</em> Server response to the request</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L738" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1392,30 +1415,7 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L752" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="login:Ftp::Response-instance-method">
-      <div class="signature">
-        
-        def <strong>login</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
-
-        <a class="method-permalink" href="#login%3AFtp%3A%3AResponse-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Log in using an anonymous account</p>
-
-<p>Logging in is mandatory after connecting to the server.
-Users that are not logged in cannot perform any operation.</p>
-
-<p><em>Returns:</em> Server response to the request</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L738" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L752" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1437,7 +1437,7 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L820" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L820" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1464,7 +1464,7 @@ directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L868" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L868" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1493,7 +1493,7 @@ can extract it from the response using Response.message().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L944" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L944" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1522,7 +1522,7 @@ FTP server.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L926" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L926" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1547,7 +1547,7 @@ operations involving directories and/or filenames.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/network/obj.cr#L776" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/network/obj.cr#L776" target="_blank">View source</a>]
         
       </div>
     </div>

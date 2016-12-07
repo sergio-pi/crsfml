@@ -809,8 +809,9 @@
 
   <h2>Overview</h2>
 
-  <p>Drawable representation of a texture, with its
-own transformations, color, etc.</p>
+  <p>Drawable representation of a texture, with its</p>
+
+<pre><code>   own transformations, color, etc.</code></pre>
 
 <p><code><a href="../SF/Sprite.html">SF::Sprite</a></code> is a drawable class that allows to easily display
 a texture (or a part of it) on a render target.</p>
@@ -879,12 +880,12 @@ window.draw sprite</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5938" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5938" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L258" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/graphics.cr#L258" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -897,9 +898,9 @@ window.draw sprite</code></pre>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#new%28texture%3ATexture%2Crectangle%3AIntRect%29-class-method" class="signature"><strong>.new</strong>(texture : Texture, rectangle : IntRect)</a>
         
-          <div class="summary"><p>Default constructor</p></div>
+          <div class="summary"><p>Construct the sprite from a sub-rectangle of a source texture</p></div>
         
       </li>
     
@@ -911,9 +912,9 @@ window.draw sprite</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28texture%3ATexture%2Crectangle%3AIntRect%29-class-method" class="signature"><strong>.new</strong>(texture : Texture, rectangle : IntRect)</a>
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Construct the sprite from a sub-rectangle of a source texture</p></div>
+          <div class="summary"><p>Default constructor</p></div>
         
       </li>
     
@@ -1070,7 +1071,7 @@ window.draw sprite</code></pre>
     
   
     <a href="../SF/Transformable.html#scale%3AVector2f-instance-method" class="tooltip">
-      <span>scale : Vector2f<br/>scale(factor_x : Number, factor_y : Number)<br/>scale(factor : Vector2 | Tuple)</span>
+      <span>scale : Vector2f<br/>scale(factor : Vector2 | Tuple)<br/>scale(factor_x : Number, factor_y : Number)</span>
     scale</a>, 
     
   
@@ -1133,22 +1134,24 @@ window.draw sprite</code></pre>
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="new-class-method">
+    <div class="entry-detail" id="new&#40;texture:Texture,rectangle:IntRect&#41;-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>
+        def self.<strong>new</strong>(texture : <a href="../SF/Texture.html">Texture</a>, rectangle : <a href="../SF/IntRect.html">IntRect</a>)
 
-        <a class="method-permalink" href="#new-class-method">#</a>
+        <a class="method-permalink" href="#new%28texture%3ATexture%2Crectangle%3AIntRect%29-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc"><p>Construct the sprite from a sub-rectangle of a source texture</p>
 
-<p>Creates an empty sprite with no source texture.</p></div>
+<ul><li><em>texture</em> - Source texture</li><li><em>rectangle</em> - Sub-rectangle of the texture to assign to the sprite</li></ul>
+
+<p><em>See also:</em> <code><a href="../SF/Sprite.html#texture%3D%28texture%3ATexture%29-instance-method">#texture=</a></code>, <code><a href="../SF/Sprite.html#texture_rect%3D%28rectangle%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5943" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5965" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1170,29 +1173,27 @@ window.draw sprite</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5953" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5953" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;texture:Texture,rectangle:IntRect&#41;-class-method">
+    <div class="entry-detail" id="new-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(texture : <a href="../SF/Texture.html">Texture</a>, rectangle : <a href="../SF/IntRect.html">IntRect</a>)
+        def self.<strong>new</strong>
 
-        <a class="method-permalink" href="#new%28texture%3ATexture%2Crectangle%3AIntRect%29-class-method">#</a>
+        <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the sprite from a sub-rectangle of a source texture</p>
+        <div class="doc"><p>Default constructor</p>
 
-<ul><li><em>texture</em> - Source texture</li><li><em>rectangle</em> - Sub-rectangle of the texture to assign to the sprite</li></ul>
-
-<p><em>See also:</em> <code><a href="../SF/Sprite.html#texture%3D%28texture%3ATexture%29-instance-method">#texture=</a></code>, <code><a href="../SF/Sprite.html#texture_rect%3D%28rectangle%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
+<p>Creates an empty sprite with no source texture.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5965" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5943" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1219,7 +1220,7 @@ window.draw sprite</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6044" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6044" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,7 +1247,7 @@ By default, the sprite's color is opaque white.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6014" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6014" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1262,7 +1263,7 @@ By default, the sprite's color is opaque white.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6197" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6197" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1289,7 @@ sprite in the global 2D world's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6072" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6072" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1314,7 +1315,7 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6058" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6058" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1346,7 +1347,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L5987" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L5987" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,7 +1365,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/graphics.cr#L260" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/graphics.cr#L260" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,7 +1387,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6034" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6034" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,7 +1413,7 @@ By default, the texture rect covers the entire texture.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.2/src/graphics/obj.cr#L6001" target="_blank">View source</a>]
+          [<a href="https://github.com/BlaXpirit/crsfml/blob/v2.4.3/src/graphics/obj.cr#L6001" target="_blank">View source</a>]
         
       </div>
     </div>
