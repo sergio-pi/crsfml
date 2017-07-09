@@ -864,7 +864,7 @@ end
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L208" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L208" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -873,15 +873,8 @@ end
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>Constructors</h2>
   <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#extension_available%3F%28name%3AString%29%3ABool-class-method" class="signature"><strong>.extension_available?</strong>(name : String) : Bool</a>
-        
-          <div class="summary"><p>Check whether a given OpenGL extension is available</p></div>
-        
-      </li>
     
       <li class="entry-summary">
         <a href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method" class="signature"><strong>.new</strong>(settings : ContextSettings, width : Int, height : Int)</a>
@@ -894,6 +887,20 @@ end
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
           <div class="summary"><p>Default constructor</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#extension_available%3F%28name%3AString%29%3ABool-class-method" class="signature"><strong>.extension_available?</strong>(name : String) : Bool</a>
+        
+          <div class="summary"><p>Check whether a given OpenGL extension is available</p></div>
         
       </li>
     
@@ -939,10 +946,6 @@ end
     
 
 
-  
-    
-
-
     
 
 
@@ -953,7 +956,23 @@ end
     
 
 
+    
+
+
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
     
 
 
@@ -962,6 +981,54 @@ end
 
   
 </div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;settings:ContextSettings,width:Int,height:Int&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(settings : <a href="../SF/ContextSettings.html">ContextSettings</a>, width : Int, height : Int)
+
+        <a class="method-permalink" href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Construct a in-memory context</p>
+
+<p>This constructor is for internal use, you don't need
+to bother with it.</p>
+
+<ul><li><em>settings</em> - Creation parameters</li><li><em>width</em> - Back buffer width</li><li><em>height</em> - Back buffer height</li></ul></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L267" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Default constructor</p>
+
+<p>The constructor creates and activates the context</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
 
 
   <h2>Class Method Detail</h2>
@@ -983,50 +1050,7 @@ end
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L249" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new&#40;settings:ContextSettings,width:Int,height:Int&#41;-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(settings : <a href="../SF/ContextSettings.html">ContextSettings</a>, width : Int, height : Int)
-
-        <a class="method-permalink" href="#new%28settings%3AContextSettings%2Cwidth%3AInt%2Cheight%3AInt%29-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Construct a in-memory context</p>
-
-<p>This constructor is for internal use, you don't need
-to bother with it.</p>
-
-<ul><li><em>settings</em> - Creation parameters</li><li><em>width</em> - Back buffer width</li><li><em>height</em> - Back buffer height</li></ul></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L267" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p>
-
-<p>The constructor creates and activates the context</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L213" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L249" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1053,7 +1077,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L228" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1073,7 +1097,7 @@ to bother with it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L220" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L220" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1097,7 +1121,7 @@ original settings are not directly supported by the system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/window/obj.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/window/obj.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>

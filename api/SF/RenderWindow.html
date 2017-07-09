@@ -919,12 +919,12 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5073" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5073" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -933,7 +933,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>Constructors</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -960,11 +960,13 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
       <li class="entry-summary">
         <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
+          <div class="summary"><p>Shorthand for <code>render_window = RenderWindow.new; render_window.create(...); render_window</code></p></div>
         
       </li>
     
   </ul>
+
+
 
 
 
@@ -1070,7 +1072,13 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     
 
 
+    
+
+
   
+    
+
+
     
 
 
@@ -1212,7 +1220,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
     
 
-  <h3>Class methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
+  <h3>Constructor methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
     <a href="../SF/Window.html#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="tooltip">
@@ -1222,10 +1230,6 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   
 
 
-  
-    
-
-
     
 
 
@@ -1236,6 +1240,9 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     
 
 
+    
+
+
   
     
 
@@ -1243,7 +1250,23 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     
 
 
+    
+
+
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
     
 
 
@@ -1254,7 +1277,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 </div>
 
 
-  <h2>Class Method Detail</h2>
+  <h2>Constructor Detail</h2>
   
     <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;Style::Default,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
       <div class="signature">
@@ -1281,7 +1304,7 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5100" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,7 +1336,7 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5118" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,7 +1357,7 @@ use the other constructors or call create() to do so.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5079" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5079" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1347,16 +1370,18 @@ use the other constructors or call create() to do so.</p></div>
         <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
+        <div class="doc"><p>Shorthand for <code>render_window = RenderWindow.new; render_window.create(...); render_window</code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5180" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5180" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
+
 
 
 
@@ -1393,7 +1418,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1413,7 +1438,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5126" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1436,7 +1461,7 @@ of the window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/graphics/obj.cr#L5135" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5135" target="_blank">View source</a>]
         
       </div>
     </div>

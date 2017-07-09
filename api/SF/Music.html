@@ -867,7 +867,7 @@ music.play()</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L705" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L705" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -876,27 +876,27 @@ music.play()</code></pre>
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>Constructors</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
         <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p></div>
+          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p></div>
+          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
         
-          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p></div>
+          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p></div>
         
       </li>
     
@@ -908,6 +908,8 @@ music.play()</code></pre>
       </li>
     
   </ul>
+
+
 
 
 
@@ -1045,7 +1047,7 @@ music.play()</code></pre>
 
     
 
-  <h3>Class methods inherited from class <code><a href="../SF/SoundStream.html">SF::SoundStream</a></code></h3>
+  <h3>Constructor methods inherited from class <code><a href="../SF/SoundStream.html">SF::SoundStream</a></code></h3>
   
   
     <a href="../SF/SoundStream.html#new%28channel_count%3AInt%2Csample_rate%3AInt%29-class-method" class="tooltip">
@@ -1053,6 +1055,9 @@ music.play()</code></pre>
     new</a>
     
   
+
+
+    
 
 
   
@@ -1135,7 +1140,7 @@ music.play()</code></pre>
 
     
 
-  <h3>Class methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
+  <h3>Constructor methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
   
   
     <a href="../SF/SoundSource.html#new-class-method" class="tooltip">
@@ -1145,10 +1150,6 @@ music.play()</code></pre>
   
 
 
-  
-    
-
-
     
 
 
@@ -1159,7 +1160,23 @@ music.play()</code></pre>
     
 
 
+    
+
+
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
     
 
 
@@ -1170,7 +1187,7 @@ music.play()</code></pre>
 </div>
 
 
-  <h2>Class Method Detail</h2>
+  <h2>Constructor Detail</h2>
   
     <div class="entry-detail" id="from_file&#40;*args,**kwargs&#41;:self-class-method">
       <div class="signature">
@@ -1180,14 +1197,14 @@ music.play()</code></pre>
         <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p>
+        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p>
 
 <p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L741" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L741" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1200,14 +1217,14 @@ music.play()</code></pre>
         <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p>
+        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p>
 
 <p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L772" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L772" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,14 +1237,14 @@ music.play()</code></pre>
         <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p>
+        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p>
 
 <p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L802" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L802" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,11 +1262,13 @@ music.play()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L708" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L708" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
+
 
 
 
@@ -1270,7 +1289,7 @@ music.play()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L812" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L812" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1307,7 @@ music.play()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L715" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L715" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,7 +1332,7 @@ to read from the audio file.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L825" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L825" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1333,7 +1352,7 @@ to read from the audio file.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L830" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L830" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1366,7 +1385,7 @@ the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a new mus
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L734" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L734" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1400,7 +1419,7 @@ you can't deallocate the buffer right after calling this function.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L765" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L765" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1433,7 +1452,7 @@ until the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a n
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.5/src/audio/obj.cr#L795" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/audio/obj.cr#L795" target="_blank">View source</a>]
         
       </div>
     </div>
