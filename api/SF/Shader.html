@@ -833,50 +833,41 @@ for SFML.</p>
 called <em>uniforms</em> that you can set from your C++ application.
 <code><a href="../SF/Shader.html">SF::Shader</a></code> handles different types of uniforms:</p>
 
-<ul><li>scalars: \p float, \p int, \p bool</li><li>vectors (2, 3 or 4 components)</li><li>matrices (3x3 or 4x4)</li><li>samplers (textures)</li></ul>
+<ul><li>scalars: <code>float</code>, <code>int</code>, <code>bool</code></li><li>vectors (2, 3 or 4 components)</li><li>matrices (3x3 or 4x4)</li><li>samplers (textures)</li></ul>
 
 <p>Some SFML-specific types can be converted:</p>
 
-<ul><li><code><a href="../SF/Color.html">SF::Color</a></code> as a 4D vector (\p vec4)</li><li><code><a href="../SF/Transform.html">SF::Transform</a></code> as matrices (\p mat3 or \p mat4)</li></ul>
+<ul><li><code><a href="../SF/Color.html">SF::Color</a></code> as a 4D vector (<code>vec4</code>)</li><li><code><a href="../SF/Transform.html">SF::Transform</a></code> as matrices (<code>mat3</code> or <code>mat4</code>)</li></ul>
 
 <p>Every uniform variable in a shader can be set through one of the
-uniform=() or uniform_array=() overloads. For example, if you
+<code><a href="../SF/Shader.html#set_parameter%28name%3AString%2Cx%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method">#set_parameter</a></code> overloads, or through a shorthand. For example, if you
 have a shader with the following uniforms:</p>
 
-<pre><code class='language-c++'>uniform float offset;
+<pre><code class='language-glsl'>uniform float offset;
 uniform vec3 point;
 uniform vec4 color;
 uniform mat4 matrix;
 uniform sampler2D overlay;
 uniform sampler2D current;</code></pre>
 
-<p>You can set their values from C++ code as follows, using the types
-defined in the <code>SF::Glsl</code> namespace:</p>
+<p>You can set their values from Crystal code as follows:</p>
 
-<pre><code class='language-c++'>shader.setUniform("offset", 2.f);
-shader.setUniform("point", sf::Vector3f(0.5f, 0.8f, 0.3f));
-shader.setUniform("color", sf::Glsl::Vec4(color));          // color is a sf::Color
-shader.setUniform("matrix", sf::Glsl::Mat4(transform));     // transform is a sf::Transform
-shader.setUniform("overlay", texture);                      // texture is a sf::Texture
-shader.setUniform("current", sf::Shader::CurrentTexture);</code></pre>
-
-<p>The old parameter=() overloads are deprecated and will be removed in a
-future version. You should use their uniform=() equivalents instead.</p>
+<pre><code>shader.offset <span class="n">2.0</span>
+shader.point <span class="n">0.5</span>, <span class="n">0.8</span>, <span class="n">0.3</span>
+shader.color color          <span class="c"># color is a SF::Color</span>
+shader.matrix transform     <span class="c"># transform is a SF::Transform</span>
+shader.overlay texture      <span class="c"># texture is a SF::Texture</span>
+shader.current <span class="t">SF</span><span class="t">::</span><span class="t">Shader</span><span class="t">::</span><span class="t">CurrentTexture</span></code></pre>
 
 <p>The special Shader::CurrentTexture argument maps the
-given \p sampler2_d uniform to the current texture of the
+given <code>sampler2d</code> uniform to the current texture of the
 object being drawn (which cannot be known in advance).</p>
 
 <p>To apply a shader to a drawable, you must pass it as an
-additional parameter to the \ref Window::draw() draw() function:</p>
+additional parameter to the <code>Window.draw</code> function:</p>
 
-<pre><code class='language-c++'>window.draw(sprite, &shader);</code></pre>
-
-<p>... which is in fact just a shortcut for this:</p>
-
-<pre><code class='language-c++'>sf::RenderStates states;
-states.shader = &shader;
-window.draw(sprite, states);</code></pre>
+<pre><code>states <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderStates</span>.<span class="k">new</span>(shader)
+window.draw(sprite, states)</code></pre>
 
 <p>In the code above we pass a pointer to the shader, because it may
 be null (which means "no shader").</p>
@@ -892,12 +883,11 @@ arbitrary order; thus, texture lookups on pixels other than the
 current one may not give you the expected result.</p>
 
 <p>Shaders can also be used to apply global post-effects to the
-current contents of the target (like the old <code>SF::PostFx</code> class
-in SFML 1). This can be done in two different ways:</p>
+current contents of the target. This can be done in two different ways:</p>
 
 <ul><li>draw everything to a <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code>, then draw it to
   the main target using the shader</li><li>draw everything directly to the main target, then use
-  <code><a href="../SF/Texture.html">SF::Texture</a>::update</code>(Window&) to copy its contents to a texture
+  <code><a href="../SF/Texture.html">SF::Texture</a>::update(window)</code> to copy its contents to a texture
   and draw it to the main target using the shader</li></ul>
 
 <p>The first technique is more optimized because it doesn't involve
@@ -909,11 +899,9 @@ easily inserted anywhere without impacting all the code.</p>
 <code><a href="../SF/Shader.html">SF::Shader</a></code> can also be used directly as a raw shader for
 custom OpenGL geometry.</p>
 
-<pre><code class='language-c++'>sf::Shader::bind(&shader);
-... render OpenGL geometry ...
-sf::Shader::bind(NULL);</code></pre>
-
-<p><em>See also:</em> <code>SF::Glsl</code></p>
+<pre><code><span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind shader
+... render <span class="t">OpenGL</span> geometry ...
+<span class="t">SF</span><span class="t">::</span><span class="t">Shader</span>.bind <span class="n">nil</span></code></pre>
 
 
 
@@ -940,12 +928,12 @@ sf::Shader::bind(NULL);</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5497" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5486" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/graphics.cr#L182" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L182" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -1263,7 +1251,7 @@ sf::Shader::bind(NULL);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5604" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5594" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1283,7 +1271,7 @@ sf::Shader::bind(NULL);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5694" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5684" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1303,7 +1291,7 @@ sf::Shader::bind(NULL);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5784" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5774" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1323,7 +1311,7 @@ sf::Shader::bind(NULL);</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5512" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5501" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,7 +1340,7 @@ any attempt to use <code><a href="../SF/Shader.html">SF::Shader</a></code> will 
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5874" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5864" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,7 +1374,7 @@ s2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><s
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5864" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5854" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1417,7 +1405,7 @@ code or SFML will result in a context switch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5892" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5882" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1440,7 +1428,7 @@ code or SFML will result in a context switch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5517" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5506" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1472,7 +1460,7 @@ for it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5597" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5587" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1504,7 +1492,7 @@ own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5536" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5526" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1536,7 +1524,7 @@ for it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5566" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5556" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1568,7 +1556,7 @@ writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5687" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5677" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1599,7 +1587,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5626" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5616" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1631,7 +1619,7 @@ writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5656" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5646" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1663,7 +1651,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5777" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5767" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1694,7 +1682,7 @@ before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5716" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5706" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1726,7 +1714,7 @@ it before writing your own shaders.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5746" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1750,7 +1738,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5841" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1768,7 +1756,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5800" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5790" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1786,7 +1774,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5796" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5786" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1804,7 +1792,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5792" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5782" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1824,7 +1812,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5810" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5800" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1842,7 +1830,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5815" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5805" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1860,7 +1848,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5819" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5809" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1878,7 +1866,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5823" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5813" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1896,7 +1884,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5827" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5817" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1914,7 +1902,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5831" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5821" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1932,7 +1920,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L5804" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5794" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1956,7 +1944,7 @@ or implement a temporary workaround until a bug is fixed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/graphics.cr#L193" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L193" target="_blank">View source</a>]
         
       </div>
     </div>

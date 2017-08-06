@@ -877,7 +877,7 @@ window.draw some_text</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4177" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4180" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -939,6 +939,11 @@ window.draw some_text</code></pre>
       </li>
     
       <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#inverse_transform%3ATransform-instance-method" class="signature"><strong>#inverse_transform</strong> : Transform</a>
         
           <div class="summary"><p>Get the inverse projection transform of the view</p></div>
@@ -946,14 +951,14 @@ window.draw some_text</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
+        <a href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
         
           <div class="summary"><p>Move the view relatively to its current position</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
+        <a href="#move%28offset%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Move the view relatively to its current position</p></div>
         
@@ -1091,7 +1096,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4197" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4204" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1111,7 +1116,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4189" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1131,7 +1136,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4182" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1160,7 +1165,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4279" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4286" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,7 +1187,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4217" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,7 +1203,23 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4392" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4398" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4182" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1222,29 +1243,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4373" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="move&#40;offset:Vector2|Tuple&#41;-instance-method">
-      <div class="signature">
-        
-        def <strong>move</strong>(offset : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
-
-        <a class="method-permalink" href="#move%28offset%3AVector2%7CTuple%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Move the view relatively to its current position</p>
-
-<ul><li><em>offset</em> - Move offset</li></ul>
-
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4327" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4380" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,7 +1265,29 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4319" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4326" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="move&#40;offset:Vector2|Tuple&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>move</strong>(offset : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
+
+        <a class="method-permalink" href="#move%28offset%3AVector2%7CTuple%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Move the view relatively to its current position</p>
+
+<ul><li><em>offset</em> - Move offset</li></ul>
+
+<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4334" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1290,7 +1311,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4271" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4278" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1307,12 +1328,12 @@ window.draw some_text</code></pre>
 
 <ul><li><em>angle</em> - Angle to rotate, in degrees</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code>, <code><a href="../SF/View.html#move%28offset%3AVector2%7CTuple%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code>, <code><a href="../SF/View.html#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4336" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4343" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,7 +1355,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4299" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4306" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1358,7 +1379,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4246" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4253" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,7 +1401,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4209" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4216" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1402,7 +1423,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4227" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4234" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1424,7 +1445,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4289" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4296" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1446,7 +1467,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4235" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4242" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,7 +1491,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4361" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4368" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1492,7 +1513,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4308" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4315" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1521,7 +1542,7 @@ By default, a view has a viewport which covers the entire target.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4261" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4268" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1544,12 +1565,12 @@ screen grows or shrinks.
 
 <ul><li><em>factor</em> - Zoom factor to apply</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#move%28offset%3AVector2%7CTuple%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L4351" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L4358" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -843,7 +843,7 @@ uses a local <code><a href="../SF/Font.html">SF::Font</a></code> instance for cr
 <p>Usage example:</p>
 
 <pre><code><span class="c"># Load a new font from file</span>
-font <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Font</span>.<span class="k">new</span>.from_file(<span class="s">&quot;arial.ttf&quot;</span>)
+font <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Font</span>.from_file(<span class="s">&quot;arial.ttf&quot;</span>)
 
 <span class="c"># Create a text which uses our font</span>
 text1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>(<span class="s">&quot;text&quot;</span>, font, <span class="n">30</span>)
@@ -852,7 +852,7 @@ text1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span
 text2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Text</span>.<span class="k">new</span>
 text2.font <span class="o">=</span> font
 text2.character_size <span class="o">=</span> <span class="n">50</span>
-text2.style <span class="o">=</span> (<span class="t">F</span><span class="t">::</span><span class="t">Text</span><span class="t">::</span><span class="t">Italic</span></code></pre>
+text2.style <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Text</span><span class="t">::</span><span class="t">Italic</span></code></pre>
 
 <p>Apart from loading font files, and passing them to instances
 of <code><a href="../SF/Text.html">SF::Text</a></code>, you should normally not have to deal directly
@@ -883,7 +883,7 @@ corresponding bitmap font that supports that size is used.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3607" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3600" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -966,7 +966,7 @@ corresponding bitmap font that supports that size is used.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#get_texture%28character_size%3AInt%29%3ATexture%3F-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int) : Texture?</a>
+        <a href="#get_texture%28character_size%3AInt%29%3ATexture-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int) : Texture</a>
         
           <div class="summary"><p>Retrieve the texture containing the loaded glyphs of a certain size</p></div>
         
@@ -1062,7 +1062,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3679" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3676" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1082,7 +1082,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3708" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3705" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1102,7 +1102,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3739" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1122,7 +1122,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3645" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3641" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,7 +1145,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3857" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3852" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1165,7 +1165,7 @@ corresponding bitmap font that supports that size is used.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3652" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3648" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1194,7 +1194,7 @@ thickness will cause distorted rendering.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3768" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3765" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1222,7 +1222,7 @@ kerning offset of zero, though.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3786" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3783" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1247,17 +1247,17 @@ consecutive lines of text.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3798" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3795" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_texture&#40;character_size:Int&#41;:Texture?-instance-method">
+    <div class="entry-detail" id="get_texture&#40;character_size:Int&#41;:Texture-instance-method">
       <div class="signature">
         
-        def <strong>get_texture</strong>(character_size : Int) : <a href="../SF/Texture.html">Texture</a>?
+        def <strong>get_texture</strong>(character_size : Int) : <a href="../SF/Texture.html">Texture</a>
 
-        <a class="method-permalink" href="#get_texture%28character_size%3AInt%29%3ATexture%3F-instance-method">#</a>
+        <a class="method-permalink" href="#get_texture%28character_size%3AInt%29%3ATexture-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Retrieve the texture containing the loaded glyphs of a certain size</p>
@@ -1273,7 +1273,7 @@ used internally by <code><a href="../SF/Text.html">SF::Text</a></code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3838" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3835" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1300,7 +1300,7 @@ baseline and the underline.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3812" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3809" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1326,7 +1326,7 @@ baseline and the underline.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3825" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3822" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1346,7 +1346,7 @@ baseline and the underline.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3749" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3746" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,7 +1380,7 @@ the <code><a href="../SF/Font.html">SF::Font</a></code> object loads a new font 
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3672" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3669" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,7 +1412,7 @@ is destroyed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3701" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3698" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1446,7 +1446,7 @@ the <code><a href="../SF/Font.html">SF::Font</a></code> object loads a new font 
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/27db34d9c0bc5cf4d033b263b945a8cdcf0c753a/src/graphics/obj.cr#L3732" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L3729" target="_blank">View source</a>]
         
       </div>
     </div>
