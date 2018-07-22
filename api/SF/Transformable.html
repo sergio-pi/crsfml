@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Transformable - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Transformable
@@ -850,7 +918,7 @@ center, for example. To do such things, use <code><a href="../SF/Transform.html"
 combined with <code><a href="../SF/Drawable.html">SF::Drawable</a></code> -- that's what SFML's sprites,
 texts and shapes do.</p>
 
-<pre><code><span class="k">class</span> <span class="t">MyEntity</span> <span class="o"><</span> <span class="t">SF</span><span class="t">::</span><span class="t">Transformable</span>
+<pre><code><span class="k">class</span> <span class="t">MyEntity</span> <span class="o">&lt;</span> <span class="t">SF</span><span class="t">::</span><span class="t">Transformable</span>
   <span class="k">include</span> <span class="t">SF</span><span class="t">::</span><span class="t">Drawable</span>
 
   <span class="k">def</span> <span class="m">draw</span>(target, states)
@@ -913,7 +981,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L906" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L931" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -1125,7 +1193,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L909" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L934" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1148,7 +1216,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1168" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1193" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1166,7 +1234,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L914" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L939" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1188,12 +1256,12 @@ to texels (pixels in the texture). More specifically, this means:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1150" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1175" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="move&#40;offset:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="move(offset:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>move</strong>(offset : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1216,12 +1284,12 @@ Thus, it is equivalent to the following code:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1084" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1109" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="move&#40;offset_x:Number,offset_y:Number&#41;-instance-method">
+    <div class="entry-detail" id="move(offset_x:Number,offset_y:Number)-instance-method">
       <div class="signature">
         
         def <strong>move</strong>(offset_x : Number, offset_y : Number)
@@ -1245,7 +1313,7 @@ object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1069" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1094" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,12 +1335,12 @@ object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1050" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1075" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="origin&#61;&#40;origin:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="origin=(origin:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>origin=</strong>(origin : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1296,7 +1364,7 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1010" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1035" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1318,12 +1386,12 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1019" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1044" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="position&#61;&#40;position:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="position=(position:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>position=</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1344,12 +1412,12 @@ The default position of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L940" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L965" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="rotate&#40;angle:Number&#41;-instance-method">
+    <div class="entry-detail" id="rotate(angle:Number)-instance-method">
       <div class="signature">
         
         def <strong>rotate</strong>(angle : Number)
@@ -1370,7 +1438,7 @@ Thus, it is equivalent to the following code:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1098" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1394,12 +1462,12 @@ Thus, it is equivalent to the following code:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1031" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1056" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="rotation&#61;&#40;angle:Number&#41;-instance-method">
+    <div class="entry-detail" id="rotation=(angle:Number)-instance-method">
       <div class="signature">
         
         def <strong>rotation=</strong>(angle : Number)
@@ -1420,7 +1488,7 @@ The default rotation of a transformable object is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L953" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L978" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1442,12 +1510,12 @@ The default rotation of a transformable object is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1040" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1065" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="scale&#40;factor:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="scale(factor:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>scale</strong>(factor : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1471,12 +1539,12 @@ object.scale <span class="o">=</span> {scale.x <span class="o">*</span> factor.x
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1131" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1156" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="scale&#40;factor_x:Number,factor_y:Number&#41;-instance-method">
+    <div class="entry-detail" id="scale(factor_x:Number,factor_y:Number)-instance-method">
       <div class="signature">
         
         def <strong>scale</strong>(factor_x : Number, factor_y : Number)
@@ -1500,12 +1568,12 @@ object.set_scale(scale.x <span class="o">*</span> factor_x, scale.y <span class=
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1115" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1140" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="scale&#61;&#40;factors:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="scale=(factors:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>scale=</strong>(factors : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1526,12 +1594,12 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L978" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1003" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_origin&#40;x:Number,y:Number&#41;-instance-method">
+    <div class="entry-detail" id="set_origin(x:Number,y:Number)-instance-method">
       <div class="signature">
         
         def <strong>set_origin</strong>(x : Number, y : Number)
@@ -1555,12 +1623,12 @@ The default origin of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L995" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1020" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_position&#40;x:Number,y:Number&#41;-instance-method">
+    <div class="entry-detail" id="set_position(x:Number,y:Number)-instance-method">
       <div class="signature">
         
         def <strong>set_position</strong>(x : Number, y : Number)
@@ -1581,12 +1649,12 @@ The default position of a transformable object is (0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L928" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L953" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_scale&#40;factor_x:Number,factor_y:Number&#41;-instance-method">
+    <div class="entry-detail" id="set_scale(factor_x:Number,factor_y:Number)-instance-method">
       <div class="signature">
         
         def <strong>set_scale</strong>(factor_x : Number, factor_y : Number)
@@ -1607,7 +1675,7 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L966" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L991" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1629,7 +1697,7 @@ The default scale of a transformable object is (1, 1).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1140" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1165" target="_blank">View source</a>]
         
       </div>
     </div>

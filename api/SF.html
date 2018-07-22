@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="js/doc.js"></script>
   <title>SF - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="SF.html">SF</a>
       
         <ul>
@@ -52,6 +68,11 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/CircleShape" data-name="sf::circleshape">
       <a href="SF/CircleShape.html">CircleShape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="SF/Clipboard.html">Clipboard</a>
       
     </li>
   
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">module</span> SF
@@ -828,57 +896,67 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/common.cr#L1" target="_blank">common.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/common.cr#L1" target="_blank">common.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L1" target="_blank">system/system.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L1" target="_blank">system/system.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L3" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L3" target="_blank">system/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/window.cr#L1" target="_blank">window/window.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/window.cr#L1" target="_blank">window/window.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L4" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L4" target="_blank">window/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L1" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/window.cr#L8" target="_blank">window/window.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L1" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L133" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L4" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L133" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L4" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L4" target="_blank">audio/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/network.cr#L3" target="_blank">network/network.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/audio.cr#L3" target="_blank">audio/audio.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L4" target="_blank">network/obj.cr</a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/network.cr#L3" target="_blank">network/network.cr</a>
     
     <br/>
   
@@ -891,12 +969,12 @@
   <dl>
     
       <dt class="entry-const" id="SFML_VERSION">
-        <strong>SFML_VERSION</strong> = <code><span class="s">&quot;2.4.2&quot;</span></code>
+        <strong>SFML_VERSION</strong> = <code><span class="s">&quot;2.5.0&quot;</span></code>
       </dt>
       
     
       <dt class="entry-const" id="VERSION">
-        <strong>VERSION</strong> = <code><span class="s">&quot;2.4.10&quot;</span></code>
+        <strong>VERSION</strong> = <code><span class="s">&quot;2.5.0&quot;</span></code>
       </dt>
       
     
@@ -1012,7 +1090,7 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="color&#40;*args,**kwargs&#41;-instance-method">
+    <div class="entry-detail" id="color(*args,**kwargs)-instance-method">
       <div class="signature">
         
         def <strong>color</strong>(*args, **kwargs)
@@ -1025,12 +1103,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L161" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L161" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="float_rect&#40;left:Number,top:Number,width:Number,height:Number&#41;-instance-method">
+    <div class="entry-detail" id="float_rect(left:Number,top:Number,width:Number,height:Number)-instance-method">
       <div class="signature">
         
         def <strong>float_rect</strong>(left : Number, top : Number, width : Number, height : Number)
@@ -1045,12 +1123,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L120" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L120" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="int_rect&#40;left:Int,top:Int,width:Int,height:Int&#41;-instance-method">
+    <div class="entry-detail" id="int_rect(left:Int,top:Int,width:Int,height:Int)-instance-method">
       <div class="signature">
         
         def <strong>int_rect</strong>(left : Int, top : Int, width : Int, height : Int)
@@ -1065,12 +1143,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L126" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L126" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="microseconds&#40;amount:Int&#41;:Time-instance-method">
+    <div class="entry-detail" id="microseconds(amount:Int):Time-instance-method">
       <div class="signature">
         
         def <strong>microseconds</strong>(amount : Int) : <a href="SF/Time.html">Time</a>
@@ -1089,12 +1167,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L283" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L283" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="milliseconds&#40;amount:Int&#41;:Time-instance-method">
+    <div class="entry-detail" id="milliseconds(amount:Int):Time-instance-method">
       <div class="signature">
         
         def <strong>milliseconds</strong>(amount : Int) : <a href="SF/Time.html">Time</a>
@@ -1113,12 +1191,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L271" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L271" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="seconds&#40;amount:Number&#41;:Time-instance-method">
+    <div class="entry-detail" id="seconds(amount:Number):Time-instance-method">
       <div class="signature">
         
         def <strong>seconds</strong>(amount : Number) : <a href="SF/Time.html">Time</a>
@@ -1137,12 +1215,12 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L259" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L259" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="sleep&#40;duration:Time&#41;-instance-method">
+    <div class="entry-detail" id="sleep(duration:Time)-instance-method">
       <div class="signature">
         
         def <strong>sleep</strong>(duration : <a href="SF/Time.html">Time</a>)
@@ -1160,12 +1238,12 @@ threads, as it doesn't consume any CPU power.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L775" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L775" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vector2&#40;x,y&#41;-instance-method">
+    <div class="entry-detail" id="vector2(x,y)-instance-method">
       <div class="signature">
         
         def <strong>vector2</strong>(x, y)
@@ -1181,12 +1259,12 @@ they are converted to match <code><a href="SF/Vector2f.html">Vector2f</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vector2f&#40;x:Number,y:Number&#41;-instance-method">
+    <div class="entry-detail" id="vector2f(x:Number,y:Number)-instance-method">
       <div class="signature">
         
         def <strong>vector2f</strong>(x : Number, y : Number)
@@ -1201,12 +1279,12 @@ they are converted to match <code><a href="SF/Vector2f.html">Vector2f</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L151" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vector2i&#40;x:Int,y:Int&#41;-instance-method">
+    <div class="entry-detail" id="vector2i(x:Int,y:Int)-instance-method">
       <div class="signature">
         
         def <strong>vector2i</strong>(x : Int, y : Int)
@@ -1221,12 +1299,12 @@ they are converted to match <code><a href="SF/Vector2f.html">Vector2f</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vector3&#40;x,y,z&#41;-instance-method">
+    <div class="entry-detail" id="vector3(x,y,z)-instance-method">
       <div class="signature">
         
         def <strong>vector3</strong>(x, y, z)
@@ -1239,12 +1317,12 @@ they are converted to match <code><a href="SF/Vector2f.html">Vector2f</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L256" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L248" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="vector3f&#40;x:Number,y:Number,z:Number&#41;-instance-method">
+    <div class="entry-detail" id="vector3f(x:Number,y:Number,z:Number)-instance-method">
       <div class="signature">
         
         def <strong>vector3f</strong>(x : Number, y : Number, z : Number)
@@ -1259,7 +1337,7 @@ they are converted to match <code><a href="SF/Vector2f.html">Vector2f</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/system.cr#L265" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L257" target="_blank">View source</a>]
         
       </div>
     </div>

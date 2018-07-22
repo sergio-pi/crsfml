@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../../js/doc.js"></script>
   <title>SF::Http::Request - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -360,7 +396,7 @@
       
         <ul>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/Http/Request" data-name="sf::http::request">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/Http/Request" data-name="sf::http::request">
       <a href="../../SF/Http/Request.html">Request</a>
       
         <ul>
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Http::Request
@@ -827,7 +895,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1255" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1260" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -933,7 +1001,7 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;uri:String&#61;&amp;quot;/&amp;quot;,method:Http::Request::Method&#61;Get,body:String&#61;&amp;quot;&amp;quot;&#41;-class-method">
+    <div class="entry-detail" id="new(uri:String=&amp;quot;/&amp;quot;,method:Http::Request::Method=Get,body:String=&amp;quot;&amp;quot;)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(uri : String = <span class="s">&quot;/&quot;</span>, method : <a href="../../SF/Http/Request/Method.html">Http::Request::Method</a> = <span class="t">Get</span>, body : String = <span class="s">&quot;&quot;</span>)
@@ -951,7 +1019,7 @@ URI ("/") and an empty body.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1283" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1288" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -963,7 +1031,7 @@ URI ("/") and an empty body.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="body&#61;&#40;body:String&#41;-instance-method">
+    <div class="entry-detail" id="body=(body:String)-instance-method">
       <div class="signature">
         
         def <strong>body=</strong>(body : String)
@@ -982,7 +1050,7 @@ The body is empty by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1336" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1341" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -998,7 +1066,7 @@ The body is empty by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1352" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1357" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1014,12 +1082,12 @@ The body is empty by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1257" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1262" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="method&#61;&#40;method:Http::Request::Method&#41;-instance-method">
+    <div class="entry-detail" id="method=(method:Http::Request::Method)-instance-method">
       <div class="signature">
         
         def <strong>method=</strong>(method : <a href="../../SF/Http/Request/Method.html">Http::Request::Method</a>)
@@ -1038,12 +1106,12 @@ The method is Http::Request::Get by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1307" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1312" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_field&#40;field:String,value:String&#41;-instance-method">
+    <div class="entry-detail" id="set_field(field:String,value:String)-instance-method">
       <div class="signature">
         
         def <strong>set_field</strong>(field : String, value : String)
@@ -1064,12 +1132,12 @@ sending the request).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1297" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1302" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_http_version&#40;major:Int,minor:Int&#41;-instance-method">
+    <div class="entry-detail" id="set_http_version(major:Int,minor:Int)-instance-method">
       <div class="signature">
         
         def <strong>set_http_version</strong>(major : Int, minor : Int)
@@ -1086,12 +1154,12 @@ sending the request).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1326" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1331" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="uri&#61;&#40;uri:String&#41;-instance-method">
+    <div class="entry-detail" id="uri=(uri:String)-instance-method">
       <div class="signature">
         
         def <strong>uri=</strong>(uri : String)
@@ -1110,7 +1178,7 @@ The URI is "/" (the root page) by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1317" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1322" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::VideoMode - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" current" data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> SF::VideoMode
@@ -837,7 +905,7 @@ depth as the current resolution.</p>
 
 <pre><code><span class="c"># Display the list of all the video modes available for fullscreen</span>
 <span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.fullscreen_modes.each <span class="k">do</span> <span class="o">|</span>mode<span class="o">|</span>
-  puts <span class="s">&quot;Mode #</span><span class="i">#{</span></span>i<span class="s"><span class="i">}</span>: </span><span class="i">#{</span></span>mode.width<span class="s"><span class="i">}</span>x</span><span class="i">#{</span></span>mode.height<span class="s"><span class="i">}</span> - </span><span class="i">#{</span></span>mode.bits_per_pixel<span class="s"><span class="i">}</span> bpp&quot;</span>
+  puts <span class="s">&quot;Mode #</span><span class="i">#{</span>i<span class="i">}</span><span class="s">: </span><span class="i">#{</span>mode.width<span class="i">}</span><span class="s">x</span><span class="i">#{</span>mode.height<span class="i">}</span><span class="s"> - </span><span class="i">#{</span>mode.bits_per_pixel<span class="i">}</span><span class="s"> bpp&quot;</span>
 <span class="k">end</span>
 
 <span class="c"># Create a window with the same pixel depth as the desktop</span>
@@ -860,7 +928,7 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1769" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2019" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -1062,12 +1130,12 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1796" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2046" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;width:Int,height:Int,bits_per_pixel:Int&#61;32&#41;-class-method">
+    <div class="entry-detail" id="new(width:Int,height:Int,bits_per_pixel:Int=32)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)
@@ -1082,7 +1150,7 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1787" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2037" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1102,7 +1170,7 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1776" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2026" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1112,7 +1180,7 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="fullscreen_modes:Array&#40;VideoMode&#41;-class-method">
+    <div class="entry-detail" id="fullscreen_modes:Array(VideoMode)-class-method">
       <div class="signature">
         
         def self.<strong>fullscreen_modes</strong> : Array(<a href="../SF/VideoMode.html">VideoMode</a>)
@@ -1135,7 +1203,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1812" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2062" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,7 +1213,7 @@ width, height and bits-per-pixel).</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="&#33;&#61;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="!=(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1162,12 +1230,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1867" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2117" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&lt;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&lt;(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong><</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1184,12 +1252,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1877" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2127" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&lt;&#61;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&lt;=(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong><=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1206,12 +1274,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1897" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2147" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&#61;&#61;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="==(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>==</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1228,12 +1296,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1857" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2107" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&gt;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&gt;(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>></strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1250,12 +1318,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1887" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2137" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&gt;&#61;&#40;right:VideoMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&gt;=(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>>=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
@@ -1272,7 +1340,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1907" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1290,12 +1358,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1845" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2095" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="bits_per_pixel&#61;&#40;bits_per_pixel:Int&#41;-instance-method">
+    <div class="entry-detail" id="bits_per_pixel=(bits_per_pixel:Int)-instance-method">
       <div class="signature">
         
         def <strong>bits_per_pixel=</strong>(bits_per_pixel : Int)
@@ -1306,7 +1374,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1848" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2098" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,7 +1390,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1922" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2172" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,12 +1408,12 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1837" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2087" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="height&#61;&#40;height:Int&#41;-instance-method">
+    <div class="entry-detail" id="height=(height:Int)-instance-method">
       <div class="signature">
         
         def <strong>height=</strong>(height : Int)
@@ -1356,7 +1424,7 @@ width, height and bits-per-pixel).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1840" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2090" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,7 +1448,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1823" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2073" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1398,12 +1466,12 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1829" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2079" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="width&#61;&#40;width:Int&#41;-instance-method">
+    <div class="entry-detail" id="width=(width:Int)-instance-method">
       <div class="signature">
         
         def <strong>width=</strong>(width : Int)
@@ -1414,7 +1482,7 @@ with no restriction.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L1832" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2082" target="_blank">View source</a>]
         
       </div>
     </div>

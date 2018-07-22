@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Sensor - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -540,7 +591,7 @@
       
     </li>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/Sensor" data-name="sf::sensor">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/Sensor" data-name="sf::sensor">
       <a href="../SF/Sensor.html">Sensor</a>
       
         <ul>
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">module</span> SF::Sensor
@@ -865,7 +933,7 @@ gravity <span class="o">=</span> <span class="t">SF</span><span class="t">::</sp
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L912" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1162" target="_blank">window/obj.cr</a>
     
     <br/>
   
@@ -917,7 +985,7 @@ gravity <span class="o">=</span> <span class="t">SF</span><span class="t">::</sp
 
   <h2>Class Method Detail</h2>
   
-    <div class="entry-detail" id="available?&#40;sensor:Sensor::Type&#41;:Bool-class-method">
+    <div class="entry-detail" id="available?(sensor:Sensor::Type):Bool-class-method">
       <div class="signature">
         
         def self.<strong>available?</strong>(sensor : <a href="../SF/Sensor/Type.html">Sensor::Type</a>) : Bool
@@ -934,12 +1002,12 @@ gravity <span class="o">=</span> <span class="t">SF</span><span class="t">::</sp
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L936" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1186" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_value&#40;sensor:Sensor::Type&#41;:Vector3f-class-method">
+    <div class="entry-detail" id="get_value(sensor:Sensor::Type):Vector3f-class-method">
       <div class="signature">
         
         def self.<strong>get_value</strong>(sensor : <a href="../SF/Sensor/Type.html">Sensor::Type</a>) : <a href="../SF/Vector3f.html">Vector3f</a>
@@ -956,12 +1024,12 @@ gravity <span class="o">=</span> <span class="t">SF</span><span class="t">::</sp
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L958" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1208" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_enabled&#40;sensor:Sensor::Type,enabled:Bool&#41;-class-method">
+    <div class="entry-detail" id="set_enabled(sensor:Sensor::Type,enabled:Bool)-class-method">
       <div class="signature">
         
         def self.<strong>set_enabled</strong>(sensor : <a href="../SF/Sensor/Type.html">Sensor::Type</a>, enabled : Bool)
@@ -982,7 +1050,7 @@ sending events of the corresponding type.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/window/obj.cr#L950" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1200" target="_blank">View source</a>]
         
       </div>
     </div>

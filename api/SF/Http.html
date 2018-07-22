@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Http - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -355,7 +391,7 @@
       
     </li>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/Http" data-name="sf::http">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/Http" data-name="sf::http">
       <a href="../SF/Http.html">Http</a>
       
         <ul>
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Http
@@ -819,20 +887,20 @@ not supported.</p>
 
 <p>The HTTP client is split into 3 classes:</p>
 
-<ul><li><code><a href="../SF/Http.html">SF::Http</a>::Request</code></li><li><code><a href="../SF/Http.html">SF::Http</a>::Response</code></li><li><code><a href="../SF/Http.html">SF::Http</a></code></li></ul>
+<ul><li><code><a href="../SF/Http/Request.html">SF::Http::Request</a></code></li><li><code><a href="../SF/Http/Response.html">SF::Http::Response</a></code></li><li><code><a href="../SF/Http.html">SF::Http</a></code></li></ul>
 
-<p><code><a href="../SF/Http.html">SF::Http</a>::Request</code> builds the request that will be
+<p><code><a href="../SF/Http/Request.html">SF::Http::Request</a></code> builds the request that will be
 sent to the server. A request is made of:</p>
 
 <ul><li>a method (what you want to do)</li><li>a target URI (usually the name of the web page or file)</li><li>one or more header fields (options that you can pass to the server)</li><li>an optional body (for POST requests)</li></ul>
 
-<p><code><a href="../SF/Http.html">SF::Http</a>::Response</code> parse the response from the web server
+<p><code><a href="../SF/Http/Response.html">SF::Http::Response</a></code> parse the response from the web server
 and provides getters to read them. The response contains:</p>
 
 <ul><li>a status code</li><li>header fields (that may be answers to the ones that you requested)</li><li>a body, which contains the contents of the requested resource</li></ul>
 
 <p><code><a href="../SF/Http.html">SF::Http</a></code> provides a simple function, SendRequest, to send a
-<code><a href="../SF/Http.html">SF::Http</a>::Request</code> and return the corresponding <code><a href="../SF/Http.html">SF::Http</a>::Response</code>
+<code><a href="../SF/Http/Request.html">SF::Http::Request</a></code> and return the corresponding <code><a href="../SF/Http/Response.html">SF::Http::Response</a></code>
 from the server.</p>
 
 <p>Usage example:</p>
@@ -851,7 +919,7 @@ response <span class="o">=</span> http.send_request request
 <span class="k">if</span> response.status <span class="o">==</span> <span class="t">SF</span><span class="t">::</span><span class="t">Http</span><span class="t">::</span><span class="t">Response</span><span class="t">::</span><span class="t">Ok</span>
     puts response.body
 <span class="k">else</span>
-    puts <span class="s">&quot;Error </span><span class="i">#{</span></span>response.status<span class="s"><span class="i">}</span>&quot;</span>
+    puts <span class="s">&quot;Error </span><span class="i">#{</span>response.status<span class="i">}</span><span class="s">&quot;</span>
 <span class="k">end</span></code></pre>
 
 
@@ -877,7 +945,7 @@ response <span class="o">=</span> http.send_request request
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1248" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1253" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -974,7 +1042,7 @@ response <span class="o">=</span> http.send_request request
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;host:String,port:Int&#61;0&#41;-class-method">
+    <div class="entry-detail" id="new(host:String,port:Int=0)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(host : String, port : Int = <span class="n">0</span>)
@@ -996,7 +1064,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1509" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1514" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1014,7 +1082,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1494" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1499" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1037,12 +1105,12 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1250" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1255" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send_request&#40;request:Http::Request,timeout:Time&#61;Time::Zero&#41;:Http::Response-instance-method">
+    <div class="entry-detail" id="send_request(request:Http::Request,timeout:Time=Time::Zero):Http::Response-instance-method">
       <div class="signature">
         
         def <strong>send_request</strong>(request : <a href="../SF/Http/Request.html">Http::Request</a>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Http/Response.html">Http::Response</a>
@@ -1068,12 +1136,12 @@ of Time::Zero means that the client will use the system default timeout
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1543" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1548" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_host&#40;host:String,port:Int&#61;0&#41;-instance-method">
+    <div class="entry-detail" id="set_host(host:String,port:Int=0)-instance-method">
       <div class="signature">
         
         def <strong>set_host</strong>(host : String, port : Int = <span class="n">0</span>)
@@ -1096,7 +1164,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1525" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1530" target="_blank">View source</a>]
         
       </div>
     </div>

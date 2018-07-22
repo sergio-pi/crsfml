@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Packet - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Packet
@@ -840,7 +908,7 @@ packet.write x
 packet.write s
 packet.write d
 
-<span class="c"># Send it over the network &#40;socket is a valid SF::TcpSocket&#41;</span>
+<span class="c"># Send it over the network (socket is a valid SF::TcpSocket)</span>
 socket.send packet
 
 </code></pre>
@@ -888,7 +956,7 @@ of these methods in order to handle your custom types.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1637" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1642" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -966,62 +1034,84 @@ of these methods in order to handle your custom types.</p>
       <li class="entry-summary">
         <a href="#read%28type%3ABool.class%29%3ABool-instance-method" class="signature"><strong>#read</strong>(type : Bool.class) : Bool</a>
         
-          <div class="summary"><p>Read data from the packet.</p></div>
+          <div class="summary"><p>Overload of operator &gt;&gt; to read data from the packet</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AFloat32.class%29%3AFloat32-instance-method" class="signature"><strong>#read</strong>(type : Float32.class) : Float32</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AString.class%29%3AString-instance-method" class="signature"><strong>#read</strong>(type : String.class) : String</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AFloat64.class%29%3AFloat64-instance-method" class="signature"><strong>#read</strong>(type : Float64.class) : Float64</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AUInt64.class%29%3AUInt64-instance-method" class="signature"><strong>#read</strong>(type : UInt64.class) : UInt64</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AInt64.class%29%3AInt64-instance-method" class="signature"><strong>#read</strong>(type : Int64.class) : Int64</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AUInt32.class%29%3AUInt32-instance-method" class="signature"><strong>#read</strong>(type : UInt32.class) : UInt32</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AInt32.class%29%3AInt32-instance-method" class="signature"><strong>#read</strong>(type : Int32.class) : Int32</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AUInt16.class%29%3AUInt16-instance-method" class="signature"><strong>#read</strong>(type : UInt16.class) : UInt16</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AInt16.class%29%3AInt16-instance-method" class="signature"><strong>#read</strong>(type : Int16.class) : Int16</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AUInt8.class%29%3AUInt8-instance-method" class="signature"><strong>#read</strong>(type : UInt8.class) : UInt8</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#read%28type%3AInt8.class%29%3AInt8-instance-method" class="signature"><strong>#read</strong>(type : Int8.class) : Int8</a>
+        
+          <div class="summary"><p>Read data from the packet.</p></div>
         
       </li>
     
@@ -1035,62 +1125,84 @@ of these methods in order to handle your custom types.</p>
       <li class="entry-summary">
         <a href="#write%28data%3AString%29-instance-method" class="signature"><strong>#write</strong>(data : String)</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AFloat64%29-instance-method" class="signature"><strong>#write</strong>(data : Float64)</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AFloat32%29-instance-method" class="signature"><strong>#write</strong>(data : Float32)</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AUInt64%29-instance-method" class="signature"><strong>#write</strong>(data : UInt64)</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AInt64%29-instance-method" class="signature"><strong>#write</strong>(data : Int64)</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AUInt32%29-instance-method" class="signature"><strong>#write</strong>(data : UInt32)</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AInt32%29-instance-method" class="signature"><strong>#write</strong>(data : Int32)</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AUInt16%29-instance-method" class="signature"><strong>#write</strong>(data : UInt16)</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AInt16%29-instance-method" class="signature"><strong>#write</strong>(data : Int16)</a>
         
+          <div class="summary"><p>\overload</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AUInt8%29-instance-method" class="signature"><strong>#write</strong>(data : UInt8)</a>
+        
+          <div class="summary"><p>\overload</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3AInt8%29-instance-method" class="signature"><strong>#write</strong>(data : Int8)</a>
         
+          <div class="summary"><p>Write data into the packet</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#write%28data%3ABool%29-instance-method" class="signature"><strong>#write</strong>(data : Bool)</a>
         
-          <div class="summary"><p>Write data into the packet</p></div>
+          <div class="summary"><p>Overload of operator &lt;&lt; to write data into the packet</p></div>
         
       </li>
     
@@ -1142,7 +1254,7 @@ of these methods in order to handle your custom types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1642" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1647" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1154,7 +1266,7 @@ of these methods in order to handle your custom types.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="append&#40;data:Slice&#41;-instance-method">
+    <div class="entry-detail" id="append(data:Slice)-instance-method">
       <div class="signature">
         
         def <strong>append</strong>(data : Slice)
@@ -1171,7 +1283,7 @@ of these methods in order to handle your custom types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1657" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1662" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1193,12 +1305,12 @@ of these methods in order to handle your custom types.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1665" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1670" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="data:::Pointer&#40;Void&#41;-instance-method">
+    <div class="entry-detail" id="data:::Pointer(Void)-instance-method">
       <div class="signature">
         
         def <strong>data</strong> : ::Pointer(Void)
@@ -1220,7 +1332,7 @@ The return pointer is NULL if the packet is empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1678" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1683" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,7 +1357,7 @@ what data returns.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1690" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1695" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1261,7 +1373,7 @@ what data returns.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1844" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1871" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,7 +1400,7 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1703" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1708" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,17 +1418,215 @@ left to be read, without actually reading it.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1647" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1652" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="read&#40;type:Bool.class&#41;:Bool-instance-method">
+    <div class="entry-detail" id="read(type:Bool.class):Bool-instance-method">
       <div class="signature">
         
         def <strong>read</strong>(type : Bool.class) : Bool
 
         <a class="method-permalink" href="#read%28type%3ABool.class%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Overload of operator &gt;&gt; to read data from the packet</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1738" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Float32.class):Float32-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Float32.class) : Float32
+
+        <a class="method-permalink" href="#read%28type%3AFloat32.class%29%3AFloat32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1784" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:String.class):String-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : String.class) : String
+
+        <a class="method-permalink" href="#read%28type%3AString.class%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1794" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Float64.class):Float64-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Float64.class) : Float64
+
+        <a class="method-permalink" href="#read%28type%3AFloat64.class%29%3AFloat64-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1789" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:UInt64.class):UInt64-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : UInt64.class) : UInt64
+
+        <a class="method-permalink" href="#read%28type%3AUInt64.class%29%3AUInt64-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1779" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Int64.class):Int64-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Int64.class) : Int64
+
+        <a class="method-permalink" href="#read%28type%3AInt64.class%29%3AInt64-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1774" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:UInt32.class):UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : UInt32.class) : UInt32
+
+        <a class="method-permalink" href="#read%28type%3AUInt32.class%29%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1769" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Int32.class):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Int32.class) : Int32
+
+        <a class="method-permalink" href="#read%28type%3AInt32.class%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1764" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:UInt16.class):UInt16-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : UInt16.class) : UInt16
+
+        <a class="method-permalink" href="#read%28type%3AUInt16.class%29%3AUInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1759" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Int16.class):Int16-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Int16.class) : Int16
+
+        <a class="method-permalink" href="#read%28type%3AInt16.class%29%3AInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1754" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:UInt8.class):UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : UInt8.class) : UInt8
+
+        <a class="method-permalink" href="#read%28type%3AUInt8.class%29%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>\overload</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1749" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(type:Int8.class):Int8-instance-method">
+      <div class="signature">
+        
+        def <strong>read</strong>(type : Int8.class) : Int8
+
+        <a class="method-permalink" href="#read%28type%3AInt8.class%29%3AInt8-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Read data from the packet. The expected type corresponds to
@@ -1325,183 +1635,7 @@ what was actually sent.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1734" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Float32.class&#41;:Float32-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Float32.class) : Float32
-
-        <a class="method-permalink" href="#read%28type%3AFloat32.class%29%3AFloat32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1770" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:String.class&#41;:String-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : String.class) : String
-
-        <a class="method-permalink" href="#read%28type%3AString.class%29%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1778" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Float64.class&#41;:Float64-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Float64.class) : Float64
-
-        <a class="method-permalink" href="#read%28type%3AFloat64.class%29%3AFloat64-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1774" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:UInt64.class&#41;:UInt64-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : UInt64.class) : UInt64
-
-        <a class="method-permalink" href="#read%28type%3AUInt64.class%29%3AUInt64-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1766" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Int64.class&#41;:Int64-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Int64.class) : Int64
-
-        <a class="method-permalink" href="#read%28type%3AInt64.class%29%3AInt64-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1762" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:UInt32.class&#41;:UInt32-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : UInt32.class) : UInt32
-
-        <a class="method-permalink" href="#read%28type%3AUInt32.class%29%3AUInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1758" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Int32.class&#41;:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Int32.class) : Int32
-
-        <a class="method-permalink" href="#read%28type%3AInt32.class%29%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1754" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:UInt16.class&#41;:UInt16-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : UInt16.class) : UInt16
-
-        <a class="method-permalink" href="#read%28type%3AUInt16.class%29%3AUInt16-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1750" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Int16.class&#41;:Int16-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Int16.class) : Int16
-
-        <a class="method-permalink" href="#read%28type%3AInt16.class%29%3AInt16-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1746" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:UInt8.class&#41;:UInt8-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : UInt8.class) : UInt8
-
-        <a class="method-permalink" href="#read%28type%3AUInt8.class%29%3AUInt8-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1742" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read&#40;type:Int8.class&#41;:Int8-instance-method">
-      <div class="signature">
-        
-        def <strong>read</strong>(type : Int8.class) : Int8
-
-        <a class="method-permalink" href="#read%28type%3AInt8.class%29%3AInt8-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1738" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1744" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1538,12 +1672,12 @@ data to read.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1728" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1733" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:String&#41;-instance-method">
+    <div class="entry-detail" id="write(data:String)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : String)
@@ -1551,15 +1685,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AString%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1827" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1854" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Float64&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Float64)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Float64)
@@ -1567,15 +1703,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AFloat64%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1823" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1849" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Float32&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Float32)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Float32)
@@ -1583,15 +1721,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AFloat32%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1819" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1844" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:UInt64&#41;-instance-method">
+    <div class="entry-detail" id="write(data:UInt64)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : UInt64)
@@ -1599,15 +1739,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AUInt64%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1815" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1839" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Int64&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Int64)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Int64)
@@ -1615,15 +1757,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AInt64%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1811" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1834" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:UInt32&#41;-instance-method">
+    <div class="entry-detail" id="write(data:UInt32)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : UInt32)
@@ -1631,15 +1775,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AUInt32%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1807" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1829" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Int32&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Int32)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Int32)
@@ -1647,15 +1793,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AInt32%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1803" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1824" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:UInt16&#41;-instance-method">
+    <div class="entry-detail" id="write(data:UInt16)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : UInt16)
@@ -1663,15 +1811,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AUInt16%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1799" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1819" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Int16&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Int16)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Int16)
@@ -1679,15 +1829,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AInt16%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1795" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1814" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:UInt8&#41;-instance-method">
+    <div class="entry-detail" id="write(data:UInt8)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : UInt8)
@@ -1695,15 +1847,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AUInt8%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>\overload</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1791" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1809" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Int8&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Int8)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Int8)
@@ -1711,15 +1865,17 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3AInt8%29-instance-method">#</a>
       </div>
       
+        <div class="doc"><p>Write data into the packet</p></div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1787" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1804" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="write&#40;data:Bool&#41;-instance-method">
+    <div class="entry-detail" id="write(data:Bool)-instance-method">
       <div class="signature">
         
         def <strong>write</strong>(data : Bool)
@@ -1727,12 +1883,12 @@ data to read.</p>
         <a class="method-permalink" href="#write%28data%3ABool%29-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Write data into the packet</p></div>
+        <div class="doc"><p>Overload of operator &lt;&lt; to write data into the packet</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1783" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1799" target="_blank">View source</a>]
         
       </div>
     </div>

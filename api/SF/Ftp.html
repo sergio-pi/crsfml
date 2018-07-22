@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Ftp - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -305,7 +341,7 @@
       
     </li>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/Ftp" data-name="sf::ftp">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/Ftp" data-name="sf::ftp">
       <a href="../SF/Ftp.html">Ftp</a>
       
         <ul>
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Ftp
@@ -824,7 +892,7 @@ upload, download, create, remove, ...).</p>
 status code as well as a message from the server. Some
 commands such as working_directory() and directory_listing()
 return additional data, and use a class derived from
-<code><a href="../SF/Ftp.html">SF::Ftp</a>::Response</code> to provide this data. The most often used
+<code><a href="../SF/Ftp/Response.html">SF::Ftp::Response</a></code> to provide this data. The most often used
 commands are directly provided as member functions, but it is
 also possible to use specific commands with the send_command() function.</p>
 
@@ -856,7 +924,7 @@ response <span class="o">=</span> ftp.login(<span class="s">&quot;laurent&quot;<
 <span class="c"># Print the working directory</span>
 directory <span class="o">=</span> ftp.working_directory()
 <span class="k">if</span> directory.ok?
-  puts <span class="s">&quot;Working directory: </span><span class="i">#{</span></span>directory.directory<span class="s"><span class="i">}</span>&quot;</span>
+  puts <span class="s">&quot;Working directory: </span><span class="i">#{</span>directory.directory<span class="i">}</span><span class="s">&quot;</span>
 <span class="k">end</span>
 
 <span class="c"># Create a new directory</span>
@@ -871,10 +939,10 @@ response <span class="o">=</span> ftp.upload(<span class="s">&quot;local-path/fi
   puts <span class="s">&quot;File uploaded&quot;</span>
 <span class="k">end</span>
 
-<span class="c"># Send specific commands &#40;here: FEAT to list supported FTP features&#41;</span>
+<span class="c"># Send specific commands (here: FEAT to list supported FTP features)</span>
 response <span class="o">=</span> ftp.send_command <span class="s">&quot;FEAT&quot;</span>
 <span class="k">if</span> response.ok?
-  puts <span class="s">&quot;Feature list:\n</span><span class="i">#{</span></span>response.message<span class="s"><span class="i">}</span>&quot;</span>
+  puts <span class="s">&quot;Feature list:\n</span><span class="i">#{</span>response.message<span class="i">}</span><span class="s">&quot;</span>
 <span class="k">end</span>
 
 <span class="c"># Disconnect from the server</span>
@@ -903,7 +971,7 @@ ftp.disconnect()</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L428" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L429" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1035,7 +1103,7 @@ ftp.disconnect()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
+        <a href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>, append : Bool = <span class="n">false</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Upload a file to the server</p></div>
         
@@ -1102,7 +1170,7 @@ ftp.disconnect()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L430" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L431" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1114,7 +1182,7 @@ ftp.disconnect()</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="change_directory&#40;directory:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="change_directory(directory:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>change_directory</strong>(directory : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1135,12 +1203,12 @@ ftp.disconnect()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L817" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L818" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="connect&#40;server:IpAddress,port:Int&#61;21,timeout:Time&#61;Time::Zero&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="connect(server:IpAddress,port:Int=21,timeout:Time=Time::Zero):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>connect</strong>(server : <a href="../SF/IpAddress.html">IpAddress</a>, port : Int = <span class="n">21</span>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1168,12 +1236,12 @@ system timeout will be used (which is usually pretty long).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L727" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L728" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="create_directory&#40;name:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="create_directory(name:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>create_directory</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1195,12 +1263,12 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L842" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L843" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_directory&#40;name:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="delete_directory(name:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>delete_directory</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1224,12 +1292,12 @@ be removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L859" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L860" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="delete_file&#40;name:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="delete_file(name:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>delete_file</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1253,7 +1321,7 @@ removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L892" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L893" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1275,12 +1343,12 @@ removed permanently!</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L737" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L738" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="download&#40;remote_file:String,local_path:String,mode:Ftp::TransferMode&#61;Binary&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="download(remote_file:String,local_path:String,mode:Ftp::TransferMode=Binary):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>download</strong>(remote_file : String, local_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1302,12 +1370,12 @@ be overwritten.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#upload</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method">#upload</a></code></p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L914" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L915" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1328,12 +1396,12 @@ it is still opened.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L705" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L706" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_directory_listing&#40;directory:String&#61;&amp;quot;&amp;quot;&#41;:Ftp::ListingResponse-instance-method">
+    <div class="entry-detail" id="get_directory_listing(directory:String=&amp;quot;&amp;quot;):Ftp::ListingResponse-instance-method">
       <div class="signature">
         
         def <strong>get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/ListingResponse.html">Ftp::ListingResponse</a>
@@ -1357,7 +1425,7 @@ working directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L803" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L804" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,7 +1448,7 @@ connection automatically if no command is sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L773" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L774" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1403,12 +1471,12 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L748" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L749" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="login&#40;name:String,password:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="login(name:String,password:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>login</strong>(name : String, password : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1428,7 +1496,7 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L762" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L763" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1450,12 +1518,12 @@ Users that are not logged in cannot perform any operation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L827" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L828" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="rename_file&#40;file:String,new_name:String&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="rename_file(file:String,new_name:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>rename_file</strong>(file : String, new_name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1477,12 +1545,12 @@ directory.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L875" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L876" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send_command&#40;command:String,parameter:String&#61;&amp;quot;&amp;quot;&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="send_command(command:String,parameter:String=&amp;quot;&amp;quot;):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
@@ -1506,17 +1574,17 @@ can extract it from the response using Response.message().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L951" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L956" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="upload&#40;local_file:String,remote_path:String,mode:Ftp::TransferMode&#61;Binary&#41;:Ftp::Response-instance-method">
+    <div class="entry-detail" id="upload(local_file:String,remote_path:String,mode:Ftp::TransferMode=Binary,append:Bool=false):Ftp::Response-instance-method">
       <div class="signature">
         
-        def <strong>upload</strong>(local_file : String, remote_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
+        def <strong>upload</strong>(local_file : String, remote_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>, append : Bool = <span class="n">false</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Upload a file to the server</p>
@@ -1526,7 +1594,10 @@ working directory of your application, and the
 remote path is relative to the current directory of the
 FTP server.</p>
 
-<ul><li><em>local_file</em> - Path of the local file to upload</li><li><em>remote_path</em> - The directory in which to put the file on the server</li><li><em>mode</em> - Transfer mode</li></ul>
+<p>The append parameter controls whether the remote file is
+appended to or overwritten if it already exists.</p>
+
+<ul><li><em>local_file</em> - Path of the local file to upload</li><li><em>remote_path</em> - The directory in which to put the file on the server</li><li><em>mode</em> - Transfer mode</li><li><em>append</em> - Pass true to append to or false to overwrite the remote file if it already exists</li></ul>
 
 <p><em>Returns:</em> Server response to the request</p>
 
@@ -1535,7 +1606,7 @@ FTP server.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L933" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L938" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1560,7 +1631,7 @@ operations involving directories and/or filenames.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L786" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L787" target="_blank">View source</a>]
         
       </div>
     </div>

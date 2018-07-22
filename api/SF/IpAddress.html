@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::IpAddress - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> SF::IpAddress
@@ -819,7 +887,7 @@ address from/to various representations.</p>
 <p>Usage example:</p>
 
 <pre><code>a0 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.<span class="k">new</span>                    <span class="c"># an invalid address</span>
-a1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span><span class="t">::</span><span class="t">None</span>                  <span class="c"># an invalid address &#40;same as a0&#41;</span>
+a1 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span><span class="t">::</span><span class="t">None</span>                  <span class="c"># an invalid address (same as a0)</span>
 a2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.<span class="k">new</span>(<span class="s">&quot;127.0.0.1&quot;</span>)       <span class="c"># the local host address</span>
 a3 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span><span class="t">::</span><span class="t">Broadcast</span>             <span class="c"># the broadcast address</span>
 a4 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.<span class="k">new</span>(<span class="n">192</span>, <span class="n">168</span>, <span class="n">1</span>, <span class="n">56</span>)   <span class="c"># a local address</span>
@@ -848,12 +916,12 @@ nor other types of network addresses.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L989" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L994" target="_blank">network/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/network.cr#L4" target="_blank">network/network.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/network.cr#L4" target="_blank">network/network.cr</a>
     
     <br/>
   
@@ -1068,7 +1136,7 @@ nor other types of network addresses.</p>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="get_public_address&#40;timeout:Time&#61;Time::Zero&#41;:IpAddress-class-method">
+    <div class="entry-detail" id="get_public_address(timeout:Time=Time::Zero):IpAddress-class-method">
       <div class="signature">
         
         def self.<strong>get_public_address</strong>(timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/IpAddress.html">IpAddress</a>
@@ -1099,7 +1167,7 @@ limit is deactivated by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1118" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1127,12 +1195,12 @@ used safely anywhere.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1094" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1099" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;byte0:Int,byte1:Int,byte2:Int,byte3:Int&#41;-class-method">
+    <div class="entry-detail" id="new(byte0:Int,byte1:Int,byte2:Int,byte3:Int)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(byte0 : Int, byte1 : Int, byte2 : Int, byte3 : Int)
@@ -1151,12 +1219,12 @@ parse a string to get the address components.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1035" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1040" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;address:String&#41;-class-method">
+    <div class="entry-detail" id="new(address:String)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(address : String)
@@ -1177,12 +1245,12 @@ implicit conversions from literal strings to IpAddress work.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1020" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1025" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;address:Int&#41;-class-method">
+    <div class="entry-detail" id="new(address:Int)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(address : Int)
@@ -1204,7 +1272,7 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1050" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1055" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1224,7 +1292,7 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L995" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1000" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1236,7 +1304,7 @@ IpAddress.to_integer().</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="&#33;&#61;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="!=(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1253,12 +1321,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1141" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1146" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&lt;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&lt;(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong><</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1275,12 +1343,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1151" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1156" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&lt;&#61;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&lt;=(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong><=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1297,12 +1365,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1171" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1176" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&#61;&#61;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="==(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong>==</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1319,12 +1387,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1131" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1136" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&gt;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&gt;(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong>></strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1341,12 +1409,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1161" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1166" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&gt;&#61;&#40;right:IpAddress&#41;:Bool-instance-method">
+    <div class="entry-detail" id="&gt;=(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong>>=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
@@ -1363,7 +1431,7 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1181" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1379,12 +1447,12 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1195" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1200" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="inspect&#40;io&#41;-instance-method">
+    <div class="entry-detail" id="inspect(io)-instance-method">
       <div class="signature">
         
         def <strong>inspect</strong>(io)
@@ -1395,7 +1463,7 @@ IpAddress.to_integer().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/network.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/network.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1423,7 +1491,7 @@ back to a <code><a href="../SF/IpAddress.html">SF::IpAddress</a></code> with the
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1079" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1084" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1449,7 +1517,7 @@ from a host name.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L1064" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1069" target="_blank">View source</a>]
         
       </div>
     </div>

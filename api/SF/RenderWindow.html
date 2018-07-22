@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::RenderWindow - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::RenderWindow
@@ -828,7 +896,7 @@ Here is a typical rendering and event loop with a <code><a href="../SF/RenderWin
 <pre><code><span class="c"># Declare and create a new render-window</span>
 window <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">RenderWindow</span>.<span class="k">new</span>(<span class="t">SF</span><span class="t">::</span><span class="t">VideoMode</span>.<span class="k">new</span>(<span class="n">800</span>, <span class="n">600</span>), <span class="s">&quot;SFML window&quot;</span>)
 
-<span class="c"># Limit the framerate to 60 frames per second &#40;this step is optional&#41;</span>
+<span class="c"># Limit the framerate to 60 frames per second (this step is optional)</span>
 window.framerate_limit <span class="o">=</span> <span class="n">60</span>
 
 <span class="c"># The main loop - ends as soon as the window is closed</span>
@@ -919,12 +987,12 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5077" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5224" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -974,6 +1042,13 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
+        
+          <div class="summary"><p>Activate or deactivate the window as the current target        for OpenGL rendering</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#capture%3AImage-instance-method" class="signature"><strong>#capture</strong> : Image</a>
         
           <div class="summary"><p>Copy the current contents of the window to an image</p></div>
@@ -1007,6 +1082,11 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h3>Instance methods inherited from module <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></h3>
   
   
+    <a href="../SF/RenderTarget.html#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="tooltip">
+      <span>active=(active : Bool = <span class="n">true</span>) : Bool</span>
+    active=</a>, 
+    
+  
     <a href="../SF/RenderTarget.html#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method" class="tooltip">
       <span>clear(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</span>
     clear</a>, 
@@ -1017,8 +1097,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
-      <span>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
+    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
+      <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertex_buffer : VertexBuffer, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertex_buffer : VertexBuffer, first_vertex : Int, vertex_count : Int, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
   
@@ -1032,8 +1112,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     map_coords_to_pixel</a>, 
     
   
-    <a href="../SF/RenderTarget.html#map_pixel_to_coords%28point%3AVector2%7CTuple%2Cview%3AView%29%3AVector2f-instance-method" class="tooltip">
-      <span>map_pixel_to_coords(point : Vector2 | Tuple, view : View) : Vector2f<br/>map_pixel_to_coords(point : Vector2 | Tuple) : Vector2f</span>
+    <a href="../SF/RenderTarget.html#map_pixel_to_coords%28point%3AVector2%7CTuple%29%3AVector2f-instance-method" class="tooltip">
+      <span>map_pixel_to_coords(point : Vector2 | Tuple) : Vector2f<br/>map_pixel_to_coords(point : Vector2 | Tuple, view : View) : Vector2f</span>
     map_pixel_to_coords</a>, 
     
   
@@ -1134,6 +1214,11 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     <a href="../SF/Window.html#key_repeat_enabled%3D%28enabled%3ABool%29-instance-method" class="tooltip">
       <span>key_repeat_enabled=(enabled : Bool)</span>
     key_repeat_enabled=</a>, 
+    
+  
+    <a href="../SF/Window.html#mouse_cursor%3D%28cursor%3ACursor%29-instance-method" class="tooltip">
+      <span>mouse_cursor=(cursor : Cursor)</span>
+    mouse_cursor=</a>, 
     
   
     <a href="../SF/Window.html#mouse_cursor_grabbed%3D%28grabbed%3ABool%29-instance-method" class="tooltip">
@@ -1279,7 +1364,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;mode:VideoMode,title:String,style:Style&#61;Style::Default,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
+    <div class="entry-detail" id="new(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/Style.html">Style</a> = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
@@ -1304,12 +1389,12 @@ parameters for a regular usage of the graphics module.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5103" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5250" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;handle:WindowHandle,settings:ContextSettings&#61;ContextSettings.new&#41;-class-method">
+    <div class="entry-detail" id="new(handle:WindowHandle,settings:ContextSettings=ContextSettings.new)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(handle : <a href="../SF/WindowHandle.html">WindowHandle</a>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
@@ -1329,14 +1414,14 @@ parameters for a regular usage of the graphics module.</p>
 
 <ul><li><em>handle</em> - Platform-specific handle of the control (<em>hwnd</em> on</li></ul>
 
-<pre><code>            <span class="t">Windows</span>, <span class="o">*</span><span class="o">%</span>window<span class="o">*</span> on <span class="t">Linux</span><span class="s">/FreeBSD, *ns_window* on OS X&#41;</code></pre>
+<pre><code>            <span class="t">Windows</span>, <span class="o">*</span><span class="o">%</span>window<span class="o">*</span> on <span class="t">Linux</span><span class="s">/FreeBSD, *ns_window* on OS X)</code></pre>
 
 <ul><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5120" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1357,12 +1442,12 @@ use the other constructors or call create() to do so.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5083" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5230" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;*args,**kwargs&#41;:self-class-method">
+    <div class="entry-detail" id="new(*args,**kwargs):self-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(*args, **kwargs) : self
@@ -1375,7 +1460,7 @@ use the other constructors or call create() to do so.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5182" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5346" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,6 +1471,37 @@ use the other constructors or call create() to do so.</p></div>
 
 
   <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="active=(active:Bool=true):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>active=</strong>(active : Bool = <span class="n">true</span>) : Bool
+
+        <a class="method-permalink" href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Activate or deactivate the window as the current target</p>
+
+<pre><code>   <span class="k">for</span> <span class="t">OpenGL</span> rendering</code></pre>
+
+<p>A window is active only on the current thread, if you want to
+make it active on another thread you have to deactivate it
+on the previous thread first if it was active.
+Only one window can be active on a thread at a time, thus
+the window previously active (if any) automatically gets deactivated.
+This is not to be confused with request_focus().</p>
+
+<ul><li><em>active</em> - True to activate, false to deactivate</li></ul>
+
+<p><em>Returns:</em> True if operation was successful, false otherwise</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5302" target="_blank">View source</a>]
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="capture:Image-instance-method">
       <div class="signature">
@@ -1418,7 +1534,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5162" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5326" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,7 +1554,7 @@ You can also draw things directly to a texture with the
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5127" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5274" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1461,7 +1577,7 @@ of the window.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L5137" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5284" target="_blank">View source</a>]
         
       </div>
     </div>

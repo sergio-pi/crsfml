@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Thread - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::Thread
@@ -835,7 +903,7 @@ thread is finished, the destructor will wait (see wait())</p>
 
 <p>Usage examples:</p>
 
-<pre><code class='language-c++'># example 1: non member function with one argument
+<pre><code class="language-c++"># example 1: non member function with one argument
 
 void threadFunc(int argument)
     ...
@@ -844,7 +912,7 @@ end
 thread = SF::Thread.new(&threadFunc, 5)
 thread.launch() # start the thread (internally calls threadFunc(5))</code></pre>
 
-<pre><code class='language-c++'># example 2: member function
+<pre><code class="language-c++"># example 2: member function
 
 class Task
 public:
@@ -857,7 +925,7 @@ Task task
 thread = SF::Thread.new(&Task.run, &task)
 thread.launch() # start the thread (internally calls task.run())</code></pre>
 
-<pre><code class='language-c++'># example 3: functor
+<pre><code class="language-c++"># example 3: functor
 
 struct Task
     void operator()()
@@ -899,7 +967,7 @@ kind of situations, you can use mutexes (see <code><a href="../SF/Mutex.html">SF
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L852" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L852" target="_blank">system/obj.cr</a>
     
     <br/>
   
@@ -998,7 +1066,7 @@ kind of situations, you can use mutexes (see <code><a href="../SF/Mutex.html">SF
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;function:-&gt;&#41;-class-method">
+    <div class="entry-detail" id="new(function:-&gt;)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(function :  -> )
@@ -1015,7 +1083,7 @@ have any type (int, std::string, void*, Toto, ...).</p>
 
 <p>Use this constructor for this kind of function:</p>
 
-<pre><code class='language-c++'>void function(int arg)
+<pre><code class="language-c++">void function(int arg)
 
 # --- or ----
 
@@ -1030,7 +1098,7 @@ end</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L875" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L875" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1058,7 +1126,7 @@ cannot survive after its <code><a href="../SF/Thread.html">SF::Thread</a></code>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L884" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L884" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1081,7 +1149,7 @@ running in parallel to the calling code.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L894" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L894" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1106,7 +1174,7 @@ the thread function terminate by itself.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L916" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L916" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1131,7 +1199,7 @@ returns without doing anything.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/system/obj.cr#L905" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L905" target="_blank">View source</a>]
         
       </div>
     </div>

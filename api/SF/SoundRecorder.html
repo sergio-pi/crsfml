@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::SoundRecorder - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">abstract class</span> SF::SoundRecorder
@@ -865,7 +933,7 @@ thread finishes before your object is destroyed.</p>
 
 <p>Usage example:</p>
 
-<pre><code><span class="k">class</span> <span class="t">CustomRecorder</span> <span class="o"><</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundRecorder</span>
+<pre><code><span class="k">class</span> <span class="t">CustomRecorder</span> <span class="o">&lt;</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundRecorder</span>
   <span class="k">def</span> <span class="m">finalize</span>
     <span class="c"># Make sure to stop the recording thread</span>
     stop()
@@ -880,7 +948,7 @@ thread finishes before your object is destroyed.</p>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="m">on_process_samples</span>(samples)
-    <span class="c"># Do something with the new chunk of samples &#40;store them, send them, ...&#41;</span>
+    <span class="c"># Do something with the new chunk of samples (store them, send them, ...)</span>
     ...
 
     <span class="c"># Return true to continue playing</span>
@@ -936,7 +1004,7 @@ thread finishes before your object is destroyed.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1539" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1644" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -1132,7 +1200,7 @@ thread finishes before your object is destroyed.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1670" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1775" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1162,12 +1230,12 @@ classes will fail.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1663" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1768" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="available_devices:Array&#40;String&#41;-class-method">
+    <div class="entry-detail" id="available_devices:Array(String)-class-method">
       <div class="signature">
         
         def self.<strong>available_devices</strong> : Array(String)
@@ -1185,7 +1253,7 @@ the names of all available audio capture devices.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1592" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1697" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,7 +1277,7 @@ is returned.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1603" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1708" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1239,12 +1307,12 @@ value is either 1 (for mono) or 2 (for stereo).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1651" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1756" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="channel_count&#61;&#40;channel_count:Int&#41;-instance-method">
+    <div class="entry-detail" id="channel_count=(channel_count:Int)-instance-method">
       <div class="signature">
         
         def <strong>channel_count=</strong>(channel_count : Int)
@@ -1267,7 +1335,7 @@ used for recording. Currently only 16-bit mono and
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1640" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1745" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1287,12 +1355,12 @@ used for recording. Currently only 16-bit mono and
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1626" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1731" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="device&#61;&#40;name:String&#41;:Bool-instance-method">
+    <div class="entry-detail" id="device=(name:String):Bool-instance-method">
       <div class="signature">
         
         def <strong>device=</strong>(name : String) : Bool
@@ -1316,7 +1384,7 @@ opening the device fails, it stops the recording.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1619" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1724" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,12 +1402,12 @@ opening the device fails, it stops the recording.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1542" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1647" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="on_process_samples&#40;samples:Array&#40;Int16&#41;|Slice&#40;Int16&#41;&#41;:Bool-instance-method">
+    <div class="entry-detail" id="on_process_samples(samples:Array(Int16)|Slice(Int16)):Bool-instance-method">
       <div class="signature">
         abstract 
         def <strong>on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool
@@ -1361,7 +1429,7 @@ it over the network, etc.).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1714" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1819" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1386,7 +1454,7 @@ implementation does nothing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1699" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1804" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1409,12 +1477,12 @@ implementation does nothing.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1721" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1826" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="processing_interval&#61;&#40;interval:Time&#41;-instance-method">
+    <div class="entry-detail" id="processing_interval=(interval:Time)-instance-method">
       <div class="signature">
         
         def <strong>processing_interval=</strong>(interval : <a href="../SF/Time.html">Time</a>)
@@ -1439,7 +1507,7 @@ So don't rely on this parameter to implement precise timing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1688" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1793" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1463,12 +1531,12 @@ captured per second. The higher, the better the quality
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1582" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1687" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="start&#40;sample_rate:Int&#61;44100&#41;:Bool-instance-method">
+    <div class="entry-detail" id="start(sample_rate:Int=44100):Bool-instance-method">
       <div class="signature">
         
         def <strong>start</strong>(sample_rate : Int = <span class="n">44100</span>) : Bool
@@ -1499,7 +1567,7 @@ available_devices().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1565" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1670" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1519,7 +1587,7 @@ available_devices().</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L1572" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1677" target="_blank">View source</a>]
         
       </div>
     </div>

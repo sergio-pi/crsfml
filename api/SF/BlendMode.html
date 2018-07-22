@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::BlendMode - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -30,7 +46,7 @@
       
     </li>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/BlendMode" data-name="sf::blendmode">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/BlendMode" data-name="sf::blendmode">
       <a href="../SF/BlendMode.html">BlendMode</a>
       
         <ul>
@@ -52,6 +68,11 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/CircleShape" data-name="sf::circleshape">
       <a href="../SF/CircleShape.html">CircleShape</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
       
     </li>
   
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> SF::BlendMode
@@ -846,7 +914,7 @@ dst.a   <span class="o">=</span> alpha_src_factor <span class="o">*</span> src.a
 
 <p>In SFML, a blend mode can be specified every time you draw a <code><a href="../SF/Drawable.html">SF::Drawable</a></code>
 object to a render target. It is part of the <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code> compound
-that is passed to the member function <code><a href="../SF/RenderTarget.html#draw%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Ctype%3APrimitiveType%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">SF::RenderTarget.draw</a></code>().</p>
+that is passed to the member function <code><a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">SF::RenderTarget.draw</a></code>().</p>
 
 <p><em>See also:</em> <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code>, <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></p>
 
@@ -866,12 +934,12 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L51" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L51" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L272" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L272" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -1090,7 +1158,7 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation&#41;-class-method">
+    <div class="entry-detail" id="new(color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(color_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>, alpha_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
@@ -1105,12 +1173,12 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L135" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;source_factor:BlendMode::Factor,destination_factor:BlendMode::Factor,blend_equation:BlendMode::Equation&#61;Add&#41;-class-method">
+    <div class="entry-detail" id="new(source_factor:BlendMode::Factor,destination_factor:BlendMode::Factor,blend_equation:BlendMode::Equation=Add)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a> = <span class="t">Add</span>)
@@ -1128,7 +1196,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1148,7 +1216,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1160,7 +1228,7 @@ color and alpha components. It also defaults to the Add equation.</p>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="&#33;&#61;&#40;right:BlendMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="!=(right:BlendMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/BlendMode.html">BlendMode</a>) : Bool
@@ -1177,12 +1245,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="&#61;&#61;&#40;right:BlendMode&#41;:Bool-instance-method">
+    <div class="entry-detail" id="==(right:BlendMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>==</strong>(right : <a href="../SF/BlendMode.html">BlendMode</a>) : Bool
@@ -1199,7 +1267,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L198" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1217,12 +1285,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L178" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L178" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="alpha_dst_factor&#61;&#40;alpha_dst_factor:BlendMode::Factor&#41;-instance-method">
+    <div class="entry-detail" id="alpha_dst_factor=(alpha_dst_factor:BlendMode::Factor)-instance-method">
       <div class="signature">
         
         def <strong>alpha_dst_factor=</strong>(alpha_dst_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
@@ -1233,7 +1301,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L181" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1251,12 +1319,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L186" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="alpha_equation&#61;&#40;alpha_equation:BlendMode::Equation&#41;-instance-method">
+    <div class="entry-detail" id="alpha_equation=(alpha_equation:BlendMode::Equation)-instance-method">
       <div class="signature">
         
         def <strong>alpha_equation=</strong>(alpha_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
@@ -1267,7 +1335,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1285,12 +1353,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="alpha_src_factor&#61;&#40;alpha_src_factor:BlendMode::Factor&#41;-instance-method">
+    <div class="entry-detail" id="alpha_src_factor=(alpha_src_factor:BlendMode::Factor)-instance-method">
       <div class="signature">
         
         def <strong>alpha_src_factor=</strong>(alpha_src_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
@@ -1301,7 +1369,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L173" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1319,12 +1387,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L154" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="color_dst_factor&#61;&#40;color_dst_factor:BlendMode::Factor&#41;-instance-method">
+    <div class="entry-detail" id="color_dst_factor=(color_dst_factor:BlendMode::Factor)-instance-method">
       <div class="signature">
         
         def <strong>color_dst_factor=</strong>(color_dst_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
@@ -1335,7 +1403,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,12 +1421,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L162" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="color_equation&#61;&#40;color_equation:BlendMode::Equation&#41;-instance-method">
+    <div class="entry-detail" id="color_equation=(color_equation:BlendMode::Equation)-instance-method">
       <div class="signature">
         
         def <strong>color_equation=</strong>(color_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
@@ -1369,7 +1437,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L165" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L165" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1387,12 +1455,12 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L146" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="color_src_factor&#61;&#40;color_src_factor:BlendMode::Factor&#41;-instance-method">
+    <div class="entry-detail" id="color_src_factor=(color_src_factor:BlendMode::Factor)-instance-method">
       <div class="signature">
         
         def <strong>color_src_factor=</strong>(color_src_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
@@ -1403,7 +1471,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L149" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1419,7 +1487,7 @@ color and alpha components. It also defaults to the Add equation.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L226" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L226" target="_blank">View source</a>]
         
       </div>
     </div>

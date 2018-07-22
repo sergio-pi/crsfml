@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::UdpSocket - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::UdpSocket
@@ -861,13 +929,13 @@ socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</spa
 socket.bind(<span class="n">55001</span>)
 
 <span class="c"># Send a message to 192.168.1.50 on port 55002</span>
-message <span class="o">=</span> <span class="s">&quot;Hi, I am </span><span class="i">#{</span></span><span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.local_address<span class="s"><span class="i">}</span>&quot;</span>
+message <span class="o">=</span> <span class="s">&quot;Hi, I am </span><span class="i">#{</span><span class="t">SF</span><span class="t">::</span><span class="t">IpAddress</span>.local_address<span class="i">}</span><span class="s">&quot;</span>
 socket.send(message.to_slice, <span class="s">&quot;192.168.1.50&quot;</span>, <span class="n">55002</span>)
 
-<span class="c"># Receive an answer &#40;most likely from 192.168.1.50, but could be anyone else&#41;</span>
+<span class="c"># Receive an answer (most likely from 192.168.1.50, but could be anyone else)</span>
 buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
 status, received, sender, port <span class="o">=</span> socket.receive(buffer)
-puts <span class="s">&quot;</span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span> said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
+puts <span class="s">&quot;</span><span class="i">#{</span>sender<span class="i">}</span><span class="s"> said: </span><span class="i">#{</span>buffer<span class="i">}</span><span class="s">&quot;</span>
 
 <span class="c"># ----- The server -----</span>
 
@@ -878,10 +946,10 @@ socket.bind(<span class="n">55002</span>)
 <span class="c"># Receive a message from anyone</span>
 buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
 status, received, sender, port <span class="o">=</span> socket.receive(buffer)
-puts <span class="s">&quot;</span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span> said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
+puts <span class="s">&quot;</span><span class="i">#{</span>sender<span class="i">}</span><span class="s"> said: </span><span class="i">#{</span>buffer<span class="i">}</span><span class="s">&quot;</span>
 
 <span class="c"># Send an answer</span>
-message <span class="o">=</span> <span class="s">&quot;Welcome </span><span class="i">#{</span></span>sender<span class="s"><span class="i">}</span>&quot;</span>
+message <span class="o">=</span> <span class="s">&quot;Welcome </span><span class="i">#{</span>sender<span class="i">}</span><span class="s">&quot;</span>
 socket.send(message.to_slice, sender, port)</code></pre>
 
 <p><em>See also:</em> <code><a href="../SF/Socket.html">SF::Socket</a></code>, <code><a href="../SF/TcpSocket.html">SF::TcpSocket</a></code>, <code><a href="../SF/Packet.html">SF::Packet</a></code></p>
@@ -902,7 +970,7 @@ socket.send(message.to_slice, sender, port)</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2219" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2248" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1094,7 +1162,7 @@ socket.send(message.to_slice, sender, port)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2228" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2257" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1106,7 +1174,7 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="bind&#40;port:Int,address:IpAddress&#61;IpAddress::Any&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>bind</strong>(port : Int, address : <a href="../SF/IpAddress.html">IpAddress</a> = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1122,6 +1190,11 @@ You can use the special value Socket::AnyPort to tell the
 system to automatically pick an available port, and then
 call local_port to retrieve the chosen port.</p>
 
+<p>Since the socket can only be bound to a single port at
+any given moment, if it is already bound when this
+function is called, it will be unbound from the previous
+port before being bound to the new one.</p>
+
 <ul><li><em>port</em> - Port to bind the socket to</li><li><em>address</em> - Address of the interface to bind to</li></ul>
 
 <p><em>Returns:</em> Status code</p>
@@ -1131,7 +1204,7 @@ call local_port to retrieve the chosen port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2258" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2292" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1147,7 +1220,7 @@ call local_port to retrieve the chosen port.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2221" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2250" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,12 +1245,12 @@ returns 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2240" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2269" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32,IpAddress,UInt16&#41;-instance-method">
+    <div class="entry-detail" id="receive(data:Slice):::Tuple(Socket::Status,Int32,IpAddress,UInt16)-instance-method">
       <div class="signature">
         
         def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
@@ -1205,12 +1278,12 @@ be lost.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2309" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2343" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;packet:Packet&#41;:::Tuple&#40;Socket::Status,IpAddress,UInt16&#41;-instance-method">
+    <div class="entry-detail" id="receive(packet:Packet):::Tuple(Socket::Status,IpAddress,UInt16)-instance-method">
       <div class="signature">
         
         def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
@@ -1234,12 +1307,12 @@ has been received.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2344" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2378" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send&#40;data:Slice,remote_address:IpAddress,remote_port:Int&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="send(data:Slice,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>send</strong>(data : Slice, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1262,12 +1335,12 @@ fail and no data will be sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2287" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2321" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send&#40;packet:Packet,remote_address:IpAddress,remote_port:Int&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="send(packet:Packet,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1290,7 +1363,7 @@ fail and no data will be sent.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2327" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2361" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,7 +1389,7 @@ If the socket is not bound to a port, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L2271" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2305" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Rect(T) - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> SF::Rect(T)
@@ -840,20 +908,20 @@ for simplicity the instantiations used by SFML are aliased:</p>
 
 <p>Usage example:</p>
 
-<pre><code><span class="c"># Define a rectangle, located at &#40;0, 0&#41; with a size of 20x5</span>
+<pre><code><span class="c"># Define a rectangle, located at (0, 0) with a size of 20x5</span>
 r1 <span class="o">=</span> <span class="t">SF</span>.int_rect(<span class="n">0</span>, <span class="n">0</span>, <span class="n">20</span>, <span class="n">5</span>)
 
-<span class="c"># Define another rectangle, located at &#40;4, 2&#41; with a size of 18x10</span>
+<span class="c"># Define another rectangle, located at (4, 2) with a size of 18x10</span>
 position <span class="o">=</span> <span class="t">SF</span>.vector2i(<span class="n">4</span>, <span class="n">2</span>)
 size <span class="o">=</span> <span class="t">SF</span>.vector2i(<span class="n">18</span>, <span class="n">10</span>)
 r2 <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">IntRect</span>.<span class="k">new</span>(position, size)
 
-<span class="c"># Test intersections with the point &#40;3, 1&#41;</span>
-r1.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#&#61;&gt; true</span>
-r2.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#&#61;&gt; false</span>
+<span class="c"># Test intersections with the point (3, 1)</span>
+r1.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#=&gt; true</span>
+r2.contains?(<span class="n">3</span>, <span class="n">1</span>) <span class="c">#=&gt; false</span>
 
 <span class="c"># Test the intersection between r1 and r2</span>
-r1.intersects?(r2) <span class="c">#&#61;&gt; &#40;4, 2, 16, 3&#41;</span></code></pre>
+r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
 
 
 
@@ -871,7 +939,7 @@ r1.intersects?(r2) <span class="c">#&#61;&gt; &#40;4, 2, 16, 3&#41;</span></code
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L48" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L48" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -1040,7 +1108,7 @@ r1.intersects?(r2) <span class="c">#&#61;&gt; &#40;4, 2, 16, 3&#41;</span></code
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;left:T,top:T,width:T,height:T&#41;-class-method">
+    <div class="entry-detail" id="new(left:T,top:T,width:T,height:T)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(left : T, top : T, width : T, height : T)
@@ -1056,12 +1124,12 @@ and height, not the right and bottom coordinates!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;position:SF::Vector2&#40;T&#41;,size:SF::Vector2&#40;T&#41;&#41;-class-method">
+    <div class="entry-detail" id="new(position:SF::Vector2(T),size:SF::Vector2(T))-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">SF::Vector2</a>(T), size : <a href="../SF/Vector2.html">SF::Vector2</a>(T))
@@ -1077,7 +1145,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1095,7 +1163,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1107,7 +1175,7 @@ not the bottom-right corner!</p></div>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="&#61;&#61;&#40;other:self&#41;:Bool-instance-method">
+    <div class="entry-detail" id="==(other:self):Bool-instance-method">
       <div class="signature">
         
         def <strong>==</strong>(other : self) : Bool
@@ -1120,12 +1188,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="contains?&#40;x:Number,y:Number&#41;:Bool-instance-method">
+    <div class="entry-detail" id="contains?(x:Number,y:Number):Bool-instance-method">
       <div class="signature">
         
         def <strong>contains?</strong>(x : Number, y : Number) : Bool
@@ -1138,12 +1206,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="contains?&#40;point:Vector2|Tuple&#41;:Bool-instance-method">
+    <div class="entry-detail" id="contains?(point:Vector2|Tuple):Bool-instance-method">
       <div class="signature">
         
         def <strong>contains?</strong>(point : <a href="../SF/Vector2.html">Vector2</a> | Tuple) : Bool
@@ -1156,7 +1224,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1174,12 +1242,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="height&#61;&#40;height:T&#41;-instance-method">
+    <div class="entry-detail" id="height=(height:T)-instance-method">
       <div class="signature">
         
         def <strong>height=</strong>(height : T)
@@ -1192,12 +1260,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="intersects?&#40;other:SF::Rect&#40;T&#41;&#41;:SF::Rect&#40;T&#41;?-instance-method">
+    <div class="entry-detail" id="intersects?(other:SF::Rect(T)):SF::Rect(T)?-instance-method">
       <div class="signature">
         
         def <strong>intersects?</strong>(other : <a href="../SF/Rect.html">SF::Rect</a>(T)) : <a href="../SF/Rect.html">SF::Rect</a>(T)?
@@ -1212,7 +1280,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L92" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,12 +1298,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="left&#61;&#40;left:T&#41;-instance-method">
+    <div class="entry-detail" id="left=(left:T)-instance-method">
       <div class="signature">
         
         def <strong>left=</strong>(left : T)
@@ -1248,7 +1316,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,12 +1334,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="top&#61;&#40;top:T&#41;-instance-method">
+    <div class="entry-detail" id="top=(top:T)-instance-method">
       <div class="signature">
         
         def <strong>top=</strong>(top : T)
@@ -1284,7 +1352,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1302,12 +1370,12 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="width&#61;&#40;width:T&#41;-instance-method">
+    <div class="entry-detail" id="width=(width:T)-instance-method">
       <div class="signature">
         
         def <strong>width=</strong>(width : T)
@@ -1320,7 +1388,7 @@ not the bottom-right corner!</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>

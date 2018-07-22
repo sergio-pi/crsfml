@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Shape - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">abstract class</span> SF::Shape
@@ -824,7 +892,7 @@ shape classes, a shape always has the following attributes:</p>
 
 <p>Each feature is optional, and can be disabled easily:</p>
 
-<ul><li>the texture can be null</li><li>the fill/outline colors can be <code><a href="../SF/Color.html">SF::Color</a>::Transparent</code></li><li>the outline thickness can be zero</li></ul>
+<ul><li>the texture can be null</li><li>the fill/outline colors can be <code><a href="../SF/Color.html#Transparent">SF::Color::Transparent</a></code></li><li>the outline thickness can be zero</li></ul>
 
 <p>You can write your own derived shape class, there are only
 two virtual functions to override:</p>
@@ -867,12 +935,12 @@ two virtual functions to override:</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1739" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1764" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L265" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L265" target="_blank">graphics/graphics.cr</a>
     
     <br/>
   
@@ -1190,7 +1258,7 @@ two virtual functions to override:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1924" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1949" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1213,7 +1281,7 @@ two virtual functions to override:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L2056" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2081" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1235,12 +1303,12 @@ two virtual functions to override:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1845" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1870" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="fill_color&#61;&#40;color:Color&#41;-instance-method">
+    <div class="entry-detail" id="fill_color=(color:Color)-instance-method">
       <div class="signature">
         
         def <strong>fill_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
@@ -1253,7 +1321,7 @@ two virtual functions to override:</p>
 <p>This color is modulated (multiplied) with the shape's
 texture if any. It can be used to colorize the shape,
 or change its global opacity.
-You can use <code><a href="../SF/Color.html">SF::Color</a>::Transparent</code> to make the inside of
+You can use <code><a href="../SF/Color.html#Transparent">SF::Color::Transparent</a></code> to make the inside of
 the shape transparent, and have the outline alone.
 By default, the shape's fill color is opaque white.</p>
 
@@ -1264,7 +1332,7 @@ By default, the shape's fill color is opaque white.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1792" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1817" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1282,12 +1350,12 @@ By default, the shape's fill color is opaque white.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1742" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1767" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_point&#40;index:Int&#41;:Vector2f-instance-method">
+    <div class="entry-detail" id="get_point(index:Int):Vector2f-instance-method">
       <div class="signature">
         abstract 
         def <strong>get_point</strong>(index : Int) : <a href="../SF/Vector2f.html">Vector2f</a>
@@ -1311,7 +1379,7 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1887" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1912" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1344,7 +1412,7 @@ on top of that.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1918" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1943" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1370,7 +1438,7 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1897" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1922" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1392,12 +1460,12 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1855" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1880" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="outline_color&#61;&#40;color:Color&#41;-instance-method">
+    <div class="entry-detail" id="outline_color=(color:Color)-instance-method">
       <div class="signature">
         
         def <strong>outline_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
@@ -1416,7 +1484,7 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1802" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1827" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1438,12 +1506,12 @@ entity in the entity's coordinate system.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1865" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1890" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="outline_thickness&#61;&#40;thickness:Number&#41;-instance-method">
+    <div class="entry-detail" id="outline_thickness=(thickness:Number)-instance-method">
       <div class="signature">
         
         def <strong>outline_thickness=</strong>(thickness : Number)
@@ -1465,7 +1533,7 @@ By default, the outline thickness is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1815" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1840" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1487,12 +1555,12 @@ By default, the outline thickness is 0.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1874" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1899" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_texture&#40;texture:Texture?,reset_rect:Bool&#61;false&#41;-instance-method">
+    <div class="entry-detail" id="set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method">
       <div class="signature">
         
         def <strong>set_texture</strong>(texture : <a href="../SF/Texture.html">Texture</a>?, reset_rect : Bool = <span class="n">false</span>)
@@ -1520,12 +1588,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1763" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1788" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="texture&#61;&#40;texture:Texture&#41;-instance-method">
+    <div class="entry-detail" id="texture=(texture:Texture)-instance-method">
       <div class="signature">
         
         def <strong>texture=</strong>(texture : <a href="../SF/Texture.html">Texture</a>)
@@ -1538,7 +1606,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/graphics.cr#L267" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1560,12 +1628,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1835" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1860" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="texture_rect&#61;&#40;rect:IntRect&#41;-instance-method">
+    <div class="entry-detail" id="texture_rect=(rect:IntRect)-instance-method">
       <div class="signature">
         
         def <strong>texture_rect=</strong>(rect : <a href="../SF/IntRect.html">IntRect</a>)
@@ -1586,7 +1654,7 @@ By default, the texture rect covers the entire texture.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1777" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1802" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1608,7 +1676,7 @@ the shape's points change (i.e. the result of either
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1934" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1959" target="_blank">View source</a>]
         
       </div>
     </div>

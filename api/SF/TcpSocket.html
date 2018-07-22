@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::TcpSocket - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">class</span> SF::TcpSocket
@@ -856,7 +924,7 @@ socket.send(message.to_slice)
 <span class="c"># Receive an answer from the server</span>
 buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
 status, received <span class="o">=</span> socket.receive(buffer)
-puts <span class="s">&quot;The server said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
+puts <span class="s">&quot;The server said: </span><span class="i">#{</span>buffer<span class="i">}</span><span class="s">&quot;</span>
 
 <span class="c"># ----- The server -----</span>
 
@@ -867,12 +935,12 @@ listener.listen(<span class="n">55001</span>)
 <span class="c"># Wait for a connection</span>
 socket <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">TcpSocket</span>.<span class="k">new</span>
 listener.accept(socket)
-puts <span class="s">&quot;New client connected: </span><span class="i">#{</span></span>socket.remote_address<span class="s"><span class="i">}</span>&quot;</span>
+puts <span class="s">&quot;New client connected: </span><span class="i">#{</span>socket.remote_address<span class="i">}</span><span class="s">&quot;</span>
 
 <span class="c"># Receive a message from the client</span>
 buffer <span class="o">=</span> <span class="t">Slice</span>(<span class="t">UInt8</span>).<span class="k">new</span>(<span class="n">1024</span>)
 status, received <span class="o">=</span> socket.receive(buffer)
-puts <span class="s">&quot;The client said: </span><span class="i">#{</span></span>buffer<span class="s"><span class="i">}</span>&quot;</span>
+puts <span class="s">&quot;The client said: </span><span class="i">#{</span>buffer<span class="i">}</span><span class="s">&quot;</span>
 
 <span class="c"># Send an answer</span>
 message <span class="o">=</span> <span class="s">&quot;Welcome, client&quot;</span>
@@ -896,7 +964,7 @@ socket.send(message.to_slice)</code></pre>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L182" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L182" target="_blank">network/obj.cr</a>
     
     <br/>
   
@@ -1086,7 +1154,7 @@ socket.send(message.to_slice)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,7 +1166,7 @@ socket.send(message.to_slice)</code></pre>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="connect&#40;remote_address:IpAddress,remote_port:Int,timeout:Time&#61;Time::Zero&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>connect</strong>(remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1111,7 +1179,8 @@ socket.send(message.to_slice)</code></pre>
 <p>In blocking mode, this function may take a while, especially
 if the remote peer is not reachable. The last parameter allows
 you to stop trying to connect after a given timeout.
-If the socket was previously connected, it is first disconnected.</p>
+If the socket is already connected, the connection is
+forcibly disconnected before attempting to connect again.</p>
 
 <ul><li><em>remote_address</em> - Address of the remote peer</li><li><em>remote_port</em> - Port of the remote peer</li><li><em>timeout</em> - Optional maximum time to wait</li></ul>
 
@@ -1122,7 +1191,7 @@ If the socket was previously connected, it is first disconnected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L243" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1145,7 +1214,7 @@ socket is not connected, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L253" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L254" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1161,7 +1230,7 @@ socket is not connected, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L184" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1185,12 +1254,12 @@ socket is not connected, this function has no effect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L200" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L200" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32&#41;-instance-method">
+    <div class="entry-detail" id="receive(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">
       <div class="signature">
         
         def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
@@ -1215,12 +1284,12 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L301" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L302" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="receive&#40;packet:Packet&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="receive(packet:Packet):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1243,7 +1312,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L333" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L334" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1259,7 +1328,7 @@ This function will fail if the socket is not connected.</p>
         <div class="doc"><p>Get the address of the connected peer</p>
 
 <p>It the socket is not connected, this function returns
-<code><a href="../SF/IpAddress.html">SF::IpAddress</a>::None</code>.</p>
+<code><a href="../SF/IpAddress.html#None">SF::IpAddress::None</a></code>.</p>
 
 <p><em>Returns:</em> Address of the remote peer</p>
 
@@ -1268,7 +1337,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L212" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,12 +1363,12 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send&#40;data:Slice&#41;:::Tuple&#40;Socket::Status,Int32&#41;-instance-method">
+    <div class="entry-detail" id="send(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">
       <div class="signature">
         
         def <strong>send</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
@@ -1322,12 +1391,12 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L284" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L285" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="send&#40;packet:Packet&#41;:Socket::Status-instance-method">
+    <div class="entry-detail" id="send(packet:Packet):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
@@ -1337,7 +1406,7 @@ This function will fail if the socket is not connected.</p>
       
         <div class="doc"><p>Send a formatted packet of data to the remote peer</p>
 
-<p>In non-blocking mode, if this function returns <code><a href="../SF/Socket.html">SF::Socket</a>::Partial</code>,
+<p>In non-blocking mode, if this function returns <code>SF::Socket::Partial</code>,
 you <em>must</em> retry sending the same unmodified packet before sending
 anything else in order to guarantee the packet arrives at the remote
 peer uncorrupted.
@@ -1352,7 +1421,7 @@ This function will fail if the socket is not connected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/network/obj.cr#L318" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L319" target="_blank">View source</a>]
         
       </div>
     </div>

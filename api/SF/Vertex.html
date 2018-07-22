@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::Vertex - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,9 +858,11 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
   <span class="kind">struct</span> SF::Vertex
@@ -861,7 +929,7 @@ drivers that are not able to process integer coordinates correctly.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1409" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1434" target="_blank">graphics/obj.cr</a>
     
     <br/>
   
@@ -1001,7 +1069,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple,color:Color,tex_coords:Vector2|Tuple&#41;-class-method">
+    <div class="entry-detail" id="new(position:Vector2|Tuple,color:Color,tex_coords:Vector2|Tuple)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple, color : <a href="../SF/Color.html">Color</a>, tex_coords : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1016,12 +1084,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1464" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1489" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple,color:Color&#41;-class-method">
+    <div class="entry-detail" id="new(position:Vector2|Tuple,color:Color)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple, color : <a href="../SF/Color.html">Color</a>)
@@ -1038,12 +1106,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1438" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1463" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple,tex_coords:Vector2|Tuple&#41;-class-method">
+    <div class="entry-detail" id="new(position:Vector2|Tuple,tex_coords:Vector2|Tuple)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple, tex_coords : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1060,12 +1128,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1451" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1476" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new&#40;position:Vector2|Tuple&#41;-class-method">
+    <div class="entry-detail" id="new(position:Vector2|Tuple)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1082,7 +1150,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1425" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1450" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1100,7 +1168,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1414" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1439" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1125,12 +1193,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1483" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1508" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="color&#61;&#40;color:Color&#41;-instance-method">
+    <div class="entry-detail" id="color=(color:Color)-instance-method">
       <div class="signature">
         
         def <strong>color=</strong>(color : <a href="../SF/Color.html">Color</a>)
@@ -1141,7 +1209,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1486" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1511" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1157,7 +1225,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1509" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1534" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1175,12 +1243,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1474" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1499" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="position&#61;&#40;position:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="position=(position:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>position=</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1191,7 +1259,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1477" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1502" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,12 +1277,12 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1491" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1516" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="tex_coords&#61;&#40;tex_coords:Vector2|Tuple&#41;-instance-method">
+    <div class="entry-detail" id="tex_coords=(tex_coords:Vector2|Tuple)-instance-method">
       <div class="signature">
         
         def <strong>tex_coords=</strong>(tex_coords : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
@@ -1225,7 +1293,7 @@ drivers that are not able to process integer coordinates correctly.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/graphics/obj.cr#L1494" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1519" target="_blank">View source</a>]
         
       </div>
     </div>

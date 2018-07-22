@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.25.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
   <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/doc.js"></script>
   <title>SF::SoundSource - github.com/oprypin/crsfml</title>
 </head>
 <body>
 
-<div id="types-list">
-  <div id="search-box">
-    <input type="search" id="search-input" placeholder="Search...">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+    </div>
+
+    <div class="repository-links">
+      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml/sources/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a></li>
-  </ul>
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
 
-  <ul>
+  <div class="types-list">
+    <ul>
   
   <li class="parent open current" data-id="github.com/oprypin/crsfml/SF" data-name="sf">
       <a href="../SF.html">SF</a>
@@ -55,6 +71,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Clipboard" data-name="sf::clipboard">
+      <a href="../SF/Clipboard.html">Clipboard</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/Clock" data-name="sf::clock">
       <a href="../SF/Clock.html">Clock</a>
       
@@ -87,6 +108,21 @@
   
   <li class=" " data-id="github.com/oprypin/crsfml/SF/ConvexShape" data-name="sf::convexshape">
       <a href="../SF/ConvexShape.html">ConvexShape</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Cursor" data-name="sf::cursor">
+      <a href="../SF/Cursor.html">Cursor</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Cursor/Type" data-name="sf::cursor::type">
+      <a href="../SF/Cursor/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -485,8 +521,23 @@
       
     </li>
   
-  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/Music" data-name="sf::music">
       <a href="../SF/Music.html">Music</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/Span" data-name="sf::music::span(t)">
+      <a href="../SF/Music/Span.html">Span</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/Music/TimeSpan" data-name="sf::music::timespan">
+      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -625,7 +676,7 @@
       
     </li>
   
-  <li class="parent current open" data-id="github.com/oprypin/crsfml/SF/SoundSource" data-name="sf::soundsource">
+  <li class="parent open current" data-id="github.com/oprypin/crsfml/SF/SoundSource" data-name="sf::soundsource">
       <a href="../SF/SoundSource.html">SoundSource</a>
       
         <ul>
@@ -765,6 +816,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/oprypin/crsfml/SF/VertexBuffer" data-name="sf::vertexbuffer">
+      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/oprypin/crsfml/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
+      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/oprypin/crsfml/SF/VideoMode" data-name="sf::videomode">
       <a href="../SF/VideoMode.html">VideoMode</a>
       
@@ -792,12 +858,14 @@
   
 </ul>
 
+  </div>
 </div>
 
-<div id="main-content">
+
+<div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> SF::SoundSource
+  <span class="kind">abstract class</span> SF::SoundSource
 
 </h1>
 
@@ -853,7 +921,7 @@ changed at any time with no impact on performances.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L186" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L195" target="_blank">audio/obj.cr</a>
     
     <br/>
   
@@ -917,6 +985,13 @@ changed at any time with no impact on performances.</p>
       </li>
     
       <li class="entry-summary">
+        <a href="#pause-instance-method" class="signature"><strong>#pause</strong></a>
+        
+          <div class="summary"><p>Pause the sound source</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#pitch%3AFloat32-instance-method" class="signature"><strong>#pitch</strong> : Float32</a>
         
           <div class="summary"><p>Get the pitch of the sound</p></div>
@@ -927,6 +1002,13 @@ changed at any time with no impact on performances.</p>
         <a href="#pitch%3D%28pitch%3ANumber%29-instance-method" class="signature"><strong>#pitch=</strong>(pitch : Number)</a>
         
           <div class="summary"><p>Set the pitch of the sound</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#play-instance-method" class="signature"><strong>#play</strong></a>
+        
+          <div class="summary"><p>Start or resume playing the sound source</p></div>
         
       </li>
     
@@ -962,6 +1044,20 @@ changed at any time with no impact on performances.</p>
         <a href="#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" class="signature"><strong>#set_position</strong>(x : Number, y : Number, z : Number)</a>
         
           <div class="summary"><p>Set the 3D position of the sound in the audio scene</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#status%3ASoundSource%3A%3AStatus-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
+        
+          <div class="summary"><p>Get the current status of the sound (stopped, paused, playing)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stop-instance-method" class="signature"><strong>#stop</strong></a>
+        
+          <div class="summary"><p>Stop playing the sound source</p></div>
         
       </li>
     
@@ -1037,7 +1133,7 @@ changed at any time with no impact on performances.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L359" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1066,12 +1162,12 @@ changed at any time with no impact on performances.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L352" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L361" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="attenuation&#61;&#40;attenuation:Number&#41;-instance-method">
+    <div class="entry-detail" id="attenuation=(attenuation:Number)-instance-method">
       <div class="signature">
         
         def <strong>attenuation=</strong>(attenuation : Number)
@@ -1097,7 +1193,7 @@ The default value of the attenuation is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L297" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L306" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1115,7 +1211,7 @@ The default value of the attenuation is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1137,12 +1233,12 @@ The default value of the attenuation is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L343" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L352" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="min_distance&#61;&#40;distance:Number&#41;-instance-method">
+    <div class="entry-detail" id="min_distance=(distance:Number)-instance-method">
       <div class="signature">
         
         def <strong>min_distance=</strong>(distance : Number)
@@ -1166,7 +1262,30 @@ The default value of the minimum distance is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L280" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L289" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pause-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>pause</strong>
+
+        <a class="method-permalink" href="#pause-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pause the sound source</p>
+
+<p>This function pauses the source if it was playing,
+otherwise (source already paused or stopped) it has no effect.</p>
+
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L379" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1188,12 +1307,12 @@ The default value of the minimum distance is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L305" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L314" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="pitch&#61;&#40;pitch:Number&#41;-instance-method">
+    <div class="entry-detail" id="pitch=(pitch:Number)-instance-method">
       <div class="signature">
         
         def <strong>pitch=</strong>(pitch : Number)
@@ -1216,7 +1335,31 @@ The default value for the pitch is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L214" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L223" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="play-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>play</strong>
+
+        <a class="method-permalink" href="#play-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Start or resume playing the sound source</p>
+
+<p>This function starts the source if it was stopped, resumes
+it if it was paused, and restarts it from the beginning if
+it was already playing.</p>
+
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1238,12 +1381,12 @@ The default value for the pitch is 1.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L323" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="position&#61;&#40;position:Vector3f&#41;-instance-method">
+    <div class="entry-detail" id="position=(position:Vector3f)-instance-method">
       <div class="signature">
         
         def <strong>position=</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
@@ -1264,12 +1407,12 @@ The default position of a sound is (0, 0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L251" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L260" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="relative_to_listener&#61;&#40;relative:Bool&#41;-instance-method">
+    <div class="entry-detail" id="relative_to_listener=(relative:Bool)-instance-method">
       <div class="signature">
         
         def <strong>relative_to_listener=</strong>(relative : Bool)
@@ -1292,7 +1435,7 @@ The default value is false (position is absolute).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L265" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L274" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,12 +1459,12 @@ The default value is false (position is absolute).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L334" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L343" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="set_position&#40;x:Number,y:Number,z:Number&#41;-instance-method">
+    <div class="entry-detail" id="set_position(x:Number,y:Number,z:Number)-instance-method">
       <div class="signature">
         
         def <strong>set_position</strong>(x : Number, y : Number, z : Number)
@@ -1342,7 +1485,51 @@ The default position of a sound is (0, 0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L248" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="status:SoundSource::Status-instance-method">
+      <div class="signature">
+        
+        def <strong>status</strong> : <a href="../SF/SoundSource/Status.html">SoundSource::Status</a>
+
+        <a class="method-permalink" href="#status%3ASoundSource%3A%3AStatus-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the current status of the sound (stopped, paused, playing)</p>
+
+<p><em>Returns:</em> Current status of the sound</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L391" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stop-instance-method">
+      <div class="signature">
+        abstract 
+        def <strong>stop</strong>
+
+        <a class="method-permalink" href="#stop-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Stop playing the sound source</p>
+
+<p>This function stops the source if it was playing or paused,
+and does nothing if it was already stopped.
+It also resets the playing position (unlike pause()).</p>
+
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L387" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,12 +1551,12 @@ The default position of a sound is (0, 0, 0).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L314" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L323" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="volume&#61;&#40;volume:Number&#41;-instance-method">
+    <div class="entry-detail" id="volume=(volume:Number)-instance-method">
       <div class="signature">
         
         def <strong>volume=</strong>(volume : Number)
@@ -1389,7 +1576,7 @@ The default value for the volume is 100.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.4.10/src/audio/obj.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L234" target="_blank">View source</a>]
         
       </div>
     </div>
