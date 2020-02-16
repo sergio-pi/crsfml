@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Http - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>A HTTP client</p>
 
@@ -926,11 +937,18 @@ response <span class="o">=</span> http.send_request request
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/NonCopyable.html">SF::NonCopyable</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/NonCopyable.html">SF::NonCopyable</a></li>
+    
   </ul>
 
 
@@ -942,10 +960,19 @@ response <span class="o">=</span> http.send_request request
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1253" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1253" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -954,11 +981,18 @@ response <span class="o">=</span> http.send_request request
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
+        <a href="#new(host:String,port:Int=0)-class-method" class="signature"><strong>.new</strong>(host : String, port : Int = <span class="n">0</span>)</a>
         
           <div class="summary"><p>Construct the HTTP client with the target host</p></div>
         
@@ -977,7 +1011,14 @@ response <span class="o">=</span> http.send_request request
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -986,14 +1027,14 @@ response <span class="o">=</span> http.send_request request
       </li>
     
       <li class="entry-summary">
-        <a href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AHttp%3A%3AResponse-instance-method" class="signature"><strong>#send_request</strong>(request : Http::Request, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Http::Response</a>
+        <a href="#send_request(request:Http::Request,timeout:Time=Time::Zero):Http::Response-instance-method" class="signature"><strong>#send_request</strong>(request : Http::Request, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Http::Response</a>
         
           <div class="summary"><p>Send a HTTP request and return the server's response.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_host%28host%3AString%2Cport%3AInt%3D0%29-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int = <span class="n">0</span>)</a>
+        <a href="#set_host(host:String,port:Int=0)-instance-method" class="signature"><strong>#set_host</strong>(host : String, port : Int = <span class="n">0</span>)</a>
         
           <div class="summary"><p>Set the target host</p></div>
         
@@ -1040,17 +1081,26 @@ response <span class="o">=</span> http.send_request request
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(host:String,port:Int=0)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(host : String, port : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#new%28host%3AString%2Cport%3AInt%3D0%29-class-method">#</a>
+        <a class="method-permalink" href="#new(host:String,port:Int=0)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the HTTP client with the target host</p>
+        <div class="doc">
+          
+          <p>Construct the HTTP client with the target host</p>
 
 <p>This is equivalent to calling host=(host, port).
 The port has a default value of 0, which means that the
@@ -1059,12 +1109,13 @@ protocol used (80 for HTTP). You should leave it like
 this unless you really need a port other than the
 standard one, or use an unknown protocol.</p>
 
-<ul><li><em>host</em> - Web server to connect to</li><li><em>port</em> - Port to use for connection</li></ul></div>
+<ul><li><em>host</em> - Web server to connect to</li><li><em>port</em> - Port to use for connection</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1514" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1514" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1077,12 +1128,15 @@ standard one, or use an unknown protocol.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1499" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1499" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1092,7 +1146,14 @@ standard one, or use an unknown protocol.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="finalize-instance-method">
       <div class="signature">
@@ -1105,7 +1166,7 @@ standard one, or use an unknown protocol.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1255" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1255" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1115,10 +1176,12 @@ standard one, or use an unknown protocol.</p>
         
         def <strong>send_request</strong>(request : <a href="../SF/Http/Request.html">Http::Request</a>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Http/Response.html">Http::Response</a>
 
-        <a class="method-permalink" href="#send_request%28request%3AHttp%3A%3ARequest%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AHttp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#send_request(request:Http::Request,timeout:Time=Time::Zero):Http::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a HTTP request and return the server's response.</p>
+        <div class="doc">
+          
+          <p>Send a HTTP request and return the server's response.</p>
 
 <p>You must have a valid host before sending a request (see host=).
 Any missing mandatory header field in the request will be added
@@ -1131,12 +1194,13 @@ of Time::Zero means that the client will use the system default timeout
 
 <ul><li><em>request</em> - Request to send</li><li><em>timeout</em> - Maximum time to wait</li></ul>
 
-<p><em>Returns:</em> Server's response</p></div>
+<p><em>Returns:</em> Server's response</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1548" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1548" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1146,10 +1210,12 @@ of Time::Zero means that the client will use the system default timeout
         
         def <strong>set_host</strong>(host : String, port : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#set_host%28host%3AString%2Cport%3AInt%3D0%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_host(host:String,port:Int=0)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the target host</p>
+        <div class="doc">
+          
+          <p>Set the target host</p>
 
 <p>This function just stores the host address and port, it
 doesn't actually connect to it until you send a request.
@@ -1159,12 +1225,13 @@ protocol used (80 for HTTP). You should leave it like
 this unless you really need a port other than the
 standard one, or use an unknown protocol.</p>
 
-<ul><li><em>host</em> - Web server to connect to</li><li><em>port</em> - Port to use for connection</li></ul></div>
+<ul><li><em>host</em> - Web server to connect to</li><li><em>port</em> - Port to use for connection</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1530" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1530" target="_blank">View source</a>]
         
       </div>
     </div>

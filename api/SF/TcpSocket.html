@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::TcpSocket - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Specialized socket using the TCP protocol</p>
 
@@ -961,10 +972,19 @@ socket.send(message.to_slice)</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L182" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L182" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -973,7 +993,14 @@ socket.send(message.to_slice)</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -989,11 +1016,18 @@ socket.send(message.to_slice)</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#connect</strong>(remote_address : IpAddress, remote_port : Int, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Socket::Status</a>
+        <a href="#connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method" class="signature"><strong>#connect</strong>(remote_address : IpAddress, remote_port : Int, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Socket::Status</a>
         
           <div class="summary"><p>Connect the socket to a remote peer</p></div>
         
@@ -1009,52 +1043,54 @@ socket.send(message.to_slice)</code></pre>
       <li class="entry-summary">
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
         
+          <div class="summary"><p>Destructor</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#local_port%3AUInt16-instance-method" class="signature"><strong>#local_port</strong> : UInt16</a>
+        <a href="#local_port:UInt16-instance-method" class="signature"><strong>#local_port</strong> : UInt16</a>
         
           <div class="summary"><p>Get the port to which the socket is bound locally</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
+        <a href="#receive(data:Slice):::Tuple(Socket::Status,Int32)-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
         
           <div class="summary"><p>Receive raw data from the remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : Socket::Status</a>
+        <a href="#receive(packet:Packet):Socket::Status-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : Socket::Status</a>
         
           <div class="summary"><p>Receive a formatted packet of data from the remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#remote_address%3AIpAddress-instance-method" class="signature"><strong>#remote_address</strong> : IpAddress</a>
+        <a href="#remote_address:IpAddress-instance-method" class="signature"><strong>#remote_address</strong> : IpAddress</a>
         
           <div class="summary"><p>Get the address of the connected peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#remote_port%3AUInt16-instance-method" class="signature"><strong>#remote_port</strong> : UInt16</a>
+        <a href="#remote_port:UInt16-instance-method" class="signature"><strong>#remote_port</strong> : UInt16</a>
         
           <div class="summary"><p>Get the port of the connected peer to which        the socket is connected</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method" class="signature"><strong>#send</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
+        <a href="#send(data:Slice):::Tuple(Socket::Status,Int32)-instance-method" class="signature"><strong>#send</strong>(data : Slice) : ::Tuple(Socket::Status, Int32)</a>
         
           <div class="summary"><p>Send raw data to the remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(packet : Packet) : Socket::Status</a>
+        <a href="#send(packet:Packet):Socket::Status-instance-method" class="signature"><strong>#send</strong>(packet : Packet) : Socket::Status</a>
         
           <div class="summary"><p>Send a formatted packet of data to the remote peer</p></div>
         
@@ -1073,12 +1109,12 @@ socket.send(message.to_slice)</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/Socket.html">SF::Socket</a></code></h3>
   
   
-    <a href="../SF/Socket.html#blocking%3D%28blocking%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Socket.html#blocking=(blocking:Bool)-instance-method" class="tooltip">
       <span>blocking=(blocking : Bool)</span>
     blocking=</a>, 
     
   
-    <a href="../SF/Socket.html#blocking%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Socket.html#blocking?:Bool-instance-method" class="tooltip">
       <span>blocking? : Bool</span>
     blocking?</a>, 
     
@@ -1091,15 +1127,6 @@ socket.send(message.to_slice)</code></pre>
 
 
     
-
-  <h3>Constructor methods inherited from class <code><a href="../SF/Socket.html">SF::Socket</a></code></h3>
-  
-  
-    <a href="../SF/Socket.html#new%28type%3ASocket%3A%3AType%29-class-method" class="tooltip">
-      <span>new(type : Socket::Type)</span>
-    new</a>
-    
-  
 
 
     
@@ -1139,7 +1166,14 @@ socket.send(message.to_slice)</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1149,12 +1183,15 @@ socket.send(message.to_slice)</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1164,17 +1201,26 @@ socket.send(message.to_slice)</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>connect</strong>(remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Connect the socket to a remote peer</p>
+        <div class="doc">
+          
+          <p>Connect the socket to a remote peer</p>
 
 <p>In blocking mode, this function may take a while, especially
 if the remote peer is not reachable. The last parameter allows
@@ -1186,12 +1232,13 @@ forcibly disconnected before attempting to connect again.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#disconnect-instance-method">#disconnect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#disconnect-instance-method">#disconnect</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L244" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,17 +1251,20 @@ forcibly disconnected before attempting to connect again.</p>
         <a class="method-permalink" href="#disconnect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Disconnect the socket from its remote peer</p>
+        <div class="doc">
+          
+          <p>Disconnect the socket from its remote peer</p>
 
 <p>This function gracefully closes the connection. If the
 socket is not connected, this function has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method">#connect</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L254" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L254" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,10 +1277,19 @@ socket is not connected, this function has no effect.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../SF/Socket.html">SF::Socket</a>
+            </div>
+          
+          <p>Destructor</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L184" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,21 +1299,24 @@ socket is not connected, this function has no effect.</p>
         
         def <strong>local_port</strong> : UInt16
 
-        <a class="method-permalink" href="#local_port%3AUInt16-instance-method">#</a>
+        <a class="method-permalink" href="#local_port:UInt16-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the port to which the socket is bound locally</p>
+        <div class="doc">
+          
+          <p>Get the port to which the socket is bound locally</p>
 
 <p>If the socket is not connected, this function returns 0.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect%28remote_address%3AIpAddress%2Cremote_port%3AInt%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3ASocket%3A%3AStatus-instance-method">#connect</a></code>, <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#connect(remote_address:IpAddress,remote_port:Int,timeout:Time=Time::Zero):Socket::Status-instance-method">#connect</a></code>, <code><a href="../SF/TcpSocket.html#remote_port:UInt16-instance-method">#remote_port</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L200" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L200" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1264,10 +1326,12 @@ socket is not connected, this function has no effect.</p>
         
         def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
 
-        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#receive(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Receive raw data from the remote peer</p>
+        <div class="doc">
+          
+          <p>Receive raw data from the remote peer</p>
 
 <p>In blocking mode, this function will wait until some
 bytes are actually received.
@@ -1279,12 +1343,13 @@ This function will fail if the socket is not connected.</p>
 
 <ul><li>Status code</li><li>The actual number of bytes received</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#send</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L302" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L302" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,10 +1359,12 @@ This function will fail if the socket is not connected.</p>
         
         def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#receive%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#receive(packet:Packet):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Receive a formatted packet of data from the remote peer</p>
+        <div class="doc">
+          
+          <p>Receive a formatted packet of data from the remote peer</p>
 
 <p>In blocking mode, this function will wait until the whole packet
 has been received.
@@ -1307,12 +1374,13 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#send(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#send</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L334" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L334" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,22 +1390,25 @@ This function will fail if the socket is not connected.</p>
         
         def <strong>remote_address</strong> : <a href="../SF/IpAddress.html">IpAddress</a>
 
-        <a class="method-permalink" href="#remote_address%3AIpAddress-instance-method">#</a>
+        <a class="method-permalink" href="#remote_address:IpAddress-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the address of the connected peer</p>
+        <div class="doc">
+          
+          <p>Get the address of the connected peer</p>
 
 <p>It the socket is not connected, this function returns
 <code><a href="../SF/IpAddress.html#None">SF::IpAddress::None</a></code>.</p>
 
 <p><em>Returns:</em> Address of the remote peer</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_port%3AUInt16-instance-method">#remote_port</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_port:UInt16-instance-method">#remote_port</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L212" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1347,10 +1418,12 @@ This function will fail if the socket is not connected.</p>
         
         def <strong>remote_port</strong> : UInt16
 
-        <a class="method-permalink" href="#remote_port%3AUInt16-instance-method">#</a>
+        <a class="method-permalink" href="#remote_port:UInt16-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the port of the connected peer to which</p>
+        <div class="doc">
+          
+          <p>Get the port of the connected peer to which</p>
 
 <pre><code>   the socket is connected</code></pre>
 
@@ -1358,12 +1431,13 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Remote port to which the socket is connected</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_address%3AIpAddress-instance-method">#remote_address</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#remote_address:IpAddress-instance-method">#remote_address</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1373,10 +1447,12 @@ This function will fail if the socket is not connected.</p>
         
         def <strong>send</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32)
 
-        <a class="method-permalink" href="#send%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#</a>
+        <a class="method-permalink" href="#send(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send raw data to the remote peer</p>
+        <div class="doc">
+          
+          <p>Send raw data to the remote peer</p>
 
 <p>This function will fail if the socket is not connected.</p>
 
@@ -1386,12 +1462,13 @@ This function will fail if the socket is not connected.</p>
 
 <ul><li>Status code</li><li>The number of bytes sent</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#receive</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L285" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L285" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1401,10 +1478,12 @@ This function will fail if the socket is not connected.</p>
         
         def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#send%28packet%3APacket%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#send(packet:Packet):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a formatted packet of data to the remote peer</p>
+        <div class="doc">
+          
+          <p>Send a formatted packet of data to the remote peer</p>
 
 <p>In non-blocking mode, if this function returns <code>SF::Socket::Partial</code>,
 you <em>must</em> retry sending the same unmodified packet before sending
@@ -1416,12 +1495,13 @@ This function will fail if the socket is not connected.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/TcpSocket.html#receive(data:Slice):::Tuple(Socket::Status,Int32)-instance-method">#receive</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L319" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L319" target="_blank">View source</a>]
         
       </div>
     </div>

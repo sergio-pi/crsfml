@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::SoundBuffer - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Storage for audio samples defining a sound</p>
 
@@ -937,11 +948,18 @@ sound2.play()</code></pre>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
+    
   </ul>
 
 
@@ -953,10 +971,19 @@ sound2.play()</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1342" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1347" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -965,34 +992,41 @@ sound2.play()</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
+        <a href="#from_file(*args,**kwargs):self-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p></div>
+          <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_samples%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_samples</strong>(*args, **kwargs) : self</a>
+        <a href="#from_memory(*args,**kwargs):self-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_samples(...); sound_buffer</code></p></div>
+          <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
+        <a href="#from_samples(*args,**kwargs):self-class-method" class="signature"><strong>.from_samples</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p></div>
+          <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer.load_from_samples(...); sound_buffer</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_stream(*args,**kwargs):self-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream(stream:InputStream):Bool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p></div>
         
       </li>
     
@@ -1009,18 +1043,25 @@ sound2.play()</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_count%3AInt32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
+        <a href="#channel_count:Int32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of channels used by the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#duration%3ATime-instance-method" class="signature"><strong>#duration</strong> : Time</a>
+        <a href="#duration:Time-instance-method" class="signature"><strong>#duration</strong> : Time</a>
         
           <div class="summary"><p>Get the total duration of the sound</p></div>
         
@@ -1034,56 +1075,56 @@ sound2.play()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_file%28filename%3AString%29%3ABool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String) : Bool</a>
+        <a href="#load_from_file(filename:String):Bool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String) : Bool</a>
         
           <div class="summary"><p>Load the sound buffer from a file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_memory%28data%3ASlice%29%3ABool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice) : Bool</a>
+        <a href="#load_from_memory(data:Slice):Bool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice) : Bool</a>
         
           <div class="summary"><p>Load the sound buffer from a file in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method" class="signature"><strong>#load_from_samples</strong>(samples : Array(Int16) | Slice(Int16), channel_count : Int, sample_rate : Int) : Bool</a>
+        <a href="#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method" class="signature"><strong>#load_from_samples</strong>(samples : Array(Int16) | Slice(Int16), channel_count : Int, sample_rate : Int) : Bool</a>
         
           <div class="summary"><p>Load the sound buffer from an array of audio samples</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream) : Bool</a>
+        <a href="#load_from_stream(stream:InputStream):Bool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream) : Bool</a>
         
           <div class="summary"><p>Load the sound buffer from a custom stream</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sample_count%3AUInt64-instance-method" class="signature"><strong>#sample_count</strong> : UInt64</a>
+        <a href="#sample_count:UInt64-instance-method" class="signature"><strong>#sample_count</strong> : UInt64</a>
         
           <div class="summary"><p>Get the number of samples stored in the buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sample_rate%3AInt32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
+        <a href="#sample_rate:Int32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
         
           <div class="summary"><p>Get the sample rate of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#samples%3A%3A%3APointer%28Int16%29-instance-method" class="signature"><strong>#samples</strong> : ::Pointer(Int16)</a>
+        <a href="#samples:::Pointer(Int16)-instance-method" class="signature"><strong>#samples</strong> : ::Pointer(Int16)</a>
         
           <div class="summary"><p>Get the array of audio samples stored in the buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#save_to_file%28filename%3AString%29%3ABool-instance-method" class="signature"><strong>#save_to_file</strong>(filename : String) : Bool</a>
+        <a href="#save_to_file(filename:String):Bool-instance-method" class="signature"><strong>#save_to_file</strong>(filename : String) : Bool</a>
         
           <div class="summary"><p>Save the sound buffer to an audio file</p></div>
         
@@ -1130,24 +1171,34 @@ sound2.play()</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="from_file(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(*args, **kwargs) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">.load_from_file(...)</a>; sound_buffer</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1371" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1376" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1155,19 +1206,22 @@ sound2.play()</code></pre>
     <div class="entry-detail" id="from_memory(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(*args, **kwargs) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">.load_from_memory(...)</a>; sound_buffer</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1395" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1400" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1175,19 +1229,22 @@ sound2.play()</code></pre>
     <div class="entry-detail" id="from_samples(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_samples</strong>(*args, **kwargs) : self
+        def self.<strong>from_samples</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_samples%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_samples(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_samples(...); sound_buffer</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer.load_from_samples(...); sound_buffer</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1446" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1451" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1195,19 +1252,22 @@ sound2.play()</code></pre>
     <div class="entry-detail" id="from_stream(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(*args, **kwargs) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>sound_buffer = <a href="../SF/SoundBuffer.html#new-class-method">SoundBuffer.new</a>; sound_buffer<a href="../SF/SoundBuffer.html#load_from_stream(stream:InputStream):Bool-instance-method">.load_from_stream(...)</a>; sound_buffer</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1419" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1424" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,12 +1280,15 @@ sound2.play()</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1345" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1350" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1235,29 +1298,39 @@ sound2.play()</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="channel_count:Int32-instance-method">
       <div class="signature">
         
         def <strong>channel_count</strong> : Int32
 
-        <a class="method-permalink" href="#channel_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#channel_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the number of channels used by the sound</p>
+        <div class="doc">
+          
+          <p>Get the number of channels used by the sound</p>
 
 <p>If the sound is mono then the number of channels will
 be 1, 2 for stereo, etc.</p>
 
 <p><em>Returns:</em> Number of channels</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate%3AInt32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#duration%3ATime-instance-method">#duration</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate:Int32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#duration:Time-instance-method">#duration</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1513" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1518" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1267,19 +1340,22 @@ be 1, 2 for stereo, etc.</p>
         
         def <strong>duration</strong> : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#duration%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#duration:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the total duration of the sound</p>
+        <div class="doc">
+          
+          <p>Get the total duration of the sound</p>
 
 <p><em>Returns:</em> Sound duration</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate%3AInt32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#channel_count%3AInt32-instance-method">#channel_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_rate:Int32-instance-method">#sample_rate</a></code>, <code><a href="../SF/SoundBuffer.html#channel_count:Int32-instance-method">#channel_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1522" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1527" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1292,12 +1368,15 @@ be 1, 2 for stereo, etc.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1350" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1307,10 +1386,12 @@ be 1, 2 for stereo, etc.</p>
         
         def <strong>load_from_file</strong>(filename : String) : Bool
 
-        <a class="method-permalink" href="#load_from_file%28filename%3AString%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_file(filename:String):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the sound buffer from a file</p>
+        <div class="doc">
+          
+          <p>Load the sound buffer from a file</p>
 
 <p>See the documentation of <code>SF::InputSoundFile</code> for the list
 of supported formats.</p>
@@ -1319,12 +1400,13 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file%28filename%3AString%29%3ABool-instance-method">#save_to_file</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream(stream:InputStream):Bool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method">#load_from_samples</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file(filename:String):Bool-instance-method">#save_to_file</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1364" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1369" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,10 +1416,12 @@ of supported formats.</p>
         
         def <strong>load_from_memory</strong>(data : Slice) : Bool
 
-        <a class="method-permalink" href="#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_memory(data:Slice):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the sound buffer from a file in memory</p>
+        <div class="doc">
+          
+          <p>Load the sound buffer from a file in memory</p>
 
 <p>See the documentation of <code>SF::InputSoundFile</code> for the list
 of supported formats.</p>
@@ -1346,12 +1430,13 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_stream(stream:InputStream):Bool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method">#load_from_samples</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1388" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1393" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1361,10 +1446,12 @@ of supported formats.</p>
         
         def <strong>load_from_samples</strong>(samples : Array(Int16) | Slice(Int16), channel_count : Int, sample_rate : Int) : Bool
 
-        <a class="method-permalink" href="#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the sound buffer from an array of audio samples</p>
+        <div class="doc">
+          
+          <p>Load the sound buffer from an array of audio samples</p>
 
 <p>The assumed format of the audio samples is 16 bits signed integer
 (<code>SF::Int16</code>).</p>
@@ -1373,12 +1460,13 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file%28filename%3AString%29%3ABool-instance-method">#save_to_file</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#save_to_file(filename:String):Bool-instance-method">#save_to_file</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1439" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1444" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1388,10 +1476,12 @@ of supported formats.</p>
         
         def <strong>load_from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>) : Bool
 
-        <a class="method-permalink" href="#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_stream(stream:InputStream):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the sound buffer from a custom stream</p>
+        <div class="doc">
+          
+          <p>Load the sound buffer from a custom stream</p>
 
 <p>See the documentation of <code>SF::InputSoundFile</code> for the list
 of supported formats.</p>
@@ -1400,12 +1490,13 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method">#load_from_samples</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1412" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1417" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1415,22 +1506,25 @@ of supported formats.</p>
         
         def <strong>sample_count</strong> : UInt64
 
-        <a class="method-permalink" href="#sample_count%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#sample_count:UInt64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the number of samples stored in the buffer</p>
+        <div class="doc">
+          
+          <p>Get the number of samples stored in the buffer</p>
 
 <p>The array of samples can be accessed with the samples()
 function.</p>
 
 <p><em>Returns:</em> Number of samples</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#samples%3A%3A%3APointer%28Int16%29-instance-method">#samples</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#samples:::Pointer(Int16)-instance-method">#samples</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1488" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1493" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1440,10 +1534,12 @@ function.</p>
         
         def <strong>sample_rate</strong> : Int32
 
-        <a class="method-permalink" href="#sample_rate%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#sample_rate:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the sample rate of the sound</p>
+        <div class="doc">
+          
+          <p>Get the sample rate of the sound</p>
 
 <p>The sample rate is the number of samples played per second.
 The higher, the better the quality (for example, 44100
@@ -1451,12 +1547,13 @@ samples/s is CD quality).</p>
 
 <p><em>Returns:</em> Sample rate (number of samples per second)</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#channel_count%3AInt32-instance-method">#channel_count</a></code>, <code><a href="../SF/SoundBuffer.html#duration%3ATime-instance-method">#duration</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#channel_count:Int32-instance-method">#channel_count</a></code>, <code><a href="../SF/SoundBuffer.html#duration:Time-instance-method">#duration</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1501" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1506" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1466,10 +1563,12 @@ samples/s is CD quality).</p>
         
         def <strong>samples</strong> : ::Pointer(Int16)
 
-        <a class="method-permalink" href="#samples%3A%3A%3APointer%28Int16%29-instance-method">#</a>
+        <a class="method-permalink" href="#samples:::Pointer(Int16)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the array of audio samples stored in the buffer</p>
+        <div class="doc">
+          
+          <p>Get the array of audio samples stored in the buffer</p>
 
 <p>The format of the returned samples is 16 bits signed integer
 (<code>SF::Int16</code>). The total number of samples in this array
@@ -1477,12 +1576,13 @@ is given by the sample_count() function.</p>
 
 <p><em>Returns:</em> Read-only pointer to the array of sound samples</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_count%3AUInt64-instance-method">#sample_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#sample_count:UInt64-instance-method">#sample_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1476" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1481" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1492,10 +1592,12 @@ is given by the sample_count() function.</p>
         
         def <strong>save_to_file</strong>(filename : String) : Bool
 
-        <a class="method-permalink" href="#save_to_file%28filename%3AString%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#save_to_file(filename:String):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Save the sound buffer to an audio file</p>
+        <div class="doc">
+          
+          <p>Save the sound buffer to an audio file</p>
 
 <p>See the documentation of <code>SF::OutputSoundFile</code> for the list
 of supported formats.</p>
@@ -1504,12 +1606,13 @@ of supported formats.</p>
 
 <p><em>Returns:</em> True if saving succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%2Cchannel_count%3AInt%2Csample_rate%3AInt%29%3ABool-instance-method">#load_from_samples</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/SoundBuffer.html#load_from_samples(samples:Array(Int16)%7CSlice(Int16),channel_count:Int,sample_rate:Int):Bool-instance-method">#load_from_samples</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1463" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1468" target="_blank">View source</a>]
         
       </div>
     </div>

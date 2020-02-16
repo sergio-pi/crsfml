@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::BlendMode - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Blending modes for drawing</p>
 
@@ -914,7 +925,7 @@ dst.a   <span class="o">=</span> alpha_src_factor <span class="o">*</span> src.a
 
 <p>In SFML, a blend mode can be specified every time you draw a <code><a href="../SF/Drawable.html">SF::Drawable</a></code>
 object to a render target. It is part of the <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code> compound
-that is passed to the member function <code><a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method">SF::RenderTarget.draw</a></code>().</p>
+that is passed to the member function <code><a href="../SF/RenderTarget.html#draw(drawable:Drawable,states:RenderStates=RenderStates::Default)-instance-method">SF::RenderTarget.draw</a></code>().</p>
 
 <p><em>See also:</em> <code><a href="../SF/RenderStates.html">SF::RenderStates</a></code>, <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></p>
 
@@ -931,15 +942,26 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L51" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L51" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L272" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L272" target="_blank">
+        graphics/graphics.cr
+      </a>
     
     <br/>
   
@@ -947,7 +969,14 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -991,18 +1020,25 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method" class="signature"><strong>.new</strong>(color_source_factor : BlendMode::Factor, color_destination_factor : BlendMode::Factor, color_blend_equation : BlendMode::Equation, alpha_source_factor : BlendMode::Factor, alpha_destination_factor : BlendMode::Factor, alpha_blend_equation : BlendMode::Equation)</a>
+        <a href="#new(color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation)-class-method" class="signature"><strong>.new</strong>(color_source_factor : BlendMode::Factor, color_destination_factor : BlendMode::Factor, color_blend_equation : BlendMode::Equation, alpha_source_factor : BlendMode::Factor, alpha_destination_factor : BlendMode::Factor, alpha_blend_equation : BlendMode::Equation)</a>
         
           <div class="summary"><p>Construct the blend mode given the factors and equation.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28source_factor%3ABlendMode%3A%3AFactor%2Cdestination_factor%3ABlendMode%3A%3AFactor%2Cblend_equation%3ABlendMode%3A%3AEquation%3DAdd%29-class-method" class="signature"><strong>.new</strong>(source_factor : BlendMode::Factor, destination_factor : BlendMode::Factor, blend_equation : BlendMode::Equation = <span class="t">Add</span>)</a>
+        <a href="#new(source_factor:BlendMode::Factor,destination_factor:BlendMode::Factor,blend_equation:BlendMode::Equation=Add)-class-method" class="signature"><strong>.new</strong>(source_factor : BlendMode::Factor, destination_factor : BlendMode::Factor, blend_equation : BlendMode::Equation = <span class="t">Add</span>)</a>
         
           <div class="summary"><p>Construct the blend mode given the factors and equation.</p></div>
         
@@ -1021,97 +1057,106 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%21%3D%28right%3ABlendMode%29%3ABool-instance-method" class="signature"><strong>#!=</strong>(right : BlendMode) : Bool</a>
+        <a href="#!=(right:BlendMode):Bool-instance-method" class="signature"><strong>#!=</strong>(right : BlendMode) : Bool</a>
         
           <div class="summary"><p>Overload of the != operator</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3D%3D%28right%3ABlendMode%29%3ABool-instance-method" class="signature"><strong>#==</strong>(right : BlendMode) : Bool</a>
+        <a href="#==(right:BlendMode):Bool-instance-method" class="signature"><strong>#==</strong>(right : BlendMode) : Bool</a>
         
           <div class="summary"><p>Overload of the == operator</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_dst_factor%3ABlendMode%3A%3AFactor-instance-method" class="signature"><strong>#alpha_dst_factor</strong> : BlendMode::Factor</a>
+        <a href="#alpha_dst_factor:BlendMode::Factor-instance-method" class="signature"><strong>#alpha_dst_factor</strong> : BlendMode::Factor</a>
         
           <div class="summary"><p>Destination blending factor for the alpha channel</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_dst_factor%3D%28alpha_dst_factor%3ABlendMode%3A%3AFactor%29-instance-method" class="signature"><strong>#alpha_dst_factor=</strong>(alpha_dst_factor : BlendMode::Factor)</a>
+        <a href="#alpha_dst_factor=(alpha_dst_factor:BlendMode::Factor)-instance-method" class="signature"><strong>#alpha_dst_factor=</strong>(alpha_dst_factor : BlendMode::Factor)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_equation%3ABlendMode%3A%3AEquation-instance-method" class="signature"><strong>#alpha_equation</strong> : BlendMode::Equation</a>
+        <a href="#alpha_equation:BlendMode::Equation-instance-method" class="signature"><strong>#alpha_equation</strong> : BlendMode::Equation</a>
         
           <div class="summary"><p>Blending equation for the alpha channel</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_equation%3D%28alpha_equation%3ABlendMode%3A%3AEquation%29-instance-method" class="signature"><strong>#alpha_equation=</strong>(alpha_equation : BlendMode::Equation)</a>
+        <a href="#alpha_equation=(alpha_equation:BlendMode::Equation)-instance-method" class="signature"><strong>#alpha_equation=</strong>(alpha_equation : BlendMode::Equation)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_src_factor%3ABlendMode%3A%3AFactor-instance-method" class="signature"><strong>#alpha_src_factor</strong> : BlendMode::Factor</a>
+        <a href="#alpha_src_factor:BlendMode::Factor-instance-method" class="signature"><strong>#alpha_src_factor</strong> : BlendMode::Factor</a>
         
           <div class="summary"><p>Source blending factor for the alpha channel</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha_src_factor%3D%28alpha_src_factor%3ABlendMode%3A%3AFactor%29-instance-method" class="signature"><strong>#alpha_src_factor=</strong>(alpha_src_factor : BlendMode::Factor)</a>
+        <a href="#alpha_src_factor=(alpha_src_factor:BlendMode::Factor)-instance-method" class="signature"><strong>#alpha_src_factor=</strong>(alpha_src_factor : BlendMode::Factor)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_dst_factor%3ABlendMode%3A%3AFactor-instance-method" class="signature"><strong>#color_dst_factor</strong> : BlendMode::Factor</a>
+        <a href="#color_dst_factor:BlendMode::Factor-instance-method" class="signature"><strong>#color_dst_factor</strong> : BlendMode::Factor</a>
         
           <div class="summary"><p>Destination blending factor for the color channels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_dst_factor%3D%28color_dst_factor%3ABlendMode%3A%3AFactor%29-instance-method" class="signature"><strong>#color_dst_factor=</strong>(color_dst_factor : BlendMode::Factor)</a>
+        <a href="#color_dst_factor=(color_dst_factor:BlendMode::Factor)-instance-method" class="signature"><strong>#color_dst_factor=</strong>(color_dst_factor : BlendMode::Factor)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_equation%3ABlendMode%3A%3AEquation-instance-method" class="signature"><strong>#color_equation</strong> : BlendMode::Equation</a>
+        <a href="#color_equation:BlendMode::Equation-instance-method" class="signature"><strong>#color_equation</strong> : BlendMode::Equation</a>
         
           <div class="summary"><p>Blending equation for the color channels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_equation%3D%28color_equation%3ABlendMode%3A%3AEquation%29-instance-method" class="signature"><strong>#color_equation=</strong>(color_equation : BlendMode::Equation)</a>
+        <a href="#color_equation=(color_equation:BlendMode::Equation)-instance-method" class="signature"><strong>#color_equation=</strong>(color_equation : BlendMode::Equation)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_src_factor%3ABlendMode%3A%3AFactor-instance-method" class="signature"><strong>#color_src_factor</strong> : BlendMode::Factor</a>
+        <a href="#color_src_factor:BlendMode::Factor-instance-method" class="signature"><strong>#color_src_factor</strong> : BlendMode::Factor</a>
         
           <div class="summary"><p>Source blending factor for the color channels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_src_factor%3D%28color_src_factor%3ABlendMode%3A%3AFactor%29-instance-method" class="signature"><strong>#color_src_factor=</strong>(color_src_factor : BlendMode::Factor)</a>
+        <a href="#color_src_factor=(color_src_factor:BlendMode::Factor)-instance-method" class="signature"><strong>#color_src_factor=</strong>(color_src_factor : BlendMode::Factor)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1156,24 +1201,34 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(color_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, color_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>, alpha_source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, alpha_blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
 
-        <a class="method-permalink" href="#new%28color_source_factor%3ABlendMode%3A%3AFactor%2Ccolor_destination_factor%3ABlendMode%3A%3AFactor%2Ccolor_blend_equation%3ABlendMode%3A%3AEquation%2Calpha_source_factor%3ABlendMode%3A%3AFactor%2Calpha_destination_factor%3ABlendMode%3A%3AFactor%2Calpha_blend_equation%3ABlendMode%3A%3AEquation%29-class-method">#</a>
+        <a class="method-permalink" href="#new(color_source_factor:BlendMode::Factor,color_destination_factor:BlendMode::Factor,color_blend_equation:BlendMode::Equation,alpha_source_factor:BlendMode::Factor,alpha_destination_factor:BlendMode::Factor,alpha_blend_equation:BlendMode::Equation)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the blend mode given the factors and equation.</p>
+        <div class="doc">
+          
+          <p>Construct the blend mode given the factors and equation.</p>
 
-<ul><li><em>color_source_factor</em> - Specifies how to compute the source factor for the color channels.</li><li><em>color_destination_factor</em> - Specifies how to compute the destination factor for the color channels.</li><li><em>color_blend_equation</em> - Specifies how to combine the source and destination colors.</li><li><em>alpha_source_factor</em> - Specifies how to compute the source factor.</li><li><em>alpha_destination_factor</em> - Specifies how to compute the destination factor.</li><li><em>alpha_blend_equation</em> - Specifies how to combine the source and destination alphas.</li></ul></div>
+<ul><li><em>color_source_factor</em> - Specifies how to compute the source factor for the color channels.</li><li><em>color_destination_factor</em> - Specifies how to compute the destination factor for the color channels.</li><li><em>color_blend_equation</em> - Specifies how to combine the source and destination colors.</li><li><em>alpha_source_factor</em> - Specifies how to compute the source factor.</li><li><em>alpha_destination_factor</em> - Specifies how to compute the destination factor.</li><li><em>alpha_blend_equation</em> - Specifies how to combine the source and destination alphas.</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L135" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1183,20 +1238,23 @@ that is passed to the member function <code><a href="../SF/RenderTarget.html#dra
         
         def self.<strong>new</strong>(source_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, destination_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>, blend_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a> = <span class="t">Add</span>)
 
-        <a class="method-permalink" href="#new%28source_factor%3ABlendMode%3A%3AFactor%2Cdestination_factor%3ABlendMode%3A%3AFactor%2Cblend_equation%3ABlendMode%3A%3AEquation%3DAdd%29-class-method">#</a>
+        <a class="method-permalink" href="#new(source_factor:BlendMode::Factor,destination_factor:BlendMode::Factor,blend_equation:BlendMode::Equation=Add)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the blend mode given the factors and equation.</p>
+        <div class="doc">
+          
+          <p>Construct the blend mode given the factors and equation.</p>
 
 <p>This constructor uses the same factors and equation for both
 color and alpha components. It also defaults to the Add equation.</p>
 
-<ul><li><em>source_factor</em> - Specifies how to compute the source factor for the color and alpha channels.</li><li><em>destination_factor</em> - Specifies how to compute the destination factor for the color and alpha channels.</li><li><em>blend_equation</em> - Specifies how to combine the source and destination colors and alpha.</li></ul></div>
+<ul><li><em>source_factor</em> - Specifies how to compute the source factor for the color and alpha channels.</li><li><em>destination_factor</em> - Specifies how to compute the destination factor for the color and alpha channels.</li><li><em>blend_equation</em> - Specifies how to combine the source and destination colors and alpha.</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1209,14 +1267,17 @@ color and alpha components. It also defaults to the Add equation.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Constructs a blending mode that does alpha blending.</p></div>
+<p>Constructs a blending mode that does alpha blending.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1226,26 +1287,36 @@ color and alpha components. It also defaults to the Add equation.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="!=(right:BlendMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/BlendMode.html">BlendMode</a>) : Bool
 
-        <a class="method-permalink" href="#%21%3D%28right%3ABlendMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#!=(right:BlendMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of the != operator</p>
+        <div class="doc">
+          
+          <p>Overload of the != operator</p>
 
 <ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
-<p><em>Returns:</em> True if blending modes are different, false if they are equal</p></div>
+<p><em>Returns:</em> True if blending modes are different, false if they are equal</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1255,19 +1326,22 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>==</strong>(right : <a href="../SF/BlendMode.html">BlendMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3D%3D%28right%3ABlendMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#==(right:BlendMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of the == operator</p>
+        <div class="doc">
+          
+          <p>Overload of the == operator</p>
 
 <ul><li><em>left</em> - Left operand</li><li><em>right</em> - Right operand</li></ul>
 
-<p><em>Returns:</em> True if blending modes are equal, false if they are different</p></div>
+<p><em>Returns:</em> True if blending modes are equal, false if they are different</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L198" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L198" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1277,15 +1351,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_dst_factor</strong> : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>
 
-        <a class="method-permalink" href="#alpha_dst_factor%3ABlendMode%3A%3AFactor-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_dst_factor:BlendMode::Factor-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destination blending factor for the alpha channel</p></div>
+        <div class="doc">
+          
+          <p>Destination blending factor for the alpha channel</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L178" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L178" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1295,13 +1372,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_dst_factor=</strong>(alpha_dst_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
 
-        <a class="method-permalink" href="#alpha_dst_factor%3D%28alpha_dst_factor%3ABlendMode%3A%3AFactor%29-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_dst_factor=(alpha_dst_factor:BlendMode::Factor)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L181" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1311,15 +1388,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_equation</strong> : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>
 
-        <a class="method-permalink" href="#alpha_equation%3ABlendMode%3A%3AEquation-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_equation:BlendMode::Equation-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Blending equation for the alpha channel</p></div>
+        <div class="doc">
+          
+          <p>Blending equation for the alpha channel</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L186" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1329,13 +1409,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_equation=</strong>(alpha_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
 
-        <a class="method-permalink" href="#alpha_equation%3D%28alpha_equation%3ABlendMode%3A%3AEquation%29-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_equation=(alpha_equation:BlendMode::Equation)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L189" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,15 +1425,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_src_factor</strong> : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>
 
-        <a class="method-permalink" href="#alpha_src_factor%3ABlendMode%3A%3AFactor-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_src_factor:BlendMode::Factor-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Source blending factor for the alpha channel</p></div>
+        <div class="doc">
+          
+          <p>Source blending factor for the alpha channel</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L170" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1363,13 +1446,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>alpha_src_factor=</strong>(alpha_src_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
 
-        <a class="method-permalink" href="#alpha_src_factor%3D%28alpha_src_factor%3ABlendMode%3A%3AFactor%29-instance-method">#</a>
+        <a class="method-permalink" href="#alpha_src_factor=(alpha_src_factor:BlendMode::Factor)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L173" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L173" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1379,15 +1462,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_dst_factor</strong> : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>
 
-        <a class="method-permalink" href="#color_dst_factor%3ABlendMode%3A%3AFactor-instance-method">#</a>
+        <a class="method-permalink" href="#color_dst_factor:BlendMode::Factor-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destination blending factor for the color channels</p></div>
+        <div class="doc">
+          
+          <p>Destination blending factor for the color channels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L154" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L154" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1397,13 +1483,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_dst_factor=</strong>(color_dst_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
 
-        <a class="method-permalink" href="#color_dst_factor%3D%28color_dst_factor%3ABlendMode%3A%3AFactor%29-instance-method">#</a>
+        <a class="method-permalink" href="#color_dst_factor=(color_dst_factor:BlendMode::Factor)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1413,15 +1499,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_equation</strong> : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>
 
-        <a class="method-permalink" href="#color_equation%3ABlendMode%3A%3AEquation-instance-method">#</a>
+        <a class="method-permalink" href="#color_equation:BlendMode::Equation-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Blending equation for the color channels</p></div>
+        <div class="doc">
+          
+          <p>Blending equation for the color channels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L162" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1431,13 +1520,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_equation=</strong>(color_equation : <a href="../SF/BlendMode/Equation.html">BlendMode::Equation</a>)
 
-        <a class="method-permalink" href="#color_equation%3D%28color_equation%3ABlendMode%3A%3AEquation%29-instance-method">#</a>
+        <a class="method-permalink" href="#color_equation=(color_equation:BlendMode::Equation)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L165" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L165" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1447,15 +1536,18 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_src_factor</strong> : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>
 
-        <a class="method-permalink" href="#color_src_factor%3ABlendMode%3A%3AFactor-instance-method">#</a>
+        <a class="method-permalink" href="#color_src_factor:BlendMode::Factor-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Source blending factor for the color channels</p></div>
+        <div class="doc">
+          
+          <p>Source blending factor for the color channels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L146" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1465,13 +1557,13 @@ color and alpha components. It also defaults to the Add equation.</p>
         
         def <strong>color_src_factor=</strong>(color_src_factor : <a href="../SF/BlendMode/Factor.html">BlendMode::Factor</a>)
 
-        <a class="method-permalink" href="#color_src_factor%3D%28color_src_factor%3ABlendMode%3A%3AFactor%29-instance-method">#</a>
+        <a class="method-permalink" href="#color_src_factor=(color_src_factor:BlendMode::Factor)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L149" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L149" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1479,15 +1571,28 @@ color and alpha components. It also defaults to the Add equation.</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L226" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L226" target="_blank">View source</a>]
         
       </div>
     </div>

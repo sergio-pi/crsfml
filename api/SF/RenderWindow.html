@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::RenderWindow - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Window that can serve as a target for 2D drawing</p>
 
@@ -968,11 +979,18 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/RenderTarget.html">SF::RenderTarget</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/RenderTarget.html">SF::RenderTarget</a></li>
+    
   </ul>
 
 
@@ -984,15 +1002,26 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5224" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5224" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L229" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L229" target="_blank">
+        graphics/graphics.cr
+      </a>
     
     <br/>
   
@@ -1001,18 +1030,25 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
+        <a href="#new(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-class-method" class="signature"><strong>.new</strong>(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct a new window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
+        <a href="#new(handle:WindowHandle,settings:ContextSettings=ContextSettings.new)-class-method" class="signature"><strong>.new</strong>(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</a>
         
           <div class="summary"><p>Construct the window from an existing control</p></div>
         
@@ -1026,9 +1062,9 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
+        <a href="#new(*args,**kwargs):self-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>render_window = RenderWindow.new; render_window.create(...); render_window</code></p></div>
+          <div class="summary"><p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p></div>
         
       </li>
     
@@ -1038,18 +1074,25 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
+        <a href="#active=(active:Bool=true):Bool-instance-method" class="signature"><strong>#active=</strong>(active : Bool = <span class="n">true</span>) : Bool</a>
         
           <div class="summary"><p>Activate or deactivate the window as the current target        for OpenGL rendering</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#capture%3AImage-instance-method" class="signature"><strong>#capture</strong> : Image</a>
+        <a href="#capture:Image-instance-method" class="signature"><strong>#capture</strong> : Image</a>
         
           <div class="summary"><p>Copy the current contents of the window to an image</p></div>
         
@@ -1063,7 +1106,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3AVector2u-instance-method" class="signature"><strong>#size</strong> : Vector2u</a>
+        <a href="#size:Vector2u-instance-method" class="signature"><strong>#size</strong> : Vector2u</a>
         
           <div class="summary"><p>Get the size of the rendering region of the window</p></div>
         
@@ -1082,37 +1125,37 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h3>Instance methods inherited from module <code><a href="../SF/RenderTarget.html">SF::RenderTarget</a></code></h3>
   
   
-    <a href="../SF/RenderTarget.html#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#active=(active:Bool=true):Bool-instance-method" class="tooltip">
       <span>active=(active : Bool = <span class="n">true</span>) : Bool</span>
     active=</a>, 
     
   
-    <a href="../SF/RenderTarget.html#clear%28color%3AColor%3DColor.new%280%2C0%2C0%2C255%29%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#clear(color:Color=Color.new(0,0,0,255))-instance-method" class="tooltip">
       <span>clear(color : Color = <span class="t">Color</span>.<span class="k">new</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span>))</span>
     clear</a>, 
     
   
-    <a href="../SF/RenderTarget.html#default_view%3AView-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#default_view:View-instance-method" class="tooltip">
       <span>default_view : View</span>
     default_view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#draw%28drawable%3ADrawable%2Cstates%3ARenderStates%3DRenderStates%3A%3ADefault%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#draw(drawable:Drawable,states:RenderStates=RenderStates::Default)-instance-method" class="tooltip">
       <span>draw(drawable : Drawable, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertex_buffer : VertexBuffer, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertex_buffer : VertexBuffer, first_vertex : Int, vertex_count : Int, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)<br/>draw(vertices : Array(Vertex) | Slice(Vertex), type : PrimitiveType, states : RenderStates = <span class="t">RenderStates</span><span class="t">::</span><span class="t">Default</span>)</span>
     draw</a>, 
     
   
-    <a href="../SF/RenderTarget.html#get_viewport%28view%3AView%29%3AIntRect-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#get_viewport(view:View):IntRect-instance-method" class="tooltip">
       <span>get_viewport(view : View) : IntRect</span>
     get_viewport</a>, 
     
   
-    <a href="../SF/RenderTarget.html#map_coords_to_pixel%28point%3AVector2%7CTuple%2Cview%3AView%29%3AVector2i-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#map_coords_to_pixel(point:Vector2%7CTuple,view:View):Vector2i-instance-method" class="tooltip">
       <span>map_coords_to_pixel(point : Vector2 | Tuple, view : View) : Vector2i<br/>map_coords_to_pixel(point : Vector2 | Tuple) : Vector2i</span>
     map_coords_to_pixel</a>, 
     
   
-    <a href="../SF/RenderTarget.html#map_pixel_to_coords%28point%3AVector2%7CTuple%29%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#map_pixel_to_coords(point:Vector2%7CTuple):Vector2f-instance-method" class="tooltip">
       <span>map_pixel_to_coords(point : Vector2 | Tuple) : Vector2f<br/>map_pixel_to_coords(point : Vector2 | Tuple, view : View) : Vector2f</span>
     map_pixel_to_coords</a>, 
     
@@ -1132,17 +1175,17 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     reset_gl_states</a>, 
     
   
-    <a href="../SF/RenderTarget.html#size%3AVector2u-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#size:Vector2u-instance-method" class="tooltip">
       <span>size : Vector2u</span>
     size</a>, 
     
   
-    <a href="../SF/RenderTarget.html#view%3AView-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#view:View-instance-method" class="tooltip">
       <span>view : View</span>
     view</a>, 
     
   
-    <a href="../SF/RenderTarget.html#view%3D%28view%3AView%29-instance-method" class="tooltip">
+    <a href="../SF/RenderTarget.html#view=(view:View)-instance-method" class="tooltip">
       <span>view=(view : View)</span>
     view=</a>
     
@@ -1171,7 +1214,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h3>Instance methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
-    <a href="../SF/Window.html#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Window.html#active=(active:Bool=true):Bool-instance-method" class="tooltip">
       <span>active=(active : Bool = <span class="n">true</span>) : Bool</span>
     active=</a>, 
     
@@ -1181,7 +1224,7 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     close</a>, 
     
   
-    <a href="../SF/Window.html#create%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#create(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-instance-method" class="tooltip">
       <span>create(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>create(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)</span>
     create</a>, 
     
@@ -1196,57 +1239,57 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     finalize</a>, 
     
   
-    <a href="../SF/Window.html#focus%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Window.html#focus?:Bool-instance-method" class="tooltip">
       <span>focus? : Bool</span>
     focus?</a>, 
     
   
-    <a href="../SF/Window.html#framerate_limit%3D%28limit%3AInt%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#framerate_limit=(limit:Int)-instance-method" class="tooltip">
       <span>framerate_limit=(limit : Int)</span>
     framerate_limit=</a>, 
     
   
-    <a href="../SF/Window.html#joystick_threshold%3D%28threshold%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#joystick_threshold=(threshold:Number)-instance-method" class="tooltip">
       <span>joystick_threshold=(threshold : Number)</span>
     joystick_threshold=</a>, 
     
   
-    <a href="../SF/Window.html#key_repeat_enabled%3D%28enabled%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#key_repeat_enabled=(enabled:Bool)-instance-method" class="tooltip">
       <span>key_repeat_enabled=(enabled : Bool)</span>
     key_repeat_enabled=</a>, 
     
   
-    <a href="../SF/Window.html#mouse_cursor%3D%28cursor%3ACursor%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#mouse_cursor=(cursor:Cursor)-instance-method" class="tooltip">
       <span>mouse_cursor=(cursor : Cursor)</span>
     mouse_cursor=</a>, 
     
   
-    <a href="../SF/Window.html#mouse_cursor_grabbed%3D%28grabbed%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#mouse_cursor_grabbed=(grabbed:Bool)-instance-method" class="tooltip">
       <span>mouse_cursor_grabbed=(grabbed : Bool)</span>
     mouse_cursor_grabbed=</a>, 
     
   
-    <a href="../SF/Window.html#mouse_cursor_visible%3D%28visible%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#mouse_cursor_visible=(visible:Bool)-instance-method" class="tooltip">
       <span>mouse_cursor_visible=(visible : Bool)</span>
     mouse_cursor_visible=</a>, 
     
   
-    <a href="../SF/Window.html#open%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Window.html#open?:Bool-instance-method" class="tooltip">
       <span>open? : Bool</span>
     open?</a>, 
     
   
-    <a href="../SF/Window.html#poll_event%3AEvent%3F-instance-method" class="tooltip">
+    <a href="../SF/Window.html#poll_event:Event?-instance-method" class="tooltip">
       <span>poll_event : Event?</span>
     poll_event</a>, 
     
   
-    <a href="../SF/Window.html#position%3AVector2i-instance-method" class="tooltip">
+    <a href="../SF/Window.html#position:Vector2i-instance-method" class="tooltip">
       <span>position : Vector2i</span>
     position</a>, 
     
   
-    <a href="../SF/Window.html#position%3D%28position%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#position=(position:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>position=(position : Vector2 | Tuple)</span>
     position=</a>, 
     
@@ -1256,47 +1299,47 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
     request_focus</a>, 
     
   
-    <a href="../SF/Window.html#set_icon%28width%3AInt%2Cheight%3AInt%2Cpixels%3A%3A%3APointer%28UInt8%29%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#set_icon(width:Int,height:Int,pixels:::Pointer(UInt8))-instance-method" class="tooltip">
       <span>set_icon(width : Int, height : Int, pixels : ::Pointer(UInt8))</span>
     set_icon</a>, 
     
   
-    <a href="../SF/Window.html#settings%3AContextSettings-instance-method" class="tooltip">
+    <a href="../SF/Window.html#settings:ContextSettings-instance-method" class="tooltip">
       <span>settings : ContextSettings</span>
     settings</a>, 
     
   
-    <a href="../SF/Window.html#size%3AVector2u-instance-method" class="tooltip">
+    <a href="../SF/Window.html#size:Vector2u-instance-method" class="tooltip">
       <span>size : Vector2u</span>
     size</a>, 
     
   
-    <a href="../SF/Window.html#size%3D%28size%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#size=(size:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>size=(size : Vector2 | Tuple)</span>
     size=</a>, 
     
   
-    <a href="../SF/Window.html#system_handle%3AWindowHandle-instance-method" class="tooltip">
+    <a href="../SF/Window.html#system_handle:WindowHandle-instance-method" class="tooltip">
       <span>system_handle : WindowHandle</span>
     system_handle</a>, 
     
   
-    <a href="../SF/Window.html#title%3D%28title%3AString%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#title=(title:String)-instance-method" class="tooltip">
       <span>title=(title : String)</span>
     title=</a>, 
     
   
-    <a href="../SF/Window.html#vertical_sync_enabled%3D%28enabled%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#vertical_sync_enabled=(enabled:Bool)-instance-method" class="tooltip">
       <span>vertical_sync_enabled=(enabled : Bool)</span>
     vertical_sync_enabled=</a>, 
     
   
-    <a href="../SF/Window.html#visible%3D%28visible%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Window.html#visible=(visible:Bool)-instance-method" class="tooltip">
       <span>visible=(visible : Bool)</span>
     visible=</a>, 
     
   
-    <a href="../SF/Window.html#wait_event%3AEvent%3F-instance-method" class="tooltip">
+    <a href="../SF/Window.html#wait_event:Event?-instance-method" class="tooltip">
       <span>wait_event : Event?</span>
     wait_event</a>
     
@@ -1308,8 +1351,8 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
   <h3>Constructor methods inherited from class <code><a href="../SF/Window.html">SF::Window</a></code></h3>
   
   
-    <a href="../SF/Window.html#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method" class="tooltip">
-      <span>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new<br/>new(*args, **kwargs) : self</span>
+    <a href="../SF/Window.html#new(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-class-method" class="tooltip">
+      <span>new(mode : VideoMode, title : String, style : Style = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new(handle : WindowHandle, settings : ContextSettings = <span class="t">ContextSettings</span>.<span class="k">new</span>)<br/>new<br/>new(*args, **kwargs) : <span class="k">self</span></span>
     new</a>
     
   
@@ -1362,17 +1405,26 @@ glMatrixMode(<span class="t">GL_PROJECTION</span>)
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(mode : <a href="../SF/VideoMode.html">VideoMode</a>, title : String, style : <a href="../SF/Style.html">Style</a> = <span class="t">Style</span><span class="t">::</span><span class="t">Default</span>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
 
-        <a class="method-permalink" href="#new%28mode%3AVideoMode%2Ctitle%3AString%2Cstyle%3AStyle%3DStyle%3A%3ADefault%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method">#</a>
+        <a class="method-permalink" href="#new(mode:VideoMode,title:String,style:Style=Style::Default,settings:ContextSettings=ContextSettings.new)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a new window</p>
+        <div class="doc">
+          
+          <p>Construct a new window</p>
 
 <p>This constructor creates the window with the size and pixel
 depth defined in <em>mode.</em> An optional style can be passed to
@@ -1384,12 +1436,13 @@ advanced OpenGL context settings such as antialiasing,
 depth-buffer bits, etc. You shouldn't care about these
 parameters for a regular usage of the graphics module.</p>
 
-<ul><li><em>mode</em> - Video mode to use (defines the width, height and depth of the rendering area of the window)</li><li><em>title</em> - Title of the window</li><li><em>style</em> - Window style, a bitwise OR combination of <code><a href="../SF/Style.html">SF::Style</a></code> enumerators</li><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
+<ul><li><em>mode</em> - Video mode to use (defines the width, height and depth of the rendering area of the window)</li><li><em>title</em> - Title of the window</li><li><em>style</em> - Window style, a bitwise OR combination of <code><a href="../SF/Style.html">SF::Style</a></code> enumerators</li><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5250" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5250" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1399,10 +1452,12 @@ parameters for a regular usage of the graphics module.</p>
         
         def self.<strong>new</strong>(handle : <a href="../SF/WindowHandle.html">WindowHandle</a>, settings : <a href="../SF/ContextSettings.html">ContextSettings</a> = <span class="t">ContextSettings</span>.<span class="k">new</span>)
 
-        <a class="method-permalink" href="#new%28handle%3AWindowHandle%2Csettings%3AContextSettings%3DContextSettings.new%29-class-method">#</a>
+        <a class="method-permalink" href="#new(handle:WindowHandle,settings:ContextSettings=ContextSettings.new)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the window from an existing control</p>
+        <div class="doc">
+          
+          <p>Construct the window from an existing control</p>
 
 <p>Use this constructor if you want to create an SFML
 rendering area into an already existing control.</p>
@@ -1416,12 +1471,13 @@ parameters for a regular usage of the graphics module.</p>
 
 <pre><code>            <span class="t">Windows</span>, <span class="o">*</span><span class="o">%</span>window<span class="o">*</span> on <span class="t">Linux</span><span class="s">/FreeBSD, *ns_window* on OS X)</code></pre>
 
-<ul><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul></div>
+<ul><li><em>settings</em> - Additional settings for the underlying OpenGL context</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5267" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1434,15 +1490,18 @@ parameters for a regular usage of the graphics module.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
 <p>This constructor doesn't actually create the window,
-use the other constructors or call create() to do so.</p></div>
+use the other constructors or call create() to do so.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5230" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5230" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1450,17 +1509,20 @@ use the other constructors or call create() to do so.</p></div>
     <div class="entry-detail" id="new(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(*args, **kwargs) : self
+        def self.<strong>new</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#new(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>render_window = RenderWindow.new; render_window.create(...); render_window</code></p></div>
+        <div class="doc">
+          
+          <p>Shorthand for <code>render_window = <a href="../SF/RenderWindow.html#new-class-method">RenderWindow.new</a>; render_window.create(...); render_window</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5346" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5346" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,17 +1532,26 @@ use the other constructors or call create() to do so.</p></div>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="active=(active:Bool=true):Bool-instance-method">
       <div class="signature">
         
         def <strong>active=</strong>(active : Bool = <span class="n">true</span>) : Bool
 
-        <a class="method-permalink" href="#active%3D%28active%3ABool%3Dtrue%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#active=(active:Bool=true):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Activate or deactivate the window as the current target</p>
+        <div class="doc">
+          
+          <p>Activate or deactivate the window as the current target</p>
 
 <pre><code>   <span class="k">for</span> <span class="t">OpenGL</span> rendering</code></pre>
 
@@ -1493,12 +1564,13 @@ This is not to be confused with request_focus().</p>
 
 <ul><li><em>active</em> - True to activate, false to deactivate</li></ul>
 
-<p><em>Returns:</em> True if operation was successful, false otherwise</p></div>
+<p><em>Returns:</em> True if operation was successful, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5302" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5302" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1508,13 +1580,15 @@ This is not to be confused with request_focus().</p>
         
         def <strong>capture</strong> : <a href="../SF/Image.html">Image</a>
 
-        <a class="method-permalink" href="#capture%3AImage-instance-method">#</a>
+        <a class="method-permalink" href="#capture:Image-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Copy the current contents of the window to an image</p>
+        <div class="doc">
+          
+          <p>Copy the current contents of the window to an image</p>
 
 <p><em>Deprecated:</em>
-Use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its <code><a href="../SF/Texture.html#update%28window%3AWindow%29-instance-method">SF::Texture#update(window)</a></code>
+Use a <code><a href="../SF/Texture.html">SF::Texture</a></code> and its <code><a href="../SF/Texture.html#update(window:Window)-instance-method">SF::Texture#update(window)</a></code>
 method and copy its contents into an <code><a href="../SF/Image.html">SF::Image</a></code> instead.</p>
 
 <pre><code>texture <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Texture</span>.<span class="k">new</span>(window.size.x, window.size.y)
@@ -1529,12 +1603,13 @@ drawing, you should rather use a <code><a href="../SF/Texture.html">SF::Texture<
 You can also draw things directly to a texture with the
 <code><a href="../SF/RenderTexture.html">SF::RenderTexture</a></code> class.</p>
 
-<p><em>Returns:</em> Image containing the captured contents</p></div>
+<p><em>Returns:</em> Image containing the captured contents</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5326" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5326" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1547,14 +1622,17 @@ You can also draw things directly to a texture with the
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p>
+        <div class="doc">
+          
+          <p>Destructor</p>
 
-<p>Closes the window and frees all the resources attached to it.</p></div>
+<p>Closes the window and frees all the resources attached to it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5274" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5274" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1564,20 +1642,23 @@ You can also draw things directly to a texture with the
         
         def <strong>size</strong> : <a href="../SF/Vector2u.html">Vector2u</a>
 
-        <a class="method-permalink" href="#size%3AVector2u-instance-method">#</a>
+        <a class="method-permalink" href="#size:Vector2u-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the size of the rendering region of the window</p>
+        <div class="doc">
+          
+          <p>Get the size of the rendering region of the window</p>
 
 <p>The size doesn't include the titlebar and borders
 of the window.</p>
 
-<p><em>Returns:</em> Size in pixels</p></div>
+<p><em>Returns:</em> Size in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L5284" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L5284" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Time - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Represents a time value</p>
 
@@ -928,15 +939,26 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/system.cr#L261" target="_blank">system/system.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/system.cr#L261" target="_blank">
+        system/system.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L45" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L45" target="_blank">
+        system/obj.cr
+      </a>
     
     <br/>
   
@@ -944,7 +966,14 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -961,7 +990,14 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -977,137 +1013,146 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%21%3D%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#!=</strong>(right : Time) : Bool</a>
+        <a href="#!=(right:Time):Bool-instance-method" class="signature"><strong>#!=</strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of != operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%25%28right%3ATime%29%3ATime-instance-method" class="signature"><strong>#%</strong>(right : Time) : Time</a>
+        <a href="#%25(right:Time):Time-instance-method" class="signature"><strong>#%</strong>(right : Time) : Time</a>
         
           <div class="summary"><p>Overload of binary % operator to compute remainder of a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2A%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Number) : Time</a>
+        <a href="#*(right:Number):Time-instance-method" class="signature"><strong>#*</strong>(right : Number) : Time</a>
         
           <div class="summary"><p>Overload of binary * operator to scale a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2A%28right%3AInt%29%3ATime-instance-method" class="signature"><strong>#*</strong>(right : Int) : Time</a>
+        <a href="#*(right:Int):Time-instance-method" class="signature"><strong>#*</strong>(right : Int) : Time</a>
         
           <div class="summary"><p>Overload of binary * operator to scale a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2B%28right%3ATime%29%3ATime-instance-method" class="signature"><strong>#+</strong>(right : Time) : Time</a>
+        <a href="#+(right:Time):Time-instance-method" class="signature"><strong>#+</strong>(right : Time) : Time</a>
         
           <div class="summary"><p>Overload of binary + operator to add two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#-%28right%3ATime%29%3ATime-instance-method" class="signature"><strong>#-</strong>(right : Time) : Time</a>
+        <a href="#-(right:Time):Time-instance-method" class="signature"><strong>#-</strong>(right : Time) : Time</a>
         
           <div class="summary"><p>Overload of binary - operator to subtract two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#-%3ATime-instance-method" class="signature"><strong>#-</strong> : Time</a>
+        <a href="#-:Time-instance-method" class="signature"><strong>#-</strong> : Time</a>
         
           <div class="summary"><p>Overload of unary - operator to negate a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2F%28right%3ANumber%29%3ATime-instance-method" class="signature"><strong>#/</strong>(right : Number) : Time</a>
+        <a href="#/(right:Number):Time-instance-method" class="signature"><strong>#/</strong>(right : Number) : Time</a>
         
           <div class="summary"><p>Overload of binary / operator to scale a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2F%28right%3AInt%29%3ATime-instance-method" class="signature"><strong>#/</strong>(right : Int) : Time</a>
+        <a href="#/(right:Int):Time-instance-method" class="signature"><strong>#/</strong>(right : Int) : Time</a>
         
           <div class="summary"><p>Overload of binary / operator to scale a time value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%2F%28right%3ATime%29%3AFloat32-instance-method" class="signature"><strong>#/</strong>(right : Time) : Float32</a>
+        <a href="#/(right:Time):Float32-instance-method" class="signature"><strong>#/</strong>(right : Time) : Float32</a>
         
           <div class="summary"><p>Overload of binary / operator to compute the ratio of two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#<</strong>(right : Time) : Bool</a>
+        <a href="#%3C(right:Time):Bool-instance-method" class="signature"><strong>#<</strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of &lt; operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%3D%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#<=</strong>(right : Time) : Bool</a>
+        <a href="#%3C=(right:Time):Bool-instance-method" class="signature"><strong>#<=</strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of &lt;= operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3D%3D%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#==</strong>(right : Time) : Bool</a>
+        <a href="#==(right:Time):Bool-instance-method" class="signature"><strong>#==</strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of == operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#></strong>(right : Time) : Bool</a>
+        <a href="#%3E(right:Time):Bool-instance-method" class="signature"><strong>#></strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of &gt; operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%3D%28right%3ATime%29%3ABool-instance-method" class="signature"><strong>#>=</strong>(right : Time) : Bool</a>
+        <a href="#%3E=(right:Time):Bool-instance-method" class="signature"><strong>#>=</strong>(right : Time) : Bool</a>
         
           <div class="summary"><p>Overload of &gt;= operator to compare two time values</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#as_microseconds%3AInt64-instance-method" class="signature"><strong>#as_microseconds</strong> : Int64</a>
+        <a href="#as_microseconds:Int64-instance-method" class="signature"><strong>#as_microseconds</strong> : Int64</a>
         
           <div class="summary"><p>Return the time value as a number of microseconds</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#as_milliseconds%3AInt32-instance-method" class="signature"><strong>#as_milliseconds</strong> : Int32</a>
+        <a href="#as_milliseconds:Int32-instance-method" class="signature"><strong>#as_milliseconds</strong> : Int32</a>
         
           <div class="summary"><p>Return the time value as a number of milliseconds</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#as_seconds%3AFloat32-instance-method" class="signature"><strong>#as_seconds</strong> : Float32</a>
+        <a href="#as_seconds:Float32-instance-method" class="signature"><strong>#as_seconds</strong> : Float32</a>
         
           <div class="summary"><p>Return the time value as a number of seconds</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1152,7 +1197,14 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1162,14 +1214,17 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Sets the time value to zero.</p></div>
+<p>Sets the time value to zero.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1179,26 +1234,36 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="!=(right:Time):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%21%3D%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#!=(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of != operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of != operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if both time values are different</p></div>
+<p><em>Returns:</em> True if both time values are different</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1208,19 +1273,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>%</strong>(right : <a href="../SF/Time.html">Time</a>) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%25%28right%3ATime%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#%25(right:Time):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary % operator to compute remainder of a time value</p>
+        <div class="doc">
+          
+          <p>Overload of binary % operator to compute remainder of a time value</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> modulo <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> modulo <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L234" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L234" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,19 +1298,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>*</strong>(right : Number) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%2A%28right%3ANumber%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#*(right:Number):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary * operator to scale a time value</p>
+        <div class="doc">
+          
+          <p>Overload of binary * operator to scale a time value</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L180" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L180" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,19 +1323,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>*</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%2A%28right%3AInt%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#*(right:Int):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary * operator to scale a time value</p>
+        <div class="doc">
+          
+          <p>Overload of binary * operator to scale a time value</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> multiplied by <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L191" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1274,19 +1348,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>+</strong>(right : <a href="../SF/Time.html">Time</a>) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%2B%28right%3ATime%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#+(right:Time):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary + operator to add two time values</p>
+        <div class="doc">
+          
+          <p>Overload of binary + operator to add two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> Sum of the two times values</p></div>
+<p><em>Returns:</em> Sum of the two times values</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L158" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1296,19 +1373,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>-</strong>(right : <a href="../SF/Time.html">Time</a>) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#-%28right%3ATime%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#-(right:Time):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary - operator to subtract two time values</p>
+        <div class="doc">
+          
+          <p>Overload of binary - operator to subtract two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> Difference of the two times values</p></div>
+<p><em>Returns:</em> Difference of the two times values</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L169" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1318,19 +1398,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>-</strong> : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#-%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#-:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of unary - operator to negate a time value</p>
+        <div class="doc">
+          
+          <p>Overload of unary - operator to negate a time value</p>
 
 <ul><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> Opposite of the time value</p></div>
+<p><em>Returns:</em> Opposite of the time value</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L147" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L147" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,19 +1423,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>/</strong>(right : Number) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%2F%28right%3ANumber%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#/(right:Number):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary / operator to scale a time value</p>
+        <div class="doc">
+          
+          <p>Overload of binary / operator to scale a time value</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L202" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L202" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1362,19 +1448,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>/</strong>(right : Int) : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#%2F%28right%3AInt%29%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#/(right:Int):Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary / operator to scale a time value</p>
+        <div class="doc">
+          
+          <p>Overload of binary / operator to scale a time value</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a number)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L213" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L213" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1384,19 +1473,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>/</strong>(right : <a href="../SF/Time.html">Time</a>) : Float32
 
-        <a class="method-permalink" href="#%2F%28right%3ATime%29%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#/(right:Time):Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of binary / operator to compute the ratio of two time values</p>
+        <div class="doc">
+          
+          <p>Overload of binary / operator to compute the ratio of two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p></div>
+<p><em>Returns:</em> <em>left</em> divided by <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L224" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L224" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1406,19 +1498,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong><</strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt; operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of &lt; operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L108" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L108" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1428,19 +1523,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong><=</strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%3D%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C=(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt;= operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of &lt;= operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L128" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L128" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1450,19 +1548,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>==</strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%3D%3D%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#==(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of == operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of == operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if both time values are equal</p></div>
+<p><em>Returns:</em> True if both time values are equal</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L88" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L88" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1472,19 +1573,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>></strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt; operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of &gt; operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L118" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L118" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1494,19 +1598,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>>=</strong>(right : <a href="../SF/Time.html">Time</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%3D%28right%3ATime%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E=(right:Time):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt;= operator to compare two time values</p>
+        <div class="doc">
+          
+          <p>Overload of &gt;= operator to compare two time values</p>
 
 <ul><li><em>left</em> - Left operand (a time)</li><li><em>right</em> - Right operand (a time)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L138" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1516,19 +1623,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>as_microseconds</strong> : Int64
 
-        <a class="method-permalink" href="#as_microseconds%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#as_microseconds:Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the time value as a number of microseconds</p>
+        <div class="doc">
+          
+          <p>Return the time value as a number of microseconds</p>
 
 <p><em>Returns:</em> Time in microseconds</p>
 
-<p><em>See also:</em> <code><a href="../SF/Time.html#as_seconds%3AFloat32-instance-method">#as_seconds</a></code>, <code><a href="../SF/Time.html#as_milliseconds%3AInt32-instance-method">#as_milliseconds</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Time.html#as_seconds:Float32-instance-method">#as_seconds</a></code>, <code><a href="../SF/Time.html#as_milliseconds:Int32-instance-method">#as_milliseconds</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1538,19 +1648,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>as_milliseconds</strong> : Int32
 
-        <a class="method-permalink" href="#as_milliseconds%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#as_milliseconds:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the time value as a number of milliseconds</p>
+        <div class="doc">
+          
+          <p>Return the time value as a number of milliseconds</p>
 
 <p><em>Returns:</em> Time in milliseconds</p>
 
-<p><em>See also:</em> <code><a href="../SF/Time.html#as_seconds%3AFloat32-instance-method">#as_seconds</a></code>, <code><a href="../SF/Time.html#as_microseconds%3AInt64-instance-method">#as_microseconds</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Time.html#as_seconds:Float32-instance-method">#as_seconds</a></code>, <code><a href="../SF/Time.html#as_microseconds:Int64-instance-method">#as_microseconds</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1560,19 +1673,22 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
         
         def <strong>as_seconds</strong> : Float32
 
-        <a class="method-permalink" href="#as_seconds%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#as_seconds:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the time value as a number of seconds</p>
+        <div class="doc">
+          
+          <p>Return the time value as a number of seconds</p>
 
 <p><em>Returns:</em> Time in seconds</p>
 
-<p><em>See also:</em> <code><a href="../SF/Time.html#as_milliseconds%3AInt32-instance-method">#as_milliseconds</a></code>, <code><a href="../SF/Time.html#as_microseconds%3AInt64-instance-method">#as_microseconds</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Time.html#as_milliseconds:Int32-instance-method">#as_milliseconds</a></code>, <code><a href="../SF/Time.html#as_microseconds:Int64-instance-method">#as_microseconds</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1580,15 +1696,28 @@ update(<span class="t">SF</span>.milliseconds(<span class="n">100</span>))</code
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L248" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L248" target="_blank">View source</a>]
         
       </div>
     </div>

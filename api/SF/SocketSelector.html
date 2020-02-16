@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::SocketSelector - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Multiplexer that allows to read from multiple sockets</p>
 
@@ -963,10 +974,19 @@ selector.add listener
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1950" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1950" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -975,7 +995,14 @@ selector.add listener
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -991,11 +1018,18 @@ selector.add listener
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#add%28socket%3ASocket%29-instance-method" class="signature"><strong>#add</strong>(socket : Socket)</a>
+        <a href="#add(socket:Socket)-instance-method" class="signature"><strong>#add</strong>(socket : Socket)</a>
         
           <div class="summary"><p>Add a new socket to the selector</p></div>
         
@@ -1009,7 +1043,9 @@ selector.add listener
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1021,21 +1057,21 @@ selector.add listener
       </li>
     
       <li class="entry-summary">
-        <a href="#ready%3F%28socket%3ASocket%29%3ABool-instance-method" class="signature"><strong>#ready?</strong>(socket : Socket) : Bool</a>
+        <a href="#ready?(socket:Socket):Bool-instance-method" class="signature"><strong>#ready?</strong>(socket : Socket) : Bool</a>
         
           <div class="summary"><p>Test a socket to know if it is ready to receive data</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#remove%28socket%3ASocket%29-instance-method" class="signature"><strong>#remove</strong>(socket : Socket)</a>
+        <a href="#remove(socket:Socket)-instance-method" class="signature"><strong>#remove</strong>(socket : Socket)</a>
         
           <div class="summary"><p>Remove a socket from the selector</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#wait%28timeout%3ATime%3DTime%3A%3AZero%29%3ABool-instance-method" class="signature"><strong>#wait</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool</a>
+        <a href="#wait(timeout:Time=Time::Zero):Bool-instance-method" class="signature"><strong>#wait</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool</a>
         
           <div class="summary"><p>Wait until one or more sockets are ready to receive</p></div>
         
@@ -1072,7 +1108,14 @@ selector.add listener
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1082,12 +1125,15 @@ selector.add listener
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1953" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1953" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1097,17 +1143,26 @@ selector.add listener
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="add(socket:Socket)-instance-method">
       <div class="signature">
         
         def <strong>add</strong>(socket : <a href="../SF/Socket.html">Socket</a>)
 
-        <a class="method-permalink" href="#add%28socket%3ASocket%29-instance-method">#</a>
+        <a class="method-permalink" href="#add(socket:Socket)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Add a new socket to the selector</p>
+        <div class="doc">
+          
+          <p>Add a new socket to the selector</p>
 
 <p>This function keeps a weak reference to the socket,
 so you have to make sure that the socket is not destroyed
@@ -1116,12 +1171,13 @@ This function does nothing if the socket is not valid.</p>
 
 <ul><li><em>socket</em> - Reference to the socket to add</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#remove%28socket%3ASocket%29-instance-method">#remove</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#remove(socket:Socket)-instance-method">#remove</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1972" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1972" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1134,18 +1190,21 @@ This function does nothing if the socket is not valid.</p>
         <a class="method-permalink" href="#clear-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Remove all the sockets stored in the selector</p>
+        <div class="doc">
+          
+          <p>Remove all the sockets stored in the selector</p>
 
 <p>This function doesn't destroy any instance, it simply
 removes all the references that the selector has to
 external sockets.</p>
 
-<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add%28socket%3ASocket%29-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#remove%28socket%3ASocket%29-instance-method">#remove</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add(socket:Socket)-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#remove(socket:Socket)-instance-method">#remove</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1993" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1993" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1153,15 +1212,27 @@ external sockets.</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2044" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2044" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1174,12 +1245,15 @@ external sockets.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1958" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1958" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1189,10 +1263,12 @@ external sockets.</p>
         
         def <strong>ready?</strong>(socket : <a href="../SF/Socket.html">Socket</a>) : Bool
 
-        <a class="method-permalink" href="#ready%3F%28socket%3ASocket%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#ready?(socket:Socket):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Test a socket to know if it is ready to receive data</p>
+        <div class="doc">
+          
+          <p>Test a socket to know if it is ready to receive data</p>
 
 <p>This function must be used after a call to Wait, to know
 which sockets are ready to receive data. If a socket is
@@ -1205,12 +1281,13 @@ this means that it is ready to accept a new connection.</p>
 
 <p><em>Returns:</em> True if the socket is ready to read, false otherwise</p>
 
-<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready%3F%28socket%3ASocket%29%3ABool-instance-method">#ready?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready?(socket:Socket):Bool-instance-method">#ready?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2027" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2027" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,22 +1297,25 @@ this means that it is ready to accept a new connection.</p>
         
         def <strong>remove</strong>(socket : <a href="../SF/Socket.html">Socket</a>)
 
-        <a class="method-permalink" href="#remove%28socket%3ASocket%29-instance-method">#</a>
+        <a class="method-permalink" href="#remove(socket:Socket)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Remove a socket from the selector</p>
+        <div class="doc">
+          
+          <p>Remove a socket from the selector</p>
 
 <p>This function doesn't destroy the socket, it simply
 removes the reference that the selector has to it.</p>
 
 <ul><li><em>socket</em> - Reference to the socket to remove</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add%28socket%3ASocket%29-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#add(socket:Socket)-instance-method">#add</a></code>, <code><a href="../SF/SocketSelector.html#clear-instance-method">#clear</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1983" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1983" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,10 +1325,12 @@ removes the reference that the selector has to it.</p>
         
         def <strong>wait</strong>(timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Bool
 
-        <a class="method-permalink" href="#wait%28timeout%3ATime%3DTime%3A%3AZero%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#wait(timeout:Time=Time::Zero):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Wait until one or more sockets are ready to receive</p>
+        <div class="doc">
+          
+          <p>Wait until one or more sockets are ready to receive</p>
 
 <p>This function returns as soon as at least one socket has
 some data available to be received. To know which sockets are
@@ -1260,12 +1342,13 @@ is over, the function returns false.</p>
 
 <p><em>Returns:</em> True if there are sockets ready, false otherwise</p>
 
-<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready%3F%28socket%3ASocket%29%3ABool-instance-method">#ready?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SocketSelector.html#ready?(socket:Socket):Bool-instance-method">#ready?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2009" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2009" target="_blank">View source</a>]
         
       </div>
     </div>

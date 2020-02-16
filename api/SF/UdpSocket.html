@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::UdpSocket - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Specialized socket using the UDP protocol</p>
 
@@ -967,10 +978,19 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2248" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2248" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -978,7 +998,14 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -995,7 +1022,14 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -1011,11 +1045,18 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#bind</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
+        <a href="#bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method" class="signature"><strong>#bind</strong>(port : Int, address : IpAddress = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : Socket::Status</a>
         
           <div class="summary"><p>Bind the socket to a specific port</p></div>
         
@@ -1024,38 +1065,40 @@ socket.send(message.to_slice, sender, port)</code></pre>
       <li class="entry-summary">
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
         
+          <div class="summary"><p>Destructor</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#local_port%3AUInt16-instance-method" class="signature"><strong>#local_port</strong> : UInt16</a>
+        <a href="#local_port:UInt16-instance-method" class="signature"><strong>#local_port</strong> : UInt16</a>
         
           <div class="summary"><p>Get the port to which the socket is bound locally</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32, IpAddress, UInt16)</a>
+        <a href="#receive(data:Slice):::Tuple(Socket::Status,Int32,IpAddress,UInt16)-instance-method" class="signature"><strong>#receive</strong>(data : Slice) : ::Tuple(Socket::Status, Int32, IpAddress, UInt16)</a>
         
           <div class="summary"><p>Receive raw data from a remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#receive%28packet%3APacket%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CIpAddress%2CUInt16%29-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : ::Tuple(Socket::Status, IpAddress, UInt16)</a>
+        <a href="#receive(packet:Packet):::Tuple(Socket::Status,IpAddress,UInt16)-instance-method" class="signature"><strong>#receive</strong>(packet : Packet) : ::Tuple(Socket::Status, IpAddress, UInt16)</a>
         
           <div class="summary"><p>Receive a formatted packet of data from a remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(data : Slice, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
+        <a href="#send(data:Slice,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method" class="signature"><strong>#send</strong>(data : Slice, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
         
           <div class="summary"><p>Send raw data to a remote peer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method" class="signature"><strong>#send</strong>(packet : Packet, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
+        <a href="#send(packet:Packet,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method" class="signature"><strong>#send</strong>(packet : Packet, remote_address : IpAddress, remote_port : Int) : Socket::Status</a>
         
           <div class="summary"><p>Send a formatted packet of data to a remote peer</p></div>
         
@@ -1081,12 +1124,12 @@ socket.send(message.to_slice, sender, port)</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/Socket.html">SF::Socket</a></code></h3>
   
   
-    <a href="../SF/Socket.html#blocking%3D%28blocking%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/Socket.html#blocking=(blocking:Bool)-instance-method" class="tooltip">
       <span>blocking=(blocking : Bool)</span>
     blocking=</a>, 
     
   
-    <a href="../SF/Socket.html#blocking%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/Socket.html#blocking?:Bool-instance-method" class="tooltip">
       <span>blocking? : Bool</span>
     blocking?</a>, 
     
@@ -1099,15 +1142,6 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
     
-
-  <h3>Constructor methods inherited from class <code><a href="../SF/Socket.html">SF::Socket</a></code></h3>
-  
-  
-    <a href="../SF/Socket.html#new%28type%3ASocket%3A%3AType%29-class-method" class="tooltip">
-      <span>new(type : Socket::Type)</span>
-    new</a>
-    
-  
 
 
     
@@ -1147,7 +1181,14 @@ socket.send(message.to_slice, sender, port)</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1157,12 +1198,15 @@ socket.send(message.to_slice, sender, port)</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2257" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2257" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,17 +1216,26 @@ socket.send(message.to_slice, sender, port)</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method">
       <div class="signature">
         
         def <strong>bind</strong>(port : Int, address : <a href="../SF/IpAddress.html">IpAddress</a> = <span class="t">IpAddress</span><span class="t">::</span><span class="t">Any</span>) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Bind the socket to a specific port</p>
+        <div class="doc">
+          
+          <p>Bind the socket to a specific port</p>
 
 <p>Binding the socket to a port is necessary for being
 able to receive data on that port.
@@ -1199,12 +1252,13 @@ port before being bound to the new one.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#unbind-instance-method">#unbind</a></code>, <code><a href="../SF/UdpSocket.html#local_port%3AUInt16-instance-method">#local_port</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#unbind-instance-method">#unbind</a></code>, <code><a href="../SF/UdpSocket.html#local_port:UInt16-instance-method">#local_port</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2292" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2292" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1217,10 +1271,19 @@ port before being bound to the new one.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../SF/Socket.html">SF::Socket</a>
+            </div>
+          
+          <p>Destructor</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2250" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2250" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,22 +1293,25 @@ port before being bound to the new one.</p>
         
         def <strong>local_port</strong> : UInt16
 
-        <a class="method-permalink" href="#local_port%3AUInt16-instance-method">#</a>
+        <a class="method-permalink" href="#local_port:UInt16-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the port to which the socket is bound locally</p>
+        <div class="doc">
+          
+          <p>Get the port to which the socket is bound locally</p>
 
 <p>If the socket is not bound to a port, this function
 returns 0.</p>
 
 <p><em>Returns:</em> Port to which the socket is bound</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method">#bind</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2269" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2269" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1255,10 +1321,12 @@ returns 0.</p>
         
         def <strong>receive</strong>(data : Slice) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, Int32, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
 
-        <a class="method-permalink" href="#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#</a>
+        <a class="method-permalink" href="#receive(data:Slice):::Tuple(Socket::Status,Int32,IpAddress,UInt16)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Receive raw data from a remote peer</p>
+        <div class="doc">
+          
+          <p>Receive raw data from a remote peer</p>
 
 <p>In blocking mode, this function will wait until some
 bytes are actually received.
@@ -1273,12 +1341,13 @@ be lost.</p>
 
 <ul><li>Status code</li><li>The actual number of bytes received</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send(data:Slice,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">#send</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2343" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2343" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1288,10 +1357,12 @@ be lost.</p>
         
         def <strong>receive</strong>(packet : <a href="../SF/Packet.html">Packet</a>) : ::Tuple(<a href="../SF/Socket/Status.html">Socket::Status</a>, <a href="../SF/IpAddress.html">IpAddress</a>, UInt16)
 
-        <a class="method-permalink" href="#receive%28packet%3APacket%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CIpAddress%2CUInt16%29-instance-method">#</a>
+        <a class="method-permalink" href="#receive(packet:Packet):::Tuple(Socket::Status,IpAddress,UInt16)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Receive a formatted packet of data from a remote peer</p>
+        <div class="doc">
+          
+          <p>Receive a formatted packet of data from a remote peer</p>
 
 <p>In blocking mode, this function will wait until the whole packet
 has been received.</p>
@@ -1302,12 +1373,13 @@ has been received.</p>
 
 <ul><li>Status code</li><li>Address of the peer that sent the data</li><li>Port of the peer that sent the data</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#send</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#send(data:Slice,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">#send</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2378" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2378" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,10 +1389,12 @@ has been received.</p>
         
         def <strong>send</strong>(data : Slice, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#send%28data%3ASlice%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#send(data:Slice,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send raw data to a remote peer</p>
+        <div class="doc">
+          
+          <p>Send raw data to a remote peer</p>
 
 <p>Make sure that <em>data</em> size is not greater than
 <code><a href="../SF/UdpSocket.html#MaxDatagramSize">UdpSocket::MaxDatagramSize</a></code>, otherwise this function will
@@ -1330,12 +1404,13 @@ fail and no data will be sent.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive(data:Slice):::Tuple(Socket::Status,Int32,IpAddress,UInt16)-instance-method">#receive</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2321" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2321" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,10 +1420,12 @@ fail and no data will be sent.</p>
         
         def <strong>send</strong>(packet : <a href="../SF/Packet.html">Packet</a>, remote_address : <a href="../SF/IpAddress.html">IpAddress</a>, remote_port : Int) : <a href="../SF/Socket/Status.html">Socket::Status</a>
 
-        <a class="method-permalink" href="#send%28packet%3APacket%2Cremote_address%3AIpAddress%2Cremote_port%3AInt%29%3ASocket%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#send(packet:Packet,remote_address:IpAddress,remote_port:Int):Socket::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a formatted packet of data to a remote peer</p>
+        <div class="doc">
+          
+          <p>Send a formatted packet of data to a remote peer</p>
 
 <p>Make sure that the packet size is not greater than
 UdpSocket::MaxDatagramSize, otherwise this function will
@@ -1358,12 +1435,13 @@ fail and no data will be sent.</p>
 
 <p><em>Returns:</em> Status code</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive%28data%3ASlice%29%3A%3A%3ATuple%28Socket%3A%3AStatus%2CInt32%2CIpAddress%2CUInt16%29-instance-method">#receive</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#receive(data:Slice):::Tuple(Socket::Status,Int32,IpAddress,UInt16)-instance-method">#receive</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2361" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2361" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1376,7 +1454,9 @@ fail and no data will be sent.</p>
         <a class="method-permalink" href="#unbind-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Unbind the socket from the local port to which it is bound</p>
+        <div class="doc">
+          
+          <p>Unbind the socket from the local port to which it is bound</p>
 
 <p>The port that the socket was previously bound to is immediately
 made available to the operating system after this function is called.
@@ -1384,12 +1464,13 @@ This means that a subsequent call to bind() will be able to re-bind
 the port if no other process has done so in the mean time.
 If the socket is not bound to a port, this function has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind%28port%3AInt%2Caddress%3AIpAddress%3DIpAddress%3A%3AAny%29%3ASocket%3A%3AStatus-instance-method">#bind</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/UdpSocket.html#bind(port:Int,address:IpAddress=IpAddress::Any):Socket::Status-instance-method">#bind</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L2305" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L2305" target="_blank">View source</a>]
         
       </div>
     </div>

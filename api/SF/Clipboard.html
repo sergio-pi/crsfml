@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Clipboard - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -873,12 +877,24 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Give access to the system clipboard</p>
 
 <p><code><a href="../SF/Clipboard.html">SF::Clipboard</a></code> provides an interface for getting and
 setting the contents of the system clipboard.</p>
+
+<p>It is important to note that due to limitations on some
+operating systems, setting the clipboard contents is
+only guaranteed to work if there is currently an open
+window for which events are being handled.</p>
 
 <p>Usage example:</p>
 
@@ -896,11 +912,12 @@ while(window.pollEvent(event))
         // Using Ctrl + V to paste a string into SFML
         if(event.key.control && event.key.code == sf::Keyboard::V)
             string = sf::Clipboard::getString();
-    }
-}
 
-// set the clipboard to a string
-sf::Clipboard::setString("Hello World!");</code></pre>
+        // Using Ctrl + C to copy a string out of SFML
+        if(event.key.control && event.key.code == sf::Keyboard::C)
+            sf::Clipboard::setString("Hello World!");
+    }
+}</code></pre>
 
 <p><em>See also:</em> <code>SF::String</code>, <code><a href="../SF/Event.html">SF::Event</a></code></p>
 
@@ -917,10 +934,19 @@ sf::Clipboard::setString("Hello World!");</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L35" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L41" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -931,18 +957,25 @@ sf::Clipboard::setString("Hello World!");</code></pre>
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#string%3AString-class-method" class="signature"><strong>.string</strong> : String</a>
+        <a href="#string:String-class-method" class="signature"><strong>.string</strong> : String</a>
         
           <div class="summary"><p>Get the content of the clipboard as string data</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#string%3D%28text%3AString%29-class-method" class="signature"><strong>.string=</strong>(text : String)</a>
+        <a href="#string=(text:String)-class-method" class="signature"><strong>.string=</strong>(text : String)</a>
         
           <div class="summary"><p>Set the content of the clipboard as string data</p></div>
         
@@ -963,28 +996,38 @@ sf::Clipboard::setString("Hello World!");</code></pre>
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="string:String-class-method">
       <div class="signature">
         
         def self.<strong>string</strong> : String
 
-        <a class="method-permalink" href="#string%3AString-class-method">#</a>
+        <a class="method-permalink" href="#string:String-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the content of the clipboard as string data</p>
+        <div class="doc">
+          
+          <p>Get the content of the clipboard as string data</p>
 
 <p>This function returns the content of the clipboard
 as a string. If the clipboard does not contain string
 it returns an empty <code>SF::String</code> object.</p>
 
-<p><em>Returns:</em> Clipboard contents as <code>SF::String</code> object</p></div>
+<p><em>Returns:</em> Clipboard contents as <code>SF::String</code> object</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -994,21 +1037,30 @@ it returns an empty <code>SF::String</code> object.</p>
         
         def self.<strong>string=</strong>(text : String)
 
-        <a class="method-permalink" href="#string%3D%28text%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#string=(text:String)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the content of the clipboard as string data</p>
+        <div class="doc">
+          
+          <p>Set the content of the clipboard as string data</p>
 
 <p>This function sets the content of the clipboard as a
 string.</p>
 
+<p><em>Warning:</em> Due to limitations on some operating systems,</p>
+
+<pre><code>     setting the clipboard contents is only
+     guaranteed to work <span class="k">if</span> there is currently an
+     open window <span class="k">for</span> which events are being handled.</code></pre>
+
 <ul><li><em>text</em> - <code>SF::String</code> containing the data to be sent
-to the clipboard</li></ul></div>
+to the clipboard</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>

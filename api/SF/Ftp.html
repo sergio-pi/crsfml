@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Ftp - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>A FTP client</p>
 
@@ -952,11 +963,18 @@ ftp.disconnect()</code></pre>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/NonCopyable.html">SF::NonCopyable</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/NonCopyable.html">SF::NonCopyable</a></li>
+    
   </ul>
 
 
@@ -968,10 +986,19 @@ ftp.disconnect()</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L429" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L429" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -980,7 +1007,14 @@ ftp.disconnect()</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -994,53 +1028,60 @@ ftp.disconnect()</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#change_directory%28directory%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#change_directory</strong>(directory : String) : Ftp::Response</a>
+        <a href="#change_directory(directory:String):Ftp::Response-instance-method" class="signature"><strong>#change_directory</strong>(directory : String) : Ftp::Response</a>
         
           <div class="summary"><p>Change the current working directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int = <span class="n">21</span>, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Ftp::Response</a>
+        <a href="#connect(server:IpAddress,port:Int=21,timeout:Time=Time::Zero):Ftp::Response-instance-method" class="signature"><strong>#connect</strong>(server : IpAddress, port : Int = <span class="n">21</span>, timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Connect to the specified FTP server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#create_directory</strong>(name : String) : Ftp::Response</a>
+        <a href="#create_directory(name:String):Ftp::Response-instance-method" class="signature"><strong>#create_directory</strong>(name : String) : Ftp::Response</a>
         
           <div class="summary"><p>Create a new directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#delete_directory</strong>(name : String) : Ftp::Response</a>
+        <a href="#delete_directory(name:String):Ftp::Response-instance-method" class="signature"><strong>#delete_directory</strong>(name : String) : Ftp::Response</a>
         
           <div class="summary"><p>Remove an existing directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete_file%28name%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#delete_file</strong>(name : String) : Ftp::Response</a>
+        <a href="#delete_file(name:String):Ftp::Response-instance-method" class="signature"><strong>#delete_file</strong>(name : String) : Ftp::Response</a>
         
           <div class="summary"><p>Remove an existing file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#disconnect%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#disconnect</strong> : Ftp::Response</a>
+        <a href="#disconnect:Ftp::Response-instance-method" class="signature"><strong>#disconnect</strong> : Ftp::Response</a>
         
           <div class="summary"><p>Close the connection with the server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#download</strong>(remote_file : String, local_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
+        <a href="#download(remote_file:String,local_path:String,mode:Ftp::TransferMode=Binary):Ftp::Response-instance-method" class="signature"><strong>#download</strong>(remote_file : String, local_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Download a file from the server</p></div>
         
@@ -1054,63 +1095,63 @@ ftp.disconnect()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#get_directory_listing%28directory%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AListingResponse-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : Ftp::ListingResponse</a>
+        <a href="#get_directory_listing(directory:String=&quot;&quot;):Ftp::ListingResponse-instance-method" class="signature"><strong>#get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : Ftp::ListingResponse</a>
         
           <div class="summary"><p>Get the contents of the given directory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#keep_alive%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#keep_alive</strong> : Ftp::Response</a>
+        <a href="#keep_alive:Ftp::Response-instance-method" class="signature"><strong>#keep_alive</strong> : Ftp::Response</a>
         
           <div class="summary"><p>Send a null command to keep the connection alive</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#login%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong> : Ftp::Response</a>
+        <a href="#login:Ftp::Response-instance-method" class="signature"><strong>#login</strong> : Ftp::Response</a>
         
           <div class="summary"><p>Log in using an anonymous account</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#login%28name%3AString%2Cpassword%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#login</strong>(name : String, password : String) : Ftp::Response</a>
+        <a href="#login(name:String,password:String):Ftp::Response-instance-method" class="signature"><strong>#login</strong>(name : String, password : String) : Ftp::Response</a>
         
           <div class="summary"><p>Log in using a username and a password</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parent_directory%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#parent_directory</strong> : Ftp::Response</a>
+        <a href="#parent_directory:Ftp::Response-instance-method" class="signature"><strong>#parent_directory</strong> : Ftp::Response</a>
         
           <div class="summary"><p>Go to the parent directory of the current one</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rename_file%28file%3AString%2Cnew_name%3AString%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#rename_file</strong>(file : String, new_name : String) : Ftp::Response</a>
+        <a href="#rename_file(file:String,new_name:String):Ftp::Response-instance-method" class="signature"><strong>#rename_file</strong>(file : String, new_name : String) : Ftp::Response</a>
         
           <div class="summary"><p>Rename an existing file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#send_command%28command%3AString%2Cparameter%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : Ftp::Response</a>
+        <a href="#send_command(command:String,parameter:String=&quot;&quot;):Ftp::Response-instance-method" class="signature"><strong>#send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Send a command to the FTP server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>, append : Bool = <span class="n">false</span>) : Ftp::Response</a>
+        <a href="#upload(local_file:String,remote_path:String,mode:Ftp::TransferMode=Binary,append:Bool=false):Ftp::Response-instance-method" class="signature"><strong>#upload</strong>(local_file : String, remote_path : String, mode : Ftp::TransferMode = <span class="t">Binary</span>, append : Bool = <span class="n">false</span>) : Ftp::Response</a>
         
           <div class="summary"><p>Upload a file to the server</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#working_directory%3AFtp%3A%3ADirectoryResponse-instance-method" class="signature"><strong>#working_directory</strong> : Ftp::DirectoryResponse</a>
+        <a href="#working_directory:Ftp::DirectoryResponse-instance-method" class="signature"><strong>#working_directory</strong> : Ftp::DirectoryResponse</a>
         
           <div class="summary"><p>Get the current working directory</p></div>
         
@@ -1157,7 +1198,14 @@ ftp.disconnect()</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1170,7 +1218,7 @@ ftp.disconnect()</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L431" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L431" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1180,17 +1228,26 @@ ftp.disconnect()</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="change_directory(directory:String):Ftp::Response-instance-method">
       <div class="signature">
         
         def <strong>change_directory</strong>(directory : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#change_directory%28directory%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#change_directory(directory:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the current working directory</p>
+        <div class="doc">
+          
+          <p>Change the current working directory</p>
 
 <p>The new directory must be relative to the current one.</p>
 
@@ -1198,12 +1255,13 @@ ftp.disconnect()</code></pre>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory%3AFtp%3A%3ADirectoryResponse-instance-method">#working_directory</a></code>, <code>directory_listing</code>, <code><a href="../SF/Ftp.html#parent_directory%3AFtp%3A%3AResponse-instance-method">#parent_directory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory:Ftp::DirectoryResponse-instance-method">#working_directory</a></code>, <code>directory_listing</code>, <code><a href="../SF/Ftp.html#parent_directory:Ftp::Response-instance-method">#parent_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L818" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L818" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1213,10 +1271,12 @@ ftp.disconnect()</code></pre>
         
         def <strong>connect</strong>(server : <a href="../SF/IpAddress.html">IpAddress</a>, port : Int = <span class="n">21</span>, timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#connect(server:IpAddress,port:Int=21,timeout:Time=Time::Zero):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Connect to the specified FTP server</p>
+        <div class="doc">
+          
+          <p>Connect to the specified FTP server</p>
 
 <p>The port has a default value of 21, which is the standard
 port used by the FTP protocol. You shouldn't use a different
@@ -1231,12 +1291,13 @@ system timeout will be used (which is usually pretty long).</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#disconnect%3AFtp%3A%3AResponse-instance-method">#disconnect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#disconnect:Ftp::Response-instance-method">#disconnect</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L728" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L728" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,10 +1307,12 @@ system timeout will be used (which is usually pretty long).</p>
         
         def <strong>create_directory</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#create_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#create_directory(name:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Create a new directory</p>
+        <div class="doc">
+          
+          <p>Create a new directory</p>
 
 <p>The new directory is created as a child of the current
 working directory.</p>
@@ -1258,12 +1321,13 @@ working directory.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#delete_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#delete_directory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#delete_directory(name:String):Ftp::Response-instance-method">#delete_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L843" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L843" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1273,10 +1337,12 @@ working directory.</p>
         
         def <strong>delete_directory</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#delete_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#delete_directory(name:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Remove an existing directory</p>
+        <div class="doc">
+          
+          <p>Remove an existing directory</p>
 
 <p>The directory to remove must be relative to the
 current working directory.
@@ -1287,12 +1353,13 @@ be removed permanently!</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#create_directory%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#create_directory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#create_directory(name:String):Ftp::Response-instance-method">#create_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L860" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L860" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1302,10 +1369,12 @@ be removed permanently!</p>
         
         def <strong>delete_file</strong>(name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#delete_file%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#delete_file(name:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Remove an existing file</p>
+        <div class="doc">
+          
+          <p>Remove an existing file</p>
 
 <p>The file name must be relative to the current working
 directory.
@@ -1316,12 +1385,13 @@ removed permanently!</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#rename_file%28file%3AString%2Cnew_name%3AString%29%3AFtp%3A%3AResponse-instance-method">#rename_file</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#rename_file(file:String,new_name:String):Ftp::Response-instance-method">#rename_file</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L893" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L893" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1331,19 +1401,22 @@ removed permanently!</p>
         
         def <strong>disconnect</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#disconnect%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#disconnect:Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Close the connection with the server</p>
+        <div class="doc">
+          
+          <p>Close the connection with the server</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#connect%28server%3AIpAddress%2Cport%3AInt%3D21%2Ctimeout%3ATime%3DTime%3A%3AZero%29%3AFtp%3A%3AResponse-instance-method">#connect</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#connect(server:IpAddress,port:Int=21,timeout:Time=Time::Zero):Ftp::Response-instance-method">#connect</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L738" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L738" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,10 +1426,12 @@ removed permanently!</p>
         
         def <strong>download</strong>(remote_file : String, local_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#download(remote_file:String,local_path:String,mode:Ftp::TransferMode=Binary):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Download a file from the server</p>
+        <div class="doc">
+          
+          <p>Download a file from the server</p>
 
 <p>The filename of the distant file is relative to the
 current working directory of the server, and the local
@@ -1370,12 +1445,13 @@ be overwritten.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method">#upload</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#upload(local_file:String,remote_path:String,mode:Ftp::TransferMode=Binary,append:Bool=false):Ftp::Response-instance-method">#upload</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L915" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L915" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1388,15 +1464,18 @@ be overwritten.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p>
+        <div class="doc">
+          
+          <p>Destructor</p>
 
 <p>Automatically closes the connection with the server if
-it is still opened.</p></div>
+it is still opened.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L706" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L706" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1406,10 +1485,12 @@ it is still opened.</p></div>
         
         def <strong>get_directory_listing</strong>(directory : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/ListingResponse.html">Ftp::ListingResponse</a>
 
-        <a class="method-permalink" href="#get_directory_listing%28directory%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AListingResponse-instance-method">#</a>
+        <a class="method-permalink" href="#get_directory_listing(directory:String=&quot;&quot;):Ftp::ListingResponse-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the contents of the given directory</p>
+        <div class="doc">
+          
+          <p>Get the contents of the given directory</p>
 
 <p>This function retrieves the sub-directories and files
 contained in the given directory. It is not recursive.
@@ -1420,12 +1501,13 @@ working directory.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory%3AFtp%3A%3ADirectoryResponse-instance-method">#working_directory</a></code>, <code><a href="../SF/Ftp.html#change_directory%28directory%3AString%29%3AFtp%3A%3AResponse-instance-method">#change_directory</a></code>, <code><a href="../SF/Ftp.html#parent_directory%3AFtp%3A%3AResponse-instance-method">#parent_directory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory:Ftp::DirectoryResponse-instance-method">#working_directory</a></code>, <code><a href="../SF/Ftp.html#change_directory(directory:String):Ftp::Response-instance-method">#change_directory</a></code>, <code><a href="../SF/Ftp.html#parent_directory:Ftp::Response-instance-method">#parent_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L804" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L804" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1435,20 +1517,23 @@ working directory.</p>
         
         def <strong>keep_alive</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#keep_alive%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#keep_alive:Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a null command to keep the connection alive</p>
+        <div class="doc">
+          
+          <p>Send a null command to keep the connection alive</p>
 
 <p>This command is useful because the server may close the
 connection automatically if no command is sent.</p>
 
-<p><em>Returns:</em> Server response to the request</p></div>
+<p><em>Returns:</em> Server response to the request</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L774" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L774" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1458,20 +1543,23 @@ connection automatically if no command is sent.</p>
         
         def <strong>login</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#login%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#login:Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Log in using an anonymous account</p>
+        <div class="doc">
+          
+          <p>Log in using an anonymous account</p>
 
 <p>Logging in is mandatory after connecting to the server.
 Users that are not logged in cannot perform any operation.</p>
 
-<p><em>Returns:</em> Server response to the request</p></div>
+<p><em>Returns:</em> Server response to the request</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L749" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L749" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1481,22 +1569,25 @@ Users that are not logged in cannot perform any operation.</p>
         
         def <strong>login</strong>(name : String, password : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#login%28name%3AString%2Cpassword%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#login(name:String,password:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Log in using a username and a password</p>
+        <div class="doc">
+          
+          <p>Log in using a username and a password</p>
 
 <p>Logging in is mandatory after connecting to the server.
 Users that are not logged in cannot perform any operation.</p>
 
 <ul><li><em>name</em> - User name</li><li><em>password</em> - Password</li></ul>
 
-<p><em>Returns:</em> Server response to the request</p></div>
+<p><em>Returns:</em> Server response to the request</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L763" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L763" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1506,19 +1597,22 @@ Users that are not logged in cannot perform any operation.</p>
         
         def <strong>parent_directory</strong> : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#parent_directory%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#parent_directory:Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Go to the parent directory of the current one</p>
+        <div class="doc">
+          
+          <p>Go to the parent directory of the current one</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory%3AFtp%3A%3ADirectoryResponse-instance-method">#working_directory</a></code>, <code>directory_listing</code>, <code><a href="../SF/Ftp.html#change_directory%28directory%3AString%29%3AFtp%3A%3AResponse-instance-method">#change_directory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#working_directory:Ftp::DirectoryResponse-instance-method">#working_directory</a></code>, <code>directory_listing</code>, <code><a href="../SF/Ftp.html#change_directory(directory:String):Ftp::Response-instance-method">#change_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L828" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L828" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1528,10 +1622,12 @@ Users that are not logged in cannot perform any operation.</p>
         
         def <strong>rename_file</strong>(file : String, new_name : String) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#rename_file%28file%3AString%2Cnew_name%3AString%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#rename_file(file:String,new_name:String):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Rename an existing file</p>
+        <div class="doc">
+          
+          <p>Rename an existing file</p>
 
 <p>The filenames must be relative to the current working
 directory.</p>
@@ -1540,12 +1636,13 @@ directory.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#delete_file%28name%3AString%29%3AFtp%3A%3AResponse-instance-method">#delete_file</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#delete_file(name:String):Ftp::Response-instance-method">#delete_file</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L876" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L876" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1555,10 +1652,12 @@ directory.</p>
         
         def <strong>send_command</strong>(command : String, parameter : String = <span class="s">&quot;&quot;</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#send_command%28command%3AString%2Cparameter%3AString%3D%26quot%3B%26quot%3B%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#send_command(command:String,parameter:String=&quot;&quot;):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a command to the FTP server</p>
+        <div class="doc">
+          
+          <p>Send a command to the FTP server</p>
 
 <p>While the most often used commands are provided as member
 functions in the <code><a href="../SF/Ftp.html">SF::Ftp</a></code> class, this method can be used
@@ -1569,12 +1668,13 @@ can extract it from the response using Response.message().</p>
 
 <ul><li><em>command</em> - Command to send</li><li><em>parameter</em> - Command parameter</li></ul>
 
-<p><em>Returns:</em> Server response to the request</p></div>
+<p><em>Returns:</em> Server response to the request</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L956" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L956" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1584,10 +1684,12 @@ can extract it from the response using Response.message().</p>
         
         def <strong>upload</strong>(local_file : String, remote_path : String, mode : <a href="../SF/Ftp/TransferMode.html">Ftp::TransferMode</a> = <span class="t">Binary</span>, append : Bool = <span class="n">false</span>) : <a href="../SF/Ftp/Response.html">Ftp::Response</a>
 
-        <a class="method-permalink" href="#upload%28local_file%3AString%2Cremote_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%2Cappend%3ABool%3Dfalse%29%3AFtp%3A%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#upload(local_file:String,remote_path:String,mode:Ftp::TransferMode=Binary,append:Bool=false):Ftp::Response-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Upload a file to the server</p>
+        <div class="doc">
+          
+          <p>Upload a file to the server</p>
 
 <p>The name of the local file is relative to the current
 working directory of your application, and the
@@ -1601,12 +1703,13 @@ appended to or overwritten if it already exists.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code><a href="../SF/Ftp.html#download%28remote_file%3AString%2Clocal_path%3AString%2Cmode%3AFtp%3A%3ATransferMode%3DBinary%29%3AFtp%3A%3AResponse-instance-method">#download</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Ftp.html#download(remote_file:String,local_path:String,mode:Ftp::TransferMode=Binary):Ftp::Response-instance-method">#download</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L938" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L938" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1616,22 +1719,25 @@ appended to or overwritten if it already exists.</p>
         
         def <strong>working_directory</strong> : <a href="../SF/Ftp/DirectoryResponse.html">Ftp::DirectoryResponse</a>
 
-        <a class="method-permalink" href="#working_directory%3AFtp%3A%3ADirectoryResponse-instance-method">#</a>
+        <a class="method-permalink" href="#working_directory:Ftp::DirectoryResponse-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current working directory</p>
+        <div class="doc">
+          
+          <p>Get the current working directory</p>
 
 <p>The working directory is the root path for subsequent
 operations involving directories and/or filenames.</p>
 
 <p><em>Returns:</em> Server response to the request</p>
 
-<p><em>See also:</em> <code>directory_listing</code>, <code><a href="../SF/Ftp.html#change_directory%28directory%3AString%29%3AFtp%3A%3AResponse-instance-method">#change_directory</a></code>, <code><a href="../SF/Ftp.html#parent_directory%3AFtp%3A%3AResponse-instance-method">#parent_directory</a></code></p></div>
+<p><em>See also:</em> <code>directory_listing</code>, <code><a href="../SF/Ftp.html#change_directory(directory:String):Ftp::Response-instance-method">#change_directory</a></code>, <code><a href="../SF/Ftp.html#parent_directory:Ftp::Response-instance-method">#parent_directory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L787" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L787" target="_blank">View source</a>]
         
       </div>
     </div>

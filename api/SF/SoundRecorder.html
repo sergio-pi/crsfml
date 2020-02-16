@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::SoundRecorder - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Abstract base class for capturing sound data</p>
 
@@ -978,22 +989,36 @@ thread finishes before your object is destroyed.</p>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
+    
   </ul>
 
 
 
 
 
-  <h2>Direct Known Subclasses</h2>
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/SoundBufferRecorder.html">SF::SoundBufferRecorder</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/SoundBufferRecorder.html">SF::SoundBufferRecorder</a></li>
+    
   </ul>
 
 
@@ -1001,10 +1026,19 @@ thread finishes before your object is destroyed.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1644" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1649" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -1013,39 +1047,34 @@ thread finishes before your object is destroyed.</p>
 
 
 
-  <h2>Constructors</h2>
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-  <h2>Class Method Summary</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#available%3F%3ABool-class-method" class="signature"><strong>.available?</strong> : Bool</a>
+        <a href="#available?:Bool-class-method" class="signature"><strong>.available?</strong> : Bool</a>
         
           <div class="summary"><p>Check if the system supports audio capture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#available_devices%3AArray%28String%29-class-method" class="signature"><strong>.available_devices</strong> : Array(String)</a>
+        <a href="#available_devices:Array(String)-class-method" class="signature"><strong>.available_devices</strong> : Array(String)</a>
         
           <div class="summary"><p>Get a list of the names of all available audio capture devices</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#default_device%3AString-class-method" class="signature"><strong>.default_device</strong> : String</a>
+        <a href="#default_device:String-class-method" class="signature"><strong>.default_device</strong> : String</a>
         
           <div class="summary"><p>Get the name of the default audio capture device</p></div>
         
@@ -1055,32 +1084,39 @@ thread finishes before your object is destroyed.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#channel_count%3AInt32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
+        <a href="#channel_count:Int32-instance-method" class="signature"><strong>#channel_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of channels used by this recorder</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#channel_count%3D%28channel_count%3AInt%29-instance-method" class="signature"><strong>#channel_count=</strong>(channel_count : Int)</a>
+        <a href="#channel_count=(channel_count:Int)-instance-method" class="signature"><strong>#channel_count=</strong>(channel_count : Int)</a>
         
           <div class="summary"><p>Set the channel count of the audio capture device</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device%3AString-instance-method" class="signature"><strong>#device</strong> : String</a>
+        <a href="#device:String-instance-method" class="signature"><strong>#device</strong> : String</a>
         
           <div class="summary"><p>Get the name of the current audio capture device</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device%3D%28name%3AString%29%3ABool-instance-method" class="signature"><strong>#device=</strong>(name : String) : Bool</a>
+        <a href="#device=(name:String):Bool-instance-method" class="signature"><strong>#device=</strong>(name : String) : Bool</a>
         
           <div class="summary"><p>Set the audio capture device</p></div>
         
@@ -1094,14 +1130,14 @@ thread finishes before your object is destroyed.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#on_process_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%29%3ABool-instance-method" class="signature"><strong>#on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool</a>
+        <a href="#on_process_samples(samples:Array(Int16)%7CSlice(Int16)):Bool-instance-method" class="signature"><strong>#on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool</a>
         
           <div class="summary"><p>Process a new chunk of recorded samples</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_start%3ABool-instance-method" class="signature"><strong>#on_start</strong> : Bool</a>
+        <a href="#on_start:Bool-instance-method" class="signature"><strong>#on_start</strong> : Bool</a>
         
           <div class="summary"><p>Start capturing audio data</p></div>
         
@@ -1115,21 +1151,21 @@ thread finishes before your object is destroyed.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#processing_interval%3D%28interval%3ATime%29-instance-method" class="signature"><strong>#processing_interval=</strong>(interval : Time)</a>
+        <a href="#processing_interval=(interval:Time)-instance-method" class="signature"><strong>#processing_interval=</strong>(interval : Time)</a>
         
           <div class="summary"><p>Set the processing interval</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sample_rate%3AInt32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
+        <a href="#sample_rate:Int32-instance-method" class="signature"><strong>#sample_rate</strong> : Int32</a>
         
           <div class="summary"><p>Get the sample rate</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#start%28sample_rate%3AInt%3D44100%29%3ABool-instance-method" class="signature"><strong>#start</strong>(sample_rate : Int = <span class="n">44100</span>) : Bool</a>
+        <a href="#start(sample_rate:Int=44100):Bool-instance-method" class="signature"><strong>#start</strong>(sample_rate : Int = <span class="n">44100</span>) : Bool</a>
         
           <div class="summary"><p>Start the capture</p></div>
         
@@ -1183,54 +1219,41 @@ thread finishes before your object is destroyed.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p>
-
-<p>This constructor is only meant to be called by derived classes.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1775" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
-
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="available?:Bool-class-method">
       <div class="signature">
         
         def self.<strong>available?</strong> : Bool
 
-        <a class="method-permalink" href="#available%3F%3ABool-class-method">#</a>
+        <a class="method-permalink" href="#available?:Bool-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Check if the system supports audio capture</p>
+        <div class="doc">
+          
+          <p>Check if the system supports audio capture</p>
 
 <p>This function should always be called before using
 the audio capture features. If it returns false, then
 any attempt to use <code><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></code> or one of its derived
 classes will fail.</p>
 
-<p><em>Returns:</em> True if audio capture is supported, false otherwise</p></div>
+<p><em>Returns:</em> True if audio capture is supported, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1768" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1773" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,20 +1263,23 @@ classes will fail.</p>
         
         def self.<strong>available_devices</strong> : Array(String)
 
-        <a class="method-permalink" href="#available_devices%3AArray%28String%29-class-method">#</a>
+        <a class="method-permalink" href="#available_devices:Array(String)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a list of the names of all available audio capture devices</p>
+        <div class="doc">
+          
+          <p>Get a list of the names of all available audio capture devices</p>
 
 <p>This function returns a vector of strings, containing
 the names of all available audio capture devices.</p>
 
-<p><em>Returns:</em> A vector of strings containing the names</p></div>
+<p><em>Returns:</em> A vector of strings containing the names</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1697" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1702" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1263,21 +1289,24 @@ the names of all available audio capture devices.</p>
         
         def self.<strong>default_device</strong> : String
 
-        <a class="method-permalink" href="#default_device%3AString-class-method">#</a>
+        <a class="method-permalink" href="#default_device:String-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the name of the default audio capture device</p>
+        <div class="doc">
+          
+          <p>Get the name of the default audio capture device</p>
 
 <p>This function returns the name of the default audio
 capture device. If none is available, an empty string
 is returned.</p>
 
-<p><em>Returns:</em> The name of the default audio capture device</p></div>
+<p><em>Returns:</em> The name of the default audio capture device</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1708" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1713" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1285,29 +1314,39 @@ is returned.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="channel_count:Int32-instance-method">
       <div class="signature">
         
         def <strong>channel_count</strong> : Int32
 
-        <a class="method-permalink" href="#channel_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#channel_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the number of channels used by this recorder</p>
+        <div class="doc">
+          
+          <p>Get the number of channels used by this recorder</p>
 
 <p>Currently only mono and stereo are supported, so the
 value is either 1 (for mono) or 2 (for stereo).</p>
 
 <p><em>Returns:</em> Number of channels</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count%3D%28channel_count%3AInt%29-instance-method">#channel_count=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count=(channel_count:Int)-instance-method">#channel_count=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1756" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1761" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,10 +1356,12 @@ value is either 1 (for mono) or 2 (for stereo).</p>
         
         def <strong>channel_count=</strong>(channel_count : Int)
 
-        <a class="method-permalink" href="#channel_count%3D%28channel_count%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#channel_count=(channel_count:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the channel count of the audio capture device</p>
+        <div class="doc">
+          
+          <p>Set the channel count of the audio capture device</p>
 
 <p>This method allows you to specify the number of channels
 used for recording. Currently only 16-bit mono and
@@ -1330,12 +1371,13 @@ used for recording. Currently only 16-bit mono and
 
 <pre><code>                mono (<span class="n">1</span>) and stereo (<span class="n">2</span>) are supported.</code></pre>
 
-<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count%3AInt32-instance-method">#channel_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#channel_count:Int32-instance-method">#channel_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1745" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1750" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,17 +1387,20 @@ used for recording. Currently only 16-bit mono and
         
         def <strong>device</strong> : String
 
-        <a class="method-permalink" href="#device%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#device:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the name of the current audio capture device</p>
+        <div class="doc">
+          
+          <p>Get the name of the current audio capture device</p>
 
-<p><em>Returns:</em> The name of the current audio capture device</p></div>
+<p><em>Returns:</em> The name of the current audio capture device</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1731" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,10 +1410,12 @@ used for recording. Currently only 16-bit mono and
         
         def <strong>device=</strong>(name : String) : Bool
 
-        <a class="method-permalink" href="#device%3D%28name%3AString%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#device=(name:String):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the audio capture device</p>
+        <div class="doc">
+          
+          <p>Set the audio capture device</p>
 
 <p>This function sets the audio capture device to the device
 with the given <em>name.</em> It can be called on the fly (i.e:
@@ -1379,12 +1426,13 @@ opening the device fails, it stops the recording.</p>
 
 <p><em>Returns:</em> True, if it was able to set the requested device</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#available_devices%3AArray%28String%29-class-method">.available_devices</a></code>, <code><a href="../SF/SoundRecorder.html#default_device%3AString-class-method">.default_device</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#available_devices:Array(String)-class-method">.available_devices</a></code>, <code><a href="../SF/SoundRecorder.html#default_device:String-class-method">.default_device</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1724" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1729" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1397,12 +1445,15 @@ opening the device fails, it stops the recording.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>destructor</p></div>
+        <div class="doc">
+          
+          <p>destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1647" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1652" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,10 +1463,12 @@ opening the device fails, it stops the recording.</p>
         abstract 
         def <strong>on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool
 
-        <a class="method-permalink" href="#on_process_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#on_process_samples(samples:Array(Int16)%7CSlice(Int16)):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Process a new chunk of recorded samples</p>
+        <div class="doc">
+          
+          <p>Process a new chunk of recorded samples</p>
 
 <p>This virtual function is called every time a new chunk of
 recorded data is available. The derived class can then do
@@ -1424,12 +1477,13 @@ it over the network, etc.).</p>
 
 <ul><li><em>samples</em> - Pointer to the new chunk of recorded samples</li><li><em>sample_count</em> - Number of samples pointed by <em>samples</em></li></ul>
 
-<p><em>Returns:</em> True to continue the capture, or false to stop it</p></div>
+<p><em>Returns:</em> True to continue the capture, or false to stop it</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1819" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1824" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1439,22 +1493,25 @@ it over the network, etc.).</p>
         
         def <strong>on_start</strong> : Bool
 
-        <a class="method-permalink" href="#on_start%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#on_start:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Start capturing audio data</p>
+        <div class="doc">
+          
+          <p>Start capturing audio data</p>
 
 <p>This virtual function may be overridden by a derived class
 if something has to be done every time a new capture
 starts. If not, this function can be ignored; the default
 implementation does nothing.</p>
 
-<p><em>Returns:</em> True to start the capture, or false to abort it</p></div>
+<p><em>Returns:</em> True to start the capture, or false to abort it</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1804" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1809" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1467,17 +1524,20 @@ implementation does nothing.</p>
         <a class="method-permalink" href="#on_stop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Stop capturing audio data</p>
+        <div class="doc">
+          
+          <p>Stop capturing audio data</p>
 
 <p>This virtual function may be overridden by a derived class
 if something has to be done every time the capture
 ends. If not, this function can be ignored; the default
-implementation does nothing.</p></div>
+implementation does nothing.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1826" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1487,10 +1547,12 @@ implementation does nothing.</p></div>
         
         def <strong>processing_interval=</strong>(interval : <a href="../SF/Time.html">Time</a>)
 
-        <a class="method-permalink" href="#processing_interval%3D%28interval%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#processing_interval=(interval:Time)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the processing interval</p>
+        <div class="doc">
+          
+          <p>Set the processing interval</p>
 
 <p>The processing interval controls the period
 between calls to the on_process_samples function. You may
@@ -1502,12 +1564,13 @@ So don't rely on this parameter to implement precise timing.</p>
 
 <p>The default processing interval is 100 ms.</p>
 
-<ul><li><em>interval</em> - Processing interval</li></ul></div>
+<ul><li><em>interval</em> - Processing interval</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1793" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1798" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1517,21 +1580,24 @@ So don't rely on this parameter to implement precise timing.</p>
         
         def <strong>sample_rate</strong> : Int32
 
-        <a class="method-permalink" href="#sample_rate%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#sample_rate:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the sample rate</p>
+        <div class="doc">
+          
+          <p>Get the sample rate</p>
 
 <p>The sample rate defines the number of audio samples
 captured per second. The higher, the better the quality
 (for example, 44100 samples/sec is CD quality).</p>
 
-<p><em>Returns:</em> Sample rate, in samples per second</p></div>
+<p><em>Returns:</em> Sample rate, in samples per second</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1687" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1692" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1541,10 +1607,12 @@ captured per second. The higher, the better the quality
         
         def <strong>start</strong>(sample_rate : Int = <span class="n">44100</span>) : Bool
 
-        <a class="method-permalink" href="#start%28sample_rate%3AInt%3D44100%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#start(sample_rate:Int=44100):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Start the capture</p>
+        <div class="doc">
+          
+          <p>Start the capture</p>
 
 <p>The <em>sample_rate</em> parameter defines the number of audio samples
 captured per second. The higher, the better the quality
@@ -1562,12 +1630,13 @@ available_devices().</p>
 
 <p><em>Returns:</em> True, if start of capture was successful</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#stop-instance-method">#stop</a></code>, <code><a href="../SF/SoundRecorder.html#available_devices%3AArray%28String%29-class-method">.available_devices</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#stop-instance-method">#stop</a></code>, <code><a href="../SF/SoundRecorder.html#available_devices:Array(String)-class-method">.available_devices</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1670" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1675" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1580,14 +1649,17 @@ available_devices().</p>
         <a class="method-permalink" href="#stop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Stop the capture</p>
+        <div class="doc">
+          
+          <p>Stop the capture</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#start%28sample_rate%3AInt%3D44100%29%3ABool-instance-method">#start</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundRecorder.html#start(sample_rate:Int=44100):Bool-instance-method">#start</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1677" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1682" target="_blank">View source</a>]
         
       </div>
     </div>

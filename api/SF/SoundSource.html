@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::SoundSource - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Base class defining a sound's properties</p>
 
@@ -893,24 +904,38 @@ changed at any time with no impact on performances.</p>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/AlResource.html">SF::AlResource</a></li>
+    
   </ul>
 
 
 
 
 
-  <h2>Direct Known Subclasses</h2>
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Sound.html">SF::Sound</a></li>
-  
-    <li class="other-type"><a href="../SF/SoundStream.html">SF::SoundStream</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Sound.html">SF::Sound</a></li>
+    
+      <li class="other-type"><a href="../SF/SoundStream.html">SF::SoundStream</a></li>
+    
   </ul>
 
 
@@ -918,10 +943,19 @@ changed at any time with no impact on performances.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L195" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L195" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -930,34 +964,29 @@ changed at any time with no impact on performances.</p>
 
 
 
-  <h2>Constructors</h2>
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-
-
-  <h2>Instance Method Summary</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#attenuation%3AFloat32-instance-method" class="signature"><strong>#attenuation</strong> : Float32</a>
+        <a href="#attenuation:Float32-instance-method" class="signature"><strong>#attenuation</strong> : Float32</a>
         
           <div class="summary"><p>Get the attenuation factor of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attenuation%3D%28attenuation%3ANumber%29-instance-method" class="signature"><strong>#attenuation=</strong>(attenuation : Number)</a>
+        <a href="#attenuation=(attenuation:Number)-instance-method" class="signature"><strong>#attenuation=</strong>(attenuation : Number)</a>
         
           <div class="summary"><p>Set the attenuation factor of the sound</p></div>
         
@@ -971,14 +1000,14 @@ changed at any time with no impact on performances.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#min_distance%3AFloat32-instance-method" class="signature"><strong>#min_distance</strong> : Float32</a>
+        <a href="#min_distance:Float32-instance-method" class="signature"><strong>#min_distance</strong> : Float32</a>
         
           <div class="summary"><p>Get the minimum distance of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#min_distance%3D%28distance%3ANumber%29-instance-method" class="signature"><strong>#min_distance=</strong>(distance : Number)</a>
+        <a href="#min_distance=(distance:Number)-instance-method" class="signature"><strong>#min_distance=</strong>(distance : Number)</a>
         
           <div class="summary"><p>Set the minimum distance of the sound</p></div>
         
@@ -992,14 +1021,14 @@ changed at any time with no impact on performances.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#pitch%3AFloat32-instance-method" class="signature"><strong>#pitch</strong> : Float32</a>
+        <a href="#pitch:Float32-instance-method" class="signature"><strong>#pitch</strong> : Float32</a>
         
           <div class="summary"><p>Get the pitch of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pitch%3D%28pitch%3ANumber%29-instance-method" class="signature"><strong>#pitch=</strong>(pitch : Number)</a>
+        <a href="#pitch=(pitch:Number)-instance-method" class="signature"><strong>#pitch=</strong>(pitch : Number)</a>
         
           <div class="summary"><p>Set the pitch of the sound</p></div>
         
@@ -1013,42 +1042,42 @@ changed at any time with no impact on performances.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3AVector3f-instance-method" class="signature"><strong>#position</strong> : Vector3f</a>
+        <a href="#position:Vector3f-instance-method" class="signature"><strong>#position</strong> : Vector3f</a>
         
           <div class="summary"><p>Get the 3D position of the sound in the audio scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3D%28position%3AVector3f%29-instance-method" class="signature"><strong>#position=</strong>(position : Vector3f)</a>
+        <a href="#position=(position:Vector3f)-instance-method" class="signature"><strong>#position=</strong>(position : Vector3f)</a>
         
           <div class="summary"><p>Set the 3D position of the sound in the audio scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#relative_to_listener%3D%28relative%3ABool%29-instance-method" class="signature"><strong>#relative_to_listener=</strong>(relative : Bool)</a>
+        <a href="#relative_to_listener=(relative:Bool)-instance-method" class="signature"><strong>#relative_to_listener=</strong>(relative : Bool)</a>
         
           <div class="summary"><p>Make the sound's position relative to the listener or absolute</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#relative_to_listener%3F%3ABool-instance-method" class="signature"><strong>#relative_to_listener?</strong> : Bool</a>
+        <a href="#relative_to_listener?:Bool-instance-method" class="signature"><strong>#relative_to_listener?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether the sound's position is relative to the        listener or is absolute</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" class="signature"><strong>#set_position</strong>(x : Number, y : Number, z : Number)</a>
+        <a href="#set_position(x:Number,y:Number,z:Number)-instance-method" class="signature"><strong>#set_position</strong>(x : Number, y : Number, z : Number)</a>
         
           <div class="summary"><p>Set the 3D position of the sound in the audio scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status%3ASoundSource%3A%3AStatus-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
+        <a href="#status:SoundSource::Status-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
         
           <div class="summary"><p>Get the current status of the sound (stopped, paused, playing)</p></div>
         
@@ -1062,14 +1091,14 @@ changed at any time with no impact on performances.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#volume%3AFloat32-instance-method" class="signature"><strong>#volume</strong> : Float32</a>
+        <a href="#volume:Float32-instance-method" class="signature"><strong>#volume</strong> : Float32</a>
         
           <div class="summary"><p>Get the volume of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#volume%3D%28volume%3ANumber%29-instance-method" class="signature"><strong>#volume=</strong>(volume : Number)</a>
+        <a href="#volume=(volume:Number)-instance-method" class="signature"><strong>#volume=</strong>(volume : Number)</a>
         
           <div class="summary"><p>Set the volume of the sound</p></div>
         
@@ -1116,53 +1145,40 @@ changed at any time with no impact on performances.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p>
-
-<p>This constructor is meant to be called by derived classes only.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L398" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
 
-
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="attenuation:Float32-instance-method">
       <div class="signature">
         
         def <strong>attenuation</strong> : Float32
 
-        <a class="method-permalink" href="#attenuation%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#attenuation:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the attenuation factor of the sound</p>
+        <div class="doc">
+          
+          <p>Get the attenuation factor of the sound</p>
 
 <p><em>Returns:</em> Attenuation factor of the sound</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#attenuation%3D%28attenuation%3ANumber%29-instance-method">#attenuation=</a></code>, <code><a href="../SF/SoundSource.html#min_distance%3AFloat32-instance-method">#min_distance</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#attenuation=(attenuation:Number)-instance-method">#attenuation=</a></code>, <code><a href="../SF/SoundSource.html#min_distance:Float32-instance-method">#min_distance</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L361" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L361" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,10 +1188,12 @@ changed at any time with no impact on performances.</p>
         
         def <strong>attenuation=</strong>(attenuation : Number)
 
-        <a class="method-permalink" href="#attenuation%3D%28attenuation%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#attenuation=(attenuation:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the attenuation factor of the sound</p>
+        <div class="doc">
+          
+          <p>Set the attenuation factor of the sound</p>
 
 <p>The attenuation is a multiplicative factor which makes
 the sound more or less loud according to its distance
@@ -1188,12 +1206,13 @@ The default value of the attenuation is 1.</p>
 
 <ul><li><em>attenuation</em> - New attenuation factor of the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#attenuation%3AFloat32-instance-method">#attenuation</a></code>, <code><a href="../SF/SoundSource.html#min_distance%3D%28distance%3ANumber%29-instance-method">#min_distance=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#attenuation:Float32-instance-method">#attenuation</a></code>, <code><a href="../SF/SoundSource.html#min_distance=(distance:Number)-instance-method">#min_distance=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L306" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L306" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1206,12 +1225,15 @@ The default value of the attenuation is 1.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L208" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L208" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1221,19 +1243,22 @@ The default value of the attenuation is 1.</p>
         
         def <strong>min_distance</strong> : Float32
 
-        <a class="method-permalink" href="#min_distance%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#min_distance:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the minimum distance of the sound</p>
+        <div class="doc">
+          
+          <p>Get the minimum distance of the sound</p>
 
 <p><em>Returns:</em> Minimum distance of the sound</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#min_distance%3D%28distance%3ANumber%29-instance-method">#min_distance=</a></code>, <code><a href="../SF/SoundSource.html#attenuation%3AFloat32-instance-method">#attenuation</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#min_distance=(distance:Number)-instance-method">#min_distance=</a></code>, <code><a href="../SF/SoundSource.html#attenuation:Float32-instance-method">#attenuation</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L352" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L352" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,10 +1268,12 @@ The default value of the attenuation is 1.</p>
         
         def <strong>min_distance=</strong>(distance : Number)
 
-        <a class="method-permalink" href="#min_distance%3D%28distance%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#min_distance=(distance:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the minimum distance of the sound</p>
+        <div class="doc">
+          
+          <p>Set the minimum distance of the sound</p>
 
 <p>The "minimum distance" of a sound is the maximum
 distance at which it is heard at its maximum volume. Further
@@ -1257,12 +1284,13 @@ The default value of the minimum distance is 1.</p>
 
 <ul><li><em>distance</em> - New minimum distance of the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#min_distance%3AFloat32-instance-method">#min_distance</a></code>, <code><a href="../SF/SoundSource.html#attenuation%3D%28attenuation%3ANumber%29-instance-method">#attenuation=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#min_distance:Float32-instance-method">#min_distance</a></code>, <code><a href="../SF/SoundSource.html#attenuation=(attenuation:Number)-instance-method">#attenuation=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L289" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L289" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1275,17 +1303,20 @@ The default value of the minimum distance is 1.</p>
         <a class="method-permalink" href="#pause-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Pause the sound source</p>
+        <div class="doc">
+          
+          <p>Pause the sound source</p>
 
 <p>This function pauses the source if it was playing,
 otherwise (source already paused or stopped) it has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L379" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L379" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1295,19 +1326,22 @@ otherwise (source already paused or stopped) it has no effect.</p>
         
         def <strong>pitch</strong> : Float32
 
-        <a class="method-permalink" href="#pitch%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#pitch:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the pitch of the sound</p>
+        <div class="doc">
+          
+          <p>Get the pitch of the sound</p>
 
 <p><em>Returns:</em> Pitch of the sound</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pitch%3D%28pitch%3ANumber%29-instance-method">#pitch=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pitch=(pitch:Number)-instance-method">#pitch=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L314" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L314" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,10 +1351,12 @@ otherwise (source already paused or stopped) it has no effect.</p>
         
         def <strong>pitch=</strong>(pitch : Number)
 
-        <a class="method-permalink" href="#pitch%3D%28pitch%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#pitch=(pitch:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the pitch of the sound</p>
+        <div class="doc">
+          
+          <p>Set the pitch of the sound</p>
 
 <p>The pitch represents the perceived fundamental frequency
 of a sound; thus you can make a sound more acute or grave
@@ -1330,12 +1366,13 @@ The default value for the pitch is 1.</p>
 
 <ul><li><em>pitch</em> - New pitch to apply to the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pitch%3AFloat32-instance-method">#pitch</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pitch:Float32-instance-method">#pitch</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L223" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L223" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1348,18 +1385,21 @@ The default value for the pitch is 1.</p>
         <a class="method-permalink" href="#play-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Start or resume playing the sound source</p>
+        <div class="doc">
+          
+          <p>Start or resume playing the sound source</p>
 
 <p>This function starts the source if it was stopped, resumes
 it if it was paused, and restarts it from the beginning if
 it was already playing.</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/SoundSource.html#stop-instance-method">#stop</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L372" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1369,19 +1409,22 @@ it was already playing.</p>
         
         def <strong>position</strong> : <a href="../SF/Vector3f.html">Vector3f</a>
 
-        <a class="method-permalink" href="#position%3AVector3f-instance-method">#</a>
+        <a class="method-permalink" href="#position:Vector3f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the 3D position of the sound in the audio scene</p>
+        <div class="doc">
+          
+          <p>Get the 3D position of the sound in the audio scene</p>
 
 <p><em>Returns:</em> Position of the sound</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position%3D%28position%3AVector3f%29-instance-method">#position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position=(position:Vector3f)-instance-method">#position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L332" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1391,10 +1434,12 @@ it was already playing.</p>
         
         def <strong>position=</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
 
-        <a class="method-permalink" href="#position%3D%28position%3AVector3f%29-instance-method">#</a>
+        <a class="method-permalink" href="#position=(position:Vector3f)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the 3D position of the sound in the audio scene</p>
+        <div class="doc">
+          
+          <p>Set the 3D position of the sound in the audio scene</p>
 
 <p>Only sounds with one channel (mono sounds) can be
 spatialized.
@@ -1402,12 +1447,13 @@ The default position of a sound is (0, 0, 0).</p>
 
 <ul><li><em>position</em> - Position of the sound in the scene</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position%3AVector3f-instance-method">#position</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position:Vector3f-instance-method">#position</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L260" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L260" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1417,10 +1463,12 @@ The default position of a sound is (0, 0, 0).</p>
         
         def <strong>relative_to_listener=</strong>(relative : Bool)
 
-        <a class="method-permalink" href="#relative_to_listener%3D%28relative%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#relative_to_listener=(relative:Bool)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Make the sound's position relative to the listener or absolute</p>
+        <div class="doc">
+          
+          <p>Make the sound's position relative to the listener or absolute</p>
 
 <p>Making a sound relative to the listener will ensure that it will always
 be played the same way regardless of the position of the listener.
@@ -1430,12 +1478,13 @@ The default value is false (position is absolute).</p>
 
 <ul><li><em>relative</em> - True to set the position relative, false to set it absolute</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#relative_to_listener%3F%3ABool-instance-method">#relative_to_listener?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#relative_to_listener?:Bool-instance-method">#relative_to_listener?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L274" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L274" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1445,21 +1494,24 @@ The default value is false (position is absolute).</p>
         
         def <strong>relative_to_listener?</strong> : Bool
 
-        <a class="method-permalink" href="#relative_to_listener%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#relative_to_listener?:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether the sound's position is relative to the</p>
+        <div class="doc">
+          
+          <p>Tell whether the sound's position is relative to the</p>
 
 <pre><code>   listener or is absolute</code></pre>
 
 <p><em>Returns:</em> True if the position is relative, false if it's absolute</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#relative_to_listener%3D%28relative%3ABool%29-instance-method">#relative_to_listener=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#relative_to_listener=(relative:Bool)-instance-method">#relative_to_listener=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L343" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L343" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,10 +1521,12 @@ The default value is false (position is absolute).</p>
         
         def <strong>set_position</strong>(x : Number, y : Number, z : Number)
 
-        <a class="method-permalink" href="#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_position(x:Number,y:Number,z:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the 3D position of the sound in the audio scene</p>
+        <div class="doc">
+          
+          <p>Set the 3D position of the sound in the audio scene</p>
 
 <p>Only sounds with one channel (mono sounds) can be
 spatialized.
@@ -1480,12 +1534,13 @@ The default position of a sound is (0, 0, 0).</p>
 
 <ul><li><em>x</em> - X coordinate of the position of the sound in the scene</li><li><em>y</em> - Y coordinate of the position of the sound in the scene</li><li><em>z</em> - Z coordinate of the position of the sound in the scene</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position%3AVector3f-instance-method">#position</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#position:Vector3f-instance-method">#position</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L248" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L248" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1495,17 +1550,20 @@ The default position of a sound is (0, 0, 0).</p>
         
         def <strong>status</strong> : <a href="../SF/SoundSource/Status.html">SoundSource::Status</a>
 
-        <a class="method-permalink" href="#status%3ASoundSource%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#status:SoundSource::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current status of the sound (stopped, paused, playing)</p>
+        <div class="doc">
+          
+          <p>Get the current status of the sound (stopped, paused, playing)</p>
 
-<p><em>Returns:</em> Current status of the sound</p></div>
+<p><em>Returns:</em> Current status of the sound</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L391" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L391" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1518,18 +1576,21 @@ The default position of a sound is (0, 0, 0).</p>
         <a class="method-permalink" href="#stop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Stop playing the sound source</p>
+        <div class="doc">
+          
+          <p>Stop playing the sound source</p>
 
 <p>This function stops the source if it was playing or paused,
 and does nothing if it was already stopped.
 It also resets the playing position (unlike pause()).</p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#play-instance-method">#play</a></code>, <code><a href="../SF/SoundSource.html#pause-instance-method">#pause</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L387" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L387" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1539,19 +1600,22 @@ It also resets the playing position (unlike pause()).</p>
         
         def <strong>volume</strong> : Float32
 
-        <a class="method-permalink" href="#volume%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#volume:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the volume of the sound</p>
+        <div class="doc">
+          
+          <p>Get the volume of the sound</p>
 
 <p><em>Returns:</em> Volume of the sound, in the range <code>0..100</code></p>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#volume%3D%28volume%3ANumber%29-instance-method">#volume=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#volume=(volume:Number)-instance-method">#volume=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L323" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L323" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1561,22 +1625,25 @@ It also resets the playing position (unlike pause()).</p>
         
         def <strong>volume=</strong>(volume : Number)
 
-        <a class="method-permalink" href="#volume%3D%28volume%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#volume=(volume:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the volume of the sound</p>
+        <div class="doc">
+          
+          <p>Set the volume of the sound</p>
 
 <p>The volume is a value between 0 (mute) and 100 (full volume).
 The default value for the volume is 100.</p>
 
 <ul><li><em>volume</em> - Volume of the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/SoundSource.html#volume%3AFloat32-instance-method">#volume</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/SoundSource.html#volume:Float32-instance-method">#volume</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L234" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L234" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::VertexArray - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Define a set of one or more 2D primitives</p>
 
@@ -901,11 +912,18 @@ window.draw(lines)</code></pre>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
+    
   </ul>
 
 
@@ -917,10 +935,19 @@ window.draw(lines)</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1586" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1586" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -929,11 +956,18 @@ window.draw(lines)</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D0%29-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, vertex_count : Int = <span class="n">0</span>)</a>
+        <a href="#new(type:PrimitiveType,vertex_count:Int=0)-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, vertex_count : Int = <span class="n">0</span>)</a>
         
           <div class="summary"><p>Construct the vertex array with a type and an initial number of vertices</p></div>
         
@@ -952,32 +986,39 @@ window.draw(lines)</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%5B%5D%28index%3AInt%29%3AVertex-instance-method" class="signature"><strong>#[]</strong>(index : Int) : Vertex</a>
+        <a href="#[](index:Int):Vertex-instance-method" class="signature"><strong>#[]</strong>(index : Int) : Vertex</a>
         
           <div class="summary"><p>Get the vertex by its index</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%5B%5D%3D%28index%3AInt%2Cvalue%3AVertex%29-instance-method" class="signature"><strong>#[]=</strong>(index : Int, value : Vertex)</a>
+        <a href="#[]=(index:Int,value:Vertex)-instance-method" class="signature"><strong>#[]=</strong>(index : Int, value : Vertex)</a>
         
           <div class="summary"><p>Set the vertex by its index</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#append%28vertex%3AVertex%29-instance-method" class="signature"><strong>#append</strong>(vertex : Vertex)</a>
+        <a href="#append(vertex:Vertex)-instance-method" class="signature"><strong>#append</strong>(vertex : Vertex)</a>
         
           <div class="summary"><p>Add a vertex to the array</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bounds%3AFloatRect-instance-method" class="signature"><strong>#bounds</strong> : FloatRect</a>
+        <a href="#bounds:FloatRect-instance-method" class="signature"><strong>#bounds</strong> : FloatRect</a>
         
           <div class="summary"><p>Compute the bounding rectangle of the vertex array</p></div>
         
@@ -991,7 +1032,9 @@ window.draw(lines)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1001,28 +1044,28 @@ window.draw(lines)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#primitive_type%3APrimitiveType-instance-method" class="signature"><strong>#primitive_type</strong> : PrimitiveType</a>
+        <a href="#primitive_type:PrimitiveType-instance-method" class="signature"><strong>#primitive_type</strong> : PrimitiveType</a>
         
           <div class="summary"><p>Get the type of primitives drawn by the vertex array</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
+        <a href="#primitive_type=(type:PrimitiveType)-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
         
           <div class="summary"><p>Set the type of primitives to draw</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#resize%28vertex_count%3AInt%29-instance-method" class="signature"><strong>#resize</strong>(vertex_count : Int)</a>
+        <a href="#resize(vertex_count:Int)-instance-method" class="signature"><strong>#resize</strong>(vertex_count : Int)</a>
         
           <div class="summary"><p>Resize the vertex array</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#vertex_count%3AInt32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
+        <a href="#vertex_count:Int32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
         
           <div class="summary"><p>Return the vertex count</p></div>
         
@@ -1041,7 +1084,7 @@ window.draw(lines)</code></pre>
   <h3>Instance methods inherited from module <code><a href="../SF/Drawable.html">SF::Drawable</a></code></h3>
   
   
-    <a href="../SF/Drawable.html#draw%28target%3ARenderTarget%2Cstates%3ARenderStates%29-instance-method" class="tooltip">
+    <a href="../SF/Drawable.html#draw(target:RenderTarget,states:RenderStates)-instance-method" class="tooltip">
       <span>draw(target : RenderTarget, states : RenderStates)</span>
     draw</a>
     
@@ -1078,24 +1121,34 @@ window.draw(lines)</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(type:PrimitiveType,vertex_count:Int=0)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, vertex_count : Int = <span class="n">0</span>)
 
-        <a class="method-permalink" href="#new%28type%3APrimitiveType%2Cvertex_count%3AInt%3D0%29-class-method">#</a>
+        <a class="method-permalink" href="#new(type:PrimitiveType,vertex_count:Int=0)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the vertex array with a type and an initial number of vertices</p>
+        <div class="doc">
+          
+          <p>Construct the vertex array with a type and an initial number of vertices</p>
 
-<ul><li><em>type</em> - Type of primitives</li><li><em>vertex_count</em> - Initial number of vertices in the array</li></ul></div>
+<ul><li><em>type</em> - Type of primitives</li><li><em>vertex_count</em> - Initial number of vertices in the array</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1603" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1603" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1108,14 +1161,17 @@ window.draw(lines)</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Creates an empty vertex array.</p></div>
+<p>Creates an empty vertex array.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1595" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1595" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1125,17 +1181,26 @@ window.draw(lines)</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="[](index:Int):Vertex-instance-method">
       <div class="signature">
         
         def <strong>[]</strong>(index : Int) : <a href="../SF/Vertex.html">Vertex</a>
 
-        <a class="method-permalink" href="#%5B%5D%28index%3AInt%29%3AVertex-instance-method">#</a>
+        <a class="method-permalink" href="#[](index:Int):Vertex-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the vertex by its index</p>
+        <div class="doc">
+          
+          <p>Get the vertex by its index</p>
 
 <p>This method doesn't check <em>index</em>, it must be in range
 <code>0 ... vertex_count</code>. The behavior is undefined otherwise.</p>
@@ -1144,12 +1209,13 @@ window.draw(lines)</code></pre>
 
 <p><em>Returns:</em> The index-th vertex</p>
 
-<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3AInt32-instance-method">#vertex_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count:Int32-instance-method">#vertex_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1635" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1635" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1159,22 +1225,25 @@ window.draw(lines)</code></pre>
         
         def <strong>[]=</strong>(index : Int, value : <a href="../SF/Vertex.html">Vertex</a>)
 
-        <a class="method-permalink" href="#%5B%5D%3D%28index%3AInt%2Cvalue%3AVertex%29-instance-method">#</a>
+        <a class="method-permalink" href="#[]=(index:Int,value:Vertex)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the vertex by its index</p>
+        <div class="doc">
+          
+          <p>Set the vertex by its index</p>
 
 <p>This method doesn't check <em>index</em>, it must be in range
 <code>0 ... vertex_count</code>. The behavior is undefined otherwise.</p>
 
 <ul><li><em>index</em> - Index of the vertex to set</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count%3AInt32-instance-method">#vertex_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/VertexArray.html#vertex_count:Int32-instance-method">#vertex_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1622" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1622" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1184,17 +1253,20 @@ window.draw(lines)</code></pre>
         
         def <strong>append</strong>(vertex : <a href="../SF/Vertex.html">Vertex</a>)
 
-        <a class="method-permalink" href="#append%28vertex%3AVertex%29-instance-method">#</a>
+        <a class="method-permalink" href="#append(vertex:Vertex)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Add a vertex to the array</p>
+        <div class="doc">
+          
+          <p>Add a vertex to the array</p>
 
-<ul><li><em>vertex</em> - Vertex to add</li></ul></div>
+<ul><li><em>vertex</em> - Vertex to add</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1664" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1664" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,20 +1276,23 @@ window.draw(lines)</code></pre>
         
         def <strong>bounds</strong> : <a href="../SF/FloatRect.html">FloatRect</a>
 
-        <a class="method-permalink" href="#bounds%3AFloatRect-instance-method">#</a>
+        <a class="method-permalink" href="#bounds:FloatRect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Compute the bounding rectangle of the vertex array</p>
+        <div class="doc">
+          
+          <p>Compute the bounding rectangle of the vertex array</p>
 
 <p>This function returns the minimal axis-aligned rectangle
 that contains all the vertices of the array.</p>
 
-<p><em>Returns:</em> Bounding rectangle of the vertex array</p></div>
+<p><em>Returns:</em> Bounding rectangle of the vertex array</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1694" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1694" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,17 +1305,20 @@ that contains all the vertices of the array.</p>
         <a class="method-permalink" href="#clear-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Clear the vertex array</p>
+        <div class="doc">
+          
+          <p>Clear the vertex array</p>
 
 <p>This function removes all the vertices from the array.
 It doesn't deallocate the corresponding memory, so that
 adding new vertices after clearing doesn't involve
-reallocating all the memory.</p></div>
+reallocating all the memory.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1646" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1646" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1248,15 +1326,27 @@ reallocating all the memory.</p></div>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1725" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1725" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1272,7 +1362,7 @@ reallocating all the memory.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1588" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1588" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1282,17 +1372,20 @@ reallocating all the memory.</p></div>
         
         def <strong>primitive_type</strong> : <a href="../SF/PrimitiveType.html">PrimitiveType</a>
 
-        <a class="method-permalink" href="#primitive_type%3APrimitiveType-instance-method">#</a>
+        <a class="method-permalink" href="#primitive_type:PrimitiveType-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the type of primitives drawn by the vertex array</p>
+        <div class="doc">
+          
+          <p>Get the type of primitives drawn by the vertex array</p>
 
-<p><em>Returns:</em> Primitive type</p></div>
+<p><em>Returns:</em> Primitive type</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1684" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1684" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1302,10 +1395,12 @@ reallocating all the memory.</p></div>
         
         def <strong>primitive_type=</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
 
-        <a class="method-permalink" href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method">#</a>
+        <a class="method-permalink" href="#primitive_type=(type:PrimitiveType)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the type of primitives to draw</p>
+        <div class="doc">
+          
+          <p>Set the type of primitives to draw</p>
 
 <p>This function defines how the vertices must be interpreted
 when it's time to draw them:</p>
@@ -1313,12 +1408,13 @@ when it's time to draw them:</p>
 <ul><li>As points</li><li>As lines</li><li>As triangles</li><li>As quads
 The default primitive type is <code>SF::Points</code>.</li></ul>
 
-<ul><li><em>type</em> - Type of primitive</li></ul></div>
+<ul><li><em>type</em> - Type of primitive</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1678" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1678" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1328,10 +1424,12 @@ The default primitive type is <code>SF::Points</code>.</li></ul>
         
         def <strong>resize</strong>(vertex_count : Int)
 
-        <a class="method-permalink" href="#resize%28vertex_count%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#resize(vertex_count:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Resize the vertex array</p>
+        <div class="doc">
+          
+          <p>Resize the vertex array</p>
 
 <p>If <em>vertex_count</em> is greater than the current size, the previous
 vertices are kept and new (default-constructed) vertices are
@@ -1339,12 +1437,13 @@ added.
 If <em>vertex_count</em> is less than the current size, existing vertices
 are removed from the array.</p>
 
-<ul><li><em>vertex_count</em> - New size of the array (number of vertices)</li></ul></div>
+<ul><li><em>vertex_count</em> - New size of the array (number of vertices)</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1658" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1658" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1354,17 +1453,20 @@ are removed from the array.</p>
         
         def <strong>vertex_count</strong> : Int32
 
-        <a class="method-permalink" href="#vertex_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#vertex_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the vertex count</p>
+        <div class="doc">
+          
+          <p>Return the vertex count</p>
 
-<p><em>Returns:</em> Number of vertices in the array</p></div>
+<p><em>Returns:</em> Number of vertices in the array</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1610" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1610" target="_blank">View source</a>]
         
       </div>
     </div>

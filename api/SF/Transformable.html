@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Transformable - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Decomposed transform defined by a position, a rotation and a scale</p>
 
@@ -962,15 +973,22 @@ to texels (pixels in the texture). More specifically, this means:</p>
 
 
 
-  <h2>Direct Known Subclasses</h2>
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Shape.html">SF::Shape</a></li>
-  
-    <li class="other-type"><a href="../SF/Sprite.html">SF::Sprite</a></li>
-  
-    <li class="other-type"><a href="../SF/Text.html">SF::Text</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Shape.html">SF::Shape</a></li>
+    
+      <li class="other-type"><a href="../SF/Sprite.html">SF::Sprite</a></li>
+    
+      <li class="other-type"><a href="../SF/Text.html">SF::Text</a></li>
+    
   </ul>
 
 
@@ -978,10 +996,19 @@ to texels (pixels in the texture). More specifically, this means:</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L931" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L931" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -990,7 +1017,14 @@ to texels (pixels in the texture). More specifically, this means:</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -1006,11 +1040,20 @@ to texels (pixels in the texture). More specifically, this means:</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1022,126 +1065,126 @@ to texels (pixels in the texture). More specifically, this means:</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#inverse_transform%3ATransform-instance-method" class="signature"><strong>#inverse_transform</strong> : Transform</a>
+        <a href="#inverse_transform:Transform-instance-method" class="signature"><strong>#inverse_transform</strong> : Transform</a>
         
           <div class="summary"><p>get the inverse of the combined transform of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
+        <a href="#move(offset:Vector2%7CTuple)-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Move the object by a given offset</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
+        <a href="#move(offset_x:Number,offset_y:Number)-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
         
           <div class="summary"><p>Move the object by a given offset</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#origin%3AVector2f-instance-method" class="signature"><strong>#origin</strong> : Vector2f</a>
+        <a href="#origin:Vector2f-instance-method" class="signature"><strong>#origin</strong> : Vector2f</a>
         
           <div class="summary"><p>get the local origin of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#origin%3D%28origin%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#origin=</strong>(origin : Vector2 | Tuple)</a>
+        <a href="#origin=(origin:Vector2%7CTuple)-instance-method" class="signature"><strong>#origin=</strong>(origin : Vector2 | Tuple)</a>
         
           <div class="summary"><p>set the local origin of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3AVector2f-instance-method" class="signature"><strong>#position</strong> : Vector2f</a>
+        <a href="#position:Vector2f-instance-method" class="signature"><strong>#position</strong> : Vector2f</a>
         
           <div class="summary"><p>get the position of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3D%28position%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#position=</strong>(position : Vector2 | Tuple)</a>
+        <a href="#position=(position:Vector2%7CTuple)-instance-method" class="signature"><strong>#position=</strong>(position : Vector2 | Tuple)</a>
         
           <div class="summary"><p>set the position of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotate%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
+        <a href="#rotate(angle:Number)-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
         
           <div class="summary"><p>Rotate the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3AFloat32-instance-method" class="signature"><strong>#rotation</strong> : Float32</a>
+        <a href="#rotation:Float32-instance-method" class="signature"><strong>#rotation</strong> : Float32</a>
         
           <div class="summary"><p>get the orientation of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3D%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
+        <a href="#rotation=(angle:Number)-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
         
           <div class="summary"><p>set the orientation of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%3AVector2f-instance-method" class="signature"><strong>#scale</strong> : Vector2f</a>
+        <a href="#scale:Vector2f-instance-method" class="signature"><strong>#scale</strong> : Vector2f</a>
         
           <div class="summary"><p>get the current scale of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%28factor%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#scale</strong>(factor : Vector2 | Tuple)</a>
+        <a href="#scale(factor:Vector2%7CTuple)-instance-method" class="signature"><strong>#scale</strong>(factor : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Scale the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method" class="signature"><strong>#scale</strong>(factor_x : Number, factor_y : Number)</a>
+        <a href="#scale(factor_x:Number,factor_y:Number)-instance-method" class="signature"><strong>#scale</strong>(factor_x : Number, factor_y : Number)</a>
         
           <div class="summary"><p>Scale the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale%3D%28factors%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#scale=</strong>(factors : Vector2 | Tuple)</a>
+        <a href="#scale=(factors:Vector2%7CTuple)-instance-method" class="signature"><strong>#scale=</strong>(factors : Vector2 | Tuple)</a>
         
           <div class="summary"><p>set the scale factors of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_origin%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="signature"><strong>#set_origin</strong>(x : Number, y : Number)</a>
+        <a href="#set_origin(x:Number,y:Number)-instance-method" class="signature"><strong>#set_origin</strong>(x : Number, y : Number)</a>
         
           <div class="summary"><p>set the local origin of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_position%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="signature"><strong>#set_position</strong>(x : Number, y : Number)</a>
+        <a href="#set_position(x:Number,y:Number)-instance-method" class="signature"><strong>#set_position</strong>(x : Number, y : Number)</a>
         
           <div class="summary"><p>set the position of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method" class="signature"><strong>#set_scale</strong>(factor_x : Number, factor_y : Number)</a>
+        <a href="#set_scale(factor_x:Number,factor_y:Number)-instance-method" class="signature"><strong>#set_scale</strong>(factor_x : Number, factor_y : Number)</a>
         
           <div class="summary"><p>set the scale factors of the object</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transform%3ATransform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
+        <a href="#transform:Transform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
         
           <div class="summary"><p>get the combined transform of the object</p></div>
         
@@ -1178,7 +1221,14 @@ to texels (pixels in the texture). More specifically, this means:</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1188,12 +1238,15 @@ to texels (pixels in the texture). More specifically, this means:</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L934" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L934" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1203,20 +1256,39 @@ to texels (pixels in the texture). More specifically, this means:</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1193" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1193" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1229,12 +1301,15 @@ to texels (pixels in the texture). More specifically, this means:</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Virtual destructor</p></div>
+        <div class="doc">
+          
+          <p>Virtual destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L939" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L939" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1244,19 +1319,22 @@ to texels (pixels in the texture). More specifically, this means:</p>
         
         def <strong>inverse_transform</strong> : <a href="../SF/Transform.html">Transform</a>
 
-        <a class="method-permalink" href="#inverse_transform%3ATransform-instance-method">#</a>
+        <a class="method-permalink" href="#inverse_transform:Transform-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the inverse of the combined transform of the object</p>
+        <div class="doc">
+          
+          <p>get the inverse of the combined transform of the object</p>
 
 <p><em>Returns:</em> Inverse of the combined transformations applied to the object</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#transform%3ATransform-instance-method">#transform</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#transform:Transform-instance-method">#transform</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1175" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1266,10 +1344,12 @@ to texels (pixels in the texture). More specifically, this means:</p>
         
         def <strong>move</strong>(offset : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#move%28offset%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#move(offset:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Move the object by a given offset</p>
+        <div class="doc">
+          
+          <p>Move the object by a given offset</p>
 
 <p>This function adds to the current position of the object,
 unlike position= which overwrites it.
@@ -1279,12 +1359,13 @@ Thus, it is equivalent to the following code:</p>
 
 <ul><li><em>offset</em> - Offset</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#position%3D%28position%3AVector2%7CTuple%29-instance-method">#position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#position=(position:Vector2%7CTuple)-instance-method">#position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1109" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1109" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,10 +1375,12 @@ Thus, it is equivalent to the following code:</p>
         
         def <strong>move</strong>(offset_x : Number, offset_y : Number)
 
-        <a class="method-permalink" href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#move(offset_x:Number,offset_y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Move the object by a given offset</p>
+        <div class="doc">
+          
+          <p>Move the object by a given offset</p>
 
 <p>This function adds to the current position of the object,
 unlike position= which overwrites it.
@@ -1308,12 +1391,13 @@ object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="
 
 <ul><li><em>offset_x</em> - X offset</li><li><em>offset_y</em> - Y offset</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#position%3D%28position%3AVector2%7CTuple%29-instance-method">#position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#position=(position:Vector2%7CTuple)-instance-method">#position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1094" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1094" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1323,19 +1407,22 @@ object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="
         
         def <strong>origin</strong> : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#origin%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#origin:Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the local origin of the object</p>
+        <div class="doc">
+          
+          <p>get the local origin of the object</p>
 
 <p><em>Returns:</em> Current origin</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin%3D%28origin%3AVector2%7CTuple%29-instance-method">#origin=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin=(origin:Vector2%7CTuple)-instance-method">#origin=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1075" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1075" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,10 +1432,12 @@ object.set_position(pos.x <span class="o">+</span> offset_x, pos.y <span class="
         
         def <strong>origin=</strong>(origin : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#origin%3D%28origin%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#origin=(origin:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the local origin of the object</p>
+        <div class="doc">
+          
+          <p>set the local origin of the object</p>
 
 <p>The origin of an object defines the center point for
 all transformations (position, scale, rotation).
@@ -1359,12 +1448,13 @@ The default origin of a transformable object is (0, 0).</p>
 
 <ul><li><em>origin</em> - New origin</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin%3AVector2f-instance-method">#origin</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin:Vector2f-instance-method">#origin</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1035" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1035" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1374,19 +1464,22 @@ The default origin of a transformable object is (0, 0).</p>
         
         def <strong>position</strong> : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#position%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#position:Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the position of the object</p>
+        <div class="doc">
+          
+          <p>get the position of the object</p>
 
 <p><em>Returns:</em> Current position</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#position%3D%28position%3AVector2%7CTuple%29-instance-method">#position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#position=(position:Vector2%7CTuple)-instance-method">#position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1044" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1044" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1396,10 +1489,12 @@ The default origin of a transformable object is (0, 0).</p>
         
         def <strong>position=</strong>(position : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#position%3D%28position%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#position=(position:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the position of the object</p>
+        <div class="doc">
+          
+          <p>set the position of the object</p>
 
 <p>This function completely overwrites the previous position.
 See the move function to apply an offset based on the previous position instead.
@@ -1407,12 +1502,13 @@ The default position of a transformable object is (0, 0).</p>
 
 <ul><li><em>position</em> - New position</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#move%28offset%3AVector2%7CTuple%29-instance-method">#move</a></code>, <code><a href="../SF/Transformable.html#position%3AVector2f-instance-method">#position</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#move(offset:Vector2%7CTuple)-instance-method">#move</a></code>, <code><a href="../SF/Transformable.html#position:Vector2f-instance-method">#position</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L965" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L965" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,10 +1518,12 @@ The default position of a transformable object is (0, 0).</p>
         
         def <strong>rotate</strong>(angle : Number)
 
-        <a class="method-permalink" href="#rotate%28angle%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#rotate(angle:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Rotate the object</p>
+        <div class="doc">
+          
+          <p>Rotate the object</p>
 
 <p>This function adds to the current rotation of the object,
 unlike rotation= which overwrites it.
@@ -1433,12 +1531,13 @@ Thus, it is equivalent to the following code:</p>
 
 <pre><code>object.rotation += angle</code></pre>
 
-<ul><li><em>angle</em> - Angle of rotation, in degrees</li></ul></div>
+<ul><li><em>angle</em> - Angle of rotation, in degrees</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1123" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1448,21 +1547,24 @@ Thus, it is equivalent to the following code:</p>
         
         def <strong>rotation</strong> : Float32
 
-        <a class="method-permalink" href="#rotation%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#rotation:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the orientation of the object</p>
+        <div class="doc">
+          
+          <p>get the orientation of the object</p>
 
 <p>The rotation is always in the range <code>0.0 ... 360.0</code></p>
 
 <p><em>Returns:</em> Current rotation, in degrees</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#rotation=(angle:Number)-instance-method">#rotation=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1056" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1056" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1472,10 +1574,12 @@ Thus, it is equivalent to the following code:</p>
         
         def <strong>rotation=</strong>(angle : Number)
 
-        <a class="method-permalink" href="#rotation%3D%28angle%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#rotation=(angle:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the orientation of the object</p>
+        <div class="doc">
+          
+          <p>set the orientation of the object</p>
 
 <p>This function completely overwrites the previous rotation.
 See the rotate function to add an angle based on the previous rotation instead.
@@ -1483,12 +1587,13 @@ The default rotation of a transformable object is 0.</p>
 
 <ul><li><em>angle</em> - New rotation, in degrees</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code>, <code><a href="../SF/Transformable.html#rotation%3AFloat32-instance-method">#rotation</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#rotate(angle:Number)-instance-method">#rotate</a></code>, <code><a href="../SF/Transformable.html#rotation:Float32-instance-method">#rotation</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L978" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L978" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1498,19 +1603,22 @@ The default rotation of a transformable object is 0.</p>
         
         def <strong>scale</strong> : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#scale%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#scale:Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the current scale of the object</p>
+        <div class="doc">
+          
+          <p>get the current scale of the object</p>
 
 <p><em>Returns:</em> Current scale factors</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale%3D%28factors%3AVector2%7CTuple%29-instance-method">#scale=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale=(factors:Vector2%7CTuple)-instance-method">#scale=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1065" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1065" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1520,10 +1628,12 @@ The default rotation of a transformable object is 0.</p>
         
         def <strong>scale</strong>(factor : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#scale%28factor%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#scale(factor:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Scale the object</p>
+        <div class="doc">
+          
+          <p>Scale the object</p>
 
 <p>This function multiplies the current scale of the object,
 unlike scale= which overwrites it.
@@ -1534,12 +1644,13 @@ object.scale <span class="o">=</span> {scale.x <span class="o">*</span> factor.x
 
 <ul><li><em>factor</em> - Scale factors</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale%3D%28factors%3AVector2%7CTuple%29-instance-method">#scale=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale=(factors:Vector2%7CTuple)-instance-method">#scale=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1156" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1549,10 +1660,12 @@ object.scale <span class="o">=</span> {scale.x <span class="o">*</span> factor.x
         
         def <strong>scale</strong>(factor_x : Number, factor_y : Number)
 
-        <a class="method-permalink" href="#scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#scale(factor_x:Number,factor_y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Scale the object</p>
+        <div class="doc">
+          
+          <p>Scale the object</p>
 
 <p>This function multiplies the current scale of the object,
 unlike scale= which overwrites it.
@@ -1563,12 +1676,13 @@ object.set_scale(scale.x <span class="o">*</span> factor_x, scale.y <span class=
 
 <ul><li><em>factor_x</em> - Horizontal scale factor</li><li><em>factor_y</em> - Vertical scale factor</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale%3D%28factors%3AVector2%7CTuple%29-instance-method">#scale=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale=(factors:Vector2%7CTuple)-instance-method">#scale=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1140" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1140" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1578,10 +1692,12 @@ object.set_scale(scale.x <span class="o">*</span> factor_x, scale.y <span class=
         
         def <strong>scale=</strong>(factors : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#scale%3D%28factors%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#scale=(factors:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the scale factors of the object</p>
+        <div class="doc">
+          
+          <p>set the scale factors of the object</p>
 
 <p>This function completely overwrites the previous scale.
 See the scale function to add a factor based on the previous scale instead.
@@ -1589,12 +1705,13 @@ The default scale of a transformable object is (1, 1).</p>
 
 <ul><li><em>factors</em> - New scale factors</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale%3AVector2f-instance-method">#scale</a></code>, <code><a href="../SF/Transformable.html#scale%3AVector2f-instance-method">#scale</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale:Vector2f-instance-method">#scale</a></code>, <code><a href="../SF/Transformable.html#scale:Vector2f-instance-method">#scale</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1003" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1003" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1604,10 +1721,12 @@ The default scale of a transformable object is (1, 1).</p>
         
         def <strong>set_origin</strong>(x : Number, y : Number)
 
-        <a class="method-permalink" href="#set_origin%28x%3ANumber%2Cy%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_origin(x:Number,y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the local origin of the object</p>
+        <div class="doc">
+          
+          <p>set the local origin of the object</p>
 
 <p>The origin of an object defines the center point for
 all transformations (position, scale, rotation).
@@ -1618,12 +1737,13 @@ The default origin of a transformable object is (0, 0).</p>
 
 <ul><li><em>x</em> - X coordinate of the new origin</li><li><em>y</em> - Y coordinate of the new origin</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin%3AVector2f-instance-method">#origin</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#origin:Vector2f-instance-method">#origin</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1020" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1020" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1633,10 +1753,12 @@ The default origin of a transformable object is (0, 0).</p>
         
         def <strong>set_position</strong>(x : Number, y : Number)
 
-        <a class="method-permalink" href="#set_position%28x%3ANumber%2Cy%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_position(x:Number,y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the position of the object</p>
+        <div class="doc">
+          
+          <p>set the position of the object</p>
 
 <p>This function completely overwrites the previous position.
 See the move function to apply an offset based on the previous position instead.
@@ -1644,12 +1766,13 @@ The default position of a transformable object is (0, 0).</p>
 
 <ul><li><em>x</em> - X coordinate of the new position</li><li><em>y</em> - Y coordinate of the new position</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#move%28offset%3AVector2%7CTuple%29-instance-method">#move</a></code>, <code><a href="../SF/Transformable.html#position%3AVector2f-instance-method">#position</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#move(offset:Vector2%7CTuple)-instance-method">#move</a></code>, <code><a href="../SF/Transformable.html#position:Vector2f-instance-method">#position</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L953" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L953" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1659,10 +1782,12 @@ The default position of a transformable object is (0, 0).</p>
         
         def <strong>set_scale</strong>(factor_x : Number, factor_y : Number)
 
-        <a class="method-permalink" href="#set_scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_scale(factor_x:Number,factor_y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>set the scale factors of the object</p>
+        <div class="doc">
+          
+          <p>set the scale factors of the object</p>
 
 <p>This function completely overwrites the previous scale.
 See the scale function to add a factor based on the previous scale instead.
@@ -1670,12 +1795,13 @@ The default scale of a transformable object is (1, 1).</p>
 
 <ul><li><em>factor_x</em> - New horizontal scale factor</li><li><em>factor_y</em> - New vertical scale factor</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale%3AVector2f-instance-method">#scale</a></code>, <code><a href="../SF/Transformable.html#scale%3AVector2f-instance-method">#scale</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#scale:Vector2f-instance-method">#scale</a></code>, <code><a href="../SF/Transformable.html#scale:Vector2f-instance-method">#scale</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L991" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L991" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1685,19 +1811,22 @@ The default scale of a transformable object is (1, 1).</p>
         
         def <strong>transform</strong> : <a href="../SF/Transform.html">Transform</a>
 
-        <a class="method-permalink" href="#transform%3ATransform-instance-method">#</a>
+        <a class="method-permalink" href="#transform:Transform-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>get the combined transform of the object</p>
+        <div class="doc">
+          
+          <p>get the combined transform of the object</p>
 
 <p><em>Returns:</em> Transform combining the position/rotation/scale/origin of the object</p>
 
-<p><em>See also:</em> <code><a href="../SF/Transformable.html#inverse_transform%3ATransform-instance-method">#inverse_transform</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Transformable.html#inverse_transform:Transform-instance-method">#inverse_transform</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1165" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1165" target="_blank">View source</a>]
         
       </div>
     </div>

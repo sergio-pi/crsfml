@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Cursor::Type - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -873,7 +877,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Enumeration of the native system cursor types</p>
 
@@ -889,13 +900,15 @@ is available on which platform.</p>
  <code>SF::Cursor::Hand</code>                   |  yes  |    yes   |   yes    |
  <code>SF::Cursor::SizeHorizontal</code>         |  yes  |    yes   |   yes    |
  <code>SF::Cursor::SizeVertical</code>           |  yes  |    yes   |   yes    |
- <code>SF::Cursor::SizeTopLeftBottomRight</code> |  no   |    no    |   yes    |
- <code>SF::Cursor::SizeBottomLeftTopRight</code> |  no   |    no    |   yes    |
+ <code>SF::Cursor::SizeTopLeftBottomRight</code> |  no   |    yes<em>  |   yes    |
+ <code>SF::Cursor::SizeBottomLeftTopRight</code> |  no   |    yes</em>  |   yes    |
  <code>SF::Cursor::SizeAll</code>                |  yes  |    no    |   yes    |
  <code>SF::Cursor::Cross</code>                  |  yes  |    yes   |   yes    |
- <code>SF::Cursor::Help</code>                   |  yes  |    no    |   yes    |
+ <code>SF::Cursor::Help</code>                   |  yes  |    yes*  |   yes    |
  <code>SF::Cursor::NotAllowed</code>             |  yes  |    yes   |   yes    |</p>
 
+<ul><li>These cursor types are undocumented so may not
+   be available on all versions, but have been tested on 10.13</li></ul>
 
 
 
@@ -909,10 +922,20 @@ is available on which platform.</p>
 
 
 
-  <h2>Defined in:</h2>
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L402" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L416" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -920,7 +943,14 @@ is available on which platform.</p>
 
 
   
-    <h2>Enum Members</h2>
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
   
   <dl>
     
@@ -1049,71 +1079,78 @@ is available on which platform.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#arrow%3F-instance-method" class="signature"><strong>#arrow?</strong></a>
+        <a href="#arrow?-instance-method" class="signature"><strong>#arrow?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#arrow_wait%3F-instance-method" class="signature"><strong>#arrow_wait?</strong></a>
+        <a href="#arrow_wait?-instance-method" class="signature"><strong>#arrow_wait?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#cross%3F-instance-method" class="signature"><strong>#cross?</strong></a>
+        <a href="#cross?-instance-method" class="signature"><strong>#cross?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hand%3F-instance-method" class="signature"><strong>#hand?</strong></a>
+        <a href="#hand?-instance-method" class="signature"><strong>#hand?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#help%3F-instance-method" class="signature"><strong>#help?</strong></a>
+        <a href="#help?-instance-method" class="signature"><strong>#help?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#not_allowed%3F-instance-method" class="signature"><strong>#not_allowed?</strong></a>
+        <a href="#not_allowed?-instance-method" class="signature"><strong>#not_allowed?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size_all%3F-instance-method" class="signature"><strong>#size_all?</strong></a>
+        <a href="#size_all?-instance-method" class="signature"><strong>#size_all?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size_bottom_left_top_right%3F-instance-method" class="signature"><strong>#size_bottom_left_top_right?</strong></a>
+        <a href="#size_bottom_left_top_right?-instance-method" class="signature"><strong>#size_bottom_left_top_right?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size_horizontal%3F-instance-method" class="signature"><strong>#size_horizontal?</strong></a>
+        <a href="#size_horizontal?-instance-method" class="signature"><strong>#size_horizontal?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size_top_left_bottom_right%3F-instance-method" class="signature"><strong>#size_top_left_bottom_right?</strong></a>
+        <a href="#size_top_left_bottom_right?-instance-method" class="signature"><strong>#size_top_left_bottom_right?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size_vertical%3F-instance-method" class="signature"><strong>#size_vertical?</strong></a>
+        <a href="#size_vertical?-instance-method" class="signature"><strong>#size_vertical?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text%3F-instance-method" class="signature"><strong>#text?</strong></a>
+        <a href="#text?-instance-method" class="signature"><strong>#text?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#wait%3F-instance-method" class="signature"><strong>#wait?</strong></a>
+        <a href="#wait?-instance-method" class="signature"><strong>#wait?</strong></a>
         
       </li>
     
@@ -1172,20 +1209,27 @@ is available on which platform.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="arrow?-instance-method">
       <div class="signature">
         
         def <strong>arrow?</strong>
 
-        <a class="method-permalink" href="#arrow%3F-instance-method">#</a>
+        <a class="method-permalink" href="#arrow?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L404" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L418" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1195,13 +1239,13 @@ is available on which platform.</p>
         
         def <strong>arrow_wait?</strong>
 
-        <a class="method-permalink" href="#arrow_wait%3F-instance-method">#</a>
+        <a class="method-permalink" href="#arrow_wait?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L406" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L420" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1211,13 +1255,13 @@ is available on which platform.</p>
         
         def <strong>cross?</strong>
 
-        <a class="method-permalink" href="#cross%3F-instance-method">#</a>
+        <a class="method-permalink" href="#cross?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L424" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L438" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1227,13 +1271,13 @@ is available on which platform.</p>
         
         def <strong>hand?</strong>
 
-        <a class="method-permalink" href="#hand%3F-instance-method">#</a>
+        <a class="method-permalink" href="#hand?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L412" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L426" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,13 +1287,13 @@ is available on which platform.</p>
         
         def <strong>help?</strong>
 
-        <a class="method-permalink" href="#help%3F-instance-method">#</a>
+        <a class="method-permalink" href="#help?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L426" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L440" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1259,13 +1303,13 @@ is available on which platform.</p>
         
         def <strong>not_allowed?</strong>
 
-        <a class="method-permalink" href="#not_allowed%3F-instance-method">#</a>
+        <a class="method-permalink" href="#not_allowed?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L428" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L442" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1275,13 +1319,13 @@ is available on which platform.</p>
         
         def <strong>size_all?</strong>
 
-        <a class="method-permalink" href="#size_all%3F-instance-method">#</a>
+        <a class="method-permalink" href="#size_all?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L422" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L436" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1291,13 +1335,13 @@ is available on which platform.</p>
         
         def <strong>size_bottom_left_top_right?</strong>
 
-        <a class="method-permalink" href="#size_bottom_left_top_right%3F-instance-method">#</a>
+        <a class="method-permalink" href="#size_bottom_left_top_right?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L420" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L434" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1307,13 +1351,13 @@ is available on which platform.</p>
         
         def <strong>size_horizontal?</strong>
 
-        <a class="method-permalink" href="#size_horizontal%3F-instance-method">#</a>
+        <a class="method-permalink" href="#size_horizontal?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L414" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L428" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1323,13 +1367,13 @@ is available on which platform.</p>
         
         def <strong>size_top_left_bottom_right?</strong>
 
-        <a class="method-permalink" href="#size_top_left_bottom_right%3F-instance-method">#</a>
+        <a class="method-permalink" href="#size_top_left_bottom_right?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L418" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L432" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1339,13 +1383,13 @@ is available on which platform.</p>
         
         def <strong>size_vertical?</strong>
 
-        <a class="method-permalink" href="#size_vertical%3F-instance-method">#</a>
+        <a class="method-permalink" href="#size_vertical?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L416" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L430" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1355,13 +1399,13 @@ is available on which platform.</p>
         
         def <strong>text?</strong>
 
-        <a class="method-permalink" href="#text%3F-instance-method">#</a>
+        <a class="method-permalink" href="#text?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L410" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L424" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,13 +1415,13 @@ is available on which platform.</p>
         
         def <strong>wait?</strong>
 
-        <a class="method-permalink" href="#wait%3F-instance-method">#</a>
+        <a class="method-permalink" href="#wait?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L408" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L422" target="_blank">View source</a>]
         
       </div>
     </div>

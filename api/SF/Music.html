@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Music - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Streamed music played from an audio file</p>
 
@@ -932,15 +943,26 @@ music.play()</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L762" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L762" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/audio.cr#L4" target="_blank">audio/audio.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/audio.cr#L4" target="_blank">
+        audio/audio.cr
+      </a>
     
     <br/>
   
@@ -949,27 +971,34 @@ music.play()</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
+        <a href="#from_file(*args,**kwargs):self-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p></div>
+          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_file(filename:String):Bool-instance-method">.open_from_file(...)</a>; music</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
+        <a href="#from_memory(*args,**kwargs):self-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p></div>
+          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_memory(data:Slice):Bool-instance-method">.open_from_memory(...)</a>; music</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_stream(*args,**kwargs):self-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_stream(stream:InputStream):Bool-instance-method">.open_from_stream(...)</a>; music</code></p></div>
         
       </li>
     
@@ -986,11 +1015,18 @@ music.play()</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#duration%3ATime-instance-method" class="signature"><strong>#duration</strong> : Time</a>
+        <a href="#duration:Time-instance-method" class="signature"><strong>#duration</strong> : Time</a>
         
           <div class="summary"><p>Get the total duration of the music</p></div>
         
@@ -1004,56 +1040,56 @@ music.play()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#loop_points%3AMusic%3A%3ATimeSpan-instance-method" class="signature"><strong>#loop_points</strong> : Music::TimeSpan</a>
+        <a href="#loop_points:Music::TimeSpan-instance-method" class="signature"><strong>#loop_points</strong> : Music::TimeSpan</a>
         
           <div class="summary"><p>Get the positions of the of the sound's looping sequence</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#loop_points%3D%28time_points%3AMusic%3A%3ATimeSpan%29-instance-method" class="signature"><strong>#loop_points=</strong>(time_points : Music::TimeSpan)</a>
+        <a href="#loop_points=(time_points:Music::TimeSpan)-instance-method" class="signature"><strong>#loop_points=</strong>(time_points : Music::TimeSpan)</a>
         
           <div class="summary"><p>Sets the beginning and end of the sound's looping sequence using <code><a href="../SF/Time.html">SF::Time</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_get_data%3ASlice%28Int16%29%3F-instance-method" class="signature"><strong>#on_get_data</strong> : Slice(Int16)?</a>
+        <a href="#on_get_data:Slice(Int16)?-instance-method" class="signature"><strong>#on_get_data</strong> : Slice(Int16)?</a>
         
           <div class="summary"><p>Request a new chunk of audio samples from the stream source</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_loop%3AInt64-instance-method" class="signature"><strong>#on_loop</strong> : Int64</a>
+        <a href="#on_loop:Int64-instance-method" class="signature"><strong>#on_loop</strong> : Int64</a>
         
           <div class="summary"><p>Change the current playing position in the stream source to the loop offset</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_seek%28time_offset%3ATime%29-instance-method" class="signature"><strong>#on_seek</strong>(time_offset : Time)</a>
+        <a href="#on_seek(time_offset:Time)-instance-method" class="signature"><strong>#on_seek</strong>(time_offset : Time)</a>
         
           <div class="summary"><p>Change the current playing position in the stream source</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open_from_file%28filename%3AString%29%3ABool-instance-method" class="signature"><strong>#open_from_file</strong>(filename : String) : Bool</a>
+        <a href="#open_from_file(filename:String):Bool-instance-method" class="signature"><strong>#open_from_file</strong>(filename : String) : Bool</a>
         
           <div class="summary"><p>Open a music from an audio file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open_from_memory%28data%3ASlice%29%3ABool-instance-method" class="signature"><strong>#open_from_memory</strong>(data : Slice) : Bool</a>
+        <a href="#open_from_memory(data:Slice):Bool-instance-method" class="signature"><strong>#open_from_memory</strong>(data : Slice) : Bool</a>
         
           <div class="summary"><p>Open a music from an audio file in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method" class="signature"><strong>#open_from_stream</strong>(stream : InputStream) : Bool</a>
+        <a href="#open_from_stream(stream:InputStream):Bool-instance-method" class="signature"><strong>#open_from_stream</strong>(stream : InputStream) : Bool</a>
         
           <div class="summary"><p>Open a music from an audio file in a custom stream</p></div>
         
@@ -1072,7 +1108,7 @@ music.play()</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/SoundStream.html">SF::SoundStream</a></code></h3>
   
   
-    <a href="../SF/SoundStream.html#channel_count%3AInt32-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#channel_count:Int32-instance-method" class="tooltip">
       <span>channel_count : Int32</span>
     channel_count</a>, 
     
@@ -1082,27 +1118,27 @@ music.play()</code></pre>
     finalize</a>, 
     
   
-    <a href="../SF/SoundStream.html#loop%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#loop:Bool-instance-method" class="tooltip">
       <span>loop : Bool</span>
     loop</a>, 
     
   
-    <a href="../SF/SoundStream.html#loop%3D%28loop%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#loop=(loop:Bool)-instance-method" class="tooltip">
       <span>loop=(loop : Bool)</span>
     loop=</a>, 
     
   
-    <a href="../SF/SoundStream.html#on_get_data%3ASlice%28Int16%29%3F-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#on_get_data:Slice(Int16)?-instance-method" class="tooltip">
       <span>on_get_data : Slice(Int16)?</span>
     on_get_data</a>, 
     
   
-    <a href="../SF/SoundStream.html#on_loop%3AInt64-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#on_loop:Int64-instance-method" class="tooltip">
       <span>on_loop : Int64</span>
     on_loop</a>, 
     
   
-    <a href="../SF/SoundStream.html#on_seek%28time_offset%3ATime%29-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#on_seek(time_offset:Time)-instance-method" class="tooltip">
       <span>on_seek(time_offset : Time)</span>
     on_seek</a>, 
     
@@ -1117,22 +1153,22 @@ music.play()</code></pre>
     play</a>, 
     
   
-    <a href="../SF/SoundStream.html#playing_offset%3ATime-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#playing_offset:Time-instance-method" class="tooltip">
       <span>playing_offset : Time</span>
     playing_offset</a>, 
     
   
-    <a href="../SF/SoundStream.html#playing_offset%3D%28time_offset%3ATime%29-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#playing_offset=(time_offset:Time)-instance-method" class="tooltip">
       <span>playing_offset=(time_offset : Time)</span>
     playing_offset=</a>, 
     
   
-    <a href="../SF/SoundStream.html#sample_rate%3AInt32-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#sample_rate:Int32-instance-method" class="tooltip">
       <span>sample_rate : Int32</span>
     sample_rate</a>, 
     
   
-    <a href="../SF/SoundStream.html#status%3ASoundSource%3A%3AStatus-instance-method" class="tooltip">
+    <a href="../SF/SoundStream.html#status:SoundSource::Status-instance-method" class="tooltip">
       <span>status : SoundSource::Status</span>
     status</a>, 
     
@@ -1149,8 +1185,8 @@ music.play()</code></pre>
   <h3>Constructor methods inherited from class <code><a href="../SF/SoundStream.html">SF::SoundStream</a></code></h3>
   
   
-    <a href="../SF/SoundStream.html#new%28channel_count%3AInt%2Csample_rate%3AInt%29-class-method" class="tooltip">
-      <span>new(channel_count : Int, sample_rate : Int)<br/>new</span>
+    <a href="../SF/SoundStream.html#new(channel_count:Int,sample_rate:Int)-class-method" class="tooltip">
+      <span>new(channel_count : Int, sample_rate : Int)</span>
     new</a>
     
   
@@ -1165,12 +1201,12 @@ music.play()</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
   
   
-    <a href="../SF/SoundSource.html#attenuation%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#attenuation:Float32-instance-method" class="tooltip">
       <span>attenuation : Float32</span>
     attenuation</a>, 
     
   
-    <a href="../SF/SoundSource.html#attenuation%3D%28attenuation%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#attenuation=(attenuation:Number)-instance-method" class="tooltip">
       <span>attenuation=(attenuation : Number)</span>
     attenuation=</a>, 
     
@@ -1180,12 +1216,12 @@ music.play()</code></pre>
     finalize</a>, 
     
   
-    <a href="../SF/SoundSource.html#min_distance%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#min_distance:Float32-instance-method" class="tooltip">
       <span>min_distance : Float32</span>
     min_distance</a>, 
     
   
-    <a href="../SF/SoundSource.html#min_distance%3D%28distance%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#min_distance=(distance:Number)-instance-method" class="tooltip">
       <span>min_distance=(distance : Number)</span>
     min_distance=</a>, 
     
@@ -1195,12 +1231,12 @@ music.play()</code></pre>
     pause</a>, 
     
   
-    <a href="../SF/SoundSource.html#pitch%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#pitch:Float32-instance-method" class="tooltip">
       <span>pitch : Float32</span>
     pitch</a>, 
     
   
-    <a href="../SF/SoundSource.html#pitch%3D%28pitch%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#pitch=(pitch:Number)-instance-method" class="tooltip">
       <span>pitch=(pitch : Number)</span>
     pitch=</a>, 
     
@@ -1210,32 +1246,32 @@ music.play()</code></pre>
     play</a>, 
     
   
-    <a href="../SF/SoundSource.html#position%3AVector3f-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#position:Vector3f-instance-method" class="tooltip">
       <span>position : Vector3f</span>
     position</a>, 
     
   
-    <a href="../SF/SoundSource.html#position%3D%28position%3AVector3f%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#position=(position:Vector3f)-instance-method" class="tooltip">
       <span>position=(position : Vector3f)</span>
     position=</a>, 
     
   
-    <a href="../SF/SoundSource.html#relative_to_listener%3D%28relative%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#relative_to_listener=(relative:Bool)-instance-method" class="tooltip">
       <span>relative_to_listener=(relative : Bool)</span>
     relative_to_listener=</a>, 
     
   
-    <a href="../SF/SoundSource.html#relative_to_listener%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#relative_to_listener?:Bool-instance-method" class="tooltip">
       <span>relative_to_listener? : Bool</span>
     relative_to_listener?</a>, 
     
   
-    <a href="../SF/SoundSource.html#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#set_position(x:Number,y:Number,z:Number)-instance-method" class="tooltip">
       <span>set_position(x : Number, y : Number, z : Number)</span>
     set_position</a>, 
     
   
-    <a href="../SF/SoundSource.html#status%3ASoundSource%3A%3AStatus-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#status:SoundSource::Status-instance-method" class="tooltip">
       <span>status : SoundSource::Status</span>
     status</a>, 
     
@@ -1245,12 +1281,12 @@ music.play()</code></pre>
     stop</a>, 
     
   
-    <a href="../SF/SoundSource.html#volume%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#volume:Float32-instance-method" class="tooltip">
       <span>volume : Float32</span>
     volume</a>, 
     
   
-    <a href="../SF/SoundSource.html#volume%3D%28volume%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#volume=(volume:Number)-instance-method" class="tooltip">
       <span>volume=(volume : Number)</span>
     volume=</a>
     
@@ -1258,15 +1294,6 @@ music.play()</code></pre>
 
 
     
-
-  <h3>Constructor methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
-  
-  
-    <a href="../SF/SoundSource.html#new-class-method" class="tooltip">
-      <span>new</span>
-    new</a>
-    
-  
 
 
     
@@ -1306,24 +1333,34 @@ music.play()</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="from_file(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(*args, **kwargs) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">.open_from_file(...)</a>; music</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_file(filename:String):Bool-instance-method">.open_from_file(...)</a>; music</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L797" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L797" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1331,19 +1368,22 @@ music.play()</code></pre>
     <div class="entry-detail" id="from_memory(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(*args, **kwargs) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">.open_from_memory(...)</a>; music</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_memory(data:Slice):Bool-instance-method">.open_from_memory(...)</a>; music</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L828" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L828" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1351,19 +1391,22 @@ music.play()</code></pre>
     <div class="entry-detail" id="from_stream(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(*args, **kwargs) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>music = Music.new; music<a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.open_from_stream(...)</a>; music</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>music = <a href="../SF/Music.html#new-class-method">Music.new</a>; music<a href="../SF/Music.html#open_from_stream(stream:InputStream):Bool-instance-method">.open_from_stream(...)</a>; music</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L858" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L858" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1376,12 +1419,15 @@ music.play()</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L765" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L765" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1391,24 +1437,34 @@ music.play()</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="duration:Time-instance-method">
       <div class="signature">
         
         def <strong>duration</strong> : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#duration%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#duration:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the total duration of the music</p>
+        <div class="doc">
+          
+          <p>Get the total duration of the music</p>
 
-<p><em>Returns:</em> Music duration</p></div>
+<p><em>Returns:</em> Music duration</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L868" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L868" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1421,12 +1477,15 @@ music.play()</code></pre>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L770" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L770" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1436,10 +1495,12 @@ music.play()</code></pre>
         
         def <strong>loop_points</strong> : <a href="../SF/Music/TimeSpan.html">Music::TimeSpan</a>
 
-        <a class="method-permalink" href="#loop_points%3AMusic%3A%3ATimeSpan-instance-method">#</a>
+        <a class="method-permalink" href="#loop_points:Music::TimeSpan-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the positions of the of the sound's looping sequence</p>
+        <div class="doc">
+          
+          <p>Get the positions of the of the sound's looping sequence</p>
 
 <p><em>Returns:</em> Loop Time position class.</p>
 
@@ -1450,12 +1511,13 @@ into a previous call to loop_points=(). However, it is guaranteed
 to return times that will map to the valid internal samples of
 this Music if they are later passed to loop_points=().</p>
 
-<p><em>See also:</em> <code><a href="../SF/Music.html#loop_points%3D%28time_points%3AMusic%3A%3ATimeSpan%29-instance-method">#loop_points=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#loop_points=(time_points:Music::TimeSpan)-instance-method">#loop_points=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L885" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L885" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1465,10 +1527,12 @@ this Music if they are later passed to loop_points=().</p>
         
         def <strong>loop_points=</strong>(time_points : <a href="../SF/Music/TimeSpan.html">Music::TimeSpan</a>)
 
-        <a class="method-permalink" href="#loop_points%3D%28time_points%3AMusic%3A%3ATimeSpan%29-instance-method">#</a>
+        <a class="method-permalink" href="#loop_points=(time_points:Music::TimeSpan)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Sets the beginning and end of the sound's looping sequence using <code><a href="../SF/Time.html">SF::Time</a></code></p>
+        <div class="doc">
+          
+          <p>Sets the beginning and end of the sound's looping sequence using <code><a href="../SF/Time.html">SF::Time</a></code></p>
 
 <p>Loop points allow one to specify a pair of positions such that, when the music
 is enabled for looping, it will seamlessly seek to the beginning whenever it
@@ -1484,12 +1548,13 @@ will set its status to Stopped. The playing offset will be unaffected.</p>
 
 <ul><li><em>time_points</em> - The definition of the loop. Can be any time points within the sound's length</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Music.html#loop_points%3AMusic%3A%3ATimeSpan-instance-method">#loop_points</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#loop_points:Music::TimeSpan-instance-method">#loop_points</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L907" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L907" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1499,22 +1564,25 @@ will set its status to Stopped. The playing offset will be unaffected.</p>
         
         def <strong>on_get_data</strong> : Slice(Int16)?
 
-        <a class="method-permalink" href="#on_get_data%3ASlice%28Int16%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#on_get_data:Slice(Int16)?-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Request a new chunk of audio samples from the stream source</p>
+        <div class="doc">
+          
+          <p>Request a new chunk of audio samples from the stream source</p>
 
 <p>This function fills the chunk from the next samples
 to read from the audio file.</p>
 
 <ul><li><em>data</em> - Chunk of data to fill</li></ul>
 
-<p><em>Returns:</em> True to continue playback, false to stop</p></div>
+<p><em>Returns:</em> True to continue playback, false to stop</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L918" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L918" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1524,21 +1592,24 @@ to read from the audio file.</p>
         
         def <strong>on_loop</strong> : Int64
 
-        <a class="method-permalink" href="#on_loop%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#on_loop:Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the current playing position in the stream source to the loop offset</p>
+        <div class="doc">
+          
+          <p>Change the current playing position in the stream source to the loop offset</p>
 
 <p>This is called by the underlying SoundStream whenever it needs us to reset
 the seek position for a loop. We then determine whether we are looping on a
 loop point or the end-of-file, perform the seek, and return the new position.</p>
 
-<p><em>Returns:</em> The seek position after looping (or -1 if there's no loop)</p></div>
+<p><em>Returns:</em> The seek position after looping (or -1 if there's no loop)</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L933" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L933" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1548,17 +1619,20 @@ loop point or the end-of-file, perform the seek, and return the new position.</p
         
         def <strong>on_seek</strong>(time_offset : <a href="../SF/Time.html">Time</a>)
 
-        <a class="method-permalink" href="#on_seek%28time_offset%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#on_seek(time_offset:Time)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the current playing position in the stream source</p>
+        <div class="doc">
+          
+          <p>Change the current playing position in the stream source</p>
 
-<ul><li><em>time_offset</em> - New playing position, from the beginning of the music</li></ul></div>
+<ul><li><em>time_offset</em> - New playing position, from the beginning of the music</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L924" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L924" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1568,10 +1642,12 @@ loop point or the end-of-file, perform the seek, and return the new position.</p
         
         def <strong>open_from_file</strong>(filename : String) : Bool
 
-        <a class="method-permalink" href="#open_from_file%28filename%3AString%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#open_from_file(filename:String):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Open a music from an audio file</p>
+        <div class="doc">
+          
+          <p>Open a music from an audio file</p>
 
 <p>This function doesn't start playing the music (call play()
 to do so).
@@ -1586,12 +1662,13 @@ the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a new mus
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">#open_from_memory</a></code>, <code><a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#open_from_stream</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_memory(data:Slice):Bool-instance-method">#open_from_memory</a></code>, <code><a href="../SF/Music.html#open_from_stream(stream:InputStream):Bool-instance-method">#open_from_stream</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L790" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L790" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1601,10 +1678,12 @@ the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a new mus
         
         def <strong>open_from_memory</strong>(data : Slice) : Bool
 
-        <a class="method-permalink" href="#open_from_memory%28data%3ASlice%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#open_from_memory(data:Slice):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Open a music from an audio file in memory</p>
+        <div class="doc">
+          
+          <p>Open a music from an audio file in memory</p>
 
 <p>This function doesn't start playing the music (call play()
 to do so).
@@ -1620,12 +1699,13 @@ you can't deallocate the buffer right after calling this function.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#open_from_stream</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file(filename:String):Bool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_stream(stream:InputStream):Bool-instance-method">#open_from_stream</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L821" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L821" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1635,10 +1715,12 @@ you can't deallocate the buffer right after calling this function.</p>
         
         def <strong>open_from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>) : Bool
 
-        <a class="method-permalink" href="#open_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#open_from_stream(stream:InputStream):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Open a music from an audio file in a custom stream</p>
+        <div class="doc">
+          
+          <p>Open a music from an audio file in a custom stream</p>
 
 <p>This function doesn't start playing the music (call play()
 to do so).
@@ -1653,12 +1735,13 @@ until the <code><a href="../SF/Music.html">SF::Music</a></code> object loads a n
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file%28filename%3AString%29%3ABool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_memory%28data%3ASlice%29%3ABool-instance-method">#open_from_memory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Music.html#open_from_file(filename:String):Bool-instance-method">#open_from_file</a></code>, <code><a href="../SF/Music.html#open_from_memory(data:Slice):Bool-instance-method">#open_from_memory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L851" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L851" target="_blank">View source</a>]
         
       </div>
     </div>

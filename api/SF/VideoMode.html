@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::VideoMode - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>VideoMode defines a video mode (width, height, bpp)</p>
 
@@ -925,10 +936,19 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2019" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2033" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -937,18 +957,25 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#desktop_mode%3AVideoMode-class-method" class="signature"><strong>.desktop_mode</strong> : VideoMode</a>
+        <a href="#desktop_mode:VideoMode-class-method" class="signature"><strong>.desktop_mode</strong> : VideoMode</a>
         
           <div class="summary"><p>Get the current desktop video mode</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D32%29-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)</a>
+        <a href="#new(width:Int,height:Int,bits_per_pixel:Int=32)-class-method" class="signature"><strong>.new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)</a>
         
           <div class="summary"><p>Construct the video mode with its attributes</p></div>
         
@@ -965,11 +992,18 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#fullscreen_modes%3AArray%28VideoMode%29-class-method" class="signature"><strong>.fullscreen_modes</strong> : Array(VideoMode)</a>
+        <a href="#fullscreen_modes:Array(VideoMode)-class-method" class="signature"><strong>.fullscreen_modes</strong> : Array(VideoMode)</a>
         
           <div class="summary"><p>Retrieve all the video modes supported in fullscreen mode</p></div>
         
@@ -979,96 +1013,105 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%21%3D%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#!=</strong>(right : VideoMode) : Bool</a>
+        <a href="#!=(right:VideoMode):Bool-instance-method" class="signature"><strong>#!=</strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of != operator to compare two video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#<</strong>(right : VideoMode) : Bool</a>
+        <a href="#%3C(right:VideoMode):Bool-instance-method" class="signature"><strong>#<</strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of &lt; operator to compare video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%3D%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#<=</strong>(right : VideoMode) : Bool</a>
+        <a href="#%3C=(right:VideoMode):Bool-instance-method" class="signature"><strong>#<=</strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of &lt;= operator to compare video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3D%3D%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#==</strong>(right : VideoMode) : Bool</a>
+        <a href="#==(right:VideoMode):Bool-instance-method" class="signature"><strong>#==</strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of == operator to compare two video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#></strong>(right : VideoMode) : Bool</a>
+        <a href="#%3E(right:VideoMode):Bool-instance-method" class="signature"><strong>#></strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of &gt; operator to compare video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%3D%28right%3AVideoMode%29%3ABool-instance-method" class="signature"><strong>#>=</strong>(right : VideoMode) : Bool</a>
+        <a href="#%3E=(right:VideoMode):Bool-instance-method" class="signature"><strong>#>=</strong>(right : VideoMode) : Bool</a>
         
           <div class="summary"><p>Overload of &gt;= operator to compare video modes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bits_per_pixel%3AUInt32-instance-method" class="signature"><strong>#bits_per_pixel</strong> : UInt32</a>
+        <a href="#bits_per_pixel:UInt32-instance-method" class="signature"><strong>#bits_per_pixel</strong> : UInt32</a>
         
           <div class="summary"><p>Video mode pixel depth, in bits per pixels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bits_per_pixel%3D%28bits_per_pixel%3AInt%29-instance-method" class="signature"><strong>#bits_per_pixel=</strong>(bits_per_pixel : Int)</a>
+        <a href="#bits_per_pixel=(bits_per_pixel:Int)-instance-method" class="signature"><strong>#bits_per_pixel=</strong>(bits_per_pixel : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height%3AUInt32-instance-method" class="signature"><strong>#height</strong> : UInt32</a>
+        <a href="#height:UInt32-instance-method" class="signature"><strong>#height</strong> : UInt32</a>
         
           <div class="summary"><p>Video mode height, in pixels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height%3D%28height%3AInt%29-instance-method" class="signature"><strong>#height=</strong>(height : Int)</a>
+        <a href="#height=(height:Int)-instance-method" class="signature"><strong>#height=</strong>(height : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#valid%3F%3ABool-instance-method" class="signature"><strong>#valid?</strong> : Bool</a>
+        <a href="#valid?:Bool-instance-method" class="signature"><strong>#valid?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether or not the video mode is valid</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width%3AUInt32-instance-method" class="signature"><strong>#width</strong> : UInt32</a>
+        <a href="#width:UInt32-instance-method" class="signature"><strong>#width</strong> : UInt32</a>
         
           <div class="summary"><p>Video mode width, in pixels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width%3D%28width%3AInt%29-instance-method" class="signature"><strong>#width=</strong>(width : Int)</a>
+        <a href="#width=(width:Int)-instance-method" class="signature"><strong>#width=</strong>(width : Int)</a>
         
       </li>
     
@@ -1113,24 +1156,34 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="desktop_mode:VideoMode-class-method">
       <div class="signature">
         
         def self.<strong>desktop_mode</strong> : <a href="../SF/VideoMode.html">VideoMode</a>
 
-        <a class="method-permalink" href="#desktop_mode%3AVideoMode-class-method">#</a>
+        <a class="method-permalink" href="#desktop_mode:VideoMode-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current desktop video mode</p>
+        <div class="doc">
+          
+          <p>Get the current desktop video mode</p>
 
-<p><em>Returns:</em> Current desktop video mode</p></div>
+<p><em>Returns:</em> Current desktop video mode</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2046" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2060" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1140,17 +1193,20 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
         
         def self.<strong>new</strong>(width : Int, height : Int, bits_per_pixel : Int = <span class="n">32</span>)
 
-        <a class="method-permalink" href="#new%28width%3AInt%2Cheight%3AInt%2Cbits_per_pixel%3AInt%3D32%29-class-method">#</a>
+        <a class="method-permalink" href="#new(width:Int,height:Int,bits_per_pixel:Int=32)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the video mode with its attributes</p>
+        <div class="doc">
+          
+          <p>Construct the video mode with its attributes</p>
 
-<ul><li><em>width</em> - Width in pixels</li><li><em>height</em> - Height in pixels</li><li><em>bits_per_pixel</em> - Pixel depths in bits per pixel</li></ul></div>
+<ul><li><em>width</em> - Width in pixels</li><li><em>height</em> - Height in pixels</li><li><em>bits_per_pixel</em> - Pixel depths in bits per pixel</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2037" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2051" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,14 +1219,17 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>This constructors initializes all members to 0.</p></div>
+<p>This constructors initializes all members to 0.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2026" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2040" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1178,17 +1237,26 @@ window.create(<span class="t">SF</span><span class="t">::</span><span class="t">
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="fullscreen_modes:Array(VideoMode)-class-method">
       <div class="signature">
         
         def self.<strong>fullscreen_modes</strong> : Array(<a href="../SF/VideoMode.html">VideoMode</a>)
 
-        <a class="method-permalink" href="#fullscreen_modes%3AArray%28VideoMode%29-class-method">#</a>
+        <a class="method-permalink" href="#fullscreen_modes:Array(VideoMode)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve all the video modes supported in fullscreen mode</p>
+        <div class="doc">
+          
+          <p>Retrieve all the video modes supported in fullscreen mode</p>
 
 <p>When creating a fullscreen window, the video mode is restricted
 to be compatible with what the graphics driver and monitor
@@ -1198,12 +1266,13 @@ The returned array is sorted from best to worst, so that
 the first element will always give the best mode (higher
 width, height and bits-per-pixel).</p>
 
-<p><em>Returns:</em> Array containing all the supported fullscreen modes</p></div>
+<p><em>Returns:</em> Array containing all the supported fullscreen modes</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2062" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2076" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1211,26 +1280,36 @@ width, height and bits-per-pixel).</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="!=(right:VideoMode):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%21%3D%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#!=(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of != operator to compare two video modes</p>
+        <div class="doc">
+          
+          <p>Overload of != operator to compare two video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if modes are different</p></div>
+<p><em>Returns:</em> True if modes are different</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2117" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2131" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1240,19 +1319,22 @@ width, height and bits-per-pixel).</p>
         
         def <strong><</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt; operator to compare video modes</p>
+        <div class="doc">
+          
+          <p>Overload of &lt; operator to compare video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2127" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2141" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1262,19 +1344,22 @@ width, height and bits-per-pixel).</p>
         
         def <strong><=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%3D%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C=(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt;= operator to compare video modes</p>
+        <div class="doc">
+          
+          <p>Overload of &lt;= operator to compare video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2147" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2161" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1284,19 +1369,22 @@ width, height and bits-per-pixel).</p>
         
         def <strong>==</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3D%3D%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#==(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of == operator to compare two video modes</p>
+        <div class="doc">
+          
+          <p>Overload of == operator to compare two video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if modes are equal</p></div>
+<p><em>Returns:</em> True if modes are equal</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2107" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2121" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1306,19 +1394,22 @@ width, height and bits-per-pixel).</p>
         
         def <strong>></strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt; operator to compare video modes</p>
+        <div class="doc">
+          
+          <p>Overload of &gt; operator to compare video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2137" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2151" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1328,19 +1419,22 @@ width, height and bits-per-pixel).</p>
         
         def <strong>>=</strong>(right : <a href="../SF/VideoMode.html">VideoMode</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%3D%28right%3AVideoMode%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E=(right:VideoMode):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt;= operator to compare video modes</p>
+        <div class="doc">
+          
+          <p>Overload of &gt;= operator to compare video modes</p>
 
 <ul><li><em>left</em> - Left operand (a video mode)</li><li><em>right</em> - Right operand (a video mode)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2157" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1350,15 +1444,18 @@ width, height and bits-per-pixel).</p>
         
         def <strong>bits_per_pixel</strong> : UInt32
 
-        <a class="method-permalink" href="#bits_per_pixel%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#bits_per_pixel:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Video mode pixel depth, in bits per pixels</p></div>
+        <div class="doc">
+          
+          <p>Video mode pixel depth, in bits per pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2095" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2109" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1368,13 +1465,13 @@ width, height and bits-per-pixel).</p>
         
         def <strong>bits_per_pixel=</strong>(bits_per_pixel : Int)
 
-        <a class="method-permalink" href="#bits_per_pixel%3D%28bits_per_pixel%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#bits_per_pixel=(bits_per_pixel:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2098" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2112" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1382,15 +1479,28 @@ width, height and bits-per-pixel).</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2172" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1400,15 +1510,18 @@ width, height and bits-per-pixel).</p>
         
         def <strong>height</strong> : UInt32
 
-        <a class="method-permalink" href="#height%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#height:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Video mode height, in pixels</p></div>
+        <div class="doc">
+          
+          <p>Video mode height, in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2087" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1418,13 +1531,13 @@ width, height and bits-per-pixel).</p>
         
         def <strong>height=</strong>(height : Int)
 
-        <a class="method-permalink" href="#height%3D%28height%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#height=(height:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2090" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2104" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1434,21 +1547,24 @@ width, height and bits-per-pixel).</p>
         
         def <strong>valid?</strong> : Bool
 
-        <a class="method-permalink" href="#valid%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#valid?:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether or not the video mode is valid</p>
+        <div class="doc">
+          
+          <p>Tell whether or not the video mode is valid</p>
 
 <p>The validity of video modes is only relevant when using
 fullscreen windows; otherwise any video mode can be used
 with no restriction.</p>
 
-<p><em>Returns:</em> True if the video mode is valid for fullscreen mode</p></div>
+<p><em>Returns:</em> True if the video mode is valid for fullscreen mode</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2073" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2087" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1458,15 +1574,18 @@ with no restriction.</p>
         
         def <strong>width</strong> : UInt32
 
-        <a class="method-permalink" href="#width%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#width:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Video mode width, in pixels</p></div>
+        <div class="doc">
+          
+          <p>Video mode width, in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2079" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2093" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1476,13 +1595,13 @@ with no restriction.</p>
         
         def <strong>width=</strong>(width : Int)
 
-        <a class="method-permalink" href="#width%3D%28width%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#width=(width:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L2082" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L2096" target="_blank">View source</a>]
         
       </div>
     </div>

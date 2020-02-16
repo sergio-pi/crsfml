@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::MemoryInputStream - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Implementation of input stream based on a memory chunk</p>
 
@@ -917,10 +928,19 @@ process(stream)</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L611" target="_blank">system/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L611" target="_blank">
+        system/obj.cr
+      </a>
     
     <br/>
   
@@ -929,7 +949,14 @@ process(stream)</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -940,9 +967,9 @@ process(stream)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.open</strong>(*args, **kwargs) : self</a>
+        <a href="#open(*args,**kwargs):self-class-method" class="signature"><strong>.open</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>memory_input_stream = MemoryInputStream.new; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28data%3ASlice%29-instance-method">.open(...)</a>; memory_input_stream</code></p></div>
+          <div class="summary"><p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open(*args,**kwargs):self-class-method">.open(...)</a>; memory_input_stream</code></p></div>
         
       </li>
     
@@ -952,11 +979,20 @@ process(stream)</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -966,35 +1002,35 @@ process(stream)</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#open%28data%3ASlice%29-instance-method" class="signature"><strong>#open</strong>(data : Slice)</a>
+        <a href="#open(data:Slice)-instance-method" class="signature"><strong>#open</strong>(data : Slice)</a>
         
           <div class="summary"><p>Open the stream from its data</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#read%28data%3ASlice%29%3AInt64-instance-method" class="signature"><strong>#read</strong>(data : Slice) : Int64</a>
+        <a href="#read(data:Slice):Int64-instance-method" class="signature"><strong>#read</strong>(data : Slice) : Int64</a>
         
           <div class="summary"><p>Read data from the stream</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#seek%28position%3AInt%29%3AInt64-instance-method" class="signature"><strong>#seek</strong>(position : Int) : Int64</a>
+        <a href="#seek(position:Int):Int64-instance-method" class="signature"><strong>#seek</strong>(position : Int) : Int64</a>
         
           <div class="summary"><p>Change the current reading position</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3AInt64-instance-method" class="signature"><strong>#size</strong> : Int64</a>
+        <a href="#size:Int64-instance-method" class="signature"><strong>#size</strong> : Int64</a>
         
           <div class="summary"><p>Return the size of the stream</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tell%3AInt64-instance-method" class="signature"><strong>#tell</strong> : Int64</a>
+        <a href="#tell:Int64-instance-method" class="signature"><strong>#tell</strong> : Int64</a>
         
           <div class="summary"><p>Get the current reading position in the stream</p></div>
         
@@ -1013,8 +1049,8 @@ process(stream)</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/InputStream.html">SF::InputStream</a></code></h3>
   
   
-    <a href="../SF/InputStream.html#dup%3Aself-instance-method" class="tooltip">
-      <span>dup : self</span>
+    <a href="../SF/InputStream.html#dup:self-instance-method" class="tooltip">
+      <span>dup : <span class="k">self</span></span>
     dup</a>, 
     
   
@@ -1023,22 +1059,22 @@ process(stream)</code></pre>
     finalize</a>, 
     
   
-    <a href="../SF/InputStream.html#read%28data%3ASlice%29%3AInt64-instance-method" class="tooltip">
+    <a href="../SF/InputStream.html#read(data:Slice):Int64-instance-method" class="tooltip">
       <span>read(data : Slice) : Int64</span>
     read</a>, 
     
   
-    <a href="../SF/InputStream.html#seek%28position%3AInt%29%3AInt64-instance-method" class="tooltip">
+    <a href="../SF/InputStream.html#seek(position:Int):Int64-instance-method" class="tooltip">
       <span>seek(position : Int) : Int64</span>
     seek</a>, 
     
   
-    <a href="../SF/InputStream.html#size%3AInt64-instance-method" class="tooltip">
+    <a href="../SF/InputStream.html#size:Int64-instance-method" class="tooltip">
       <span>size : Int64</span>
     size</a>, 
     
   
-    <a href="../SF/InputStream.html#tell%3AInt64-instance-method" class="tooltip">
+    <a href="../SF/InputStream.html#tell:Int64-instance-method" class="tooltip">
       <span>tell : Int64</span>
     tell</a>
     
@@ -1084,7 +1120,14 @@ process(stream)</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1094,12 +1137,15 @@ process(stream)</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L618" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L618" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1107,17 +1153,20 @@ process(stream)</code></pre>
     <div class="entry-detail" id="open(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>open</strong>(*args, **kwargs) : self
+        def self.<strong>open</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#open%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#open(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>memory_input_stream = MemoryInputStream.new; memory_input_stream<a href="../SF/MemoryInputStream.html#open%28data%3ASlice%29-instance-method">.open(...)</a>; memory_input_stream</code></p></div>
+        <div class="doc">
+          
+          <p>Shorthand for <code>memory_input_stream = <a href="../SF/MemoryInputStream.html#new-class-method">MemoryInputStream.new</a>; memory_input_stream<a href="../SF/MemoryInputStream.html#open(*args,**kwargs):self-class-method">.open(...)</a>; memory_input_stream</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L629" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L629" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1127,20 +1176,39 @@ process(stream)</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L682" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L682" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1156,7 +1224,7 @@ process(stream)</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L613" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L613" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1166,17 +1234,20 @@ process(stream)</code></pre>
         
         def <strong>open</strong>(data : Slice)
 
-        <a class="method-permalink" href="#open%28data%3ASlice%29-instance-method">#</a>
+        <a class="method-permalink" href="#open(data:Slice)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Open the stream from its data</p>
+        <div class="doc">
+          
+          <p>Open the stream from its data</p>
 
-<ul><li><em>data</em> - Pointer to the data in memory</li></ul></div>
+<ul><li><em>data</em> - Pointer to the data in memory</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L625" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L625" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1186,22 +1257,25 @@ process(stream)</code></pre>
         
         def <strong>read</strong>(data : Slice) : Int64
 
-        <a class="method-permalink" href="#read%28data%3ASlice%29%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#read(data:Slice):Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Read data from the stream</p>
+        <div class="doc">
+          
+          <p>Read data from the stream</p>
 
 <p>After reading, the stream's reading position must be
 advanced by the amount of bytes read.</p>
 
 <ul><li><em>data</em> - Buffer where to copy the read data</li></ul>
 
-<p><em>Returns:</em> The number of bytes actually read, or -1 on error</p></div>
+<p><em>Returns:</em> The number of bytes actually read, or -1 on error</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L642" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L642" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1211,19 +1285,22 @@ advanced by the amount of bytes read.</p>
         
         def <strong>seek</strong>(position : Int) : Int64
 
-        <a class="method-permalink" href="#seek%28position%3AInt%29%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#seek(position:Int):Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the current reading position</p>
+        <div class="doc">
+          
+          <p>Change the current reading position</p>
 
 <ul><li><em>position</em> - The position to seek to, from the beginning</li></ul>
 
-<p><em>Returns:</em> The position actually sought to, or -1 on error</p></div>
+<p><em>Returns:</em> The position actually sought to, or -1 on error</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L651" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L651" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1233,17 +1310,20 @@ advanced by the amount of bytes read.</p>
         
         def <strong>size</strong> : Int64
 
-        <a class="method-permalink" href="#size%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#size:Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the size of the stream</p>
+        <div class="doc">
+          
+          <p>Return the size of the stream</p>
 
-<p><em>Returns:</em> The total number of bytes available in the stream, or -1 on error</p></div>
+<p><em>Returns:</em> The total number of bytes available in the stream, or -1 on error</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L665" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L665" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1253,17 +1333,20 @@ advanced by the amount of bytes read.</p>
         
         def <strong>tell</strong> : Int64
 
-        <a class="method-permalink" href="#tell%3AInt64-instance-method">#</a>
+        <a class="method-permalink" href="#tell:Int64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current reading position in the stream</p>
+        <div class="doc">
+          
+          <p>Get the current reading position in the stream</p>
 
-<p><em>Returns:</em> The current position, or -1 on error.</p></div>
+<p><em>Returns:</em> The current position, or -1 on error.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/system/obj.cr#L658" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/system/obj.cr#L658" target="_blank">View source</a>]
         
       </div>
     </div>

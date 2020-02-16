@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Ftp::DirectoryResponse - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Specialization of FTP response returning a directory</p>
 
@@ -892,10 +903,19 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L595" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L595" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -904,11 +924,18 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28response%3AFtp%3A%3AResponse%29-class-method" class="signature"><strong>.new</strong>(response : Ftp::Response)</a>
+        <a href="#new(response:Ftp::Response)-class-method" class="signature"><strong>.new</strong>(response : Ftp::Response)</a>
         
           <div class="summary"><p>Default constructor</p></div>
         
@@ -920,18 +947,27 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#directory%3AString-instance-method" class="signature"><strong>#directory</strong> : String</a>
+        <a href="#directory:String-instance-method" class="signature"><strong>#directory</strong> : String</a>
         
           <div class="summary"><p>Get the directory returned in the response</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -953,8 +989,8 @@
   <h3>Instance methods inherited from class <code><a href="../../SF/Ftp/Response.html">SF::Ftp::Response</a></code></h3>
   
   
-    <a href="../../SF/Ftp/Response.html#dup%3Aself-instance-method" class="tooltip">
-      <span>dup : self</span>
+    <a href="../../SF/Ftp/Response.html#dup:self-instance-method" class="tooltip">
+      <span>dup : <span class="k">self</span></span>
     dup</a>, 
     
   
@@ -963,17 +999,17 @@
     finalize</a>, 
     
   
-    <a href="../../SF/Ftp/Response.html#message%3AString-instance-method" class="tooltip">
+    <a href="../../SF/Ftp/Response.html#message:String-instance-method" class="tooltip">
       <span>message : String</span>
     message</a>, 
     
   
-    <a href="../../SF/Ftp/Response.html#ok%3F%3ABool-instance-method" class="tooltip">
+    <a href="../../SF/Ftp/Response.html#ok?:Bool-instance-method" class="tooltip">
       <span>ok? : Bool</span>
     ok?</a>, 
     
   
-    <a href="../../SF/Ftp/Response.html#status%3AFtp%3A%3AResponse%3A%3AStatus-instance-method" class="tooltip">
+    <a href="../../SF/Ftp/Response.html#status:Ftp::Response::Status-instance-method" class="tooltip">
       <span>status : Ftp::Response::Status</span>
     status</a>
     
@@ -985,7 +1021,7 @@
   <h3>Constructor methods inherited from class <code><a href="../../SF/Ftp/Response.html">SF::Ftp::Response</a></code></h3>
   
   
-    <a href="../../SF/Ftp/Response.html#new%28code%3AFtp%3A%3AResponse%3A%3AStatus%3DInvalidResponse%2Cmessage%3AString%3D%26quot%3B%26quot%3B%29-class-method" class="tooltip">
+    <a href="../../SF/Ftp/Response.html#new(code:Ftp::Response::Status=InvalidResponse,message:String=&quot;&quot;)-class-method" class="tooltip">
       <span>new(code : Ftp::Response::Status = <span class="t">InvalidResponse</span>, message : String = <span class="s">&quot;&quot;</span>)</span>
     new</a>
     
@@ -1019,24 +1055,34 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(response:Ftp::Response)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(response : <a href="../../SF/Ftp/Response.html">Ftp::Response</a>)
 
-        <a class="method-permalink" href="#new%28response%3AFtp%3A%3AResponse%29-class-method">#</a>
+        <a class="method-permalink" href="#new(response:Ftp::Response)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<ul><li><em>response</em> - Source response</li></ul></div>
+<ul><li><em>response</em> - Source response</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L604" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L604" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1046,24 +1092,34 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="directory:String-instance-method">
       <div class="signature">
         
         def <strong>directory</strong> : String
 
-        <a class="method-permalink" href="#directory%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#directory:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the directory returned in the response</p>
+        <div class="doc">
+          
+          <p>Get the directory returned in the response</p>
 
-<p><em>Returns:</em> Directory name</p></div>
+<p><em>Returns:</em> Directory name</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L611" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L611" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1071,15 +1127,27 @@
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L643" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L643" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1095,7 +1163,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L597" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L597" target="_blank">View source</a>]
         
       </div>
     </div>

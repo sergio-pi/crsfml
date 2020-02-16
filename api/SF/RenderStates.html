@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::RenderStates - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Define the states used for drawing to a RenderTarget</p>
 
@@ -929,15 +940,26 @@ set its texture. Etc.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L681" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L681" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L165" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L165" target="_blank">
+        graphics/graphics.cr
+      </a>
     
     <br/>
   
@@ -945,7 +967,14 @@ set its texture. Etc.</p>
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -962,39 +991,46 @@ set its texture. Etc.</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%3F%2Cshader%3AShader%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode, transform : Transform, texture : Texture?, shader : Shader)</a>
+        <a href="#new(blend_mode:BlendMode,transform:Transform,texture:Texture?,shader:Shader?)-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode, transform : Transform, texture : Texture?, shader : Shader?)</a>
         
           <div class="summary"><p>Construct a set of render states with all its attributes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28blend_mode%3ABlendMode%29-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode)</a>
+        <a href="#new(blend_mode:BlendMode)-class-method" class="signature"><strong>.new</strong>(blend_mode : BlendMode)</a>
         
           <div class="summary"><p>Construct a default set of render states with a custom blend mode</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28transform%3ATransform%29-class-method" class="signature"><strong>.new</strong>(transform : Transform)</a>
+        <a href="#new(transform:Transform)-class-method" class="signature"><strong>.new</strong>(transform : Transform)</a>
         
           <div class="summary"><p>Construct a default set of render states with a custom transform</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28texture%3ATexture%3F%29-class-method" class="signature"><strong>.new</strong>(texture : Texture?)</a>
+        <a href="#new(texture:Texture?)-class-method" class="signature"><strong>.new</strong>(texture : Texture?)</a>
         
           <div class="summary"><p>Construct a default set of render states with a custom texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28shader%3AShader%29-class-method" class="signature"><strong>.new</strong>(shader : Shader)</a>
+        <a href="#new(shader:Shader?)-class-method" class="signature"><strong>.new</strong>(shader : Shader?)</a>
         
           <div class="summary"><p>Construct a default set of render states with a custom shader</p></div>
         
@@ -1013,64 +1049,73 @@ set its texture. Etc.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#blend_mode%3ABlendMode-instance-method" class="signature"><strong>#blend_mode</strong> : BlendMode</a>
+        <a href="#blend_mode:BlendMode-instance-method" class="signature"><strong>#blend_mode</strong> : BlendMode</a>
         
           <div class="summary"><p>Blending mode</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#blend_mode%3D%28blend_mode%3ABlendMode%29-instance-method" class="signature"><strong>#blend_mode=</strong>(blend_mode : BlendMode)</a>
+        <a href="#blend_mode=(blend_mode:BlendMode)-instance-method" class="signature"><strong>#blend_mode=</strong>(blend_mode : BlendMode)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#inspect%28io%29-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
+        <a href="#inspect(io)-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#shader%3AShader%3F-instance-method" class="signature"><strong>#shader</strong> : Shader?</a>
+        <a href="#shader:Shader?-instance-method" class="signature"><strong>#shader</strong> : Shader?</a>
         
           <div class="summary"><p>Shader</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#shader%3D%28shader%3AShader%29-instance-method" class="signature"><strong>#shader=</strong>(shader : Shader)</a>
+        <a href="#shader=(shader:Shader?)-instance-method" class="signature"><strong>#shader=</strong>(shader : Shader?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#texture%3ATexture%3F-instance-method" class="signature"><strong>#texture</strong> : Texture?</a>
+        <a href="#texture:Texture?-instance-method" class="signature"><strong>#texture</strong> : Texture?</a>
         
           <div class="summary"><p>Texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#texture%3D%28texture%3ATexture%3F%29-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture?)</a>
+        <a href="#texture=(texture:Texture?)-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transform%3ATransform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
+        <a href="#transform:Transform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
         
           <div class="summary"><p>Transform</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transform%3D%28transform%3ATransform%29-instance-method" class="signature"><strong>#transform=</strong>(transform : Transform)</a>
+        <a href="#transform=(transform:Transform)-instance-method" class="signature"><strong>#transform=</strong>(transform : Transform)</a>
         
       </li>
     
@@ -1115,24 +1160,34 @@ set its texture. Etc.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
-    <div class="entry-detail" id="new(blend_mode:BlendMode,transform:Transform,texture:Texture?,shader:Shader)-class-method">
+    <div class="entry-detail" id="new(blend_mode:BlendMode,transform:Transform,texture:Texture?,shader:Shader?)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>, transform : <a href="../SF/Transform.html">Transform</a>, texture : <a href="../SF/Texture.html">Texture</a>?, shader : <a href="../SF/Shader.html">Shader</a>)
+        def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>, transform : <a href="../SF/Transform.html">Transform</a>, texture : <a href="../SF/Texture.html">Texture</a>?, shader : <a href="../SF/Shader.html">Shader</a>?)
 
-        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%2Ctransform%3ATransform%2Ctexture%3ATexture%3F%2Cshader%3AShader%29-class-method">#</a>
+        <a class="method-permalink" href="#new(blend_mode:BlendMode,transform:Transform,texture:Texture?,shader:Shader?)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a set of render states with all its attributes</p>
+        <div class="doc">
+          
+          <p>Construct a set of render states with all its attributes</p>
 
-<ul><li><em>blend_mode</em> - Blend mode to use</li><li><em>transform</em> - Transform to use</li><li><em>texture</em> - Texture to use</li><li><em>shader</em> - Shader to use</li></ul></div>
+<ul><li><em>blend_mode</em> - Blend mode to use</li><li><em>transform</em> - Transform to use</li><li><em>texture</em> - Texture to use</li><li><em>shader</em> - Shader to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L750" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L750" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1142,17 +1197,20 @@ set its texture. Etc.</p>
         
         def self.<strong>new</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>)
 
-        <a class="method-permalink" href="#new%28blend_mode%3ABlendMode%29-class-method">#</a>
+        <a class="method-permalink" href="#new(blend_mode:BlendMode)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a default set of render states with a custom blend mode</p>
+        <div class="doc">
+          
+          <p>Construct a default set of render states with a custom blend mode</p>
 
-<ul><li><em>blend_mode</em> - Blend mode to use</li></ul></div>
+<ul><li><em>blend_mode</em> - Blend mode to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L705" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L705" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1162,17 +1220,20 @@ set its texture. Etc.</p>
         
         def self.<strong>new</strong>(transform : <a href="../SF/Transform.html">Transform</a>)
 
-        <a class="method-permalink" href="#new%28transform%3ATransform%29-class-method">#</a>
+        <a class="method-permalink" href="#new(transform:Transform)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a default set of render states with a custom transform</p>
+        <div class="doc">
+          
+          <p>Construct a default set of render states with a custom transform</p>
 
-<ul><li><em>transform</em> - Transform to use</li></ul></div>
+<ul><li><em>transform</em> - Transform to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L715" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L715" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,37 +1243,43 @@ set its texture. Etc.</p>
         
         def self.<strong>new</strong>(texture : <a href="../SF/Texture.html">Texture</a>?)
 
-        <a class="method-permalink" href="#new%28texture%3ATexture%3F%29-class-method">#</a>
+        <a class="method-permalink" href="#new(texture:Texture?)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a default set of render states with a custom texture</p>
+        <div class="doc">
+          
+          <p>Construct a default set of render states with a custom texture</p>
 
-<ul><li><em>texture</em> - Texture to use</li></ul></div>
+<ul><li><em>texture</em> - Texture to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L725" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L725" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(shader:Shader)-class-method">
+    <div class="entry-detail" id="new(shader:Shader?)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(shader : <a href="../SF/Shader.html">Shader</a>)
+        def self.<strong>new</strong>(shader : <a href="../SF/Shader.html">Shader</a>?)
 
-        <a class="method-permalink" href="#new%28shader%3AShader%29-class-method">#</a>
+        <a class="method-permalink" href="#new(shader:Shader?)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a default set of render states with a custom shader</p>
+        <div class="doc">
+          
+          <p>Construct a default set of render states with a custom shader</p>
 
-<ul><li><em>shader</em> - Shader to use</li></ul></div>
+<ul><li><em>shader</em> - Shader to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L736" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1225,18 +1292,21 @@ set its texture. Etc.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
 <p>Constructing a default set of render states is equivalent
 to using <code><a href="../SF/RenderStates.html#Default">SF::RenderStates::Default</a></code>.
 The default set defines:</p>
 
-<ul><li>the BlendAlpha blend mode</li><li>the identity transform</li><li>a null texture</li><li>a null shader</li></ul></div>
+<ul><li>the BlendAlpha blend mode</li><li>the identity transform</li><li>a null texture</li><li>a null shader</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L695" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L695" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,22 +1316,32 @@ The default set defines:</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="blend_mode:BlendMode-instance-method">
       <div class="signature">
         
         def <strong>blend_mode</strong> : <a href="../SF/BlendMode.html">BlendMode</a>
 
-        <a class="method-permalink" href="#blend_mode%3ABlendMode-instance-method">#</a>
+        <a class="method-permalink" href="#blend_mode:BlendMode-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Blending mode</p></div>
+        <div class="doc">
+          
+          <p>Blending mode</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L761" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L761" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1271,13 +1351,13 @@ The default set defines:</p>
         
         def <strong>blend_mode=</strong>(blend_mode : <a href="../SF/BlendMode.html">BlendMode</a>)
 
-        <a class="method-permalink" href="#blend_mode%3D%28blend_mode%3ABlendMode%29-instance-method">#</a>
+        <a class="method-permalink" href="#blend_mode=(blend_mode:BlendMode)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L764" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L764" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1285,15 +1365,28 @@ The default set defines:</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L807" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L807" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1303,13 +1396,13 @@ The default set defines:</p>
         
         def <strong>inspect</strong>(io)
 
-        <a class="method-permalink" href="#inspect%28io%29-instance-method">#</a>
+        <a class="method-permalink" href="#inspect(io)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L169" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L169" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1319,31 +1412,34 @@ The default set defines:</p>
         
         def <strong>shader</strong> : <a href="../SF/Shader.html">Shader</a>?
 
-        <a class="method-permalink" href="#shader%3AShader%3F-instance-method">#</a>
+        <a class="method-permalink" href="#shader:Shader?-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Shader</p></div>
+        <div class="doc">
+          
+          <p>Shader</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L787" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L787" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="shader=(shader:Shader)-instance-method">
+    <div class="entry-detail" id="shader=(shader:Shader?)-instance-method">
       <div class="signature">
         
-        def <strong>shader=</strong>(shader : <a href="../SF/Shader.html">Shader</a>)
+        def <strong>shader=</strong>(shader : <a href="../SF/Shader.html">Shader</a>?)
 
-        <a class="method-permalink" href="#shader%3D%28shader%3AShader%29-instance-method">#</a>
+        <a class="method-permalink" href="#shader=(shader:Shader?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L790" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L790" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,15 +1449,18 @@ The default set defines:</p>
         
         def <strong>texture</strong> : <a href="../SF/Texture.html">Texture</a>?
 
-        <a class="method-permalink" href="#texture%3ATexture%3F-instance-method">#</a>
+        <a class="method-permalink" href="#texture:Texture?-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Texture</p></div>
+        <div class="doc">
+          
+          <p>Texture</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L777" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L777" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1371,13 +1470,13 @@ The default set defines:</p>
         
         def <strong>texture=</strong>(texture : <a href="../SF/Texture.html">Texture</a>?)
 
-        <a class="method-permalink" href="#texture%3D%28texture%3ATexture%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#texture=(texture:Texture?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L780" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L780" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1387,15 +1486,18 @@ The default set defines:</p>
         
         def <strong>transform</strong> : <a href="../SF/Transform.html">Transform</a>
 
-        <a class="method-permalink" href="#transform%3ATransform-instance-method">#</a>
+        <a class="method-permalink" href="#transform:Transform-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Transform</p></div>
+        <div class="doc">
+          
+          <p>Transform</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L769" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L769" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,13 +1507,13 @@ The default set defines:</p>
         
         def <strong>transform=</strong>(transform : <a href="../SF/Transform.html">Transform</a>)
 
-        <a class="method-permalink" href="#transform%3D%28transform%3ATransform%29-instance-method">#</a>
+        <a class="method-permalink" href="#transform=(transform:Transform)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L772" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L772" target="_blank">View source</a>]
         
       </div>
     </div>

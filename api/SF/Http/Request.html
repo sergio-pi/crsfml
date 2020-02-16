@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Http::Request - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Define a HTTP request</p>
 
@@ -892,10 +903,19 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1260" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1260" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -904,11 +924,18 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28uri%3AString%3D%26quot%3B%2F%26quot%3B%2Cmethod%3AHttp%3A%3ARequest%3A%3AMethod%3DGet%2Cbody%3AString%3D%26quot%3B%26quot%3B%29-class-method" class="signature"><strong>.new</strong>(uri : String = <span class="s">&quot;/&quot;</span>, method : Http::Request::Method = <span class="t">Get</span>, body : String = <span class="s">&quot;&quot;</span>)</a>
+        <a href="#new(uri:String=&quot;/&quot;,method:Http::Request::Method=Get,body:String=&quot;&quot;)-class-method" class="signature"><strong>.new</strong>(uri : String = <span class="s">&quot;/&quot;</span>, method : Http::Request::Method = <span class="t">Get</span>, body : String = <span class="s">&quot;&quot;</span>)</a>
         
           <div class="summary"><p>Default constructor</p></div>
         
@@ -920,18 +947,27 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#body%3D%28body%3AString%29-instance-method" class="signature"><strong>#body=</strong>(body : String)</a>
+        <a href="#body=(body:String)-instance-method" class="signature"><strong>#body=</strong>(body : String)</a>
         
           <div class="summary"><p>Set the body of the request</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -941,28 +977,28 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#method%3D%28method%3AHttp%3A%3ARequest%3A%3AMethod%29-instance-method" class="signature"><strong>#method=</strong>(method : Http::Request::Method)</a>
+        <a href="#method=(method:Http::Request::Method)-instance-method" class="signature"><strong>#method=</strong>(method : Http::Request::Method)</a>
         
           <div class="summary"><p>Set the request method</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_field%28field%3AString%2Cvalue%3AString%29-instance-method" class="signature"><strong>#set_field</strong>(field : String, value : String)</a>
+        <a href="#set_field(field:String,value:String)-instance-method" class="signature"><strong>#set_field</strong>(field : String, value : String)</a>
         
           <div class="summary"><p>Set the value of a field</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_http_version%28major%3AInt%2Cminor%3AInt%29-instance-method" class="signature"><strong>#set_http_version</strong>(major : Int, minor : Int)</a>
+        <a href="#set_http_version(major:Int,minor:Int)-instance-method" class="signature"><strong>#set_http_version</strong>(major : Int, minor : Int)</a>
         
           <div class="summary"><p>Set the HTTP version for the request</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#uri%3D%28uri%3AString%29-instance-method" class="signature"><strong>#uri=</strong>(uri : String)</a>
+        <a href="#uri=(uri:String)-instance-method" class="signature"><strong>#uri=</strong>(uri : String)</a>
         
           <div class="summary"><p>Set the requested URI</p></div>
         
@@ -999,27 +1035,37 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(uri:String=&amp;quot;/&amp;quot;,method:Http::Request::Method=Get,body:String=&amp;quot;&amp;quot;)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(uri : String = <span class="s">&quot;/&quot;</span>, method : <a href="../../SF/Http/Request/Method.html">Http::Request::Method</a> = <span class="t">Get</span>, body : String = <span class="s">&quot;&quot;</span>)
 
-        <a class="method-permalink" href="#new%28uri%3AString%3D%26quot%3B%2F%26quot%3B%2Cmethod%3AHttp%3A%3ARequest%3A%3AMethod%3DGet%2Cbody%3AString%3D%26quot%3B%26quot%3B%29-class-method">#</a>
+        <a class="method-permalink" href="#new(uri:String=&quot;/&quot;,method:Http::Request::Method=Get,body:String=&quot;&quot;)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
 <p>This constructor creates a GET request, with the root
 URI ("/") and an empty body.</p>
 
-<ul><li><em>uri</em> - Target URI</li><li><em>method</em> - Method to use for the request</li><li><em>body</em> - Content of the request's body</li></ul></div>
+<ul><li><em>uri</em> - Target URI</li><li><em>method</em> - Method to use for the request</li><li><em>body</em> - Content of the request's body</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1288" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1288" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1029,28 +1075,38 @@ URI ("/") and an empty body.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="body=(body:String)-instance-method">
       <div class="signature">
         
         def <strong>body=</strong>(body : String)
 
-        <a class="method-permalink" href="#body%3D%28body%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#body=(body:String)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the body of the request</p>
+        <div class="doc">
+          
+          <p>Set the body of the request</p>
 
 <p>The body of a request is optional and only makes sense
 for POST requests. It is ignored for all other methods.
 The body is empty by default.</p>
 
-<ul><li><em>body</em> - Content of the body</li></ul></div>
+<ul><li><em>body</em> - Content of the body</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1341" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1341" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1058,15 +1114,27 @@ The body is empty by default.</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1357" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1357" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1082,7 +1150,7 @@ The body is empty by default.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1262" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1092,21 +1160,24 @@ The body is empty by default.</p>
         
         def <strong>method=</strong>(method : <a href="../../SF/Http/Request/Method.html">Http::Request::Method</a>)
 
-        <a class="method-permalink" href="#method%3D%28method%3AHttp%3A%3ARequest%3A%3AMethod%29-instance-method">#</a>
+        <a class="method-permalink" href="#method=(method:Http::Request::Method)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the request method</p>
+        <div class="doc">
+          
+          <p>Set the request method</p>
 
 <p>See the Method enumeration for a complete list of all
 the availale methods.
 The method is Http::Request::Get by default.</p>
 
-<ul><li><em>method</em> - Method to use for the request</li></ul></div>
+<ul><li><em>method</em> - Method to use for the request</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1312" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1312" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1116,10 +1187,12 @@ The method is Http::Request::Get by default.</p>
         
         def <strong>set_field</strong>(field : String, value : String)
 
-        <a class="method-permalink" href="#set_field%28field%3AString%2Cvalue%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_field(field:String,value:String)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the value of a field</p>
+        <div class="doc">
+          
+          <p>Set the value of a field</p>
 
 <p>The field is created if it doesn't exist. The name of
 the field is case-insensitive.
@@ -1127,12 +1200,13 @@ By default, a request doesn't contain any field (but the
 mandatory fields are added later by the HTTP client when
 sending the request).</p>
 
-<ul><li><em>field</em> - Name of the field to set</li><li><em>value</em> - Value of the field</li></ul></div>
+<ul><li><em>field</em> - Name of the field to set</li><li><em>value</em> - Value of the field</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1302" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1302" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1142,19 +1216,22 @@ sending the request).</p>
         
         def <strong>set_http_version</strong>(major : Int, minor : Int)
 
-        <a class="method-permalink" href="#set_http_version%28major%3AInt%2Cminor%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_http_version(major:Int,minor:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the HTTP version for the request</p>
+        <div class="doc">
+          
+          <p>Set the HTTP version for the request</p>
 
 <p>The HTTP version is 1.0 by default.</p>
 
-<ul><li><em>major</em> - Major HTTP version number</li><li><em>minor</em> - Minor HTTP version number</li></ul></div>
+<ul><li><em>major</em> - Major HTTP version number</li><li><em>minor</em> - Minor HTTP version number</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1331" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1331" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1164,21 +1241,24 @@ sending the request).</p>
         
         def <strong>uri=</strong>(uri : String)
 
-        <a class="method-permalink" href="#uri%3D%28uri%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#uri=(uri:String)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the requested URI</p>
+        <div class="doc">
+          
+          <p>Set the requested URI</p>
 
 <p>The URI is the resource (usually a web page or a file)
 that you want to get or post.
 The URI is "/" (the root page) by default.</p>
 
-<ul><li><em>uri</em> - URI to request, relative to the host</li></ul></div>
+<ul><li><em>uri</em> - URI to request, relative to the host</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1322" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1322" target="_blank">View source</a>]
         
       </div>
     </div>

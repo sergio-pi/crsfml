@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Sound - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Regular sound that can be played in the audio environment</p>
 
@@ -920,10 +931,19 @@ sound.play()</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1087" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1087" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -932,11 +952,18 @@ sound.play()</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28buffer%3ASoundBuffer%29-class-method" class="signature"><strong>.new</strong>(buffer : SoundBuffer)</a>
+        <a href="#new(buffer:SoundBuffer)-class-method" class="signature"><strong>.new</strong>(buffer : SoundBuffer)</a>
         
           <div class="summary"><p>Construct the sound with a buffer</p></div>
         
@@ -955,18 +982,18 @@ sound.play()</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#buffer%3ASoundBuffer%3F-instance-method" class="signature"><strong>#buffer</strong> : SoundBuffer?</a>
-        
-          <div class="summary"><p>Get the audio buffer attached to the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#buffer%3D%28buffer%3ASoundBuffer%29-instance-method" class="signature"><strong>#buffer=</strong>(buffer : SoundBuffer)</a>
+        <a href="#buffer=(buffer:SoundBuffer)-instance-method" class="signature"><strong>#buffer=</strong>(buffer : SoundBuffer)</a>
         
           <div class="summary"><p>Set the source buffer containing the audio data to play</p></div>
         
@@ -980,14 +1007,14 @@ sound.play()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#loop%3ABool-instance-method" class="signature"><strong>#loop</strong> : Bool</a>
+        <a href="#loop:Bool-instance-method" class="signature"><strong>#loop</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether or not the sound is in loop mode</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#loop%3D%28loop%3ABool%29-instance-method" class="signature"><strong>#loop=</strong>(loop : Bool)</a>
+        <a href="#loop=(loop:Bool)-instance-method" class="signature"><strong>#loop=</strong>(loop : Bool)</a>
         
           <div class="summary"><p>Set whether or not the sound should loop after reaching the end</p></div>
         
@@ -1008,14 +1035,14 @@ sound.play()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#playing_offset%3ATime-instance-method" class="signature"><strong>#playing_offset</strong> : Time</a>
+        <a href="#playing_offset:Time-instance-method" class="signature"><strong>#playing_offset</strong> : Time</a>
         
           <div class="summary"><p>Get the current playing position of the sound</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#playing_offset%3D%28time_offset%3ATime%29-instance-method" class="signature"><strong>#playing_offset=</strong>(time_offset : Time)</a>
+        <a href="#playing_offset=(time_offset:Time)-instance-method" class="signature"><strong>#playing_offset=</strong>(time_offset : Time)</a>
         
           <div class="summary"><p>Change the current playing position of the sound</p></div>
         
@@ -1029,7 +1056,7 @@ sound.play()</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#status%3ASoundSource%3A%3AStatus-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
+        <a href="#status:SoundSource::Status-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
         
           <div class="summary"><p>Get the current status of the sound (stopped, paused, playing)</p></div>
         
@@ -1055,12 +1082,12 @@ sound.play()</code></pre>
   <h3>Instance methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
   
   
-    <a href="../SF/SoundSource.html#attenuation%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#attenuation:Float32-instance-method" class="tooltip">
       <span>attenuation : Float32</span>
     attenuation</a>, 
     
   
-    <a href="../SF/SoundSource.html#attenuation%3D%28attenuation%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#attenuation=(attenuation:Number)-instance-method" class="tooltip">
       <span>attenuation=(attenuation : Number)</span>
     attenuation=</a>, 
     
@@ -1070,12 +1097,12 @@ sound.play()</code></pre>
     finalize</a>, 
     
   
-    <a href="../SF/SoundSource.html#min_distance%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#min_distance:Float32-instance-method" class="tooltip">
       <span>min_distance : Float32</span>
     min_distance</a>, 
     
   
-    <a href="../SF/SoundSource.html#min_distance%3D%28distance%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#min_distance=(distance:Number)-instance-method" class="tooltip">
       <span>min_distance=(distance : Number)</span>
     min_distance=</a>, 
     
@@ -1085,12 +1112,12 @@ sound.play()</code></pre>
     pause</a>, 
     
   
-    <a href="../SF/SoundSource.html#pitch%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#pitch:Float32-instance-method" class="tooltip">
       <span>pitch : Float32</span>
     pitch</a>, 
     
   
-    <a href="../SF/SoundSource.html#pitch%3D%28pitch%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#pitch=(pitch:Number)-instance-method" class="tooltip">
       <span>pitch=(pitch : Number)</span>
     pitch=</a>, 
     
@@ -1100,32 +1127,32 @@ sound.play()</code></pre>
     play</a>, 
     
   
-    <a href="../SF/SoundSource.html#position%3AVector3f-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#position:Vector3f-instance-method" class="tooltip">
       <span>position : Vector3f</span>
     position</a>, 
     
   
-    <a href="../SF/SoundSource.html#position%3D%28position%3AVector3f%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#position=(position:Vector3f)-instance-method" class="tooltip">
       <span>position=(position : Vector3f)</span>
     position=</a>, 
     
   
-    <a href="../SF/SoundSource.html#relative_to_listener%3D%28relative%3ABool%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#relative_to_listener=(relative:Bool)-instance-method" class="tooltip">
       <span>relative_to_listener=(relative : Bool)</span>
     relative_to_listener=</a>, 
     
   
-    <a href="../SF/SoundSource.html#relative_to_listener%3F%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#relative_to_listener?:Bool-instance-method" class="tooltip">
       <span>relative_to_listener? : Bool</span>
     relative_to_listener?</a>, 
     
   
-    <a href="../SF/SoundSource.html#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#set_position(x:Number,y:Number,z:Number)-instance-method" class="tooltip">
       <span>set_position(x : Number, y : Number, z : Number)</span>
     set_position</a>, 
     
   
-    <a href="../SF/SoundSource.html#status%3ASoundSource%3A%3AStatus-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#status:SoundSource::Status-instance-method" class="tooltip">
       <span>status : SoundSource::Status</span>
     status</a>, 
     
@@ -1135,12 +1162,12 @@ sound.play()</code></pre>
     stop</a>, 
     
   
-    <a href="../SF/SoundSource.html#volume%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#volume:Float32-instance-method" class="tooltip">
       <span>volume : Float32</span>
     volume</a>, 
     
   
-    <a href="../SF/SoundSource.html#volume%3D%28volume%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/SoundSource.html#volume=(volume:Number)-instance-method" class="tooltip">
       <span>volume=(volume : Number)</span>
     volume=</a>
     
@@ -1148,15 +1175,6 @@ sound.play()</code></pre>
 
 
     
-
-  <h3>Constructor methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
-  
-  
-    <a href="../SF/SoundSource.html#new-class-method" class="tooltip">
-      <span>new</span>
-    new</a>
-    
-  
 
 
     
@@ -1196,24 +1214,34 @@ sound.play()</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(buffer:SoundBuffer)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
 
-        <a class="method-permalink" href="#new%28buffer%3ASoundBuffer%29-class-method">#</a>
+        <a class="method-permalink" href="#new(buffer:SoundBuffer)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the sound with a buffer</p>
+        <div class="doc">
+          
+          <p>Construct the sound with a buffer</p>
 
-<ul><li><em>buffer</em> - Sound buffer containing the audio data to play with the sound</li></ul></div>
+<ul><li><em>buffer</em> - Sound buffer containing the audio data to play with the sound</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1097" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1097" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1226,12 +1254,15 @@ sound.play()</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p></div>
+        <div class="doc">
+          
+          <p>Default constructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1090" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1090" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1241,37 +1272,26 @@ sound.play()</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
-  
-    <div class="entry-detail" id="buffer:SoundBuffer?-instance-method">
-      <div class="signature">
-        
-        def <strong>buffer</strong> : <a href="../SF/SoundBuffer.html">SoundBuffer</a>?
-
-        <a class="method-permalink" href="#buffer%3ASoundBuffer%3F-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Get the audio buffer attached to the sound</p>
-
-<p><em>Returns:</em> Sound buffer attached to the sound (can be NULL)</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1178" target="_blank">View source</a>]
-        
-      </div>
-    </div>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="buffer=(buffer:SoundBuffer)-instance-method">
       <div class="signature">
         
         def <strong>buffer=</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
 
-        <a class="method-permalink" href="#buffer%3D%28buffer%3ASoundBuffer%29-instance-method">#</a>
+        <a class="method-permalink" href="#buffer=(buffer:SoundBuffer)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the source buffer containing the audio data to play</p>
+        <div class="doc">
+          
+          <p>Set the source buffer containing the audio data to play</p>
 
 <p>It is important to note that the sound buffer is not copied,
 thus the <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> instance must remain alive as long
@@ -1279,12 +1299,13 @@ as it is attached to the sound.</p>
 
 <ul><li><em>buffer</em> - Sound buffer to attach to the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#buffer%3ASoundBuffer%3F-instance-method">#buffer</a></code></p></div>
+<p><em>See also:</em> <code>buffer</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1146" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1147" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,12 +1318,15 @@ as it is attached to the sound.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1102" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1312,19 +1336,22 @@ as it is attached to the sound.</p>
         
         def <strong>loop</strong> : Bool
 
-        <a class="method-permalink" href="#loop%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#loop:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether or not the sound is in loop mode</p>
+        <div class="doc">
+          
+          <p>Tell whether or not the sound is in loop mode</p>
 
 <p><em>Returns:</em> True if the sound is looping, false otherwise</p>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#loop%3D%28loop%3ABool%29-instance-method">#loop=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#loop=(loop:Bool)-instance-method">#loop=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1188" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1189" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1334,10 +1361,12 @@ as it is attached to the sound.</p>
         
         def <strong>loop=</strong>(loop : Bool)
 
-        <a class="method-permalink" href="#loop%3D%28loop%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#loop=(loop:Bool)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set whether or not the sound should loop after reaching the end</p>
+        <div class="doc">
+          
+          <p>Set whether or not the sound should loop after reaching the end</p>
 
 <p>If set, the sound will restart from beginning after
 reaching the end and so on, until it is stopped or
@@ -1346,12 +1375,13 @@ The default looping state for sound is false.</p>
 
 <ul><li><em>loop</em> - True to play in loop, false to play once</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#loop%3ABool-instance-method">#loop</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#loop:Bool-instance-method">#loop</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1159" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1162" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,17 +1394,20 @@ The default looping state for sound is false.</p>
         <a class="method-permalink" href="#pause-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Pause the sound</p>
+        <div class="doc">
+          
+          <p>Pause the sound</p>
 
 <p>This function pauses the sound if it was playing,
 otherwise (sound already paused or stopped) it has no effect.</p>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1124" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1387,7 +1420,9 @@ otherwise (sound already paused or stopped) it has no effect.</p>
         <a class="method-permalink" href="#play-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Start or resume playing the sound</p>
+        <div class="doc">
+          
+          <p>Start or resume playing the sound</p>
 
 <p>This function starts the stream if it was stopped, resumes
 it if it was paused, and restarts it from beginning if it
@@ -1395,12 +1430,13 @@ was it already playing.
 This function uses its own thread so that it doesn't block
 the rest of the program while the sound is played.</p>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1115" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1410,19 +1446,22 @@ the rest of the program while the sound is played.</p>
         
         def <strong>playing_offset</strong> : <a href="../SF/Time.html">Time</a>
 
-        <a class="method-permalink" href="#playing_offset%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#playing_offset:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current playing position of the sound</p>
+        <div class="doc">
+          
+          <p>Get the current playing position of the sound</p>
 
 <p><em>Returns:</em> Current playing position, from the beginning of the sound</p>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset%3D%28time_offset%3ATime%29-instance-method">#playing_offset=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset=(time_offset:Time)-instance-method">#playing_offset=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1197" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1198" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1432,10 +1471,12 @@ the rest of the program while the sound is played.</p>
         
         def <strong>playing_offset=</strong>(time_offset : <a href="../SF/Time.html">Time</a>)
 
-        <a class="method-permalink" href="#playing_offset%3D%28time_offset%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#playing_offset=(time_offset:Time)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the current playing position of the sound</p>
+        <div class="doc">
+          
+          <p>Change the current playing position of the sound</p>
 
 <p>The playing position can be changed when the sound is
 either paused or playing. Changing the playing position
@@ -1444,12 +1485,13 @@ the sound will reset its position.</p>
 
 <ul><li><em>time_offset</em> - New playing position, from the beginning of the sound</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset%3ATime-instance-method">#playing_offset</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset:Time-instance-method">#playing_offset</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1172" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1462,17 +1504,20 @@ the sound will reset its position.</p>
         <a class="method-permalink" href="#reset_buffer-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Reset the internal buffer of the sound</p>
+        <div class="doc">
+          
+          <p>Reset the internal buffer of the sound</p>
 
 <p>This function is for internal use only, you don't have
 to use it. It is called by the <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> that
 this sound uses, when it is destroyed in order to prevent
-the sound from using a dead buffer.</p></div>
+the sound from using a dead buffer.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1215" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1216" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1482,17 +1527,20 @@ the sound from using a dead buffer.</p></div>
         
         def <strong>status</strong> : <a href="../SF/SoundSource/Status.html">SoundSource::Status</a>
 
-        <a class="method-permalink" href="#status%3ASoundSource%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#status:SoundSource::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current status of the sound (stopped, paused, playing)</p>
+        <div class="doc">
+          
+          <p>Get the current status of the sound (stopped, paused, playing)</p>
 
-<p><em>Returns:</em> Current status of the sound</p></div>
+<p><em>Returns:</em> Current status of the sound</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1205" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1505,18 +1553,21 @@ the sound from using a dead buffer.</p></div>
         <a class="method-permalink" href="#stop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>stop playing the sound</p>
+        <div class="doc">
+          
+          <p>stop playing the sound</p>
 
 <p>This function stops the sound if it was playing or paused,
 and does nothing if it was already stopped.
 It also resets the playing position (unlike pause()).</p>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1134" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1135" target="_blank">View source</a>]
         
       </div>
     </div>

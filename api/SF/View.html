@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::View - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>2D camera that defines what region is shown on screen</p>
 
@@ -942,10 +953,19 @@ window.draw some_text</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4244" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4244" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -954,18 +974,25 @@ window.draw some_text</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method" class="signature"><strong>.new</strong>(center : Vector2 | Tuple, size : Vector2 | Tuple)</a>
+        <a href="#new(center:Vector2%7CTuple,size:Vector2%7CTuple)-class-method" class="signature"><strong>.new</strong>(center : Vector2 | Tuple, size : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Construct the view from its center and size</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28rectangle%3AFloatRect%29-class-method" class="signature"><strong>.new</strong>(rectangle : FloatRect)</a>
+        <a href="#new(rectangle:FloatRect)-class-method" class="signature"><strong>.new</strong>(rectangle : FloatRect)</a>
         
           <div class="summary"><p>Construct the view from a rectangle</p></div>
         
@@ -984,25 +1011,34 @@ window.draw some_text</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#center%3AVector2f-instance-method" class="signature"><strong>#center</strong> : Vector2f</a>
+        <a href="#center:Vector2f-instance-method" class="signature"><strong>#center</strong> : Vector2f</a>
         
           <div class="summary"><p>Get the center of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#center%3D%28center%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#center=</strong>(center : Vector2 | Tuple)</a>
+        <a href="#center=(center:Vector2%7CTuple)-instance-method" class="signature"><strong>#center=</strong>(center : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Set the center of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1012,105 +1048,105 @@ window.draw some_text</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#inverse_transform%3ATransform-instance-method" class="signature"><strong>#inverse_transform</strong> : Transform</a>
+        <a href="#inverse_transform:Transform-instance-method" class="signature"><strong>#inverse_transform</strong> : Transform</a>
         
           <div class="summary"><p>Get the inverse projection transform of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
+        <a href="#move(offset_x:Number,offset_y:Number)-instance-method" class="signature"><strong>#move</strong>(offset_x : Number, offset_y : Number)</a>
         
           <div class="summary"><p>Move the view relatively to its current position</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move%28offset%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
+        <a href="#move(offset:Vector2%7CTuple)-instance-method" class="signature"><strong>#move</strong>(offset : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Move the view relatively to its current position</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reset%28rectangle%3AFloatRect%29-instance-method" class="signature"><strong>#reset</strong>(rectangle : FloatRect)</a>
+        <a href="#reset(rectangle:FloatRect)-instance-method" class="signature"><strong>#reset</strong>(rectangle : FloatRect)</a>
         
           <div class="summary"><p>Reset the view to the given rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotate%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
+        <a href="#rotate(angle:Number)-instance-method" class="signature"><strong>#rotate</strong>(angle : Number)</a>
         
           <div class="summary"><p>Rotate the view relatively to its current orientation</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3AFloat32-instance-method" class="signature"><strong>#rotation</strong> : Float32</a>
+        <a href="#rotation:Float32-instance-method" class="signature"><strong>#rotation</strong> : Float32</a>
         
           <div class="summary"><p>Get the current orientation of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rotation%3D%28angle%3ANumber%29-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
+        <a href="#rotation=(angle:Number)-instance-method" class="signature"><strong>#rotation=</strong>(angle : Number)</a>
         
           <div class="summary"><p>Set the orientation of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_center%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="signature"><strong>#set_center</strong>(x : Number, y : Number)</a>
+        <a href="#set_center(x:Number,y:Number)-instance-method" class="signature"><strong>#set_center</strong>(x : Number, y : Number)</a>
         
           <div class="summary"><p>Set the center of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_size%28width%3ANumber%2Cheight%3ANumber%29-instance-method" class="signature"><strong>#set_size</strong>(width : Number, height : Number)</a>
+        <a href="#set_size(width:Number,height:Number)-instance-method" class="signature"><strong>#set_size</strong>(width : Number, height : Number)</a>
         
           <div class="summary"><p>Set the size of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3AVector2f-instance-method" class="signature"><strong>#size</strong> : Vector2f</a>
+        <a href="#size:Vector2f-instance-method" class="signature"><strong>#size</strong> : Vector2f</a>
         
           <div class="summary"><p>Get the size of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3D%28size%3AVector2%7CTuple%29-instance-method" class="signature"><strong>#size=</strong>(size : Vector2 | Tuple)</a>
+        <a href="#size=(size:Vector2%7CTuple)-instance-method" class="signature"><strong>#size=</strong>(size : Vector2 | Tuple)</a>
         
           <div class="summary"><p>Set the size of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#transform%3ATransform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
+        <a href="#transform:Transform-instance-method" class="signature"><strong>#transform</strong> : Transform</a>
         
           <div class="summary"><p>Get the projection transform of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#viewport%3AFloatRect-instance-method" class="signature"><strong>#viewport</strong> : FloatRect</a>
+        <a href="#viewport:FloatRect-instance-method" class="signature"><strong>#viewport</strong> : FloatRect</a>
         
           <div class="summary"><p>Get the target viewport rectangle of the view</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#viewport%3D%28viewport%3AFloatRect%29-instance-method" class="signature"><strong>#viewport=</strong>(viewport : FloatRect)</a>
+        <a href="#viewport=(viewport:FloatRect)-instance-method" class="signature"><strong>#viewport=</strong>(viewport : FloatRect)</a>
         
           <div class="summary"><p>Set the target viewport</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#zoom%28factor%3ANumber%29-instance-method" class="signature"><strong>#zoom</strong>(factor : Number)</a>
+        <a href="#zoom(factor:Number)-instance-method" class="signature"><strong>#zoom</strong>(factor : Number)</a>
         
           <div class="summary"><p>Resize the view rectangle relatively to its current size</p></div>
         
@@ -1147,24 +1183,34 @@ window.draw some_text</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(center:Vector2|Tuple,size:Vector2|Tuple)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(center : <a href="../SF/Vector2.html">Vector2</a> | Tuple, size : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#new%28center%3AVector2%7CTuple%2Csize%3AVector2%7CTuple%29-class-method">#</a>
+        <a class="method-permalink" href="#new(center:Vector2%7CTuple,size:Vector2%7CTuple)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the view from its center and size</p>
+        <div class="doc">
+          
+          <p>Construct the view from its center and size</p>
 
-<ul><li><em>center</em> - Center of the zone to display</li><li><em>size</em> - Size of zone to display</li></ul></div>
+<ul><li><em>center</em> - Center of the zone to display</li><li><em>size</em> - Size of zone to display</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4268" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4268" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1174,17 +1220,20 @@ window.draw some_text</code></pre>
         
         def self.<strong>new</strong>(rectangle : <a href="../SF/FloatRect.html">FloatRect</a>)
 
-        <a class="method-permalink" href="#new%28rectangle%3AFloatRect%29-class-method">#</a>
+        <a class="method-permalink" href="#new(rectangle:FloatRect)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the view from a rectangle</p>
+        <div class="doc">
+          
+          <p>Construct the view from a rectangle</p>
 
-<ul><li><em>rectangle</em> - Rectangle defining the zone to display</li></ul></div>
+<ul><li><em>rectangle</em> - Rectangle defining the zone to display</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4260" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4260" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1197,14 +1246,17 @@ window.draw some_text</code></pre>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>This constructor creates a default view of (0, 0, 1000, 1000)</p></div>
+<p>This constructor creates a default view of (0, 0, 1000, 1000)</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4253" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4253" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1214,26 +1266,36 @@ window.draw some_text</code></pre>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="center:Vector2f-instance-method">
       <div class="signature">
         
         def <strong>center</strong> : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#center%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#center:Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the center of the view</p>
+        <div class="doc">
+          
+          <p>Get the center of the view</p>
 
 <p><em>Returns:</em> Center of the view</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#size%3AVector2f-instance-method">#size</a></code>, <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#size:Vector2f-instance-method">#size</a></code>, <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4350" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4350" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,19 +1305,22 @@ window.draw some_text</code></pre>
         
         def <strong>center=</strong>(center : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#center%3D%28center%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#center=(center:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the center of the view</p>
+        <div class="doc">
+          
+          <p>Set the center of the view</p>
 
 <ul><li><em>center</em> - New center</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#size=(size:Vector2%7CTuple)-instance-method">#size=</a></code>, <code><a href="../SF/View.html#center:Vector2f-instance-method">#center</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4288" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4288" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1263,15 +1328,27 @@ window.draw some_text</code></pre>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4462" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4462" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1287,7 +1364,7 @@ window.draw some_text</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4246" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4246" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,21 +1374,24 @@ window.draw some_text</code></pre>
         
         def <strong>inverse_transform</strong> : <a href="../SF/Transform.html">Transform</a>
 
-        <a class="method-permalink" href="#inverse_transform%3ATransform-instance-method">#</a>
+        <a class="method-permalink" href="#inverse_transform:Transform-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the inverse projection transform of the view</p>
+        <div class="doc">
+          
+          <p>Get the inverse projection transform of the view</p>
 
 <p>This function is meant for internal use only.</p>
 
 <p><em>Returns:</em> Inverse of the projection transform defining the view</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#transform%3ATransform-instance-method">#transform</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#transform:Transform-instance-method">#transform</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4444" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4444" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1321,19 +1401,22 @@ window.draw some_text</code></pre>
         
         def <strong>move</strong>(offset_x : Number, offset_y : Number)
 
-        <a class="method-permalink" href="#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#move(offset_x:Number,offset_y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Move the view relatively to its current position</p>
+        <div class="doc">
+          
+          <p>Move the view relatively to its current position</p>
 
 <ul><li><em>offset_x</em> - X coordinate of the move offset</li><li><em>offset_y</em> - Y coordinate of the move offset</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate(angle:Number)-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom(factor:Number)-instance-method">#zoom</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4390" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4390" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1343,19 +1426,22 @@ window.draw some_text</code></pre>
         
         def <strong>move</strong>(offset : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#move%28offset%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#move(offset:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Move the view relatively to its current position</p>
+        <div class="doc">
+          
+          <p>Move the view relatively to its current position</p>
 
 <ul><li><em>offset</em> - Move offset</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code>, <code><a href="../SF/View.html#rotate(angle:Number)-instance-method">#rotate</a></code>, <code><a href="../SF/View.html#zoom(factor:Number)-instance-method">#zoom</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4398" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1365,21 +1451,24 @@ window.draw some_text</code></pre>
         
         def <strong>reset</strong>(rectangle : <a href="../SF/FloatRect.html">FloatRect</a>)
 
-        <a class="method-permalink" href="#reset%28rectangle%3AFloatRect%29-instance-method">#</a>
+        <a class="method-permalink" href="#reset(rectangle:FloatRect)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Reset the view to the given rectangle</p>
+        <div class="doc">
+          
+          <p>Reset the view to the given rectangle</p>
 
 <p>Note that this function resets the rotation angle to 0.</p>
 
 <ul><li><em>rectangle</em> - Rectangle defining the zone to display</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code>, <code><a href="../SF/View.html#size=(size:Vector2%7CTuple)-instance-method">#size=</a></code>, <code><a href="../SF/View.html#rotation=(angle:Number)-instance-method">#rotation=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4342" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4342" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1389,19 +1478,22 @@ window.draw some_text</code></pre>
         
         def <strong>rotate</strong>(angle : Number)
 
-        <a class="method-permalink" href="#rotate%28angle%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#rotate(angle:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Rotate the view relatively to its current orientation</p>
+        <div class="doc">
+          
+          <p>Rotate the view relatively to its current orientation</p>
 
 <ul><li><em>angle</em> - Angle to rotate, in degrees</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code>, <code><a href="../SF/View.html#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#zoom%28factor%3ANumber%29-instance-method">#zoom</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#rotation=(angle:Number)-instance-method">#rotation=</a></code>, <code><a href="../SF/View.html#move(offset_x:Number,offset_y:Number)-instance-method">#move</a></code>, <code><a href="../SF/View.html#zoom(factor:Number)-instance-method">#zoom</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4407" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4407" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1411,19 +1503,22 @@ window.draw some_text</code></pre>
         
         def <strong>rotation</strong> : Float32
 
-        <a class="method-permalink" href="#rotation%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#rotation:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current orientation of the view</p>
+        <div class="doc">
+          
+          <p>Get the current orientation of the view</p>
 
 <p><em>Returns:</em> Rotation angle of the view, in degrees</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#rotation%3D%28angle%3ANumber%29-instance-method">#rotation=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#rotation=(angle:Number)-instance-method">#rotation=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4370" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4370" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1433,21 +1528,24 @@ window.draw some_text</code></pre>
         
         def <strong>rotation=</strong>(angle : Number)
 
-        <a class="method-permalink" href="#rotation%3D%28angle%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#rotation=(angle:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the orientation of the view</p>
+        <div class="doc">
+          
+          <p>Set the orientation of the view</p>
 
 <p>The default rotation of a view is 0 degree.</p>
 
 <ul><li><em>angle</em> - New angle, in degrees</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#rotation%3AFloat32-instance-method">#rotation</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#rotation:Float32-instance-method">#rotation</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4317" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4317" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1457,19 +1555,22 @@ window.draw some_text</code></pre>
         
         def <strong>set_center</strong>(x : Number, y : Number)
 
-        <a class="method-permalink" href="#set_center%28x%3ANumber%2Cy%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_center(x:Number,y:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the center of the view</p>
+        <div class="doc">
+          
+          <p>Set the center of the view</p>
 
 <ul><li><em>x</em> - X coordinate of the new center</li><li><em>y</em> - Y coordinate of the new center</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#size=(size:Vector2%7CTuple)-instance-method">#size=</a></code>, <code><a href="../SF/View.html#center:Vector2f-instance-method">#center</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4280" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4280" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1479,19 +1580,22 @@ window.draw some_text</code></pre>
         
         def <strong>set_size</strong>(width : Number, height : Number)
 
-        <a class="method-permalink" href="#set_size%28width%3ANumber%2Cheight%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_size(width:Number,height:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the size of the view</p>
+        <div class="doc">
+          
+          <p>Set the size of the view</p>
 
 <ul><li><em>width</em> - New width of the view</li><li><em>height</em> - New height of the view</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code>, <code><a href="../SF/View.html#center:Vector2f-instance-method">#center</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4298" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4298" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1501,19 +1605,22 @@ window.draw some_text</code></pre>
         
         def <strong>size</strong> : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#size%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#size:Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the size of the view</p>
+        <div class="doc">
+          
+          <p>Get the size of the view</p>
 
 <p><em>Returns:</em> Size of the view</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code>, <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center:Vector2f-instance-method">#center</a></code>, <code><a href="../SF/View.html#size=(size:Vector2%7CTuple)-instance-method">#size=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4360" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4360" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1523,19 +1630,22 @@ window.draw some_text</code></pre>
         
         def <strong>size=</strong>(size : <a href="../SF/Vector2.html">Vector2</a> | Tuple)
 
-        <a class="method-permalink" href="#size%3D%28size%3AVector2%7CTuple%29-instance-method">#</a>
+        <a class="method-permalink" href="#size=(size:Vector2%7CTuple)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the size of the view</p>
+        <div class="doc">
+          
+          <p>Set the size of the view</p>
 
 <ul><li><em>size</em> - New size</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#center%3D%28center%3AVector2%7CTuple%29-instance-method">#center=</a></code>, <code><a href="../SF/View.html#center%3AVector2f-instance-method">#center</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#center=(center:Vector2%7CTuple)-instance-method">#center=</a></code>, <code><a href="../SF/View.html#center:Vector2f-instance-method">#center</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4306" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4306" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1545,21 +1655,24 @@ window.draw some_text</code></pre>
         
         def <strong>transform</strong> : <a href="../SF/Transform.html">Transform</a>
 
-        <a class="method-permalink" href="#transform%3ATransform-instance-method">#</a>
+        <a class="method-permalink" href="#transform:Transform-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the projection transform of the view</p>
+        <div class="doc">
+          
+          <p>Get the projection transform of the view</p>
 
 <p>This function is meant for internal use only.</p>
 
 <p><em>Returns:</em> Projection transform defining the view</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#inverse_transform%3ATransform-instance-method">#inverse_transform</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#inverse_transform:Transform-instance-method">#inverse_transform</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4432" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4432" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1569,19 +1682,22 @@ window.draw some_text</code></pre>
         
         def <strong>viewport</strong> : <a href="../SF/FloatRect.html">FloatRect</a>
 
-        <a class="method-permalink" href="#viewport%3AFloatRect-instance-method">#</a>
+        <a class="method-permalink" href="#viewport:FloatRect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the target viewport rectangle of the view</p>
+        <div class="doc">
+          
+          <p>Get the target viewport rectangle of the view</p>
 
 <p><em>Returns:</em> Viewport rectangle, expressed as a factor of the target size</p>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#viewport%3D%28viewport%3AFloatRect%29-instance-method">#viewport=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#viewport=(viewport:FloatRect)-instance-method">#viewport=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4379" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4379" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1591,10 +1707,12 @@ window.draw some_text</code></pre>
         
         def <strong>viewport=</strong>(viewport : <a href="../SF/FloatRect.html">FloatRect</a>)
 
-        <a class="method-permalink" href="#viewport%3D%28viewport%3AFloatRect%29-instance-method">#</a>
+        <a class="method-permalink" href="#viewport=(viewport:FloatRect)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the target viewport</p>
+        <div class="doc">
+          
+          <p>Set the target viewport</p>
 
 <p>The viewport is the rectangle into which the contents of the
 view are displayed, expressed as a factor (between 0 and 1)
@@ -1605,12 +1723,13 @@ By default, a view has a viewport which covers the entire target.</p>
 
 <ul><li><em>viewport</em> - New viewport rectangle</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#viewport%3AFloatRect-instance-method">#viewport</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#viewport:FloatRect-instance-method">#viewport</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4332" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1620,10 +1739,12 @@ By default, a view has a viewport which covers the entire target.</p>
         
         def <strong>zoom</strong>(factor : Number)
 
-        <a class="method-permalink" href="#zoom%28factor%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#zoom(factor:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Resize the view rectangle relatively to its current size</p>
+        <div class="doc">
+          
+          <p>Resize the view rectangle relatively to its current size</p>
 
 <p>Resizing the view simulates a zoom, as the zone displayed on
 screen grows or shrinks.
@@ -1633,12 +1754,13 @@ screen grows or shrinks.
 
 <ul><li><em>factor</em> - Zoom factor to apply</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/View.html#size%3D%28size%3AVector2%7CTuple%29-instance-method">#size=</a></code>, <code><a href="../SF/View.html#move%28offset_x%3ANumber%2Coffset_y%3ANumber%29-instance-method">#move</a></code>, <code><a href="../SF/View.html#rotate%28angle%3ANumber%29-instance-method">#rotate</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/View.html#size=(size:Vector2%7CTuple)-instance-method">#size=</a></code>, <code><a href="../SF/View.html#move(offset_x:Number,offset_y:Number)-instance-method">#move</a></code>, <code><a href="../SF/View.html#rotate(angle:Number)-instance-method">#rotate</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L4422" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L4422" target="_blank">View source</a>]
         
       </div>
     </div>

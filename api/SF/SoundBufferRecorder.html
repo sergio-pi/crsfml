@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::SoundBufferRecorder - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Specialized SoundRecorder which stores the captured</p>
 
@@ -924,10 +935,19 @@ about this).</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1872" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1877" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -936,7 +956,14 @@ about this).</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -950,11 +977,18 @@ about this).</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#buffer%3ASoundBuffer-instance-method" class="signature"><strong>#buffer</strong> : SoundBuffer</a>
+        <a href="#buffer:SoundBuffer-instance-method" class="signature"><strong>#buffer</strong> : SoundBuffer</a>
         
           <div class="summary"><p>Get the sound buffer containing the captured audio data</p></div>
         
@@ -968,14 +1002,14 @@ about this).</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#on_process_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%29%3ABool-instance-method" class="signature"><strong>#on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool</a>
+        <a href="#on_process_samples(samples:Array(Int16)%7CSlice(Int16)):Bool-instance-method" class="signature"><strong>#on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool</a>
         
           <div class="summary"><p>Process a new chunk of recorded samples</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#on_start%3ABool-instance-method" class="signature"><strong>#on_start</strong> : Bool</a>
+        <a href="#on_start:Bool-instance-method" class="signature"><strong>#on_start</strong> : Bool</a>
         
           <div class="summary"><p>Start capturing audio data</p></div>
         
@@ -1001,22 +1035,22 @@ about this).</p>
   <h3>Instance methods inherited from class <code><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></code></h3>
   
   
-    <a href="../SF/SoundRecorder.html#channel_count%3AInt32-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#channel_count:Int32-instance-method" class="tooltip">
       <span>channel_count : Int32</span>
     channel_count</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#channel_count%3D%28channel_count%3AInt%29-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#channel_count=(channel_count:Int)-instance-method" class="tooltip">
       <span>channel_count=(channel_count : Int)</span>
     channel_count=</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#device%3AString-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#device:String-instance-method" class="tooltip">
       <span>device : String</span>
     device</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#device%3D%28name%3AString%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#device=(name:String):Bool-instance-method" class="tooltip">
       <span>device=(name : String) : Bool</span>
     device=</a>, 
     
@@ -1026,12 +1060,12 @@ about this).</p>
     finalize</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#on_process_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#on_process_samples(samples:Array(Int16)%7CSlice(Int16)):Bool-instance-method" class="tooltip">
       <span>on_process_samples(samples : Array(Int16) | Slice(Int16)) : Bool</span>
     on_process_samples</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#on_start%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#on_start:Bool-instance-method" class="tooltip">
       <span>on_start : Bool</span>
     on_start</a>, 
     
@@ -1041,17 +1075,17 @@ about this).</p>
     on_stop</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#processing_interval%3D%28interval%3ATime%29-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#processing_interval=(interval:Time)-instance-method" class="tooltip">
       <span>processing_interval=(interval : Time)</span>
     processing_interval=</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#sample_rate%3AInt32-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#sample_rate:Int32-instance-method" class="tooltip">
       <span>sample_rate : Int32</span>
     sample_rate</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#start%28sample_rate%3AInt%3D44100%29%3ABool-instance-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#start(sample_rate:Int=44100):Bool-instance-method" class="tooltip">
       <span>start(sample_rate : Int = <span class="n">44100</span>) : Bool</span>
     start</a>, 
     
@@ -1065,32 +1099,23 @@ about this).</p>
 
     
 
-  <h3>Constructor methods inherited from class <code><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></code></h3>
-  
-  
-    <a href="../SF/SoundRecorder.html#new-class-method" class="tooltip">
-      <span>new</span>
-    new</a>
-    
-  
-
 
     
 
   <h3>Class methods inherited from class <code><a href="../SF/SoundRecorder.html">SF::SoundRecorder</a></code></h3>
   
   
-    <a href="../SF/SoundRecorder.html#available%3F%3ABool-class-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#available?:Bool-class-method" class="tooltip">
       <span>available? : Bool</span>
     available?</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#available_devices%3AArray%28String%29-class-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#available_devices:Array(String)-class-method" class="tooltip">
       <span>available_devices : Array(String)</span>
     available_devices</a>, 
     
   
-    <a href="../SF/SoundRecorder.html#default_device%3AString-class-method" class="tooltip">
+    <a href="../SF/SoundRecorder.html#default_device:String-class-method" class="tooltip">
       <span>default_device : String</span>
     default_device</a>
     
@@ -1131,7 +1156,14 @@ about this).</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1144,7 +1176,7 @@ about this).</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1874" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1879" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1154,29 +1186,39 @@ about this).</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="buffer:SoundBuffer-instance-method">
       <div class="signature">
         
         def <strong>buffer</strong> : <a href="../SF/SoundBuffer.html">SoundBuffer</a>
 
-        <a class="method-permalink" href="#buffer%3ASoundBuffer-instance-method">#</a>
+        <a class="method-permalink" href="#buffer:SoundBuffer-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the sound buffer containing the captured audio data</p>
+        <div class="doc">
+          
+          <p>Get the sound buffer containing the captured audio data</p>
 
 <p>The sound buffer is valid only after the capture has ended.
 This function provides a read-only access to the internal
 sound buffer, but it can be copied if you need to
 make any modification to it.</p>
 
-<p><em>Returns:</em> Read-only access to the sound buffer</p></div>
+<p><em>Returns:</em> Read-only access to the sound buffer</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1891" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1896" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1189,12 +1231,15 @@ make any modification to it.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>destructor</p></div>
+        <div class="doc">
+          
+          <p>destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1879" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1884" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,19 +1249,22 @@ make any modification to it.</p>
         
         def <strong>on_process_samples</strong>(samples : Array(Int16) | Slice(Int16)) : Bool
 
-        <a class="method-permalink" href="#on_process_samples%28samples%3AArray%28Int16%29%7CSlice%28Int16%29%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#on_process_samples(samples:Array(Int16)%7CSlice(Int16)):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Process a new chunk of recorded samples</p>
+        <div class="doc">
+          
+          <p>Process a new chunk of recorded samples</p>
 
 <ul><li><em>samples</em> - Pointer to the new chunk of recorded samples</li><li><em>sample_count</em> - Number of samples pointed by <em>samples</em></li></ul>
 
-<p><em>Returns:</em> True to continue the capture, or false to stop it</p></div>
+<p><em>Returns:</em> True to continue the capture, or false to stop it</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1907" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1912" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1226,17 +1274,20 @@ make any modification to it.</p>
         
         def <strong>on_start</strong> : Bool
 
-        <a class="method-permalink" href="#on_start%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#on_start:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Start capturing audio data</p>
+        <div class="doc">
+          
+          <p>Start capturing audio data</p>
 
-<p><em>Returns:</em> True to start the capture, or false to abort it</p></div>
+<p><em>Returns:</em> True to start the capture, or false to abort it</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1898" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1903" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1249,12 +1300,15 @@ make any modification to it.</p>
         <a class="method-permalink" href="#on_stop-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Stop capturing audio data</p></div>
+        <div class="doc">
+          
+          <p>Stop capturing audio data</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L1911" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L1916" target="_blank">View source</a>]
         
       </div>
     </div>

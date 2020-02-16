@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Texture - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Image living on the graphics card that can be used for drawing</p>
 
@@ -966,11 +977,18 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/GlResource.html">SF::GlResource</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/GlResource.html">SF::GlResource</a></li>
+    
   </ul>
 
 
@@ -982,10 +1000,19 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3062" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3062" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -994,34 +1021,41 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
+        <a href="#from_file(*args,**kwargs):self-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>texture = Texture.new; texture.load_from_file(...); texture</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_image%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_image</strong>(*args, **kwargs) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>texture = Texture.new; texture.load_from_image(...); texture</code></p></div>
+          <div class="summary"><p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_file(...); texture</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
+        <a href="#from_image(*args,**kwargs):self-class-method" class="signature"><strong>.from_image</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>texture = Texture.new; texture.load_from_memory(...); texture</code></p></div>
+          <div class="summary"><p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_image(...); texture</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
+        <a href="#from_memory(*args,**kwargs):self-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>texture = Texture.new; texture.load_from_stream(...); texture</code></p></div>
+          <div class="summary"><p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_memory(...); texture</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_stream(*args,**kwargs):self-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_stream(...); texture</code></p></div>
         
       </li>
     
@@ -1033,9 +1067,9 @@ custom OpenGL geometry.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
+        <a href="#new(*args,**kwargs):self-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>texture = Texture.new; texture.create(...); texture</code></p></div>
+          <div class="summary"><p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.create(...); texture</code></p></div>
         
       </li>
     
@@ -1043,18 +1077,25 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#bind%28texture%3ATexture%3F%2Ccoordinate_type%3ATexture%3A%3ACoordinateType%3DNormalized%29-class-method" class="signature"><strong>.bind</strong>(texture : Texture?, coordinate_type : Texture::CoordinateType = <span class="t">Normalized</span>)</a>
+        <a href="#bind(texture:Texture?,coordinate_type:Texture::CoordinateType=Normalized)-class-method" class="signature"><strong>.bind</strong>(texture : Texture?, coordinate_type : Texture::CoordinateType = <span class="t">Normalized</span>)</a>
         
           <div class="summary"><p>Bind a texture for rendering</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#maximum_size%3AInt32-class-method" class="signature"><strong>.maximum_size</strong> : Int32</a>
+        <a href="#maximum_size:Int32-class-method" class="signature"><strong>.maximum_size</strong> : Int32</a>
         
           <div class="summary"><p>Get the maximum texture size allowed</p></div>
         
@@ -1064,25 +1105,34 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#copy_to_image%3AImage-instance-method" class="signature"><strong>#copy_to_image</strong> : Image</a>
+        <a href="#copy_to_image:Image-instance-method" class="signature"><strong>#copy_to_image</strong> : Image</a>
         
           <div class="summary"><p>Copy the texture pixels to an image</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create%28width%3AInt%2Cheight%3AInt%29%3ABool-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int) : Bool</a>
+        <a href="#create(width:Int,height:Int):Bool-instance-method" class="signature"><strong>#create</strong>(width : Int, height : Int) : Bool</a>
         
           <div class="summary"><p>Create the texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1094,154 +1144,154 @@ custom OpenGL geometry.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#generate_mipmap%3ABool-instance-method" class="signature"><strong>#generate_mipmap</strong> : Bool</a>
+        <a href="#generate_mipmap:Bool-instance-method" class="signature"><strong>#generate_mipmap</strong> : Bool</a>
         
           <div class="summary"><p>Generate a mipmap using the current texture data</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_file%28filename%3AString%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
+        <a href="#load_from_file(filename:String,area:IntRect=IntRect.new):Bool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
         
           <div class="summary"><p>Load the texture from a file on disk</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method" class="signature"><strong>#load_from_image</strong>(image : Image, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
+        <a href="#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method" class="signature"><strong>#load_from_image</strong>(image : Image, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
         
           <div class="summary"><p>Load the texture from an image</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
+        <a href="#load_from_memory(data:Slice,area:IntRect=IntRect.new):Bool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
         
           <div class="summary"><p>Load the texture from a file in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
+        <a href="#load_from_stream(stream:InputStream,area:IntRect=IntRect.new):Bool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream, area : IntRect = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool</a>
         
           <div class="summary"><p>Load the texture from a custom stream</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#native_handle%3AInt32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
+        <a href="#native_handle:Int32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
         
           <div class="summary"><p>Get the underlying OpenGL handle of the texture.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#repeated%3D%28repeated%3ABool%29-instance-method" class="signature"><strong>#repeated=</strong>(repeated : Bool)</a>
+        <a href="#repeated=(repeated:Bool)-instance-method" class="signature"><strong>#repeated=</strong>(repeated : Bool)</a>
         
           <div class="summary"><p>Enable or disable repeating</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#repeated%3F%3ABool-instance-method" class="signature"><strong>#repeated?</strong> : Bool</a>
+        <a href="#repeated?:Bool-instance-method" class="signature"><strong>#repeated?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether the texture is repeated or not</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#size%3AVector2u-instance-method" class="signature"><strong>#size</strong> : Vector2u</a>
+        <a href="#size:Vector2u-instance-method" class="signature"><strong>#size</strong> : Vector2u</a>
         
           <div class="summary"><p>Return the size of the texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#smooth%3D%28smooth%3ABool%29-instance-method" class="signature"><strong>#smooth=</strong>(smooth : Bool)</a>
+        <a href="#smooth=(smooth:Bool)-instance-method" class="signature"><strong>#smooth=</strong>(smooth : Bool)</a>
         
           <div class="summary"><p>Enable or disable the smooth filter</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#smooth%3F%3ABool-instance-method" class="signature"><strong>#smooth?</strong> : Bool</a>
+        <a href="#smooth?:Bool-instance-method" class="signature"><strong>#smooth?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether the smooth filter is enabled or not</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#srgb%3D%28s_rgb%3ABool%29-instance-method" class="signature"><strong>#srgb=</strong>(s_rgb : Bool)</a>
+        <a href="#srgb=(s_rgb:Bool)-instance-method" class="signature"><strong>#srgb=</strong>(s_rgb : Bool)</a>
         
           <div class="summary"><p>Enable or disable conversion from sRGB</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#srgb%3F%3ABool-instance-method" class="signature"><strong>#srgb?</strong> : Bool</a>
+        <a href="#srgb?:Bool-instance-method" class="signature"><strong>#srgb?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether the texture source is converted from sRGB or not</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#swap%28right%3ATexture%29-instance-method" class="signature"><strong>#swap</strong>(right : Texture)</a>
+        <a href="#swap(right:Texture)-instance-method" class="signature"><strong>#swap</strong>(right : Texture)</a>
         
           <div class="summary"><p>Swap the contents of this texture with those of another</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28window%3AWindow%29-instance-method" class="signature"><strong>#update</strong>(window : Window)</a>
+        <a href="#update(window:Window)-instance-method" class="signature"><strong>#update</strong>(window : Window)</a>
         
           <div class="summary"><p>Update the texture from the contents of a window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28image%3AImage%29-instance-method" class="signature"><strong>#update</strong>(image : Image)</a>
+        <a href="#update(image:Image)-instance-method" class="signature"><strong>#update</strong>(image : Image)</a>
         
           <div class="summary"><p>Update the texture from an image</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28pixels%3A%3A%3APointer%28UInt8%29%29-instance-method" class="signature"><strong>#update</strong>(pixels : ::Pointer(UInt8))</a>
+        <a href="#update(pixels:::Pointer(UInt8))-instance-method" class="signature"><strong>#update</strong>(pixels : ::Pointer(UInt8))</a>
         
           <div class="summary"><p>Update the whole texture from an array of pixels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28window%3AWindow%2Cx%3AInt%2Cy%3AInt%29-instance-method" class="signature"><strong>#update</strong>(window : Window, x : Int, y : Int)</a>
+        <a href="#update(window:Window,x:Int,y:Int)-instance-method" class="signature"><strong>#update</strong>(window : Window, x : Int, y : Int)</a>
         
           <div class="summary"><p>Update a part of the texture from the contents of a window</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28image%3AImage%2Cx%3AInt%2Cy%3AInt%29-instance-method" class="signature"><strong>#update</strong>(image : Image, x : Int, y : Int)</a>
+        <a href="#update(image:Image,x:Int,y:Int)-instance-method" class="signature"><strong>#update</strong>(image : Image, x : Int, y : Int)</a>
         
           <div class="summary"><p>Update a part of the texture from an image</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28texture%3ATexture%2Cx%3AInt%2Cy%3AInt%29-instance-method" class="signature"><strong>#update</strong>(texture : Texture, x : Int, y : Int)</a>
+        <a href="#update(texture:Texture,x:Int,y:Int)-instance-method" class="signature"><strong>#update</strong>(texture : Texture, x : Int, y : Int)</a>
         
           <div class="summary"><p>Update a part of this texture from another texture</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28pixels%3A%3A%3APointer%28UInt8%29%2Cwidth%3AInt%2Cheight%3AInt%2Cx%3AInt%2Cy%3AInt%29-instance-method" class="signature"><strong>#update</strong>(pixels : ::Pointer(UInt8), width : Int, height : Int, x : Int, y : Int)</a>
+        <a href="#update(pixels:::Pointer(UInt8),width:Int,height:Int,x:Int,y:Int)-instance-method" class="signature"><strong>#update</strong>(pixels : ::Pointer(UInt8), width : Int, height : Int, x : Int, y : Int)</a>
         
           <div class="summary"><p>Update a part of the texture from an array of pixels</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28texture%3ATexture%29-instance-method" class="signature"><strong>#update</strong>(texture : Texture)</a>
+        <a href="#update(texture:Texture)-instance-method" class="signature"><strong>#update</strong>(texture : Texture)</a>
         
           <div class="summary"><p>Update a part of this texture from another texture</p></div>
         
@@ -1288,24 +1338,34 @@ custom OpenGL geometry.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="from_file(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(*args, **kwargs) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>texture = Texture.new; texture.load_from_file(...); texture</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_file(...); texture</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3139" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3139" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,19 +1373,22 @@ custom OpenGL geometry.</p>
     <div class="entry-detail" id="from_image(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_image</strong>(*args, **kwargs) : self
+        def self.<strong>from_image</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_image%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_image(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>texture = Texture.new; texture.load_from_image(...); texture</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_image(...); texture</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3252" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3252" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1333,19 +1396,22 @@ custom OpenGL geometry.</p>
     <div class="entry-detail" id="from_memory(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(*args, **kwargs) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>texture = Texture.new; texture.load_from_memory(...); texture</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_memory(...); texture</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3179" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3179" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,19 +1419,22 @@ custom OpenGL geometry.</p>
     <div class="entry-detail" id="from_stream(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(*args, **kwargs) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>texture = Texture.new; texture.load_from_stream(...); texture</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.load_from_stream(...); texture</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3219" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3219" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1378,14 +1447,17 @@ custom OpenGL geometry.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Creates an empty texture.</p></div>
+<p>Creates an empty texture.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3075" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3075" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1393,19 +1465,22 @@ custom OpenGL geometry.</p>
     <div class="entry-detail" id="new(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(*args, **kwargs) : self
+        def self.<strong>new</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#new(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>texture = Texture.new; texture.create(...); texture</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>texture = <a href="../SF/Texture.html#new-class-method">Texture.new</a>; texture.create(...); texture</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3099" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3099" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1413,17 +1488,26 @@ custom OpenGL geometry.</p>
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="bind(texture:Texture?,coordinate_type:Texture::CoordinateType=Normalized)-class-method">
       <div class="signature">
         
         def self.<strong>bind</strong>(texture : <a href="../SF/Texture.html">Texture</a>?, coordinate_type : <a href="../SF/Texture/CoordinateType.html">Texture::CoordinateType</a> = <span class="t">Normalized</span>)
 
-        <a class="method-permalink" href="#bind%28texture%3ATexture%3F%2Ccoordinate_type%3ATexture%3A%3ACoordinateType%3DNormalized%29-class-method">#</a>
+        <a class="method-permalink" href="#bind(texture:Texture?,coordinate_type:Texture::CoordinateType=Normalized)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Bind a texture for rendering</p>
+        <div class="doc">
+          
+          <p>Bind a texture for rendering</p>
 
 <p>This function is not part of the graphics API, it mustn't be
 used when drawing SFML entities. It must be used only if you
@@ -1448,12 +1532,13 @@ the graphics classes of SFML, it makes the definition of texture
 coordinates more intuitive for the high-level API, users don't need
 to compute normalized values.</p>
 
-<ul><li><em>texture</em> - Pointer to the texture to bind, can be null to use no texture</li><li><em>coordinate_type</em> - Type of texture coordinates to use</li></ul></div>
+<ul><li><em>texture</em> - Pointer to the texture to bind, can be null to use no texture</li><li><em>coordinate_type</em> - Type of texture coordinates to use</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3573" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3573" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1463,21 +1548,24 @@ to compute normalized values.</p>
         
         def self.<strong>maximum_size</strong> : Int32
 
-        <a class="method-permalink" href="#maximum_size%3AInt32-class-method">#</a>
+        <a class="method-permalink" href="#maximum_size:Int32-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the maximum texture size allowed</p>
+        <div class="doc">
+          
+          <p>Get the maximum texture size allowed</p>
 
 <p>This maximum size is defined by the graphics driver.
 You can expect a value of 512 pixels for low-end graphics
 card, and up to 8192 pixels or more for newer hardware.</p>
 
-<p><em>Returns:</em> Maximum size allowed for textures, in pixels</p></div>
+<p><em>Returns:</em> Maximum size allowed for textures, in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3583" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3583" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1485,17 +1573,26 @@ card, and up to 8192 pixels or more for newer hardware.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="copy_to_image:Image-instance-method">
       <div class="signature">
         
         def <strong>copy_to_image</strong> : <a href="../SF/Image.html">Image</a>
 
-        <a class="method-permalink" href="#copy_to_image%3AImage-instance-method">#</a>
+        <a class="method-permalink" href="#copy_to_image:Image-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Copy the texture pixels to an image</p>
+        <div class="doc">
+          
+          <p>Copy the texture pixels to an image</p>
 
 <p>This function performs a slow operation that downloads
 the texture's pixels from the graphics card and copies
@@ -1504,12 +1601,13 @@ to pixels if necessary (texture may be padded or flipped).</p>
 
 <p><em>Returns:</em> Image containing the texture's pixels</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_image</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method">#load_from_image</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3277" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3277" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1519,21 +1617,24 @@ to pixels if necessary (texture may be padded or flipped).</p>
         
         def <strong>create</strong>(width : Int, height : Int) : Bool
 
-        <a class="method-permalink" href="#create%28width%3AInt%2Cheight%3AInt%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#create(width:Int,height:Int):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Create the texture</p>
+        <div class="doc">
+          
+          <p>Create the texture</p>
 
 <p>If this function fails, the texture is left unchanged.</p>
 
 <ul><li><em>width</em> - Width of the texture</li><li><em>height</em> - Height of the texture</li></ul>
 
-<p><em>Returns:</em> True if creation was successful</p></div>
+<p><em>Returns:</em> True if creation was successful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3092" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3092" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1541,15 +1642,27 @@ to pixels if necessary (texture may be padded or flipped).</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3601" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3601" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1562,12 +1675,15 @@ to pixels if necessary (texture may be padded or flipped).</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3080" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3080" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1577,10 +1693,12 @@ to pixels if necessary (texture may be padded or flipped).</p>
         
         def <strong>generate_mipmap</strong> : Bool
 
-        <a class="method-permalink" href="#generate_mipmap%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#generate_mipmap:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Generate a mipmap using the current texture data</p>
+        <div class="doc">
+          
+          <p>Generate a mipmap using the current texture data</p>
 
 <p>Mipmaps are pre-computed chains of optimized textures. Each
 level of texture in a mipmap is generated by halving each of
@@ -1599,12 +1717,13 @@ the time it is generated until the next time the base level image is
 modified, at which point this function will have to be called again to
 regenerate it.</p>
 
-<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p></div>
+<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3523" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3523" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1614,10 +1733,12 @@ regenerate it.</p>
         
         def <strong>load_from_file</strong>(filename : String, area : <a href="../SF/IntRect.html">IntRect</a> = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool
 
-        <a class="method-permalink" href="#load_from_file%28filename%3AString%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_file(filename:String,area:IntRect=IntRect.new):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the texture from a file on disk</p>
+        <div class="doc">
+          
+          <p>Load the texture from a file on disk</p>
 
 <p>This function is a shortcut for the following code:</p>
 
@@ -1640,12 +1761,13 @@ driver and can be retrieved with the maximum_size function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_image</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_memory(data:Slice,area:IntRect=IntRect.new):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_stream(stream:InputStream,area:IntRect=IntRect.new):Bool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method">#load_from_image</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3132" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3132" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1655,10 +1777,12 @@ driver and can be retrieved with the maximum_size function.</p>
         
         def <strong>load_from_image</strong>(image : <a href="../SF/Image.html">Image</a>, area : <a href="../SF/IntRect.html">IntRect</a> = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool
 
-        <a class="method-permalink" href="#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the texture from an image</p>
+        <div class="doc">
+          
+          <p>Load the texture from an image</p>
 
 <p>The <em>area</em> argument can be used to load only a sub-rectangle
 of the whole image. If you want the entire image then leave
@@ -1675,12 +1799,13 @@ driver and can be retrieved with the maximum_size function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_memory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file(filename:String,area:IntRect=IntRect.new):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory(data:Slice,area:IntRect=IntRect.new):Bool-instance-method">#load_from_memory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3245" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3245" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1690,10 +1815,12 @@ driver and can be retrieved with the maximum_size function.</p>
         
         def <strong>load_from_memory</strong>(data : Slice, area : <a href="../SF/IntRect.html">IntRect</a> = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool
 
-        <a class="method-permalink" href="#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_memory(data:Slice,area:IntRect=IntRect.new):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the texture from a file in memory</p>
+        <div class="doc">
+          
+          <p>Load the texture from a file in memory</p>
 
 <p>This function is a shortcut for the following code:</p>
 
@@ -1716,12 +1843,13 @@ driver and can be retrieved with the maximum_size function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_image</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file(filename:String,area:IntRect=IntRect.new):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_stream(stream:InputStream,area:IntRect=IntRect.new):Bool-instance-method">#load_from_stream</a></code>, <code><a href="../SF/Texture.html#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method">#load_from_image</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3172" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3172" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1731,10 +1859,12 @@ driver and can be retrieved with the maximum_size function.</p>
         
         def <strong>load_from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>, area : <a href="../SF/IntRect.html">IntRect</a> = <span class="t">IntRect</span>.<span class="k">new</span>) : Bool
 
-        <a class="method-permalink" href="#load_from_stream%28stream%3AInputStream%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_stream(stream:InputStream,area:IntRect=IntRect.new):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the texture from a custom stream</p>
+        <div class="doc">
+          
+          <p>Load the texture from a custom stream</p>
 
 <p>This function is a shortcut for the following code:</p>
 
@@ -1757,12 +1887,13 @@ driver and can be retrieved with the maximum_size function.</p>
 
 <p><em>Returns:</em> True if loading was successful</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file%28filename%3AString%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory%28data%3ASlice%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_image%28image%3AImage%2Carea%3AIntRect%3DIntRect.new%29%3ABool-instance-method">#load_from_image</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#load_from_file(filename:String,area:IntRect=IntRect.new):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Texture.html#load_from_memory(data:Slice,area:IntRect=IntRect.new):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Texture.html#load_from_image(image:Image,area:IntRect=IntRect.new):Bool-instance-method">#load_from_image</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3212" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3212" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1772,21 +1903,24 @@ driver and can be retrieved with the maximum_size function.</p>
         
         def <strong>native_handle</strong> : Int32
 
-        <a class="method-permalink" href="#native_handle%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#native_handle:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the underlying OpenGL handle of the texture.</p>
+        <div class="doc">
+          
+          <p>Get the underlying OpenGL handle of the texture.</p>
 
 <p>You shouldn't need to use this function, unless you have
 very specific stuff to implement that SFML doesn't support,
 or implement a temporary workaround until a bug is fixed.</p>
 
-<p><em>Returns:</em> OpenGL handle of the texture or 0 if not yet created</p></div>
+<p><em>Returns:</em> OpenGL handle of the texture or 0 if not yet created</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3540" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3540" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1796,10 +1930,12 @@ or implement a temporary workaround until a bug is fixed.</p>
         
         def <strong>repeated=</strong>(repeated : Bool)
 
-        <a class="method-permalink" href="#repeated%3D%28repeated%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#repeated=(repeated:Bool)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Enable or disable repeating</p>
+        <div class="doc">
+          
+          <p>Enable or disable repeating</p>
 
 <p>Repeating is involved when using texture coordinates
 outside the texture rectangle [0, 0, width, height].
@@ -1817,12 +1953,13 @@ Repeating is disabled by default.</p>
 
 <ul><li><em>repeated</em> - True to repeat the texture, false to disable repeating</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated%3F%3ABool-instance-method">#repeated?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated?:Bool-instance-method">#repeated?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3491" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3491" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1832,19 +1969,22 @@ Repeating is disabled by default.</p>
         
         def <strong>repeated?</strong> : Bool
 
-        <a class="method-permalink" href="#repeated%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#repeated?:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether the texture is repeated or not</p>
+        <div class="doc">
+          
+          <p>Tell whether the texture is repeated or not</p>
 
 <p><em>Returns:</em> True if repeat mode is enabled, false if it is disabled</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated%3D%28repeated%3ABool%29-instance-method">#repeated=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#repeated=(repeated:Bool)-instance-method">#repeated=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3499" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3499" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1854,17 +1994,20 @@ Repeating is disabled by default.</p>
         
         def <strong>size</strong> : <a href="../SF/Vector2u.html">Vector2u</a>
 
-        <a class="method-permalink" href="#size%3AVector2u-instance-method">#</a>
+        <a class="method-permalink" href="#size:Vector2u-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the size of the texture</p>
+        <div class="doc">
+          
+          <p>Return the size of the texture</p>
 
-<p><em>Returns:</em> Size in pixels</p></div>
+<p><em>Returns:</em> Size in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3262" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3262" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1874,10 +2017,12 @@ Repeating is disabled by default.</p>
         
         def <strong>smooth=</strong>(smooth : Bool)
 
-        <a class="method-permalink" href="#smooth%3D%28smooth%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#smooth=(smooth:Bool)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Enable or disable the smooth filter</p>
+        <div class="doc">
+          
+          <p>Enable or disable the smooth filter</p>
 
 <p>When the filter is activated, the texture appears smoother
 so that pixels are less noticeable. However if you want
@@ -1887,12 +2032,13 @@ The smooth filter is disabled by default.</p>
 
 <ul><li><em>smooth</em> - True to enable smoothing, false to disable it</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth%3F%3ABool-instance-method">#smooth?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth?:Bool-instance-method">#smooth?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3428" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3428" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1902,19 +2048,22 @@ The smooth filter is disabled by default.</p>
         
         def <strong>smooth?</strong> : Bool
 
-        <a class="method-permalink" href="#smooth%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#smooth?:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether the smooth filter is enabled or not</p>
+        <div class="doc">
+          
+          <p>Tell whether the smooth filter is enabled or not</p>
 
 <p><em>Returns:</em> True if smoothing is enabled, false if it is disabled</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth%3D%28smooth%3ABool%29-instance-method">#smooth=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#smooth=(smooth:Bool)-instance-method">#smooth=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3436" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3436" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1924,10 +2073,12 @@ The smooth filter is disabled by default.</p>
         
         def <strong>srgb=</strong>(s_rgb : Bool)
 
-        <a class="method-permalink" href="#srgb%3D%28s_rgb%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#srgb=(s_rgb:Bool)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Enable or disable conversion from sRGB</p>
+        <div class="doc">
+          
+          <p>Enable or disable conversion from sRGB</p>
 
 <p>When providing texture data from an image file or memory, it can
 either be stored in a linear color space or an sRGB color space.
@@ -1946,12 +2097,13 @@ framebuffer. This can be requested during window creation.</p>
 
 <ul><li><em>s_rgb</em> - True to enable sRGB conversion, false to disable it</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb%3F%3ABool-instance-method">#srgb?</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb?:Bool-instance-method">#srgb?</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3460" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3460" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1961,19 +2113,22 @@ framebuffer. This can be requested during window creation.</p>
         
         def <strong>srgb?</strong> : Bool
 
-        <a class="method-permalink" href="#srgb%3F%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#srgb?:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether the texture source is converted from sRGB or not</p>
+        <div class="doc">
+          
+          <p>Tell whether the texture source is converted from sRGB or not</p>
 
 <p><em>Returns:</em> True if the texture source is converted from sRGB, false if not</p>
 
-<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb%3D%28s_rgb%3ABool%29-instance-method">#srgb=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Texture.html#srgb=(s_rgb:Bool)-instance-method">#srgb=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3468" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3468" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1983,17 +2138,20 @@ framebuffer. This can be requested during window creation.</p>
         
         def <strong>swap</strong>(right : <a href="../SF/Texture.html">Texture</a>)
 
-        <a class="method-permalink" href="#swap%28right%3ATexture%29-instance-method">#</a>
+        <a class="method-permalink" href="#swap(right:Texture)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Swap the contents of this texture with those of another</p>
+        <div class="doc">
+          
+          <p>Swap the contents of this texture with those of another</p>
 
-<ul><li><em>right</em> - Instance to swap with</li></ul></div>
+<ul><li><em>right</em> - Instance to swap with</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3530" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3530" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2003,10 +2161,12 @@ framebuffer. This can be requested during window creation.</p>
         
         def <strong>update</strong>(window : <a href="../SF/Window.html">Window</a>)
 
-        <a class="method-permalink" href="#update%28window%3AWindow%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(window:Window)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update the texture from the contents of a window</p>
+        <div class="doc">
+          
+          <p>Update the texture from the contents of a window</p>
 
 <p>Although the source window can be smaller than the texture,
 this function is usually used for updating the whole texture.
@@ -2020,12 +2180,13 @@ undefined behavior.</p>
 <p>This function does nothing if either the texture or the window
 was not previously created.</p>
 
-<ul><li><em>window</em> - Window to copy to the texture</li></ul></div>
+<ul><li><em>window</em> - Window to copy to the texture</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3399" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3399" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2035,10 +2196,12 @@ was not previously created.</p>
         
         def <strong>update</strong>(image : <a href="../SF/Image.html">Image</a>)
 
-        <a class="method-permalink" href="#update%28image%3AImage%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(image:Image)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update the texture from an image</p>
+        <div class="doc">
+          
+          <p>Update the texture from an image</p>
 
 <p>Although the source image can be smaller than the texture,
 this function is usually used for updating the whole texture.
@@ -2052,12 +2215,13 @@ undefined behavior.</p>
 <p>This function does nothing if the texture was not
 previously created.</p>
 
-<ul><li><em>image</em> - Image to copy to the texture</li></ul></div>
+<ul><li><em>image</em> - Image to copy to the texture</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3366" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3366" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2067,10 +2231,12 @@ previously created.</p>
         
         def <strong>update</strong>(pixels : ::Pointer(UInt8))
 
-        <a class="method-permalink" href="#update%28pixels%3A%3A%3APointer%28UInt8%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(pixels:::Pointer(UInt8))-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update the whole texture from an array of pixels</p>
+        <div class="doc">
+          
+          <p>Update the whole texture from an array of pixels</p>
 
 <p>The <em>pixel</em> array is assumed to have the same size as
 the <em>area</em> rectangle, and to contain 32-bits RGBA pixels.</p>
@@ -2082,12 +2248,13 @@ behavior.</p>
 <p>This function does nothing if <em>pixels</em> is null or if the
 texture was not previously created.</p>
 
-<ul><li><em>pixels</em> - Array of pixels to copy to the texture</li></ul></div>
+<ul><li><em>pixels</em> - Array of pixels to copy to the texture</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3295" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3295" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2097,10 +2264,12 @@ texture was not previously created.</p>
         
         def <strong>update</strong>(window : <a href="../SF/Window.html">Window</a>, x : Int, y : Int)
 
-        <a class="method-permalink" href="#update%28window%3AWindow%2Cx%3AInt%2Cy%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(window:Window,x:Int,y:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of the texture from the contents of a window</p>
+        <div class="doc">
+          
+          <p>Update a part of the texture from the contents of a window</p>
 
 <p>No additional check is performed on the size of the window,
 passing an invalid combination of window size and offset
@@ -2109,12 +2278,13 @@ will lead to an undefined behavior.</p>
 <p>This function does nothing if either the texture or the window
 was not previously created.</p>
 
-<ul><li><em>window</em> - Window to copy to the texture</li><li><em>x</em> - X offset in the texture where to copy the source window</li><li><em>y</em> - Y offset in the texture where to copy the source window</li></ul></div>
+<ul><li><em>window</em> - Window to copy to the texture</li><li><em>x</em> - X offset in the texture where to copy the source window</li><li><em>y</em> - Y offset in the texture where to copy the source window</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3414" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3414" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2124,10 +2294,12 @@ was not previously created.</p>
         
         def <strong>update</strong>(image : <a href="../SF/Image.html">Image</a>, x : Int, y : Int)
 
-        <a class="method-permalink" href="#update%28image%3AImage%2Cx%3AInt%2Cy%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(image:Image,x:Int,y:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of the texture from an image</p>
+        <div class="doc">
+          
+          <p>Update a part of the texture from an image</p>
 
 <p>No additional check is performed on the size of the image,
 passing an invalid combination of image size and offset
@@ -2136,12 +2308,13 @@ will lead to an undefined behavior.</p>
 <p>This function does nothing if the texture was not
 previously created.</p>
 
-<ul><li><em>image</em> - Image to copy to the texture</li><li><em>x</em> - X offset in the texture where to copy the source image</li><li><em>y</em> - Y offset in the texture where to copy the source image</li></ul></div>
+<ul><li><em>image</em> - Image to copy to the texture</li><li><em>x</em> - X offset in the texture where to copy the source image</li><li><em>y</em> - Y offset in the texture where to copy the source image</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3381" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3381" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2151,10 +2324,12 @@ previously created.</p>
         
         def <strong>update</strong>(texture : <a href="../SF/Texture.html">Texture</a>, x : Int, y : Int)
 
-        <a class="method-permalink" href="#update%28texture%3ATexture%2Cx%3AInt%2Cy%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(texture:Texture,x:Int,y:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of this texture from another texture</p>
+        <div class="doc">
+          
+          <p>Update a part of this texture from another texture</p>
 
 <p>No additional check is performed on the size of the texture,
 passing an invalid combination of texture size and offset
@@ -2163,12 +2338,13 @@ will lead to an undefined behavior.</p>
 <p>This function does nothing if either texture was not
 previously created.</p>
 
-<ul><li><em>texture</em> - Source texture to copy to this texture</li><li><em>x</em> - X offset in this texture where to copy the source texture</li><li><em>y</em> - Y offset in this texture where to copy the source texture</li></ul></div>
+<ul><li><em>texture</em> - Source texture to copy to this texture</li><li><em>x</em> - X offset in this texture where to copy the source texture</li><li><em>y</em> - Y offset in this texture where to copy the source texture</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3348" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3348" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2178,10 +2354,12 @@ previously created.</p>
         
         def <strong>update</strong>(pixels : ::Pointer(UInt8), width : Int, height : Int, x : Int, y : Int)
 
-        <a class="method-permalink" href="#update%28pixels%3A%3A%3APointer%28UInt8%29%2Cwidth%3AInt%2Cheight%3AInt%2Cx%3AInt%2Cy%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(pixels:::Pointer(UInt8),width:Int,height:Int,x:Int,y:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of the texture from an array of pixels</p>
+        <div class="doc">
+          
+          <p>Update a part of the texture from an array of pixels</p>
 
 <p>The size of the <em>pixel</em> array must match the <em>width</em> and
 <em>height</em> arguments, and it must contain 32-bits RGBA pixels.</p>
@@ -2193,12 +2371,13 @@ arguments will lead to an undefined behavior.</p>
 <p>This function does nothing if <em>pixels</em> is null or if the
 texture was not previously created.</p>
 
-<ul><li><em>pixels</em> - Array of pixels to copy to the texture</li><li><em>width</em> - Width of the pixel region contained in <em>pixels</em></li><li><em>height</em> - Height of the pixel region contained in <em>pixels</em></li><li><em>x</em> - X offset in the texture where to copy the source pixels</li><li><em>y</em> - Y offset in the texture where to copy the source pixels</li></ul></div>
+<ul><li><em>pixels</em> - Array of pixels to copy to the texture</li><li><em>width</em> - Width of the pixel region contained in <em>pixels</em></li><li><em>height</em> - Height of the pixel region contained in <em>pixels</em></li><li><em>x</em> - X offset in the texture where to copy the source pixels</li><li><em>y</em> - Y offset in the texture where to copy the source pixels</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3315" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3315" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2208,10 +2387,12 @@ texture was not previously created.</p>
         
         def <strong>update</strong>(texture : <a href="../SF/Texture.html">Texture</a>)
 
-        <a class="method-permalink" href="#update%28texture%3ATexture%29-instance-method">#</a>
+        <a class="method-permalink" href="#update(texture:Texture)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of this texture from another texture</p>
+        <div class="doc">
+          
+          <p>Update a part of this texture from another texture</p>
 
 <p>Although the source texture can be smaller than this texture,
 this function is usually used for updating the whole texture.
@@ -2225,12 +2406,13 @@ will lead to an undefined behavior.</p>
 <p>This function does nothing if either texture was not
 previously created.</p>
 
-<ul><li><em>texture</em> - Source texture to copy to this texture</li></ul></div>
+<ul><li><em>texture</em> - Source texture to copy to this texture</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3333" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3333" target="_blank">View source</a>]
         
       </div>
     </div>

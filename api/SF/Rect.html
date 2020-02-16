@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Rect(T) - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,13 +879,20 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Utility struct for manipulating 2D axis aligned rectangles</p>
 
 <p>A rectangle is defined by its top-left corner and its size.
 It is a very simple struct defined for convenience, so
-its member variables (<code><a href="../SF/Rect.html#left%3AT-instance-method">#left</a></code>, <code><a href="../SF/Rect.html#top%3AT-instance-method">#top</a></code>, <code><a href="../SF/Rect.html#width%3AT-instance-method">#width</a></code> and <code><a href="../SF/Rect.html#height%3AT-instance-method">#height</a></code>)
+its member variables (<code><a href="../SF/Rect.html#left:T-instance-method">#left</a></code>, <code><a href="../SF/Rect.html#top:T-instance-method">#top</a></code>, <code><a href="../SF/Rect.html#width:T-instance-method">#width</a></code> and <code><a href="../SF/Rect.html#height:T-instance-method">#height</a></code>)
 can be accessed directly, just like the vector classes
 (<code><a href="../SF/Vector2.html">Vector2</a></code> and <code><a href="../SF/Vector3.html">Vector3</a></code>).</p>
 
@@ -904,7 +915,7 @@ for simplicity the instantiations used by SFML are aliased:</p>
 
 <p>So that you don't have to care about the template syntax.</p>
 
-<p>See also: <code><a href="../SF.html#int_rect%28left%3AInt%2Ctop%3AInt%2Cwidth%3AInt%2Cheight%3AInt%29-instance-method">SF.int_rect</a></code>, <code><a href="../SF.html#float_rect%28left%3ANumber%2Ctop%3ANumber%2Cwidth%3ANumber%2Cheight%3ANumber%29-instance-method">SF.float_rect</a></code>.</p>
+<p>See also: <code><a href="../SF.html#int_rect(left:Int,top:Int,width:Int,height:Int)-instance-method">SF.int_rect</a></code>, <code><a href="../SF.html#float_rect(left:Number,top:Number,width:Number,height:Number)-instance-method">SF.float_rect</a></code>.</p>
 
 <p>Usage example:</p>
 
@@ -936,10 +947,19 @@ r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L48" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L48" target="_blank">
+        graphics/graphics.cr
+      </a>
     
     <br/>
   
@@ -948,18 +968,25 @@ r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method" class="signature"><strong>.new</strong>(left : T, top : T, width : T, height : T)</a>
+        <a href="#new(left:T,top:T,width:T,height:T)-class-method" class="signature"><strong>.new</strong>(left : T, top : T, width : T, height : T)</a>
         
           <div class="summary"><p>Construct the rectangle from its coordinates</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28position%3ASF%3A%3AVector2%28T%29%2Csize%3ASF%3A%3AVector2%28T%29%29-class-method" class="signature"><strong>.new</strong>(position : SF::Vector2(T), size : SF::Vector2(T))</a>
+        <a href="#new(position:SF::Vector2(T),size:SF::Vector2(T))-class-method" class="signature"><strong>.new</strong>(position : SF::Vector2(T), size : SF::Vector2(T))</a>
         
           <div class="summary"><p>Construct the rectangle from position and size</p></div>
         
@@ -968,7 +995,7 @@ r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
       <li class="entry-summary">
         <a href="#new-class-method" class="signature"><strong>.new</strong></a>
         
-          <div class="summary"><p>Default constructor: equivalent to <code>new(0, 0, 0, 0)</code></p></div>
+          <div class="summary"><p>Default constructor: equivalent to <code><a href="../SF/Rect.html#new(left:T,top:T,width:T,height:T)-class-method">.new(0, 0, 0, 0)</a></code></p></div>
         
       </li>
     
@@ -978,88 +1005,95 @@ r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%3D%3D%28other%3Aself%29%3ABool-instance-method" class="signature"><strong>#==</strong>(other : self) : Bool</a>
+        <a href="#==(other:self):Bool-instance-method" class="signature"><strong>#==</strong>(other : <span class="k">self</span>) : Bool</a>
         
           <div class="summary"><p>Returns true if all corresponding coordinates of two rects are equal</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#contains%3F%28x%3ANumber%2Cy%3ANumber%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(x : Number, y : Number) : Bool</a>
+        <a href="#contains?(x:Number,y:Number):Bool-instance-method" class="signature"><strong>#contains?</strong>(x : Number, y : Number) : Bool</a>
         
           <div class="summary"><p>Returns true if a point is inside the rectangle's area</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#contains%3F%28point%3AVector2%7CTuple%29%3ABool-instance-method" class="signature"><strong>#contains?</strong>(point : Vector2 | Tuple) : Bool</a>
+        <a href="#contains?(point:Vector2%7CTuple):Bool-instance-method" class="signature"><strong>#contains?</strong>(point : Vector2 | Tuple) : Bool</a>
         
           <div class="summary"><p>Returns true if a point is inside the rectangle's area</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height%3AT-instance-method" class="signature"><strong>#height</strong> : T</a>
+        <a href="#height:T-instance-method" class="signature"><strong>#height</strong> : T</a>
         
           <div class="summary"><p>Height of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height%3D%28height%3AT%29-instance-method" class="signature"><strong>#height=</strong>(height : T)</a>
+        <a href="#height=(height:T)-instance-method" class="signature"><strong>#height=</strong>(height : T)</a>
         
           <div class="summary"><p>Height of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#intersects%3F%28other%3ASF%3A%3ARect%28T%29%29%3ASF%3A%3ARect%28T%29%3F-instance-method" class="signature"><strong>#intersects?</strong>(other : SF::Rect(T)) : SF::Rect(T)?</a>
+        <a href="#intersects?(other:SF::Rect(T)):SF::Rect(T)?-instance-method" class="signature"><strong>#intersects?</strong>(other : SF::Rect(T)) : SF::Rect(T)?</a>
         
           <div class="summary"><p>Check the intersection between two rectangles</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#left%3AT-instance-method" class="signature"><strong>#left</strong> : T</a>
+        <a href="#left:T-instance-method" class="signature"><strong>#left</strong> : T</a>
         
           <div class="summary"><p>Left coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#left%3D%28left%3AT%29-instance-method" class="signature"><strong>#left=</strong>(left : T)</a>
+        <a href="#left=(left:T)-instance-method" class="signature"><strong>#left=</strong>(left : T)</a>
         
           <div class="summary"><p>Left coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#top%3AT-instance-method" class="signature"><strong>#top</strong> : T</a>
+        <a href="#top:T-instance-method" class="signature"><strong>#top</strong> : T</a>
         
           <div class="summary"><p>Top coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#top%3D%28top%3AT%29-instance-method" class="signature"><strong>#top=</strong>(top : T)</a>
+        <a href="#top=(top:T)-instance-method" class="signature"><strong>#top=</strong>(top : T)</a>
         
           <div class="summary"><p>Top coordinate of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width%3AT-instance-method" class="signature"><strong>#width</strong> : T</a>
+        <a href="#width:T-instance-method" class="signature"><strong>#width</strong> : T</a>
         
           <div class="summary"><p>Width of the rectangle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width%3D%28width%3AT%29-instance-method" class="signature"><strong>#width=</strong>(width : T)</a>
+        <a href="#width=(width:T)-instance-method" class="signature"><strong>#width=</strong>(width : T)</a>
         
           <div class="summary"><p>Width of the rectangle</p></div>
         
@@ -1106,25 +1140,35 @@ r1.intersects?(r2) <span class="c">#=&gt; (4, 2, 16, 3)</span></code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(left:T,top:T,width:T,height:T)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(left : T, top : T, width : T, height : T)
 
-        <a class="method-permalink" href="#new%28left%3AT%2Ctop%3AT%2Cwidth%3AT%2Cheight%3AT%29-class-method">#</a>
+        <a class="method-permalink" href="#new(left:T,top:T,width:T,height:T)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the rectangle from its coordinates</p>
+        <div class="doc">
+          
+          <p>Construct the rectangle from its coordinates</p>
 
 <p>Be careful, the last two parameters are the width
-and height, not the right and bottom coordinates!</p></div>
+and height, not the right and bottom coordinates!</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1134,18 +1178,21 @@ and height, not the right and bottom coordinates!</p></div>
         
         def self.<strong>new</strong>(position : <a href="../SF/Vector2.html">SF::Vector2</a>(T), size : <a href="../SF/Vector2.html">SF::Vector2</a>(T))
 
-        <a class="method-permalink" href="#new%28position%3ASF%3A%3AVector2%28T%29%2Csize%3ASF%3A%3AVector2%28T%29%29-class-method">#</a>
+        <a class="method-permalink" href="#new(position:SF::Vector2(T),size:SF::Vector2(T))-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the rectangle from position and size</p>
+        <div class="doc">
+          
+          <p>Construct the rectangle from position and size</p>
 
 <p>Be careful, the last parameter is the size,
-not the bottom-right corner!</p></div>
+not the bottom-right corner!</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1158,12 +1205,15 @@ not the bottom-right corner!</p></div>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor: equivalent to <code>new(0, 0, 0, 0)</code></p></div>
+        <div class="doc">
+          
+          <p>Default constructor: equivalent to <code><a href="../SF/Rect.html#new(left:T,top:T,width:T,height:T)-class-method">.new(0, 0, 0, 0)</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1173,22 +1223,32 @@ not the bottom-right corner!</p></div>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="==(other:self):Bool-instance-method">
       <div class="signature">
         
-        def <strong>==</strong>(other : self) : Bool
+        def <strong>==</strong>(other : <span class="k">self</span>) : Bool
 
-        <a class="method-permalink" href="#%3D%3D%28other%3Aself%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#==(other:self):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns true if all corresponding coordinates of two rects are equal</p></div>
+        <div class="doc">
+          
+          <p>Returns true if all corresponding coordinates of two rects are equal</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,15 +1258,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>contains?</strong>(x : Number, y : Number) : Bool
 
-        <a class="method-permalink" href="#contains%3F%28x%3ANumber%2Cy%3ANumber%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#contains?(x:Number,y:Number):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns true if a point is inside the rectangle's area</p></div>
+        <div class="doc">
+          
+          <p>Returns true if a point is inside the rectangle's area</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1216,15 +1279,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>contains?</strong>(point : <a href="../SF/Vector2.html">Vector2</a> | Tuple) : Bool
 
-        <a class="method-permalink" href="#contains%3F%28point%3AVector2%7CTuple%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#contains?(point:Vector2%7CTuple):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Returns true if a point is inside the rectangle's area</p></div>
+        <div class="doc">
+          
+          <p>Returns true if a point is inside the rectangle's area</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,15 +1300,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>height</strong> : T
 
-        <a class="method-permalink" href="#height%3AT-instance-method">#</a>
+        <a class="method-permalink" href="#height:T-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Height of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Height of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,15 +1321,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>height=</strong>(height : T)
 
-        <a class="method-permalink" href="#height%3D%28height%3AT%29-instance-method">#</a>
+        <a class="method-permalink" href="#height=(height:T)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Height of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Height of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1270,17 +1342,20 @@ not the bottom-right corner!</p></div>
         
         def <strong>intersects?</strong>(other : <a href="../SF/Rect.html">SF::Rect</a>(T)) : <a href="../SF/Rect.html">SF::Rect</a>(T)?
 
-        <a class="method-permalink" href="#intersects%3F%28other%3ASF%3A%3ARect%28T%29%29%3ASF%3A%3ARect%28T%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#intersects?(other:SF::Rect(T)):SF::Rect(T)?-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Check the intersection between two rectangles</p>
+        <div class="doc">
+          
+          <p>Check the intersection between two rectangles</p>
 
-<p>Returns the overlapped rectangle or nil if there is no overlap.</p></div>
+<p>Returns the overlapped rectangle or nil if there is no overlap.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L92" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1290,15 +1365,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>left</strong> : T
 
-        <a class="method-permalink" href="#left%3AT-instance-method">#</a>
+        <a class="method-permalink" href="#left:T-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Left coordinate of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Left coordinate of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1308,15 +1386,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>left=</strong>(left : T)
 
-        <a class="method-permalink" href="#left%3D%28left%3AT%29-instance-method">#</a>
+        <a class="method-permalink" href="#left=(left:T)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Left coordinate of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Left coordinate of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1326,15 +1407,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>top</strong> : T
 
-        <a class="method-permalink" href="#top%3AT-instance-method">#</a>
+        <a class="method-permalink" href="#top:T-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Top coordinate of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Top coordinate of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1344,15 +1428,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>top=</strong>(top : T)
 
-        <a class="method-permalink" href="#top%3D%28top%3AT%29-instance-method">#</a>
+        <a class="method-permalink" href="#top=(top:T)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Top coordinate of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Top coordinate of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1362,15 +1449,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>width</strong> : T
 
-        <a class="method-permalink" href="#width%3AT-instance-method">#</a>
+        <a class="method-permalink" href="#width:T-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Width of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Width of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,15 +1470,18 @@ not the bottom-right corner!</p></div>
         
         def <strong>width=</strong>(width : T)
 
-        <a class="method-permalink" href="#width%3D%28width%3AT%29-instance-method">#</a>
+        <a class="method-permalink" href="#width=(width:T)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Width of the rectangle</p></div>
+        <div class="doc">
+          
+          <p>Width of the rectangle</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>

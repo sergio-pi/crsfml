@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Http::Response - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Define a HTTP response</p>
 
@@ -892,10 +903,19 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1362" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1362" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
@@ -904,7 +924,14 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -920,18 +947,27 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#body%3AString-instance-method" class="signature"><strong>#body</strong> : String</a>
+        <a href="#body:String-instance-method" class="signature"><strong>#body</strong> : String</a>
         
           <div class="summary"><p>Get the body of the response</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -941,28 +977,28 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#get_field%28field%3AString%29%3AString-instance-method" class="signature"><strong>#get_field</strong>(field : String) : String</a>
+        <a href="#get_field(field:String):String-instance-method" class="signature"><strong>#get_field</strong>(field : String) : String</a>
         
           <div class="summary"><p>Get the value of a field</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#major_http_version%3AInt32-instance-method" class="signature"><strong>#major_http_version</strong> : Int32</a>
+        <a href="#major_http_version:Int32-instance-method" class="signature"><strong>#major_http_version</strong> : Int32</a>
         
           <div class="summary"><p>Get the major HTTP version number of the response</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#minor_http_version%3AInt32-instance-method" class="signature"><strong>#minor_http_version</strong> : Int32</a>
+        <a href="#minor_http_version:Int32-instance-method" class="signature"><strong>#minor_http_version</strong> : Int32</a>
         
           <div class="summary"><p>Get the minor HTTP version number of the response</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status%3AHttp%3A%3AResponse%3A%3AStatus-instance-method" class="signature"><strong>#status</strong> : Http::Response::Status</a>
+        <a href="#status:Http::Response::Status-instance-method" class="signature"><strong>#status</strong> : Http::Response::Status</a>
         
           <div class="summary"><p>Get the response status code</p></div>
         
@@ -999,7 +1035,14 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1009,14 +1052,17 @@
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Constructs an empty response.</p></div>
+<p>Constructs an empty response.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1421" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1421" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1026,28 +1072,38 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="body:String-instance-method">
       <div class="signature">
         
         def <strong>body</strong> : String
 
-        <a class="method-permalink" href="#body%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#body:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the body of the response</p>
+        <div class="doc">
+          
+          <p>Get the body of the response</p>
 
 <p>The body of a response may contain:</p>
 
 <ul><li>the requested page (for GET requests)</li><li>a response from the server (for POST requests)</li><li>nothing (for HEAD requests)</li><li>an error message (in case of an error)</li></ul>
 
-<p><em>Returns:</em> The response body</p></div>
+<p><em>Returns:</em> The response body</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1477" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1477" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1055,15 +1111,27 @@
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1494" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1494" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,7 +1147,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1364" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1364" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1089,10 +1157,12 @@
         
         def <strong>get_field</strong>(field : String) : String
 
-        <a class="method-permalink" href="#get_field%28field%3AString%29%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#get_field(field:String):String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the value of a field</p>
+        <div class="doc">
+          
+          <p>Get the value of a field</p>
 
 <p>If the field <em>field</em> is not found in the response header,
 the empty string is returned. This function uses
@@ -1100,12 +1170,13 @@ case-insensitive comparisons.</p>
 
 <ul><li><em>field</em> - Name of the field to get</li></ul>
 
-<p><em>Returns:</em> Value of the field, or empty string if not found</p></div>
+<p><em>Returns:</em> Value of the field, or empty string if not found</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1434" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1434" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1115,19 +1186,22 @@ case-insensitive comparisons.</p>
         
         def <strong>major_http_version</strong> : Int32
 
-        <a class="method-permalink" href="#major_http_version%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#major_http_version:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the major HTTP version number of the response</p>
+        <div class="doc">
+          
+          <p>Get the major HTTP version number of the response</p>
 
 <p><em>Returns:</em> Major HTTP version number</p>
 
-<p><em>See also:</em> <code><a href="../../SF/Http/Response.html#minor_http_version%3AInt32-instance-method">#minor_http_version</a></code></p></div>
+<p><em>See also:</em> <code><a href="../../SF/Http/Response.html#minor_http_version:Int32-instance-method">#minor_http_version</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1455" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1455" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1137,19 +1211,22 @@ case-insensitive comparisons.</p>
         
         def <strong>minor_http_version</strong> : Int32
 
-        <a class="method-permalink" href="#minor_http_version%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#minor_http_version:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the minor HTTP version number of the response</p>
+        <div class="doc">
+          
+          <p>Get the minor HTTP version number of the response</p>
 
 <p><em>Returns:</em> Minor HTTP version number</p>
 
-<p><em>See also:</em> <code><a href="../../SF/Http/Response.html#major_http_version%3AInt32-instance-method">#major_http_version</a></code></p></div>
+<p><em>See also:</em> <code><a href="../../SF/Http/Response.html#major_http_version:Int32-instance-method">#major_http_version</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1464" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1464" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1159,22 +1236,25 @@ case-insensitive comparisons.</p>
         
         def <strong>status</strong> : <a href="../../SF/Http/Response/Status.html">Http::Response::Status</a>
 
-        <a class="method-permalink" href="#status%3AHttp%3A%3AResponse%3A%3AStatus-instance-method">#</a>
+        <a class="method-permalink" href="#status:Http::Response::Status-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the response status code</p>
+        <div class="doc">
+          
+          <p>Get the response status code</p>
 
 <p>The status code should be the first thing to be checked
 after receiving a response, it defines whether it is a
 success, a failure or anything else (see the Status
 enumeration).</p>
 
-<p><em>Returns:</em> Status code of the response</p></div>
+<p><em>Returns:</em> Status code of the response</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1446" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1446" target="_blank">View source</a>]
         
       </div>
     </div>

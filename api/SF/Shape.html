@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Shape - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Base class for textured shapes with outline</p>
 
@@ -897,7 +908,7 @@ shape classes, a shape always has the following attributes:</p>
 <p>You can write your own derived shape class, there are only
 two virtual functions to override:</p>
 
-<ul><li><code><a href="../SF/Shape.html#point_count%3AInt32-instance-method">#point_count</a></code> must return the number of points of the shape</li><li><code><a href="../SF/Shape.html#get_point%28index%3AInt%29%3AVector2f-instance-method">#get_point</a></code> must return the points of the shape</li></ul>
+<ul><li><code><a href="../SF/Shape.html#point_count:Int32-instance-method">#point_count</a></code> must return the number of points of the shape</li><li><code><a href="../SF/Shape.html#get_point(index:Int):Vector2f-instance-method">#get_point</a></code> must return the points of the shape</li></ul>
 
 <p><em>See also:</em> <code><a href="../SF/RectangleShape.html">SF::RectangleShape</a></code>, <code><a href="../SF/CircleShape.html">SF::CircleShape</a></code>, <code><a href="../SF/ConvexShape.html">SF::ConvexShape</a></code>, <code><a href="../SF/Transformable.html">SF::Transformable</a></code></p>
 
@@ -905,26 +916,40 @@ two virtual functions to override:</p>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
+    
   </ul>
 
 
 
 
 
-  <h2>Direct Known Subclasses</h2>
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/CircleShape.html">SF::CircleShape</a></li>
-  
-    <li class="other-type"><a href="../SF/ConvexShape.html">SF::ConvexShape</a></li>
-  
-    <li class="other-type"><a href="../SF/RectangleShape.html">SF::RectangleShape</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/CircleShape.html">SF::CircleShape</a></li>
+    
+      <li class="other-type"><a href="../SF/ConvexShape.html">SF::ConvexShape</a></li>
+    
+      <li class="other-type"><a href="../SF/RectangleShape.html">SF::RectangleShape</a></li>
+    
   </ul>
 
 
@@ -932,15 +957,26 @@ two virtual functions to override:</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1764" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1764" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L265" target="_blank">graphics/graphics.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L265" target="_blank">
+        graphics/graphics.cr
+      </a>
     
     <br/>
   
@@ -949,39 +985,36 @@ two virtual functions to override:</p>
 
 
 
-  <h2>Constructors</h2>
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
         
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-
-
-  <h2>Instance Method Summary</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fill_color%3AColor-instance-method" class="signature"><strong>#fill_color</strong> : Color</a>
+        <a href="#fill_color:Color-instance-method" class="signature"><strong>#fill_color</strong> : Color</a>
         
           <div class="summary"><p>Get the fill color of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fill_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#fill_color=</strong>(color : Color)</a>
+        <a href="#fill_color=(color:Color)-instance-method" class="signature"><strong>#fill_color=</strong>(color : Color)</a>
         
           <div class="summary"><p>Set the fill color of the shape</p></div>
         
@@ -995,84 +1028,84 @@ two virtual functions to override:</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#get_point%28index%3AInt%29%3AVector2f-instance-method" class="signature"><strong>#get_point</strong>(index : Int) : Vector2f</a>
+        <a href="#get_point(index:Int):Vector2f-instance-method" class="signature"><strong>#get_point</strong>(index : Int) : Vector2f</a>
         
           <div class="summary"><p>Get a point of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#global_bounds%3AFloatRect-instance-method" class="signature"><strong>#global_bounds</strong> : FloatRect</a>
+        <a href="#global_bounds:FloatRect-instance-method" class="signature"><strong>#global_bounds</strong> : FloatRect</a>
         
           <div class="summary"><p>Get the global (non-minimal) bounding rectangle of the entity</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#local_bounds%3AFloatRect-instance-method" class="signature"><strong>#local_bounds</strong> : FloatRect</a>
+        <a href="#local_bounds:FloatRect-instance-method" class="signature"><strong>#local_bounds</strong> : FloatRect</a>
         
           <div class="summary"><p>Get the local bounding rectangle of the entity</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_color%3AColor-instance-method" class="signature"><strong>#outline_color</strong> : Color</a>
+        <a href="#outline_color:Color-instance-method" class="signature"><strong>#outline_color</strong> : Color</a>
         
           <div class="summary"><p>Get the outline color of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_color%3D%28color%3AColor%29-instance-method" class="signature"><strong>#outline_color=</strong>(color : Color)</a>
+        <a href="#outline_color=(color:Color)-instance-method" class="signature"><strong>#outline_color=</strong>(color : Color)</a>
         
           <div class="summary"><p>Set the outline color of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_thickness%3AFloat32-instance-method" class="signature"><strong>#outline_thickness</strong> : Float32</a>
+        <a href="#outline_thickness:Float32-instance-method" class="signature"><strong>#outline_thickness</strong> : Float32</a>
         
           <div class="summary"><p>Get the outline thickness of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method" class="signature"><strong>#outline_thickness=</strong>(thickness : Number)</a>
+        <a href="#outline_thickness=(thickness:Number)-instance-method" class="signature"><strong>#outline_thickness=</strong>(thickness : Number)</a>
         
           <div class="summary"><p>Set the thickness of the shape's outline</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#point_count%3AInt32-instance-method" class="signature"><strong>#point_count</strong> : Int32</a>
+        <a href="#point_count:Int32-instance-method" class="signature"><strong>#point_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the total number of points of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_texture%28texture%3ATexture%3F%2Creset_rect%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#set_texture</strong>(texture : Texture?, reset_rect : Bool = <span class="n">false</span>)</a>
+        <a href="#set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method" class="signature"><strong>#set_texture</strong>(texture : Texture?, reset_rect : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Change the source texture of the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#texture%3D%28texture%3ATexture%29-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture)</a>
+        <a href="#texture=(texture:Texture)-instance-method" class="signature"><strong>#texture=</strong>(texture : Texture)</a>
         
-          <div class="summary"><p>Shorthand for <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%3F%2Creset_rect%3ABool%3Dfalse%29-instance-method">#set_texture</a></code></p></div>
+          <div class="summary"><p>Shorthand for <code><a href="../SF/Shape.html#set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method">#set_texture</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#texture_rect%3AIntRect-instance-method" class="signature"><strong>#texture_rect</strong> : IntRect</a>
+        <a href="#texture_rect:IntRect-instance-method" class="signature"><strong>#texture_rect</strong> : IntRect</a>
         
           <div class="summary"><p>Get the sub-rectangle of the texture displayed by the shape</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#texture_rect%3D%28rect%3AIntRect%29-instance-method" class="signature"><strong>#texture_rect=</strong>(rect : IntRect)</a>
+        <a href="#texture_rect=(rect:IntRect)-instance-method" class="signature"><strong>#texture_rect=</strong>(rect : IntRect)</a>
         
           <div class="summary"><p>Set the sub-rectangle of the texture that the shape will display</p></div>
         
@@ -1098,7 +1131,7 @@ two virtual functions to override:</p>
   <h3>Instance methods inherited from module <code><a href="../SF/Drawable.html">SF::Drawable</a></code></h3>
   
   
-    <a href="../SF/Drawable.html#draw%28target%3ARenderTarget%2Cstates%3ARenderStates%29-instance-method" class="tooltip">
+    <a href="../SF/Drawable.html#draw(target:RenderTarget,states:RenderStates)-instance-method" class="tooltip">
       <span>draw(target : RenderTarget, states : RenderStates)</span>
     draw</a>
     
@@ -1117,8 +1150,8 @@ two virtual functions to override:</p>
   <h3>Instance methods inherited from class <code><a href="../SF/Transformable.html">SF::Transformable</a></code></h3>
   
   
-    <a href="../SF/Transformable.html#dup%3Aself-instance-method" class="tooltip">
-      <span>dup : self</span>
+    <a href="../SF/Transformable.html#dup:self-instance-method" class="tooltip">
+      <span>dup : <span class="k">self</span></span>
     dup</a>, 
     
   
@@ -1127,77 +1160,77 @@ two virtual functions to override:</p>
     finalize</a>, 
     
   
-    <a href="../SF/Transformable.html#inverse_transform%3ATransform-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#inverse_transform:Transform-instance-method" class="tooltip">
       <span>inverse_transform : Transform</span>
     inverse_transform</a>, 
     
   
-    <a href="../SF/Transformable.html#move%28offset%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#move(offset:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>move(offset : Vector2 | Tuple)<br/>move(offset_x : Number, offset_y : Number)</span>
     move</a>, 
     
   
-    <a href="../SF/Transformable.html#origin%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#origin:Vector2f-instance-method" class="tooltip">
       <span>origin : Vector2f</span>
     origin</a>, 
     
   
-    <a href="../SF/Transformable.html#origin%3D%28origin%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#origin=(origin:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>origin=(origin : Vector2 | Tuple)</span>
     origin=</a>, 
     
   
-    <a href="../SF/Transformable.html#position%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#position:Vector2f-instance-method" class="tooltip">
       <span>position : Vector2f</span>
     position</a>, 
     
   
-    <a href="../SF/Transformable.html#position%3D%28position%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#position=(position:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>position=(position : Vector2 | Tuple)</span>
     position=</a>, 
     
   
-    <a href="../SF/Transformable.html#rotate%28angle%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotate(angle:Number)-instance-method" class="tooltip">
       <span>rotate(angle : Number)</span>
     rotate</a>, 
     
   
-    <a href="../SF/Transformable.html#rotation%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotation:Float32-instance-method" class="tooltip">
       <span>rotation : Float32</span>
     rotation</a>, 
     
   
-    <a href="../SF/Transformable.html#rotation%3D%28angle%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotation=(angle:Number)-instance-method" class="tooltip">
       <span>rotation=(angle : Number)</span>
     rotation=</a>, 
     
   
-    <a href="../SF/Transformable.html#scale%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#scale:Vector2f-instance-method" class="tooltip">
       <span>scale : Vector2f<br/>scale(factor : Vector2 | Tuple)<br/>scale(factor_x : Number, factor_y : Number)</span>
     scale</a>, 
     
   
-    <a href="../SF/Transformable.html#scale%3D%28factors%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#scale=(factors:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>scale=(factors : Vector2 | Tuple)</span>
     scale=</a>, 
     
   
-    <a href="../SF/Transformable.html#set_origin%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_origin(x:Number,y:Number)-instance-method" class="tooltip">
       <span>set_origin(x : Number, y : Number)</span>
     set_origin</a>, 
     
   
-    <a href="../SF/Transformable.html#set_position%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_position(x:Number,y:Number)-instance-method" class="tooltip">
       <span>set_position(x : Number, y : Number)</span>
     set_position</a>, 
     
   
-    <a href="../SF/Transformable.html#set_scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_scale(factor_x:Number,factor_y:Number)-instance-method" class="tooltip">
       <span>set_scale(factor_x : Number, factor_y : Number)</span>
     set_scale</a>, 
     
   
-    <a href="../SF/Transformable.html#transform%3ATransform-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#transform:Transform-instance-method" class="tooltip">
       <span>transform : Transform</span>
     transform</a>
     
@@ -1243,45 +1276,43 @@ two virtual functions to override:</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc"><p>Default constructor</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1949" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
 
-
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2081" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2081" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1291,19 +1322,22 @@ two virtual functions to override:</p>
         
         def <strong>fill_color</strong> : <a href="../SF/Color.html">Color</a>
 
-        <a class="method-permalink" href="#fill_color%3AColor-instance-method">#</a>
+        <a class="method-permalink" href="#fill_color:Color-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the fill color of the shape</p>
+        <div class="doc">
+          
+          <p>Get the fill color of the shape</p>
 
 <p><em>Returns:</em> Fill color of the shape</p>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color=(color:Color)-instance-method">#fill_color=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1870" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1870" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1313,10 +1347,12 @@ two virtual functions to override:</p>
         
         def <strong>fill_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
 
-        <a class="method-permalink" href="#fill_color%3D%28color%3AColor%29-instance-method">#</a>
+        <a class="method-permalink" href="#fill_color=(color:Color)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the fill color of the shape</p>
+        <div class="doc">
+          
+          <p>Set the fill color of the shape</p>
 
 <p>This color is modulated (multiplied) with the shape's
 texture if any. It can be used to colorize the shape,
@@ -1327,12 +1363,13 @@ By default, the shape's fill color is opaque white.</p>
 
 <ul><li><em>color</em> - New color of the shape</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color%3AColor-instance-method">#fill_color</a></code>, <code><a href="../SF/Shape.html#outline_color%3D%28color%3AColor%29-instance-method">#outline_color=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#fill_color:Color-instance-method">#fill_color</a></code>, <code><a href="../SF/Shape.html#outline_color=(color:Color)-instance-method">#outline_color=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1817" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1817" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1345,12 +1382,15 @@ By default, the shape's fill color is opaque white.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Virtual destructor</p></div>
+        <div class="doc">
+          
+          <p>Virtual destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1767" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1767" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1360,10 +1400,12 @@ By default, the shape's fill color is opaque white.</p>
         abstract 
         def <strong>get_point</strong>(index : Int) : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#get_point%28index%3AInt%29%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#get_point(index:Int):Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a point of the shape</p>
+        <div class="doc">
+          
+          <p>Get a point of the shape</p>
 
 <p>The returned point is in local coordinates, that is,
 the shape's transforms (position, rotation, scale) are
@@ -1374,12 +1416,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <p><em>Returns:</em> index-th point of the shape</p>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#point_count%3AInt32-instance-method">#point_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#point_count:Int32-instance-method">#point_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1912" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1912" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1389,10 +1432,12 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
         
         def <strong>global_bounds</strong> : <a href="../SF/FloatRect.html">FloatRect</a>
 
-        <a class="method-permalink" href="#global_bounds%3AFloatRect-instance-method">#</a>
+        <a class="method-permalink" href="#global_bounds:FloatRect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the global (non-minimal) bounding rectangle of the entity</p>
+        <div class="doc">
+          
+          <p>Get the global (non-minimal) bounding rectangle of the entity</p>
 
 <p>The returned rectangle is in global coordinates, which means
 that it takes into account the transformations (translation,
@@ -1407,12 +1452,13 @@ This allows for a fast approximation of the bounds as a
 first check; you may want to use more precise checks
 on top of that.</p>
 
-<p><em>Returns:</em> Global bounding rectangle of the entity</p></div>
+<p><em>Returns:</em> Global bounding rectangle of the entity</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1943" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1943" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1422,10 +1468,12 @@ on top of that.</p>
         
         def <strong>local_bounds</strong> : <a href="../SF/FloatRect.html">FloatRect</a>
 
-        <a class="method-permalink" href="#local_bounds%3AFloatRect-instance-method">#</a>
+        <a class="method-permalink" href="#local_bounds:FloatRect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the local bounding rectangle of the entity</p>
+        <div class="doc">
+          
+          <p>Get the local bounding rectangle of the entity</p>
 
 <p>The returned rectangle is in local coordinates, which means
 that it ignores the transformations (translation, rotation,
@@ -1433,12 +1481,13 @@ scale, ...) that are applied to the entity.
 In other words, this function returns the bounds of the
 entity in the entity's coordinate system.</p>
 
-<p><em>Returns:</em> Local bounding rectangle of the entity</p></div>
+<p><em>Returns:</em> Local bounding rectangle of the entity</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1922" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1922" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1448,19 +1497,22 @@ entity in the entity's coordinate system.</p>
         
         def <strong>outline_color</strong> : <a href="../SF/Color.html">Color</a>
 
-        <a class="method-permalink" href="#outline_color%3AColor-instance-method">#</a>
+        <a class="method-permalink" href="#outline_color:Color-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the outline color of the shape</p>
+        <div class="doc">
+          
+          <p>Get the outline color of the shape</p>
 
 <p><em>Returns:</em> Outline color of the shape</p>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color%3D%28color%3AColor%29-instance-method">#outline_color=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color=(color:Color)-instance-method">#outline_color=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1880" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1880" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1470,21 +1522,24 @@ entity in the entity's coordinate system.</p>
         
         def <strong>outline_color=</strong>(color : <a href="../SF/Color.html">Color</a>)
 
-        <a class="method-permalink" href="#outline_color%3D%28color%3AColor%29-instance-method">#</a>
+        <a class="method-permalink" href="#outline_color=(color:Color)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the outline color of the shape</p>
+        <div class="doc">
+          
+          <p>Set the outline color of the shape</p>
 
 <p>By default, the shape's outline color is opaque white.</p>
 
 <ul><li><em>color</em> - New outline color of the shape</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color%3AColor-instance-method">#outline_color</a></code>, <code><a href="../SF/Shape.html#fill_color%3D%28color%3AColor%29-instance-method">#fill_color=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_color:Color-instance-method">#outline_color</a></code>, <code><a href="../SF/Shape.html#fill_color=(color:Color)-instance-method">#fill_color=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1827" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1827" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1494,19 +1549,22 @@ entity in the entity's coordinate system.</p>
         
         def <strong>outline_thickness</strong> : Float32
 
-        <a class="method-permalink" href="#outline_thickness%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#outline_thickness:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the outline thickness of the shape</p>
+        <div class="doc">
+          
+          <p>Get the outline thickness of the shape</p>
 
 <p><em>Returns:</em> Outline thickness of the shape</p>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness%3D%28thickness%3ANumber%29-instance-method">#outline_thickness=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness=(thickness:Number)-instance-method">#outline_thickness=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1890" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1890" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1516,10 +1574,12 @@ entity in the entity's coordinate system.</p>
         
         def <strong>outline_thickness=</strong>(thickness : Number)
 
-        <a class="method-permalink" href="#outline_thickness%3D%28thickness%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#outline_thickness=(thickness:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the thickness of the shape's outline</p>
+        <div class="doc">
+          
+          <p>Set the thickness of the shape's outline</p>
 
 <p>Note that negative values are allowed (so that the outline
 expands towards the center of the shape), and using zero
@@ -1528,12 +1588,13 @@ By default, the outline thickness is 0.</p>
 
 <ul><li><em>thickness</em> - New outline thickness</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness%3AFloat32-instance-method">#outline_thickness</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#outline_thickness:Float32-instance-method">#outline_thickness</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1840" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1840" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1543,19 +1604,22 @@ By default, the outline thickness is 0.</p>
         abstract 
         def <strong>point_count</strong> : Int32
 
-        <a class="method-permalink" href="#point_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#point_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the total number of points of the shape</p>
+        <div class="doc">
+          
+          <p>Get the total number of points of the shape</p>
 
 <p><em>Returns:</em> Number of points of the shape</p>
 
-<p><em>See also:</em> <code>point</code></p></div>
+<p><em>See also:</em> <code>point</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1899" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1899" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1565,10 +1629,12 @@ By default, the outline thickness is 0.</p>
         
         def <strong>set_texture</strong>(texture : <a href="../SF/Texture.html">Texture</a>?, reset_rect : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#set_texture%28texture%3ATexture%3F%2Creset_rect%3ABool%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the source texture of the shape</p>
+        <div class="doc">
+          
+          <p>Change the source texture of the shape</p>
 
 <p>The <em>texture</em> argument refers to a texture that must
 exist as long as the shape uses it. Indeed, the shape
@@ -1583,12 +1649,13 @@ texture. If it is false, the texture rect is left unchanged.</p>
 
 <ul><li><em>texture</em> - New texture</li><li><em>reset_rect</em> - Should the texture rect be reset to the size of the new texture?</li></ul>
 
-<p><em>See also:</em> <code>texture</code>, <code><a href="../SF/Shape.html#texture_rect%3D%28rect%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
+<p><em>See also:</em> <code>texture</code>, <code><a href="../SF/Shape.html#texture_rect=(rect:IntRect)-instance-method">#texture_rect=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1788" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1788" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1598,15 +1665,18 @@ texture. If it is false, the texture rect is left unchanged.</p>
         
         def <strong>texture=</strong>(texture : <a href="../SF/Texture.html">Texture</a>)
 
-        <a class="method-permalink" href="#texture%3D%28texture%3ATexture%29-instance-method">#</a>
+        <a class="method-permalink" href="#texture=(texture:Texture)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code><a href="../SF/Shape.html#set_texture%28texture%3ATexture%3F%2Creset_rect%3ABool%3Dfalse%29-instance-method">#set_texture</a></code></p></div>
+        <div class="doc">
+          
+          <p>Shorthand for <code><a href="../SF/Shape.html#set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method">#set_texture</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/graphics.cr#L267" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/graphics.cr#L267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1616,19 +1686,22 @@ texture. If it is false, the texture rect is left unchanged.</p>
         
         def <strong>texture_rect</strong> : <a href="../SF/IntRect.html">IntRect</a>
 
-        <a class="method-permalink" href="#texture_rect%3AIntRect-instance-method">#</a>
+        <a class="method-permalink" href="#texture_rect:IntRect-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the sub-rectangle of the texture displayed by the shape</p>
+        <div class="doc">
+          
+          <p>Get the sub-rectangle of the texture displayed by the shape</p>
 
 <p><em>Returns:</em> Texture rectangle of the shape</p>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect%3D%28rect%3AIntRect%29-instance-method">#texture_rect=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect=(rect:IntRect)-instance-method">#texture_rect=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1860" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1860" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1638,10 +1711,12 @@ texture. If it is false, the texture rect is left unchanged.</p>
         
         def <strong>texture_rect=</strong>(rect : <a href="../SF/IntRect.html">IntRect</a>)
 
-        <a class="method-permalink" href="#texture_rect%3D%28rect%3AIntRect%29-instance-method">#</a>
+        <a class="method-permalink" href="#texture_rect=(rect:IntRect)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the sub-rectangle of the texture that the shape will display</p>
+        <div class="doc">
+          
+          <p>Set the sub-rectangle of the texture that the shape will display</p>
 
 <p>The texture rect is useful when you don't want to display
 the whole texture, but rather a part of it.
@@ -1649,12 +1724,13 @@ By default, the texture rect covers the entire texture.</p>
 
 <ul><li><em>rect</em> - Rectangle defining the region of the texture to display</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect%3AIntRect-instance-method">#texture_rect</a></code>, <code><a href="../SF/Shape.html#texture%3D%28texture%3ATexture%29-instance-method">#texture=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Shape.html#texture_rect:IntRect-instance-method">#texture_rect</a></code>, <code><a href="../SF/Shape.html#texture=(texture:Texture)-instance-method">#texture=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1802" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1802" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1667,16 +1743,19 @@ By default, the texture rect covers the entire texture.</p>
         <a class="method-permalink" href="#update-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Recompute the internal geometry of the shape</p>
+        <div class="doc">
+          
+          <p>Recompute the internal geometry of the shape</p>
 
 <p>This function must be called by the derived class everytime
 the shape's points change (i.e. the result of either
-<code><a href="../SF/Shape.html#point_count%3AInt32-instance-method">#point_count</a></code> or <code><a href="../SF/Shape.html#get_point%28index%3AInt%29%3AVector2f-instance-method">#get_point</a></code> is different).</p></div>
+<code><a href="../SF/Shape.html#point_count:Int32-instance-method">#point_count</a></code> or <code><a href="../SF/Shape.html#get_point(index:Int):Vector2f-instance-method">#get_point</a></code> is different).</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L1959" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L1959" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Event - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,13 +879,20 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Defines a system event and its parameters</p>
 
 <p><code><a href="../SF/Event.html">SF::Event</a></code> holds all the informations about a system event
 that just happened. Events are retrieved using the
-<code><a href="../SF/Window.html#poll_event%3AEvent%3F-instance-method">SF::Window.poll_event</a></code> and <code><a href="../SF/Window.html#wait_event%3AEvent%3F-instance-method">SF::Window.wait_event</a></code> functions.</p>
+<code><a href="../SF/Window.html#poll_event:Event?-instance-method">SF::Window.poll_event</a></code> and <code><a href="../SF/Window.html#wait_event:Event?-instance-method">SF::Window.wait_event</a></code> functions.</p>
 
 <p>A <code><a href="../SF/Event.html">SF::Event</a></code> instance contains the type of the event
 (mouse moved, key pressed, window closed, ...) as well
@@ -924,43 +935,50 @@ or event.text will have undefined values.</p>
 
 
 
-  <h2>Direct Known Subclasses</h2>
+  <h2>
+    <a id="direct-known-subclasses" class="anchor" href="#direct-known-subclasses">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct Known Subclasses
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Event/Closed.html">SF::Event::Closed</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/GainedFocus.html">SF::Event::GainedFocus</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/JoystickButtonEvent.html">SF::Event::JoystickButtonEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/JoystickConnectEvent.html">SF::Event::JoystickConnectEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/JoystickMoveEvent.html">SF::Event::JoystickMoveEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/KeyEvent.html">SF::Event::KeyEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/LostFocus.html">SF::Event::LostFocus</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseButtonEvent.html">SF::Event::MouseButtonEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseEntered.html">SF::Event::MouseEntered</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseLeft.html">SF::Event::MouseLeft</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseMoveEvent.html">SF::Event::MouseMoveEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseWheelEvent.html">SF::Event::MouseWheelEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/MouseWheelScrollEvent.html">SF::Event::MouseWheelScrollEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/SensorEvent.html">SF::Event::SensorEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/SizeEvent.html">SF::Event::SizeEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/TextEvent.html">SF::Event::TextEvent</a></li>
-  
-    <li class="other-type"><a href="../SF/Event/TouchEvent.html">SF::Event::TouchEvent</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Event/Closed.html">SF::Event::Closed</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/GainedFocus.html">SF::Event::GainedFocus</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/JoystickButtonEvent.html">SF::Event::JoystickButtonEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/JoystickConnectEvent.html">SF::Event::JoystickConnectEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/JoystickMoveEvent.html">SF::Event::JoystickMoveEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/KeyEvent.html">SF::Event::KeyEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/LostFocus.html">SF::Event::LostFocus</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseButtonEvent.html">SF::Event::MouseButtonEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseEntered.html">SF::Event::MouseEntered</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseLeft.html">SF::Event::MouseLeft</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseMoveEvent.html">SF::Event::MouseMoveEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseWheelEvent.html">SF::Event::MouseWheelEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/MouseWheelScrollEvent.html">SF::Event::MouseWheelScrollEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/SensorEvent.html">SF::Event::SensorEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/SizeEvent.html">SF::Event::SizeEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/TextEvent.html">SF::Event::TextEvent</a></li>
+    
+      <li class="other-type"><a href="../SF/Event/TouchEvent.html">SF::Event::TouchEvent</a></li>
+    
   </ul>
 
 
@@ -968,10 +986,19 @@ or event.text will have undefined values.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1253" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L1267" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -980,7 +1007,14 @@ or event.text will have undefined values.</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
@@ -994,11 +1028,20 @@ or event.text will have undefined values.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1043,7 +1086,14 @@ or event.text will have undefined values.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new-class-method">
       <div class="signature">
@@ -1056,7 +1106,7 @@ or event.text will have undefined values.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1253" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L1267" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1066,20 +1116,40 @@ or event.text will have undefined values.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L1900" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L1914" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::VertexBuffer - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Vertex buffer storage for one or more 2D primitives</p>
 
@@ -937,13 +948,20 @@ window.draw(triangles);</code></pre>
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
-  
-    <li class="other-type"><a href="../SF/GlResource.html">SF::GlResource</a></li>
-  
+    
+      <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
+    
+      <li class="other-type"><a href="../SF/GlResource.html">SF::GlResource</a></li>
+    
   </ul>
 
 
@@ -955,10 +973,19 @@ window.draw(triangles);</code></pre>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6932" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6932" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -967,25 +994,32 @@ window.draw(triangles);</code></pre>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28type%3APrimitiveType%2Cusage%3AVertexBuffer%3A%3AUsage%29-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, usage : VertexBuffer::Usage)</a>
+        <a href="#new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, usage : VertexBuffer::Usage)</a>
         
           <div class="summary"><p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28type%3APrimitiveType%29-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType)</a>
+        <a href="#new(type:PrimitiveType)-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType)</a>
         
           <div class="summary"><p>Construct a VertexBuffer with a specific PrimitiveType</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28usage%3AVertexBuffer%3A%3AUsage%29-class-method" class="signature"><strong>.new</strong>(usage : VertexBuffer::Usage)</a>
+        <a href="#new(usage:VertexBuffer::Usage)-class-method" class="signature"><strong>.new</strong>(usage : VertexBuffer::Usage)</a>
         
           <div class="summary"><p>Construct a VertexBuffer with a specific usage specifier</p></div>
         
@@ -999,9 +1033,9 @@ window.draw(triangles);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : self</a>
+        <a href="#new(*args,**kwargs):self-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>vertex_buffer = VertexBuffer.new; vertex_buffer<a href="../SF/VertexBuffer.html#create%28vertex_count%3AInt%29%3ABool-instance-method">.create(...)</a>; vertex_buffer</code></p></div>
+          <div class="summary"><p>Shorthand for <code>vertex_buffer = <a href="../SF/VertexBuffer.html#new-class-method">VertexBuffer.new</a>; vertex_buffer<a href="../SF/VertexBuffer.html#create(vertex_count:Int):Bool-instance-method">.create(...)</a>; vertex_buffer</code></p></div>
         
       </li>
     
@@ -1009,18 +1043,25 @@ window.draw(triangles);</code></pre>
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#available%3F%3ABool-class-method" class="signature"><strong>.available?</strong> : Bool</a>
+        <a href="#available?:Bool-class-method" class="signature"><strong>.available?</strong> : Bool</a>
         
           <div class="summary"><p>Tell whether or not the system supports vertex buffers</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bind%28vertex_buffer%3AVertexBuffer%3F%29-class-method" class="signature"><strong>.bind</strong>(vertex_buffer : VertexBuffer?)</a>
+        <a href="#bind(vertex_buffer:VertexBuffer?)-class-method" class="signature"><strong>.bind</strong>(vertex_buffer : VertexBuffer?)</a>
         
           <div class="summary"><p>Bind a vertex buffer for rendering</p></div>
         
@@ -1030,18 +1071,27 @@ window.draw(triangles);</code></pre>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28vertex_count%3AInt%29%3ABool-instance-method" class="signature"><strong>#create</strong>(vertex_count : Int) : Bool</a>
+        <a href="#create(vertex_count:Int):Bool-instance-method" class="signature"><strong>#create</strong>(vertex_count : Int) : Bool</a>
         
           <div class="summary"><p>Create the vertex buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1053,70 +1103,70 @@ window.draw(triangles);</code></pre>
       </li>
     
       <li class="entry-summary">
-        <a href="#native_handle%3AInt32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
+        <a href="#native_handle:Int32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
         
           <div class="summary"><p>Get the underlying OpenGL handle of the vertex buffer.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#primitive_type%3APrimitiveType-instance-method" class="signature"><strong>#primitive_type</strong> : PrimitiveType</a>
+        <a href="#primitive_type:PrimitiveType-instance-method" class="signature"><strong>#primitive_type</strong> : PrimitiveType</a>
         
           <div class="summary"><p>Get the type of primitives drawn by the vertex buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
+        <a href="#primitive_type=(type:PrimitiveType)-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
         
           <div class="summary"><p>Set the type of primitives to draw</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#swap%28right%3AVertexBuffer%29-instance-method" class="signature"><strong>#swap</strong>(right : VertexBuffer)</a>
+        <a href="#swap(right:VertexBuffer)-instance-method" class="signature"><strong>#swap</strong>(right : VertexBuffer)</a>
         
           <div class="summary"><p>Swap the contents of this vertex buffer with those of another</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Coffset%3AInt%29%3ABool-instance-method" class="signature"><strong>#update</strong>(vertices : Array(Vertex) | Slice(Vertex), offset : Int) : Bool</a>
+        <a href="#update(vertices:Array(Vertex)%7CSlice(Vertex),offset:Int):Bool-instance-method" class="signature"><strong>#update</strong>(vertices : Array(Vertex) | Slice(Vertex), offset : Int) : Bool</a>
         
           <div class="summary"><p>Update a part of the buffer from an array of vertices</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28vertices%3AVertex%29%3ABool-instance-method" class="signature"><strong>#update</strong>(vertices : Vertex) : Bool</a>
+        <a href="#update(vertices:Vertex):Bool-instance-method" class="signature"><strong>#update</strong>(vertices : Vertex) : Bool</a>
         
           <div class="summary"><p>Update the whole buffer from an array of vertices</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28vertex_buffer%3AVertexBuffer%29%3ABool-instance-method" class="signature"><strong>#update</strong>(vertex_buffer : VertexBuffer) : Bool</a>
+        <a href="#update(vertex_buffer:VertexBuffer):Bool-instance-method" class="signature"><strong>#update</strong>(vertex_buffer : VertexBuffer) : Bool</a>
         
           <div class="summary"><p>Copy the contents of another buffer into this buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#usage%3AVertexBuffer%3A%3AUsage-instance-method" class="signature"><strong>#usage</strong> : VertexBuffer::Usage</a>
+        <a href="#usage:VertexBuffer::Usage-instance-method" class="signature"><strong>#usage</strong> : VertexBuffer::Usage</a>
         
           <div class="summary"><p>Get the usage specifier of this vertex buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#usage%3D%28usage%3AVertexBuffer%3A%3AUsage%29-instance-method" class="signature"><strong>#usage=</strong>(usage : VertexBuffer::Usage)</a>
+        <a href="#usage=(usage:VertexBuffer::Usage)-instance-method" class="signature"><strong>#usage=</strong>(usage : VertexBuffer::Usage)</a>
         
           <div class="summary"><p>Set the usage specifier of this vertex buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#vertex_count%3AInt32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
+        <a href="#vertex_count:Int32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
         
           <div class="summary"><p>Return the vertex count</p></div>
         
@@ -1145,7 +1195,7 @@ window.draw(triangles);</code></pre>
   <h3>Instance methods inherited from module <code><a href="../SF/Drawable.html">SF::Drawable</a></code></h3>
   
   
-    <a href="../SF/Drawable.html#draw%28target%3ARenderTarget%2Cstates%3ARenderStates%29-instance-method" class="tooltip">
+    <a href="../SF/Drawable.html#draw(target:RenderTarget,states:RenderStates)-instance-method" class="tooltip">
       <span>draw(target : RenderTarget, states : RenderStates)</span>
     draw</a>
     
@@ -1182,27 +1232,37 @@ window.draw(triangles);</code></pre>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
 
-        <a class="method-permalink" href="#new%28type%3APrimitiveType%2Cusage%3AVertexBuffer%3A%3AUsage%29-class-method">#</a>
+        <a class="method-permalink" href="#new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p>
+        <div class="doc">
+          
+          <p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p>
 
 <p>Creates an empty vertex buffer and sets its primitive type
 to \p type and usage to \p usage.</p>
 
-<ul><li><em>type</em> - Type of primitive</li><li><em>usage</em> - Usage specifier</li></ul></div>
+<ul><li><em>type</em> - Type of primitive</li><li><em>usage</em> - Usage specifier</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6982" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6982" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1212,19 +1272,22 @@ to \p type and usage to \p usage.</p>
         
         def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
 
-        <a class="method-permalink" href="#new%28type%3APrimitiveType%29-class-method">#</a>
+        <a class="method-permalink" href="#new(type:PrimitiveType)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a VertexBuffer with a specific PrimitiveType</p>
+        <div class="doc">
+          
+          <p>Construct a VertexBuffer with a specific PrimitiveType</p>
 
 <p>Creates an empty vertex buffer and sets its primitive type to \p type.</p>
 
-<ul><li><em>type</em> - Type of primitive</li></ul></div>
+<ul><li><em>type</em> - Type of primitive</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6962" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6962" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1234,19 +1297,22 @@ to \p type and usage to \p usage.</p>
         
         def self.<strong>new</strong>(usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
 
-        <a class="method-permalink" href="#new%28usage%3AVertexBuffer%3A%3AUsage%29-class-method">#</a>
+        <a class="method-permalink" href="#new(usage:VertexBuffer::Usage)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct a VertexBuffer with a specific usage specifier</p>
+        <div class="doc">
+          
+          <p>Construct a VertexBuffer with a specific usage specifier</p>
 
 <p>Creates an empty vertex buffer and sets its usage to \p usage.</p>
 
-<ul><li><em>usage</em> - Usage specifier</li></ul></div>
+<ul><li><em>usage</em> - Usage specifier</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6971" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6971" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1259,14 +1325,17 @@ to \p type and usage to \p usage.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>Creates an empty vertex buffer.</p></div>
+<p>Creates an empty vertex buffer.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6953" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6953" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1274,19 +1343,22 @@ to \p type and usage to \p usage.</p>
     <div class="entry-detail" id="new(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(*args, **kwargs) : self
+        def self.<strong>new</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#new%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#new(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>vertex_buffer = VertexBuffer.new; vertex_buffer<a href="../SF/VertexBuffer.html#create%28vertex_count%3AInt%29%3ABool-instance-method">.create(...)</a>; vertex_buffer</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>vertex_buffer = <a href="../SF/VertexBuffer.html#new-class-method">VertexBuffer.new</a>; vertex_buffer<a href="../SF/VertexBuffer.html#create(vertex_count:Int):Bool-instance-method">.create(...)</a>; vertex_buffer</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7011" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7011" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,28 +1366,38 @@ to \p type and usage to \p usage.</p>
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="available?:Bool-class-method">
       <div class="signature">
         
         def self.<strong>available?</strong> : Bool
 
-        <a class="method-permalink" href="#available%3F%3ABool-class-method">#</a>
+        <a class="method-permalink" href="#available?:Bool-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Tell whether or not the system supports vertex buffers</p>
+        <div class="doc">
+          
+          <p>Tell whether or not the system supports vertex buffers</p>
 
 <p>This function should always be called before using
 the vertex buffer features. If it returns false, then
 any attempt to use <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code> will fail.</p>
 
-<p><em>Returns:</em> True if vertex buffers are supported, false otherwise</p></div>
+<p><em>Returns:</em> True if vertex buffers are supported, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7170" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,10 +1407,12 @@ any attempt to use <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a><
         
         def self.<strong>bind</strong>(vertex_buffer : <a href="../SF/VertexBuffer.html">VertexBuffer</a>?)
 
-        <a class="method-permalink" href="#bind%28vertex_buffer%3AVertexBuffer%3F%29-class-method">#</a>
+        <a class="method-permalink" href="#bind(vertex_buffer:VertexBuffer?)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Bind a vertex buffer for rendering</p>
+        <div class="doc">
+          
+          <p>Bind a vertex buffer for rendering</p>
 
 <p>This function is not part of the graphics API, it mustn't be
 used when drawing SFML entities. It must be used only if you
@@ -1343,12 +1427,13 @@ sf::VertexBuffer::bind(&vb2);
 sf::VertexBuffer::bind(NULL);
 // draw OpenGL stuff that use no vertex buffer...</code></pre>
 
-<ul><li><em>vertex_buffer</em> - Pointer to the vertex buffer to bind, can be null to use no vertex buffer</li></ul></div>
+<ul><li><em>vertex_buffer</em> - Pointer to the vertex buffer to bind, can be null to use no vertex buffer</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7160" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7160" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1356,17 +1441,26 @@ sf::VertexBuffer::bind(NULL);
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="create(vertex_count:Int):Bool-instance-method">
       <div class="signature">
         
         def <strong>create</strong>(vertex_count : Int) : Bool
 
-        <a class="method-permalink" href="#create%28vertex_count%3AInt%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#create(vertex_count:Int):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Create the vertex buffer</p>
+        <div class="doc">
+          
+          <p>Create the vertex buffer</p>
 
 <p>Creates the vertex buffer and allocates enough graphics
 memory to hold \p vertex_count vertices. Any previously
@@ -1378,12 +1472,13 @@ value when graphics memory should be allocated again.</p>
 
 <ul><li><em>vertex_count</em> - Number of vertices worth of memory to allocate</li></ul>
 
-<p><em>Returns:</em> True if creation was successful</p></div>
+<p><em>Returns:</em> True if creation was successful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7004" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7004" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1391,15 +1486,27 @@ value when graphics memory should be allocated again.</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7201" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7201" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,12 +1519,15 @@ value when graphics memory should be allocated again.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p></div>
+        <div class="doc">
+          
+          <p>Destructor</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L6987" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L6987" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1427,21 +1537,24 @@ value when graphics memory should be allocated again.</p>
         
         def <strong>native_handle</strong> : Int32
 
-        <a class="method-permalink" href="#native_handle%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#native_handle:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the underlying OpenGL handle of the vertex buffer.</p>
+        <div class="doc">
+          
+          <p>Get the underlying OpenGL handle of the vertex buffer.</p>
 
 <p>You shouldn't need to use this function, unless you have
 very specific stuff to implement that SFML doesn't support,
 or implement a temporary workaround until a bug is fixed.</p>
 
-<p><em>Returns:</em> OpenGL handle of the vertex buffer or 0 if not yet created</p></div>
+<p><em>Returns:</em> OpenGL handle of the vertex buffer or 0 if not yet created</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7098" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7098" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1451,17 +1564,20 @@ or implement a temporary workaround until a bug is fixed.</p>
         
         def <strong>primitive_type</strong> : <a href="../SF/PrimitiveType.html">PrimitiveType</a>
 
-        <a class="method-permalink" href="#primitive_type%3APrimitiveType-instance-method">#</a>
+        <a class="method-permalink" href="#primitive_type:PrimitiveType-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the type of primitives drawn by the vertex buffer</p>
+        <div class="doc">
+          
+          <p>Get the type of primitives drawn by the vertex buffer</p>
 
-<p><em>Returns:</em> Primitive type</p></div>
+<p><em>Returns:</em> Primitive type</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7116" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1471,22 +1587,25 @@ or implement a temporary workaround until a bug is fixed.</p>
         
         def <strong>primitive_type=</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
 
-        <a class="method-permalink" href="#primitive_type%3D%28type%3APrimitiveType%29-instance-method">#</a>
+        <a class="method-permalink" href="#primitive_type=(type:PrimitiveType)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the type of primitives to draw</p>
+        <div class="doc">
+          
+          <p>Set the type of primitives to draw</p>
 
 <p>This function defines how the vertices must be interpreted
 when it's time to draw them.</p>
 
 <p>The default primitive type is <code>SF::Points</code>.</p>
 
-<ul><li><em>type</em> - Type of primitive</li></ul></div>
+<ul><li><em>type</em> - Type of primitive</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7110" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7110" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1496,17 +1615,20 @@ when it's time to draw them.</p>
         
         def <strong>swap</strong>(right : <a href="../SF/VertexBuffer.html">VertexBuffer</a>)
 
-        <a class="method-permalink" href="#swap%28right%3AVertexBuffer%29-instance-method">#</a>
+        <a class="method-permalink" href="#swap(right:VertexBuffer)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Swap the contents of this vertex buffer with those of another</p>
+        <div class="doc">
+          
+          <p>Swap the contents of this vertex buffer with those of another</p>
 
-<ul><li><em>right</em> - Instance to swap with</li></ul></div>
+<ul><li><em>right</em> - Instance to swap with</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7088" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7088" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1516,10 +1638,12 @@ when it's time to draw them.</p>
         
         def <strong>update</strong>(vertices : Array(<a href="../SF/Vertex.html">Vertex</a>) | Slice(<a href="../SF/Vertex.html">Vertex</a>), offset : Int) : Bool
 
-        <a class="method-permalink" href="#update%28vertices%3AArray%28Vertex%29%7CSlice%28Vertex%29%2Coffset%3AInt%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#update(vertices:Array(Vertex)%7CSlice(Vertex),offset:Int):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update a part of the buffer from an array of vertices</p>
+        <div class="doc">
+          
+          <p>Update a part of the buffer from an array of vertices</p>
 
 <p>\p offset is specified as the number of vertices to skip
 from the beginning of the buffer.</p>
@@ -1544,12 +1668,13 @@ behavior.</p>
 
 <ul><li><em>vertices</em> - Array of vertices to copy to the buffer</li><li><em>vertex_count</em> - Number of vertices to copy</li><li><em>offset</em> - Offset in the buffer to copy to</li></ul>
 
-<p><em>Returns:</em> True if the update was successful</p></div>
+<p><em>Returns:</em> True if the update was successful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7072" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7072" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1559,10 +1684,12 @@ behavior.</p>
         
         def <strong>update</strong>(vertices : <a href="../SF/Vertex.html">Vertex</a>) : Bool
 
-        <a class="method-permalink" href="#update%28vertices%3AVertex%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#update(vertices:Vertex):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Update the whole buffer from an array of vertices</p>
+        <div class="doc">
+          
+          <p>Update the whole buffer from an array of vertices</p>
 
 <p>The <em>vertex</em> array is assumed to have the same size as
 the <em>created</em> buffer.</p>
@@ -1576,12 +1703,13 @@ buffer was not previously created.</p>
 
 <ul><li><em>vertices</em> - Array of vertices to copy to the buffer</li></ul>
 
-<p><em>Returns:</em> True if the update was successful</p></div>
+<p><em>Returns:</em> True if the update was successful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7040" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7040" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1591,19 +1719,22 @@ buffer was not previously created.</p>
         
         def <strong>update</strong>(vertex_buffer : <a href="../SF/VertexBuffer.html">VertexBuffer</a>) : Bool
 
-        <a class="method-permalink" href="#update%28vertex_buffer%3AVertexBuffer%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#update(vertex_buffer:VertexBuffer):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Copy the contents of another buffer into this buffer</p>
+        <div class="doc">
+          
+          <p>Copy the contents of another buffer into this buffer</p>
 
 <ul><li><em>vertex_buffer</em> - Vertex buffer whose contents to copy into this vertex buffer</li></ul>
 
-<p><em>Returns:</em> True if the copy was successful</p></div>
+<p><em>Returns:</em> True if the copy was successful</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7081" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7081" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1613,17 +1744,20 @@ buffer was not previously created.</p>
         
         def <strong>usage</strong> : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>
 
-        <a class="method-permalink" href="#usage%3AVertexBuffer%3A%3AUsage-instance-method">#</a>
+        <a class="method-permalink" href="#usage:VertexBuffer::Usage-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the usage specifier of this vertex buffer</p>
+        <div class="doc">
+          
+          <p>Get the usage specifier of this vertex buffer</p>
 
-<p><em>Returns:</em> Usage specifier</p></div>
+<p><em>Returns:</em> Usage specifier</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7138" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7138" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1633,10 +1767,12 @@ buffer was not previously created.</p>
         
         def <strong>usage=</strong>(usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
 
-        <a class="method-permalink" href="#usage%3D%28usage%3AVertexBuffer%3A%3AUsage%29-instance-method">#</a>
+        <a class="method-permalink" href="#usage=(usage:VertexBuffer::Usage)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the usage specifier of this vertex buffer</p>
+        <div class="doc">
+          
+          <p>Set the usage specifier of this vertex buffer</p>
 
 <p>This function provides a hint about how this vertex buffer is
 going to be used in terms of data update frequency.</p>
@@ -1647,12 +1783,13 @@ take effect.</p>
 
 <p>The default primitive type is <code>SF::VertexBuffer::Stream</code>.</p>
 
-<ul><li><em>usage</em> - Usage specifier</li></ul></div>
+<ul><li><em>usage</em> - Usage specifier</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7132" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7132" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1662,17 +1799,20 @@ take effect.</p>
         
         def <strong>vertex_count</strong> : Int32
 
-        <a class="method-permalink" href="#vertex_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#vertex_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the vertex count</p>
+        <div class="doc">
+          
+          <p>Return the vertex count</p>
 
-<p><em>Returns:</em> Number of vertices in the vertex buffer</p></div>
+<p><em>Returns:</em> Number of vertices in the vertex buffer</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L7021" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L7021" target="_blank">View source</a>]
         
       </div>
     </div>

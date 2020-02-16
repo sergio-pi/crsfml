@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Listener - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -873,7 +877,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>The audio listener is the point in the scene</p>
 
@@ -916,10 +927,19 @@ contains static functions and doesn't have to be instantiated.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L33" target="_blank">audio/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L33" target="_blank">
+        audio/obj.cr
+      </a>
     
     <br/>
   
@@ -930,81 +950,88 @@ contains static functions and doesn't have to be instantiated.</p>
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#direction%3AVector3f-class-method" class="signature"><strong>.direction</strong> : Vector3f</a>
+        <a href="#direction:Vector3f-class-method" class="signature"><strong>.direction</strong> : Vector3f</a>
         
           <div class="summary"><p>Get the current forward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#direction%3D%28direction%3AVector3f%29-class-method" class="signature"><strong>.direction=</strong>(direction : Vector3f)</a>
+        <a href="#direction=(direction:Vector3f)-class-method" class="signature"><strong>.direction=</strong>(direction : Vector3f)</a>
         
           <div class="summary"><p>Set the forward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#global_volume%3AFloat32-class-method" class="signature"><strong>.global_volume</strong> : Float32</a>
+        <a href="#global_volume:Float32-class-method" class="signature"><strong>.global_volume</strong> : Float32</a>
         
           <div class="summary"><p>Get the current value of the global volume</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#global_volume%3D%28volume%3ANumber%29-class-method" class="signature"><strong>.global_volume=</strong>(volume : Number)</a>
+        <a href="#global_volume=(volume:Number)-class-method" class="signature"><strong>.global_volume=</strong>(volume : Number)</a>
         
           <div class="summary"><p>Change the global volume of all the sounds and musics</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3AVector3f-class-method" class="signature"><strong>.position</strong> : Vector3f</a>
+        <a href="#position:Vector3f-class-method" class="signature"><strong>.position</strong> : Vector3f</a>
         
           <div class="summary"><p>Get the current position of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#position%3D%28position%3AVector3f%29-class-method" class="signature"><strong>.position=</strong>(position : Vector3f)</a>
+        <a href="#position=(position:Vector3f)-class-method" class="signature"><strong>.position=</strong>(position : Vector3f)</a>
         
           <div class="summary"><p>Set the position of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_direction%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method" class="signature"><strong>.set_direction</strong>(x : Number, y : Number, z : Number)</a>
+        <a href="#set_direction(x:Number,y:Number,z:Number)-class-method" class="signature"><strong>.set_direction</strong>(x : Number, y : Number, z : Number)</a>
         
           <div class="summary"><p>Set the forward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method" class="signature"><strong>.set_position</strong>(x : Number, y : Number, z : Number)</a>
+        <a href="#set_position(x:Number,y:Number,z:Number)-class-method" class="signature"><strong>.set_position</strong>(x : Number, y : Number, z : Number)</a>
         
           <div class="summary"><p>Set the position of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_up_vector%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method" class="signature"><strong>.set_up_vector</strong>(x : Number, y : Number, z : Number)</a>
+        <a href="#set_up_vector(x:Number,y:Number,z:Number)-class-method" class="signature"><strong>.set_up_vector</strong>(x : Number, y : Number, z : Number)</a>
         
           <div class="summary"><p>Set the upward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#up_vector%3AVector3f-class-method" class="signature"><strong>.up_vector</strong> : Vector3f</a>
+        <a href="#up_vector:Vector3f-class-method" class="signature"><strong>.up_vector</strong> : Vector3f</a>
         
           <div class="summary"><p>Get the current upward vector of the listener in the scene</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#up_vector%3D%28up_vector%3AVector3f%29-class-method" class="signature"><strong>.up_vector=</strong>(up_vector : Vector3f)</a>
+        <a href="#up_vector=(up_vector:Vector3f)-class-method" class="signature"><strong>.up_vector=</strong>(up_vector : Vector3f)</a>
         
           <div class="summary"><p>Set the upward vector of the listener in the scene</p></div>
         
@@ -1025,26 +1052,36 @@ contains static functions and doesn't have to be instantiated.</p>
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="direction:Vector3f-class-method">
       <div class="signature">
         
         def self.<strong>direction</strong> : <a href="../SF/Vector3f.html">Vector3f</a>
 
-        <a class="method-permalink" href="#direction%3AVector3f-class-method">#</a>
+        <a class="method-permalink" href="#direction:Vector3f-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current forward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Get the current forward vector of the listener in the scene</p>
 
 <p><em>Returns:</em> Listener's forward vector (not normalized)</p>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#direction%3D%28direction%3AVector3f%29-class-method">.direction=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#direction=(direction:Vector3f)-class-method">.direction=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L124" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L124" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1054,10 +1091,12 @@ contains static functions and doesn't have to be instantiated.</p>
         
         def self.<strong>direction=</strong>(direction : <a href="../SF/Vector3f.html">Vector3f</a>)
 
-        <a class="method-permalink" href="#direction%3D%28direction%3AVector3f%29-class-method">#</a>
+        <a class="method-permalink" href="#direction=(direction:Vector3f)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the forward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the forward vector of the listener in the scene</p>
 
 <p>The direction (also called "at vector") is the vector
 pointing forward from the listener's perspective. Together
@@ -1068,12 +1107,13 @@ The default listener's direction is (0, 0, -1).</p>
 
 <ul><li><em>direction</em> - New listener's direction</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#direction%3AVector3f-class-method">.direction</a></code>, <code><a href="../SF/Listener.html#up_vector%3D%28up_vector%3AVector3f%29-class-method">.up_vector=</a></code>, <code><a href="../SF/Listener.html#position%3D%28position%3AVector3f%29-class-method">.position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#direction:Vector3f-class-method">.direction</a></code>, <code><a href="../SF/Listener.html#up_vector=(up_vector:Vector3f)-class-method">.up_vector=</a></code>, <code><a href="../SF/Listener.html#position=(position:Vector3f)-class-method">.position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L116" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1083,19 +1123,22 @@ The default listener's direction is (0, 0, -1).</p>
         
         def self.<strong>global_volume</strong> : Float32
 
-        <a class="method-permalink" href="#global_volume%3AFloat32-class-method">#</a>
+        <a class="method-permalink" href="#global_volume:Float32-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current value of the global volume</p>
+        <div class="doc">
+          
+          <p>Get the current value of the global volume</p>
 
 <p><em>Returns:</em> Current global volume, in the range <code>0..100</code></p>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume%3D%28volume%3ANumber%29-class-method">.global_volume=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume=(volume:Number)-class-method">.global_volume=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1105,10 +1148,12 @@ The default listener's direction is (0, 0, -1).</p>
         
         def self.<strong>global_volume=</strong>(volume : Number)
 
-        <a class="method-permalink" href="#global_volume%3D%28volume%3ANumber%29-class-method">#</a>
+        <a class="method-permalink" href="#global_volume=(volume:Number)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Change the global volume of all the sounds and musics</p>
+        <div class="doc">
+          
+          <p>Change the global volume of all the sounds and musics</p>
 
 <p>The volume is a number between 0 and 100; it is combined with
 the individual volume of each sound / music.
@@ -1116,12 +1161,13 @@ The default value for the volume is 100 (maximum).</p>
 
 <ul><li><em>volume</em> - New global volume, in the range <code>0..100</code></li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume%3AFloat32-class-method">.global_volume</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#global_volume:Float32-class-method">.global_volume</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1131,19 +1177,22 @@ The default value for the volume is 100 (maximum).</p>
         
         def self.<strong>position</strong> : <a href="../SF/Vector3f.html">Vector3f</a>
 
-        <a class="method-permalink" href="#position%3AVector3f-class-method">#</a>
+        <a class="method-permalink" href="#position:Vector3f-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current position of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Get the current position of the listener in the scene</p>
 
 <p><em>Returns:</em> Listener's position</p>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#position%3D%28position%3AVector3f%29-class-method">.position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#position=(position:Vector3f)-class-method">.position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L82" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1153,21 +1202,24 @@ The default value for the volume is 100 (maximum).</p>
         
         def self.<strong>position=</strong>(position : <a href="../SF/Vector3f.html">Vector3f</a>)
 
-        <a class="method-permalink" href="#position%3D%28position%3AVector3f%29-class-method">#</a>
+        <a class="method-permalink" href="#position=(position:Vector3f)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the position of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the position of the listener in the scene</p>
 
 <p>The default listener's position is (0, 0, 0).</p>
 
 <ul><li><em>position</em> - New listener's position</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#position%3AVector3f-class-method">.position</a></code>, <code><a href="../SF/Listener.html#direction%3D%28direction%3AVector3f%29-class-method">.direction=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#position:Vector3f-class-method">.position</a></code>, <code><a href="../SF/Listener.html#direction=(direction:Vector3f)-class-method">.direction=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,10 +1229,12 @@ The default value for the volume is 100 (maximum).</p>
         
         def self.<strong>set_direction</strong>(x : Number, y : Number, z : Number)
 
-        <a class="method-permalink" href="#set_direction%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method">#</a>
+        <a class="method-permalink" href="#set_direction(x:Number,y:Number,z:Number)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the forward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the forward vector of the listener in the scene</p>
 
 <p>The direction (also called "at vector") is the vector
 pointing forward from the listener's perspective. Together
@@ -1191,12 +1245,13 @@ The default listener's direction is (0, 0, -1).</p>
 
 <ul><li><em>x</em> - X coordinate of the listener's direction</li><li><em>y</em> - Y coordinate of the listener's direction</li><li><em>z</em> - Z coordinate of the listener's direction</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#direction%3AVector3f-class-method">.direction</a></code>, <code><a href="../SF/Listener.html#up_vector%3D%28up_vector%3AVector3f%29-class-method">.up_vector=</a></code>, <code><a href="../SF/Listener.html#position%3D%28position%3AVector3f%29-class-method">.position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#direction:Vector3f-class-method">.direction</a></code>, <code><a href="../SF/Listener.html#up_vector=(up_vector:Vector3f)-class-method">.up_vector=</a></code>, <code><a href="../SF/Listener.html#position=(position:Vector3f)-class-method">.position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1206,21 +1261,24 @@ The default listener's direction is (0, 0, -1).</p>
         
         def self.<strong>set_position</strong>(x : Number, y : Number, z : Number)
 
-        <a class="method-permalink" href="#set_position%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method">#</a>
+        <a class="method-permalink" href="#set_position(x:Number,y:Number,z:Number)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the position of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the position of the listener in the scene</p>
 
 <p>The default listener's position is (0, 0, 0).</p>
 
 <ul><li><em>x</em> - X coordinate of the listener's position</li><li><em>y</em> - Y coordinate of the listener's position</li><li><em>z</em> - Z coordinate of the listener's position</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#position%3AVector3f-class-method">.position</a></code>, <code><a href="../SF/Listener.html#direction%3D%28direction%3AVector3f%29-class-method">.direction=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#position:Vector3f-class-method">.position</a></code>, <code><a href="../SF/Listener.html#direction=(direction:Vector3f)-class-method">.direction=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,10 +1288,12 @@ The default listener's direction is (0, 0, -1).</p>
         
         def self.<strong>set_up_vector</strong>(x : Number, y : Number, z : Number)
 
-        <a class="method-permalink" href="#set_up_vector%28x%3ANumber%2Cy%3ANumber%2Cz%3ANumber%29-class-method">#</a>
+        <a class="method-permalink" href="#set_up_vector(x:Number,y:Number,z:Number)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the upward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the upward vector of the listener in the scene</p>
 
 <p>The up vector is the vector that points upward from the
 listener's perspective. Together with the direction, it
@@ -1244,12 +1304,13 @@ not necessary to change it, especially in 2D scenarios.</p>
 
 <ul><li><em>x</em> - X coordinate of the listener's up vector</li><li><em>y</em> - Y coordinate of the listener's up vector</li><li><em>z</em> - Z coordinate of the listener's up vector</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector%3AVector3f-class-method">.up_vector</a></code>, <code><a href="../SF/Listener.html#direction%3D%28direction%3AVector3f%29-class-method">.direction=</a></code>, <code><a href="../SF/Listener.html#position%3D%28position%3AVector3f%29-class-method">.position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector:Vector3f-class-method">.up_vector</a></code>, <code><a href="../SF/Listener.html#direction=(direction:Vector3f)-class-method">.direction=</a></code>, <code><a href="../SF/Listener.html#position=(position:Vector3f)-class-method">.position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1259,19 +1320,22 @@ not necessary to change it, especially in 2D scenarios.</p>
         
         def self.<strong>up_vector</strong> : <a href="../SF/Vector3f.html">Vector3f</a>
 
-        <a class="method-permalink" href="#up_vector%3AVector3f-class-method">#</a>
+        <a class="method-permalink" href="#up_vector:Vector3f-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current upward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Get the current upward vector of the listener in the scene</p>
 
 <p><em>Returns:</em> Listener's upward vector (not normalized)</p>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector%3D%28up_vector%3AVector3f%29-class-method">.up_vector=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector=(up_vector:Vector3f)-class-method">.up_vector=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L166" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L166" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1281,10 +1345,12 @@ not necessary to change it, especially in 2D scenarios.</p>
         
         def self.<strong>up_vector=</strong>(up_vector : <a href="../SF/Vector3f.html">Vector3f</a>)
 
-        <a class="method-permalink" href="#up_vector%3D%28up_vector%3AVector3f%29-class-method">#</a>
+        <a class="method-permalink" href="#up_vector=(up_vector:Vector3f)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the upward vector of the listener in the scene</p>
+        <div class="doc">
+          
+          <p>Set the upward vector of the listener in the scene</p>
 
 <p>The up vector is the vector that points upward from the
 listener's perspective. Together with the direction, it
@@ -1295,12 +1361,13 @@ not necessary to change it, especially in 2D scenarios.</p>
 
 <ul><li><em>up_vector</em> - New listener's up vector</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector%3AVector3f-class-method">.up_vector</a></code>, <code><a href="../SF/Listener.html#direction%3D%28direction%3AVector3f%29-class-method">.direction=</a></code>, <code><a href="../SF/Listener.html#position%3D%28position%3AVector3f%29-class-method">.position=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Listener.html#up_vector:Vector3f-class-method">.up_vector</a></code>, <code><a href="../SF/Listener.html#direction=(direction:Vector3f)-class-method">.direction=</a></code>, <code><a href="../SF/Listener.html#position=(position:Vector3f)-class-method">.position=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/audio/obj.cr#L158" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/audio/obj.cr#L158" target="_blank">View source</a>]
         
       </div>
     </div>

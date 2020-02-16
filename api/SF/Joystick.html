@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Joystick - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -873,7 +877,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Give access to the real-time state of the joysticks</p>
 
@@ -937,10 +948,19 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L576" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L590" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -948,7 +968,14 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -985,46 +1012,53 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
 
 
 
-  <h2>Class Method Summary</h2>
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#axis%3F%28joystick%3AInt%2Caxis%3AJoystick%3A%3AAxis%29%3ABool-class-method" class="signature"><strong>.axis?</strong>(joystick : Int, axis : Joystick::Axis) : Bool</a>
+        <a href="#axis?(joystick:Int,axis:Joystick::Axis):Bool-class-method" class="signature"><strong>.axis?</strong>(joystick : Int, axis : Joystick::Axis) : Bool</a>
         
           <div class="summary"><p>Check if a joystick supports a given axis</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#button_pressed%3F%28joystick%3AInt%2Cbutton%3AInt%29%3ABool-class-method" class="signature"><strong>.button_pressed?</strong>(joystick : Int, button : Int) : Bool</a>
+        <a href="#button_pressed?(joystick:Int,button:Int):Bool-class-method" class="signature"><strong>.button_pressed?</strong>(joystick : Int, button : Int) : Bool</a>
         
           <div class="summary"><p>Check if a joystick button is pressed</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#connected%3F%28joystick%3AInt%29%3ABool-class-method" class="signature"><strong>.connected?</strong>(joystick : Int) : Bool</a>
+        <a href="#connected?(joystick:Int):Bool-class-method" class="signature"><strong>.connected?</strong>(joystick : Int) : Bool</a>
         
           <div class="summary"><p>Check if a joystick is connected</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_axis_position%28joystick%3AInt%2Caxis%3AJoystick%3A%3AAxis%29%3AFloat32-class-method" class="signature"><strong>.get_axis_position</strong>(joystick : Int, axis : Joystick::Axis) : Float32</a>
+        <a href="#get_axis_position(joystick:Int,axis:Joystick::Axis):Float32-class-method" class="signature"><strong>.get_axis_position</strong>(joystick : Int, axis : Joystick::Axis) : Float32</a>
         
           <div class="summary"><p>Get the current position of a joystick axis</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_button_count%28joystick%3AInt%29%3AInt32-class-method" class="signature"><strong>.get_button_count</strong>(joystick : Int) : Int32</a>
+        <a href="#get_button_count(joystick:Int):Int32-class-method" class="signature"><strong>.get_button_count</strong>(joystick : Int) : Int32</a>
         
           <div class="summary"><p>Return the number of buttons supported by a joystick</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_identification%28joystick%3AInt%29%3AJoystick%3A%3AIdentification-class-method" class="signature"><strong>.get_identification</strong>(joystick : Int) : Joystick::Identification</a>
+        <a href="#get_identification(joystick:Int):Joystick::Identification-class-method" class="signature"><strong>.get_identification</strong>(joystick : Int) : Joystick::Identification</a>
         
           <div class="summary"><p>Get the joystick information</p></div>
         
@@ -1052,28 +1086,38 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
 
 
 
-  <h2>Class Method Detail</h2>
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
   
     <div class="entry-detail" id="axis?(joystick:Int,axis:Joystick::Axis):Bool-class-method">
       <div class="signature">
         
         def self.<strong>axis?</strong>(joystick : Int, axis : <a href="../SF/Joystick/Axis.html">Joystick::Axis</a>) : Bool
 
-        <a class="method-permalink" href="#axis%3F%28joystick%3AInt%2Caxis%3AJoystick%3A%3AAxis%29%3ABool-class-method">#</a>
+        <a class="method-permalink" href="#axis?(joystick:Int,axis:Joystick::Axis):Bool-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Check if a joystick supports a given axis</p>
+        <div class="doc">
+          
+          <p>Check if a joystick supports a given axis</p>
 
 <p>If the joystick is not connected, this function returns false.</p>
 
 <ul><li><em>joystick</em> - Index of the joystick</li><li><em>axis</em> - Axis to check</li></ul>
 
-<p><em>Returns:</em> True if the joystick supports the axis, false otherwise</p></div>
+<p><em>Returns:</em> True if the joystick supports the axis, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L683" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L697" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1083,21 +1127,24 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         
         def self.<strong>button_pressed?</strong>(joystick : Int, button : Int) : Bool
 
-        <a class="method-permalink" href="#button_pressed%3F%28joystick%3AInt%2Cbutton%3AInt%29%3ABool-class-method">#</a>
+        <a class="method-permalink" href="#button_pressed?(joystick:Int,button:Int):Bool-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Check if a joystick button is pressed</p>
+        <div class="doc">
+          
+          <p>Check if a joystick button is pressed</p>
 
 <p>If the joystick is not connected, this function returns false.</p>
 
 <ul><li><em>joystick</em> - Index of the joystick</li><li><em>button</em> - Button to check</li></ul>
 
-<p><em>Returns:</em> True if the button is pressed, false otherwise</p></div>
+<p><em>Returns:</em> True if the button is pressed, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L695" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L709" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1107,19 +1154,22 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         
         def self.<strong>connected?</strong>(joystick : Int) : Bool
 
-        <a class="method-permalink" href="#connected%3F%28joystick%3AInt%29%3ABool-class-method">#</a>
+        <a class="method-permalink" href="#connected?(joystick:Int):Bool-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Check if a joystick is connected</p>
+        <div class="doc">
+          
+          <p>Check if a joystick is connected</p>
 
 <ul><li><em>joystick</em> - Index of the joystick to check</li></ul>
 
-<p><em>Returns:</em> True if the joystick is connected, false otherwise</p></div>
+<p><em>Returns:</em> True if the joystick is connected, false otherwise</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L660" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L674" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1129,21 +1179,24 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         
         def self.<strong>get_axis_position</strong>(joystick : Int, axis : <a href="../SF/Joystick/Axis.html">Joystick::Axis</a>) : Float32
 
-        <a class="method-permalink" href="#get_axis_position%28joystick%3AInt%2Caxis%3AJoystick%3A%3AAxis%29%3AFloat32-class-method">#</a>
+        <a class="method-permalink" href="#get_axis_position(joystick:Int,axis:Joystick::Axis):Float32-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the current position of a joystick axis</p>
+        <div class="doc">
+          
+          <p>Get the current position of a joystick axis</p>
 
 <p>If the joystick is not connected, this function returns 0.</p>
 
 <ul><li><em>joystick</em> - Index of the joystick</li><li><em>axis</em> - Axis to check</li></ul>
 
-<p><em>Returns:</em> Current position of the axis, in range <code>-100 .. 100</code></p></div>
+<p><em>Returns:</em> Current position of the axis, in range <code>-100 .. 100</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L707" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L721" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1153,21 +1206,24 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         
         def self.<strong>get_button_count</strong>(joystick : Int) : Int32
 
-        <a class="method-permalink" href="#get_button_count%28joystick%3AInt%29%3AInt32-class-method">#</a>
+        <a class="method-permalink" href="#get_button_count(joystick:Int):Int32-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Return the number of buttons supported by a joystick</p>
+        <div class="doc">
+          
+          <p>Return the number of buttons supported by a joystick</p>
 
 <p>If the joystick is not connected, this function returns 0.</p>
 
 <ul><li><em>joystick</em> - Index of the joystick</li></ul>
 
-<p><em>Returns:</em> Number of buttons supported by the joystick</p></div>
+<p><em>Returns:</em> Number of buttons supported by the joystick</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L671" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L685" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,19 +1233,22 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         
         def self.<strong>get_identification</strong>(joystick : Int) : <a href="../SF/Joystick/Identification.html">Joystick::Identification</a>
 
-        <a class="method-permalink" href="#get_identification%28joystick%3AInt%29%3AJoystick%3A%3AIdentification-class-method">#</a>
+        <a class="method-permalink" href="#get_identification(joystick:Int):Joystick::Identification-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the joystick information</p>
+        <div class="doc">
+          
+          <p>Get the joystick information</p>
 
 <ul><li><em>joystick</em> - Index of the joystick</li></ul>
 
-<p><em>Returns:</em> Structure containing joystick information.</p></div>
+<p><em>Returns:</em> Structure containing joystick information.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L716" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L730" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1202,17 +1261,20 @@ position <span class="o">=</span> <span class="t">SF</span><span class="t">::</s
         <a class="method-permalink" href="#update-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Update the states of all joysticks</p>
+        <div class="doc">
+          
+          <p>Update the states of all joysticks</p>
 
 <p>This function is used internally by SFML, so you normally
 don't have to call it explicitly. However, you may need to
 call it if you have no window yet (or no window at all):
-in this case the joystick states are not updated automatically.</p></div>
+in this case the joystick states are not updated automatically.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L727" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L741" target="_blank">View source</a>]
         
       </div>
     </div>

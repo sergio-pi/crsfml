@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::IpAddress - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Encapsulate an IPv4 network address</p>
 
@@ -913,15 +924,26 @@ nor other types of network addresses.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L994" target="_blank">network/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L994" target="_blank">
+        network/obj.cr
+      </a>
     
     <br/>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/network.cr#L4" target="_blank">network/network.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/network.cr#L4" target="_blank">
+        network/network.cr
+      </a>
     
     <br/>
   
@@ -929,7 +951,14 @@ nor other types of network addresses.</p>
 
 
   
-    <h2>Constant Summary</h2>
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
   
   <dl>
     
@@ -973,39 +1002,46 @@ nor other types of network addresses.</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#get_public_address%28timeout%3ATime%3DTime%3A%3AZero%29%3AIpAddress-class-method" class="signature"><strong>.get_public_address</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : IpAddress</a>
+        <a href="#get_public_address(timeout:Time=Time::Zero):IpAddress-class-method" class="signature"><strong>.get_public_address</strong>(timeout : Time = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : IpAddress</a>
         
           <div class="summary"><p>Get the computer's public address</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#local_address%3AIpAddress-class-method" class="signature"><strong>.local_address</strong> : IpAddress</a>
+        <a href="#local_address:IpAddress-class-method" class="signature"><strong>.local_address</strong> : IpAddress</a>
         
           <div class="summary"><p>Get the computer's local address</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28byte0%3AInt%2Cbyte1%3AInt%2Cbyte2%3AInt%2Cbyte3%3AInt%29-class-method" class="signature"><strong>.new</strong>(byte0 : Int, byte1 : Int, byte2 : Int, byte3 : Int)</a>
+        <a href="#new(byte0:Int,byte1:Int,byte2:Int,byte3:Int)-class-method" class="signature"><strong>.new</strong>(byte0 : Int, byte1 : Int, byte2 : Int, byte3 : Int)</a>
         
           <div class="summary"><p>Construct the address from 4 bytes</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28address%3AString%29-class-method" class="signature"><strong>.new</strong>(address : String)</a>
+        <a href="#new(address:String)-class-method" class="signature"><strong>.new</strong>(address : String)</a>
         
           <div class="summary"><p>Construct the address from a string</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28address%3AInt%29-class-method" class="signature"><strong>.new</strong>(address : Int)</a>
+        <a href="#new(address:Int)-class-method" class="signature"><strong>.new</strong>(address : Int)</a>
         
           <div class="summary"><p>Construct the address from a 32-bits integer</p></div>
         
@@ -1024,70 +1060,79 @@ nor other types of network addresses.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#%21%3D%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#!=</strong>(right : IpAddress) : Bool</a>
+        <a href="#!=(right:IpAddress):Bool-instance-method" class="signature"><strong>#!=</strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of != operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#<</strong>(right : IpAddress) : Bool</a>
+        <a href="#%3C(right:IpAddress):Bool-instance-method" class="signature"><strong>#<</strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of &lt; operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3C%3D%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#<=</strong>(right : IpAddress) : Bool</a>
+        <a href="#%3C=(right:IpAddress):Bool-instance-method" class="signature"><strong>#<=</strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of &lt;= operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3D%3D%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#==</strong>(right : IpAddress) : Bool</a>
+        <a href="#==(right:IpAddress):Bool-instance-method" class="signature"><strong>#==</strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of == operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#></strong>(right : IpAddress) : Bool</a>
+        <a href="#%3E(right:IpAddress):Bool-instance-method" class="signature"><strong>#></strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of &gt; operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#%3E%3D%28right%3AIpAddress%29%3ABool-instance-method" class="signature"><strong>#>=</strong>(right : IpAddress) : Bool</a>
+        <a href="#%3E=(right:IpAddress):Bool-instance-method" class="signature"><strong>#>=</strong>(right : IpAddress) : Bool</a>
         
           <div class="summary"><p>Overload of &gt;= operator to compare two IP addresses</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#inspect%28io%29-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
+        <a href="#inspect(io)-instance-method" class="signature"><strong>#inspect</strong>(io)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_integer%3AUInt32-instance-method" class="signature"><strong>#to_integer</strong> : UInt32</a>
+        <a href="#to_integer:UInt32-instance-method" class="signature"><strong>#to_integer</strong> : UInt32</a>
         
           <div class="summary"><p>Get an integer representation of the address</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_s%3AString-instance-method" class="signature"><strong>#to_s</strong> : String</a>
+        <a href="#to_s:String-instance-method" class="signature"><strong>#to_s</strong> : String</a>
         
           <div class="summary"><p>Get a string representation of the address</p></div>
         
@@ -1134,17 +1179,26 @@ nor other types of network addresses.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="get_public_address(timeout:Time=Time::Zero):IpAddress-class-method">
       <div class="signature">
         
         def self.<strong>get_public_address</strong>(timeout : <a href="../SF/Time.html">Time</a> = <span class="t">Time</span><span class="t">::</span><span class="t">Zero</span>) : <a href="../SF/IpAddress.html">IpAddress</a>
 
-        <a class="method-permalink" href="#get_public_address%28timeout%3ATime%3DTime%3A%3AZero%29%3AIpAddress-class-method">#</a>
+        <a class="method-permalink" href="#get_public_address(timeout:Time=Time::Zero):IpAddress-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the computer's public address</p>
+        <div class="doc">
+          
+          <p>Get the computer's public address</p>
 
 <p>The public address is the address of the computer from the
 internet point of view, i.e. something like 89.54.1.169.
@@ -1162,12 +1216,13 @@ limit is deactivated by default.</p>
 
 <p><em>Returns:</em> Public IP address of the computer</p>
 
-<p><em>See also:</em> <code>local_address</code></p></div>
+<p><em>See also:</em> <code><a href="../SF/IpAddress.html#local_address:IpAddress-class-method">.local_address</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1123" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1123" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1177,10 +1232,12 @@ limit is deactivated by default.</p>
         
         def self.<strong>local_address</strong> : <a href="../SF/IpAddress.html">IpAddress</a>
 
-        <a class="method-permalink" href="#local_address%3AIpAddress-class-method">#</a>
+        <a class="method-permalink" href="#local_address:IpAddress-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the computer's local address</p>
+        <div class="doc">
+          
+          <p>Get the computer's local address</p>
 
 <p>The local address is the address of the computer from the
 LAN point of view, i.e. something like 192.168.1.56. It is
@@ -1190,12 +1247,13 @@ used safely anywhere.</p>
 
 <p><em>Returns:</em> Local IP address of the computer</p>
 
-<p><em>See also:</em> <code>public_address</code></p></div>
+<p><em>See also:</em> <code>public_address</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1099" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1099" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1205,21 +1263,24 @@ used safely anywhere.</p>
         
         def self.<strong>new</strong>(byte0 : Int, byte1 : Int, byte2 : Int, byte3 : Int)
 
-        <a class="method-permalink" href="#new%28byte0%3AInt%2Cbyte1%3AInt%2Cbyte2%3AInt%2Cbyte3%3AInt%29-class-method">#</a>
+        <a class="method-permalink" href="#new(byte0:Int,byte1:Int,byte2:Int,byte3:Int)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the address from 4 bytes</p>
+        <div class="doc">
+          
+          <p>Construct the address from 4 bytes</p>
 
 <p>Calling IpAddress(a, b, c, d) is equivalent to calling
 IpAddress("a.b.c.d"), but safer as it doesn't have to
 parse a string to get the address components.</p>
 
-<ul><li><em>byte0</em> - First byte of the address</li><li><em>byte1</em> - Second byte of the address</li><li><em>byte2</em> - Third byte of the address</li><li><em>byte3</em> - Fourth byte of the address</li></ul></div>
+<ul><li><em>byte0</em> - First byte of the address</li><li><em>byte1</em> - Second byte of the address</li><li><em>byte2</em> - Third byte of the address</li><li><em>byte3</em> - Fourth byte of the address</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1040" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1040" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1229,10 +1290,12 @@ parse a string to get the address components.</p>
         
         def self.<strong>new</strong>(address : String)
 
-        <a class="method-permalink" href="#new%28address%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#new(address:String)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the address from a string</p>
+        <div class="doc">
+          
+          <p>Construct the address from a string</p>
 
 <p>Here <em>address</em> can be either a decimal address
 (ex: "192.168.1.56") or a network name (ex: "localhost").
@@ -1240,12 +1303,13 @@ This is equivalent to the constructor taking a std::string
 parameter, it is defined for convenience so that the
 implicit conversions from literal strings to IpAddress work.</p>
 
-<ul><li><em>address</em> - IP address or network name</li></ul></div>
+<ul><li><em>address</em> - IP address or network name</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1025" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1025" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1255,10 +1319,12 @@ implicit conversions from literal strings to IpAddress work.</p>
         
         def self.<strong>new</strong>(address : Int)
 
-        <a class="method-permalink" href="#new%28address%3AInt%29-class-method">#</a>
+        <a class="method-permalink" href="#new(address:Int)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Construct the address from a 32-bits integer</p>
+        <div class="doc">
+          
+          <p>Construct the address from a 32-bits integer</p>
 
 <p>This constructor uses the internal representation of
 the address directly. It should be used for optimization
@@ -1267,12 +1333,13 @@ IpAddress.to_integer().</p>
 
 <ul><li><em>address</em> - 4 bytes of the address packed into a 32-bits integer</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_integer%3AUInt32-instance-method">#to_integer</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_integer:UInt32-instance-method">#to_integer</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1055" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1055" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1285,14 +1352,17 @@ IpAddress.to_integer().</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>This constructor creates an empty (invalid) address</p></div>
+<p>This constructor creates an empty (invalid) address</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1000" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1000" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1302,26 +1372,36 @@ IpAddress.to_integer().</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="!=(right:IpAddress):Bool-instance-method">
       <div class="signature">
         
         def <strong>!=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%21%3D%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#!=(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of != operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of != operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if both addresses are different</p></div>
+<p><em>Returns:</em> True if both addresses are different</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1146" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1146" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1331,19 +1411,22 @@ IpAddress.to_integer().</p>
         
         def <strong><</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt; operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of &lt; operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1156" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1353,19 +1436,22 @@ IpAddress.to_integer().</p>
         
         def <strong><=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%3C%3D%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3C=(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &lt;= operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of &lt;= operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1176" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1176" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1375,19 +1461,22 @@ IpAddress.to_integer().</p>
         
         def <strong>==</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%3D%3D%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#==(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of == operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of == operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if both addresses are equal</p></div>
+<p><em>Returns:</em> True if both addresses are equal</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1136" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1136" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1397,19 +1486,22 @@ IpAddress.to_integer().</p>
         
         def <strong>></strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt; operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of &gt; operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1166" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1166" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1419,19 +1511,22 @@ IpAddress.to_integer().</p>
         
         def <strong>>=</strong>(right : <a href="../SF/IpAddress.html">IpAddress</a>) : Bool
 
-        <a class="method-permalink" href="#%3E%3D%28right%3AIpAddress%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#%3E=(right:IpAddress):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Overload of &gt;= operator to compare two IP addresses</p>
+        <div class="doc">
+          
+          <p>Overload of &gt;= operator to compare two IP addresses</p>
 
 <ul><li><em>left</em> - Left operand (a IP address)</li><li><em>right</em> - Right operand (a IP address)</li></ul>
 
-<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p></div>
+<p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1186" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1439,15 +1534,28 @@ IpAddress.to_integer().</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1200" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1200" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1457,13 +1565,13 @@ IpAddress.to_integer().</p>
         
         def <strong>inspect</strong>(io)
 
-        <a class="method-permalink" href="#inspect%28io%29-instance-method">#</a>
+        <a class="method-permalink" href="#inspect(io)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/network.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/network.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1473,10 +1581,12 @@ IpAddress.to_integer().</p>
         
         def <strong>to_integer</strong> : UInt32
 
-        <a class="method-permalink" href="#to_integer%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#to_integer:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get an integer representation of the address</p>
+        <div class="doc">
+          
+          <p>Get an integer representation of the address</p>
 
 <p>The returned number is the internal representation of the
 address, and should be used for optimization purposes only
@@ -1486,12 +1596,13 @@ back to a <code><a href="../SF/IpAddress.html">SF::IpAddress</a></code> with the
 
 <p><em>Returns:</em> 32-bits unsigned integer representation of the address</p>
 
-<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_s%3AString-instance-method">#to_s</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_s:String-instance-method">#to_s</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1084" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1084" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1501,10 +1612,12 @@ back to a <code><a href="../SF/IpAddress.html">SF::IpAddress</a></code> with the
         
         def <strong>to_s</strong> : String
 
-        <a class="method-permalink" href="#to_s%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#to_s:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a string representation of the address</p>
+        <div class="doc">
+          
+          <p>Get a string representation of the address</p>
 
 <p>The returned string is the decimal representation of the
 IP address (like "192.168.1.56"), even if it was constructed
@@ -1512,12 +1625,13 @@ from a host name.</p>
 
 <p><em>Returns:</em> String representation of the address</p>
 
-<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_integer%3AUInt32-instance-method">#to_integer</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/IpAddress.html#to_integer:UInt32-instance-method">#to_integer</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/network/obj.cr#L1069" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/network/obj.cr#L1069" target="_blank">View source</a>]
         
       </div>
     </div>

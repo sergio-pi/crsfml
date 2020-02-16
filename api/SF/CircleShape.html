@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::CircleShape - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Specialized shape representing a circle</p>
 
@@ -917,10 +928,19 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2112" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2112" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -929,11 +949,18 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28radius%3ANumber%3D0%2Cpoint_count%3AInt%3D30%29-class-method" class="signature"><strong>.new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)</a>
+        <a href="#new(radius:Number=0,point_count:Int=30)-class-method" class="signature"><strong>.new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)</a>
         
           <div class="summary"><p>Default constructor</p></div>
         
@@ -945,49 +972,60 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
         
+          <div class="summary"><p>Virtual destructor</p></div>
+        
       </li>
     
       <li class="entry-summary">
-        <a href="#get_point%28index%3AInt%29%3AVector2f-instance-method" class="signature"><strong>#get_point</strong>(index : Int) : Vector2f</a>
+        <a href="#get_point(index:Int):Vector2f-instance-method" class="signature"><strong>#get_point</strong>(index : Int) : Vector2f</a>
         
           <div class="summary"><p>Get a point of the circle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#point_count%3AInt32-instance-method" class="signature"><strong>#point_count</strong> : Int32</a>
+        <a href="#point_count:Int32-instance-method" class="signature"><strong>#point_count</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of points of the circle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#point_count%3D%28count%3AInt%29-instance-method" class="signature"><strong>#point_count=</strong>(count : Int)</a>
+        <a href="#point_count=(count:Int)-instance-method" class="signature"><strong>#point_count=</strong>(count : Int)</a>
         
           <div class="summary"><p>Set the number of points of the circle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#radius%3AFloat32-instance-method" class="signature"><strong>#radius</strong> : Float32</a>
+        <a href="#radius:Float32-instance-method" class="signature"><strong>#radius</strong> : Float32</a>
         
           <div class="summary"><p>Get the radius of the circle</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#radius%3D%28radius%3ANumber%29-instance-method" class="signature"><strong>#radius=</strong>(radius : Number)</a>
+        <a href="#radius=(radius:Number)-instance-method" class="signature"><strong>#radius=</strong>(radius : Number)</a>
         
           <div class="summary"><p>Set the radius of the circle</p></div>
         
@@ -1006,17 +1044,17 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
   <h3>Instance methods inherited from class <code><a href="../SF/Shape.html">SF::Shape</a></code></h3>
   
   
-    <a href="../SF/Shape.html#dup%3Aself-instance-method" class="tooltip">
-      <span>dup : self</span>
+    <a href="../SF/Shape.html#dup:self-instance-method" class="tooltip">
+      <span>dup : <span class="k">self</span></span>
     dup</a>, 
     
   
-    <a href="../SF/Shape.html#fill_color%3AColor-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#fill_color:Color-instance-method" class="tooltip">
       <span>fill_color : Color</span>
     fill_color</a>, 
     
   
-    <a href="../SF/Shape.html#fill_color%3D%28color%3AColor%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#fill_color=(color:Color)-instance-method" class="tooltip">
       <span>fill_color=(color : Color)</span>
     fill_color=</a>, 
     
@@ -1026,62 +1064,62 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
     finalize</a>, 
     
   
-    <a href="../SF/Shape.html#get_point%28index%3AInt%29%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#get_point(index:Int):Vector2f-instance-method" class="tooltip">
       <span>get_point(index : Int) : Vector2f</span>
     get_point</a>, 
     
   
-    <a href="../SF/Shape.html#global_bounds%3AFloatRect-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#global_bounds:FloatRect-instance-method" class="tooltip">
       <span>global_bounds : FloatRect</span>
     global_bounds</a>, 
     
   
-    <a href="../SF/Shape.html#local_bounds%3AFloatRect-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#local_bounds:FloatRect-instance-method" class="tooltip">
       <span>local_bounds : FloatRect</span>
     local_bounds</a>, 
     
   
-    <a href="../SF/Shape.html#outline_color%3AColor-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#outline_color:Color-instance-method" class="tooltip">
       <span>outline_color : Color</span>
     outline_color</a>, 
     
   
-    <a href="../SF/Shape.html#outline_color%3D%28color%3AColor%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#outline_color=(color:Color)-instance-method" class="tooltip">
       <span>outline_color=(color : Color)</span>
     outline_color=</a>, 
     
   
-    <a href="../SF/Shape.html#outline_thickness%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#outline_thickness:Float32-instance-method" class="tooltip">
       <span>outline_thickness : Float32</span>
     outline_thickness</a>, 
     
   
-    <a href="../SF/Shape.html#outline_thickness%3D%28thickness%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#outline_thickness=(thickness:Number)-instance-method" class="tooltip">
       <span>outline_thickness=(thickness : Number)</span>
     outline_thickness=</a>, 
     
   
-    <a href="../SF/Shape.html#point_count%3AInt32-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#point_count:Int32-instance-method" class="tooltip">
       <span>point_count : Int32</span>
     point_count</a>, 
     
   
-    <a href="../SF/Shape.html#set_texture%28texture%3ATexture%3F%2Creset_rect%3ABool%3Dfalse%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#set_texture(texture:Texture?,reset_rect:Bool=false)-instance-method" class="tooltip">
       <span>set_texture(texture : Texture?, reset_rect : Bool = <span class="n">false</span>)</span>
     set_texture</a>, 
     
   
-    <a href="../SF/Shape.html#texture%3D%28texture%3ATexture%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#texture=(texture:Texture)-instance-method" class="tooltip">
       <span>texture=(texture : Texture)</span>
     texture=</a>, 
     
   
-    <a href="../SF/Shape.html#texture_rect%3AIntRect-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#texture_rect:IntRect-instance-method" class="tooltip">
       <span>texture_rect : IntRect</span>
     texture_rect</a>, 
     
   
-    <a href="../SF/Shape.html#texture_rect%3D%28rect%3AIntRect%29-instance-method" class="tooltip">
+    <a href="../SF/Shape.html#texture_rect=(rect:IntRect)-instance-method" class="tooltip">
       <span>texture_rect=(rect : IntRect)</span>
     texture_rect=</a>, 
     
@@ -1095,15 +1133,6 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
     
 
-  <h3>Constructor methods inherited from class <code><a href="../SF/Shape.html">SF::Shape</a></code></h3>
-  
-  
-    <a href="../SF/Shape.html#new-class-method" class="tooltip">
-      <span>new</span>
-    new</a>
-    
-  
-
 
     
 
@@ -1114,7 +1143,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
   <h3>Instance methods inherited from module <code><a href="../SF/Drawable.html">SF::Drawable</a></code></h3>
   
   
-    <a href="../SF/Drawable.html#draw%28target%3ARenderTarget%2Cstates%3ARenderStates%29-instance-method" class="tooltip">
+    <a href="../SF/Drawable.html#draw(target:RenderTarget,states:RenderStates)-instance-method" class="tooltip">
       <span>draw(target : RenderTarget, states : RenderStates)</span>
     draw</a>
     
@@ -1133,8 +1162,8 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
   <h3>Instance methods inherited from class <code><a href="../SF/Transformable.html">SF::Transformable</a></code></h3>
   
   
-    <a href="../SF/Transformable.html#dup%3Aself-instance-method" class="tooltip">
-      <span>dup : self</span>
+    <a href="../SF/Transformable.html#dup:self-instance-method" class="tooltip">
+      <span>dup : <span class="k">self</span></span>
     dup</a>, 
     
   
@@ -1143,77 +1172,77 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
     finalize</a>, 
     
   
-    <a href="../SF/Transformable.html#inverse_transform%3ATransform-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#inverse_transform:Transform-instance-method" class="tooltip">
       <span>inverse_transform : Transform</span>
     inverse_transform</a>, 
     
   
-    <a href="../SF/Transformable.html#move%28offset%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#move(offset:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>move(offset : Vector2 | Tuple)<br/>move(offset_x : Number, offset_y : Number)</span>
     move</a>, 
     
   
-    <a href="../SF/Transformable.html#origin%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#origin:Vector2f-instance-method" class="tooltip">
       <span>origin : Vector2f</span>
     origin</a>, 
     
   
-    <a href="../SF/Transformable.html#origin%3D%28origin%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#origin=(origin:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>origin=(origin : Vector2 | Tuple)</span>
     origin=</a>, 
     
   
-    <a href="../SF/Transformable.html#position%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#position:Vector2f-instance-method" class="tooltip">
       <span>position : Vector2f</span>
     position</a>, 
     
   
-    <a href="../SF/Transformable.html#position%3D%28position%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#position=(position:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>position=(position : Vector2 | Tuple)</span>
     position=</a>, 
     
   
-    <a href="../SF/Transformable.html#rotate%28angle%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotate(angle:Number)-instance-method" class="tooltip">
       <span>rotate(angle : Number)</span>
     rotate</a>, 
     
   
-    <a href="../SF/Transformable.html#rotation%3AFloat32-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotation:Float32-instance-method" class="tooltip">
       <span>rotation : Float32</span>
     rotation</a>, 
     
   
-    <a href="../SF/Transformable.html#rotation%3D%28angle%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#rotation=(angle:Number)-instance-method" class="tooltip">
       <span>rotation=(angle : Number)</span>
     rotation=</a>, 
     
   
-    <a href="../SF/Transformable.html#scale%3AVector2f-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#scale:Vector2f-instance-method" class="tooltip">
       <span>scale : Vector2f<br/>scale(factor : Vector2 | Tuple)<br/>scale(factor_x : Number, factor_y : Number)</span>
     scale</a>, 
     
   
-    <a href="../SF/Transformable.html#scale%3D%28factors%3AVector2%7CTuple%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#scale=(factors:Vector2%7CTuple)-instance-method" class="tooltip">
       <span>scale=(factors : Vector2 | Tuple)</span>
     scale=</a>, 
     
   
-    <a href="../SF/Transformable.html#set_origin%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_origin(x:Number,y:Number)-instance-method" class="tooltip">
       <span>set_origin(x : Number, y : Number)</span>
     set_origin</a>, 
     
   
-    <a href="../SF/Transformable.html#set_position%28x%3ANumber%2Cy%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_position(x:Number,y:Number)-instance-method" class="tooltip">
       <span>set_position(x : Number, y : Number)</span>
     set_position</a>, 
     
   
-    <a href="../SF/Transformable.html#set_scale%28factor_x%3ANumber%2Cfactor_y%3ANumber%29-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#set_scale(factor_x:Number,factor_y:Number)-instance-method" class="tooltip">
       <span>set_scale(factor_x : Number, factor_y : Number)</span>
     set_scale</a>, 
     
   
-    <a href="../SF/Transformable.html#transform%3ATransform-instance-method" class="tooltip">
+    <a href="../SF/Transformable.html#transform:Transform-instance-method" class="tooltip">
       <span>transform : Transform</span>
     transform</a>
     
@@ -1259,24 +1288,34 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(radius:Number=0,point_count:Int=30)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(radius : Number = <span class="n">0</span>, point_count : Int = <span class="n">30</span>)
 
-        <a class="method-permalink" href="#new%28radius%3ANumber%3D0%2Cpoint_count%3AInt%3D30%29-class-method">#</a>
+        <a class="method-permalink" href="#new(radius:Number=0,point_count:Int=30)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<ul><li><em>radius</em> - Radius of the circle</li><li><em>point_count</em> - Number of points composing the circle</li></ul></div>
+<ul><li><em>radius</em> - Radius of the circle</li><li><em>point_count</em> - Number of points composing the circle</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2122" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2122" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1286,20 +1325,39 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2349" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2349" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1312,10 +1370,19 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../SF/Shape.html">SF::Shape</a>
+            </div>
+          
+          <p>Virtual destructor</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2114" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2114" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,10 +1392,12 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
         
         def <strong>get_point</strong>(index : Int) : <a href="../SF/Vector2f.html">Vector2f</a>
 
-        <a class="method-permalink" href="#get_point%28index%3AInt%29%3AVector2f-instance-method">#</a>
+        <a class="method-permalink" href="#get_point(index:Int):Vector2f-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get a point of the circle</p>
+        <div class="doc">
+          
+          <p>Get a point of the circle</p>
 
 <p>The returned point is in local coordinates, that is,
 the shape's transforms (position, rotation, scale) are
@@ -1337,12 +1406,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 
 <ul><li><em>index</em> - Index of the point to get, in range <code>0 ... point_count</code></li></ul>
 
-<p><em>Returns:</em> index-th point of the shape</p></div>
+<p><em>Returns:</em> index-th point of the shape</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2170" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1352,19 +1422,22 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
         
         def <strong>point_count</strong> : Int32
 
-        <a class="method-permalink" href="#point_count%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#point_count:Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the number of points of the circle</p>
+        <div class="doc">
+          
+          <p>Get the number of points of the circle</p>
 
 <p><em>Returns:</em> Number of points of the circle</p>
 
-<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count%3D%28count%3AInt%29-instance-method">#point_count=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count=(count:Int)-instance-method">#point_count=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2156" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2156" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1374,19 +1447,22 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
         
         def <strong>point_count=</strong>(count : Int)
 
-        <a class="method-permalink" href="#point_count%3D%28count%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#point_count=(count:Int)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the number of points of the circle</p>
+        <div class="doc">
+          
+          <p>Set the number of points of the circle</p>
 
 <ul><li><em>count</em> - New number of points of the circle</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count%3AInt32-instance-method">#point_count</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/CircleShape.html#point_count:Int32-instance-method">#point_count</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2148" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2148" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1396,19 +1472,22 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
         
         def <strong>radius</strong> : Float32
 
-        <a class="method-permalink" href="#radius%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#radius:Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the radius of the circle</p>
+        <div class="doc">
+          
+          <p>Get the radius of the circle</p>
 
 <p><em>Returns:</em> Radius of the circle</p>
 
-<p><em>See also:</em> <code><a href="../SF/CircleShape.html#radius%3D%28radius%3ANumber%29-instance-method">#radius=</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/CircleShape.html#radius=(radius:Number)-instance-method">#radius=</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2139" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2139" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1418,19 +1497,22 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
         
         def <strong>radius=</strong>(radius : Number)
 
-        <a class="method-permalink" href="#radius%3D%28radius%3ANumber%29-instance-method">#</a>
+        <a class="method-permalink" href="#radius=(radius:Number)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Set the radius of the circle</p>
+        <div class="doc">
+          
+          <p>Set the radius of the circle</p>
 
 <ul><li><em>radius</em> - New radius of the circle</li></ul>
 
-<p><em>See also:</em> <code><a href="../SF/CircleShape.html#radius%3AFloat32-instance-method">#radius</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/CircleShape.html#radius:Float32-instance-method">#radius</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L2131" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L2131" target="_blank">View source</a>]
         
       </div>
     </div>

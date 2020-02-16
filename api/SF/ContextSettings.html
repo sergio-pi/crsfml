@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::ContextSettings - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Structure defining the settings of the OpenGL</p>
 
@@ -947,10 +958,19 @@ with Window.settings().</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L116" target="_blank">window/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L127" target="_blank">
+        window/obj.cr
+      </a>
     
     <br/>
   
@@ -959,11 +979,18 @@ with Window.settings().</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28depth%3AInt%3D0%2Cstencil%3AInt%3D0%2Cantialiasing%3AInt%3D0%2Cmajor%3AInt%3D1%2Cminor%3AInt%3D1%2Cattributes%3AAttribute%3DDefault%2Cs_rgb%3ABool%3Dfalse%29-class-method" class="signature"><strong>.new</strong>(depth : Int = <span class="n">0</span>, stencil : Int = <span class="n">0</span>, antialiasing : Int = <span class="n">0</span>, major : Int = <span class="n">1</span>, minor : Int = <span class="n">1</span>, attributes : Attribute = <span class="t">Default</span>, s_rgb : Bool = <span class="n">false</span>)</a>
+        <a href="#new(depth:Int=0,stencil:Int=0,antialiasing:Int=0,major:Int=1,minor:Int=1,attributes:Attribute=Default,s_rgb:Bool=false)-class-method" class="signature"><strong>.new</strong>(depth : Int = <span class="n">0</span>, stencil : Int = <span class="n">0</span>, antialiasing : Int = <span class="n">0</span>, major : Int = <span class="n">1</span>, minor : Int = <span class="n">1</span>, attributes : Attribute = <span class="t">Default</span>, s_rgb : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Default constructor</p></div>
         
@@ -975,95 +1002,104 @@ with Window.settings().</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#antialiasing_level%3AUInt32-instance-method" class="signature"><strong>#antialiasing_level</strong> : UInt32</a>
+        <a href="#antialiasing_level:UInt32-instance-method" class="signature"><strong>#antialiasing_level</strong> : UInt32</a>
         
           <div class="summary"><p>Level of antialiasing</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#antialiasing_level%3D%28antialiasing_level%3AInt%29-instance-method" class="signature"><strong>#antialiasing_level=</strong>(antialiasing_level : Int)</a>
+        <a href="#antialiasing_level=(antialiasing_level:Int)-instance-method" class="signature"><strong>#antialiasing_level=</strong>(antialiasing_level : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attribute_flags%3AUInt32-instance-method" class="signature"><strong>#attribute_flags</strong> : UInt32</a>
+        <a href="#attribute_flags:UInt32-instance-method" class="signature"><strong>#attribute_flags</strong> : UInt32</a>
         
           <div class="summary"><p>The attribute flags to create the context with</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#attribute_flags%3D%28attribute_flags%3AInt%29-instance-method" class="signature"><strong>#attribute_flags=</strong>(attribute_flags : Int)</a>
+        <a href="#attribute_flags=(attribute_flags:Int)-instance-method" class="signature"><strong>#attribute_flags=</strong>(attribute_flags : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#depth_bits%3AUInt32-instance-method" class="signature"><strong>#depth_bits</strong> : UInt32</a>
+        <a href="#depth_bits:UInt32-instance-method" class="signature"><strong>#depth_bits</strong> : UInt32</a>
         
           <div class="summary"><p>Bits of the depth buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#depth_bits%3D%28depth_bits%3AInt%29-instance-method" class="signature"><strong>#depth_bits=</strong>(depth_bits : Int)</a>
+        <a href="#depth_bits=(depth_bits:Int)-instance-method" class="signature"><strong>#depth_bits=</strong>(depth_bits : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#major_version%3AUInt32-instance-method" class="signature"><strong>#major_version</strong> : UInt32</a>
+        <a href="#major_version:UInt32-instance-method" class="signature"><strong>#major_version</strong> : UInt32</a>
         
           <div class="summary"><p>Major number of the context version to create</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#major_version%3D%28major_version%3AInt%29-instance-method" class="signature"><strong>#major_version=</strong>(major_version : Int)</a>
+        <a href="#major_version=(major_version:Int)-instance-method" class="signature"><strong>#major_version=</strong>(major_version : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#minor_version%3AUInt32-instance-method" class="signature"><strong>#minor_version</strong> : UInt32</a>
+        <a href="#minor_version:UInt32-instance-method" class="signature"><strong>#minor_version</strong> : UInt32</a>
         
           <div class="summary"><p>Minor number of the context version to create</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#minor_version%3D%28minor_version%3AInt%29-instance-method" class="signature"><strong>#minor_version=</strong>(minor_version : Int)</a>
+        <a href="#minor_version=(minor_version:Int)-instance-method" class="signature"><strong>#minor_version=</strong>(minor_version : Int)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#s_rgb_capable%3ABool-instance-method" class="signature"><strong>#s_rgb_capable</strong> : Bool</a>
+        <a href="#s_rgb_capable:Bool-instance-method" class="signature"><strong>#s_rgb_capable</strong> : Bool</a>
         
           <div class="summary"><p>Whether the context framebuffer is sRGB capable</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#s_rgb_capable%3D%28s_rgb_capable%3ABool%29-instance-method" class="signature"><strong>#s_rgb_capable=</strong>(s_rgb_capable : Bool)</a>
+        <a href="#s_rgb_capable=(s_rgb_capable:Bool)-instance-method" class="signature"><strong>#s_rgb_capable=</strong>(s_rgb_capable : Bool)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stencil_bits%3AUInt32-instance-method" class="signature"><strong>#stencil_bits</strong> : UInt32</a>
+        <a href="#stencil_bits:UInt32-instance-method" class="signature"><strong>#stencil_bits</strong> : UInt32</a>
         
           <div class="summary"><p>Bits of the stencil buffer</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stencil_bits%3D%28stencil_bits%3AInt%29-instance-method" class="signature"><strong>#stencil_bits=</strong>(stencil_bits : Int)</a>
+        <a href="#stencil_bits=(stencil_bits:Int)-instance-method" class="signature"><strong>#stencil_bits=</strong>(stencil_bits : Int)</a>
         
       </li>
     
@@ -1108,24 +1144,34 @@ with Window.settings().</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(depth:Int=0,stencil:Int=0,antialiasing:Int=0,major:Int=1,minor:Int=1,attributes:Attribute=Default,s_rgb:Bool=false)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(depth : Int = <span class="n">0</span>, stencil : Int = <span class="n">0</span>, antialiasing : Int = <span class="n">0</span>, major : Int = <span class="n">1</span>, minor : Int = <span class="n">1</span>, attributes : <a href="../SF/ContextSettings/Attribute.html">Attribute</a> = <span class="t">Default</span>, s_rgb : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#new%28depth%3AInt%3D0%2Cstencil%3AInt%3D0%2Cantialiasing%3AInt%3D0%2Cmajor%3AInt%3D1%2Cminor%3AInt%3D1%2Cattributes%3AAttribute%3DDefault%2Cs_rgb%3ABool%3Dfalse%29-class-method">#</a>
+        <a class="method-permalink" href="#new(depth:Int=0,stencil:Int=0,antialiasing:Int=0,major:Int=1,minor:Int=1,attributes:Attribute=Default,s_rgb:Bool=false)-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<ul><li><em>depth</em> - Depth buffer bits</li><li><em>stencil</em> - Stencil buffer bits</li><li><em>antialiasing</em> - Antialiasing level</li><li><em>major</em> - Major number of the context version</li><li><em>minor</em> - Minor number of the context version</li><li><em>attributes</em> - Attribute flags of the context</li><li><em>s_rgb</em> - sRGB capable framebuffer</li></ul></div>
+<ul><li><em>depth</em> - Depth buffer bits</li><li><em>stencil</em> - Stencil buffer bits</li><li><em>antialiasing</em> - Antialiasing level</li><li><em>major</em> - Major number of the context version</li><li><em>minor</em> - Minor number of the context version</li><li><em>attributes</em> - Attribute flags of the context</li><li><em>s_rgb</em> - sRGB capable framebuffer</li></ul>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L144" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1135,22 +1181,32 @@ with Window.settings().</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="antialiasing_level:UInt32-instance-method">
       <div class="signature">
         
         def <strong>antialiasing_level</strong> : UInt32
 
-        <a class="method-permalink" href="#antialiasing_level%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#antialiasing_level:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Level of antialiasing</p></div>
+        <div class="doc">
+          
+          <p>Level of antialiasing</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L172" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L183" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1160,13 +1216,13 @@ with Window.settings().</p>
         
         def <strong>antialiasing_level=</strong>(antialiasing_level : Int)
 
-        <a class="method-permalink" href="#antialiasing_level%3D%28antialiasing_level%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#antialiasing_level=(antialiasing_level:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1176,15 +1232,18 @@ with Window.settings().</p>
         
         def <strong>attribute_flags</strong> : UInt32
 
-        <a class="method-permalink" href="#attribute_flags%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#attribute_flags:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The attribute flags to create the context with</p></div>
+        <div class="doc">
+          
+          <p>The attribute flags to create the context with</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L196" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L207" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1194,13 +1253,13 @@ with Window.settings().</p>
         
         def <strong>attribute_flags=</strong>(attribute_flags : Int)
 
-        <a class="method-permalink" href="#attribute_flags%3D%28attribute_flags%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#attribute_flags=(attribute_flags:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L199" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L210" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1210,15 +1269,18 @@ with Window.settings().</p>
         
         def <strong>depth_bits</strong> : UInt32
 
-        <a class="method-permalink" href="#depth_bits%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#depth_bits:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Bits of the depth buffer</p></div>
+        <div class="doc">
+          
+          <p>Bits of the depth buffer</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L156" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1228,13 +1290,13 @@ with Window.settings().</p>
         
         def <strong>depth_bits=</strong>(depth_bits : Int)
 
-        <a class="method-permalink" href="#depth_bits%3D%28depth_bits%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#depth_bits=(depth_bits:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L170" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1242,15 +1304,28 @@ with Window.settings().</p>
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Value
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>Because <code>Value</code> is a value type, this method returns <code>self</code>,
+which already involves a shallow copy of this object because
+value types are passed by value.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L236" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1260,15 +1335,18 @@ with Window.settings().</p>
         
         def <strong>major_version</strong> : UInt32
 
-        <a class="method-permalink" href="#major_version%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#major_version:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Major number of the context version to create</p></div>
+        <div class="doc">
+          
+          <p>Major number of the context version to create</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L180" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1278,13 +1356,13 @@ with Window.settings().</p>
         
         def <strong>major_version=</strong>(major_version : Int)
 
-        <a class="method-permalink" href="#major_version%3D%28major_version%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#major_version=(major_version:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L183" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L194" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,15 +1372,18 @@ with Window.settings().</p>
         
         def <strong>minor_version</strong> : UInt32
 
-        <a class="method-permalink" href="#minor_version%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#minor_version:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Minor number of the context version to create</p></div>
+        <div class="doc">
+          
+          <p>Minor number of the context version to create</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L188" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L199" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1312,13 +1393,13 @@ with Window.settings().</p>
         
         def <strong>minor_version=</strong>(minor_version : Int)
 
-        <a class="method-permalink" href="#minor_version%3D%28minor_version%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#minor_version=(minor_version:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L191" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L202" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1328,15 +1409,18 @@ with Window.settings().</p>
         
         def <strong>s_rgb_capable</strong> : Bool
 
-        <a class="method-permalink" href="#s_rgb_capable%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#s_rgb_capable:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Whether the context framebuffer is sRGB capable</p></div>
+        <div class="doc">
+          
+          <p>Whether the context framebuffer is sRGB capable</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L204" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L215" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1346,13 +1430,13 @@ with Window.settings().</p>
         
         def <strong>s_rgb_capable=</strong>(s_rgb_capable : Bool)
 
-        <a class="method-permalink" href="#s_rgb_capable%3D%28s_rgb_capable%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#s_rgb_capable=(s_rgb_capable:Bool)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L207" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L218" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1362,15 +1446,18 @@ with Window.settings().</p>
         
         def <strong>stencil_bits</strong> : UInt32
 
-        <a class="method-permalink" href="#stencil_bits%3AUInt32-instance-method">#</a>
+        <a class="method-permalink" href="#stencil_bits:UInt32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Bits of the stencil buffer</p></div>
+        <div class="doc">
+          
+          <p>Bits of the stencil buffer</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L164" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,13 +1467,13 @@ with Window.settings().</p>
         
         def <strong>stencil_bits=</strong>(stencil_bits : Int)
 
-        <a class="method-permalink" href="#stencil_bits%3D%28stencil_bits%3AInt%29-instance-method">#</a>
+        <a class="method-permalink" href="#stencil_bits=(stencil_bits:Int)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/window/obj.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/window/obj.cr#L178" target="_blank">View source</a>]
         
       </div>
     </div>

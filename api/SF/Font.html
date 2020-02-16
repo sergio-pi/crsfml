@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.25.0">
+<meta name="generator" content="Crystal Docs 0.32.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/oprypin/crsfml">
   <title>SF::Font - github.com/oprypin/crsfml</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
     <div class="repository-links">
@@ -875,7 +879,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Class for loading and manipulating character fonts</p>
 
@@ -948,10 +959,19 @@ corresponding bitmap font that supports that size is used.</p>
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3664" target="_blank">graphics/obj.cr</a>
+      <a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3664" target="_blank">
+        graphics/obj.cr
+      </a>
     
     <br/>
   
@@ -960,27 +980,34 @@ corresponding bitmap font that supports that size is used.</p>
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : self</a>
+        <a href="#from_file(*args,**kwargs):self-class-method" class="signature"><strong>.from_file</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; font</code></p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : self</a>
-        
-          <div class="summary"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; font</code></p></div>
+          <div class="summary"><p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_file(filename:String):Bool-instance-method">.load_from_file(...)</a>; font</code></p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : self</a>
+        <a href="#from_memory(*args,**kwargs):self-class-method" class="signature"><strong>.from_memory</strong>(*args, **kwargs) : <span class="k">self</span></a>
         
-          <div class="summary"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; font</code></p></div>
+          <div class="summary"><p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_memory(data:Slice):Bool-instance-method">.load_from_memory(...)</a>; font</code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_stream(*args,**kwargs):self-class-method" class="signature"><strong>.from_stream</strong>(*args, **kwargs) : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_stream(stream:InputStream):Bool-instance-method">.load_from_stream(...)</a>; font</code></p></div>
         
       </li>
     
@@ -997,11 +1024,20 @@ corresponding bitmap font that supports that size is used.</p>
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#dup%3Aself-instance-method" class="signature"><strong>#dup</strong> : self</a>
+        <a href="#dup:self-instance-method" class="signature"><strong>#dup</strong> : <span class="k">self</span></a>
+        
+          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
         
       </li>
     
@@ -1013,70 +1049,70 @@ corresponding bitmap font that supports that size is used.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#get_glyph%28code_point%3AInt%2Ccharacter_size%3AInt%2Cbold%3ABool%2Coutline_thickness%3ANumber%3D0%29%3AGlyph-instance-method" class="signature"><strong>#get_glyph</strong>(code_point : Int, character_size : Int, bold : Bool, outline_thickness : Number = <span class="n">0</span>) : Glyph</a>
+        <a href="#get_glyph(code_point:Int,character_size:Int,bold:Bool,outline_thickness:Number=0):Glyph-instance-method" class="signature"><strong>#get_glyph</strong>(code_point : Int, character_size : Int, bold : Bool, outline_thickness : Number = <span class="n">0</span>) : Glyph</a>
         
           <div class="summary"><p>Retrieve a glyph of the font</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_kerning%28first%3AInt%2Csecond%3AInt%2Ccharacter_size%3AInt%29%3AFloat32-instance-method" class="signature"><strong>#get_kerning</strong>(first : Int, second : Int, character_size : Int) : Float32</a>
+        <a href="#get_kerning(first:Int,second:Int,character_size:Int):Float32-instance-method" class="signature"><strong>#get_kerning</strong>(first : Int, second : Int, character_size : Int) : Float32</a>
         
           <div class="summary"><p>Get the kerning offset of two glyphs</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_line_spacing%28character_size%3AInt%29%3AFloat32-instance-method" class="signature"><strong>#get_line_spacing</strong>(character_size : Int) : Float32</a>
+        <a href="#get_line_spacing(character_size:Int):Float32-instance-method" class="signature"><strong>#get_line_spacing</strong>(character_size : Int) : Float32</a>
         
           <div class="summary"><p>Get the line spacing</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_texture%28character_size%3AInt%29%3ATexture-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int) : Texture</a>
+        <a href="#get_texture(character_size:Int):Texture-instance-method" class="signature"><strong>#get_texture</strong>(character_size : Int) : Texture</a>
         
           <div class="summary"><p>Retrieve the texture containing the loaded glyphs of a certain size</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_underline_position%28character_size%3AInt%29%3AFloat32-instance-method" class="signature"><strong>#get_underline_position</strong>(character_size : Int) : Float32</a>
+        <a href="#get_underline_position(character_size:Int):Float32-instance-method" class="signature"><strong>#get_underline_position</strong>(character_size : Int) : Float32</a>
         
           <div class="summary"><p>Get the position of the underline</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_underline_thickness%28character_size%3AInt%29%3AFloat32-instance-method" class="signature"><strong>#get_underline_thickness</strong>(character_size : Int) : Float32</a>
+        <a href="#get_underline_thickness(character_size:Int):Float32-instance-method" class="signature"><strong>#get_underline_thickness</strong>(character_size : Int) : Float32</a>
         
           <div class="summary"><p>Get the thickness of the underline</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#info%3AFont%3A%3AInfo-instance-method" class="signature"><strong>#info</strong> : Font::Info</a>
+        <a href="#info:Font::Info-instance-method" class="signature"><strong>#info</strong> : Font::Info</a>
         
           <div class="summary"><p>Get the font information</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_file%28filename%3AString%29%3ABool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String) : Bool</a>
+        <a href="#load_from_file(filename:String):Bool-instance-method" class="signature"><strong>#load_from_file</strong>(filename : String) : Bool</a>
         
           <div class="summary"><p>Load the font from a file</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_memory%28data%3ASlice%29%3ABool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice) : Bool</a>
+        <a href="#load_from_memory(data:Slice):Bool-instance-method" class="signature"><strong>#load_from_memory</strong>(data : Slice) : Bool</a>
         
           <div class="summary"><p>Load the font from a file in memory</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream) : Bool</a>
+        <a href="#load_from_stream(stream:InputStream):Bool-instance-method" class="signature"><strong>#load_from_stream</strong>(stream : InputStream) : Bool</a>
         
           <div class="summary"><p>Load the font from a custom stream</p></div>
         
@@ -1113,24 +1149,34 @@ corresponding bitmap font that supports that size is used.</p>
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="from_file(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_file</strong>(*args, **kwargs) : self
+        def self.<strong>from_file</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_file%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_file(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_file%28filename%3AString%29%3ABool-instance-method">.load_from_file(...)</a>; font</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_file(filename:String):Bool-instance-method">.load_from_file(...)</a>; font</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3740" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3740" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1138,19 +1184,22 @@ corresponding bitmap font that supports that size is used.</p>
     <div class="entry-detail" id="from_memory(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_memory</strong>(*args, **kwargs) : self
+        def self.<strong>from_memory</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_memory%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_memory(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">.load_from_memory(...)</a>; font</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_memory(data:Slice):Bool-instance-method">.load_from_memory(...)</a>; font</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3769" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3769" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1158,19 +1207,22 @@ corresponding bitmap font that supports that size is used.</p>
     <div class="entry-detail" id="from_stream(*args,**kwargs):self-class-method">
       <div class="signature">
         
-        def self.<strong>from_stream</strong>(*args, **kwargs) : self
+        def self.<strong>from_stream</strong>(*args, **kwargs) : <span class="k">self</span>
 
-        <a class="method-permalink" href="#from_stream%28%2Aargs%2C%2A%2Akwargs%29%3Aself-class-method">#</a>
+        <a class="method-permalink" href="#from_stream(*args,**kwargs):self-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Shorthand for <code>font = Font.new; font<a href="../SF/Font.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">.load_from_stream(...)</a>; font</code></p>
+        <div class="doc">
+          
+          <p>Shorthand for <code>font = <a href="../SF/Font.html#new-class-method">Font.new</a>; font<a href="../SF/Font.html#load_from_stream(stream:InputStream):Bool-instance-method">.load_from_stream(...)</a>; font</code></p>
 
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p></div>
+<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3800" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3800" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1183,14 +1235,17 @@ corresponding bitmap font that supports that size is used.</p>
         <a class="method-permalink" href="#new-class-method">#</a>
       </div>
       
-        <div class="doc"><p>Default constructor</p>
+        <div class="doc">
+          
+          <p>Default constructor</p>
 
-<p>This constructor defines an empty font</p></div>
+<p>This constructor defines an empty font</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3705" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3705" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1200,20 +1255,39 @@ corresponding bitmap font that supports that size is used.</p>
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="dup:self-instance-method">
       <div class="signature">
         
-        def <strong>dup</strong> : self
+        def <strong>dup</strong> : <span class="k">self</span>
 
-        <a class="method-permalink" href="#dup%3Aself-instance-method">#</a>
+        <a class="method-permalink" href="#dup:self-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Returns a shallow copy of this object.</p>
+
+<p>This allocates a new object and copies the contents of
+<code>self</code> into it.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3916" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3916" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1226,14 +1300,17 @@ corresponding bitmap font that supports that size is used.</p>
         <a class="method-permalink" href="#finalize-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Destructor</p>
+        <div class="doc">
+          
+          <p>Destructor</p>
 
-<p>Cleans up all the internal resources used by the font</p></div>
+<p>Cleans up all the internal resources used by the font</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3712" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3712" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1243,10 +1320,12 @@ corresponding bitmap font that supports that size is used.</p>
         
         def <strong>get_glyph</strong>(code_point : Int, character_size : Int, bold : Bool, outline_thickness : Number = <span class="n">0</span>) : <a href="../SF/Glyph.html">Glyph</a>
 
-        <a class="method-permalink" href="#get_glyph%28code_point%3AInt%2Ccharacter_size%3AInt%2Cbold%3ABool%2Coutline_thickness%3ANumber%3D0%29%3AGlyph-instance-method">#</a>
+        <a class="method-permalink" href="#get_glyph(code_point:Int,character_size:Int,bold:Bool,outline_thickness:Number=0):Glyph-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve a glyph of the font</p>
+        <div class="doc">
+          
+          <p>Retrieve a glyph of the font</p>
 
 <p>If the font is a bitmap font, not all character sizes
 might be available. If the glyph is not available at the
@@ -1257,12 +1336,13 @@ thickness will cause distorted rendering.</p>
 
 <ul><li><em>code_point</em> - Unicode code point of the character to get</li><li><em>character_size</em> - Reference character size</li><li><em>bold</em> - Retrieve the bold version or the regular one?</li><li><em>outline_thickness</em> - Thickness of outline (when != 0 the glyph will not be filled)</li></ul>
 
-<p><em>Returns:</em> The glyph corresponding to <em>code_point</em> and <em>character_size</em></p></div>
+<p><em>Returns:</em> The glyph corresponding to <em>code_point</em> and <em>character_size</em></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3829" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3829" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1272,10 +1352,12 @@ thickness will cause distorted rendering.</p>
         
         def <strong>get_kerning</strong>(first : Int, second : Int, character_size : Int) : Float32
 
-        <a class="method-permalink" href="#get_kerning%28first%3AInt%2Csecond%3AInt%2Ccharacter_size%3AInt%29%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#get_kerning(first:Int,second:Int,character_size:Int):Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the kerning offset of two glyphs</p>
+        <div class="doc">
+          
+          <p>Get the kerning offset of two glyphs</p>
 
 <p>The kerning is an extra offset (negative) to apply between two
 glyphs when rendering them, to make the pair look more "natural".
@@ -1285,12 +1367,13 @@ kerning offset of zero, though.</p>
 
 <ul><li><em>first</em> - Unicode code point of the first character</li><li><em>second</em> - Unicode code point of the second character</li><li><em>character_size</em> - Reference character size</li></ul>
 
-<p><em>Returns:</em> Kerning value for <em>first</em> and <em>second,</em> in pixels</p></div>
+<p><em>Returns:</em> Kerning value for <em>first</em> and <em>second,</em> in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3847" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3847" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1300,22 +1383,25 @@ kerning offset of zero, though.</p>
         
         def <strong>get_line_spacing</strong>(character_size : Int) : Float32
 
-        <a class="method-permalink" href="#get_line_spacing%28character_size%3AInt%29%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#get_line_spacing(character_size:Int):Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the line spacing</p>
+        <div class="doc">
+          
+          <p>Get the line spacing</p>
 
 <p>Line spacing is the vertical offset to apply between two
 consecutive lines of text.</p>
 
 <ul><li><em>character_size</em> - Reference character size</li></ul>
 
-<p><em>Returns:</em> Line spacing, in pixels</p></div>
+<p><em>Returns:</em> Line spacing, in pixels</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3859" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3859" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1325,10 +1411,12 @@ consecutive lines of text.</p>
         
         def <strong>get_texture</strong>(character_size : Int) : <a href="../SF/Texture.html">Texture</a>
 
-        <a class="method-permalink" href="#get_texture%28character_size%3AInt%29%3ATexture-instance-method">#</a>
+        <a class="method-permalink" href="#get_texture(character_size:Int):Texture-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the texture containing the loaded glyphs of a certain size</p>
+        <div class="doc">
+          
+          <p>Retrieve the texture containing the loaded glyphs of a certain size</p>
 
 <p>The contents of the returned texture changes as more glyphs
 are requested, thus it is not very relevant. It is mainly
@@ -1336,12 +1424,13 @@ used internally by <code><a href="../SF/Text.html">SF::Text</a></code>.</p>
 
 <ul><li><em>character_size</em> - Reference character size</li></ul>
 
-<p><em>Returns:</em> Texture containing the glyphs of the requested size</p></div>
+<p><em>Returns:</em> Texture containing the glyphs of the requested size</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3899" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3899" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1351,10 +1440,12 @@ used internally by <code><a href="../SF/Text.html">SF::Text</a></code>.</p>
         
         def <strong>get_underline_position</strong>(character_size : Int) : Float32
 
-        <a class="method-permalink" href="#get_underline_position%28character_size%3AInt%29%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#get_underline_position(character_size:Int):Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the position of the underline</p>
+        <div class="doc">
+          
+          <p>Get the position of the underline</p>
 
 <p>Underline position is the vertical offset to apply between the
 baseline and the underline.</p>
@@ -1363,12 +1454,13 @@ baseline and the underline.</p>
 
 <p><em>Returns:</em> Underline position, in pixels</p>
 
-<p><em>See also:</em> <code>underline_thickness</code></p></div>
+<p><em>See also:</em> <code>underline_thickness</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3873" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3873" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1378,10 +1470,12 @@ baseline and the underline.</p>
         
         def <strong>get_underline_thickness</strong>(character_size : Int) : Float32
 
-        <a class="method-permalink" href="#get_underline_thickness%28character_size%3AInt%29%3AFloat32-instance-method">#</a>
+        <a class="method-permalink" href="#get_underline_thickness(character_size:Int):Float32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the thickness of the underline</p>
+        <div class="doc">
+          
+          <p>Get the thickness of the underline</p>
 
 <p>Underline thickness is the vertical size of the underline.</p>
 
@@ -1389,12 +1483,13 @@ baseline and the underline.</p>
 
 <p><em>Returns:</em> Underline thickness, in pixels</p>
 
-<p><em>See also:</em> <code>underline_position</code></p></div>
+<p><em>See also:</em> <code>underline_position</code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3886" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3886" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1404,17 +1499,20 @@ baseline and the underline.</p>
         
         def <strong>info</strong> : <a href="../SF/Font/Info.html">Font::Info</a>
 
-        <a class="method-permalink" href="#info%3AFont%3A%3AInfo-instance-method">#</a>
+        <a class="method-permalink" href="#info:Font::Info-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Get the font information</p>
+        <div class="doc">
+          
+          <p>Get the font information</p>
 
-<p><em>Returns:</em> A structure that holds the font information</p></div>
+<p><em>Returns:</em> A structure that holds the font information</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3810" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3810" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1424,10 +1522,12 @@ baseline and the underline.</p>
         
         def <strong>load_from_file</strong>(filename : String) : Bool
 
-        <a class="method-permalink" href="#load_from_file%28filename%3AString%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_file(filename:String):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the font from a file</p>
+        <div class="doc">
+          
+          <p>Load the font from a file</p>
 
 <p>The supported font formats are: TrueType, Type 1, CFF,
 OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42.
@@ -1443,12 +1543,13 @@ the <code><a href="../SF/Font.html">SF::Font</a></code> object loads a new font 
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Font.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code>, <code><a href="../SF/Font.html#load_from_stream(stream:InputStream):Bool-instance-method">#load_from_stream</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3733" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3733" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1458,10 +1559,12 @@ the <code><a href="../SF/Font.html">SF::Font</a></code> object loads a new font 
         
         def <strong>load_from_memory</strong>(data : Slice) : Bool
 
-        <a class="method-permalink" href="#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_memory(data:Slice):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the font from a file in memory</p>
+        <div class="doc">
+          
+          <p>Load the font from a file in memory</p>
 
 <p>The supported font formats are: TrueType, Type 1, CFF,
 OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42.</p>
@@ -1475,12 +1578,13 @@ is destroyed.</p>
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Font.html#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#load_from_stream</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Font.html#load_from_stream(stream:InputStream):Bool-instance-method">#load_from_stream</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3762" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3762" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1490,10 +1594,12 @@ is destroyed.</p>
         
         def <strong>load_from_stream</strong>(stream : <a href="../SF/InputStream.html">InputStream</a>) : Bool
 
-        <a class="method-permalink" href="#load_from_stream%28stream%3AInputStream%29%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#load_from_stream(stream:InputStream):Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Load the font from a custom stream</p>
+        <div class="doc">
+          
+          <p>Load the font from a custom stream</p>
 
 <p>The supported font formats are: TrueType, Type 1, CFF,
 OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42.
@@ -1509,12 +1615,13 @@ the <code><a href="../SF/Font.html">SF::Font</a></code> object loads a new font 
 
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 
-<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_file%28filename%3AString%29%3ABool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Font.html#load_from_memory%28data%3ASlice%29%3ABool-instance-method">#load_from_memory</a></code></p></div>
+<p><em>See also:</em> <code><a href="../SF/Font.html#load_from_file(filename:String):Bool-instance-method">#load_from_file</a></code>, <code><a href="../SF/Font.html#load_from_memory(data:Slice):Bool-instance-method">#load_from_memory</a></code></p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/v2.5.0/src/graphics/obj.cr#L3793" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/298de06e3e24ba5d814141b59d59cc582a022b84/src/graphics/obj.cr#L3793" target="_blank">View source</a>]
         
       </div>
     </div>
