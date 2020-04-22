@@ -14,8 +14,8 @@
   </symbol>
 </svg>
 
-  <meta id="repository-name" content="github.com/oprypin/crsfml">
-  <title>SF::Cursor - github.com/oprypin/crsfml</title>
+  <meta id="repository-name" content="crsfml">
+  <title>SF::Cursor - crsfml master-dev</title>
   <script type="text/javascript">
     CrystalDoc.base_path = "../";
   </script>
@@ -28,8 +28,17 @@
       <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
     </div>
 
-    <div class="repository-links">
-      <a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center"><img src="https://raw.githubusercontent.com/oprypin/crsfml//logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+<a href="https://github.com/oprypin/crsfml#readme" style="padding: 3px 5px 2px; text-align: center; display: block"><img src="https://raw.githubusercontent.com/oprypin/crsfml/cdd68bfdd9449bba5e70714c032e98002cd7aea0/logo.png" alt="CrSFML" style="width: 100%; max-width: 235px"/></a>
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          crsfml
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master-dev
+      </span>
     </div>
   </div>
 
@@ -890,9 +899,8 @@
 
   <p>Cursor defines the appearance of a system cursor</p>
 
-<p><em>Warning:</em> Features related to Cursor are not supported on</p>
-
-<pre><code>     iOS and <span class="t">Android</span>.</code></pre>
+<p><em>Warning:</em> Features related to Cursor are not supported on
+iOS and Android.</p>
 
 <p>This class abstracts the operating system resources
 associated with either a native system cursor or a custom
@@ -954,7 +962,7 @@ if (cursor.loadFromSystem(sf::Cursor::Hand))
   </h2>
   
     
-      <a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L391" target="_blank">
+      <a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L391" target="_blank">
         window/obj.cr
       </a>
     
@@ -1101,7 +1109,7 @@ if (cursor.loadFromSystem(sf::Cursor::Hand))
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L498" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L498" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1124,7 +1132,7 @@ if (cursor.loadFromSystem(sf::Cursor::Hand))
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L523" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L523" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1150,7 +1158,7 @@ is called and successfully created a cursor.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L451" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L451" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1188,7 +1196,7 @@ associated with this cursor, if any.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L459" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L459" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1219,22 +1227,20 @@ which will be located exactly where the mouse pointer
 position is. Any mouse actions that are performed will
 return the window/screen location of the hotspot.</p>
 
-<p><em>Warning:</em> On Unix, the pixels are mapped into a monochrome</p>
-
-<pre><code>     bitmap: pixels <span class="k">with</span> an alpha channel to <span class="n">0</span> are
-     transparent, black <span class="k">if</span> the <span class="t">RGB</span> channel are close
-     to zero, and white otherwise.</code></pre>
+<p><em>Warning:</em> On Unix, the pixels are mapped into a monochrome
+bitmap: pixels with an alpha channel to 0 are
+transparent, black if the RGB channel are close
+to zero, and white otherwise.</p>
 
 <ul><li><em>pixels</em> - Array of pixels of the image</li><li><em>size</em> - Width and height of the image</li><li><em>hotspot</em> - (x,y) location of the hotspot
-<em>Returns:</em> true if the cursor was successfully loaded;</li></ul>
-
-<pre><code>    <span class="n">false</span> otherwise</code></pre>
+<em>Returns:</em> true if the cursor was successfully loaded;
+false otherwise</li></ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L489" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L489" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1257,16 +1263,15 @@ expected to load successfully or is not supported by
 the operating system.</p>
 
 <ul><li><em>type</em> - Native system cursor type
-<em>Returns:</em> true if and only if the corresponding cursor is</li></ul>
-
-<pre><code>    natively supported by the operating system;
-    <span class="n">false</span> otherwise</code></pre>
+<em>Returns:</em> true if and only if the corresponding cursor is
+natively supported by the operating system;
+false otherwise</li></ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/oprypin/crsfml/blob/e68006931e3eac777eb6c657bed4fc8dd0be2f80/src/window/obj.cr#L516" target="_blank">View source</a>]
+          [<a href="https://github.com/oprypin/crsfml/blob/cdd68bfdd9449bba5e70714c032e98002cd7aea0cdd68bfdd9449bba5e70714c032e98002cd7aea0/src/window/obj.cr#L516" target="_blank">View source</a>]
         
       </div>
     </div>
