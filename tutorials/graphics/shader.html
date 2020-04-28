@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -176,71 +177,77 @@
 <h2 id="loading-shaders">Loading shaders</h2>
 <p>In CrSFML, shaders are represented by the <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> class. It handles both the vertex and fragment shaders: A <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> object is a combination of both (or only one, if the other is not provided).</p>
 <p>Even though shaders have become commonplace, there are still old graphics cards that might not support them. The first thing you should do in your program is check if shaders are available on the system:</p>
-<pre class="codehilite"><code class="language-crystal">if !SF::Shader.available?
-  # shaders are not available...
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="o">!</span><span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">available?</span>
+  <span class="c1"># shaders are not available...</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Any attempt to use the <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> class will fail if <code>SF::Shader.available?</code> returns <code>false</code>.</p>
 <p>The most common way of loading a shader is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<pre class="codehilite"><code class="language-crystal"># load only the vertex shader
-shader = SF::Shader.from_file(&quot;vertex_shader.vert&quot;, SF::Shader::Vertex)
+<div class="codehilite"><pre><span></span><code><span class="c1"># load only the vertex shader</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;vertex_shader.vert&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">::</span><span class="n">Vertex</span><span class="p">)</span>
 
-# load only the fragment shader
-shader = SF::Shader.from_file(&quot;fragment_shader.frag&quot;, SF::Shader::Fragment)
+<span class="c1"># load only the fragment shader</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;fragment_shader.frag&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">::</span><span class="n">Fragment</span><span class="p">)</span>
 
-# load both shaders
-shader = SF::Shader.from_file(&quot;vertex_shader.vert&quot;, &quot;fragment_shader.frag&quot;)</code></pre>
+<span class="c1"># load both shaders</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;vertex_shader.vert&quot;</span><span class="p">,</span> <span class="s2">&quot;fragment_shader.frag&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Shader source is contained in simple text files (like your Crystal code). Their extension doesn't really matter, it can be anything you want, you can even omit it. ".vert" and ".frag" are just examples of possible extensions.</p>
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder.</p>
 <p>Shaders can also be loaded directly from strings, with the <code>from_memory</code> class method. This can be useful if you want to embed the shader source directly into your program.</p>
-<pre class="codehilite"><code class="language-crystal">vertex_shader = &quot;
-    void main()
-    {
-        ...
-    }
-&quot;
+<div class="codehilite"><pre><span></span><code><span class="n">vertex_shader</span> <span class="o">=</span> <span class="s2">&quot;</span>
+<span class="s2">    void main()</span>
+<span class="s2">    {</span>
+<span class="s2">        ...</span>
+<span class="s2">    }</span>
+<span class="s2">&quot;</span>
 
-fragment_shader = &quot;
-    void main()
-    {
-        ...
-    }
-&quot;
+<span class="n">fragment_shader</span> <span class="o">=</span> <span class="s2">&quot;</span>
+<span class="s2">    void main()</span>
+<span class="s2">    {</span>
+<span class="s2">        ...</span>
+<span class="s2">    }</span>
+<span class="s2">&quot;</span>
 
-# load only the vertex shader
-shader = SF::Shader.from_memory(vertex_shader, SF::Shader::Vertex)
+<span class="c1"># load only the vertex shader</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_memory</span><span class="p">(</span><span class="n">vertex_shader</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">::</span><span class="n">Vertex</span><span class="p">)</span>
 
-# load only the fragment shader
-shader = SF::Shader.from_memory(fragment_shader, SF::Shader::Fragment)
+<span class="c1"># load only the fragment shader</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_memory</span><span class="p">(</span><span class="n">fragment_shader</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">::</span><span class="n">Fragment</span><span class="p">)</span>
 
-# load both shaders
-shader = SF::Shader.from_memory(vertex_shader, fragment_shader)</code></pre>
+<span class="c1"># load both shaders</span>
+<span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">from_memory</span><span class="p">(</span><span class="n">vertex_shader</span><span class="p">,</span> <span class="n">fragment_shader</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>And finally, like all other SFML resources, shaders can also be loaded from a <a href="../system/stream.html" title="Input streams tutorial">custom input stream</a> with the <code>from_stream</code> class method.</p>
 <p>If loading fails, don't forget to check the standard error output (the console) to see a detailed report from the GLSL compiler.</p>
 <h2 id="using-a-shader">Using a shader</h2>
 <p>Using a shader is simple, just pass it as an additional argument to the <code>draw</code> method.</p>
-<pre class="codehilite"><code class="language-crystal">window.draw(whatever, SF::RenderStates.new(shader: shader))</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">whatever</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">shader</span><span class="p">:</span> <span class="n">shader</span><span class="p">))</span>
+</code></pre></div>
 
 
 <h2 id="passing-variables-to-a-shader">Passing variables to a shader</h2>
 <p>Like any other program, a shader can take parameters so that it is able to behave differently from one draw to another. These parameters are declared as global variables known as <em>uniforms</em> in the shader.</p>
-<pre class="codehilite"><code class="language-glsl">uniform float myvar;
+<div class="codehilite"><pre><span></span><code><span class="k">uniform</span> <span class="kt">float</span> <span class="n">myvar</span><span class="p">;</span>
 
-void main()
-{
-    // use myvar...
-}</code></pre>
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// use myvar...</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 <p>Uniforms can be set by the Crystal program, using the various overloads of the <code>set_parameter</code> method in the <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> class.</p>
-<pre class="codehilite"><code class="language-crystal">shader.set_parameter(&quot;my_var&quot;, 5.0)
-# shorthand:
-shader.my_var 5.0</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">shader</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s2">&quot;my_var&quot;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="c1"># shorthand:</span>
+<span class="n">shader</span><span class="o">.</span><span class="n">my_var</span> <span class="mf">5.0</span>
+</code></pre></div>
 
 
 <p><code>set_parameter</code>'s overloads support all the types provided by CrSFML:</p>
@@ -258,37 +265,40 @@ shader.my_var 5.0</code></pre>
 <p>You won't learn how to write GLSL shaders here, but it is essential that you know what input SFML provides to the shaders and what it expects you to do with it.</p>
 <h3 id="vertex-shader">Vertex shader</h3>
 <p>SFML has a fixed vertex format which is described by the <a href="http://oprypin.github.io/crsfml/api/SF/Vertex.html">Vertex</a> structure. A SFML vertex contains a 2D position, a color, and 2D texture coordinates. This is the exact input that you will get in the vertex shader, stored in the built-in <code>gl_Vertex</code>, <code>gl_Color</code> and <code>gl_MultiTexCoord0</code> variables (you don't need to declare them).</p>
-<pre class="codehilite"><code class="language-glsl">void main()
-{
-    // transform the vertex position
-    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// transform the vertex position</span>
+    <span class="nb">gl_Position</span> <span class="o">=</span> <span class="nb">gl_ModelViewProjectionMatrix</span> <span class="o">*</span> <span class="nb">gl_Vertex</span><span class="p">;</span>
 
-    // transform the texture coordinates
-    gl_TexCoord[0] = gl_TextureMatrix[0] * gl_MultiTexCoord0;
+    <span class="c1">// transform the texture coordinates</span>
+    <span class="nb">gl_TexCoord</span><span class="p">[</span><span class="mo">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">gl_TextureMatrix</span><span class="p">[</span><span class="mo">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">gl_MultiTexCoord0</span><span class="p">;</span>
 
-    // forward the vertex color
-    gl_FrontColor = gl_Color;
-}</code></pre>
+    <span class="c1">// forward the vertex color</span>
+    <span class="nb">gl_FrontColor</span> <span class="o">=</span> <span class="nb">gl_Color</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 <p>The position usually needs to be transformed by the model-view and projection matrices, which contain the entity transform combined with the current view. The texture coordinates need to be transformed by the texture matrix (this matrix likely doesn't mean anything to you, it is just an SFML implementation detail). And finally, the color just needs to be forwarded. Of course, you can ignore the texture coordinates and/or the color if you don't make use of them.<br />
 All these variables will then be interpolated over the primitive by the graphics card, and passed to the fragment shader.</p>
 <h3 id="fragment-shader">Fragment shader</h3>
 <p>The fragment shader functions quite similarly: It receives the texture coordinates and the color of a generated fragment. There's no position any more, at this point the graphics card has already computed the final raster position of the fragment. However if you deal with textured entities, you'll also need the current texture.</p>
-<pre class="codehilite"><code class="language-glsl">uniform sampler2D texture;
+<div class="codehilite"><pre><span></span><code><span class="k">uniform</span> <span class="kt">sampler2D</span> <span class="n">texture</span><span class="p">;</span>
 
-void main()
-{
-    // lookup the pixel in the texture
-    vec4 pixel = texture2D(texture, gl_TexCoord[0].xy);
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// lookup the pixel in the texture</span>
+    <span class="kt">vec4</span> <span class="n">pixel</span> <span class="o">=</span> <span class="n">texture2D</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="nb">gl_TexCoord</span><span class="p">[</span><span class="mo">0</span><span class="p">].</span><span class="n">xy</span><span class="p">);</span>
 
-    // multiply it by the color
-    gl_FragColor = gl_Color * pixel;
-}</code></pre>
+    <span class="c1">// multiply it by the color</span>
+    <span class="nb">gl_FragColor</span> <span class="o">=</span> <span class="nb">gl_Color</span> <span class="o">*</span> <span class="n">pixel</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 <p>The current texture is not automatic, you need to treat it like you do the other input variables, and explicitly set it from your C++ program. Since each entity can have a different texture, and worse, there might be no way for you to get it and pass it to the shader, SFML provides a special overload of the <code>set_parameter</code> method that does this job for you.</p>
-<pre class="codehilite"><code>shader.set_parameter &quot;texture&quot;, SF::Shader::CurrentTexture</code></pre>
+<div class="codehilite"><pre><span></span><code>shader.set_parameter &quot;texture&quot;, SF::Shader::CurrentTexture
+</code></pre></div>
 
 
 <p>This special parameter automatically sets the texture of the entity being drawn to the shader variable with the given name. Every time you draw a new entity, SFML will update the shader texture variable accordingly.</p>
@@ -296,16 +306,17 @@ void main()
 <h2 id="using-a-sfshader-with-opengl-code">Using a SF::Shader with OpenGL code</h2>
 <p>If you're using OpenGL rather than the graphics entities of SFML, you can still use <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> as a wrapper around an OpenGL program object and use it within your OpenGL code.</p>
 <p>To activate a <a href="http://oprypin.github.io/crsfml/api/SF/Shader.html">Shader</a> for drawing (the equivalent of <code>glUseProgram</code>), you have to call the <code>bind</code> class method:</p>
-<pre class="codehilite"><code class="language-crystal">shader = SF::Shader.new
-...
+<div class="codehilite"><pre><span></span><code><span class="n">shader</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">new</span>
+<span class="o">...</span>
 
-# bind the shader
-SF::Shader.bind(shader)
+<span class="c1"># bind the shader</span>
+<span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
 
-# draw your OpenGL entity here...
+<span class="c1"># draw your OpenGL entity here...</span>
 
-# bind no shader
-SF::Shader.bind(nil)</code></pre>
+<span class="c1"># bind no shader</span>
+<span class="no">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+</code></pre></div>
               
             </div>
           </div>

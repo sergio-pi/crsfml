@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -174,32 +175,34 @@
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> (and all its derived classes) defines four properties: <strong>position</strong>, <strong>rotation</strong>, <strong>scale</strong> and <strong>origin</strong>. They all have their respective getters and setters. These transformation components are all independent of one another: If you want to change the orientation of the entity, you just have to set its rotation property, you don't have to care about the current position and scale.</p>
 <h3 id="position">Position</h3>
 <p>The position is the... position of the entity in the 2D world. I don't think it needs more explanation :).</p>
-<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
+<div class="codehilite"><pre><span></span><code><span class="c1"># &#39;entity&#39; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-# set the absolute position of the entity
-entity.position = SF.vector2(10, 50)
+<span class="c1"># set the absolute position of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
-# move the entity relatively to its current position
-entity.move(SF.vector2(5, 5))
+<span class="c1"># move the entity relatively to its current position</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-# retrieve the absolute position of the entity
-position = entity.position # = (15, 55)</code></pre>
+<span class="c1"># retrieve the absolute position of the entity</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="c1"># = (15, 55)</span>
+</code></pre></div>
 
 
 <p><img alt="A translated entity" src="images/transform-position.png" /></p>
 <p>By default, entities are positioned relative to their top-left corner. We'll see how to change that with the 'origin' property later.</p>
 <h3 id="rotation">Rotation</h3>
 <p>The rotation is the orientation of the entity in the 2D world. It is defined in <em>degrees</em>, in clockwise order (because the Y axis is pointing down in SFML).</p>
-<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
+<div class="codehilite"><pre><span></span><code><span class="c1"># &#39;entity&#39; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-# set the absolute rotation of the entity
-entity.rotation = 45
+<span class="c1"># set the absolute rotation of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span>
 
-# rotate the entity relatively to its current orientation
-entity.rotate(10)
+<span class="c1"># rotate the entity relatively to its current orientation</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-# retrieve the absolute rotation of the entity
-rotation = entity.rotation # = 55</code></pre>
+<span class="c1"># retrieve the absolute rotation of the entity</span>
+<span class="n">rotation</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="c1"># = 55</span>
+</code></pre></div>
 
 
 <p><img alt="A rotated entity" src="images/transform-rotation.png" /></p>
@@ -207,41 +210,44 @@ rotation = entity.rotation # = 55</code></pre>
 <p>As with the position, the rotation is performed around the top-left corner by default, but this can be changed by setting the origin.</p>
 <h3 id="scale">Scale</h3>
 <p>The scale factor allows the entity to be resized. The default scale is 1. Setting it to a value less than 1 makes the entity smaller, greater than 1 makes it bigger. Negative scale values are also allowed, so that you can mirror the entity.</p>
-<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
+<div class="codehilite"><pre><span></span><code><span class="c1"># &#39;entity&#39; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-# set the absolute scale of the entity
-entity.scale = SF.vector2(4.0, 1.6)
+<span class="c1"># set the absolute scale of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">)</span>
 
-# scale the entity relatively to its current scale
-entity.scale(SF.vector2(0.5, 0.5))
+<span class="c1"># scale the entity relatively to its current scale</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
 
-# retrieve the absolute scale of the entity
-scale = entity.scale # = (2, 0.8)</code></pre>
+<span class="c1"># retrieve the absolute scale of the entity</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="c1"># = (2, 0.8)</span>
+</code></pre></div>
 
 
 <p><img alt="A scaled entity" src="images/transform-scale.png" /></p>
 <h3 id="origin">Origin</h3>
 <p>The origin is the center point of the three other transformations. The entity's position is the position of its origin, its rotation is performed around the origin, and the scale is applied relative to the origin as well. By default, it is the top-left corner of the entity (point (0, 0)), but you can set it to the center of the entity, or any other corner of the entity for example.</p>
 <p>To keep things simple, there's only a single origin for all three transformation components. This means that you can't position an entity relative to its top-left corner while rotating it around its center for example. If you need to do such things, have a look at the next chapters.</p>
-<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
+<div class="codehilite"><pre><span></span><code><span class="c1"># &#39;entity&#39; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
 
-# set the origin of the entity
-entity.origin = SF.vector2(10, 20)
+<span class="c1"># set the origin of the entity</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 
-# retrieve the origin of the entity
-origin = entity.origin # = (10, 20)</code></pre>
+<span class="c1"># retrieve the origin of the entity</span>
+<span class="n">origin</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">origin</span> <span class="c1"># = (10, 20)</span>
+</code></pre></div>
 
 
 <p>Note that changing the origin also changes where the entity is drawn on screen, even though its position property hasn't changed. If you don't understand why, read this tutorial one more time!</p>
 <h2 id="transforming-your-own-classes">Transforming your own classes</h2>
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> is not only made for CrSFML classes, it can also be a base (or a member) of your own classes.</p>
-<pre class="codehilite"><code class="language-crystal">class MyGraphicalEntity &lt; SF::Transformable
-  # ...
-end
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyGraphicalEntity</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="c1"># ...</span>
+<span class="k">end</span>
 
-entity.position = SF.vector2(10, 30)
-entity.rotation = 110
-entity.scale = SF.vector2(0.5, 0.2)</code></pre>
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">110</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>To retrieve the final transform of the entity (commonly needed when drawing it), call the <code>transform</code> method. This method returns a <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a> object. See below for an explanation about it, and how to use it to transform an SFML entity.</p>
@@ -255,32 +261,35 @@ entity.scale = SF.vector2(0.5, 0.2)</code></pre>
 <li>by specifying its 9 elements directly</li>
 </ul>
 <p>Here are a few examples:</p>
-<pre class="codehilite"><code class="language-crystal"># the identity transform (does nothing)
-t1 = SF::Transform::Identity
+<div class="codehilite"><pre><span></span><code><span class="c1"># the identity transform (does nothing)</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">::</span><span class="n">Identity</span>
 
-# a rotation transform
-t2 = SF::Transform.new
-t2.rotate(45)
+<span class="c1"># a rotation transform</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">t2</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
-# a custom matrix
-t3 = SF::Transform.new(2, 0, 20, 0, 1, 50, 0, 0, 1)
+<span class="c1"># a custom matrix</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-# a combined transform
-t4 = t1 * t2 * t3</code></pre>
+<span class="c1"># a combined transform</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">*</span> <span class="n">t2</span> <span class="o">*</span> <span class="n">t3</span>
+</code></pre></div>
 
 
 <p>You can apply several predefined transformations to the same transform as well. They will all be combined sequentially:</p>
-<pre class="codehilite"><code class="language-crystal">t = SF::Transform.new
-t.translate(10, 100)
-t.rotate(90)
-t.translate(-10, 50)
-t.scale(0.5, 0.75)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">t</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Back to the point: How can a custom transform be applied to a graphical entity? Simple: Pass it to the draw method.</p>
-<pre class="codehilite"><code class="language-crystal">states = SF::RenderStates.new
-states.transform = transform
-window.draw(entity, states)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>If your entity is a <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> (sprite, text, shape), which contains its own internal transform, both the internal and the passed transform are combined to produce the final transform.</p>
@@ -289,60 +298,62 @@ window.draw(entity, states)</code></pre>
 <p>SFML entities can give you their bounding box. The bounding box is the minimal rectangle that contains all points belonging to the entity, with sides aligned to the X and Y axes.</p>
 <p><img alt="Bounding box of entities" src="images/transform-bounds.png" /></p>
 <p>The bounding box is very useful when implementing collision detection: Checks against a point or another axis-aligned rectangle can be done very quickly, and its area is close enough to that of the real entity to provide a good approximation.</p>
-<pre class="codehilite"><code class="language-crystal"># get the bounding box of the entity
-bounding_box = entity.global_bounds
+<div class="codehilite"><pre><span></span><code><span class="c1"># get the bounding box of the entity</span>
+<span class="n">bounding_box</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">global_bounds</span>
 
-# check collision with a point
-point = ...
+<span class="c1"># check collision with a point</span>
+<span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 
-if bounding_box.contains? point
-  # collision!
-end
+<span class="k">if</span> <span class="n">bounding_box</span><span class="o">.</span><span class="n">contains?</span> <span class="n">point</span>
+  <span class="c1"># collision!</span>
+<span class="k">end</span>
 
-# check collision with another box (like the bounding box of another entity)
-other_box = ...
+<span class="c1"># check collision with another box (like the bounding box of another entity)</span>
+<span class="n">other_box</span> <span class="o">=</span> <span class="o">...</span>
 
-if bounding_box.intersects? other_box
-  # collision!
-end</code></pre>
+<span class="k">if</span> <span class="n">bounding_box</span><span class="o">.</span><span class="n">intersects?</span> <span class="n">other_box</span>
+  <span class="c1"># collision!</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>The method is named <code>global_bounds</code> because it returns the bounding box of the entity in the global coordinate system, i.e. after all of its transformations (position, rotation, scale) have been applied.</p>
 <p>There's another method that returns the bounding box of the entity in its <em>local</em> coordinate system (before its transformations are applied): <code>local_bounds</code>. This method can be used to get the initial size of an entity, for example, or to perform more specific calculations.</p>
 <h2 id="object-hierarchies-scene-graph">Object hierarchies (scene graph)</h2>
 <p>With the custom transforms seen previously, it becomes easy to implement a hierarchy of objects in which children are transformed relative to their parent. All you have to do is pass the combined transform from parent to children when you draw them, all the way until you reach the final drawable entities (sprites, text, shapes, vertex arrays or your own drawables).</p>
-<pre class="codehilite"><code class="language-crystal"># the abstract base class
-class Node
-  # ... methods to transform the node
+<div class="codehilite"><pre><span></span><code><span class="c1"># the abstract base class</span>
+<span class="k">class</span> <span class="nc">Node</span>
+  <span class="c1"># ... methods to transform the node</span>
 
-  # ... methods to manage the node's children
+  <span class="c1"># ... methods to manage the node&#39;s children</span>
 
-  def draw(target, parent_transform)
-    # combine the parent transform with the node's one
-    combined_transform = parent_transform * @transform
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">parent_transform</span><span class="p">)</span>
+    <span class="c1"># combine the parent transform with the node&#39;s one</span>
+    <span class="n">combined_transform</span> <span class="o">=</span> <span class="n">parent_transform</span> <span class="o">*</span> <span class="vi">@transform</span>
 
-    # let the node draw itself
-    on_draw(target, combined_transform)
+    <span class="c1"># let the node draw itself</span>
+    <span class="n">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">combined_transform</span><span class="p">)</span>
 
-    # draw its children
-    @children.each do |child|
-      child.draw(target, combined_transform)
-    end
-  end
+    <span class="c1"># draw its children</span>
+    <span class="vi">@children</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">child</span><span class="o">|</span>
+      <span class="n">child</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">combined_transform</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  private def on_draw(target, transform)
-    ...
-  end
-end
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+    <span class="o">...</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-# a simple derived class: a node that draws a sprite
-class SpriteNode &lt; Node
-  # .. methods to define the sprite
+<span class="c1"># a simple derived class: a node that draws a sprite</span>
+<span class="k">class</span> <span class="nc">SpriteNode</span> <span class="o">&lt;</span> <span class="n">Node</span>
+  <span class="c1"># .. methods to define the sprite</span>
 
-  private def on_draw(target, transform)
-    target.draw(@sprite, transform)
-  end
-end</code></pre>
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">on_draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@sprite</span><span class="p">,</span> <span class="n">transform</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
               
             </div>
           </div>

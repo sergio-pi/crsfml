@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -162,69 +163,76 @@ The problem is obvious: If you send a variable between two computers whose endia
 <p>You may of course face other problems with network programming, but these are the lowest-level ones, that almost everybody will have to solve. This is the reason why SFML provides some simple tools to avoid them.</p>
 <h2 id="packets">Packets</h2>
 <p>The two problems (endianness and message boundaries) are solved by using a specific class to pack your data: <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a>. As a bonus, it provides a much nicer interface than plain old byte arrays.</p>
-<pre class="codehilite"><code class="language-crystal"># on sending side
-x = 10_u16
-s = &quot;hello&quot;
-d = 0.6_f64
+<div class="codehilite"><pre><span></span><code><span class="c1"># on sending side</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">10_u16</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">0.6_f64</span>
 
-packet = SF::Packet.new()
-packet.write(x)
-packet.write(s)
-packet.write(d)</code></pre>
+<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>
 
 
-<pre class="codehilite"><code class="language-crystal"># on receiving side
-x = packet.read(UInt16)
-s = packet.read(String)
-d = packet.read(Float64)
-pp x, s, d</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># on receiving side</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">UInt16</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">Float64</span><span class="p">)</span>
+<span class="bp">pp</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">d</span>
+</code></pre></div>
 
 
 <p>Unlike writing, reading from a packet can fail if you try to extract more bytes than the packet contains. If a reading operation fails, the packet error flag is set. To check the error flag of a packet, use the <code>valid?</code> method:</p>
-<pre class="codehilite"><code class="language-crystal">x = packet.read(Int32)
-unless packet.valid?
-  # error
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">Int32</span><span class="p">)</span>
+<span class="k">unless</span> <span class="n">packet</span><span class="o">.</span><span class="n">valid?</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Sending and receiving packets is as easy as sending/receiving an array of bytes: sockets have <code>send</code> and <code>receive</code> methods that directly accept a <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a>.</p>
-<pre class="codehilite"><code class="language-crystal"># with a TCP socket
-status = tcp_socket.send(packet)
+<div class="codehilite"><pre><span></span><code><span class="c1"># with a TCP socket</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">tcp_socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
 
-packet = SF::Packet.new
-status = tcp_socket.receive(packet)</code></pre>
+<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">tcp_socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+</code></pre></div>
 
 
-<pre class="codehilite"><code class="language-crystal"># with a UDP socket
-status = udp_socket.send(packet, recipient_address, recipient_port)
+<div class="codehilite"><pre><span></span><code><span class="c1"># with a UDP socket</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">udp_socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">recipient_address</span><span class="p">,</span> <span class="n">recipient_port</span><span class="p">)</span>
 
-packet = SF::Packet.new
-status, sender_address, sender_port = udp_socket.receive(packet)</code></pre>
+<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
+<span class="n">status</span><span class="p">,</span> <span class="n">sender_address</span><span class="p">,</span> <span class="n">sender_port</span> <span class="o">=</span> <span class="n">udp_socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Packets solve the "message boundaries" problem, which means that when you send a packet on a TCP socket, you receive the exact same packet on the other end, it cannot contain less bytes, or bytes from the next packet that you send. However, it has a slight drawback: To preserve message boundaries, <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a> has to send some extra bytes along with your data, which implies that you can only receive them with a <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a> if you want them to be properly decoded. Simply put, you can't send an SFML packet to a non-SFML packet recipient, it has to use an SFML packet for receiving too. Note that this applies to TCP only, UDP is fine since the protocol itself preserves message boundaries.</p>
 <h2 id="extending-packets-to-handle-user-types">Extending packets to handle user types</h2>
 <p>Packets have overloads of their methods for the most common primitive types and the most common standard types, but what about your own classes? It is easy to subclass or reopen <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a> and add your own overloads.</p>
-<pre class="codehilite"><code class="language-crystal">record Character, age : UInt8, name : String, weight : Float32
+<div class="codehilite"><pre><span></span><code><span class="bp">record</span> <span class="n">Character</span><span class="p">,</span> <span class="n">age</span> <span class="p">:</span> <span class="nb">UInt8</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">weight</span> <span class="p">:</span> <span class="nb">Float32</span>
 
-class SF::Packet
-  def write(c : Character)
-    write c.age
-    write c.name
-    write c.weight
-  end
+<span class="k">class</span> <span class="nn">SF::</span><span class="nc">Packet</span>
+  <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">c</span> <span class="p">:</span> <span class="n">Character</span><span class="p">)</span>
+    <span class="n">write</span> <span class="n">c</span><span class="o">.</span><span class="n">age</span>
+    <span class="n">write</span> <span class="n">c</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">write</span> <span class="n">c</span><span class="o">.</span><span class="n">weight</span>
+  <span class="k">end</span>
 
-  def read(type : Character.class) : Character
-    Character.new(read(UInt8), read(String), read(Float32))
-  end
-end</code></pre>
+  <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Character</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Character</span>
+    <span class="n">Character</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">),</span> <span class="n">read</span><span class="p">(</span><span class="nb">String</span><span class="p">),</span> <span class="n">read</span><span class="p">(</span><span class="nb">Float32</span><span class="p">))</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Now that these methods are defined, you can insert/extract a <code>Character</code> instance to/from a packet like any other primitive type:</p>
-<pre class="codehilite"><code class="language-crystal">bob = Character.new(65_u8, &quot;Bob&quot;, 12.34_f32)
+<div class="codehilite"><pre><span></span><code><span class="n">bob</span> <span class="o">=</span> <span class="n">Character</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">65_u8</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mf">12.34_f32</span><span class="p">)</span>
 
-packet.write(bob)
-packet.read(Character)</code></pre>
+<span class="n">packet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bob</span><span class="p">)</span>
+<span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">Character</span><span class="p">)</span>
+</code></pre></div>
               
             </div>
           </div>

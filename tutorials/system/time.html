@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -161,58 +162,63 @@
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Time.html">Time</a> represents a time period (in other words, the time that elapses between two events). It is <em>not</em> a date-time class which would represent the current year/month/day/hour/minute/second as a timestamp, it's just a value that represents a certain amount of time, and how to interpret it depends on the context where it is used.</p>
 <h2 id="converting-time">Converting time</h2>
 <p>A <a href="http://oprypin.github.io/crsfml/api/SF/Time.html">Time</a> value can be constructed from different source units: seconds, milliseconds and microseconds. There is a (non-member) function to turn each of them into a <a href="http://oprypin.github.io/crsfml/api/SF/Time.html">Time</a>:</p>
-<pre class="codehilite"><code class="language-crystal">t1 = SF.microseconds(10000)
-t2 = SF.milliseconds(10)
-t3 = SF.seconds(0.01)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">microseconds</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>Note that these three times are all equal.</p>
 <p>Similarly, a <a href="http://oprypin.github.io/crsfml/api/SF/Time.html">Time</a> can be converted back to either seconds, milliseconds or microseconds:</p>
-<pre class="codehilite"><code class="language-crystal">time = ...
+<div class="codehilite"><pre><span></span><code><span class="n">time</span> <span class="o">=</span> <span class="o">...</span>
 
-microseconds = time.as_microseconds
-milliseconds = time.as_milliseconds
-seconds = time.as_seconds</code></pre>
+<span class="n">microseconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">as_microseconds</span>
+<span class="n">milliseconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">as_milliseconds</span>
+<span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">as_seconds</span>
+</code></pre></div>
 
 
 <h2 id="playing-with-time-values">Playing with time values</h2>
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Time.html">Time</a> is just an amount of time, so it supports arithmetic operations such as addition, subtraction, comparison, etc. Times can also be negative.</p>
-<pre class="codehilite"><code class="language-crystal">t1 = ...
-t2 = t1 * 2
-t3 = t1 + t2
-t4 = -t3
+<div class="codehilite"><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="o">-</span><span class="n">t3</span>
 
-b1 = (t1 == t2)
-b2 = (t3 &gt; t4)</code></pre>
+<span class="n">b1</span> <span class="o">=</span> <span class="p">(</span><span class="n">t1</span> <span class="o">==</span> <span class="n">t2</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="p">(</span><span class="n">t3</span> <span class="o">&gt;</span> <span class="n">t4</span><span class="p">)</span>
+</code></pre></div>
 
 
 <h2 id="measuring-time">Measuring time</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/transformable.cr">transformable</a></strong></p>
 <p>Now that we've seen how to manipulate time values with CrSFML, let's see how to do something that almost every program needs: measuring the time elapsed.</p>
 <p>CrSFML has a very simple class for measuring time: <a href="http://oprypin.github.io/crsfml/api/SF/Clock.html">Clock</a>. It only has two methods: <code>elapsed_time</code>, to retrieve the time elapsed since the clock started, and <code>restart</code>, to restart the clock.</p>
-<pre class="codehilite"><code class="language-crystal">clock = SF::Clock.new # Starts the clock
+<div class="codehilite"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span> <span class="c1"># Starts the clock</span>
 
-sleep(2)
+<span class="nb">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-elapsed_1 = clock.elapsed_time
-p elapsed_1.as_seconds
-clock.restart
+<span class="n">elapsed_1</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">elapsed_time</span>
+<span class="nb">p</span> <span class="n">elapsed_1</span><span class="o">.</span><span class="n">as_seconds</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">restart</span>
 
-sleep(3)
+<span class="nb">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 
-elapsed_2 = clock.elapsed_time
-p elapsed_2.as_seconds</code></pre>
+<span class="n">elapsed_2</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">elapsed_time</span>
+<span class="nb">p</span> <span class="n">elapsed_2</span><span class="o">.</span><span class="n">as_seconds</span>
+</code></pre></div>
 
 
 <p>Note that <code>restart</code> also returns the elapsed time, so that you can avoid the slight gap that would exist if you had to call <code>elapsed_time</code> explicitly before <code>restart</code>.<br />
 Here is an example that uses the time elapsed at each iteration of the game loop to update the game logic:</p>
-<pre class="codehilite"><code class="language-crystal">clock = SF::Clock.new
+<div class="codehilite"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span>
 
-while window.open?
-  elapsed = clock.restart
-  update_game(elapsed)
-  ...
-end</code></pre>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="n">elapsed</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">restart</span>
+  <span class="n">update_game</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
+  <span class="o">...</span>
+<span class="k">end</span>
+</code></pre></div>
               
             </div>
           </div>

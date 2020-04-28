@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -175,48 +176,53 @@
 <p>Now you understand why we always talk about vertex arrays, and not vertices alone.</p>
 <h2 id="a-simple-vertex-array">A simple vertex array</h2>
 <p>Let's have a look at the <a href="http://oprypin.github.io/crsfml/api/SF/Vertex.html">Vertex</a> class now. It's simply a container which contains three public members and no functions besides its constructors. These constructors allow you to construct vertices from the set of attributes you care about -- you don't always need to color or texture your entity.</p>
-<pre class="codehilite"><code class="language-crystal"># create a new vertex
-vertex = SF::Vertex.new
+<div class="codehilite"><pre><span></span><code><span class="c1"># create a new vertex</span>
+<span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span>
 
-# set its position
-vertex.position = SF.vector2(10, 50)
+<span class="c1"># set its position</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
-# set its color
-vertex.color = SF::Color::Red
+<span class="c1"># set its color</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
 
-# set its texture coordinates
-vertex.tex_coords = SF.vector2f(100, 100)</code></pre>
+<span class="c1"># set its texture coordinates</span>
+<span class="n">vertex</span><span class="o">.</span><span class="n">tex_coords</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>... or, using the correct constructor:</p>
-<pre class="codehilite"><code class="language-crystal">vertex = SF::Vertex.new({10, 50}, SF::Color::Red, {100, 100})</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">},</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">})</span>
+</code></pre></div>
 
 
 <p>Now, let's define a primitive. Remember, a primitive consists of several vertices, therefore we need a vertex array. CrSFML provides a simple wrapper for this: <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a>. It provides the semantics of an array, and also stores the type of primitive its vertices define.</p>
-<pre class="codehilite"><code class="language-crystal"># create an array of 3 vertices that define a triangle primitive
-triangle = SF::VertexArray.new(SF::Triangles, 3)
+<div class="codehilite"><pre><span></span><code><span class="c1"># create an array of 3 vertices that define a triangle primitive</span>
+<span class="n">triangle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Triangles</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
-# define the positions and colors of the triangle's points
-triangle[0] = SF::Vertex.new(SF.vector2(10, 10), SF::Color::Red)
-triangle[1] = SF::Vertex.new(SF.vector2(100, 10), SF::Color::Blue)
-triangle[2] = SF::Vertex.new(SF.vector2(100, 100), SF::Color::Green)
+<span class="c1"># define the positions and colors of the triangle&#39;s points</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span><span class="p">)</span>
+<span class="n">triangle</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Green</span><span class="p">)</span>
 
-# no texture coordinates here, we'll see that later</code></pre>
+<span class="c1"># no texture coordinates here, we&#39;ll see that later</span>
+</code></pre></div>
 
 
 <p>Your triangle is ready and you can now draw it. Drawing a vertex array can be done similar to drawing any other CrSFML entity, by using the <code>draw</code> function:</p>
-<pre class="codehilite"><code class="language-crystal">window.draw(triangle)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p><img alt="A triangle made with vertices" src="images/vertex-array-triangle.png" /></p>
 <p>You can see that the vertices' color is interpolated to fill the primitive. This is a nice way of creating gradients.</p>
 <p>Note that you don't have to use the <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a> class. It's just defined for convenience, it's nothing more than an array along with a <code>SF::PrimitiveType</code>. If you need more flexibility, or a normal (or static) array, you can use your own storage. You must then use the overload of the <code>draw</code> function which takes an array of vertices and the primitive type.</p>
-<pre class="codehilite"><code class="language-crystal">vertices = [
-  SF::Vertex.new(...),
-  SF::Vertex.new(...)
-]
+<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="o">]</span>
 
-window.draw(vertices, SF::Lines)</code></pre>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Lines</span><span class="p">)</span>
+</code></pre></div>
 
 
 <h2 id="primitive-types">Primitive types</h2>
@@ -270,289 +276,299 @@ window.draw(vertices, SF::Lines)</code></pre>
 </table>
 <h2 id="texturing">Texturing</h2>
 <p>Like other SFML entities, vertex arrays can also be textured. To do so, you'll need to manipulate the <code>tex_coords</code> attribute of the vertices. This attribute defines which pixel of the texture is mapped to the vertex.</p>
-<pre class="codehilite"><code class="language-crystal"># create a quad
-quad = SF::VertexArray.new(SF::Quads, 4)
+<div class="codehilite"><pre><span></span><code><span class="c1"># create a quad</span>
+<span class="n">quad</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Quads</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-# define it as a rectangle, located at (10, 10) and with size 100x100
-# define its texture area to be a 25x50 rectangle starting at (0, 0)
-quad.append SF::Vertex.new({ 10,  10}, tex_coords: { 0,  0})
-quad.append SF::Vertex.new({110,  10}, tex_coords: {25,  0})
-quad.append SF::Vertex.new({110, 110}, tex_coords: {25, 50})
-quad.append SF::Vertex.new({ 10, 110}, tex_coords: { 0, 50})</code></pre>
+<span class="c1"># define it as a rectangle, located at (10, 10) and with size 100x100</span>
+<span class="c1"># define its texture area to be a 25x50 rectangle starting at (0, 0)</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">10</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span><span class="mi">110</span><span class="p">,</span>  <span class="mi">10</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span><span class="mi">25</span><span class="p">,</span>  <span class="mi">0</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span><span class="mi">110</span><span class="p">,</span> <span class="mi">110</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">})</span>
+<span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">})</span>
+</code></pre></div>
 
 
 <p>Texture coordinates are defined in <em>pixels</em> (just like the <code>texture_rect</code> of sprites and shapes). They are <em>not</em> normalized (between 0 and 1), as people who are used to OpenGL programming might expect.</p>
 <p>Vertex arrays are low-level entities, they only deal with geometry and do not store additional attributes like a texture. To draw a vertex array with a texture, you must pass it directly to the <code>draw</code> method, through a <a href="http://oprypin.github.io/crsfml/api/SF/RenderStates.html">RenderStates</a> object:</p>
-<pre class="codehilite"><code class="language-crystal">vertices = ... # SF::VertexArray
-texture = ... # SF::Texture
+<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Texture</span>
 
-...
+<span class="o">...</span>
 
-states = SF::RenderStates.new
-states.texture = texture
+<span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="n">texture</span>
 
-window.draw(vertices, states)</code></pre>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+</code></pre></div>
 
 
 <h2 id="transforming-a-vertex-array">Transforming a vertex array</h2>
 <p>Transforming is similar to texturing. The transform is not stored in the vertex array, you must pass it to the <code>draw</code> method.</p>
-<pre class="codehilite"><code class="language-crystal">vertices = ... # SF::VertexArray
-transform = ... # SF::Transform
+<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<span class="n">transform</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Transform</span>
 
-...
+<span class="o">...</span>
 
-states = SF::RenderStates.new
-states.transform = transform
+<span class="n">states</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span>
+<span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
 
-window.draw(vertices, states)</code></pre>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>To know more about transformations and the <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a> class, you can read the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <h2 id="creating-an-sfml-like-entity">Creating an SFML-like entity</h2>
 <p>Now that you know how to define your own textured/colored/transformed entity, wouldn't it be nice to wrap it in an SFML-style class? Fortunately, SFML makes this easy for you by providing the <a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> module and <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> base class. These two classes are the base of the built-in SFML entities Sprite, Text and Shape.</p>
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> is an interface: it declares a single abstract method. Including sf::Drawable allows you to draw instances of your class the same way as SFML classes:</p>
-<pre class="codehilite"><code class="language-crystal">class MyEntity
-  include SF::Drawable
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
-  def draw(target : SF::RenderTarget, states : SF::RenderStates)
-  end
-end
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderTarget</span><span class="p">,</span> <span class="n">states</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-entity = MyEntity.new
-window.draw(entity) # internally calls entity.draw</code></pre>
+<span class="n">entity</span> <span class="o">=</span> <span class="n">MyEntity</span><span class="o">.</span><span class="n">new</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span> <span class="c1"># internally calls entity.draw</span>
+</code></pre></div>
 
 
 <p>Subclassing the <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> class automatically adds the same transformation methods to your class as other CrSFML classes (<code>position=</code>, <code>rotation=</code>, <code>move</code>, <code>scale</code>, ...). You can learn more about this in the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <p>Using these two features and a vertex array (in this example we'll also add a texture), here is what a typical CrSFML-like graphical class would look like:</p>
-<pre class="codehilite"><code class="language-crystal">class MyEntity &lt; SF::Transformable
-  include SF::Drawable
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
-  # add methods to play with the entity's geometry / colors / texturing...
+  <span class="c1"># add methods to play with the entity&#39;s geometry / colors / texturing...</span>
 
-  def draw(target, states)
-    # apply the entity's transform -- combine it with the one that was passed by the caller
-    states.transform *= transform # transform() is defined by SF::Transformable
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="c1"># apply the entity&#39;s transform -- combine it with the one that was passed by the caller</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span> <span class="c1"># transform() is defined by SF::Transformable</span>
 
-    # apply the texture
-    states.texture = @texture
+    <span class="c1"># apply the texture</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="vi">@texture</span>
 
-    # you may also override states.shader or states.blend_mode if you want
+    <span class="c1"># you may also override states.shader or states.blend_mode if you want</span>
 
-    # draw the vertex array
-    target.draw(@vertices, states)
-  end
-end</code></pre>
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>You can then use this class as if it were a built-in CrSFML class:</p>
-<pre class="codehilite"><code class="language-crystal">entity = MyEntity.new
+<div class="codehilite"><pre><span></span><code><span class="n">entity</span> <span class="o">=</span> <span class="n">MyEntity</span><span class="o">.</span><span class="n">new</span>
 
-# you can transform it
-entity.position = SF.vector2(10, 50)
-entity.rotation = 45
+<span class="c1"># you can transform it</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">entity</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span>
 
-# you can draw it
-window.draw(entity)</code></pre>
+<span class="c1"># you can draw it</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
+</code></pre></div>
 
 
 <h2 id="example-tile-map">Example: tile map</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml-examples/tree/master/minesweeper">minesweeper</a></strong></p>
 <p>With what we've seen above, let's create a class that encapsulates a tile map. The whole map will be contained in a single vertex array, therefore it will be super fast to draw. Note that we can apply this strategy only if the whole tile set can fit into a single texture. Otherwise, we would have to use at least one vertex array per texture.</p>
 <p><img alt="The tileset" src="images/vertex-array-tileset.png" width="512" height="128" style="image-rendering: -moz-crisp-edges; image-rendering: pixelated"></p>
-<pre class="codehilite"><code class="language-crystal">class TileMap &lt; SF::Transformable
-  include SF::Drawable
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TileMap</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
-  def initialize(tileset, tile_size, tiles, width, height)
-    super()
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tileset</span><span class="p">,</span> <span class="n">tile_size</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+    <span class="k">super</span><span class="p">()</span>
 
-    # load the tileset texture
-    @tileset = SF::Texture.from_file(tileset)
+    <span class="c1"># load the tileset texture</span>
+    <span class="vi">@tileset</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">tileset</span><span class="p">)</span>
 
-    @vertices = SF::VertexArray.new(SF::Quads)
+    <span class="vi">@vertices</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Quads</span><span class="p">)</span>
 
-    tiles_per_row = @tileset.size.x / tile_size.x
+    <span class="n">tiles_per_row</span> <span class="o">=</span> <span class="vi">@tileset</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">x</span> <span class="o">/</span> <span class="n">tile_size</span><span class="o">.</span><span class="n">x</span>
 
-    # populate the vertex array, with one quad per tile
-    (0...height).each do |y|
-      (0...width).each do |x|
-        # get the current tile number
-        tile_index = tiles[width*y + x]
+    <span class="c1"># populate the vertex array, with one quad per tile</span>
+    <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">y</span><span class="o">|</span>
+      <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">width</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+        <span class="c1"># get the current tile number</span>
+        <span class="n">tile_index</span> <span class="o">=</span> <span class="n">tiles</span><span class="o">[</span><span class="n">width</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="o">]</span>
 
-        # find its position in the tileset texture
-        tile_pos = SF.vector2(
-          tile_index % tiles_per_row,
-          tile_index / tiles_per_row
-        )
+        <span class="c1"># find its position in the tileset texture</span>
+        <span class="n">tile_pos</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span>
+          <span class="n">tile_index</span> <span class="o">%</span> <span class="n">tiles_per_row</span><span class="p">,</span>
+          <span class="n">tile_index</span> <span class="o">/</span> <span class="n">tiles_per_row</span>
+        <span class="p">)</span>
 
-        destination = SF.vector2(x, y)
+        <span class="n">destination</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-        # define its 4 corners and texture coordinates
-        { {0, 0}, {1, 0}, {1, 1}, {0, 1} }.each do |delta|
-          @vertices.append SF::Vertex.new(
-            (destination + delta) * tile_size,
-            tex_coords: (tile_pos + delta) * tile_size
-          )
-        end
-      end
-    end
-  end
+        <span class="c1"># define its 4 corners and texture coordinates</span>
+        <span class="p">{</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">}</span> <span class="p">}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">delta</span><span class="o">|</span>
+          <span class="vi">@vertices</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">destination</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span><span class="p">,</span>
+            <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">(</span><span class="n">tile_pos</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">tile_size</span>
+          <span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  def draw(target, states)
-    # apply the transform
-    states.transform *= transform()
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="c1"># apply the transform</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span><span class="p">()</span>
 
-    # apply the tileset texture
-    states.texture = @tileset
+    <span class="c1"># apply the tileset texture</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="vi">@tileset</span>
 
-    # draw the vertex array
-    target.draw(@vertices, states)
-  end
-end</code></pre>
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="vi">@vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>And now, the application that uses it:</p>
-<pre class="codehilite"><code class="language-crystal"># create the window
-window = SF::RenderWindow.new(SF::VideoMode.new(512, 256), &quot;Tilemap&quot;)
+<div class="codehilite"><pre><span></span><code><span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="s2">&quot;Tilemap&quot;</span><span class="p">)</span>
 
-# define the level with an array of tile indices
-level = [
-  0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-  0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
-  1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
-  0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
-  0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
-  0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
-  2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
-  0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1
-]
+<span class="c1"># define the level with an array of tile indices</span>
+<span class="n">level</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="o">]</span>
 
-# create the tilemap from the level definition
-map = TileMap.new(&quot;tileset.png&quot;, SF.vector2(32, 32), level, 16, 8)
+<span class="c1"># create the tilemap from the level definition</span>
+<span class="n">map</span> <span class="o">=</span> <span class="n">TileMap</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;tileset.png&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="n">level</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 
-# run the main loop
-while window.open?
-  # handle events
-  while event = window.poll_event
-    if event.is_a? SF::Event::Closed
-      window.close
-    end
-  end
+<span class="c1"># run the main loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="c1"># handle events</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  # draw the map
-  window.clear
-  window.draw(map)
-  window.display
-end</code></pre>
+  <span class="c1"># draw the map</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">map</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p><img alt="The tilemap example" src="images/vertex-array-tilemap.png" /></p>
 <h2 id="example-particle-system">Example: particle system</h2>
 <p>This second example implements another common entity: The particle system. This one is very simple, with no texture and as few parameters as possible. It demonstrates the use of the <code>SF::Points</code> primitive type with a dynamic vertex array which changes every frame.</p>
-<pre class="codehilite"><code class="language-crystal">struct Particle
-  def initialize(@velocity, @lifetime, @position)
-    @total_lifetime = @lifetime
-  end
-  property velocity : SF::Vector2f
-  property lifetime : SF::Time
-  property position : SF::Vector2f
-  getter total_lifetime : SF::Time
-end
+<div class="codehilite"><pre><span></span><code><span class="k">struct</span> <span class="nc">Particle</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@velocity</span><span class="p">,</span> <span class="vi">@lifetime</span><span class="p">,</span> <span class="vi">@position</span><span class="p">)</span>
+    <span class="vi">@total_lifetime</span> <span class="o">=</span> <span class="vi">@lifetime</span>
+  <span class="k">end</span>
+  <span class="bp">property</span> <span class="n">velocity</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vector2f</span>
+  <span class="bp">property</span> <span class="n">lifetime</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span>
+  <span class="bp">property</span> <span class="n">position</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vector2f</span>
+  <span class="bp">getter</span> <span class="n">total_lifetime</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span>
+<span class="k">end</span>
 
-class ParticleSystem &lt; SF::Transformable
-  include SF::Drawable
+<span class="k">class</span> <span class="nc">ParticleSystem</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
-  def initialize(@count : Int32)
-    super()
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@count</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+    <span class="k">super</span><span class="p">()</span>
 
-    @particles = [] of Particle
-    @emitter = SF::Vector2f.new(0.0f32, 0.0f32)
-    @random = Random.new
-  end
+    <span class="vi">@particles</span> <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="n">Particle</span>
+    <span class="vi">@emitter</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vector2f</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mf">0.0f32</span><span class="p">,</span> <span class="mf">0.0f32</span><span class="p">)</span>
+    <span class="vi">@random</span> <span class="o">=</span> <span class="n">Random</span><span class="o">.</span><span class="n">new</span>
+  <span class="k">end</span>
 
-  property emitter
+  <span class="bp">property</span> <span class="n">emitter</span>
 
-  def update(elapsed)
-    @particles.map! do |p|
-      # update the position of the particle
-      p.position += p.velocity * elapsed.as_seconds
+  <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
+    <span class="vi">@particles</span><span class="o">.</span><span class="n">map!</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+      <span class="c1"># update the position of the particle</span>
+      <span class="nb">p</span><span class="o">.</span><span class="n">position</span> <span class="o">+=</span> <span class="nb">p</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">elapsed</span><span class="o">.</span><span class="n">as_seconds</span>
 
-      # update the particle lifetime
-      p.lifetime -= elapsed
+      <span class="c1"># update the particle lifetime</span>
+      <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">-=</span> <span class="n">elapsed</span>
 
-      # if the particle is dead, remove it
-      if p.lifetime &lt;= SF::Time::Zero
-        new_particle
-      else
-        p
-      end
-    end
+      <span class="c1"># if the particle is dead, remove it</span>
+      <span class="k">if</span> <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">&lt;=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span>
+        <span class="n">new_particle</span>
+      <span class="k">else</span>
+        <span class="nb">p</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
 
-    if @particles.size &lt; @count
-      @particles &lt;&lt; new_particle
-    end
-  end
+    <span class="k">if</span> <span class="vi">@particles</span><span class="o">.</span><span class="n">size</span> <span class="o">&lt;</span> <span class="vi">@count</span>
+      <span class="vi">@particles</span> <span class="o">&lt;&lt;</span> <span class="n">new_particle</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  def draw(target, states)
-    vertices = @particles.map do |p|
-      # set the alpha (transparency) of the particle according to its lifetime
-      ratio = p.lifetime / p.total_lifetime
-      color = SF.color(255, 255, 255, (ratio * 255).to_u8)
+  <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+    <span class="n">vertices</span> <span class="o">=</span> <span class="vi">@particles</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+      <span class="c1"># set the alpha (transparency) of the particle according to its lifetime</span>
+      <span class="n">ratio</span> <span class="o">=</span> <span class="nb">p</span><span class="o">.</span><span class="n">lifetime</span> <span class="o">/</span> <span class="nb">p</span><span class="o">.</span><span class="n">total_lifetime</span>
+      <span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="p">(</span><span class="n">ratio</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">to_u8</span><span class="p">)</span>
 
-      SF::Vertex.new(p.position, color)
-    end
+      <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="nb">p</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+    <span class="k">end</span>
 
-    # apply the transform
-    states.transform *= transform()
+    <span class="c1"># apply the transform</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="n">transform</span><span class="p">()</span>
 
-    # draw the vertex array
-    target.draw(vertices, SF::Points, states)
-  end
+    <span class="c1"># draw the vertex array</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Points</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  private def new_particle
-    # give a random velocity and lifetime to the particle
-    angle = @random.rand(Math::PI * 2)
-    speed = @random.rand(50.0..100.0)
-    velocity = SF.vector2f(Math.cos(angle) * speed, Math.sin(angle) * speed)
-    lifetime = SF.seconds(@random.rand(1.0..3.0))
+  <span class="k">private</span> <span class="k">def</span> <span class="nf">new_particle</span>
+    <span class="c1"># give a random velocity and lifetime to the particle</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="vi">@random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">speed</span> <span class="o">=</span> <span class="vi">@random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mf">50.0</span><span class="o">..</span><span class="mf">100.0</span><span class="p">)</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">speed</span><span class="p">,</span> <span class="n">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">*</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="n">lifetime</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="vi">@random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mf">1.0</span><span class="o">..</span><span class="mf">3.0</span><span class="p">))</span>
 
-    Particle.new(velocity, lifetime, @emitter)
-  end
-end</code></pre>
+    <span class="n">Particle</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">velocity</span><span class="p">,</span> <span class="n">lifetime</span><span class="p">,</span> <span class="vi">@emitter</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>And a little demo that uses it:</p>
-<pre class="codehilite"><code class="language-crystal"># create the window
-window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;Particles&quot;)
+<div class="codehilite"><pre><span></span><code><span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;Particles&quot;</span><span class="p">)</span>
 
-# create the particle system
-particles = ParticleSystem.new(1000)
+<span class="c1"># create the particle system</span>
+<span class="n">particles</span> <span class="o">=</span> <span class="n">ParticleSystem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 
-# create a clock to track the elapsed time
-clock = SF::Clock.new
+<span class="c1"># create a clock to track the elapsed time</span>
+<span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span>
 
-# run the main loop
-while window.open?
+<span class="c1"># run the main loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
 
-  # handle events
-  while event = window.poll_event
-    if event.is_a? SF::Event::Closed
-      window.close
-    end
-  end
+  <span class="c1"># handle events</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  # make the particle system emitter follow the mouse
-  mouse = SF::Mouse.get_position(window)
-  particles.emitter = window.map_pixel_to_coords(mouse)
+  <span class="c1"># make the particle system emitter follow the mouse</span>
+  <span class="n">mouse</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+  <span class="n">particles</span><span class="o">.</span><span class="n">emitter</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">map_pixel_to_coords</span><span class="p">(</span><span class="n">mouse</span><span class="p">)</span>
 
-  # update it
-  elapsed = clock.restart
-  particles.update(elapsed)
+  <span class="c1"># update it</span>
+  <span class="n">elapsed</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">restart</span>
+  <span class="n">particles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span>
 
-  # draw it
-  window.clear
-  window.draw(particles)
-  window.display
-end</code></pre>
+  <span class="c1"># draw it</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">particles</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p><img alt="The particles example" src="images/vertex-array-particles.png" /></p>

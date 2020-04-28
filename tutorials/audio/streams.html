@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -165,29 +166,32 @@
 <p>Since we're talking about <em>streaming</em>, we'll deal with audio data that cannot be loaded entirely in memory, and will instead be loaded in small chunks while it is being played. If your sound can be loaded completely and can fit in memory, then audio streams won't help you: Just load the audio data into a <a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a> and use a regular <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> to play it.</p>
 <h2 id="sfsoundstream">SF::SoundStream</h2>
 <p>In order to define your own audio stream, you need to inherit from the <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
-<pre class="codehilite"><code class="language-crystal">class MyAudioStream &lt; SF::SoundStream
-  def on_get_data() : Slice(Int16)?
-  end
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
+  <span class="k">def</span> <span class="nf">on_get_data</span><span class="p">()</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)?</span>
+  <span class="k">end</span>
 
-  def on_seek(time_offset : Time)
-  end
-end</code></pre>
+  <span class="k">def</span> <span class="nf">on_seek</span><span class="p">(</span><span class="n">time_offset</span> <span class="p">:</span> <span class="nb">Time</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p><code>on_get_data</code> is called by the base class whenever it runs out of audio samples and needs more of them. You must provide new audio samples by returning a slice with data:</p>
-<pre class="codehilite"><code class="language-crystal">class MyAudioStream &lt; SF::SoundStream
-  def get_data()
-    samples_array.to_slice
-  end
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
+  <span class="k">def</span> <span class="nf">get_data</span><span class="p">()</span>
+    <span class="n">samples_array</span><span class="o">.</span><span class="n">to_slice</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>You must return a non-empty slice when everything is all right, or <code>nil</code> if playback must be stopped, either because an error has occurred or because there's simply no more audio data to play.</p>
 <p>SFML makes an internal copy of the audio samples as soon as <code>on_get_data</code> returns, so you don't have to keep the original data alive if you don't want to.</p>
 <p>The <code>on_seek</code> method is called when the <code>playing_offset=</code> public method is called. Its purpose is to change the current playing position in the source data. The parameter is a time value representing the new position, from the beginning of the sound (<em>not</em> from the current position). This method is sometimes impossible to implement. In those cases leave it empty, and tell the users of your class that changing the playing position is not supported.</p>
 <p>Now your class is almost ready to work. The only thing that <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> needs to know now is the channel count and sample rate of your stream, so that it can be played as expected.</p>
-<pre class="codehilite"><code class="language-crystal"># where this is done totally depends on how your stream class is designed
-MyAudioStream.new(channel_count: ..., sample_rate: ...)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># where this is done totally depends on how your stream class is designed</span>
+<span class="n">MyAudioStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">channel_count</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="ss">sample_rate</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+</code></pre></div>
 
 
 <h2 id="threading-issues">Threading issues</h2>
@@ -198,66 +202,67 @@ MyAudioStream.new(channel_count: ..., sample_rate: ...)</code></pre>
 <p>Now that you have defined your own audio stream class, let's see how to use it. In fact, things are very similar to what's shown in the <a href="sounds.html" title="Playing sounds and musics">tutorial about SF::Music</a>. You can control playback with the <code>play</code>, <code>pause</code>, <code>stop</code> and <code>playing_offset=</code> methods. You can also play with the sound's properties, such as the volume or the pitch. You can refer to the API documentation or to the other audio tutorials for more details.</p>
 <h2 id="a-simple-example">A simple example</h2>
 <p>Here is a very simple example of a custom audio stream class which plays the data of a sound buffer. Such a class might seem totally useless, but the point here is to focus on how the data is streamed by the class, regardless of where it comes from.</p>
-<pre class="codehilite"><code class="language-crystal">require &quot;crsfml/system&quot;
-require &quot;crsfml/audio&quot;
+<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<span class="k">require</span> <span class="s2">&quot;crsfml/audio&quot;</span>
 
-# custom audio stream that plays a loaded buffer
-class MyStream &lt; SF::SoundStream
-  @samples : Slice(Int16)
+<span class="c1"># custom audio stream that plays a loaded buffer</span>
+<span class="k">class</span> <span class="nc">MyStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
+  <span class="vi">@samples</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)</span>
 
-  def initialize(@buffer : SF::SoundBuffer)
-    # get a slice that points to the buffer with samples
-    @samples = buffer.samples.to_slice(buffer.sample_count)
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@buffer</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="p">)</span>
+    <span class="c1"># get a slice that points to the buffer with samples</span>
+    <span class="vi">@samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">to_slice</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">sample_count</span><span class="p">)</span>
 
-    # reset the current playing position
-    @current_sample = 0
+    <span class="c1"># reset the current playing position</span>
+    <span class="vi">@current_sample</span> <span class="o">=</span> <span class="mi">0</span>
 
-    # initialize the base class
-    super(buffer.channel_count, buffer.sample_rate)
-  end
+    <span class="c1"># initialize the base class</span>
+    <span class="k">super</span><span class="p">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">channel_count</span><span class="p">,</span> <span class="n">buffer</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+  <span class="k">end</span>
 
-  def on_get_data()
-    # number of samples to stream every time the function is called;
-    # in a more robust implementation, it should be a fixed
-    # amount of time rather than an arbitrary number of samples
-    to_stream = {50000, @samples.size - @current_sample}.min
-    # if the end is close, set the number to play the remaining samples
+  <span class="k">def</span> <span class="nf">on_get_data</span><span class="p">()</span>
+    <span class="c1"># number of samples to stream every time the function is called;</span>
+    <span class="c1"># in a more robust implementation, it should be a fixed</span>
+    <span class="c1"># amount of time rather than an arbitrary number of samples</span>
+    <span class="n">to_stream</span> <span class="o">=</span> <span class="p">{</span><span class="mi">50000</span><span class="p">,</span> <span class="vi">@samples</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="vi">@current_sample</span><span class="p">}</span><span class="o">.</span><span class="n">min</span>
+    <span class="c1"># if the end is close, set the number to play the remaining samples</span>
 
-    # if nothing left to play
-    return nil unless to_stream &gt; 0
+    <span class="c1"># if nothing left to play</span>
+    <span class="k">return</span> <span class="kc">nil</span> <span class="k">unless</span> <span class="n">to_stream</span> <span class="o">&gt;</span> <span class="mi">0</span>
 
-    # the next audio samples to be played
-    result = (@samples.to_unsafe + @current_sample).to_slice(to_stream)
+    <span class="c1"># the next audio samples to be played</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="vi">@samples</span><span class="o">.</span><span class="n">to_unsafe</span> <span class="o">+</span> <span class="vi">@current_sample</span><span class="p">)</span><span class="o">.</span><span class="n">to_slice</span><span class="p">(</span><span class="n">to_stream</span><span class="p">)</span>
 
-    # advance the position
-    @current_sample += to_stream
+    <span class="c1"># advance the position</span>
+    <span class="vi">@current_sample</span> <span class="o">+=</span> <span class="n">to_stream</span>
 
-    result
-  end
+    <span class="n">result</span>
+  <span class="k">end</span>
 
-  def on_seek(time_offset)
-    # compute the corresponding sample index according to the
-    # sample rate and channel count
-    @current_sample = (
-      time_offset.as_seconds *
-      sample_rate * channel_count
-    ).to_i
-  end
-end
+  <span class="k">def</span> <span class="nf">on_seek</span><span class="p">(</span><span class="n">time_offset</span><span class="p">)</span>
+    <span class="c1"># compute the corresponding sample index according to the</span>
+    <span class="c1"># sample rate and channel count</span>
+    <span class="vi">@current_sample</span> <span class="o">=</span> <span class="p">(</span>
+      <span class="n">time_offset</span><span class="o">.</span><span class="n">as_seconds</span> <span class="o">*</span>
+      <span class="n">sample_rate</span> <span class="o">*</span> <span class="n">channel_count</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">to_i</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-# load an audio buffer from a sound file
-buffer = SF::SoundBuffer.from_file(&quot;canary.wav&quot;)
+<span class="c1"># load an audio buffer from a sound file</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;canary.wav&quot;</span><span class="p">)</span>
 
-# initialize and play our custom stream
-stream = MyStream.new(buffer)
-stream.play
+<span class="c1"># initialize and play our custom stream</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="n">MyStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">play</span>
 
-# let it play until it is finished
-while stream.status == SF::SoundSource::Playing
-  SF.sleep(SF.seconds(1))
-  # jump back every so often
-  stream.playing_offset -= SF.seconds(0.7)
-end</code></pre>
+<span class="c1"># let it play until it is finished</span>
+<span class="k">while</span> <span class="n">stream</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundSource</span><span class="o">::</span><span class="n">Playing</span>
+  <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+  <span class="c1"># jump back every so often</span>
+  <span class="n">stream</span><span class="o">.</span><span class="n">playing_offset</span> <span class="o">-=</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div>
               
             </div>
           </div>

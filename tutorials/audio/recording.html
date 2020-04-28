@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -156,25 +157,26 @@
 <h2 id="recording-to-a-sound-buffer">Recording to a sound buffer</h2>
 <p>The most common use for captured audio data is for it to be saved to a sound buffer (<a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a>) so that it can either be played or saved to a file.</p>
 <p>This can be achieved with the very simple interface of the <a href="http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html">SoundBufferRecorder</a> class:</p>
-<pre class="codehilite"><code class="language-crystal"># first check if an input audio device is available on the system
-if !SF::SoundBufferRecorder.available?
-  # error: audio capture is not available on this system
-  ...
-end
+<div class="codehilite"><pre><span></span><code><span class="c1"># first check if an input audio device is available on the system</span>
+<span class="k">if</span> <span class="o">!</span><span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
+  <span class="c1"># error: audio capture is not available on this system</span>
+  <span class="o">...</span>
+<span class="k">end</span>
 
-# create the recorder
-recorder = SF::SoundBufferRecorder.new
+<span class="c1"># create the recorder</span>
+<span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
 
-# start the capture
-recorder.start
+<span class="c1"># start the capture</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">start</span>
 
-# wait...
+<span class="c1"># wait...</span>
 
-# stop the capture
-recorder.stop
+<span class="c1"># stop the capture</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">stop</span>
 
-# retrieve the buffer that contains the captured audio data
-buffer = recorder.buffer</code></pre>
+<span class="c1"># retrieve the buffer that contains the captured audio data</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="n">recorder</span><span class="o">.</span><span class="n">buffer</span>
+</code></pre></div>
 
 
 <p>The <code>SoundBufferRecorder.available?</code> class method checks if audio recording is supported by the system. It if returns <code>false</code>, you won't be able to use the <a href="http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html">SoundBufferRecorder</a> class at all.</p>
@@ -183,22 +185,25 @@ buffer = recorder.buffer</code></pre>
 <ul>
 <li>Save it to a file</li>
 </ul>
-<pre class="codehilite"><code class="language-crystal">buffer.save_to_file(&quot;my_record.ogg&quot;)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">buffer</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">&quot;my_record.ogg&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 
 <ul>
 <li>Play it directly</li>
 </ul>
-<pre class="codehilite"><code class="language-crystal">sound = SF::Sound.new(buffer)
-sound.play</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span>
+</code></pre></div>
 
 
 <ul>
 <li>Access the raw audio data and analyze it, transform it, etc.</li>
 </ul>
-<pre class="codehilite"><code class="language-crystal">samples = buffer.samples
-count = buffer.sample_count
-do_something(samples, count)</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">samples</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">sample_count</span>
+<span class="n">do_something</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>If you want to use the captured audio data after the recorder is destroyed or restarted, don't forget to make a <em>copy</em> of the buffer.</p>
@@ -206,22 +211,23 @@ do_something(samples, count)</code></pre>
 <p>If you have multiple sound input devices connected to your computer (for example a microphone, a sound interface (external soundcard) or a webcam microphone) you can specify the device that is used for recording. A sound input device is identified by its name. An <code>Array(String)</code> containing the names of all connected devices is available through the class method <code>SoundBufferRecorder.available_devices</code>. You can then select a device from the list for recording, by passing the chosen device name to the <code>device=</code> method. It is even possible to change the device on the fly (i.e. while recording).</p>
 <p>The name of the currently used device can be obtained by calling <code>device</code>. If you don't choose a device yourself, the default device will be used. Its name can be obtained through the <code>default_device</code> class method.</p>
 <p>Here is a small example of how to set the input device:</p>
-<pre class="codehilite"><code class="language-crystal"># get the available sound input device names
-available_devices = SF::SoundRecorder.available_devices
+<div class="codehilite"><pre><span></span><code><span class="c1"># get the available sound input device names</span>
+<span class="n">available_devices</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span><span class="o">.</span><span class="n">available_devices</span>
 
-# choose a device
-input_device = available_devices[0]
+<span class="c1"># choose a device</span>
+<span class="n">input_device</span> <span class="o">=</span> <span class="n">available_devices</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 
-# create the recorder
-recorder = SF::SoundBufferRecorder.new
+<span class="c1"># create the recorder</span>
+<span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
 
-# set the device
-unless recorder.device = input_device
-    # error: device selection failed
-    ...
-end
+<span class="c1"># set the device</span>
+<span class="k">unless</span> <span class="n">recorder</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">input_device</span>
+    <span class="c1"># error: device selection failed</span>
+    <span class="o">...</span>
+<span class="k">end</span>
 
-# use recorder as usual</code></pre>
+<span class="c1"># use recorder as usual</span>
+</code></pre></div>
 
 
 <!--
@@ -241,42 +247,44 @@ There are also two additional virtual functions that you can optionally override
 Here is the skeleton of a complete derived class:
 
 
-<pre class="codehilite"><code class="language-crystal">class MyRecorder &lt; SF::SoundRecorder
-  def on_start # optional
-    # initialize whatever has to be done before the capture starts
-    ...
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyRecorder</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
+  <span class="k">def</span> <span class="nf">on_start</span> <span class="c1"># optional</span>
+    <span class="c1"># initialize whatever has to be done before the capture starts</span>
+    <span class="o">...</span>
 
-    # return true to start the capture, or false to cancel it
-    true
-  end
+    <span class="c1"># return true to start the capture, or false to cancel it</span>
+    <span class="kc">true</span>
+  <span class="k">end</span>
 
-  def on_process_samples(samples, sample_count)
-    # do something useful with the new chunk of samples
-    ...
+  <span class="k">def</span> <span class="nf">on_process_samples</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">sample_count</span><span class="p">)</span>
+    <span class="c1"># do something useful with the new chunk of samples</span>
+    <span class="o">...</span>
 
-    # return true to continue the capture, or false to stop it
-    true
-  end
+    <span class="c1"># return true to continue the capture, or false to stop it</span>
+    <span class="kc">true</span>
+  <span class="k">end</span>
 
-  def on_stop # optional
-    # clean up whatever has to be done after the capture is finished
-    ...
-  end
-end</code></pre>
+  <span class="k">def</span> <span class="nf">on_stop</span> <span class="c1"># optional</span>
+    <span class="c1"># clean up whatever has to be done after the capture is finished</span>
+    <span class="o">...</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 
 The `available?`/`start`/`stop` functions are defined in the [SoundRecorder](http://oprypin.github.io/crsfml/api/SF/SoundRecorder.html) base, and thus inherited in every derived classes. This means that you can use any recorder class exactly the same way as the [SoundBufferRecorder](http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html) class above.
 
 
-<pre class="codehilite"><code class="language-crystal">unless MyRecorder.available?
-  # error...
-end
+<div class="codehilite"><pre><span></span><code><span class="k">unless</span> <span class="n">MyRecorder</span><span class="o">.</span><span class="n">available?</span>
+  <span class="c1"># error...</span>
+<span class="k">end</span>
 
-recorder = MyRecorder.new
-recorder.start
-...
-recorder.stop</code></pre>
+<span class="n">recorder</span> <span class="o">=</span> <span class="n">MyRecorder</span><span class="o">.</span><span class="n">new</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">start</span>
+<span class="o">...</span>
+<span class="n">recorder</span><span class="o">.</span><span class="n">stop</span>
+</code></pre></div>
 
 
 

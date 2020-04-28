@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -168,17 +169,18 @@
 <p>To use OpenGL, you'll need to find a library that implements Crystal bindings to it. This tutorial also contains small bits of OpenGL bindings.</p>
 <h2 id="creating-an-opengl-window">Creating an OpenGL window</h2>
 <p>Since SFML is based on OpenGL, its windows are ready for OpenGL calls without any extra effort.</p>
-<pre class="codehilite"><code class="language-crystal">@[Link(&quot;GL&quot;)] # Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX
-lib GL
- fun enable = glEnable(cap : Int32)
- TEXTURE_2D = 3553
-end
+<div class="codehilite"><pre><span></span><code><span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span> <span class="c1"># Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX</span>
+<span class="k">lib</span> <span class="nn">GL</span>
+ <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+ <span class="n">TEXTURE_2D</span> <span class="o">=</span> <span class="mi">3553</span>
+<span class="k">end</span>
 
-window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;OpenGL&quot;)
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
 
-# it works out of the box
-GL.enable(GL::TEXTURE_2D)
-...</code></pre>
+<span class="c1"># it works out of the box</span>
+<span class="no">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
+<span class="o">...</span>
+</code></pre></div>
 
 
 <p>In case you think it is <em>too</em> automatic, <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a>'s constructor has an extra argument that allows you to change the settings of the underlying OpenGL context. This argument is an instance of the structure, it provides access to the following settings:</p>
@@ -188,74 +190,77 @@ GL.enable(GL::TEXTURE_2D)
 <li><code>antialiasing_level</code> is the multisampling level</li>
 <li><code>major_version</code> and <code>minor_version</code> comprise the requested version of OpenGL</li>
 </ul>
-<pre class="codehilite"><code class="language-crystal">settings = SF::ContextSettings.new(
-  depth: 24, stencil: 8, antialiasing: 4,
-  major: 3, minor: 0
-)
+<div class="codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+  <span class="ss">depth</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="ss">stencil</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="ss">antialiasing</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="ss">major</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">minor</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">)</span>
 
-window = SF::RenderWindow.new(
-    SF::VideoMode.new(800, 600),
-    &quot;OpenGL&quot;, settings: settings
-)</code></pre>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+    <span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span>
+    <span class="s2">&quot;OpenGL&quot;</span><span class="p">,</span> <span class="ss">settings</span><span class="p">:</span> <span class="n">settings</span>
+<span class="p">)</span>
+</code></pre></div>
 
 
 <p>If any of these settings is not supported by the graphics card, SFML tries to find the closest valid match. For example, if 4x anti-aliasing is too high, it tries 2x and then falls back to 0.<br />
 In any case, you can check what settings SFML actually used with the <code>settings</code> method:</p>
-<pre class="codehilite"><code class="language-crystal">settings = window.settings
+<div class="codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">settings</span>
 
-puts &quot;depth bits: #{settings.depth_bits}&quot;
-puts &quot;stencil bits: #{settings.stencil_bits}&quot;
-puts &quot;antialiasing level: #{settings.antialiasing_level}&quot;
-puts &quot;version: #{settings.major_version}.#{settings.minor_version}&quot;</code></pre>
+<span class="nb">puts</span> <span class="s2">&quot;depth bits: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">depth_bits</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;stencil bits: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">stencil_bits</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;antialiasing level: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">antialiasing_level</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;version: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">major_version</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">minor_version</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
 
 
 <p>OpenGL versions above 3.0 are supported by SFML (as long as your graphics driver can handle them). Support for selecting the profile of 3.2+ contexts and whether the context debug flag is set was added in SFML 2.3. The forward compatibility flag is not supported. By default, SFML creates 3.2+ contexts using the compatibility profile because the graphics module makes use of legacy OpenGL functionality. If you intend on using the graphics module, make sure to create your context without the core profile setting or the graphics module will not function correctly. On OS X, SFML supports creating OpenGL 3.2+ contexts using the core profile only. If you want to use the graphics module on OS X, you are limited to using a legacy context which implies OpenGL version 2.1.</p>
 <h2 id="a-typical-opengl-with-crsfml-program">A typical OpenGL-with-CrSFML program</h2>
 <p>Here is what a complete OpenGL program would look like with CrSFML:</p>
-<pre class="codehilite"><code class="language-crystal">require &quot;crsfml&quot;
+<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
-# create bindings
-@[Link(&quot;GL&quot;)]
-lib GL
-  fun enable = glEnable(cap : Int32)
-  fun viewport = glViewport(x : Int32, y : Int32, width : Int32, height : Int32)
-  fun clear = glClear(mask : Int32)
-  TEXTURE_2D = 3553
-  COLOR_BUFFER_BIT = 16384
-  DEPTH_BUFFER_BIT = 256
-end
+<span class="c1"># create bindings</span>
+<span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span>
+<span class="k">lib</span> <span class="nn">GL</span>
+  <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">viewport</span> <span class="o">=</span> <span class="n">glViewport</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">width</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">clear</span> <span class="o">=</span> <span class="n">glClear</span><span class="p">(</span><span class="n">mask</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+  <span class="n">TEXTURE_2D</span> <span class="o">=</span> <span class="mi">3553</span>
+  <span class="no">COLOR_BUFFER_BIT</span> <span class="o">=</span> <span class="mi">16384</span>
+  <span class="no">DEPTH_BUFFER_BIT</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="k">end</span>
 
-GL.enable(GL::TEXTURE_2D)
+<span class="no">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
 
-# create the window
-settings = SF::ContextSettings.new(32)
-window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;OpenGL&quot;, settings: settings)
-window.vertical_sync_enabled = true
+<span class="c1"># create the window</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">,</span> <span class="ss">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">vertical_sync_enabled</span> <span class="o">=</span> <span class="kc">true</span>
 
-# load resources, initialize the OpenGL states, ...
+<span class="c1"># load resources, initialize the OpenGL states, ...</span>
 
-# run the main loop
-running = true
-while running
-  # handle events
-  while event = window.poll_event
-    if event.is_a? SF::Event::Closed
-      # end the program
-      running = false
-    elsif event.is_a? SF::Event::Resized
-      # adjust the viewport when the window is resized
-      GL.viewport(0, 0, event.width, event.height)
-    end
-  end
+<span class="c1"># run the main loop</span>
+<span class="n">running</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="k">while</span> <span class="n">running</span>
+  <span class="c1"># handle events</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+      <span class="c1"># end the program</span>
+      <span class="n">running</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="k">elsif</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
+      <span class="c1"># adjust the viewport when the window is resized</span>
+      <span class="no">GL</span><span class="o">.</span><span class="n">viewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  # clear the buffers
-  GL.clear(GL::COLOR_BUFFER_BIT | GL::DEPTH_BUFFER_BIT)
+  <span class="c1"># clear the buffers</span>
+  <span class="no">GL</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="no">COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="no">GL</span><span class="o">::</span><span class="no">DEPTH_BUFFER_BIT</span><span class="p">)</span>
 
-  # draw...
+  <span class="c1"># draw...</span>
 
-  # end the current frame (internally swaps the front and back buffers)
-  window.display
-end</code></pre>
+  <span class="c1"># end the current frame (internally swaps the front and back buffers)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Here we don't use <code>window.open?</code> as the condition of the main loop, because we need the window to remain open until the program ends, so that we still have a valid OpenGL context for the last iteration of the loop and the cleanup code.</p>
@@ -263,15 +268,16 @@ end</code></pre>
 <h2 id="managing-multiple-opengl-windows">Managing multiple OpenGL windows</h2>
 <p>Managing multiple OpenGL windows is not more complicated than managing one, there are just a few things to keep in mind.</p>
 <p>OpenGL calls are made on the active context (thus the active window). Therefore if you want to draw to two different windows within the same program, you have to select which window is active before drawing something. This can be done with the <code>active=</code> method:</p>
-<pre class="codehilite"><code class="language-crystal"># activate the first window
-window1.active = true
+<div class="codehilite"><pre><span></span><code><span class="c1"># activate the first window</span>
+<span class="n">window1</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">true</span>
 
-# draw to the first window...
+<span class="c1"># draw to the first window...</span>
 
-# activate the second window
-window2.active = true
+<span class="c1"># activate the second window</span>
+<span class="n">window2</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">true</span>
 
-# draw to the second window...</code></pre>
+<span class="c1"># draw to the second window...</span>
+</code></pre></div>
 
 
 <p>Only one context (window) can be active in a thread, so you don't need to deactivate a window before activating another one, it is deactivated automatically. This is how OpenGL works.</p>
@@ -289,29 +295,31 @@ window2.active = true
 <li>...</li>
 </ul>
 <p>The easiest solution is to let CrSFML do it for you, with the <code>push_gl_states</code>/<code>pop_gl_states</code> methods:</p>
-<pre class="codehilite"><code class="language-crystal">glDraw...
+<div class="codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
 
-window.push_gl_states
+<span class="n">window</span><span class="o">.</span><span class="n">push_gl_states</span>
 
-window.draw(...)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-window.pop_gl_states
+<span class="n">window</span><span class="o">.</span><span class="n">pop_gl_states</span>
 
-glDraw...</code></pre>
+<span class="n">glDraw</span><span class="o">...</span>
+</code></pre></div>
 
 
 <p>Since it has no knowledge about your OpenGL code, SFML can't optimize these steps and as a result it saves/restores all available OpenGL states and matrices. This may be acceptable for small projects, but it might also be too slow for bigger programs that require maximum performance. In this case, you can handle saving and restoring the OpenGL states yourself, with <code>glPushAttrib</code>/<code>glPopAttrib</code>, <code>glPushMatrix</code>/<code>glPopMatrix</code>, etc.<br />
 If you do this, you'll still need to restore SFML's own states before drawing. This is done with the <code>reset_gl_states</code> method.</p>
-<pre class="codehilite"><code class="language-crystal">glDraw...
+<div class="codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
 
-glPush...
-window.reset_gl_states
+<span class="n">glPush</span><span class="o">...</span>
+<span class="n">window</span><span class="o">.</span><span class="n">reset_gl_states</span>
 
-window.draw(...)
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-glPop...
+<span class="n">glPop</span><span class="o">...</span>
 
-glDraw...</code></pre>
+<span class="n">glDraw</span><span class="o">...</span>
+</code></pre></div>
 
 
 <p>By saving and restoring OpenGL states yourself, you can manage only the ones that you really need which leads to reducing the number of unnecessary driver calls.</p>

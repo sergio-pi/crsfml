@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -178,13 +179,14 @@ UDP is a <em>datagram</em> protocol. Datagrams are packets that can't be mixed w
 <h2 id="connecting-a-tcp-socket">Connecting a TCP socket</h2>
 <p>As you can guess, this part is specific to TCP sockets. There are two sides to a connection: the one that waits for the incoming connection (let's call it the server), and the one that triggers it (let's call it the client).</p>
 <p>On client side, things are simple: the user just needs to have a <a href="http://oprypin.github.io/crsfml/api/SF/TcpSocket.html">TcpSocket</a> and call its <code>connect</code> method to start the connection attempt.</p>
-<pre class="codehilite"><code class="language-crystal">require &quot;crsfml/network&quot;
+<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/network&quot;</span>
 
-socket = SF::TcpSocket.new
-status = socket.connect(SF::IpAddress.new(&quot;192.168.0.5&quot;), 53000)
-unless status == SF::Socket::Done
-  # error
-end</code></pre>
+<span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">),</span> <span class="mi">53000</span><span class="p">)</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>The first argument is the address of the host to connect to. It is an <a href="http://oprypin.github.io/crsfml/api/SF/IpAddress.html">IpAddress</a>, which can represent any valid address: a URL, an IP address, or a network host name. See its documentation for more details.</p>
@@ -195,33 +197,35 @@ end</code></pre>
 You can change this behavior and make all methods non-blocking by using the <code>blocking=</code> method of the socket. See the next chapters for more details.</p>
 <p>On the server side, a few more things have to be done. Multiple sockets are required: One that listens for incoming connections, and one for each connected client.</p>
 <p>To listen for connections, you must use the special <a href="http://oprypin.github.io/crsfml/api/SF/TcpListener.html">TcpListener</a> class. Its only role is to wait for incoming connection attempts on a given port, it can't send or receive data.</p>
-<pre class="codehilite"><code class="language-crystal">listener = SF::TcpListener.new
+<div class="codehilite"><pre><span></span><code><span class="n">listener</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 
-# bind the listener to a port
-unless listener.listen(53000) == SF::Socket::Done
-  # error...
-end
+<span class="c1"># bind the listener to a port</span>
+<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error...</span>
+<span class="k">end</span>
 
-# accept a new connection
-client = SF::TcpSocket.new
-unless listener.accept(client) == SF::Socket::Done
-  # error...
-end
+<span class="c1"># accept a new connection</span>
+<span class="n">client</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error...</span>
+<span class="k">end</span>
 
-# use &quot;client&quot; to communicate with the connected client,
-# and continue to accept new connections with the listener</code></pre>
+<span class="c1"># use &quot;client&quot; to communicate with the connected client,</span>
+<span class="c1"># and continue to accept new connections with the listener</span>
+</code></pre></div>
 
 
 <p>The <code>accept</code> method blocks until a connection attempt arrives (unless the socket is configured as non-blocking). When it happens, it initializes the given socket and returns. The socket can now be used to communicate with the new client, and the listener can go back to waiting for another connection attempt.</p>
 <p>After a successful call to <code>connect</code> (on client side) and <code>accept</code> (on server side), the communication is established and both sockets are ready to exchange data.</p>
 <h2 id="binding-a-udp-socket">Binding a UDP socket</h2>
 <p>UDP sockets need not be connected, however you need to bind them to a specific port if you want to be able to receive data on that port. A UDP socket cannot receive on multiple ports simultaneously.</p>
-<pre class="codehilite"><code class="language-crystal">socket = SF::UdpSocket.new
+<div class="codehilite"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
 
-# bind the socket to a port
-unless socket.bind(54000) == SF::Socket::Done
-  # error...
-end</code></pre>
+<span class="c1"># bind the socket to a port</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="mi">54000</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error...</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>After binding the socket to a port, it's ready to receive data on that port. If you want the operating system to bind the socket to a free port automatically, you can pass <code>SF::Socket::AnyPort</code>, and then retrieve the chosen port with <code>socket.local_port</code>.</p>
@@ -229,40 +233,42 @@ end</code></pre>
 <h2 id="sending-and-receiving-data">Sending and receiving data</h2>
 <p>Sending and receiving data is done in the same way for both types of sockets. The only difference is that UDP has two extra arguments: the address and port of the sender/recipient. There are two different methods for each operation: the low-level one, that sends/receives a raw array of bytes, and the higher-level one, which uses the <a href="http://oprypin.github.io/crsfml/api/SF/Packet.html">Packet</a> class. See the <a href="packet.html" title="Tutorial on packets">tutorial on packets</a> for more details about this class. In this tutorial, we'll only explain the low-level methods.</p>
 <p>To send data, you must call the <code>send</code> method with a pointer to the data that you want to send, and the number of bytes to send.</p>
-<pre class="codehilite"><code class="language-crystal">data = Slice.new(77) { rand(256).to_u8 }
+<div class="codehilite"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">Slice</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span> <span class="p">{</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">to_u8</span> <span class="p">}</span>
 
-# TCP socket:
-unless socket.send(data) == SF::Socket::Done
-  # error
-end
+<span class="c1"># TCP socket:</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
 
-# UDP socket:
-recipient = SF::IpAddress.new(&quot;192.168.0.5&quot;)
-port = 54000
-unless socket.send(data, recipient, port) == SF::Socket::Done
-  # error
-end</code></pre>
+<span class="c1"># UDP socket:</span>
+<span class="n">recipient</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">)</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">54000</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>The <code>send</code> methods take a data slice, so you can pass the address of anything. However, it is generally a bad idea to send something other than an array of bytes because native types with a size larger than 1 byte are not guaranteed to be the same on every machine: Types such as int or long may have a different size, and/or a different endianness. Therefore, such types cannot be exchanged reliably across different systems. This problem is explained (and solved) in the <a href="packet.html" title="Tutorial on packets">tutorial on packets</a>.</p>
 <p>With UDP you can broadcast a message to an entire sub-network in a single call: to do so you can use the special address <code>SF::IpAddress::Broadcast</code>.</p>
 <p>There's another thing to keep in mind with UDP: Since data is sent in datagrams and the size of these datagrams has a limit, you are not allowed to exceed it. Every call to <code>send</code> must send less that <code>SF::UdpSocket.max_datagram_size</code> bytes -- which is a little less than 2^16 (65536) bytes.</p>
 <p>To receive data, you must call the <code>receive</code> method:</p>
-<pre class="codehilite"><code class="language-crystal">data = Slice(UInt8).new(100)
+<div class="codehilite"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
-# TCP socket:
-status, received = socket.receive(data)
-unless status == SF::Socket::Done
-  # error
-end
-puts &quot;Received #{received} bytes&quot;
+<span class="c1"># TCP socket:</span>
+<span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="s2">&quot;Received </span><span class="si">#{</span><span class="n">received</span><span class="si">}</span><span class="s2"> bytes&quot;</span>
 
-# UDP socket:
-status, received, sender, port = socket.receive(data)
-unless status == SF::Socket::Done
-  # error...
-end
-puts &quot;Received #{received} bytes from #{sender} on port #{port}&quot;</code></pre>
+<span class="c1"># UDP socket:</span>
+<span class="n">status</span><span class="p">,</span> <span class="n">received</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="c1"># error...</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="s2">&quot;Received </span><span class="si">#{</span><span class="n">received</span><span class="si">}</span><span class="s2"> bytes from </span><span class="si">#{</span><span class="n">sender</span><span class="si">}</span><span class="s2"> on port </span><span class="si">#{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
 
 
 <p>It is important to keep in mind that if the socket is in blocking mode, <code>receive</code> will wait until something is received, blocking the thread that called it (and thus possibly the whole program).</p>
@@ -272,56 +278,61 @@ With UDP sockets, the last two arguments will contain the address and port of th
 <h2 id="blocking-on-a-group-of-sockets">Blocking on a group of sockets</h2>
 <p>Blocking on a single socket can quickly become annoying, because you will most likely have to handle more than one client. You most likely don't want socket A to block your program while socket B has received something that could be processed. What you would like is to block on multiple sockets at once, i.e. waiting until <em>any of them</em> has received something. This is possible with socket selectors, represented by the <a href="http://oprypin.github.io/crsfml/api/SF/SocketSelector.html">SocketSelector</a> class.</p>
 <p>A selector can monitor all types of sockets: <a href="http://oprypin.github.io/crsfml/api/SF/TcpSocket.html">TcpSocket</a>, <a href="http://oprypin.github.io/crsfml/api/SF/UdpSocket.html">UdpSocket</a>, and <a href="http://oprypin.github.io/crsfml/api/SF/TcpListener.html">TcpListener</a>. To add a socket to a selector, use its <code>add</code> method:</p>
-<pre class="codehilite"><code class="language-crystal">socket = SF::TcpSocket.new
+<div class="codehilite"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 
-selector = SF::SocketSelector.new
-selector.add socket</code></pre>
+<span class="n">selector</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
+<span class="n">selector</span><span class="o">.</span><span class="n">add</span> <span class="n">socket</span>
+</code></pre></div>
 
 
 <p>A selector is not a socket container. It only references (points to) the sockets that you add, it doesn't store them. There is no way to retrieve or count the sockets that you put inside. Instead, it is up to you to have your own separate socket storage (like an <code>Array</code>).</p>
 <p>Once you have filled the selector with all the sockets that you want to monitor, you must call its <code>wait</code> method to wait until any one of them has received something (or has triggered an error). You can also pass an optional time out value, so that the method will fail if nothing has been received after a certain period of time -- this avoids staying stuck forever if nothing happens.</p>
-<pre class="codehilite"><code class="language-crystal">if selector.wait SF.seconds(10)
-  # received something
-else
-  # timeout reached, nothing was received...
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+  <span class="c1"># received something</span>
+<span class="k">else</span>
+  <span class="c1"># timeout reached, nothing was received...</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>If the <code>wait</code> method returns <code>true</code>, it means that one or more socket(s) have received something, and you can safely call <code>receive</code> on the socket(s) with pending data without having them block. If the socket is a <a href="http://oprypin.github.io/crsfml/api/SF/TcpListener.html">TcpListener</a>, it means that an incoming connection is ready to be accepted and that you can call its <code>accept</code> method without having it block.</p>
 <p>Since the selector is not a socket container, it cannot return the sockets that are ready to receive. Instead, you must test each candidate socket with the <code>ready?</code> method:</p>
-<pre class="codehilite"><code class="language-crystal">if selector.wait SF.seconds(10)
-  my_sockets.each do |socket|
-    if selector.ready?(socket)
-      # this socket is ready, you can receive (or accept if it's a listener)
-      socket.receive(...)
-    end
-  end
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+  <span class="n">my_sockets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">socket</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">ready?</span><span class="p">(</span><span class="n">socket</span><span class="p">)</span>
+      <span class="c1"># this socket is ready, you can receive (or accept if it&#39;s a listener)</span>
+      <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>You can have a look at the API documentation of the <a href="http://oprypin.github.io/crsfml/api/SF/SocketSelector.html">SocketSelector</a> class for a working example of how to use a selector to handle connections and messages from multiple clients.</p>
 <p>As a bonus, the timeout capability of <code>Selector#wait</code> allows you to implement a receive-with-timeout method, which is not directly available in the socket classes, very easily:</p>
-<pre class="codehilite"><code class="language-crystal">def receive_with_timeout(socket : SF::TcpSocket, packet : SF::Packet, timeout : SF::Time)
-  selector = SF::SocketSelector.new
-  selector.add socket
-  if selector.wait(timeout)
-    socket.receive(packet)
-  else
-    SF::Socket::NotReady
-  end
-end</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">receive_with_timeout</span><span class="p">(</span><span class="n">socket</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="p">,</span> <span class="n">packet</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span><span class="p">)</span>
+  <span class="n">selector</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">selector</span><span class="o">.</span><span class="n">add</span> <span class="n">socket</span>
+  <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
+    <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">NotReady</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <h2 id="non-blocking-sockets">Non-blocking sockets</h2>
 <p>All sockets are blocking by default, but you can change this behaviour at any time with the <code>setBlocking</code> method.</p>
-<pre class="codehilite"><code class="language-crystal">tcp_socket = SF::TcpSocket.new
-tcp_socket.blocking = false
+<div class="codehilite"><pre><span></span><code><span class="n">tcp_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">tcp_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
 
-listener_socket = SF::TcpListener.new
-listener_socket.blocking = false
+<span class="n">listener_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<span class="n">listener_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
 
-udp_socket = SF::UdpSocket.new
-udp_socket.blocking = false</code></pre>
+<span class="n">udp_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre></div>
 
 
 <p>Once a socket is set as non-blocking, all of its methods always return immediately. For example, <code>receive</code> will return with status <code>SF::Socket::NotReady</code> if there's no data available. Or, <code>accept</code> will return immediately, with the same status, if there's no pending connection.</p>

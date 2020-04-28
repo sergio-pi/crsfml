@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../codehilite.css" rel="stylesheet" />
   <link href="../style.css" rel="stylesheet" />
   
   <script>
@@ -165,30 +166,31 @@
 <p>To draw the entities provided by the graphics module, you must use a specialized window class: <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a>. This class is derived from <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a>, and inherits all its methods. Everything that you've learnt about <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a> (creation, event handling, controlling the framerate, mixing with OpenGL, etc.) is applicable to <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a> as well.</p>
 <p>On top of that, <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a> adds high-level methods to help you draw things easily. In this tutorial we'll focus on two of these methods: <code>clear</code> and <code>draw</code>. They are as simple as their name implies: <code>clear</code> clears the whole window with the chosen color, and <code>draw</code> draws whatever object you pass to it.</p>
 <p>Here is what a typical main loop looks like with a render window:</p>
-<pre class="codehilite"><code class="language-crystal">require &quot;crsfml&quot;
+<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
-# create the window
-window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;My window&quot;)
+<span class="c1"># create the window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
 
-# run the program as long as the window is open
-while window.open?
-  # check all the window's events that were triggered since the last iteration of the loop
-  while event = window.poll_event
-    # &quot;close requested&quot; event: we close the window
-    if event.is_a? SF::Event::Closed
-      window.close
-    end
-  end
+<span class="c1"># run the program as long as the window is open</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="c1"># check all the window&#39;s events that were triggered since the last iteration of the loop</span>
+  <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
+    <span class="c1"># &quot;close requested&quot; event: we close the window</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+      <span class="n">window</span><span class="o">.</span><span class="n">close</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
 
-  # clear the window with black color
-  window.clear(SF::Color::Black)
+  <span class="c1"># clear the window with black color</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span><span class="p">)</span>
 
-  # draw everything here...
-  window.draw(...)
+  <span class="c1"># draw everything here...</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 
-  # end the current frame
-  window.display
-end</code></pre>
+  <span class="c1"># end the current frame</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>Calling <code>clear</code> before drawing anything is mandatory, otherwise the contents from previous frames will be present behind anything you draw. The only exception is when you cover the entire window with what you draw, so that no pixel is not drawn to. In this case you can avoid calling <code>clear</code> (although it won't have a noticeable impact on performance).</p>
@@ -207,53 +209,56 @@ Modern graphics hardware and APIs are <em>really</em> made for repeated clear/dr
 </ul>
 <h2 id="off-screen-drawing">Off-screen drawing</h2>
 <p>SFML also provides a way to draw to a texture instead of directly to a window. To do so, use a <a href="http://oprypin.github.io/crsfml/api/SF/RenderTexture.html">RenderTexture</a> instead of a <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a>. It has the same methods for drawing, inherited from their common base: <a href="http://oprypin.github.io/crsfml/api/SF/RenderTarget.html">RenderTarget</a>.</p>
-<pre class="codehilite"><code class="language-crystal"># create a 500x500 render-texture
-render_texture = SF::RenderTexture.new(500, 500)
+<div class="codehilite"><pre><span></span><code><span class="c1"># create a 500x500 render-texture</span>
+<span class="n">render_texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
-# drawing uses the same methods
-render_texture.clear(SF::Color::Blue)
-render_texture.draw(sprite) # or any other drawable
-render_texture.display
+<span class="c1"># drawing uses the same methods</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span><span class="p">)</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span> <span class="c1"># or any other drawable</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">display</span>
 
-# get the target texture (where the stuff has been drawn)
-texture = render_texture.texture
+<span class="c1"># get the target texture (where the stuff has been drawn)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">render_texture</span><span class="o">.</span><span class="n">texture</span>
 
-# draw it to the window
-sprite = SF::Sprite.new(texture)
-window.draw(sprite)</code></pre>
+<span class="c1"># draw it to the window</span>
+<span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
+</code></pre></div>
 
 
 <p>The <code>texture</code> method returns a read-only texture, which means that you can only use it, not modify it. If you need to modify it before using it, you can copy it to your own <a href="http://oprypin.github.io/crsfml/api/SF/Texture.html">Texture</a> instance and modify that instead.</p>
 <p><a href="http://oprypin.github.io/crsfml/api/SF/RenderTexture.html">RenderTexture</a> also has the same methods as <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a> for handling views and OpenGL (see the corresponding tutorials for more details). If you use OpenGL to draw to the render-texture, you can request creation of a depth buffer by using the third optional argument of the constructor.</p>
-<pre class="codehilite"><code class="language-crystal">SF::RenderTexture.new(500, 500, true) # enable depth buffer</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="no">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1"># enable depth buffer</span>
+</code></pre></div>
 
 
 <h2 id="drawing-from-threads">Drawing from threads</h2>
 <p>CrSFML supports multi-threaded drawing, and you don't even have to do anything to make it work. The only thing to remember is to deactivate a window before using it in another thread. That's because a window (more precisely its OpenGL context) cannot be active in more than one thread at the same time.</p>
-<pre class="codehilite"><code class="language-crystal">def render_thread(window)
-  # the rendering loop
-  while window.open?
-    # draw...
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+  <span class="c1"># the rendering loop</span>
+  <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+    <span class="c1"># draw...</span>
 
-    # end the current frame
-    window.display
-  end
-end
+    <span class="c1"># end the current frame</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">display</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-# create the window (remember: it's safer to create it in the main thread due to OS limitations)
-window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;OpenGL&quot;)
+<span class="c1"># create the window (remember: it&#39;s safer to create it in the main thread due to OS limitations)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
 
-# deactivate its OpenGL context
-window.active = false
+<span class="c1"># deactivate its OpenGL context</span>
+<span class="n">window</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">false</span>
 
-# launch the rendering thread
-thread = SF::Thread.new(-&gt;{ render_thread(window) })
-thread.launch
+<span class="c1"># launch the rendering thread</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="p">{</span> <span class="n">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="p">})</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">launch</span>
 
-# the event/logic/whatever loop
-while window.open?
-  ...
-end</code></pre>
+<span class="c1"># the event/logic/whatever loop</span>
+<span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
+  <span class="o">...</span>
+<span class="k">end</span>
+</code></pre></div>
 
 
 <p>As you can see, you don't even need to bother with the activation of the window in the rendering thread, CrSFML does it automatically for you whenever it needs to be done.</p>
