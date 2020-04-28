@@ -1,609 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Using OpenGL in an SFML window - CrSFML Tutorials</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Using OpenGL in an SFML window · CrSFML Tutorials</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../style.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Using OpenGL in an SFML window";
+    var mkdocs_page_input_path = "window/opengl.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<body class="wy-body-for-nav" role="document">
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <div class="wy-grid-for-nav">
 
     
-    <link rel="next" href="../graphics/draw.html" />
-    
-    
-    <link rel="prev" href="inputs.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://github.com/BlaXpirit/crsfml" target="_blank" class="custom-link">CrSFML</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    CrSFML tutorials
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">System module</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../system/time.html">
-            
-                <a href="../system/time.html">
-            
-                    
-                    Handling time
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../system/thread.html">
-            
-                <a href="../system/thread.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../system/stream.html">
-            
-                <a href="../system/stream.html">
-            
-                    
-                    User data streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Window module</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="window.html">
-            
-                <a href="window.html">
-            
-                    
-                    Opening and managing an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="events.html">
-            
-                <a href="events.html">
-            
-                    
-                    Events explained
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="inputs.html">
-            
-                <a href="inputs.html">
-            
-                    
-                    Keyboard, mouse and joysticks
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="3.4" data-path="opengl.html">
-            
-                <a href="opengl.html">
-            
-                    
-                    Using OpenGL in an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Graphics module</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../graphics/draw.html">
-            
-                <a href="../graphics/draw.html">
-            
-                    
-                    Drawing 2D stuff
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../graphics/sprite.html">
-            
-                <a href="../graphics/sprite.html">
-            
-                    
-                    Sprites and textures
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="../graphics/text.html">
-            
-                <a href="../graphics/text.html">
-            
-                    
-                    Text and fonts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="../graphics/shape.html">
-            
-                <a href="../graphics/shape.html">
-            
-                    
-                    Shapes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="../graphics/vertex-array.html">
-            
-                <a href="../graphics/vertex-array.html">
-            
-                    
-                    Designing your own entities with vertex arrays
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="../graphics/transform.html">
-            
-                <a href="../graphics/transform.html">
-            
-                    
-                    Position, rotation, scale: transforming entities
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="../graphics/shader.html">
-            
-                <a href="../graphics/shader.html">
-            
-                    
-                    Adding special effects with shaders
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="../graphics/view.html">
-            
-                <a href="../graphics/view.html">
-            
-                    
-                    Controlling the 2D camera with views
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Audio module</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../audio/sounds.html">
-            
-                <a href="../audio/sounds.html">
-            
-                    
-                    Playing sounds and music
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../audio/recording.html">
-            
-                <a href="../audio/recording.html">
-            
-                    
-                    Recording audio
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="../audio/streams.html">
-            
-                <a href="../audio/streams.html">
-            
-                    
-                    Custom audio streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../audio/spatialization.html">
-            
-                <a href="../audio/spatialization.html">
-            
-                    
-                    Spatialization: Sounds in 3D
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Network module</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../network/socket.html">
-            
-                <a href="../network/socket.html">
-            
-                    
-                    Communication using sockets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="../network/packet.html">
-            
-                <a href="../network/packet.html">
-            
-                    
-                    Using packets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="../network/http.html">
-            
-                <a href="../network/http.html">
-            
-                    
-                    Web requests with HTTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="../network/ftp.html">
-            
-                <a href="../network/ftp.html">
-            
-                    
-                    File transfers with FTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">System module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Window module</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="window.html">Opening and managing an SFML window</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="events.html">Events explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="inputs.html">Keyboard, mouse and joysticks</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="opengl.html">Using OpenGL in an SFML window</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
     </li>
-</ul>
-
-
-                </nav>
-            
-        
+    <li class="toctree-l2"><a class="reference internal" href="#opengl">OpenGL?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-opengl-window">Creating an OpenGL window</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-typical-opengl-with-crsfml-program">A typical OpenGL-with-CrSFML program</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#managing-multiple-opengl-windows">Managing multiple OpenGL windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-opengl-together-with-the-graphics-module">Using OpenGL together with the graphics module</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Graphics module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/draw.html">Drawing 2D stuff</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/sprite.html">Sprites and textures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/text.html">Text and fonts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/shape.html">Shapes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/vertex-array.html">Designing your own entities with vertex arrays</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/transform.html">Position, rotation, scale: transforming entities</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/shader.html">Adding special effects with shaders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/view.html">Controlling the 2D camera with views</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Audio module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/sounds.html">Playing sounds and music</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/recording.html">Recording audio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/streams.html">Custom audio streams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/spatialization.html">Spatialization: Sounds in 3D</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Network module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
+                    </li>
+                </ul>
+      </div>
     </div>
+    </nav>
 
-    <div class="book-body">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CrSFML Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
         
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+          <li>Window module &raquo;</li>
+        
+      
     
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Using OpenGL in an SFML window</a>
-    </h1>
+    <li>Using OpenGL in an SFML window</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oprypin/crsfml/blob/tutorials/window/opengl.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="using-opengl-in-an-sfml-window">Using OpenGL in an SFML window</h1>
-<p>Relevant examples: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/gl.cr" target="_blank">gl</a></strong>, <strong><a href="https://github.com/BlaXpirit/crsfml-examples/tree/master/cube" target="_blank">cube</a></strong></p>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="using-opengl-in-an-sfml-window">Using OpenGL in an SFML window</h1>
+<p>Relevant examples: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/gl.cr">gl</a></strong>, <strong><a href="https://github.com/oprypin/crsfml-examples/tree/master/cube">cube</a></strong></p>
 <h2 id="introduction">Introduction</h2>
 <p>This tutorial is not about OpenGL itself, but rather how to use CrSFML as an environment for OpenGL, and how to mix them together.</p>
-<p>As you know, one of the most important features of OpenGL is portability. But OpenGL alone won&apos;t be enough to create complete programs: you need a window, a rendering context, user input, etc. You would have no choice but to write OS-specific code to handle this stuff on your own. That&apos;s where the sfml-window module comes into play. Let&apos;s see how it allows you to play with OpenGL.</p>
+<p>As you know, one of the most important features of OpenGL is portability. But OpenGL alone won't be enough to create complete programs: you need a window, a rendering context, user input, etc. You would have no choice but to write OS-specific code to handle this stuff on your own. That's where the sfml-window module comes into play. Let's see how it allows you to play with OpenGL.</p>
 <h2 id="opengl">OpenGL?</h2>
-<p>To use OpenGL, you&apos;ll need to find a library that implements Crystal bindings to it. This tutorial also contains small bits of OpenGL bindings.</p>
+<p>To use OpenGL, you'll need to find a library that implements Crystal bindings to it. This tutorial also contains small bits of OpenGL bindings.</p>
 <h2 id="creating-an-opengl-window">Creating an OpenGL window</h2>
 <p>Since SFML is based on OpenGL, its windows are ready for OpenGL calls without any extra effort.</p>
-<pre><code class="lang-crystal"><span class="hljs-meta">@[Link(<span class="hljs-string">&quot;GL&quot;</span>)]</span> <span class="hljs-comment"># Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX</span>
-<span class="hljs-class"><span class="hljs-keyword">lib</span> <span class="hljs-title">GL</span></span>
- <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">enable</span></span> = glEnable(cap : Int32)
- TEXTURE_2D = <span class="hljs-number">3553</span>
-<span class="hljs-keyword">end</span>
+<pre class="codehilite"><code class="language-crystal">@[Link(&quot;GL&quot;)] # Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX
+lib GL
+ fun enable = glEnable(cap : Int32)
+ TEXTURE_2D = 3553
+end
 
-window = <span class="hljs-symbol">SF:</span>:RenderWindow.new(<span class="hljs-symbol">SF:</span>:VideoMode.new(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;OpenGL&quot;</span>)
+window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;OpenGL&quot;)
 
-<span class="hljs-comment"># it works out of the box</span>
-GL.enable(<span class="hljs-symbol">GL:</span>:TEXTURE_2D)
-...
-</code></pre>
-<p>In case you think it is <em>too</em> automatic, <a href="http://blaxpirit.github.io/crsfml/api/SF/Window.html" target="_blank">Window</a>&apos;s constructor has an extra argument that allows you to change the settings of the underlying OpenGL context. This argument is an instance of the structure, it provides access to the following settings:</p>
+# it works out of the box
+GL.enable(GL::TEXTURE_2D)
+...</code></pre>
+
+
+<p>In case you think it is <em>too</em> automatic, <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a>'s constructor has an extra argument that allows you to change the settings of the underlying OpenGL context. This argument is an instance of the structure, it provides access to the following settings:</p>
 <ul>
 <li><code>depth_bits</code> is the number of bits per pixel to use for the depth buffer (0 to disable it)</li>
 <li><code>stencil_bits</code> is the number of bits per pixel to use for the stencil buffer (0 to disable it)</li>
 <li><code>antialiasing_level</code> is the multisampling level</li>
 <li><code>major_version</code> and <code>minor_version</code> comprise the requested version of OpenGL</li>
 </ul>
-<pre><code class="lang-crystal">settings = <span class="hljs-symbol">SF:</span>:ContextSettings.new(
-  <span class="hljs-symbol">depth:</span> <span class="hljs-number">24</span>, <span class="hljs-symbol">stencil:</span> <span class="hljs-number">8</span>, <span class="hljs-symbol">antialiasing:</span> <span class="hljs-number">4</span>,
-  <span class="hljs-symbol">major:</span> <span class="hljs-number">3</span>, <span class="hljs-symbol">minor:</span> <span class="hljs-number">0</span>
+<pre class="codehilite"><code class="language-crystal">settings = SF::ContextSettings.new(
+  depth: 24, stencil: 8, antialiasing: 4,
+  major: 3, minor: 0
 )
 
-window = <span class="hljs-symbol">SF:</span>:RenderWindow.new(
-    <span class="hljs-symbol">SF:</span>:VideoMode.new(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>),
-    <span class="hljs-string">&quot;OpenGL&quot;</span>, <span class="hljs-symbol">settings:</span> settings
-)
-</code></pre>
-<p>If any of these settings is not supported by the graphics card, SFML tries to find the closest valid match. For example, if 4x anti-aliasing is too high, it tries 2x and then falls back to 0.<br>In any case, you can check what settings SFML actually used with the <code>settings</code> method:</p>
-<pre><code class="lang-crystal">settings = window.settings
+window = SF::RenderWindow.new(
+    SF::VideoMode.new(800, 600),
+    &quot;OpenGL&quot;, settings: settings
+)</code></pre>
 
-puts <span class="hljs-string">&quot;depth bits: <span class="hljs-subst">#{settings.depth_bits}</span>&quot;</span>
-puts <span class="hljs-string">&quot;stencil bits: <span class="hljs-subst">#{settings.stencil_bits}</span>&quot;</span>
-puts <span class="hljs-string">&quot;antialiasing level: <span class="hljs-subst">#{settings.antialiasing_level}</span>&quot;</span>
-puts <span class="hljs-string">&quot;version: <span class="hljs-subst">#{settings.major_version}</span>.<span class="hljs-subst">#{settings.minor_version}</span>&quot;</span>
-</code></pre>
+
+<p>If any of these settings is not supported by the graphics card, SFML tries to find the closest valid match. For example, if 4x anti-aliasing is too high, it tries 2x and then falls back to 0.<br />
+In any case, you can check what settings SFML actually used with the <code>settings</code> method:</p>
+<pre class="codehilite"><code class="language-crystal">settings = window.settings
+
+puts &quot;depth bits: #{settings.depth_bits}&quot;
+puts &quot;stencil bits: #{settings.stencil_bits}&quot;
+puts &quot;antialiasing level: #{settings.antialiasing_level}&quot;
+puts &quot;version: #{settings.major_version}.#{settings.minor_version}&quot;</code></pre>
+
+
 <p>OpenGL versions above 3.0 are supported by SFML (as long as your graphics driver can handle them). Support for selecting the profile of 3.2+ contexts and whether the context debug flag is set was added in SFML 2.3. The forward compatibility flag is not supported. By default, SFML creates 3.2+ contexts using the compatibility profile because the graphics module makes use of legacy OpenGL functionality. If you intend on using the graphics module, make sure to create your context without the core profile setting or the graphics module will not function correctly. On OS X, SFML supports creating OpenGL 3.2+ contexts using the core profile only. If you want to use the graphics module on OS X, you are limited to using a legacy context which implies OpenGL version 2.1.</p>
 <h2 id="a-typical-opengl-with-crsfml-program">A typical OpenGL-with-CrSFML program</h2>
 <p>Here is what a complete OpenGL program would look like with CrSFML:</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml&quot;</span>
+<pre class="codehilite"><code class="language-crystal">require &quot;crsfml&quot;
 
-<span class="hljs-comment"># create bindings</span>
-<span class="hljs-meta">@[Link(<span class="hljs-string">&quot;GL&quot;</span>)]</span>
-<span class="hljs-class"><span class="hljs-keyword">lib</span> <span class="hljs-title">GL</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">enable</span></span> = glEnable(cap : Int32)
-  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">viewport</span></span> = glViewport(x : Int32, y : Int32, width : Int32, height : Int32)
-  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">clear</span></span> = glClear(mask : Int32)
-  TEXTURE_2D = <span class="hljs-number">3553</span>
-  COLOR_BUFFER_BIT = <span class="hljs-number">16384</span>
-  DEPTH_BUFFER_BIT = <span class="hljs-number">256</span>
-<span class="hljs-keyword">end</span>
+# create bindings
+@[Link(&quot;GL&quot;)]
+lib GL
+  fun enable = glEnable(cap : Int32)
+  fun viewport = glViewport(x : Int32, y : Int32, width : Int32, height : Int32)
+  fun clear = glClear(mask : Int32)
+  TEXTURE_2D = 3553
+  COLOR_BUFFER_BIT = 16384
+  DEPTH_BUFFER_BIT = 256
+end
 
-GL.enable(<span class="hljs-symbol">GL:</span>:TEXTURE_2D)
+GL.enable(GL::TEXTURE_2D)
 
-<span class="hljs-comment"># create the window</span>
-settings = <span class="hljs-symbol">SF:</span>:ContextSettings.new(<span class="hljs-number">32</span>)
-window = <span class="hljs-symbol">SF:</span>:RenderWindow.new(<span class="hljs-symbol">SF:</span>:VideoMode.new(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;OpenGL&quot;</span>, <span class="hljs-symbol">settings:</span> settings)
-window.vertical_sync_enabled = <span class="hljs-literal">true</span>
+# create the window
+settings = SF::ContextSettings.new(32)
+window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;OpenGL&quot;, settings: settings)
+window.vertical_sync_enabled = true
 
-<span class="hljs-comment"># load resources, initialize the OpenGL states, ...</span>
+# load resources, initialize the OpenGL states, ...
 
-<span class="hljs-comment"># run the main loop</span>
-running = <span class="hljs-literal">true</span>
-<span class="hljs-keyword">while</span> running
-  <span class="hljs-comment"># handle events</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-keyword">if</span> event.<span class="hljs-keyword">is_a?</span> <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Event:</span>:Closed
-      <span class="hljs-comment"># end the program</span>
-      running = <span class="hljs-literal">false</span>
-    <span class="hljs-keyword">elsif</span> event.<span class="hljs-keyword">is_a?</span> <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Event:</span>:Resized
-      <span class="hljs-comment"># adjust the viewport when the window is resized</span>
-      GL.viewport(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, event.width, event.height)
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+# run the main loop
+running = true
+while running
+  # handle events
+  while event = window.poll_event
+    if event.is_a? SF::Event::Closed
+      # end the program
+      running = false
+    elsif event.is_a? SF::Event::Resized
+      # adjust the viewport when the window is resized
+      GL.viewport(0, 0, event.width, event.height)
+    end
+  end
 
-  <span class="hljs-comment"># clear the buffers</span>
-  GL.clear(<span class="hljs-symbol">GL:</span>:COLOR_BUFFER_BIT | <span class="hljs-symbol">GL:</span>:DEPTH_BUFFER_BIT)
+  # clear the buffers
+  GL.clear(GL::COLOR_BUFFER_BIT | GL::DEPTH_BUFFER_BIT)
 
-  <span class="hljs-comment"># draw...</span>
+  # draw...
 
-  <span class="hljs-comment"># end the current frame (internally swaps the front and back buffers)</span>
+  # end the current frame (internally swaps the front and back buffers)
   window.display
-<span class="hljs-keyword">end</span>
-</code></pre>
-<p>Here we don&apos;t use <code>window.open?</code> as the condition of the main loop, because we need the window to remain open until the program ends, so that we still have a valid OpenGL context for the last iteration of the loop and the cleanup code.</p>
-<p>Don&apos;t hesitate to have a look at the &quot;OpenGL&quot; and &quot;Window&quot; examples in the SFML SDK if you have further problems, they are more complete and most likely contain solutions to your problems.</p>
+end</code></pre>
+
+
+<p>Here we don't use <code>window.open?</code> as the condition of the main loop, because we need the window to remain open until the program ends, so that we still have a valid OpenGL context for the last iteration of the loop and the cleanup code.</p>
+<p>Don't hesitate to have a look at the "OpenGL" and "Window" examples in the SFML SDK if you have further problems, they are more complete and most likely contain solutions to your problems.</p>
 <h2 id="managing-multiple-opengl-windows">Managing multiple OpenGL windows</h2>
 <p>Managing multiple OpenGL windows is not more complicated than managing one, there are just a few things to keep in mind.</p>
 <p>OpenGL calls are made on the active context (thus the active window). Therefore if you want to draw to two different windows within the same program, you have to select which window is active before drawing something. This can be done with the <code>active=</code> method:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># activate the first window</span>
-window1.active = <span class="hljs-literal">true</span>
+<pre class="codehilite"><code class="language-crystal"># activate the first window
+window1.active = true
 
-<span class="hljs-comment"># draw to the first window...</span>
+# draw to the first window...
 
-<span class="hljs-comment"># activate the second window</span>
-window2.active = <span class="hljs-literal">true</span>
+# activate the second window
+window2.active = true
 
-<span class="hljs-comment"># draw to the second window...</span>
-</code></pre>
-<p>Only one context (window) can be active in a thread, so you don&apos;t need to deactivate a window before activating another one, it is deactivated automatically. This is how OpenGL works.</p>
-<p>Another thing to know is that all the OpenGL contexts created by SFML share their resources. This means that you can create a texture or vertex buffer with any context active, and use it with any other. This also means that you don&apos;t have to reload all your OpenGL resources when you recreate your window. Only shareable OpenGL resources can be shared among contexts. An example of an unshareable resource is a vertex array object.</p>
+# draw to the second window...</code></pre>
+
+
+<p>Only one context (window) can be active in a thread, so you don't need to deactivate a window before activating another one, it is deactivated automatically. This is how OpenGL works.</p>
+<p>Another thing to know is that all the OpenGL contexts created by SFML share their resources. This means that you can create a texture or vertex buffer with any context active, and use it with any other. This also means that you don't have to reload all your OpenGL resources when you recreate your window. Only shareable OpenGL resources can be shared among contexts. An example of an unshareable resource is a vertex array object.</p>
 <h2 id="using-opengl-together-with-the-graphics-module">Using OpenGL together with the graphics module</h2>
-<p>This tutorial was about mixing OpenGL with sfml-window, which is fairly easy since it&apos;s the only purpose of this module. Mixing with the graphics module is a little more complicated: sfml-graphics uses OpenGL too, so extra care must be taken so that SFML and user states don&apos;t conflict with each other.</p>
-<p>If you don&apos;t know the graphics module yet, all you have to know is that the <a href="http://blaxpirit.github.io/crsfml/api/SF/Window.html" target="_blank">Window</a> class is replaced with <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderWindow.html" target="_blank">RenderWindow</a>, which inherits all its methods and adds features to draw SFML specific entities.</p>
+<p>This tutorial was about mixing OpenGL with sfml-window, which is fairly easy since it's the only purpose of this module. Mixing with the graphics module is a little more complicated: sfml-graphics uses OpenGL too, so extra care must be taken so that SFML and user states don't conflict with each other.</p>
+<p>If you don't know the graphics module yet, all you have to know is that the <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a> class is replaced with <a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a>, which inherits all its methods and adds features to draw SFML specific entities.</p>
 <p>The only way to avoid conflicts between SFML and your own OpenGL states, is to save/restore them every time you switch from OpenGL to SFML.</p>
 <ul>
 <li>draw with OpenGL</li>
@@ -614,7 +289,7 @@ window2.active = <span class="hljs-literal">true</span>
 <li>...</li>
 </ul>
 <p>The easiest solution is to let CrSFML do it for you, with the <code>push_gl_states</code>/<code>pop_gl_states</code> methods:</p>
-<pre><code class="lang-crystal">glDraw...
+<pre class="codehilite"><code class="language-crystal">glDraw...
 
 window.push_gl_states
 
@@ -622,10 +297,12 @@ window.draw(...)
 
 window.pop_gl_states
 
-glDraw...
-</code></pre>
-<p>Since it has no knowledge about your OpenGL code, SFML can&apos;t optimize these steps and as a result it saves/restores all available OpenGL states and matrices. This may be acceptable for small projects, but it might also be too slow for bigger programs that require maximum performance. In this case, you can handle saving and restoring the OpenGL states yourself, with <code>glPushAttrib</code>/<code>glPopAttrib</code>, <code>glPushMatrix</code>/<code>glPopMatrix</code>, etc.<br>If you do this, you&apos;ll still need to restore SFML&apos;s own states before drawing. This is done with the <code>reset_gl_states</code> method.</p>
-<pre><code class="lang-crystal">glDraw...
+glDraw...</code></pre>
+
+
+<p>Since it has no knowledge about your OpenGL code, SFML can't optimize these steps and as a result it saves/restores all available OpenGL states and matrices. This may be acceptable for small projects, but it might also be too slow for bigger programs that require maximum performance. In this case, you can handle saving and restoring the OpenGL states yourself, with <code>glPushAttrib</code>/<code>glPopAttrib</code>, <code>glPushMatrix</code>/<code>glPopMatrix</code>, etc.<br />
+If you do this, you'll still need to restore SFML's own states before drawing. This is done with the <code>reset_gl_states</code> method.</p>
+<pre class="codehilite"><code class="language-crystal">glDraw...
 
 glPush...
 window.reset_gl_states
@@ -634,82 +311,63 @@ window.draw(...)
 
 glPop...
 
-glDraw...
-</code></pre>
+glDraw...</code></pre>
+
+
 <p>By saving and restoring OpenGL states yourself, you can manage only the ones that you really need which leads to reducing the number of unnecessary driver calls.</p>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
+              
             </div>
-
-            
-                
-                <a href="inputs.html" class="navigation navigation-prev " aria-label="Previous page: Keyboard, mouse and joysticks">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="../graphics/draw.html" class="navigation navigation-next " aria-label="Next page: Drawing 2D stuff">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../graphics/draw.html" class="btn btn-neutral float-right" title="Drawing 2D stuff">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="inputs.html" class="btn btn-neutral" title="Keyboard, mouse and joysticks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Using OpenGL in an SFML window","level":"3.4","depth":1,"next":{"title":"Drawing 2D stuff","level":"4.1","depth":1,"path":"graphics/draw.md","ref":"graphics/draw.md","articles":[]},"previous":{"title":"Keyboard, mouse and joysticks","level":"3.3","depth":1,"path":"window/inputs.md","ref":"window/inputs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"api":"http://blaxpirit.github.io/crsfml/api/SF","examples":"https://github.com/BlaXpirit/crsfml/tree/master/examples","examples2":"https://github.com/BlaXpirit/crsfml-examples/tree/master"},"title":"CrSFML Tutorials","links":{"sidebar":{"CrSFML":"http://github.com/BlaXpirit/crsfml"}},"gitbook":">= 3.0.0"},"file":{"path":"window/opengl.md","mtime":"2018-03-07T21:45:04.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-07T21:45:56.311Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="inputs.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../graphics/draw.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-

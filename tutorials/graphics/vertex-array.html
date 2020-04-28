@@ -1,547 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Designing your own entities with vertex arrays - CrSFML Tutorials</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Designing your own entities with vertex arrays · CrSFML Tutorials</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../style.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Designing your own entities with vertex arrays";
+    var mkdocs_page_input_path = "graphics/vertex-array.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<body class="wy-body-for-nav" role="document">
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <div class="wy-grid-for-nav">
 
     
-    <link rel="next" href="transform.html" />
-    
-    
-    <link rel="prev" href="shape.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://github.com/BlaXpirit/crsfml" target="_blank" class="custom-link">CrSFML</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    CrSFML tutorials
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">System module</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../system/time.html">
-            
-                <a href="../system/time.html">
-            
-                    
-                    Handling time
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../system/thread.html">
-            
-                <a href="../system/thread.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../system/stream.html">
-            
-                <a href="../system/stream.html">
-            
-                    
-                    User data streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Window module</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../window/window.html">
-            
-                <a href="../window/window.html">
-            
-                    
-                    Opening and managing an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../window/events.html">
-            
-                <a href="../window/events.html">
-            
-                    
-                    Events explained
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../window/inputs.html">
-            
-                <a href="../window/inputs.html">
-            
-                    
-                    Keyboard, mouse and joysticks
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../window/opengl.html">
-            
-                <a href="../window/opengl.html">
-            
-                    
-                    Using OpenGL in an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Graphics module</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="draw.html">
-            
-                <a href="draw.html">
-            
-                    
-                    Drawing 2D stuff
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="sprite.html">
-            
-                <a href="sprite.html">
-            
-                    
-                    Sprites and textures
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="text.html">
-            
-                <a href="text.html">
-            
-                    
-                    Text and fonts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="shape.html">
-            
-                <a href="shape.html">
-            
-                    
-                    Shapes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.5" data-path="vertex-array.html">
-            
-                <a href="vertex-array.html">
-            
-                    
-                    Designing your own entities with vertex arrays
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="transform.html">
-            
-                <a href="transform.html">
-            
-                    
-                    Position, rotation, scale: transforming entities
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="shader.html">
-            
-                <a href="shader.html">
-            
-                    
-                    Adding special effects with shaders
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="view.html">
-            
-                <a href="view.html">
-            
-                    
-                    Controlling the 2D camera with views
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Audio module</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../audio/sounds.html">
-            
-                <a href="../audio/sounds.html">
-            
-                    
-                    Playing sounds and music
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../audio/recording.html">
-            
-                <a href="../audio/recording.html">
-            
-                    
-                    Recording audio
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="../audio/streams.html">
-            
-                <a href="../audio/streams.html">
-            
-                    
-                    Custom audio streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../audio/spatialization.html">
-            
-                <a href="../audio/spatialization.html">
-            
-                    
-                    Spatialization: Sounds in 3D
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Network module</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../network/socket.html">
-            
-                <a href="../network/socket.html">
-            
-                    
-                    Communication using sockets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="../network/packet.html">
-            
-                <a href="../network/packet.html">
-            
-                    
-                    Using packets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="../network/http.html">
-            
-                <a href="../network/http.html">
-            
-                    
-                    Web requests with HTTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="../network/ftp.html">
-            
-                <a href="../network/ftp.html">
-            
-                    
-                    File transfers with FTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">System module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Window module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/window.html">Opening and managing an SFML window</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/events.html">Events explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/inputs.html">Keyboard, mouse and joysticks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/opengl.html">Using OpenGL in an SFML window</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Graphics module</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="draw.html">Drawing 2D stuff</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sprite.html">Sprites and textures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="text.html">Text and fonts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shape.html">Shapes</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="vertex-array.html">Designing your own entities with vertex arrays</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
     </li>
-</ul>
-
-
-                </nav>
-            
-        
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-vertex-and-why-are-they-always-in-arrays">What is a vertex, and why are they always in arrays?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-simple-vertex-array">A simple vertex array</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#primitive-types">Primitive types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#texturing">Texturing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transforming-a-vertex-array">Transforming a vertex array</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-sfml-like-entity">Creating an SFML-like entity</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-tile-map">Example: tile map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-particle-system">Example: particle system</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="transform.html">Position, rotation, scale: transforming entities</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shader.html">Adding special effects with shaders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="view.html">Controlling the 2D camera with views</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Audio module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/sounds.html">Playing sounds and music</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/recording.html">Recording audio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/streams.html">Custom audio streams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/spatialization.html">Spatialization: Sounds in 3D</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Network module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
+                    </li>
+                </ul>
+      </div>
     </div>
+    </nav>
 
-    <div class="book-body">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CrSFML Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
         
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+          <li>Graphics module &raquo;</li>
+        
+      
     
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Designing your own entities with vertex arrays</a>
-    </h1>
+    <li>Designing your own entities with vertex arrays</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oprypin/crsfml/blob/tutorials/graphics/vertex-array.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="designing-your-own-entities-with-vertex-arrays">Designing your own entities with vertex arrays</h1>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="designing-your-own-entities-with-vertex-arrays">Designing your own entities with vertex arrays</h1>
 <h2 id="introduction">Introduction</h2>
-<p>SFML provides simple classes for the most common 2D entities. And while more complex entities can easily be created from these building blocks, it isn&apos;t always the most efficient solution. For example, you&apos;ll reach the limits of your graphics card very quickly if you draw a large number of sprites. The reason is that performance depends in large part on the number of calls to the <code>draw</code> method. Indeed, each call involves setting a set of OpenGL states, resetting matrices, changing textures, etc. All of this is required even when simply drawing two triangles (a sprite). This is far from optimal for your graphics card: Today&apos;s GPUs are designed to process large batches of triangles, typically several thousand to millions.</p>
+<p>SFML provides simple classes for the most common 2D entities. And while more complex entities can easily be created from these building blocks, it isn't always the most efficient solution. For example, you'll reach the limits of your graphics card very quickly if you draw a large number of sprites. The reason is that performance depends in large part on the number of calls to the <code>draw</code> method. Indeed, each call involves setting a set of OpenGL states, resetting matrices, changing textures, etc. All of this is required even when simply drawing two triangles (a sprite). This is far from optimal for your graphics card: Today's GPUs are designed to process large batches of triangles, typically several thousand to millions.</p>
 <p>To fill this gap, SFML provides a lower-level mechanism to draw things: Vertex arrays. As a matter of fact, vertex arrays are used internally by all other SFML classes. They allow for a more flexible definition of 2D entities, containing as many triangles as you need. They even allow drawing points or lines.</p>
 <h2 id="what-is-a-vertex-and-why-are-they-always-in-arrays">What is a vertex, and why are they always in arrays?</h2>
-<p>A vertex is the smallest graphical entity that you can manipulate. In short, it is a graphical point: Naturally, it has a 2D position (x, y), but also a color, and a pair of texture coordinates. We&apos;ll go into the roles of these attributes later.</p>
-<p>Vertices (plural of vertex) alone don&apos;t do much. They are always grouped into <em>primitives</em>: Points (1 vertex), lines (2 vertices), triangles (3 vertices) or quads (4 vertices). You can then combine multiple primitives together to create the final geometry of the entity.</p>
+<p>A vertex is the smallest graphical entity that you can manipulate. In short, it is a graphical point: Naturally, it has a 2D position (x, y), but also a color, and a pair of texture coordinates. We'll go into the roles of these attributes later.</p>
+<p>Vertices (plural of vertex) alone don't do much. They are always grouped into <em>primitives</em>: Points (1 vertex), lines (2 vertices), triangles (3 vertices) or quads (4 vertices). You can then combine multiple primitives together to create the final geometry of the entity.</p>
 <p>Now you understand why we always talk about vertex arrays, and not vertices alone.</p>
 <h2 id="a-simple-vertex-array">A simple vertex array</h2>
-<p>Let&apos;s have a look at the <a href="http://blaxpirit.github.io/crsfml/api/SF/Vertex.html" target="_blank">Vertex</a> class now. It&apos;s simply a container which contains three public members and no functions besides its constructors. These constructors allow you to construct vertices from the set of attributes you care about -- you don&apos;t always need to color or texture your entity.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create a new vertex</span>
-vertex = <span class="hljs-symbol">SF:</span>:Vertex.new
+<p>Let's have a look at the <a href="http://oprypin.github.io/crsfml/api/SF/Vertex.html">Vertex</a> class now. It's simply a container which contains three public members and no functions besides its constructors. These constructors allow you to construct vertices from the set of attributes you care about -- you don't always need to color or texture your entity.</p>
+<pre class="codehilite"><code class="language-crystal"># create a new vertex
+vertex = SF::Vertex.new
 
-<span class="hljs-comment"># set its position</span>
-vertex.position = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+# set its position
+vertex.position = SF.vector2(10, 50)
 
-<span class="hljs-comment"># set its color</span>
-vertex.color = <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Color:</span>:Red
+# set its color
+vertex.color = SF::Color::Red
 
-<span class="hljs-comment"># set its texture coordinates</span>
-vertex.tex_coords = SF.vector2f(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)
-</code></pre>
+# set its texture coordinates
+vertex.tex_coords = SF.vector2f(100, 100)</code></pre>
+
+
 <p>... or, using the correct constructor:</p>
-<pre><code class="lang-crystal">vertex = <span class="hljs-symbol">SF:</span>:Vertex.new({<span class="hljs-number">10</span>, <span class="hljs-number">50</span>}, <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Color:</span>:Red, {<span class="hljs-number">100</span>, <span class="hljs-number">100</span>})
-</code></pre>
-<p>Now, let&apos;s define a primitive. Remember, a primitive consists of several vertices, therefore we need a vertex array. CrSFML provides a simple wrapper for this: <a href="http://blaxpirit.github.io/crsfml/api/SF/VertexArray.html" target="_blank">VertexArray</a>. It provides the semantics of an array, and also stores the type of primitive its vertices define.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create an array of 3 vertices that define a triangle primitive</span>
-triangle = <span class="hljs-symbol">SF:</span>:VertexArray.new(<span class="hljs-symbol">SF:</span>:Triangles, <span class="hljs-number">3</span>)
+<pre class="codehilite"><code class="language-crystal">vertex = SF::Vertex.new({10, 50}, SF::Color::Red, {100, 100})</code></pre>
 
-<span class="hljs-comment"># define the positions and colors of the triangle&apos;s points</span>
-triangle[<span class="hljs-number">0</span>] = <span class="hljs-symbol">SF:</span>:Vertex.new(SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>), <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Color:</span>:Red)
-triangle[<span class="hljs-number">1</span>] = <span class="hljs-symbol">SF:</span>:Vertex.new(SF.vector2(<span class="hljs-number">100</span>, <span class="hljs-number">10</span>), <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Color:</span>:Blue)
-triangle[<span class="hljs-number">2</span>] = <span class="hljs-symbol">SF:</span>:Vertex.new(SF.vector2(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>), <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Color:</span>:Green)
 
-<span class="hljs-comment"># no texture coordinates here, we&apos;ll see that later</span>
-</code></pre>
+<p>Now, let's define a primitive. Remember, a primitive consists of several vertices, therefore we need a vertex array. CrSFML provides a simple wrapper for this: <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a>. It provides the semantics of an array, and also stores the type of primitive its vertices define.</p>
+<pre class="codehilite"><code class="language-crystal"># create an array of 3 vertices that define a triangle primitive
+triangle = SF::VertexArray.new(SF::Triangles, 3)
+
+# define the positions and colors of the triangle's points
+triangle[0] = SF::Vertex.new(SF.vector2(10, 10), SF::Color::Red)
+triangle[1] = SF::Vertex.new(SF.vector2(100, 10), SF::Color::Blue)
+triangle[2] = SF::Vertex.new(SF.vector2(100, 100), SF::Color::Green)
+
+# no texture coordinates here, we'll see that later</code></pre>
+
+
 <p>Your triangle is ready and you can now draw it. Drawing a vertex array can be done similar to drawing any other CrSFML entity, by using the <code>draw</code> function:</p>
-<pre><code class="lang-crystal">window.draw(triangle)
-</code></pre>
-<p><img src="images/vertex-array-triangle.png" alt="A triangle made with vertices"></p>
-<p>You can see that the vertices&apos; color is interpolated to fill the primitive. This is a nice way of creating gradients.</p>
-<p>Note that you don&apos;t have to use the <a href="http://blaxpirit.github.io/crsfml/api/SF/VertexArray.html" target="_blank">VertexArray</a> class. It&apos;s just defined for convenience, it&apos;s nothing more than an array along with a <code>SF::PrimitiveType</code>. If you need more flexibility, or a normal (or static) array, you can use your own storage. You must then use the overload of the <code>draw</code> function which takes an array of vertices and the primitive type.</p>
-<pre><code class="lang-crystal">vertices = [
-  <span class="hljs-symbol">SF:</span>:Vertex.new(...),
-  <span class="hljs-symbol">SF:</span>:Vertex.new(...)
+<pre class="codehilite"><code class="language-crystal">window.draw(triangle)</code></pre>
+
+
+<p><img alt="A triangle made with vertices" src="images/vertex-array-triangle.png" /></p>
+<p>You can see that the vertices' color is interpolated to fill the primitive. This is a nice way of creating gradients.</p>
+<p>Note that you don't have to use the <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a> class. It's just defined for convenience, it's nothing more than an array along with a <code>SF::PrimitiveType</code>. If you need more flexibility, or a normal (or static) array, you can use your own storage. You must then use the overload of the <code>draw</code> function which takes an array of vertices and the primitive type.</p>
+<pre class="codehilite"><code class="language-crystal">vertices = [
+  SF::Vertex.new(...),
+  SF::Vertex.new(...)
 ]
 
-window.draw(vertices, <span class="hljs-symbol">SF:</span>:Lines)
-</code></pre>
+window.draw(vertices, SF::Lines)</code></pre>
+
+
 <h2 id="primitive-types">Primitive types</h2>
-<p>Let&apos;s pause for a while and see what kind of primitives you can create. As explained above, you can define the most basic 2D primitives: Point, line, triangle and quad (quad exists merely as a convenience, internally the graphics card breaks it into two triangles). There are also &quot;chained&quot; variants of these primitive types which allow for sharing of vertices among two consecutive primitives. This can be useful because consecutive primitives are often connected in some way.</p>
-<p>Let&apos;s have a look at the full list:</p>
+<p>Let's pause for a while and see what kind of primitives you can create. As explained above, you can define the most basic 2D primitives: Point, line, triangle and quad (quad exists merely as a convenience, internally the graphics card breaks it into two triangles). There are also "chained" variants of these primitive types which allow for sharing of vertices among two consecutive primitives. This can be useful because consecutive primitives are often connected in some way.</p>
+<p>Let's have a look at the full list:</p>
 <table>
 <thead>
 <tr>
@@ -554,145 +234,151 @@ window.draw(vertices, <span class="hljs-symbol">SF:</span>:Lines)
 <tr>
 <td><code>SF::Points</code></td>
 <td>A set of unconnected points. These points have no thickness: They will always occupy a single pixel, regardless of the current transform and view.</td>
-<td><img src="images/vertex-array-points.png" alt="The SF::Points primitive type"></td>
+<td><img alt="The SF::Points primitive type" src="images/vertex-array-points.png" /></td>
 </tr>
 <tr>
 <td><code>SF::Lines</code></td>
 <td>A set of unconnected lines. These lines have no thickness: They will always be one pixel wide, regardless of the current transform and view.</td>
-<td><img src="images/vertex-array-lines.png" alt="The SF::Lines primitive type"></td>
+<td><img alt="The SF::Lines primitive type" src="images/vertex-array-lines.png" /></td>
 </tr>
 <tr>
 <td><code>SF::LinesStrip</code></td>
 <td>A set of connected lines. The end vertex of one line is used as the start vertex of the next one.</td>
-<td><img src="images/vertex-array-lines-strip.png" alt="The SF::LinesStrip primitive type"></td>
+<td><img alt="The SF::LinesStrip primitive type" src="images/vertex-array-lines-strip.png" /></td>
 </tr>
 <tr>
 <td><code>SF::Triangles</code></td>
 <td>A set of unconnected triangles.</td>
-<td><img src="images/vertex-array-triangles.png" alt="The SF::Triangles primitive type"></td>
+<td><img alt="The SF::Triangles primitive type" src="images/vertex-array-triangles.png" /></td>
 </tr>
 <tr>
 <td><code>SF::TrianglesStrip</code></td>
 <td>A set of connected triangles. Each triangle shares its two last vertices with the next one.</td>
-<td><img src="images/vertex-array-triangles-strip.png" alt="The SF::TrianglesStrip primitive type"></td>
+<td><img alt="The SF::TrianglesStrip primitive type" src="images/vertex-array-triangles-strip.png" /></td>
 </tr>
 <tr>
 <td><code>SF::TrianglesFan</code></td>
 <td>A set of triangles connected to a central point. The first vertex is the center, then each new vertex defines a new triangle, using the center and the previous vertex.</td>
-<td><img src="images/vertex-array-triangles-fan.png" alt="The SF::TrianglesFan primitive type"></td>
+<td><img alt="The SF::TrianglesFan primitive type" src="images/vertex-array-triangles-fan.png" /></td>
 </tr>
 <tr>
 <td><code>SF::Quads</code></td>
 <td>A set of unconnected quads. The 4 points of each quad must be defined consistently, either in clockwise or counter-clockwise order.</td>
-<td><img src="images/vertex-array-quads.png" alt="The SF::Quads primitive type"></td>
+<td><img alt="The SF::Quads primitive type" src="images/vertex-array-quads.png" /></td>
 </tr>
 </tbody>
 </table>
 <h2 id="texturing">Texturing</h2>
-<p>Like other SFML entities, vertex arrays can also be textured. To do so, you&apos;ll need to manipulate the <code>tex_coords</code> attribute of the vertices. This attribute defines which pixel of the texture is mapped to the vertex.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create a quad</span>
-quad = <span class="hljs-symbol">SF:</span>:VertexArray.new(<span class="hljs-symbol">SF:</span>:Quads, <span class="hljs-number">4</span>)
+<p>Like other SFML entities, vertex arrays can also be textured. To do so, you'll need to manipulate the <code>tex_coords</code> attribute of the vertices. This attribute defines which pixel of the texture is mapped to the vertex.</p>
+<pre class="codehilite"><code class="language-crystal"># create a quad
+quad = SF::VertexArray.new(SF::Quads, 4)
 
-<span class="hljs-comment"># define it as a rectangle, located at (10, 10) and with size 100x100</span>
-<span class="hljs-comment"># define its texture area to be a 25x50 rectangle starting at (0, 0)</span>
-quad.append <span class="hljs-symbol">SF:</span>:Vertex.new({ <span class="hljs-number">10</span>,  <span class="hljs-number">10</span>}, <span class="hljs-symbol">tex_coords:</span> { <span class="hljs-number">0</span>,  <span class="hljs-number">0</span>})
-quad.append <span class="hljs-symbol">SF:</span>:Vertex.new({<span class="hljs-number">110</span>,  <span class="hljs-number">10</span>}, <span class="hljs-symbol">tex_coords:</span> {<span class="hljs-number">25</span>,  <span class="hljs-number">0</span>})
-quad.append <span class="hljs-symbol">SF:</span>:Vertex.new({<span class="hljs-number">110</span>, <span class="hljs-number">110</span>}, <span class="hljs-symbol">tex_coords:</span> {<span class="hljs-number">25</span>, <span class="hljs-number">50</span>})
-quad.append <span class="hljs-symbol">SF:</span>:Vertex.new({ <span class="hljs-number">10</span>, <span class="hljs-number">110</span>}, <span class="hljs-symbol">tex_coords:</span> { <span class="hljs-number">0</span>, <span class="hljs-number">50</span>})
-</code></pre>
+# define it as a rectangle, located at (10, 10) and with size 100x100
+# define its texture area to be a 25x50 rectangle starting at (0, 0)
+quad.append SF::Vertex.new({ 10,  10}, tex_coords: { 0,  0})
+quad.append SF::Vertex.new({110,  10}, tex_coords: {25,  0})
+quad.append SF::Vertex.new({110, 110}, tex_coords: {25, 50})
+quad.append SF::Vertex.new({ 10, 110}, tex_coords: { 0, 50})</code></pre>
+
+
 <p>Texture coordinates are defined in <em>pixels</em> (just like the <code>texture_rect</code> of sprites and shapes). They are <em>not</em> normalized (between 0 and 1), as people who are used to OpenGL programming might expect.</p>
-<p>Vertex arrays are low-level entities, they only deal with geometry and do not store additional attributes like a texture. To draw a vertex array with a texture, you must pass it directly to the <code>draw</code> method, through a <a href="http://blaxpirit.github.io/crsfml/api/SF/RenderStates.html" target="_blank">RenderStates</a> object:</p>
-<pre><code class="lang-crystal">vertices = ... <span class="hljs-comment"># SF::VertexArray</span>
-texture = ... <span class="hljs-comment"># SF::Texture</span>
+<p>Vertex arrays are low-level entities, they only deal with geometry and do not store additional attributes like a texture. To draw a vertex array with a texture, you must pass it directly to the <code>draw</code> method, through a <a href="http://oprypin.github.io/crsfml/api/SF/RenderStates.html">RenderStates</a> object:</p>
+<pre class="codehilite"><code class="language-crystal">vertices = ... # SF::VertexArray
+texture = ... # SF::Texture
 
 ...
 
-states = <span class="hljs-symbol">SF:</span>:RenderStates.new
+states = SF::RenderStates.new
 states.texture = texture
 
-window.draw(vertices, states)
-</code></pre>
+window.draw(vertices, states)</code></pre>
+
+
 <h2 id="transforming-a-vertex-array">Transforming a vertex array</h2>
 <p>Transforming is similar to texturing. The transform is not stored in the vertex array, you must pass it to the <code>draw</code> method.</p>
-<pre><code class="lang-crystal">vertices = ... <span class="hljs-comment"># SF::VertexArray</span>
-transform = ... <span class="hljs-comment"># SF::Transform</span>
+<pre class="codehilite"><code class="language-crystal">vertices = ... # SF::VertexArray
+transform = ... # SF::Transform
 
 ...
 
-states = <span class="hljs-symbol">SF:</span>:RenderStates.new
+states = SF::RenderStates.new
 states.transform = transform
 
-window.draw(vertices, states)
-</code></pre>
-<p>To know more about transformations and the <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a> class, you can read the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
-<h2 id="creating-an-sfml-like-entity">Creating an SFML-like entity</h2>
-<p>Now that you know how to define your own textured/colored/transformed entity, wouldn&apos;t it be nice to wrap it in an SFML-style class? Fortunately, SFML makes this easy for you by providing the <a href="http://blaxpirit.github.io/crsfml/api/SF/Drawable.html" target="_blank">Drawable</a> module and <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> base class. These two classes are the base of the built-in SFML entities Sprite, Text and Shape.</p>
-<p><a href="http://blaxpirit.github.io/crsfml/api/SF/Drawable.html" target="_blank">Drawable</a> is an interface: it declares a single abstract method. Including sf::Drawable allows you to draw instances of your class the same way as SFML classes:</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEntity</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-symbol">SF:</span>:Drawable
+window.draw(vertices, states)</code></pre>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span></span>(target : <span class="hljs-symbol">SF:</span>:RenderTarget, states : <span class="hljs-symbol">SF:</span>:RenderStates)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+
+<p>To know more about transformations and the <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a> class, you can read the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
+<h2 id="creating-an-sfml-like-entity">Creating an SFML-like entity</h2>
+<p>Now that you know how to define your own textured/colored/transformed entity, wouldn't it be nice to wrap it in an SFML-style class? Fortunately, SFML makes this easy for you by providing the <a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> module and <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> base class. These two classes are the base of the built-in SFML entities Sprite, Text and Shape.</p>
+<p><a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> is an interface: it declares a single abstract method. Including sf::Drawable allows you to draw instances of your class the same way as SFML classes:</p>
+<pre class="codehilite"><code class="language-crystal">class MyEntity
+  include SF::Drawable
+
+  def draw(target : SF::RenderTarget, states : SF::RenderStates)
+  end
+end
 
 entity = MyEntity.new
-window.draw(entity) <span class="hljs-comment"># internally calls entity.draw</span>
-</code></pre>
-<p>Subclassing the <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> class automatically adds the same transformation methods to your class as other CrSFML classes (<code>position=</code>, <code>rotation=</code>, <code>move</code>, <code>scale</code>, ...). You can learn more about this in the tutorial on <a href="graphics-transform.md" title="Transforming entities tutorial">transforming entities</a>.</p>
-<p>Using these two features and a vertex array (in this example we&apos;ll also add a texture), here is what a typical CrSFML-like graphical class would look like:</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyEntity</span> &lt; <span class="hljs-title">SF::Transformable</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-symbol">SF:</span>:Drawable
+window.draw(entity) # internally calls entity.draw</code></pre>
 
-  <span class="hljs-comment"># add methods to play with the entity&apos;s geometry / colors / texturing...</span>
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span></span>(target, states)
-    <span class="hljs-comment"># apply the entity&apos;s transform -- combine it with the one that was passed by the caller</span>
-    states.transform *= transform <span class="hljs-comment"># transform() is defined by SF::Transformable</span>
+<p>Subclassing the <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> class automatically adds the same transformation methods to your class as other CrSFML classes (<code>position=</code>, <code>rotation=</code>, <code>move</code>, <code>scale</code>, ...). You can learn more about this in the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
+<p>Using these two features and a vertex array (in this example we'll also add a texture), here is what a typical CrSFML-like graphical class would look like:</p>
+<pre class="codehilite"><code class="language-crystal">class MyEntity &lt; SF::Transformable
+  include SF::Drawable
 
-    <span class="hljs-comment"># apply the texture</span>
+  # add methods to play with the entity's geometry / colors / texturing...
+
+  def draw(target, states)
+    # apply the entity's transform -- combine it with the one that was passed by the caller
+    states.transform *= transform # transform() is defined by SF::Transformable
+
+    # apply the texture
     states.texture = @texture
 
-    <span class="hljs-comment"># you may also override states.shader or states.blend_mode if you want</span>
+    # you may also override states.shader or states.blend_mode if you want
 
-    <span class="hljs-comment"># draw the vertex array</span>
+    # draw the vertex array
     target.draw(@vertices, states)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
+  end
+end</code></pre>
+
+
 <p>You can then use this class as if it were a built-in CrSFML class:</p>
-<pre><code class="lang-crystal">entity = MyEntity.new
+<pre class="codehilite"><code class="language-crystal">entity = MyEntity.new
 
-<span class="hljs-comment"># you can transform it</span>
-entity.position = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-entity.rotation = <span class="hljs-number">45</span>
+# you can transform it
+entity.position = SF.vector2(10, 50)
+entity.rotation = 45
 
-<span class="hljs-comment"># you can draw it</span>
-window.draw(entity)
-</code></pre>
+# you can draw it
+window.draw(entity)</code></pre>
+
+
 <h2 id="example-tile-map">Example: tile map</h2>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml-examples/tree/master/minesweeper" target="_blank">minesweeper</a></strong></p>
-<p>With what we&apos;ve seen above, let&apos;s create a class that encapsulates a tile map. The whole map will be contained in a single vertex array, therefore it will be super fast to draw. Note that we can apply this strategy only if the whole tile set can fit into a single texture. Otherwise, we would have to use at least one vertex array per texture.</p>
+<p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml-examples/tree/master/minesweeper">minesweeper</a></strong></p>
+<p>With what we've seen above, let's create a class that encapsulates a tile map. The whole map will be contained in a single vertex array, therefore it will be super fast to draw. Note that we can apply this strategy only if the whole tile set can fit into a single texture. Otherwise, we would have to use at least one vertex array per texture.</p>
 <p><img alt="The tileset" src="images/vertex-array-tileset.png" width="512" height="128" style="image-rendering: -moz-crisp-edges; image-rendering: pixelated"></p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TileMap</span> &lt; <span class="hljs-title">SF::Transformable</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-symbol">SF:</span>:Drawable
+<pre class="codehilite"><code class="language-crystal">class TileMap &lt; SF::Transformable
+  include SF::Drawable
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>(tileset, tile_size, tiles, width, height)
-    <span class="hljs-keyword">super</span>()
+  def initialize(tileset, tile_size, tiles, width, height)
+    super()
 
-    <span class="hljs-comment"># load the tileset texture</span>
-    @tileset = <span class="hljs-symbol">SF:</span>:Texture.from_file(tileset)
+    # load the tileset texture
+    @tileset = SF::Texture.from_file(tileset)
 
-    @vertices = <span class="hljs-symbol">SF:</span>:VertexArray.new(<span class="hljs-symbol">SF:</span>:Quads)
+    @vertices = SF::VertexArray.new(SF::Quads)
 
     tiles_per_row = @tileset.size.x / tile_size.x
 
-    <span class="hljs-comment"># populate the vertex array, with one quad per tile</span>
-    (<span class="hljs-number">0</span>...height).each <span class="hljs-keyword">do</span> |y|
-      (<span class="hljs-number">0</span>...width).each <span class="hljs-keyword">do</span> |x|
-        <span class="hljs-comment"># get the current tile number</span>
+    # populate the vertex array, with one quad per tile
+    (0...height).each do |y|
+      (0...width).each do |x|
+        # get the current tile number
         tile_index = tiles[width*y + x]
 
-        <span class="hljs-comment"># find its position in the tileset texture</span>
+        # find its position in the tileset texture
         tile_pos = SF.vector2(
           tile_index % tiles_per_row,
           tile_index / tiles_per_row
@@ -700,245 +386,229 @@ window.draw(entity)
 
         destination = SF.vector2(x, y)
 
-        <span class="hljs-comment"># define its 4 corners and texture coordinates</span>
-        { {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>} }.each <span class="hljs-keyword">do</span> |delta|
-          @vertices.append <span class="hljs-symbol">SF:</span>:Vertex.new(
+        # define its 4 corners and texture coordinates
+        { {0, 0}, {1, 0}, {1, 1}, {0, 1} }.each do |delta|
+          @vertices.append SF::Vertex.new(
             (destination + delta) * tile_size,
-            <span class="hljs-symbol">tex_coords:</span> (tile_pos + delta) * tile_size
+            tex_coords: (tile_pos + delta) * tile_size
           )
-        <span class="hljs-keyword">end</span>
-      <span class="hljs-keyword">end</span>
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+        end
+      end
+    end
+  end
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span></span>(target, states)
-    <span class="hljs-comment"># apply the transform</span>
+  def draw(target, states)
+    # apply the transform
     states.transform *= transform()
 
-    <span class="hljs-comment"># apply the tileset texture</span>
+    # apply the tileset texture
     states.texture = @tileset
 
-    <span class="hljs-comment"># draw the vertex array</span>
+    # draw the vertex array
     target.draw(@vertices, states)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
-<p>And now, the application that uses it:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create the window</span>
-window = <span class="hljs-symbol">SF:</span>:RenderWindow.new(<span class="hljs-symbol">SF:</span>:VideoMode.new(<span class="hljs-number">512</span>, <span class="hljs-number">256</span>), <span class="hljs-string">&quot;Tilemap&quot;</span>)
+  end
+end</code></pre>
 
-<span class="hljs-comment"># define the level with an array of tile indices</span>
+
+<p>And now, the application that uses it:</p>
+<pre class="codehilite"><code class="language-crystal"># create the window
+window = SF::RenderWindow.new(SF::VideoMode.new(512, 256), &quot;Tilemap&quot;)
+
+# define the level with an array of tile indices
 level = [
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>,
-  <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>,
-  <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>
+  0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+  0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
+  1, 1, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3,
+  0, 1, 0, 0, 2, 0, 3, 3, 3, 0, 1, 1, 1, 0, 0, 0,
+  0, 1, 1, 0, 3, 3, 3, 0, 0, 0, 1, 1, 1, 2, 0, 0,
+  0, 0, 1, 0, 3, 0, 2, 2, 0, 0, 1, 1, 1, 1, 2, 0,
+  2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
+  0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1
 ]
 
-<span class="hljs-comment"># create the tilemap from the level definition</span>
-map = TileMap.new(<span class="hljs-string">&quot;tileset.png&quot;</span>, SF.vector2(<span class="hljs-number">32</span>, <span class="hljs-number">32</span>), level, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>)
+# create the tilemap from the level definition
+map = TileMap.new(&quot;tileset.png&quot;, SF.vector2(32, 32), level, 16, 8)
 
-<span class="hljs-comment"># run the main loop</span>
-<span class="hljs-keyword">while</span> window.open?
-  <span class="hljs-comment"># handle events</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-keyword">if</span> event.<span class="hljs-keyword">is_a?</span> <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Event:</span>:Closed
+# run the main loop
+while window.open?
+  # handle events
+  while event = window.poll_event
+    if event.is_a? SF::Event::Closed
       window.close
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+    end
+  end
 
-  <span class="hljs-comment"># draw the map</span>
+  # draw the map
   window.clear
   window.draw(map)
   window.display
-<span class="hljs-keyword">end</span>
-</code></pre>
-<p><img src="images/vertex-array-tilemap.png" alt="The tilemap example"></p>
+end</code></pre>
+
+
+<p><img alt="The tilemap example" src="images/vertex-array-tilemap.png" /></p>
 <h2 id="example-particle-system">Example: particle system</h2>
 <p>This second example implements another common entity: The particle system. This one is very simple, with no texture and as few parameters as possible. It demonstrates the use of the <code>SF::Points</code> primitive type with a dynamic vertex array which changes every frame.</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Particle</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>(@velocity, @lifetime, @position)
+<pre class="codehilite"><code class="language-crystal">struct Particle
+  def initialize(@velocity, @lifetime, @position)
     @total_lifetime = @lifetime
-  <span class="hljs-keyword">end</span>
-  property velocity : <span class="hljs-symbol">SF:</span>:Vector2f
-  property lifetime : <span class="hljs-symbol">SF:</span>:Time
-  property position : <span class="hljs-symbol">SF:</span>:Vector2f
-  getter total_lifetime : <span class="hljs-symbol">SF:</span>:Time
-<span class="hljs-keyword">end</span>
+  end
+  property velocity : SF::Vector2f
+  property lifetime : SF::Time
+  property position : SF::Vector2f
+  getter total_lifetime : SF::Time
+end
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParticleSystem</span> &lt; <span class="hljs-title">SF::Transformable</span></span>
-  <span class="hljs-keyword">include</span> <span class="hljs-symbol">SF:</span>:Drawable
+class ParticleSystem &lt; SF::Transformable
+  include SF::Drawable
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>(@count : Int32)
-    <span class="hljs-keyword">super</span>()
+  def initialize(@count : Int32)
+    super()
 
-    @particles = [] <span class="hljs-keyword">of</span> Particle
-    @emitter = <span class="hljs-symbol">SF:</span>:Vector2f.new(<span class="hljs-number">0.0</span>f32, <span class="hljs-number">0.0</span>f32)
+    @particles = [] of Particle
+    @emitter = SF::Vector2f.new(0.0f32, 0.0f32)
     @random = Random.new
-  <span class="hljs-keyword">end</span>
+  end
 
   property emitter
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span></span>(elapsed)
-    @particles.map! <span class="hljs-keyword">do</span> |p|
-      <span class="hljs-comment"># update the position of the particle</span>
+  def update(elapsed)
+    @particles.map! do |p|
+      # update the position of the particle
       p.position += p.velocity * elapsed.as_seconds
 
-      <span class="hljs-comment"># update the particle lifetime</span>
+      # update the particle lifetime
       p.lifetime -= elapsed
 
-      <span class="hljs-comment"># if the particle is dead, remove it</span>
-      <span class="hljs-keyword">if</span> p.lifetime &lt;= <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Time:</span>:Zero
+      # if the particle is dead, remove it
+      if p.lifetime &lt;= SF::Time::Zero
         new_particle
-      <span class="hljs-keyword">else</span>
+      else
         p
-      <span class="hljs-keyword">end</span>
-    <span class="hljs-keyword">end</span>
+      end
+    end
 
-    <span class="hljs-keyword">if</span> @particles.size &lt; @count
+    if @particles.size &lt; @count
       @particles &lt;&lt; new_particle
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+    end
+  end
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span></span>(target, states)
-    vertices = @particles.map <span class="hljs-keyword">do</span> |p|
-      <span class="hljs-comment"># set the alpha (transparency) of the particle according to its lifetime</span>
+  def draw(target, states)
+    vertices = @particles.map do |p|
+      # set the alpha (transparency) of the particle according to its lifetime
       ratio = p.lifetime / p.total_lifetime
-      color = SF.color(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, (ratio * <span class="hljs-number">255</span>).to_u8)
+      color = SF.color(255, 255, 255, (ratio * 255).to_u8)
 
-      <span class="hljs-symbol">SF:</span>:Vertex.new(p.position, color)
-    <span class="hljs-keyword">end</span>
+      SF::Vertex.new(p.position, color)
+    end
 
-    <span class="hljs-comment"># apply the transform</span>
+    # apply the transform
     states.transform *= transform()
 
-    <span class="hljs-comment"># draw the vertex array</span>
-    target.draw(vertices, <span class="hljs-symbol">SF:</span>:Points, states)
-  <span class="hljs-keyword">end</span>
+    # draw the vertex array
+    target.draw(vertices, SF::Points, states)
+  end
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_particle</span></span>
-    <span class="hljs-comment"># give a random velocity and lifetime to the particle</span>
-    angle = @random.rand(<span class="hljs-symbol">Math:</span>:PI * <span class="hljs-number">2</span>)
-    speed = @random.rand(<span class="hljs-number">50.0</span>..<span class="hljs-number">100.0</span>)
+  private def new_particle
+    # give a random velocity and lifetime to the particle
+    angle = @random.rand(Math::PI * 2)
+    speed = @random.rand(50.0..100.0)
     velocity = SF.vector2f(Math.cos(angle) * speed, Math.sin(angle) * speed)
-    lifetime = SF.seconds(@random.rand(<span class="hljs-number">1.0</span>..<span class="hljs-number">3.0</span>))
+    lifetime = SF.seconds(@random.rand(1.0..3.0))
 
     Particle.new(velocity, lifetime, @emitter)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
+  end
+end</code></pre>
+
+
 <p>And a little demo that uses it:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create the window</span>
-window = <span class="hljs-symbol">SF:</span>:RenderWindow.new(<span class="hljs-symbol">SF:</span>:VideoMode.new(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>), <span class="hljs-string">&quot;Particles&quot;</span>)
+<pre class="codehilite"><code class="language-crystal"># create the window
+window = SF::RenderWindow.new(SF::VideoMode.new(800, 600), &quot;Particles&quot;)
 
-<span class="hljs-comment"># create the particle system</span>
-particles = ParticleSystem.new(<span class="hljs-number">1000</span>)
+# create the particle system
+particles = ParticleSystem.new(1000)
 
-<span class="hljs-comment"># create a clock to track the elapsed time</span>
-clock = <span class="hljs-symbol">SF:</span>:Clock.new
+# create a clock to track the elapsed time
+clock = SF::Clock.new
 
-<span class="hljs-comment"># run the main loop</span>
-<span class="hljs-keyword">while</span> window.open?
+# run the main loop
+while window.open?
 
-  <span class="hljs-comment"># handle events</span>
-  <span class="hljs-keyword">while</span> event = window.poll_event
-    <span class="hljs-keyword">if</span> event.<span class="hljs-keyword">is_a?</span> <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Event:</span>:Closed
+  # handle events
+  while event = window.poll_event
+    if event.is_a? SF::Event::Closed
       window.close
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+    end
+  end
 
-  <span class="hljs-comment"># make the particle system emitter follow the mouse</span>
-  mouse = <span class="hljs-symbol">SF:</span>:Mouse.get_position(window)
+  # make the particle system emitter follow the mouse
+  mouse = SF::Mouse.get_position(window)
   particles.emitter = window.map_pixel_to_coords(mouse)
 
-  <span class="hljs-comment"># update it</span>
+  # update it
   elapsed = clock.restart
   particles.update(elapsed)
 
-  <span class="hljs-comment"># draw it</span>
+  # draw it
   window.clear
   window.draw(particles)
   window.display
-<span class="hljs-keyword">end</span>
-</code></pre>
-<p><img src="images/vertex-array-particles.png" alt="The particles example"></p>
+end</code></pre>
 
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
 
-                        </div>
-                    </div>
-                
+<p><img alt="The particles example" src="images/vertex-array-particles.png" /></p>
+              
             </div>
-
-            
-                
-                <a href="shape.html" class="navigation navigation-prev " aria-label="Previous page: Shapes">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="transform.html" class="navigation navigation-next " aria-label="Next page: Position, rotation, scale: transforming entities">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transform.html" class="btn btn-neutral float-right" title="Position, rotation, scale: transforming entities">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="shape.html" class="btn btn-neutral" title="Shapes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Designing your own entities with vertex arrays","level":"4.5","depth":1,"next":{"title":"Position, rotation, scale: transforming entities","level":"4.6","depth":1,"path":"graphics/transform.md","ref":"graphics/transform.md","articles":[]},"previous":{"title":"Shapes","level":"4.4","depth":1,"path":"graphics/shape.md","ref":"graphics/shape.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"api":"http://blaxpirit.github.io/crsfml/api/SF","examples":"https://github.com/BlaXpirit/crsfml/tree/master/examples","examples2":"https://github.com/BlaXpirit/crsfml-examples/tree/master"},"title":"CrSFML Tutorials","links":{"sidebar":{"CrSFML":"http://github.com/BlaXpirit/crsfml"}},"gitbook":">= 3.0.0"},"file":{"path":"graphics/vertex-array.md","mtime":"2018-03-07T21:45:04.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-07T21:45:56.311Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="shape.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="transform.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-

@@ -1,736 +1,401 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Position, rotation, scale: transforming entities - CrSFML Tutorials</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Position, rotation, scale: transforming entities · CrSFML Tutorials</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../style.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Position, rotation, scale: transforming entities";
+    var mkdocs_page_input_path = "graphics/transform.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<body class="wy-body-for-nav" role="document">
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <div class="wy-grid-for-nav">
 
     
-    <link rel="next" href="shader.html" />
-    
-    
-    <link rel="prev" href="vertex-array.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://github.com/BlaXpirit/crsfml" target="_blank" class="custom-link">CrSFML</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    CrSFML tutorials
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">System module</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../system/time.html">
-            
-                <a href="../system/time.html">
-            
-                    
-                    Handling time
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../system/thread.html">
-            
-                <a href="../system/thread.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../system/stream.html">
-            
-                <a href="../system/stream.html">
-            
-                    
-                    User data streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Window module</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../window/window.html">
-            
-                <a href="../window/window.html">
-            
-                    
-                    Opening and managing an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../window/events.html">
-            
-                <a href="../window/events.html">
-            
-                    
-                    Events explained
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../window/inputs.html">
-            
-                <a href="../window/inputs.html">
-            
-                    
-                    Keyboard, mouse and joysticks
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../window/opengl.html">
-            
-                <a href="../window/opengl.html">
-            
-                    
-                    Using OpenGL in an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Graphics module</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="draw.html">
-            
-                <a href="draw.html">
-            
-                    
-                    Drawing 2D stuff
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="sprite.html">
-            
-                <a href="sprite.html">
-            
-                    
-                    Sprites and textures
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="text.html">
-            
-                <a href="text.html">
-            
-                    
-                    Text and fonts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="shape.html">
-            
-                <a href="shape.html">
-            
-                    
-                    Shapes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="vertex-array.html">
-            
-                <a href="vertex-array.html">
-            
-                    
-                    Designing your own entities with vertex arrays
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.6" data-path="transform.html">
-            
-                <a href="transform.html">
-            
-                    
-                    Position, rotation, scale: transforming entities
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="shader.html">
-            
-                <a href="shader.html">
-            
-                    
-                    Adding special effects with shaders
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="view.html">
-            
-                <a href="view.html">
-            
-                    
-                    Controlling the 2D camera with views
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Audio module</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../audio/sounds.html">
-            
-                <a href="../audio/sounds.html">
-            
-                    
-                    Playing sounds and music
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../audio/recording.html">
-            
-                <a href="../audio/recording.html">
-            
-                    
-                    Recording audio
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="../audio/streams.html">
-            
-                <a href="../audio/streams.html">
-            
-                    
-                    Custom audio streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../audio/spatialization.html">
-            
-                <a href="../audio/spatialization.html">
-            
-                    
-                    Spatialization: Sounds in 3D
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Network module</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../network/socket.html">
-            
-                <a href="../network/socket.html">
-            
-                    
-                    Communication using sockets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="../network/packet.html">
-            
-                <a href="../network/packet.html">
-            
-                    
-                    Using packets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="../network/http.html">
-            
-                <a href="../network/http.html">
-            
-                    
-                    Web requests with HTTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="../network/ftp.html">
-            
-                <a href="../network/ftp.html">
-            
-                    
-                    File transfers with FTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">System module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Window module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/window.html">Opening and managing an SFML window</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/events.html">Events explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/inputs.html">Keyboard, mouse and joysticks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/opengl.html">Using OpenGL in an SFML window</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Graphics module</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="draw.html">Drawing 2D stuff</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="sprite.html">Sprites and textures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="text.html">Text and fonts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shape.html">Shapes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vertex-array.html">Designing your own entities with vertex arrays</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="transform.html">Position, rotation, scale: transforming entities</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#transforming-crsfml-entities">Transforming CrSFML entities</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#position">Position</a>
     </li>
-</ul>
-
-
-                </nav>
-            
-        
+    <li class="toctree-l3"><a class="reference internal" href="#rotation">Rotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scale">Scale</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#origin">Origin</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transforming-your-own-classes">Transforming your own classes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#custom-transforms">Custom transforms</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bounding-boxes">Bounding boxes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#object-hierarchies-scene-graph">Object hierarchies (scene graph)</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shader.html">Adding special effects with shaders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="view.html">Controlling the 2D camera with views</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Audio module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/sounds.html">Playing sounds and music</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/recording.html">Recording audio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/streams.html">Custom audio streams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/spatialization.html">Spatialization: Sounds in 3D</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Network module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
+                    </li>
+                </ul>
+      </div>
     </div>
+    </nav>
 
-    <div class="book-body">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CrSFML Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
         
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+          <li>Graphics module &raquo;</li>
+        
+      
     
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Position, rotation, scale: transforming entities</a>
-    </h1>
+    <li>Position, rotation, scale: transforming entities</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oprypin/crsfml/blob/tutorials/graphics/transform.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="position-rotation-scale-transforming-entities">Position, rotation, scale: Transforming entities</h1>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/transformable.cr" target="_blank">transformable</a></strong></p>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="position-rotation-scale-transforming-entities">Position, rotation, scale: Transforming entities</h1>
+<p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/transformable.cr">transformable</a></strong></p>
 <h2 id="transforming-crsfml-entities">Transforming CrSFML entities</h2>
-<p>All CrSFML classes (sprites, text, shapes) use the same interface for transformations: <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a>. This base class provides a simple API to move, rotate and scale your entities. It doesn&apos;t provide maximum flexibility, but instead defines an interface which is easy to understand and to use, and which covers 99% of all use cases -- for the remaining 1%, see the last chapters.</p>
-<p><a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> (and all its derived classes) defines four properties: <strong>position</strong>, <strong>rotation</strong>, <strong>scale</strong> and <strong>origin</strong>. They all have their respective getters and setters. These transformation components are all independent of one another: If you want to change the orientation of the entity, you just have to set its rotation property, you don&apos;t have to care about the current position and scale.</p>
+<p>All CrSFML classes (sprites, text, shapes) use the same interface for transformations: <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a>. This base class provides a simple API to move, rotate and scale your entities. It doesn't provide maximum flexibility, but instead defines an interface which is easy to understand and to use, and which covers 99% of all use cases -- for the remaining 1%, see the last chapters.</p>
+<p><a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> (and all its derived classes) defines four properties: <strong>position</strong>, <strong>rotation</strong>, <strong>scale</strong> and <strong>origin</strong>. They all have their respective getters and setters. These transformation components are all independent of one another: If you want to change the orientation of the entity, you just have to set its rotation property, you don't have to care about the current position and scale.</p>
 <h3 id="position">Position</h3>
-<p>The position is the... position of the entity in the 2D world. I don&apos;t think it needs more explanation :).</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<p>The position is the... position of the entity in the 2D world. I don't think it needs more explanation :).</p>
+<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
 
-<span class="hljs-comment"># set the absolute position of the entity</span>
-entity.position = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
+# set the absolute position of the entity
+entity.position = SF.vector2(10, 50)
 
-<span class="hljs-comment"># move the entity relatively to its current position</span>
-entity.move(SF.vector2(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>))
+# move the entity relatively to its current position
+entity.move(SF.vector2(5, 5))
 
-<span class="hljs-comment"># retrieve the absolute position of the entity</span>
-position = entity.position <span class="hljs-comment"># = (15, 55)</span>
-</code></pre>
-<p><img src="images/transform-position.png" alt="A translated entity"></p>
-<p>By default, entities are positioned relative to their top-left corner. We&apos;ll see how to change that with the &apos;origin&apos; property later.</p>
+# retrieve the absolute position of the entity
+position = entity.position # = (15, 55)</code></pre>
+
+
+<p><img alt="A translated entity" src="images/transform-position.png" /></p>
+<p>By default, entities are positioned relative to their top-left corner. We'll see how to change that with the 'origin' property later.</p>
 <h3 id="rotation">Rotation</h3>
 <p>The rotation is the orientation of the entity in the 2D world. It is defined in <em>degrees</em>, in clockwise order (because the Y axis is pointing down in SFML).</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
 
-<span class="hljs-comment"># set the absolute rotation of the entity</span>
-entity.rotation = <span class="hljs-number">45</span>
+# set the absolute rotation of the entity
+entity.rotation = 45
 
-<span class="hljs-comment"># rotate the entity relatively to its current orientation</span>
-entity.rotate(<span class="hljs-number">10</span>)
+# rotate the entity relatively to its current orientation
+entity.rotate(10)
 
-<span class="hljs-comment"># retrieve the absolute rotation of the entity</span>
-rotation = entity.rotation <span class="hljs-comment"># = 55</span>
-</code></pre>
-<p><img src="images/transform-rotation.png" alt="A rotated entity"></p>
+# retrieve the absolute rotation of the entity
+rotation = entity.rotation # = 55</code></pre>
+
+
+<p><img alt="A rotated entity" src="images/transform-rotation.png" /></p>
 <p>Note that SFML always returns an angle in range [0, 360) when you call <code>rotation</code>.</p>
 <p>As with the position, the rotation is performed around the top-left corner by default, but this can be changed by setting the origin.</p>
 <h3 id="scale">Scale</h3>
 <p>The scale factor allows the entity to be resized. The default scale is 1. Setting it to a value less than 1 makes the entity smaller, greater than 1 makes it bigger. Negative scale values are also allowed, so that you can mirror the entity.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
 
-<span class="hljs-comment"># set the absolute scale of the entity</span>
-entity.scale = SF.vector2(<span class="hljs-number">4.0</span>, <span class="hljs-number">1.6</span>)
+# set the absolute scale of the entity
+entity.scale = SF.vector2(4.0, 1.6)
 
-<span class="hljs-comment"># scale the entity relatively to its current scale</span>
-entity.scale(SF.vector2(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>))
+# scale the entity relatively to its current scale
+entity.scale(SF.vector2(0.5, 0.5))
 
-<span class="hljs-comment"># retrieve the absolute scale of the entity</span>
-scale = entity.scale <span class="hljs-comment"># = (2, 0.8)</span>
-</code></pre>
-<p><img src="images/transform-scale.png" alt="A scaled entity"></p>
+# retrieve the absolute scale of the entity
+scale = entity.scale # = (2, 0.8)</code></pre>
+
+
+<p><img alt="A scaled entity" src="images/transform-scale.png" /></p>
 <h3 id="origin">Origin</h3>
-<p>The origin is the center point of the three other transformations. The entity&apos;s position is the position of its origin, its rotation is performed around the origin, and the scale is applied relative to the origin as well. By default, it is the top-left corner of the entity (point (0, 0)), but you can set it to the center of the entity, or any other corner of the entity for example.</p>
-<p>To keep things simple, there&apos;s only a single origin for all three transformation components. This means that you can&apos;t position an entity relative to its top-left corner while rotating it around its center for example. If you need to do such things, have a look at the next chapters.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># &apos;entity&apos; can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class</span>
+<p>The origin is the center point of the three other transformations. The entity's position is the position of its origin, its rotation is performed around the origin, and the scale is applied relative to the origin as well. By default, it is the top-left corner of the entity (point (0, 0)), but you can set it to the center of the entity, or any other corner of the entity for example.</p>
+<p>To keep things simple, there's only a single origin for all three transformation components. This means that you can't position an entity relative to its top-left corner while rotating it around its center for example. If you need to do such things, have a look at the next chapters.</p>
+<pre class="codehilite"><code class="language-crystal"># 'entity' can be a SF::Sprite, a SF::Text, a SF::Shape or any other transformable class
 
-<span class="hljs-comment"># set the origin of the entity</span>
-entity.origin = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)
+# set the origin of the entity
+entity.origin = SF.vector2(10, 20)
 
-<span class="hljs-comment"># retrieve the origin of the entity</span>
-origin = entity.origin <span class="hljs-comment"># = (10, 20)</span>
-</code></pre>
-<p>Note that changing the origin also changes where the entity is drawn on screen, even though its position property hasn&apos;t changed. If you don&apos;t understand why, read this tutorial one more time!</p>
+# retrieve the origin of the entity
+origin = entity.origin # = (10, 20)</code></pre>
+
+
+<p>Note that changing the origin also changes where the entity is drawn on screen, even though its position property hasn't changed. If you don't understand why, read this tutorial one more time!</p>
 <h2 id="transforming-your-own-classes">Transforming your own classes</h2>
-<p><a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> is not only made for CrSFML classes, it can also be a base (or a member) of your own classes.</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyGraphicalEntity</span> &lt; <span class="hljs-title">SF::Transformable</span></span>
-  <span class="hljs-comment"># ...</span>
-<span class="hljs-keyword">end</span>
+<p><a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> is not only made for CrSFML classes, it can also be a base (or a member) of your own classes.</p>
+<pre class="codehilite"><code class="language-crystal">class MyGraphicalEntity &lt; SF::Transformable
+  # ...
+end
 
-entity.position = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">30</span>)
-entity.rotation = <span class="hljs-number">110</span>
-entity.scale = SF.vector2(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>)
-</code></pre>
-<p>To retrieve the final transform of the entity (commonly needed when drawing it), call the <code>transform</code> method. This method returns a <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a> object. See below for an explanation about it, and how to use it to transform an SFML entity.</p>
-<p>If you don&apos;t need/want the complete set of methods provided by the <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> interface, don&apos;t hesitate to simply use it as a member instead and provide your own methods on top of it. It is not abstract, so it is possible to instantiate it instead of only being able to use it as a base class.</p>
+entity.position = SF.vector2(10, 30)
+entity.rotation = 110
+entity.scale = SF.vector2(0.5, 0.2)</code></pre>
+
+
+<p>To retrieve the final transform of the entity (commonly needed when drawing it), call the <code>transform</code> method. This method returns a <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a> object. See below for an explanation about it, and how to use it to transform an SFML entity.</p>
+<p>If you don't need/want the complete set of methods provided by the <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> interface, don't hesitate to simply use it as a member instead and provide your own methods on top of it. It is not abstract, so it is possible to instantiate it instead of only being able to use it as a base class.</p>
 <h2 id="custom-transforms">Custom transforms</h2>
-<p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> class is easy to use, but it is also limited. Some users might need more flexibility. They might need to specify a final transformation as a custom combination of individual transformations. For these users, a lower-level class is available: <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a>. It is nothing more than a 3x3 matrix, so it can represent any transformation in 2D space.</p>
-<p>There are many ways to construct a <a href="http://blaxpirit.github.io/crsfml/api/SF/Transform.html" target="_blank">Transform</a>:</p>
+<p>The <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> class is easy to use, but it is also limited. Some users might need more flexibility. They might need to specify a final transformation as a custom combination of individual transformations. For these users, a lower-level class is available: <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a>. It is nothing more than a 3x3 matrix, so it can represent any transformation in 2D space.</p>
+<p>There are many ways to construct a <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a>:</p>
 <ul>
 <li>by using the predefined methods for the most common transformations (translation, rotation, scale)</li>
 <li>by combining two transforms</li>
 <li>by specifying its 9 elements directly</li>
 </ul>
 <p>Here are a few examples:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># the identity transform (does nothing)</span>
-t1 = <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">Transform:</span>:Identity
+<pre class="codehilite"><code class="language-crystal"># the identity transform (does nothing)
+t1 = SF::Transform::Identity
 
-<span class="hljs-comment"># a rotation transform</span>
-t2 = <span class="hljs-symbol">SF:</span>:Transform.new
-t2.rotate(<span class="hljs-number">45</span>)
+# a rotation transform
+t2 = SF::Transform.new
+t2.rotate(45)
 
-<span class="hljs-comment"># a custom matrix</span>
-t3 = <span class="hljs-symbol">SF:</span>:Transform.new(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">50</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>)
+# a custom matrix
+t3 = SF::Transform.new(2, 0, 20, 0, 1, 50, 0, 0, 1)
 
-<span class="hljs-comment"># a combined transform</span>
-t4 = t1 * t2 * t3
-</code></pre>
+# a combined transform
+t4 = t1 * t2 * t3</code></pre>
+
+
 <p>You can apply several predefined transformations to the same transform as well. They will all be combined sequentially:</p>
-<pre><code class="lang-crystal">t = <span class="hljs-symbol">SF:</span>:Transform.new
-t.translate(<span class="hljs-number">10</span>, <span class="hljs-number">100</span>)
-t.rotate(<span class="hljs-number">90</span>)
-t.translate(-<span class="hljs-number">10</span>, <span class="hljs-number">50</span>)
-t.scale(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.75</span>)
-</code></pre>
+<pre class="codehilite"><code class="language-crystal">t = SF::Transform.new
+t.translate(10, 100)
+t.rotate(90)
+t.translate(-10, 50)
+t.scale(0.5, 0.75)</code></pre>
+
+
 <p>Back to the point: How can a custom transform be applied to a graphical entity? Simple: Pass it to the draw method.</p>
-<pre><code class="lang-crystal">states = <span class="hljs-symbol">SF:</span>:RenderStates.new
+<pre class="codehilite"><code class="language-crystal">states = SF::RenderStates.new
 states.transform = transform
-window.draw(entity, states)
-</code></pre>
-<p>If your entity is a <a href="http://blaxpirit.github.io/crsfml/api/SF/Transformable.html" target="_blank">Transformable</a> (sprite, text, shape), which contains its own internal transform, both the internal and the passed transform are combined to produce the final transform.</p>
+window.draw(entity, states)</code></pre>
+
+
+<p>If your entity is a <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> (sprite, text, shape), which contains its own internal transform, both the internal and the passed transform are combined to produce the final transform.</p>
 <h2 id="bounding-boxes">Bounding boxes</h2>
 <p>After transforming entities and drawing them, you might want to perform some computations using them e.g. checking for collisions.</p>
 <p>SFML entities can give you their bounding box. The bounding box is the minimal rectangle that contains all points belonging to the entity, with sides aligned to the X and Y axes.</p>
-<p><img src="images/transform-bounds.png" alt="Bounding box of entities"></p>
+<p><img alt="Bounding box of entities" src="images/transform-bounds.png" /></p>
 <p>The bounding box is very useful when implementing collision detection: Checks against a point or another axis-aligned rectangle can be done very quickly, and its area is close enough to that of the real entity to provide a good approximation.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># get the bounding box of the entity</span>
+<pre class="codehilite"><code class="language-crystal"># get the bounding box of the entity
 bounding_box = entity.global_bounds
 
-<span class="hljs-comment"># check collision with a point</span>
+# check collision with a point
 point = ...
 
-<span class="hljs-keyword">if</span> bounding_box.contains? point
-  <span class="hljs-comment"># collision!</span>
-<span class="hljs-keyword">end</span>
+if bounding_box.contains? point
+  # collision!
+end
 
-<span class="hljs-comment"># check collision with another box (like the bounding box of another entity)</span>
+# check collision with another box (like the bounding box of another entity)
 other_box = ...
 
-<span class="hljs-keyword">if</span> bounding_box.intersects? other_box
-  <span class="hljs-comment"># collision!</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
+if bounding_box.intersects? other_box
+  # collision!
+end</code></pre>
+
+
 <p>The method is named <code>global_bounds</code> because it returns the bounding box of the entity in the global coordinate system, i.e. after all of its transformations (position, rotation, scale) have been applied.</p>
-<p>There&apos;s another method that returns the bounding box of the entity in its <em>local</em> coordinate system (before its transformations are applied): <code>local_bounds</code>. This method can be used to get the initial size of an entity, for example, or to perform more specific calculations.</p>
+<p>There's another method that returns the bounding box of the entity in its <em>local</em> coordinate system (before its transformations are applied): <code>local_bounds</code>. This method can be used to get the initial size of an entity, for example, or to perform more specific calculations.</p>
 <h2 id="object-hierarchies-scene-graph">Object hierarchies (scene graph)</h2>
 <p>With the custom transforms seen previously, it becomes easy to implement a hierarchy of objects in which children are transformed relative to their parent. All you have to do is pass the combined transform from parent to children when you draw them, all the way until you reach the final drawable entities (sprites, text, shapes, vertex arrays or your own drawables).</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># the abstract base class</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>
-  <span class="hljs-comment"># ... methods to transform the node</span>
+<pre class="codehilite"><code class="language-crystal"># the abstract base class
+class Node
+  # ... methods to transform the node
 
-  <span class="hljs-comment"># ... methods to manage the node&apos;s children</span>
+  # ... methods to manage the node's children
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span></span>(target, parent_transform)
-    <span class="hljs-comment"># combine the parent transform with the node&apos;s one</span>
+  def draw(target, parent_transform)
+    # combine the parent transform with the node's one
     combined_transform = parent_transform * @transform
 
-    <span class="hljs-comment"># let the node draw itself</span>
+    # let the node draw itself
     on_draw(target, combined_transform)
 
-    <span class="hljs-comment"># draw its children</span>
-    @children.each <span class="hljs-keyword">do</span> |child|
+    # draw its children
+    @children.each do |child|
       child.draw(target, combined_transform)
-    <span class="hljs-keyword">end</span>
-  <span class="hljs-keyword">end</span>
+    end
+  end
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span></span>(target, transform)
+  private def on_draw(target, transform)
     ...
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  end
+end
 
-<span class="hljs-comment"># a simple derived class: a node that draws a sprite</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpriteNode</span> &lt; <span class="hljs-title">Node</span></span>
-  <span class="hljs-comment"># .. methods to define the sprite</span>
+# a simple derived class: a node that draws a sprite
+class SpriteNode &lt; Node
+  # .. methods to define the sprite
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_draw</span></span>(target, transform)
+  private def on_draw(target, transform)
     target.draw(@sprite, transform)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
+  end
+end</code></pre>
+              
             </div>
-
-            
-                
-                <a href="vertex-array.html" class="navigation navigation-prev " aria-label="Previous page: Designing your own entities with vertex arrays">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="shader.html" class="navigation navigation-next " aria-label="Next page: Adding special effects with shaders">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shader.html" class="btn btn-neutral float-right" title="Adding special effects with shaders">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="vertex-array.html" class="btn btn-neutral" title="Designing your own entities with vertex arrays"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Position, rotation, scale: transforming entities","level":"4.6","depth":1,"next":{"title":"Adding special effects with shaders","level":"4.7","depth":1,"path":"graphics/shader.md","ref":"graphics/shader.md","articles":[]},"previous":{"title":"Designing your own entities with vertex arrays","level":"4.5","depth":1,"path":"graphics/vertex-array.md","ref":"graphics/vertex-array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"api":"http://blaxpirit.github.io/crsfml/api/SF","examples":"https://github.com/BlaXpirit/crsfml/tree/master/examples","examples2":"https://github.com/BlaXpirit/crsfml-examples/tree/master"},"title":"CrSFML Tutorials","links":{"sidebar":{"CrSFML":"http://github.com/BlaXpirit/crsfml"}},"gitbook":">= 3.0.0"},"file":{"path":"graphics/transform.md","mtime":"2018-03-07T21:44:51.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-07T21:45:56.311Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="vertex-array.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="shader.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-

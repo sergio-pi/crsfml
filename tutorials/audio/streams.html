@@ -1,667 +1,316 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Custom audio streams - CrSFML Tutorials</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Custom audio streams · CrSFML Tutorials</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../style.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Custom audio streams";
+    var mkdocs_page_input_path = "audio/streams.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<body class="wy-body-for-nav" role="document">
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <div class="wy-grid-for-nav">
 
     
-    <link rel="next" href="spatialization.html" />
-    
-    
-    <link rel="prev" href="recording.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://github.com/BlaXpirit/crsfml" target="_blank" class="custom-link">CrSFML</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    CrSFML tutorials
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">System module</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../system/time.html">
-            
-                <a href="../system/time.html">
-            
-                    
-                    Handling time
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../system/thread.html">
-            
-                <a href="../system/thread.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../system/stream.html">
-            
-                <a href="../system/stream.html">
-            
-                    
-                    User data streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Window module</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../window/window.html">
-            
-                <a href="../window/window.html">
-            
-                    
-                    Opening and managing an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../window/events.html">
-            
-                <a href="../window/events.html">
-            
-                    
-                    Events explained
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../window/inputs.html">
-            
-                <a href="../window/inputs.html">
-            
-                    
-                    Keyboard, mouse and joysticks
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../window/opengl.html">
-            
-                <a href="../window/opengl.html">
-            
-                    
-                    Using OpenGL in an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Graphics module</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../graphics/draw.html">
-            
-                <a href="../graphics/draw.html">
-            
-                    
-                    Drawing 2D stuff
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../graphics/sprite.html">
-            
-                <a href="../graphics/sprite.html">
-            
-                    
-                    Sprites and textures
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="../graphics/text.html">
-            
-                <a href="../graphics/text.html">
-            
-                    
-                    Text and fonts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="../graphics/shape.html">
-            
-                <a href="../graphics/shape.html">
-            
-                    
-                    Shapes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="../graphics/vertex-array.html">
-            
-                <a href="../graphics/vertex-array.html">
-            
-                    
-                    Designing your own entities with vertex arrays
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="../graphics/transform.html">
-            
-                <a href="../graphics/transform.html">
-            
-                    
-                    Position, rotation, scale: transforming entities
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="../graphics/shader.html">
-            
-                <a href="../graphics/shader.html">
-            
-                    
-                    Adding special effects with shaders
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="../graphics/view.html">
-            
-                <a href="../graphics/view.html">
-            
-                    
-                    Controlling the 2D camera with views
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Audio module</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="sounds.html">
-            
-                <a href="sounds.html">
-            
-                    
-                    Playing sounds and music
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="recording.html">
-            
-                <a href="recording.html">
-            
-                    
-                    Recording audio
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="5.3" data-path="streams.html">
-            
-                <a href="streams.html">
-            
-                    
-                    Custom audio streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="spatialization.html">
-            
-                <a href="spatialization.html">
-            
-                    
-                    Spatialization: Sounds in 3D
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Network module</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../network/socket.html">
-            
-                <a href="../network/socket.html">
-            
-                    
-                    Communication using sockets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="../network/packet.html">
-            
-                <a href="../network/packet.html">
-            
-                    
-                    Using packets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="../network/http.html">
-            
-                <a href="../network/http.html">
-            
-                    
-                    Web requests with HTTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="../network/ftp.html">
-            
-                <a href="../network/ftp.html">
-            
-                    
-                    File transfers with FTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">System module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Window module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/window.html">Opening and managing an SFML window</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/events.html">Events explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/inputs.html">Keyboard, mouse and joysticks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/opengl.html">Using OpenGL in an SFML window</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Graphics module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/draw.html">Drawing 2D stuff</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/sprite.html">Sprites and textures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/text.html">Text and fonts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/shape.html">Shapes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/vertex-array.html">Designing your own entities with vertex arrays</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/transform.html">Position, rotation, scale: transforming entities</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/shader.html">Adding special effects with shaders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphics/view.html">Controlling the 2D camera with views</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Audio module</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="sounds.html">Playing sounds and music</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="recording.html">Recording audio</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="streams.html">Custom audio streams</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#audio-stream-whats-that">Audio stream? What's that?</a>
     </li>
-</ul>
-
-
-                </nav>
-            
-        
+    <li class="toctree-l2"><a class="reference internal" href="#sfsoundstream">SF::SoundStream</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#threading-issues">Threading issues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-your-audio-stream">Using your audio stream</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-simple-example">A simple example</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="spatialization.html">Spatialization: Sounds in 3D</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Network module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
+                    </li>
+                </ul>
+      </div>
     </div>
+    </nav>
 
-    <div class="book-body">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CrSFML Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
         
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+          <li>Audio module &raquo;</li>
+        
+      
     
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Custom audio streams</a>
-    </h1>
+    <li>Custom audio streams</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oprypin/crsfml/blob/tutorials/audio/streams.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="custom-audio-streams">Custom audio streams</h1>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/echo.cr" target="_blank">echo</a></strong></p>
-<h2 id="audio-stream-whats-that">Audio stream? What&apos;s that?</h2>
-<p>An audio stream is similar to music (remember the <a href="http://blaxpirit.github.io/crsfml/api/SF/Music.html" target="_blank">Music</a> class?). It has almost the same methods and behaves the same. The only difference is that an audio stream doesn&apos;t play an audio file: Instead, it plays a custom audio source that <em>you</em> directly provide. In other words, defining your own audio stream allows you to play from more than just a file: A sound streamed over the network, music generated by your program, an audio format that SFML doesn&apos;t support, etc.</p>
-<p>In fact, the <a href="http://blaxpirit.github.io/crsfml/api/SF/Music.html" target="_blank">Music</a> class is just a specialized audio stream that gets its audio samples from a file.</p>
-<p>Since we&apos;re talking about <em>streaming</em>, we&apos;ll deal with audio data that cannot be loaded entirely in memory, and will instead be loaded in small chunks while it is being played. If your sound can be loaded completely and can fit in memory, then audio streams won&apos;t help you: Just load the audio data into a <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundBuffer.html" target="_blank">SoundBuffer</a> and use a regular <a href="http://blaxpirit.github.io/crsfml/api/SF/Sound.html" target="_blank">Sound</a> to play it.</p>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="custom-audio-streams">Custom audio streams</h1>
+<p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/echo.cr">echo</a></strong></p>
+<h2 id="audio-stream-whats-that">Audio stream? What's that?</h2>
+<p>An audio stream is similar to music (remember the <a href="http://oprypin.github.io/crsfml/api/SF/Music.html">Music</a> class?). It has almost the same methods and behaves the same. The only difference is that an audio stream doesn't play an audio file: Instead, it plays a custom audio source that <em>you</em> directly provide. In other words, defining your own audio stream allows you to play from more than just a file: A sound streamed over the network, music generated by your program, an audio format that SFML doesn't support, etc.</p>
+<p>In fact, the <a href="http://oprypin.github.io/crsfml/api/SF/Music.html">Music</a> class is just a specialized audio stream that gets its audio samples from a file.</p>
+<p>Since we're talking about <em>streaming</em>, we'll deal with audio data that cannot be loaded entirely in memory, and will instead be loaded in small chunks while it is being played. If your sound can be loaded completely and can fit in memory, then audio streams won't help you: Just load the audio data into a <a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a> and use a regular <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> to play it.</p>
 <h2 id="sfsoundstream">SF::SoundStream</h2>
-<p>In order to define your own audio stream, you need to inherit from the <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundStream.html" target="_blank">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> &lt; <span class="hljs-title">SF::SoundStream</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span></span>() : Slice(Int16)?
-  <span class="hljs-keyword">end</span>
+<p>In order to define your own audio stream, you need to inherit from the <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
+<pre class="codehilite"><code class="language-crystal">class MyAudioStream &lt; SF::SoundStream
+  def on_get_data() : Slice(Int16)?
+  end
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span></span>(time_offset : Time)
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
+  def on_seek(time_offset : Time)
+  end
+end</code></pre>
+
+
 <p><code>on_get_data</code> is called by the base class whenever it runs out of audio samples and needs more of them. You must provide new audio samples by returning a slice with data:</p>
-<pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAudioStream</span> &lt; <span class="hljs-title">SF::SoundStream</span></span>
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_data</span></span>()
+<pre class="codehilite"><code class="language-crystal">class MyAudioStream &lt; SF::SoundStream
+  def get_data()
     samples_array.to_slice
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
-<p>You must return a non-empty slice when everything is all right, or <code>nil</code> if playback must be stopped, either because an error has occurred or because there&apos;s simply no more audio data to play.</p>
-<p>SFML makes an internal copy of the audio samples as soon as <code>on_get_data</code> returns, so you don&apos;t have to keep the original data alive if you don&apos;t want to.</p>
+  end
+end</code></pre>
+
+
+<p>You must return a non-empty slice when everything is all right, or <code>nil</code> if playback must be stopped, either because an error has occurred or because there's simply no more audio data to play.</p>
+<p>SFML makes an internal copy of the audio samples as soon as <code>on_get_data</code> returns, so you don't have to keep the original data alive if you don't want to.</p>
 <p>The <code>on_seek</code> method is called when the <code>playing_offset=</code> public method is called. Its purpose is to change the current playing position in the source data. The parameter is a time value representing the new position, from the beginning of the sound (<em>not</em> from the current position). This method is sometimes impossible to implement. In those cases leave it empty, and tell the users of your class that changing the playing position is not supported.</p>
-<p>Now your class is almost ready to work. The only thing that <a href="http://blaxpirit.github.io/crsfml/api/SF/SoundStream.html" target="_blank">SoundStream</a> needs to know now is the channel count and sample rate of your stream, so that it can be played as expected.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># where this is done totally depends on how your stream class is designed</span>
-MyAudioStream.new(<span class="hljs-symbol">channel_count:</span> ..., <span class="hljs-symbol">sample_rate:</span> ...)
-</code></pre>
+<p>Now your class is almost ready to work. The only thing that <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> needs to know now is the channel count and sample rate of your stream, so that it can be played as expected.</p>
+<pre class="codehilite"><code class="language-crystal"># where this is done totally depends on how your stream class is designed
+MyAudioStream.new(channel_count: ..., sample_rate: ...)</code></pre>
+
+
 <h2 id="threading-issues">Threading issues</h2>
 <p>Audio streams are always played in a separate thread, therefore it is important to know what happens exactly, and where.</p>
 <p><code>on_seek</code> is called directly by the <code>playing_offset=</code> function, so it is always executed in the caller thread. However, the <code>on_get_data</code> function will be called repeatedly as long as the stream is being played, in a separate thread created by SFML. If your stream uses data that may be accessed <em>concurrently</em> in both the caller thread and in the playing thread, you have to protect it (with a mutex for example) in order to avoid concurrent access, which may cause undefined behavior -- corrupt data being played, crashes, etc.</p>
-<p>If you&apos;re not familiar enough with threading, you can refer to the <a href="../system/thread.html" title="Threading tutorial">corresponding tutorial</a> for more information.</p>
+<p>If you're not familiar enough with threading, you can refer to the <a href="../system/thread.html" title="Threading tutorial">corresponding tutorial</a> for more information.</p>
 <h2 id="using-your-audio-stream">Using your audio stream</h2>
-<p>Now that you have defined your own audio stream class, let&apos;s see how to use it. In fact, things are very similar to what&apos;s shown in the <a href="sounds.html" title="Playing sounds and musics">tutorial about SF::Music</a>. You can control playback with the <code>play</code>, <code>pause</code>, <code>stop</code> and <code>playing_offset=</code> methods. You can also play with the sound&apos;s properties, such as the volume or the pitch. You can refer to the API documentation or to the other audio tutorials for more details.</p>
+<p>Now that you have defined your own audio stream class, let's see how to use it. In fact, things are very similar to what's shown in the <a href="sounds.html" title="Playing sounds and musics">tutorial about SF::Music</a>. You can control playback with the <code>play</code>, <code>pause</code>, <code>stop</code> and <code>playing_offset=</code> methods. You can also play with the sound's properties, such as the volume or the pitch. You can refer to the API documentation or to the other audio tutorials for more details.</p>
 <h2 id="a-simple-example">A simple example</h2>
 <p>Here is a very simple example of a custom audio stream class which plays the data of a sound buffer. Such a class might seem totally useless, but the point here is to focus on how the data is streamed by the class, regardless of where it comes from.</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml/system&quot;</span>
-<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;crsfml/audio&quot;</span>
+<pre class="codehilite"><code class="language-crystal">require &quot;crsfml/system&quot;
+require &quot;crsfml/audio&quot;
 
-<span class="hljs-comment"># custom audio stream that plays a loaded buffer</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyStream</span> &lt; <span class="hljs-title">SF::SoundStream</span></span>
+# custom audio stream that plays a loaded buffer
+class MyStream &lt; SF::SoundStream
   @samples : Slice(Int16)
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>(@buffer : <span class="hljs-symbol">SF:</span>:SoundBuffer)
-    <span class="hljs-comment"># get a slice that points to the buffer with samples</span>
+  def initialize(@buffer : SF::SoundBuffer)
+    # get a slice that points to the buffer with samples
     @samples = buffer.samples.to_slice(buffer.sample_count)
 
-    <span class="hljs-comment"># reset the current playing position</span>
-    @current_sample = <span class="hljs-number">0</span>
+    # reset the current playing position
+    @current_sample = 0
 
-    <span class="hljs-comment"># initialize the base class</span>
-    <span class="hljs-keyword">super</span>(buffer.channel_count, buffer.sample_rate)
-  <span class="hljs-keyword">end</span>
+    # initialize the base class
+    super(buffer.channel_count, buffer.sample_rate)
+  end
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_get_data</span></span>()
-    <span class="hljs-comment"># number of samples to stream every time the function is called;</span>
-    <span class="hljs-comment"># in a more robust implementation, it should be a fixed</span>
-    <span class="hljs-comment"># amount of time rather than an arbitrary number of samples</span>
-    to_stream = {<span class="hljs-number">50000</span>, @samples.size - @current_sample}.min
-    <span class="hljs-comment"># if the end is close, set the number to play the remaining samples</span>
+  def on_get_data()
+    # number of samples to stream every time the function is called;
+    # in a more robust implementation, it should be a fixed
+    # amount of time rather than an arbitrary number of samples
+    to_stream = {50000, @samples.size - @current_sample}.min
+    # if the end is close, set the number to play the remaining samples
 
-    <span class="hljs-comment"># if nothing left to play</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span> <span class="hljs-keyword">unless</span> to_stream &gt; <span class="hljs-number">0</span>
+    # if nothing left to play
+    return nil unless to_stream &gt; 0
 
-    <span class="hljs-comment"># the next audio samples to be played</span>
+    # the next audio samples to be played
     result = (@samples.to_unsafe + @current_sample).to_slice(to_stream)
 
-    <span class="hljs-comment"># advance the position</span>
+    # advance the position
     @current_sample += to_stream
 
     result
-  <span class="hljs-keyword">end</span>
+  end
 
-  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_seek</span></span>(time_offset)
-    <span class="hljs-comment"># compute the corresponding sample index according to the</span>
-    <span class="hljs-comment"># sample rate and channel count</span>
+  def on_seek(time_offset)
+    # compute the corresponding sample index according to the
+    # sample rate and channel count
     @current_sample = (
       time_offset.as_seconds *
       sample_rate * channel_count
     ).to_i
-  <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
+  end
+end
 
-<span class="hljs-comment"># load an audio buffer from a sound file</span>
-buffer = <span class="hljs-symbol">SF:</span>:SoundBuffer.from_file(<span class="hljs-string">&quot;canary.wav&quot;</span>)
+# load an audio buffer from a sound file
+buffer = SF::SoundBuffer.from_file(&quot;canary.wav&quot;)
 
-<span class="hljs-comment"># initialize and play our custom stream</span>
+# initialize and play our custom stream
 stream = MyStream.new(buffer)
 stream.play
 
-<span class="hljs-comment"># let it play until it is finished</span>
-<span class="hljs-keyword">while</span> stream.status == <span class="hljs-symbol">SF:</span>:<span class="hljs-symbol">SoundSource:</span>:Playing
-  SF.sleep(SF.seconds(<span class="hljs-number">1</span>))
-  <span class="hljs-comment"># jump back every so often</span>
-  stream.playing_offset -= SF.seconds(<span class="hljs-number">0.7</span>)
-<span class="hljs-keyword">end</span>
-</code></pre>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
+# let it play until it is finished
+while stream.status == SF::SoundSource::Playing
+  SF.sleep(SF.seconds(1))
+  # jump back every so often
+  stream.playing_offset -= SF.seconds(0.7)
+end</code></pre>
+              
             </div>
-
-            
-                
-                <a href="recording.html" class="navigation navigation-prev " aria-label="Previous page: Recording audio">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="spatialization.html" class="navigation navigation-next " aria-label="Next page: Spatialization: Sounds in 3D">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="spatialization.html" class="btn btn-neutral float-right" title="Spatialization: Sounds in 3D">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="recording.html" class="btn btn-neutral" title="Recording audio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Custom audio streams","level":"5.3","depth":1,"next":{"title":"Spatialization: Sounds in 3D","level":"5.4","depth":1,"path":"audio/spatialization.md","ref":"audio/spatialization.md","articles":[]},"previous":{"title":"Recording audio","level":"5.2","depth":1,"path":"audio/recording.md","ref":"audio/recording.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"api":"http://blaxpirit.github.io/crsfml/api/SF","examples":"https://github.com/BlaXpirit/crsfml/tree/master/examples","examples2":"https://github.com/BlaXpirit/crsfml-examples/tree/master"},"title":"CrSFML Tutorials","links":{"sidebar":{"CrSFML":"http://github.com/BlaXpirit/crsfml"}},"gitbook":">= 3.0.0"},"file":{"path":"audio/streams.md","mtime":"2018-03-07T21:44:51.452Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-07T21:45:56.311Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="recording.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="spatialization.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-

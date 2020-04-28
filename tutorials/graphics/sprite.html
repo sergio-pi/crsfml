@@ -1,667 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Sprites and textures - CrSFML Tutorials</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Sprites and textures · CrSFML Tutorials</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link href="../style.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sprites and textures";
+    var mkdocs_page_input_path = "graphics/sprite.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
+  
+</head>
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+<body class="wy-body-for-nav" role="document">
 
-    
-
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+  <div class="wy-grid-for-nav">
 
     
-    <link rel="next" href="text.html" />
-    
-    
-    <link rel="prev" href="draw.html" />
-    
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
 
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-    
-        
-        <li>
-            <a href="http://github.com/BlaXpirit/crsfml" target="_blank" class="custom-link">CrSFML</a>
-        </li>
-    
-    
-
-    
-    <li class="divider"></li>
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    CrSFML tutorials
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">System module</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../system/time.html">
-            
-                <a href="../system/time.html">
-            
-                    
-                    Handling time
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../system/thread.html">
-            
-                <a href="../system/thread.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../system/stream.html">
-            
-                <a href="../system/stream.html">
-            
-                    
-                    User data streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Window module</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../window/window.html">
-            
-                <a href="../window/window.html">
-            
-                    
-                    Opening and managing an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../window/events.html">
-            
-                <a href="../window/events.html">
-            
-                    
-                    Events explained
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../window/inputs.html">
-            
-                <a href="../window/inputs.html">
-            
-                    
-                    Keyboard, mouse and joysticks
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../window/opengl.html">
-            
-                <a href="../window/opengl.html">
-            
-                    
-                    Using OpenGL in an SFML window
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Graphics module</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="draw.html">
-            
-                <a href="draw.html">
-            
-                    
-                    Drawing 2D stuff
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.2" data-path="sprite.html">
-            
-                <a href="sprite.html">
-            
-                    
-                    Sprites and textures
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="text.html">
-            
-                <a href="text.html">
-            
-                    
-                    Text and fonts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="shape.html">
-            
-                <a href="shape.html">
-            
-                    
-                    Shapes
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="vertex-array.html">
-            
-                <a href="vertex-array.html">
-            
-                    
-                    Designing your own entities with vertex arrays
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="transform.html">
-            
-                <a href="transform.html">
-            
-                    
-                    Position, rotation, scale: transforming entities
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="shader.html">
-            
-                <a href="shader.html">
-            
-                    
-                    Adding special effects with shaders
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="view.html">
-            
-                <a href="view.html">
-            
-                    
-                    Controlling the 2D camera with views
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Audio module</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../audio/sounds.html">
-            
-                <a href="../audio/sounds.html">
-            
-                    
-                    Playing sounds and music
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../audio/recording.html">
-            
-                <a href="../audio/recording.html">
-            
-                    
-                    Recording audio
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="../audio/streams.html">
-            
-                <a href="../audio/streams.html">
-            
-                    
-                    Custom audio streams
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../audio/spatialization.html">
-            
-                <a href="../audio/spatialization.html">
-            
-                    
-                    Spatialization: Sounds in 3D
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">Network module</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="../network/socket.html">
-            
-                <a href="../network/socket.html">
-            
-                    
-                    Communication using sockets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="../network/packet.html">
-            
-                <a href="../network/packet.html">
-            
-                    
-                    Using packets
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="../network/http.html">
-            
-                <a href="../network/http.html">
-            
-                    
-                    Web requests with HTTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="../network/ftp.html">
-            
-                <a href="../network/ftp.html">
-            
-                    
-                    File transfers with FTP
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">System module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Window module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/window.html">Opening and managing an SFML window</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/events.html">Events explained</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/inputs.html">Keyboard, mouse and joysticks</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../window/opengl.html">Using OpenGL in an SFML window</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Graphics module</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="draw.html">Drawing 2D stuff</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="sprite.html">Sprites and textures</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vocabulary">Vocabulary</a>
     </li>
-</ul>
-
-
-                </nav>
-            
-        
+    <li class="toctree-l2"><a class="reference internal" href="#loading-a-texture">Loading a texture</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ok-can-i-have-my-sprite-now">Ok, can I have my sprite now?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-importance-of-using-as-few-textures-as-possible">The importance of using as few textures as possible</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-sftexture-with-opengl-code">Using SF::Texture with OpenGL code</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="text.html">Text and fonts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shape.html">Shapes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vertex-array.html">Designing your own entities with vertex arrays</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="transform.html">Position, rotation, scale: transforming entities</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="shader.html">Adding special effects with shaders</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="view.html">Controlling the 2D camera with views</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Audio module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/sounds.html">Playing sounds and music</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/recording.html">Recording audio</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/streams.html">Custom audio streams</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../audio/spatialization.html">Spatialization: Sounds in 3D</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Network module</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
+                    </li>
+                </ul>
+      </div>
     </div>
+    </nav>
 
-    <div class="book-body">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CrSFML Tutorials</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
         
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
+          <li>Graphics module &raquo;</li>
+        
+      
     
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Sprites and textures</a>
-    </h1>
+    <li>Sprites and textures</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/oprypin/crsfml/blob/tutorials/graphics/sprite.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
 </div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="sprites-and-textures">Sprites and textures</h1>
-<p>Relevant example: <strong><a href="https://github.com/BlaXpirit/crsfml/tree/master/examples/flippy_bird.cr" target="_blank">flippy_bird</a></strong></p>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sprites-and-textures">Sprites and textures</h1>
+<p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/flippy_bird.cr">flippy_bird</a></strong></p>
 <h2 id="vocabulary">Vocabulary</h2>
-<p>Most (if not all) of you are already familiar with these two very common objects, so let&apos;s define them very briefly.</p>
-<p>A texture is an image. But we call it &quot;texture&quot; because it has a very specific role: being mapped to a 2D entity.</p>
+<p>Most (if not all) of you are already familiar with these two very common objects, so let's define them very briefly.</p>
+<p>A texture is an image. But we call it "texture" because it has a very specific role: being mapped to a 2D entity.</p>
 <p>A sprite is nothing more than a textured rectangle.</p>
-<p><img src="images/sprites-definition.png" alt=""></p>
-<p>Ok, that was short but if you really don&apos;t understand what sprites and textures are, then you&apos;ll find a much better description on Wikipedia.</p>
+<p><img alt="" src="images/sprites-definition.png" /></p>
+<p>Ok, that was short but if you really don't understand what sprites and textures are, then you'll find a much better description on Wikipedia.</p>
 <h2 id="loading-a-texture">Loading a texture</h2>
-<p>Before creating any sprite, we need a valid texture. The class that encapsulates textures in CrSFML is, unsurprisingly, <a href="http://blaxpirit.github.io/crsfml/api/SF/Texture.html" target="_blank">Texture</a>. Since the only role of a texture is to be loaded and mapped to graphical entities, almost all its methods are about loading and updating it.</p>
+<p>Before creating any sprite, we need a valid texture. The class that encapsulates textures in CrSFML is, unsurprisingly, <a href="http://oprypin.github.io/crsfml/api/SF/Texture.html">Texture</a>. Since the only role of a texture is to be loaded and mapped to graphical entities, almost all its methods are about loading and updating it.</p>
 <p>The most common way of loading a texture is from an image file on disk, which is done with the <code>from_file</code> class method.</p>
-<pre><code class="lang-crystal">texture = <span class="hljs-symbol">SF:</span>:Texture.from_file(<span class="hljs-string">&quot;image.png&quot;</span>)
-</code></pre>
+<pre class="codehilite"><code class="language-crystal">texture = SF::Texture.from_file(&quot;image.png&quot;)</code></pre>
+
+
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is.</p>
-<p>You can also load an image file from memory (<code>from_memory</code>), from a <a href="../system/stream.html" title="Input streams tutorial">custom input stream</a> (<code>from_stream</code>), or from an image that has already been loaded (<code>from_image</code>). The latter loads the texture from an <a href="http://blaxpirit.github.io/crsfml/api/SF/Image.html" target="_blank">Image</a>, which is a utility class that helps store and manipulate image data (modify pixels, create transparency channel, etc.). The pixels of an <a href="http://blaxpirit.github.io/crsfml/api/SF/Image.html" target="_blank">Image</a> stay in system memory, which ensures that operations on them will be as fast as possible, in contrast to the pixels of a texture which reside in video memory and are therefore slow to retrieve or update but very fast to draw.</p>
+<p>You can also load an image file from memory (<code>from_memory</code>), from a <a href="../system/stream.html" title="Input streams tutorial">custom input stream</a> (<code>from_stream</code>), or from an image that has already been loaded (<code>from_image</code>). The latter loads the texture from an <a href="http://oprypin.github.io/crsfml/api/SF/Image.html">Image</a>, which is a utility class that helps store and manipulate image data (modify pixels, create transparency channel, etc.). The pixels of an <a href="http://oprypin.github.io/crsfml/api/SF/Image.html">Image</a> stay in system memory, which ensures that operations on them will be as fast as possible, in contrast to the pixels of a texture which reside in video memory and are therefore slow to retrieve or update but very fast to draw.</p>
 <p>SFML supports most common image file formats. The full list is available in the API documentation.</p>
 <p>All these loading class methods have an optional argument, which can be used if you want to load a smaller part of the image.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># load a 32x32 rectangle that starts at (10, 10)</span>
-texture = <span class="hljs-symbol">SF:</span>:Texture.from_file(<span class="hljs-string">&quot;image.png&quot;</span>, SF.int_rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>))
-</code></pre>
-<p>The <a href="http://blaxpirit.github.io/crsfml/api/SF/IntRect" target="_blank">IntRect</a> class is a simple utility type that represents a rectangle. Its constructor takes the coordinates of the top-left corner, and the size of the rectangle.</p>
-<p>If you don&apos;t want to load a texture from an image, but instead want to update it directly from an array of pixels, you can create it empty and update it later:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># create an empty 200x200 texture</span>
-texture = <span class="hljs-symbol">SF:</span>:Texture.new(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>)
-</code></pre>
+<pre class="codehilite"><code class="language-crystal"># load a 32x32 rectangle that starts at (10, 10)
+texture = SF::Texture.from_file(&quot;image.png&quot;, SF.int_rect(10, 10, 32, 32))</code></pre>
+
+
+<p>The <a href="http://oprypin.github.io/crsfml/api/SF/IntRect">IntRect</a> class is a simple utility type that represents a rectangle. Its constructor takes the coordinates of the top-left corner, and the size of the rectangle.</p>
+<p>If you don't want to load a texture from an image, but instead want to update it directly from an array of pixels, you can create it empty and update it later:</p>
+<pre class="codehilite"><code class="language-crystal"># create an empty 200x200 texture
+texture = SF::Texture.new(200, 200)</code></pre>
+
+
 <p>Note that the contents of the texture are undefined at this point.</p>
 <p>To update the pixels of an existing texture, you have to use the <code>update</code> method. It has overloads for many kinds of data sources:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># update a texture from an array of pixels</span>
+<pre class="codehilite"><code class="language-crystal"># update a texture from an array of pixels
 texture.update(pixels)
 
-<span class="hljs-comment"># update a texture from a SF::Image</span>
+# update a texture from a SF::Image
 texture.update(image)
 
-<span class="hljs-comment"># update the texture from the current contents of the window</span>
-texture.update(window)
-</code></pre>
+# update the texture from the current contents of the window
+texture.update(window)</code></pre>
+
+
 <p>These examples all assume that the source is of the same size as the texture. If this is not the case, i.e. if you want to update only a part of the texture, you can specify the coordinates of the sub-rectangle that you want to update. You can refer to the documentation for further details.</p>
 <p>Additionally, a texture has two properties that change how it is rendered.</p>
 <p>The first property allows one to smooth the texture. Smoothing a texture makes pixel boundaries less visible (but the image a little more blurry), which can be desirable if it is up-scaled.</p>
-<pre><code class="lang-crystal">texture.smooth = <span class="hljs-literal">true</span>
-</code></pre>
-<p><img src="images/sprites-smooth.png" alt=""></p>
+<pre class="codehilite"><code class="language-crystal">texture.smooth = true</code></pre>
+
+
+<p><img alt="" src="images/sprites-smooth.png" /></p>
 <p>Since smoothing samples from adjacent pixels in the texture as well, it can lead to the unwanted side effect of factoring in pixels outside the selected texture area. This can happen when your sprite is located at non-integer coordinates.</p>
 <p>The second property allows a texture to be repeatedly tiled within a single sprite.</p>
-<pre><code class="lang-crystal">texture.repeated = <span class="hljs-literal">true</span>
-</code></pre>
-<p><img src="images/sprites-repeated.png" alt=""></p>
+<pre class="codehilite"><code class="language-crystal">texture.repeated = true</code></pre>
+
+
+<p><img alt="" src="images/sprites-repeated.png" /></p>
 <p>This only works if your sprite is configured to show a rectangle which is larger than the texture, otherwise this property has no effect.</p>
 <h2 id="ok-can-i-have-my-sprite-now">Ok, can I have my sprite now?</h2>
 <p>Yes, you can now create your sprite.</p>
-<pre><code class="lang-crystal">sprite = <span class="hljs-symbol">SF:</span>:Sprite.new(texture)
-</code></pre>
+<pre class="codehilite"><code class="language-crystal">sprite = SF::Sprite.new(texture)</code></pre>
+
+
 <p>... and finally draw it.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># inside the main loop, between window.clear() and window.display()</span>
-window.draw(sprite)
-</code></pre>
-<p>If you don&apos;t want your sprite to use the entire texture, you can set its texture rectangle.</p>
-<pre><code class="lang-crystal">sprite.texture_rect = SF.int_rect(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">32</span>, <span class="hljs-number">32</span>)
-</code></pre>
+<pre class="codehilite"><code class="language-crystal"># inside the main loop, between window.clear() and window.display()
+window.draw(sprite)</code></pre>
+
+
+<p>If you don't want your sprite to use the entire texture, you can set its texture rectangle.</p>
+<pre class="codehilite"><code class="language-crystal">sprite.texture_rect = SF.int_rect(10, 10, 32, 32)</code></pre>
+
+
 <p>You can also change the color of a sprite. The color that you set is modulated (multiplied) with the texture of the sprite. This can also be used to change the global transparency (alpha) of the sprite.</p>
-<pre><code class="lang-crystal">sprite.color = SF.color(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>) <span class="hljs-comment"># green</span>
-sprite.color = SF.color(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">128</span>) <span class="hljs-comment"># half transparent</span>
-</code></pre>
+<pre class="codehilite"><code class="language-crystal">sprite.color = SF.color(0, 255, 0) # green
+sprite.color = SF.color(255, 255, 255, 128) # half transparent</code></pre>
+
+
 <p>These sprites all use the same texture, but have a different color:</p>
-<p><img src="images/sprites-color.png" alt=""></p>
+<p><img alt="" src="images/sprites-color.png" /></p>
 <p>Sprites can also be transformed: They have a position, an orientation and a scale.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># position</span>
-sprite.position = SF.vector2(<span class="hljs-number">10</span>, <span class="hljs-number">50</span>) <span class="hljs-comment"># absolute position</span>
-sprite.move(SF.vector2(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>)) <span class="hljs-comment"># offset relative to the current position</span>
+<pre class="codehilite"><code class="language-crystal"># position
+sprite.position = SF.vector2(10, 50) # absolute position
+sprite.move(SF.vector2(5, 10)) # offset relative to the current position
 
-<span class="hljs-comment"># rotation</span>
-sprite.rotation = <span class="hljs-number">90</span> <span class="hljs-comment"># absolute angle</span>
-sprite.rotate(<span class="hljs-number">15</span>) <span class="hljs-comment"># offset relative to the current angle</span>
+# rotation
+sprite.rotation = 90 # absolute angle
+sprite.rotate(15) # offset relative to the current angle
 
-<span class="hljs-comment"># scale</span>
-sprite.scale = SF.vector2(<span class="hljs-number">0.5</span>, <span class="hljs-number">2.0</span>) <span class="hljs-comment"># absolute scale factor</span>
-sprite.scale(SF.vector2(<span class="hljs-number">1.5</span>, <span class="hljs-number">3.0</span>)) <span class="hljs-comment"># factor relative to the current scale</span>
-</code></pre>
+# scale
+sprite.scale = SF.vector2(0.5, 2.0) # absolute scale factor
+sprite.scale(SF.vector2(1.5, 3.0)) # factor relative to the current scale</code></pre>
+
+
 <p>By default, the origin for these three transformations is the top-left corner of the sprite. If you want to set the origin to a different point (for example the center of the sprite, or another corner), you can use the <code>origin=</code> method.</p>
-<pre><code class="lang-crystal">sprite.origin = SF.vector2(<span class="hljs-number">25</span>, <span class="hljs-number">25</span>)
-</code></pre>
-<p>Since transformation methods are common to all CrSFML entities, they are explained in a separate tutorial: <a href="transform.html" title="&apos;Transforming entities&apos; tutorial">Transforming entities</a>.</p>
+<pre class="codehilite"><code class="language-crystal">sprite.origin = SF.vector2(25, 25)</code></pre>
+
+
+<p>Since transformation methods are common to all CrSFML entities, they are explained in a separate tutorial: <a href="transform.html" title="'Transforming entities' tutorial">Transforming entities</a>.</p>
 <h2 id="the-importance-of-using-as-few-textures-as-possible">The importance of using as few textures as possible</h2>
 <p>Using as few textures as possible is a good strategy, and the reason is simple: Changing the current texture is an expensive operation for the graphics card. Drawing many sprites that use the same texture will yield the best performance.</p>
 <p>Additionally, using a single texture allows you to group static geometry into a single entity (you can only use one texture per <code>draw</code> call), which will be much faster to draw than a set of many entities. Batching static geometry involves other classes and is therefore beyond the scope of this tutorial, for further details see the <a href="vertex-array.html" title="Vertex array tutorial">vertex array</a> tutorial.</p>
 <p>Try to keep this in mind when you create your animation sheets or your tilesets: Use as few textures as possible.</p>
 <h2 id="using-sftexture-with-opengl-code">Using SF::Texture with OpenGL code</h2>
-<p>If you&apos;re using OpenGL rather than the graphics entities of CrSFML, you can still use <a href="http://blaxpirit.github.io/crsfml/api/SF/Texture.html" target="_blank">Texture</a> as a wrapper around an OpenGL texture object and use it along with the rest of your OpenGL code.</p>
-<p>To bind a <a href="http://blaxpirit.github.io/crsfml/api/SF/Texture.html" target="_blank">Texture</a> for drawing (basically <code>glBindTexture</code>), you call the <code>bind</code> class method:</p>
-<pre><code class="lang-crystal">texture = ...
+<p>If you're using OpenGL rather than the graphics entities of CrSFML, you can still use <a href="http://oprypin.github.io/crsfml/api/SF/Texture.html">Texture</a> as a wrapper around an OpenGL texture object and use it along with the rest of your OpenGL code.</p>
+<p>To bind a <a href="http://oprypin.github.io/crsfml/api/SF/Texture.html">Texture</a> for drawing (basically <code>glBindTexture</code>), you call the <code>bind</code> class method:</p>
+<pre class="codehilite"><code class="language-crystal">texture = ...
 
-<span class="hljs-comment"># bind the texture</span>
-<span class="hljs-symbol">SF:</span>:Texture.bind texture
+# bind the texture
+SF::Texture.bind texture
 
-<span class="hljs-comment"># draw your textured OpenGL entity here...</span>
+# draw your textured OpenGL entity here...
 
-<span class="hljs-comment"># bind no texture</span>
-<span class="hljs-symbol">SF:</span>:Texture.bind <span class="hljs-literal">nil</span>
-</code></pre>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
+# bind no texture
+SF::Texture.bind nil</code></pre>
+              
             </div>
-
-            
-                
-                <a href="draw.html" class="navigation navigation-prev " aria-label="Previous page: Drawing 2D stuff">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="text.html" class="navigation navigation-next " aria-label="Next page: Text and fonts">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="text.html" class="btn btn-neutral float-right" title="Text and fonts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="draw.html" class="btn btn-neutral" title="Drawing 2D stuff"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
+  
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sprites and textures","level":"4.2","depth":1,"next":{"title":"Text and fonts","level":"4.3","depth":1,"path":"graphics/text.md","ref":"graphics/text.md","articles":[]},"previous":{"title":"Drawing 2D stuff","level":"4.1","depth":1,"path":"graphics/draw.md","ref":"graphics/draw.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"api":"http://blaxpirit.github.io/crsfml/api/SF","examples":"https://github.com/BlaXpirit/crsfml/tree/master/examples","examples2":"https://github.com/BlaXpirit/crsfml-examples/tree/master"},"title":"CrSFML Tutorials","links":{"sidebar":{"CrSFML":"http://github.com/BlaXpirit/crsfml"}},"gitbook":">= 3.0.0"},"file":{"path":"graphics/sprite.md","mtime":"2018-03-07T21:44:51.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-07T21:45:56.311Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="draw.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="text.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</body>
 </html>
-
