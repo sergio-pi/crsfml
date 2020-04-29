@@ -853,7 +853,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  scrollSidebarToOpenType();
 
   var setPersistentSearchQuery = function(value){
     sessionStorage.setItem(repositoryName + '::search-input:value', value);
