@@ -157,7 +157,7 @@
 <h2 id="recording-to-a-sound-buffer">Recording to a sound buffer</h2>
 <p>The most common use for captured audio data is for it to be saved to a sound buffer (<a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a>) so that it can either be played or saved to a file.</p>
 <p>This can be achieved with the very simple interface of the <a href="http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html">SoundBufferRecorder</a> class:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># first check if an input audio device is available on the system</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># first check if an input audio device is available on the system</span>
 <span class="k">if</span> <span class="o">!</span><span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
   <span class="c1"># error: audio capture is not available on this system</span>
   <span class="o">...</span>
@@ -178,40 +178,36 @@
 <span class="n">buffer</span> <span class="o">=</span> <span class="n">recorder</span><span class="o">.</span><span class="n">buffer</span>
 </code></pre></div>
 
-
 <p>The <code>SoundBufferRecorder.available?</code> class method checks if audio recording is supported by the system. It if returns <code>false</code>, you won't be able to use the <a href="http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html">SoundBufferRecorder</a> class at all.</p>
 <p>The <code>start</code> and <code>stop</code> methods are self-explanatory. The capture runs in its own thread, which means that you can do whatever you want between start and stop. After the end of the capture, the recorded audio data is available in a sound buffer that you can get with the <code>buffer</code> method.</p>
 <p>With the recorded data, you can then:</p>
 <ul>
 <li>Save it to a file</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">buffer</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">&quot;my_record.ogg&quot;</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">buffer</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="s2">&quot;my_record.ogg&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <ul>
 <li>Play it directly</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
 <span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 </code></pre></div>
-
 
 <ul>
 <li>Access the raw audio data and analyze it, transform it, etc.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">samples</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">samples</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">samples</span>
 <span class="n">count</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">sample_count</span>
 <span class="n">do_something</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>If you want to use the captured audio data after the recorder is destroyed or restarted, don't forget to make a <em>copy</em> of the buffer.</p>
 <h2 id="selecting-the-input-device">Selecting the input device</h2>
 <p>If you have multiple sound input devices connected to your computer (for example a microphone, a sound interface (external soundcard) or a webcam microphone) you can specify the device that is used for recording. A sound input device is identified by its name. An <code>Array(String)</code> containing the names of all connected devices is available through the class method <code>SoundBufferRecorder.available_devices</code>. You can then select a device from the list for recording, by passing the chosen device name to the <code>device=</code> method. It is even possible to change the device on the fly (i.e. while recording).</p>
 <p>The name of the currently used device can be obtained by calling <code>device</code>. If you don't choose a device yourself, the default device will be used. Its name can be obtained through the <code>default_device</code> class method.</p>
 <p>Here is a small example of how to set the input device:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the available sound input device names</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># get the available sound input device names</span>
 <span class="n">available_devices</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span><span class="o">.</span><span class="n">available_devices</span>
 
 <span class="c1"># choose a device</span>
@@ -228,7 +224,6 @@
 
 <span class="c1"># use recorder as usual</span>
 </code></pre></div>
-
 
 <!--
 
@@ -247,7 +242,7 @@ There are also two additional virtual functions that you can optionally override
 Here is the skeleton of a complete derived class:
 
 
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyRecorder</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyRecorder</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
   <span class="k">def</span> <span class="nf">on_start</span> <span class="c1"># optional</span>
     <span class="c1"># initialize whatever has to be done before the capture starts</span>
     <span class="o">...</span>
@@ -276,7 +271,7 @@ Here is the skeleton of a complete derived class:
 The `available?`/`start`/`stop` functions are defined in the [SoundRecorder](http://oprypin.github.io/crsfml/api/SF/SoundRecorder.html) base, and thus inherited in every derived classes. This means that you can use any recorder class exactly the same way as the [SoundBufferRecorder](http://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html) class above.
 
 
-<div class="codehilite"><pre><span></span><code><span class="k">unless</span> <span class="n">MyRecorder</span><span class="o">.</span><span class="n">available?</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">unless</span> <span class="n">MyRecorder</span><span class="o">.</span><span class="n">available?</span>
   <span class="c1"># error...</span>
 <span class="k">end</span>
 

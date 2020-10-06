@@ -222,10 +222,9 @@
    └─╴SensorChanged
 </code></pre></div>
 
-
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Event.html">Event</a> instances are filled by the <code>poll_event</code> (or <code>wait_event</code>) method of the <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a> class. Only these two methods can produce valid events.</p>
 <p>To be clear, here is what a typical event loop looks like:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># while there are pending events...</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># while there are pending events...</span>
 <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
   <span class="c1"># check the type of the event...</span>
   <span class="k">case</span> <span class="n">event</span>
@@ -240,36 +239,33 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>Alright, now we can see what events SFML supports, what they mean and how to use them properly.</p>
 <h2 id="the-closed-event">The Closed event</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/simple.cr">simple</a></strong></p>
 <p>The <code>SF::Event::Closed</code> event is triggered when the user wants to close the window, through any of the possible methods the window manager provides ("close" button, keyboard shortcut, etc.). This event only represents a close request, the window is not yet closed when the event is received.</p>
 <p>Typical code will just call <code>window.close</code> in reaction to this event, to actually close the window. However, you may also want to do something else first, like saving the current application state or asking the user what to do. If you don't do anything, the window remains open.</p>
 <p>There's no member associated with this event in the <a href="http://oprypin.github.io/crsfml/api/SF/Event.html">Event</a> union.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
   <span class="n">window</span><span class="o">.</span><span class="n">close</span>
 <span class="k">end</span>
 </code></pre></div>
-
 
 <h2 id="the-resized-event">The Resized event</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/gl.cr">gl</a></strong></p>
 <p>The <code>SF::Event::Resized</code> event is triggered when the window is resized, either through user action or programmatically by calling <code>window.size=</code>.</p>
 <p>You can use this event to adjust the rendering settings: the viewport if you use OpenGL directly, or the current view if you use sfml-graphics.</p>
 <p>The data associated with this event is the new size of the window.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
   <span class="nb">puts</span> <span class="s2">&quot;new width: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="nb">puts</span> <span class="s2">&quot;new height: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-lostfocus-and-gainedfocus-events">The LostFocus and GainedFocus events</h2>
 <p>The <code>SF::Event::LostFocus</code> and <code>SF::Event::GainedFocus</code> events are triggered when the window loses/gains focus, which happens when the user switches the currently active window. When the window is out of focus, it doesn't receive keyboard events.</p>
 <p>This event can be used e.g. if you want to pause your game when the window is inactive.</p>
 <p>There's no member associated with these events in the <a href="http://oprypin.github.io/crsfml/api/SF/Event.html">Event</a> union.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">LostFocus</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">LostFocus</span>
   <span class="n">my_game</span><span class="o">.</span><span class="n">pause</span>
 <span class="k">end</span>
 
@@ -278,19 +274,17 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-textentered-event">The TextEntered event</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/typing.cr">typing</a></strong></p>
 <p>The <code>SF::Event::TextEntered</code> event is triggered when a character is typed. This must not be confused with the <code>KeyPressed</code> event: <code>TextEntered</code> interprets the user input and produces the appropriate printable character. For example, pressing '^' then 'e' on a French keyboard will produce two <code>KeyPressed</code> events, but a single <code>TextEntered</code> event containing the 'ê' character. It works with all the input methods provided by the operating system, even the most specific or complex ones.</p>
 <p>This event is typically used to catch user input in a text field.</p>
 <p>The data associated with this event is the Unicode codepoint of the entered character (use <code>.chr</code> to convert it to a <code>Char</code>).</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">TextEntered</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">TextEntered</span>
   <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">unicode</span> <span class="o">&lt;</span> <span class="mi">128</span>
     <span class="nb">puts</span> <span class="s2">&quot;ASCII character typed: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">unicode</span><span class="o">.</span><span class="n">chr</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div>
-
 
 <p>Note that, since they are part of the Unicode standard, some non-printable characters such as <em>backspace</em> are generated by this event. In most cases you'll need to filter them out.</p>
 <p>Many programmers use the <code>KeyPressed</code> event to get user input, and start to implement crazy algorithms that try to interpret all the possible key combinations to produce correct characters. Don't do that!</p>
@@ -302,7 +296,7 @@
 <p>Sometimes, people try to react to <code>KeyPressed</code> events directly to implement smooth movement. Doing so will <em>not</em> produce the expected effect, because when you hold a key you only get a few events (remember, the repeat delay). To achieve smooth movement with events, you must use a boolean that you set on <code>KeyPressed</code> and clear on <code>KeyReleased</code>; you can then move (independently of events) as long as the boolean is set.<br />
 The other (easier) solution to produce smooth movement is to use real-time keyboard input with <a href="http://oprypin.github.io/crsfml/api/SF/Keyboard.html">Keyboard</a> (see the <a href="inputs.html" title="Real-time inputs tutorial">dedicated tutorial</a>).</p>
 <p>The data associated with these events is the code of the pressed/released key, as well as the current state of the modifier keys (alt, control, shift, system).</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">KeyPressed</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">KeyPressed</span>
   <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Keyboard</span><span class="o">::</span><span class="n">Escape</span>
     <span class="nb">puts</span> <span class="s2">&quot;the escape key was pressed&quot;</span>
     <span class="nb">puts</span> <span class="s2">&quot;control: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">control</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -313,7 +307,6 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>Note that some keys have a special meaning for the operating system, and will lead to unexpected behavior. An example is the F10 key on Windows, which "steals" the focus, or the F12 key which starts the debugger when using Visual Studio. This will probably be solved in a future version of SFML.</p>
 <h2 id="the-mousewheelmoved-event">The MouseWheelMoved event</h2>
 <p>The <code>SF::Event::MouseWheelMoved</code> event is <strong>deprecated</strong> since SFML 2.3, use the MouseWheelScrolled event instead.</p>
@@ -321,7 +314,7 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/diagnostics.cr">diagnostics</a></strong></p>
 <p>The <code>SF::Event::MouseWheelScrolled</code> event is triggered when a mouse wheel moves up or down, but also laterally if the mouse supports it.</p>
 <p>The data associated with this event contains the number of ticks the wheel has moved, what the orientation of the wheel is and the current position of the mouse cursor.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseWheelScrolled</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseWheelScrolled</span>
   <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">wheel</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">::</span><span class="n">VerticalWheel</span>
     <span class="nb">puts</span> <span class="s2">&quot;wheel type: vertical&quot;</span>
   <span class="k">elsif</span> <span class="n">event</span><span class="o">.</span><span class="n">wheel</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">::</span><span class="n">HorizontalWheel</span>
@@ -336,13 +329,12 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-mousebuttonpressed-and-mousebuttonreleased-events">The MouseButtonPressed and MouseButtonReleased events</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/diagnostics.cr">diagnostics</a></strong></p>
 <p>The <code>SF::Event::MouseButtonPressed</code> and <code>SF::Event::MouseButtonReleased</code> events are triggered when a mouse button is pressed/released.</p>
 <p>SFML supports 5 mouse buttons: left, right, middle (wheel), extra #1 and extra #2 (side buttons).</p>
 <p>The data associated with these events contains the code of the pressed/released button, as well as the current position of the mouse cursor.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseButtonPressed</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseButtonPressed</span>
   <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="o">.</span><span class="n">right?</span>
     <span class="nb">puts</span> <span class="s2">&quot;the right button was pressed&quot;</span>
     <span class="nb">puts</span> <span class="s2">&quot;mouse x: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -351,22 +343,20 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-mousemoved-event">The MouseMoved event</h2>
 <p>The <code>SF::Event::MouseMoved</code> event is triggered when the mouse moves within the window.</p>
 <p>This event is triggered even if the window isn't focused. However, it is triggered only when the mouse moves within the inner area of the window, not when it moves over the title bar or borders.</p>
 <p>The data associated with this event contains the current position of the mouse cursor relative to the window.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseMoved</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseMoved</span>
   <span class="nb">puts</span> <span class="s2">&quot;new mouse x: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="nb">puts</span> <span class="s2">&quot;new mouse y: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-mouseentered-and-mouseleft-event">The MouseEntered and MouseLeft event</h2>
 <p>The <code>SF::Event::MouseEntered</code> and <code>SF::Event::MouseLeft</code> events are triggered when the mouse cursor enters/leaves the window.</p>
 <p>There is no data associated with these events.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">case</span> <span class="n">event</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">case</span> <span class="n">event</span>
 <span class="k">when</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseEntered</span>
   <span class="nb">puts</span> <span class="s2">&quot;the mouse cursor has entered the window&quot;</span>
 <span class="k">when</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">MouseLeft</span>
@@ -374,25 +364,23 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-joystickbuttonpressed-and-joystickbuttonreleased-events">The JoystickButtonPressed and JoystickButtonReleased events</h2>
 <p>The <code>SF::Event::JoystickButtonPressed</code> and <code>SF::Event::JoystickButtonReleased</code> events are triggered when a joystick button is pressed/released.</p>
 <p>SFML supports up to 8 joysticks and 32 buttons.</p>
 <p>The data associated with these events contains the identifier of the joystick and the index of the pressed/released button.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickButtonPressed</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickButtonPressed</span>
   <span class="nb">puts</span> <span class="s2">&quot;joystick button pressed!&quot;</span>
   <span class="nb">puts</span> <span class="s2">&quot;joystick id: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">joystick_id</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="nb">puts</span> <span class="s2">&quot;button: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">button</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-joystickmoved-event">The JoystickMoved event</h2>
 <p>The <code>SF::Event::JoystickMoved</code> event is triggered when a joystick axis moves.</p>
 <p>Joystick axes are typically very sensitive, that's why SFML uses a detection threshold to avoid spamming your event loop with tons of <code>JoystickMoved</code> events. This threshold can be changed with the <code>Window#joystick_threshold=</code> method, in case you want to receive more or less joystick move events.</p>
 <p>SFML supports 8 joystick axes: X, Y, Z, R, U, V, POV X and POV Y. How they map to your joystick depends on its driver.</p>
 <p>The member associated with this event contains the identifier of the joystick, the name of the axis, and its current position (in the range [-100, 100]).</p>
-<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickMoved</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickMoved</span>
   <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">axis</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Joystick</span><span class="o">::</span><span class="n">X</span>
     <span class="nb">puts</span> <span class="s2">&quot;X axis moved!&quot;</span>
     <span class="nb">puts</span> <span class="s2">&quot;joystick id: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">joystick_id</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -401,11 +389,10 @@ The other (easier) solution to produce smooth movement is to use real-time keybo
 <span class="k">end</span>
 </code></pre></div>
 
-
 <h2 id="the-joystickconnected-and-joystickdisconnected-events">The JoystickConnected and JoystickDisconnected events</h2>
 <p>The <code>SF::Event::JoystickConnected</code> and <code>SF::Event::JoystickDisconnected</code> events are triggered when a joystick is connected/disconnected.</p>
 <p>The data associated with this event is the identifier of the connected/disconnected joystick.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">case</span> <span class="n">event</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">case</span> <span class="n">event</span>
 <span class="k">when</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickConnected</span>
   <span class="nb">puts</span> <span class="s2">&quot;joystick connected: </span><span class="si">#{</span><span class="n">event</span><span class="o">.</span><span class="n">joystick_id</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="k">when</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">JoystickDisconnected</span>

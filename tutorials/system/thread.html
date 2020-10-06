@@ -176,7 +176,7 @@
 <p>Please make sure you know what you're doing before choosing SFML threads.</p>
 <h2 id="creating-a-thread-with-crsfml">Creating a thread with CrSFML</h2>
 <p>Enough talk, let's see some code. The class that makes it possible to create threads in CrSFML is <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a>, and here is what it looks like in action:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 
 <span class="k">def</span> <span class="nf">func</span>
   <span class="c1"># this function is started when thread.launch() is called</span>
@@ -202,7 +202,6 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>In this code, both <code>main</code> and <code>func</code> run in parallel after <code>thread.launch()</code> has been called. The result is that text from both functions should be mixed in the console:</p>
 <div class="codehilite"><pre><span></span><code>I&#39;m thread number one
 I&#39;m the main thread
@@ -220,19 +219,17 @@ I&#39;m thread number one
 I&#39;m the main thread
 </code></pre></div>
 
-
 <p>The entry point of the thread, ie. the function that will be run when the thread is started, must be passed to the constructor of <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a>. <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> can accept any kind of <a href="http://crystal-lang.org/docs/syntax_and_semantics/literals/proc.html">procs</a> without parameters.</p>
 <h2 id="starting-threads">Starting threads</h2>
 <p>Once you've created a <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> instance, you must start it with the <code>launch</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 </code></pre></div>
-
 
 <p><code>launch</code> calls the function that you passed to the constructor in a new thread, and returns immediately so that the calling thread can continue to run.</p>
 <h2 id="stopping-threads">Stopping threads</h2>
 <p>A thread automatically stops when its entry point function returns. If you want to wait for a thread to finish from another thread, you can call its <code>wait</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
 
 <span class="c1"># start the thread</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
@@ -242,7 +239,6 @@ I&#39;m the main thread
 <span class="c1"># block execution until the thread is finished</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 </code></pre></div>
-
 
 <p>The <code>wait</code> method is also implicitly called by the destructor of <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a>, so that a thread cannot remain alive (and out of control) after its owner <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> instance is destroyed. Keep this in mind when you manage your threads (see the last section of this tutorial).</p>
 <h2 id="pausing-threads">Pausing threads</h2>
@@ -255,7 +251,7 @@ Note that you can make any thread sleep with this function, even the main one.</
 <p>In the first example we had to make sure that the <code>puts</code> calls never happen at the same time, by applying appropriate timing. If the sleeps are gone, the program crashes. Crystal's standard library is not intended to be used with raw threads.</p>
 <p>Several programming tools exist to help you protect shared data and make your code thread-safe, these are called synchronization primitives. Common ones are mutexes, semaphores, condition variables and spin locks. They are all variants of the same concept: they protect a piece of code by allowing only certain threads to access it while blocking the others.</p>
 <p>The most basic (and used) primitive is the mutex. Mutex stands for "MUTual EXclusion": it ensures that only a single thread is able to run the code that it guards. Let's see how they can bring some order to the example above:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
   <span class="vi">@mutex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Mutex</span><span class="o">.</span><span class="n">new</span>
@@ -286,7 +282,6 @@ Note that you can make any thread sleep with this function, even the main one.</
 <span class="n">foo</span><span class="o">.</span><span class="n">main</span>
 </code></pre></div>
 
-
 <p>This code uses a shared resource (standard output). Inappropriate use of it causes the lines/letters to be randomly mixed or even crashes. To avoid this, we protect the corresponding region of the code with a mutex.</p>
 <p>The first thread that reaches its <code>mutex.lock()</code> line succeeds to lock the mutex, directly gains access to the code that follows and prints its text. When the other thread reaches its <code>mutex.lock()</code> line, the mutex is already locked and thus the thread is put to sleep (like <code>SF.sleep</code>, no CPU time is consumed by the sleeping thread). When the first thread finally unlocks the mutex, the second thread is awoken and is allowed to lock the mutex and print its text block as well. This leads to the lines of text appearing sequentially in the console instead of being mixed.</p>
 <div class="codehilite"><pre><span></span><code>I&#39;m the main thread
@@ -305,13 +300,12 @@ I&#39;m thread number one
 I&#39;m thread number one
 </code></pre></div>
 
-
 <p>Mutexes are not the only primitive that you can use to protect your shared variables, but it should be enough for most cases. However, if your application does complicated things with threads, and you feel like it is not enough, don't hesitate to look for alternatives.</p>
 <h2 id="protecting-mutexes">Protecting mutexes</h2>
 <p>Don't worry: mutexes are already thread-safe, there's no need to protect them. But what if there is a failure in the code and the mutex never gets a chance to be unlocked? It remains locked forever. All threads that try to lock it in the future will block forever, and in some cases, your whole application could freeze. Pretty bad result.</p>
 <p>To make sure that mutexes are always unlocked in an environment where exceptions can be thrown, CrSFML provides a special method that receives a block: <code>synchronize</code>. The mutex is locked before the block and is unlocked after the block (even if an exception is raised).</p>
 <p>Thus, we can write previous code example in a simpler way, using <code>synchronize</code> like this:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
   <span class="vi">@mutex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Mutex</span><span class="o">.</span><span class="n">new</span>
@@ -338,11 +332,10 @@ I&#39;m thread number one
 <span class="n">foo</span><span class="o">.</span><span class="n">main</span>
 </code></pre></div>
 
-
 <h2 id="common-mistakes">Common mistakes</h2>
 <p>One thing that is often overlooked by programmers is that a thread cannot live without its corresponding <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> instance.<br />
 The following code is often seen:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span>
   <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="k">end</span>
 
@@ -353,7 +346,6 @@ The following code is often seen:</p>
 <span class="n">start_thread</span><span class="p">()</span>
 <span class="c1"># ...</span>
 </code></pre></div>
-
 
 <p>Programmers who write this kind of code expect the <code>start_thread</code> function to start a thread that will live on its own and be destroyed when the threaded function ends. This is not what happens. The threaded function appears to block the main thread, as if the thread wasn't working.</p>
 <p>What is the cause of this? The <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> instance is local to the <code>start_thread()</code> function and is therefore destroyed, when the function returns. The finalizer of <a href="http://oprypin.github.io/crsfml/api/SF/Thread.html">Thread</a> is invoked, which calls <code>wait()</code> as we've learned above, and the result is that the main thread blocks and waits for the threaded function to be finished instead of continuing to run in parallel.</p>

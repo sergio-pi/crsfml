@@ -176,7 +176,7 @@
 <p>Now you understand why we always talk about vertex arrays, and not vertices alone.</p>
 <h2 id="a-simple-vertex-array">A simple vertex array</h2>
 <p>Let's have a look at the <a href="http://oprypin.github.io/crsfml/api/SF/Vertex.html">Vertex</a> class now. It's simply a container which contains three public members and no functions besides its constructors. These constructors allow you to construct vertices from the set of attributes you care about -- you don't always need to color or texture your entity.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create a new vertex</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># create a new vertex</span>
 <span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># set its position</span>
@@ -189,14 +189,12 @@
 <span class="n">vertex</span><span class="o">.</span><span class="n">tex_coords</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>... or, using the correct constructor:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">},</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">})</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">vertex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">},</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">})</span>
 </code></pre></div>
 
-
 <p>Now, let's define a primitive. Remember, a primitive consists of several vertices, therefore we need a vertex array. CrSFML provides a simple wrapper for this: <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a>. It provides the semantics of an array, and also stores the type of primitive its vertices define.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create an array of 3 vertices that define a triangle primitive</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># create an array of 3 vertices that define a triangle primitive</span>
 <span class="n">triangle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Triangles</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># define the positions and colors of the triangle&#39;s points</span>
@@ -207,23 +205,20 @@
 <span class="c1"># no texture coordinates here, we&#39;ll see that later</span>
 </code></pre></div>
 
-
 <p>Your triangle is ready and you can now draw it. Drawing a vertex array can be done similar to drawing any other CrSFML entity, by using the <code>draw</code> function:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">triangle</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p><img alt="A triangle made with vertices" src="images/vertex-array-triangle.png" /></p>
 <p>You can see that the vertices' color is interpolated to fill the primitive. This is a nice way of creating gradients.</p>
 <p>Note that you don't have to use the <a href="http://oprypin.github.io/crsfml/api/SF/VertexArray.html">VertexArray</a> class. It's just defined for convenience, it's nothing more than an array along with a <code>SF::PrimitiveType</code>. If you need more flexibility, or a normal (or static) array, you can use your own storage. You must then use the overload of the <code>draw</code> function which takes an array of vertices and the primitive type.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">[</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">[</span>
   <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
   <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="o">]</span>
 
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Lines</span><span class="p">)</span>
 </code></pre></div>
-
 
 <h2 id="primitive-types">Primitive types</h2>
 <p>Let's pause for a while and see what kind of primitives you can create. As explained above, you can define the most basic 2D primitives: Point, line, triangle and quad (quad exists merely as a convenience, internally the graphics card breaks it into two triangles). There are also "chained" variants of these primitive types which allow for sharing of vertices among two consecutive primitives. This can be useful because consecutive primitives are often connected in some way.</p>
@@ -276,7 +271,7 @@
 </table>
 <h2 id="texturing">Texturing</h2>
 <p>Like other SFML entities, vertex arrays can also be textured. To do so, you'll need to manipulate the <code>tex_coords</code> attribute of the vertices. This attribute defines which pixel of the texture is mapped to the vertex.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create a quad</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># create a quad</span>
 <span class="n">quad</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Quads</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># define it as a rectangle, located at (10, 10) and with size 100x100</span>
@@ -287,10 +282,9 @@
 <span class="n">quad</span><span class="o">.</span><span class="n">append</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">({</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">},</span> <span class="ss">tex_coords</span><span class="p">:</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">})</span>
 </code></pre></div>
 
-
 <p>Texture coordinates are defined in <em>pixels</em> (just like the <code>texture_rect</code> of sprites and shapes). They are <em>not</em> normalized (between 0 and 1), as people who are used to OpenGL programming might expect.</p>
 <p>Vertex arrays are low-level entities, they only deal with geometry and do not store additional attributes like a texture. To draw a vertex array with a texture, you must pass it directly to the <code>draw</code> method, through a <a href="http://oprypin.github.io/crsfml/api/SF/RenderStates.html">RenderStates</a> object:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
 <span class="n">texture</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Texture</span>
 
 <span class="o">...</span>
@@ -301,10 +295,9 @@
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
 </code></pre></div>
 
-
 <h2 id="transforming-a-vertex-array">Transforming a vertex array</h2>
 <p>Transforming is similar to texturing. The transform is not stored in the vertex array, you must pass it to the <code>draw</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">vertices</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::VertexArray</span>
 <span class="n">transform</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># SF::Transform</span>
 
 <span class="o">...</span>
@@ -315,12 +308,11 @@
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>To know more about transformations and the <a href="http://oprypin.github.io/crsfml/api/SF/Transform.html">Transform</a> class, you can read the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <h2 id="creating-an-sfml-like-entity">Creating an SFML-like entity</h2>
 <p>Now that you know how to define your own textured/colored/transformed entity, wouldn't it be nice to wrap it in an SFML-style class? Fortunately, SFML makes this easy for you by providing the <a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> module and <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> base class. These two classes are the base of the built-in SFML entities Sprite, Text and Shape.</p>
 <p><a href="http://oprypin.github.io/crsfml/api/SF/Drawable.html">Drawable</a> is an interface: it declares a single abstract method. Including sf::Drawable allows you to draw instances of your class the same way as SFML classes:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span>
   <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
   <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderTarget</span><span class="p">,</span> <span class="n">states</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="p">)</span>
@@ -331,10 +323,9 @@
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span> <span class="c1"># internally calls entity.draw</span>
 </code></pre></div>
 
-
 <p>Subclassing the <a href="http://oprypin.github.io/crsfml/api/SF/Transformable.html">Transformable</a> class automatically adds the same transformation methods to your class as other CrSFML classes (<code>position=</code>, <code>rotation=</code>, <code>move</code>, <code>scale</code>, ...). You can learn more about this in the tutorial on <a href="transform.html" title="Transforming entities tutorial">transforming entities</a>.</p>
 <p>Using these two features and a vertex array (in this example we'll also add a texture), here is what a typical CrSFML-like graphical class would look like:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
   <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
   <span class="c1"># add methods to play with the entity&#39;s geometry / colors / texturing...</span>
@@ -354,9 +345,8 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>You can then use this class as if it were a built-in CrSFML class:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">entity</span> <span class="o">=</span> <span class="n">MyEntity</span><span class="o">.</span><span class="n">new</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">entity</span> <span class="o">=</span> <span class="n">MyEntity</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># you can transform it</span>
 <span class="n">entity</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -366,12 +356,11 @@
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">entity</span><span class="p">)</span>
 </code></pre></div>
 
-
 <h2 id="example-tile-map">Example: tile map</h2>
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml-examples/tree/master/minesweeper">minesweeper</a></strong></p>
 <p>With what we've seen above, let's create a class that encapsulates a tile map. The whole map will be contained in a single vertex array, therefore it will be super fast to draw. Note that we can apply this strategy only if the whole tile set can fit into a single texture. Otherwise, we would have to use at least one vertex array per texture.</p>
 <p><img alt="The tileset" src="images/vertex-array-tileset.png" width="512" height="128" style="image-rendering: -moz-crisp-edges; image-rendering: pixelated"></p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TileMap</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">TileMap</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
   <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tileset</span><span class="p">,</span> <span class="n">tile_size</span><span class="p">,</span> <span class="n">tiles</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
@@ -422,9 +411,8 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>And now, the application that uses it:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create the window</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># create the window</span>
 <span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span> <span class="s2">&quot;Tilemap&quot;</span><span class="p">)</span>
 
 <span class="c1"># define the level with an array of tile indices</span>
@@ -458,11 +446,10 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p><img alt="The tilemap example" src="images/vertex-array-tilemap.png" /></p>
 <h2 id="example-particle-system">Example: particle system</h2>
 <p>This second example implements another common entity: The particle system. This one is very simple, with no texture and as few parameters as possible. It demonstrates the use of the <code>SF::Points</code> primitive type with a dynamic vertex array which changes every frame.</p>
-<div class="codehilite"><pre><span></span><code><span class="k">struct</span> <span class="nc">Particle</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">struct</span> <span class="nc">Particle</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="vi">@velocity</span><span class="p">,</span> <span class="vi">@lifetime</span><span class="p">,</span> <span class="vi">@position</span><span class="p">)</span>
     <span class="vi">@total_lifetime</span> <span class="o">=</span> <span class="vi">@lifetime</span>
   <span class="k">end</span>
@@ -534,9 +521,8 @@
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>And a little demo that uses it:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create the window</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># create the window</span>
 <span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;Particles&quot;</span><span class="p">)</span>
 
 <span class="c1"># create the particle system</span>
@@ -569,7 +555,6 @@
   <span class="n">window</span><span class="o">.</span><span class="n">display</span>
 <span class="k">end</span>
 </code></pre></div>
-
 
 <p><img alt="The particles example" src="images/vertex-array-particles.png" /></p>
               

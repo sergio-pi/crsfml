@@ -169,7 +169,7 @@
 <p>To use OpenGL, you'll need to find a library that implements Crystal bindings to it. This tutorial also contains small bits of OpenGL bindings.</p>
 <h2 id="creating-an-opengl-window">Creating an OpenGL window</h2>
 <p>Since SFML is based on OpenGL, its windows are ready for OpenGL calls without any extra effort.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span> <span class="c1"># Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span> <span class="c1"># Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX</span>
 <span class="k">lib</span> <span class="nn">GL</span>
  <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
  <span class="n">TEXTURE_2D</span> <span class="o">=</span> <span class="mi">3553</span>
@@ -182,7 +182,6 @@
 <span class="o">...</span>
 </code></pre></div>
 
-
 <p>In case you think it is <em>too</em> automatic, <a href="http://oprypin.github.io/crsfml/api/SF/Window.html">Window</a>'s constructor has an extra argument that allows you to change the settings of the underlying OpenGL context. This argument is an instance of the structure, it provides access to the following settings:</p>
 <ul>
 <li><code>depth_bits</code> is the number of bits per pixel to use for the depth buffer (0 to disable it)</li>
@@ -190,7 +189,7 @@
 <li><code>antialiasing_level</code> is the multisampling level</li>
 <li><code>major_version</code> and <code>minor_version</code> comprise the requested version of OpenGL</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
   <span class="ss">depth</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="ss">stencil</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="ss">antialiasing</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
   <span class="ss">major</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">minor</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">)</span>
@@ -201,10 +200,9 @@
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>If any of these settings is not supported by the graphics card, SFML tries to find the closest valid match. For example, if 4x anti-aliasing is too high, it tries 2x and then falls back to 0.<br />
 In any case, you can check what settings SFML actually used with the <code>settings</code> method:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">settings</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">settings</span>
 
 <span class="nb">puts</span> <span class="s2">&quot;depth bits: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">depth_bits</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="nb">puts</span> <span class="s2">&quot;stencil bits: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">stencil_bits</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -212,11 +210,10 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <span class="nb">puts</span> <span class="s2">&quot;version: </span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">major_version</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="n">settings</span><span class="o">.</span><span class="n">minor_version</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
 
-
 <p>OpenGL versions above 3.0 are supported by SFML (as long as your graphics driver can handle them). Support for selecting the profile of 3.2+ contexts and whether the context debug flag is set was added in SFML 2.3. The forward compatibility flag is not supported. By default, SFML creates 3.2+ contexts using the compatibility profile because the graphics module makes use of legacy OpenGL functionality. If you intend on using the graphics module, make sure to create your context without the core profile setting or the graphics module will not function correctly. On OS X, SFML supports creating OpenGL 3.2+ contexts using the core profile only. If you want to use the graphics module on OS X, you are limited to using a legacy context which implies OpenGL version 2.1.</p>
 <h2 id="a-typical-opengl-with-crsfml-program">A typical OpenGL-with-CrSFML program</h2>
 <p>Here is what a complete OpenGL program would look like with CrSFML:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
 <span class="c1"># create bindings</span>
 <span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span>
@@ -262,13 +259,12 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <span class="k">end</span>
 </code></pre></div>
 
-
 <p>Here we don't use <code>window.open?</code> as the condition of the main loop, because we need the window to remain open until the program ends, so that we still have a valid OpenGL context for the last iteration of the loop and the cleanup code.</p>
 <p>Don't hesitate to have a look at the "OpenGL" and "Window" examples in the SFML SDK if you have further problems, they are more complete and most likely contain solutions to your problems.</p>
 <h2 id="managing-multiple-opengl-windows">Managing multiple OpenGL windows</h2>
 <p>Managing multiple OpenGL windows is not more complicated than managing one, there are just a few things to keep in mind.</p>
 <p>OpenGL calls are made on the active context (thus the active window). Therefore if you want to draw to two different windows within the same program, you have to select which window is active before drawing something. This can be done with the <code>active=</code> method:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># activate the first window</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="c1"># activate the first window</span>
 <span class="n">window1</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">true</span>
 
 <span class="c1"># draw to the first window...</span>
@@ -278,7 +274,6 @@ In any case, you can check what settings SFML actually used with the <code>setti
 
 <span class="c1"># draw to the second window...</span>
 </code></pre></div>
-
 
 <p>Only one context (window) can be active in a thread, so you don't need to deactivate a window before activating another one, it is deactivated automatically. This is how OpenGL works.</p>
 <p>Another thing to know is that all the OpenGL contexts created by SFML share their resources. This means that you can create a texture or vertex buffer with any context active, and use it with any other. This also means that you don't have to reload all your OpenGL resources when you recreate your window. Only shareable OpenGL resources can be shared among contexts. An example of an unshareable resource is a vertex array object.</p>
@@ -295,7 +290,7 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <li>...</li>
 </ul>
 <p>The easiest solution is to let CrSFML do it for you, with the <code>push_gl_states</code>/<code>pop_gl_states</code> methods:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
 
 <span class="n">window</span><span class="o">.</span><span class="n">push_gl_states</span>
 
@@ -306,10 +301,9 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <span class="n">glDraw</span><span class="o">...</span>
 </code></pre></div>
 
-
 <p>Since it has no knowledge about your OpenGL code, SFML can't optimize these steps and as a result it saves/restores all available OpenGL states and matrices. This may be acceptable for small projects, but it might also be too slow for bigger programs that require maximum performance. In this case, you can handle saving and restoring the OpenGL states yourself, with <code>glPushAttrib</code>/<code>glPopAttrib</code>, <code>glPushMatrix</code>/<code>glPopMatrix</code>, etc.<br />
 If you do this, you'll still need to restore SFML's own states before drawing. This is done with the <code>reset_gl_states</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">glDraw</span><span class="o">...</span>
 
 <span class="n">glPush</span><span class="o">...</span>
 <span class="n">window</span><span class="o">.</span><span class="n">reset_gl_states</span>
@@ -320,7 +314,6 @@ If you do this, you'll still need to restore SFML's own states before drawing. T
 
 <span class="n">glDraw</span><span class="o">...</span>
 </code></pre></div>
-
 
 <p>By saving and restoring OpenGL states yourself, you can manage only the ones that you really need which leads to reducing the number of unnecessary driver calls.</p>
               

@@ -159,9 +159,8 @@
 <h2 id="loading-a-font">Loading a font</h2>
 <p>Before drawing any text, you need to have an available font, just like any other program that prints text. Fonts are encapsulated in the <a href="http://oprypin.github.io/crsfml/api/SF/Font.html">Font</a> class, which provides three main features: loading a font, getting glyphs (i.e. visual characters) from it, and reading its attributes. In a typical program, you'll only have to make use of the first feature, loading the font, so let's focus on that first.</p>
 <p>The most common way of loading a font is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">font</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;DejaVuSans.ttf&quot;</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">font</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;DejaVuSans.ttf&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>Note that SFML won't load your system fonts automatically, i.e. <code>SF::Font.from_file("Courier New")</code> won't work. Firstly, because SFML requires <em>file names</em>, not font names, and secondly because SFML doesn't have magical access to your system's font folder. If you want to load a font, you will need to include the font file with your application, just like every other resource (images, sounds, ...).</p>
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder. However, when you launch your program from your IDE (Visual Studio, Code::Blocks, ...) the working directory might sometimes be set to the <em>project</em> directory instead. This can usually be changed quite easily in the project settings.</p>
@@ -170,7 +169,7 @@
 <p>That's all you need to do. Once your font is loaded, you can start drawing text.</p>
 <h2 id="drawing-text">Drawing text</h2>
 <p>To draw text, you will be using the <a href="http://oprypin.github.io/crsfml/api/SF/Text.html">Text</a> class. It's very simple to use:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># select the font</span>
 <span class="n">text</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">font</span> <span class="c1"># font is a SF::Font</span>
@@ -193,21 +192,18 @@
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p><img alt="" src="images/text-draw.png" /></p>
 <p>Text can also be transformed: They have a position, an orientation and a scale. The methods involved are the same as for the <a href="http://oprypin.github.io/crsfml/api/SF/Sprite.html">Sprite</a> class and other CrSFML entities. They are explained in the <a href="transform.html" title="'Transforming entities' tutorial">Transforming entities</a> tutorial.</p>
 <h2 id="making-your-own-text-class">Making your own text class</h2>
 <p>If <a href="http://oprypin.github.io/crsfml/api/SF/Text.html">Text</a> is too limited, or if you want to do something else with pre-rendered glyphs, <a href="http://oprypin.github.io/crsfml/api/SF/Font.html">Font</a> provides everything that you need.</p>
 <p>You can retrieve the texture which contains all the pre-rendered glyphs of a certain size:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_texture</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_texture</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p>It is important to note that glyphs are added to the texture when they are requested. There are so many characters (remember, more than 100000) that they can't all be generated when you load the font. Instead, they are rendered on the fly when you call the <code>get_glyph</code> method (see below).</p>
 <p>To do something meaningful with the font texture, you must get the texture coordinates of glyphs that are contained in it:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">glyph</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_glyph</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">character_size</span><span class="p">,</span> <span class="n">bold</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">glyph</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_glyph</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">character_size</span><span class="p">,</span> <span class="n">bold</span><span class="p">)</span>
 </code></pre></div>
-
 
 <p><code>character</code> is the character, the glyph of which you want to get. You must also specify the character size, and whether you want the bold or the regular version of the glyph.</p>
 <p>The <a href="http://oprypin.github.io/crsfml/api/SF/Glyph.html">Glyph</a> structure contains three members:</p>
@@ -217,7 +213,7 @@
 <li><code>advance</code> is the horizontal offset to apply to get the starting position of the next glyph in the text</li>
 </ul>
 <p>You can also get some of the font's other metrics, such as the kerning between two characters or the line spacing (always for a certain character size):</p>
-<div class="codehilite"><pre><span></span><code><span class="n">line_spacing</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_line_spacing</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
+<div class="crystal codehilite"><pre><span></span><code><span class="n">line_spacing</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_line_spacing</span><span class="p">(</span><span class="n">character_size</span><span class="p">)</span>
 
 <span class="n">kerning</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">get_kerning</span><span class="p">(</span><span class="n">character_1</span><span class="p">,</span> <span class="n">character_2</span><span class="p">,</span> <span class="n">character_size</span><span class="p">)</span>
 </code></pre></div>
