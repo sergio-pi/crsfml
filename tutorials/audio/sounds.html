@@ -173,18 +173,18 @@
 <p>As mentioned above, the sound data is not stored directly in <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> but in a separate class named <a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a>. This class encapsulates the audio data, which is basically an array of 16-bit signed integers (called "audio samples"). A sample is the amplitude of the sound signal at a given point in time, and an array of samples therefore represents a full sound.</p>
 <p>In fact, the <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a>/<a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a> classes work the same way as <a href="http://oprypin.github.io/crsfml/api/SF/Sprite.html">Sprite</a>/<a href="http://oprypin.github.io/crsfml/api/SF/Texture.html">Texture</a> from the graphics module. So if you understand how sprites and textures work together, you can apply the same concept to sounds and sound buffers.</p>
 <p>You can load a sound buffer from a file on disk with its <code>from_file</code> class method:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;sound.wav&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;sound.wav&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <p>As with everything else, you can also load an audio file from memory (<code>from_memory</code>) or from a <a href="../system/stream.html" title="Input streams tutorial">custom input stream</a> (<code>from_stream</code>).</p>
 <p>SFML supports the audio file formats WAV, OGG/Vorbis and FLAC. Due to licensing issues MP3 is <strong>not</strong> supported.</p>
 <p>You can also load a sound buffer directly from an array of samples, in the case they originate from another source:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">buffer</span><span class="o">.</span><span class="n">from_samples</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">44100</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">buffer</span><span class="o">.</span><span class="n">from_samples</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">samples</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">44100</span><span class="p">)</span>
 </code></pre></div>
 
 <p>Since <code>from_samples</code> loads a raw array of samples rather than an audio file, it requires additional arguments in order to have a complete description of the sound. The first one (third argument) is the number of channels; 1 channel defines a mono sound, 2 channels define a stereo sound, etc. The second additional attribute (fourth argument) is the sample rate; it defines how many samples must be played per second in order to reconstruct the original sound.</p>
 <p>Now that the audio data is loaded, we can play it with a <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> instance.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="c1"># load something into the sound buffer...</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># load something into the sound buffer...</span>
 <span class="n">buffer</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
@@ -195,7 +195,7 @@
 <p>Sounds (and music) are played in a separate thread. This means that you are free to do whatever you want after calling <code>play</code> (except destroying the sound or its data, of course), the sound will continue to play until it's finished or explicitly stopped.</p>
 <h2 id="playing-a-music">Playing a music</h2>
 <p>Unlike <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a>, <a href="http://oprypin.github.io/crsfml/api/SF/Music.html">Music</a> doesn't pre-load the audio data, instead it streams the data directly from the source. The initialization of music is thus more direct:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Music</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Music</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">)</span>
 
 <span class="n">music</span><span class="o">.</span><span class="n">play</span>
 </code></pre></div>
@@ -212,7 +212,7 @@ The other loading methods of <a href="http://oprypin.github.io/crsfml/api/SF/Mus
 <li><code>playing_offset=</code> changes the current playing position</li>
 </ul>
 <p>Example:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="c1"># start playback</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># start playback</span>
 <span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 
 <span class="c1"># advance to 2 seconds</span>
@@ -231,15 +231,15 @@ The other loading methods of <a href="http://oprypin.github.io/crsfml/api/SF/Mus
 <p>The <code>status</code> method returns the current status of a sound or music, you can use it to know whether it is stopped, playing or paused.</p>
 <p>Sound and music playback is also controlled by a few attributes which can be changed at any moment.</p>
 <p>The <em>pitch</em> is a factor that changes the perceived frequency of the sound: greater than 1 plays the sound at a higher pitch, less than 1 plays the sound at a lower pitch, and 1 leaves it unchanged. Changing the pitch has a side effect: it impacts the playing speed.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="mf">1.2</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">pitch</span> <span class="o">=</span> <span class="mf">1.2</span>
 </code></pre></div>
 
 <p>The <em>volume</em> is... the volume. The value ranges from 0 (mute) to 100 (full volume). The default value is 100, which means that you can't make a sound louder than its initial volume.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">volume</span> <span class="o">=</span> <span class="mi">50</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">volume</span> <span class="o">=</span> <span class="mi">50</span>
 </code></pre></div>
 
 <p>The <em>loop</em> attribute controls whether the sound/music automatically loops or not. If it loops, it will restart playing from the beginning when it's finished, again and again until you explicitly call <code>stop</code>. If not set to loop, it will stop automatically when it's finished.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">loop</span> <span class="o">=</span> <span class="kc">true</span>
+<div class="codehilite"><pre><span></span><code><span class="n">sound</span><span class="o">.</span><span class="n">loop</span> <span class="o">=</span> <span class="kc">true</span>
 </code></pre></div>
 
 <p>More attributes are available, but they are related to spatialization and are explained in the <a href="spatialization.html" title="Spatialization tutorial">corresponding tutorial</a>.</p>
@@ -248,7 +248,7 @@ The other loading methods of <a href="http://oprypin.github.io/crsfml/api/SF/Mus
 <p>One source of error is when you try to create a huge number of sounds. SFML internally has a limit; it can vary depending on the OS, but you should never exceed 256. This limit is the number of <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> and <a href="http://oprypin.github.io/crsfml/api/SF/Music.html">Music</a> instances that can exist simultaneously. A good way to stay below the limit is to destroy (or recycle) unused sounds when they are no longer needed. This only applies if you have to manage a really large amount of sounds and music, of course.</p>
 <h3 id="destroying-the-music-source-while-it-plays">Destroying the music source while it plays</h3>
 <p>Remember that a music needs its source as long as it is played. A music file on your disk probably won't be deleted or moved while your application plays it, however things get more complicated when you play a music from a file in memory, or from a custom input stream:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="c1"># we start with a music file in memory (imagine that we extracted it from a zip archive)</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># we start with a music file in memory (imagine that we extracted it from a zip archive)</span>
 <span class="n">file_data</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># we play it</span>

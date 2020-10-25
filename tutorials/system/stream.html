@@ -167,7 +167,7 @@
 <p>In this tutorial you'll learn how to write and use your own derived input stream.</p>
 <h2 id="inputstream">InputStream</h2>
 <p>The <a href="http://oprypin.github.io/crsfml/api/SF/InputStream.html">InputStream</a> class declares four virtual methods:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">InputStream</span>
+<div class="codehilite"><pre><span></span><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">InputStream</span>
   <span class="k">abstract</span> <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int64</span>
   <span class="k">abstract</span> <span class="k">def</span> <span class="nf">seek</span><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int64</span>
   <span class="k">abstract</span> <span class="k">def</span> <span class="nf">tell</span><span class="p">()</span> <span class="p">:</span> <span class="nb">Int64</span>
@@ -184,15 +184,15 @@
 <p><code>SF::FileInputStream</code> provides the read-only data stream of a file, while <code>SF::MemoryInputStream</code> serves the read-only stream from memory. Both are derived from <code>SF::InputStream</code>.</p>
 <h2 id="using-an-inputstream">Using an InputStream</h2>
 <p>Using a custom stream class is straight-forward: instantiate it, and pass it to the <code>from_stream</code> class method of the object that you want to load.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">FileInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">FileInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
 <span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="crystal codehilite"><pre><span></span><code><span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">FileInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">FileInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;music.ogg&quot;</span><span class="p">)</span>
 <span class="n">music</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Music</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="crystal codehilite"><pre><span></span><code><span class="n">string</span> <span class="o">=</span> <span class="nb">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">string</span> <span class="o">=</span> <span class="nb">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
 <span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">MemoryInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">to_slice</span><span class="p">)</span>
 <span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre></div>

@@ -166,7 +166,7 @@
 <p>Since we're talking about <em>streaming</em>, we'll deal with audio data that cannot be loaded entirely in memory, and will instead be loaded in small chunks while it is being played. If your sound can be loaded completely and can fit in memory, then audio streams won't help you: Just load the audio data into a <a href="http://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">SoundBuffer</a> and use a regular <a href="http://oprypin.github.io/crsfml/api/SF/Sound.html">Sound</a> to play it.</p>
 <h2 id="sfsoundstream">SF::SoundStream</h2>
 <p>In order to define your own audio stream, you need to inherit from the <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> abstract base class. There are two methods to override in your derived class: <code>on_get_data</code> and <code>on_seek</code>.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
   <span class="k">def</span> <span class="nf">on_get_data</span><span class="p">()</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)?</span>
   <span class="k">end</span>
 
@@ -176,7 +176,7 @@
 </code></pre></div>
 
 <p><code>on_get_data</code> is called by the base class whenever it runs out of audio samples and needs more of them. You must provide new audio samples by returning a slice with data:</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyAudioStream</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundStream</span>
   <span class="k">def</span> <span class="nf">get_data</span><span class="p">()</span>
     <span class="n">samples_array</span><span class="o">.</span><span class="n">to_slice</span>
   <span class="k">end</span>
@@ -187,7 +187,7 @@
 <p>SFML makes an internal copy of the audio samples as soon as <code>on_get_data</code> returns, so you don't have to keep the original data alive if you don't want to.</p>
 <p>The <code>on_seek</code> method is called when the <code>playing_offset=</code> public method is called. Its purpose is to change the current playing position in the source data. The parameter is a time value representing the new position, from the beginning of the sound (<em>not</em> from the current position). This method is sometimes impossible to implement. In those cases leave it empty, and tell the users of your class that changing the playing position is not supported.</p>
 <p>Now your class is almost ready to work. The only thing that <a href="http://oprypin.github.io/crsfml/api/SF/SoundStream.html">SoundStream</a> needs to know now is the channel count and sample rate of your stream, so that it can be played as expected.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="c1"># where this is done totally depends on how your stream class is designed</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># where this is done totally depends on how your stream class is designed</span>
 <span class="n">MyAudioStream</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">channel_count</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="ss">sample_rate</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
 </code></pre></div>
 
@@ -199,7 +199,7 @@
 <p>Now that you have defined your own audio stream class, let's see how to use it. In fact, things are very similar to what's shown in the <a href="sounds.html" title="Playing sounds and musics">tutorial about SF::Music</a>. You can control playback with the <code>play</code>, <code>pause</code>, <code>stop</code> and <code>playing_offset=</code> methods. You can also play with the sound's properties, such as the volume or the pitch. You can refer to the API documentation or to the other audio tutorials for more details.</p>
 <h2 id="a-simple-example">A simple example</h2>
 <p>Here is a very simple example of a custom audio stream class which plays the data of a sound buffer. Such a class might seem totally useless, but the point here is to focus on how the data is streamed by the class, regardless of where it comes from.</p>
-<div class="crystal codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 <span class="k">require</span> <span class="s2">&quot;crsfml/audio&quot;</span>
 
 <span class="c1"># custom audio stream that plays a loaded buffer</span>
