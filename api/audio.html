@@ -1,0 +1,3561 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Audio module - CrSFML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#top-level" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../index.html" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CrSFML
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Audio module
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="system.html" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/system/time.html" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="CrSFML" class="md-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CrSFML
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        API
+      
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          API
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+    
+    <label class="md-nav__link" for="nav-1-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="system.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        System module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="system.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          System module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Clock.html" class="md-nav__link">
+      Clock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/FileInputStream.html" class="md-nav__link">
+      FileInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/InputStream.html" class="md-nav__link">
+      InputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/MemoryInputStream.html" class="md-nav__link">
+      MemoryInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Mutex.html" class="md-nav__link">
+      Mutex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/NonCopyable.html" class="md-nav__link">
+      NonCopyable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Thread.html" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Time.html" class="md-nav__link">
+      Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector2.html" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector2f.html" class="md-nav__link">
+      Vector2f
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector2i.html" class="md-nav__link">
+      Vector2i
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector2u.html" class="md-nav__link">
+      Vector2u
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector3.html" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vector3f.html" class="md-nav__link">
+      Vector3f
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+    
+    <label class="md-nav__link" for="nav-1-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="window.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Window module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="window.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Window module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Clipboard.html" class="md-nav__link">
+      Clipboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Context.html" class="md-nav__link">
+      Context
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/ContextSettings.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        ContextSettings
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/ContextSettings.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          ContextSettings
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/ContextSettings/Attribute.html" class="md-nav__link">
+      Attribute
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+    
+    <label class="md-nav__link" for="nav-1-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Cursor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Cursor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Cursor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Cursor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Cursor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Cursor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+    
+    <label class="md-nav__link" for="nav-1-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Event.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Event
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Event" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Event.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Event
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/Closed.html" class="md-nav__link">
+      Closed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/GainedFocus.html" class="md-nav__link">
+      GainedFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickButtonEvent.html" class="md-nav__link">
+      JoystickButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickButtonPressed.html" class="md-nav__link">
+      JoystickButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickButtonReleased.html" class="md-nav__link">
+      JoystickButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickConnected.html" class="md-nav__link">
+      JoystickConnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickConnectEvent.html" class="md-nav__link">
+      JoystickConnectEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickDisconnected.html" class="md-nav__link">
+      JoystickDisconnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickMoved.html" class="md-nav__link">
+      JoystickMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/JoystickMoveEvent.html" class="md-nav__link">
+      JoystickMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/KeyEvent.html" class="md-nav__link">
+      KeyEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/KeyPressed.html" class="md-nav__link">
+      KeyPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/KeyReleased.html" class="md-nav__link">
+      KeyReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/LostFocus.html" class="md-nav__link">
+      LostFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseButtonEvent.html" class="md-nav__link">
+      MouseButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseButtonPressed.html" class="md-nav__link">
+      MouseButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseButtonReleased.html" class="md-nav__link">
+      MouseButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseEntered.html" class="md-nav__link">
+      MouseEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseLeft.html" class="md-nav__link">
+      MouseLeft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseMoved.html" class="md-nav__link">
+      MouseMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseMoveEvent.html" class="md-nav__link">
+      MouseMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseWheelEvent.html" class="md-nav__link">
+      MouseWheelEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseWheelMoved.html" class="md-nav__link">
+      MouseWheelMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseWheelScrolled.html" class="md-nav__link">
+      MouseWheelScrolled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/MouseWheelScrollEvent.html" class="md-nav__link">
+      MouseWheelScrollEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/Resized.html" class="md-nav__link">
+      Resized
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/SensorChanged.html" class="md-nav__link">
+      SensorChanged
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/SensorEvent.html" class="md-nav__link">
+      SensorEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/SizeEvent.html" class="md-nav__link">
+      SizeEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TextEntered.html" class="md-nav__link">
+      TextEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TextEvent.html" class="md-nav__link">
+      TextEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TouchBegan.html" class="md-nav__link">
+      TouchBegan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TouchEnded.html" class="md-nav__link">
+      TouchEnded
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TouchEvent.html" class="md-nav__link">
+      TouchEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Event/TouchMoved.html" class="md-nav__link">
+      TouchMoved
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/GlResource.html" class="md-nav__link">
+      GlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+    
+    <label class="md-nav__link" for="nav-1-2-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Joystick.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Joystick
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Joystick" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Joystick.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Joystick
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Joystick/Axis.html" class="md-nav__link">
+      Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Joystick/Identification.html" class="md-nav__link">
+      Identification
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+    
+    <label class="md-nav__link" for="nav-1-2-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Keyboard.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Keyboard
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Keyboard.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Keyboard
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Keyboard/Key.html" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+    
+    <label class="md-nav__link" for="nav-1-2-9">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Mouse.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Mouse
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Mouse" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-9">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Mouse.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Mouse
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Mouse/Button.html" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Mouse/Wheel.html" class="md-nav__link">
+      Wheel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+    
+    <label class="md-nav__link" for="nav-1-2-10">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Sensor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Sensor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Sensor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-10">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Sensor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Sensor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Sensor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Touch.html" class="md-nav__link">
+      Touch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/VideoMode.html" class="md-nav__link">
+      VideoMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Window.html" class="md-nav__link">
+      Window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/WindowHandle.html" class="md-nav__link">
+      WindowHandle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="graphics.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Graphics module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="graphics.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Graphics module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+    
+    <label class="md-nav__link" for="nav-1-3-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/BlendMode.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        BlendMode
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/BlendMode.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          BlendMode
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/BlendMode/Equation.html" class="md-nav__link">
+      Equation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/BlendMode/Factor.html" class="md-nav__link">
+      Factor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/CircleShape.html" class="md-nav__link">
+      CircleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Color.html" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/ConvexShape.html" class="md-nav__link">
+      ConvexShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Drawable.html" class="md-nav__link">
+      Drawable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/FloatRect.html" class="md-nav__link">
+      FloatRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+    
+    <label class="md-nav__link" for="nav-1-3-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Font.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Font
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Font" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Font.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Font
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Font/Info.html" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Glyph.html" class="md-nav__link">
+      Glyph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Image.html" class="md-nav__link">
+      Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/IntRect.html" class="md-nav__link">
+      IntRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/PrimitiveType.html" class="md-nav__link">
+      PrimitiveType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Rect.html" class="md-nav__link">
+      Rect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/RectangleShape.html" class="md-nav__link">
+      RectangleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/RenderStates.html" class="md-nav__link">
+      RenderStates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/RenderTarget.html" class="md-nav__link">
+      RenderTarget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/RenderTexture.html" class="md-nav__link">
+      RenderTexture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/RenderWindow.html" class="md-nav__link">
+      RenderWindow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+    
+    <label class="md-nav__link" for="nav-1-3-18">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Shader.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Shader
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Shader" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-18">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Shader.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Shader
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Shader/CurrentTextureType.html" class="md-nav__link">
+      CurrentTextureType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Shader/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Shape.html" class="md-nav__link">
+      Shape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Sprite.html" class="md-nav__link">
+      Sprite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+    
+    <label class="md-nav__link" for="nav-1-3-21">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Text.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Text
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Text" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-21">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Text.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Text
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Text/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+    
+    <label class="md-nav__link" for="nav-1-3-22">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Texture.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Texture
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Texture" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-22">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Texture.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Texture
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Texture/CoordinateType.html" class="md-nav__link">
+      CoordinateType
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Transform.html" class="md-nav__link">
+      Transform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Transformable.html" class="md-nav__link">
+      Transformable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Vertex.html" class="md-nav__link">
+      Vertex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/VertexArray.html" class="md-nav__link">
+      VertexArray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+    
+    <label class="md-nav__link" for="nav-1-3-27">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/VertexBuffer.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        VertexBuffer
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-27">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/VertexBuffer.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          VertexBuffer
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/VertexBuffer/Usage.html" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/View.html" class="md-nav__link">
+      View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+    
+    <label class="md-nav__link" for="nav-1-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="audio.html" class="md-nav__link md-nav__link--active"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Audio module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="audio.html" class="md-nav__link md-nav__link--active"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Audio module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/AlResource.html" class="md-nav__link">
+      AlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Listener.html" class="md-nav__link">
+      Listener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+    
+    <label class="md-nav__link" for="nav-1-4-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Music.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Music
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Music" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Music.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Music
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Music/Span.html" class="md-nav__link">
+      Span
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Music/TimeSpan.html" class="md-nav__link">
+      TimeSpan
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Sound.html" class="md-nav__link">
+      Sound
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SoundBuffer.html" class="md-nav__link">
+      SoundBuffer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SoundBufferRecorder.html" class="md-nav__link">
+      SoundBufferRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SoundRecorder.html" class="md-nav__link">
+      SoundRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+    
+    <label class="md-nav__link" for="nav-1-4-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/SoundSource.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        SoundSource
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/SoundSource.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          SoundSource
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SoundSource/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SoundStream.html" class="md-nav__link">
+      SoundStream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+    
+    <label class="md-nav__link" for="nav-1-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="network.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Network module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="network.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Network module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Ftp.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Ftp
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Ftp" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Ftp.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Ftp
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Ftp/DirectoryResponse.html" class="md-nav__link">
+      DirectoryResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Ftp/ListingResponse.html" class="md-nav__link">
+      ListingResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-5-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Ftp/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Ftp/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Ftp/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Ftp/TransferMode.html" class="md-nav__link">
+      TransferMode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Http.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Http
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Http" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Http.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Http
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Http/Request.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Request
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Request" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Http/Request.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Request
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Http/Request/Method.html" class="md-nav__link">
+      Method
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Http/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Http/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Http/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/IpAddress.html" class="md-nav__link">
+      IpAddress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Packet.html" class="md-nav__link">
+      Packet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SF/Socket.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Socket
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Socket" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SF/Socket.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Socket
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Socket/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/Socket/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/SocketSelector.html" class="md-nav__link">
+      SocketSelector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/TcpListener.html" class="md-nav__link">
+      TcpListener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/TcpSocket.html" class="md-nav__link">
+      TcpSocket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/UdpSocket.html" class="md-nav__link">
+      UdpSocket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SF/InitError.html" class="md-nav__link">
+      InitError
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Tutorials
+      
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Tutorials
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    
+    <label class="md-nav__link" for="nav-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        System module
+      
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          System module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/system/time.html" class="md-nav__link">
+      Handling time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/system/thread.html" class="md-nav__link">
+      Threads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/system/stream.html" class="md-nav__link">
+      User data streams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    
+    <label class="md-nav__link" for="nav-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Window module
+      
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Window module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/window/window.html" class="md-nav__link">
+      Opening and managing an SFML window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/window/events.html" class="md-nav__link">
+      Events explained
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/window/inputs.html" class="md-nav__link">
+      Keyboard, mouse and joysticks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/window/opengl.html" class="md-nav__link">
+      Using OpenGL in an SFML window
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+    
+    <label class="md-nav__link" for="nav-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Graphics module
+      
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Graphics module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/draw.html" class="md-nav__link">
+      Drawing 2D stuff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/sprite.html" class="md-nav__link">
+      Sprites and textures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/text.html" class="md-nav__link">
+      Text and fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/shape.html" class="md-nav__link">
+      Shapes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/vertex-array.html" class="md-nav__link">
+      Designing your own entities with vertex arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/transform.html" class="md-nav__link">
+      Position, rotation, scale: transforming entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/shader.html" class="md-nav__link">
+      Adding special effects with shaders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/graphics/view.html" class="md-nav__link">
+      Controlling the 2D camera with views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+    
+    <label class="md-nav__link" for="nav-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Audio module
+      
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Audio module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/audio/sounds.html" class="md-nav__link">
+      Playing sounds and music
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/audio/recording.html" class="md-nav__link">
+      Recording audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/audio/streams.html" class="md-nav__link">
+      Custom audio streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/audio/spatialization.html" class="md-nav__link">
+      Spatialization: Sounds in 3D
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+    
+    <label class="md-nav__link" for="nav-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Network module
+      
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Network module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/network/socket.html" class="md-nav__link">
+      Communication using sockets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/network/packet.html" class="md-nav__link">
+      Using packets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/network/http.html" class="md-nav__link">
+      Web requests with HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/network/ftp.html" class="md-nav__link">
+      File transfers with FTP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#SF" class="md-nav__link">
+    SF
+  </a>
+  
+    <nav class="md-nav" aria-label="SF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extended-modules" class="md-nav__link">
+    Extended modules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    Constants
+  </a>
+  
+    <nav class="md-nav" aria-label="Constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::SFML_VERSION" class="md-nav__link">
+    SFML_VERSION
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VERSION" class="md-nav__link">
+    VERSION
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/blob/master/api/audio.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="top-level">Top-level<a class="headerlink" href="#top-level" title="Permanent link">#</a></h1>
+<div class="doc doc-object doc-type module">
+<h2 class="doc doc-heading" id="SF">
+
+module <code>SF</code>
+  <a class="headerlink" href="#SF" title="Permanent link">#</a></h2>
+<div class="doc doc-contents first">
+<div class="doc doc-children">
+<h3 id="extended-modules">Extended modules<a class="headerlink" href="#extended-modules" title="Permanent link">#</a></h3>
+<code><a href="window.html#SF">SF</a></code>
+
+          <h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">#</a></h3>
+<div class="doc doc-object doc-constant">
+<h4 class="doc doc-heading" id="SF::SFML_VERSION">
+
+    <code>SFML_VERSION</code>
+  <a class="headerlink" href="#SF::SFML_VERSION" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+  </div>
+</div>
+<div class="doc doc-object doc-constant">
+<h4 class="doc doc-heading" id="SF::VERSION">
+
+    <code>VERSION</code>
+  <a class="headerlink" href="#SF::VERSION" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+  </div>
+</div>
+</div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="SF/View.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                View
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="SF/AlResource.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AlResource
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

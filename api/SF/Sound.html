@@ -1,1594 +1,4022 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="">
-<meta name="crystal_docs.project_name" content="CrSFML">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../js/doc.js"></script>
-
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="CrSFML">
-  <title>SF::Sound - CrSFML </title>
-  <script type="text/javascript">
-    CrystalDocs.base_path = "../";
-  </script>
-</head>
-<body>
-
-<div class="sidebar">
-  <div class="sidebar-header">
-    <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
-    </div>
-
-<a id="my-logo" href="https://github.com/oprypin/crsfml#readme"><img src="https://raw.githubusercontent.com/oprypin/crsfml/master/logo.png" alt="CrSFML"/></a>
-    <div class="project-summary">
-      <h1 class="project-name">
-        <a href="../index.html">
-          CrSFML
-        </a>
-      </h1>
-
-      <span class="project-version">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Sound - CrSFML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
         
-      </span>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#SF::Sound" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-  </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
 
-  <div class="search-results" class="hidden">
-    <ul class="search-list"></ul>
-  </div>
+  
 
-  <div class="types-list">
-    <ul>
-  
-  <li class="parent open current" data-id="CrSFML/SF" data-name="sf">
-      <a href="../SF.html">SF</a>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../index.html" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
       
-        <ul>
   
-  <li class=" " data-id="CrSFML/SF/AlResource" data-name="sf::alresource">
-      <a href="../SF/AlResource.html">AlResource</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/BlendMode" data-name="sf::blendmode">
-      <a href="../SF/BlendMode.html">BlendMode</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/BlendMode/Equation" data-name="sf::blendmode::equation">
-      <a href="../SF/BlendMode/Equation.html">Equation</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/BlendMode/Factor" data-name="sf::blendmode::factor">
-      <a href="../SF/BlendMode/Factor.html">Factor</a>
-      
-    </li>
-  
-</ul>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/CircleShape" data-name="sf::circleshape">
-      <a href="../SF/CircleShape.html">CircleShape</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Clipboard" data-name="sf::clipboard">
-      <a href="../SF/Clipboard.html">Clipboard</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Clock" data-name="sf::clock">
-      <a href="../SF/Clock.html">Clock</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Color" data-name="sf::color">
-      <a href="../SF/Color.html">Color</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Context" data-name="sf::context">
-      <a href="../SF/Context.html">Context</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/ContextSettings" data-name="sf::contextsettings">
-      <a href="../SF/ContextSettings.html">ContextSettings</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/ContextSettings/Attribute" data-name="sf::contextsettings::attribute">
-      <a href="../SF/ContextSettings/Attribute.html">Attribute</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/ConvexShape" data-name="sf::convexshape">
-      <a href="../SF/ConvexShape.html">ConvexShape</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Cursor" data-name="sf::cursor">
-      <a href="../SF/Cursor.html">Cursor</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Cursor/Type" data-name="sf::cursor::type">
-      <a href="../SF/Cursor/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Drawable" data-name="sf::drawable">
-      <a href="../SF/Drawable.html">Drawable</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Event" data-name="sf::event">
-      <a href="../SF/Event.html">Event</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Event/Closed" data-name="sf::event::closed">
-      <a href="../SF/Event/Closed.html">Closed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/GainedFocus" data-name="sf::event::gainedfocus">
-      <a href="../SF/Event/GainedFocus.html">GainedFocus</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonEvent" data-name="sf::event::joystickbuttonevent">
-      <a href="../SF/Event/JoystickButtonEvent.html">JoystickButtonEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonPressed" data-name="sf::event::joystickbuttonpressed">
-      <a href="../SF/Event/JoystickButtonPressed.html">JoystickButtonPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonReleased" data-name="sf::event::joystickbuttonreleased">
-      <a href="../SF/Event/JoystickButtonReleased.html">JoystickButtonReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickConnected" data-name="sf::event::joystickconnected">
-      <a href="../SF/Event/JoystickConnected.html">JoystickConnected</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickConnectEvent" data-name="sf::event::joystickconnectevent">
-      <a href="../SF/Event/JoystickConnectEvent.html">JoystickConnectEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickDisconnected" data-name="sf::event::joystickdisconnected">
-      <a href="../SF/Event/JoystickDisconnected.html">JoystickDisconnected</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickMoved" data-name="sf::event::joystickmoved">
-      <a href="../SF/Event/JoystickMoved.html">JoystickMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickMoveEvent" data-name="sf::event::joystickmoveevent">
-      <a href="../SF/Event/JoystickMoveEvent.html">JoystickMoveEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyEvent" data-name="sf::event::keyevent">
-      <a href="../SF/Event/KeyEvent.html">KeyEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyPressed" data-name="sf::event::keypressed">
-      <a href="../SF/Event/KeyPressed.html">KeyPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyReleased" data-name="sf::event::keyreleased">
-      <a href="../SF/Event/KeyReleased.html">KeyReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/LostFocus" data-name="sf::event::lostfocus">
-      <a href="../SF/Event/LostFocus.html">LostFocus</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonEvent" data-name="sf::event::mousebuttonevent">
-      <a href="../SF/Event/MouseButtonEvent.html">MouseButtonEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonPressed" data-name="sf::event::mousebuttonpressed">
-      <a href="../SF/Event/MouseButtonPressed.html">MouseButtonPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonReleased" data-name="sf::event::mousebuttonreleased">
-      <a href="../SF/Event/MouseButtonReleased.html">MouseButtonReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseEntered" data-name="sf::event::mouseentered">
-      <a href="../SF/Event/MouseEntered.html">MouseEntered</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseLeft" data-name="sf::event::mouseleft">
-      <a href="../SF/Event/MouseLeft.html">MouseLeft</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseMoved" data-name="sf::event::mousemoved">
-      <a href="../SF/Event/MouseMoved.html">MouseMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseMoveEvent" data-name="sf::event::mousemoveevent">
-      <a href="../SF/Event/MouseMoveEvent.html">MouseMoveEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelEvent" data-name="sf::event::mousewheelevent">
-      <a href="../SF/Event/MouseWheelEvent.html">MouseWheelEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelMoved" data-name="sf::event::mousewheelmoved">
-      <a href="../SF/Event/MouseWheelMoved.html">MouseWheelMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelScrolled" data-name="sf::event::mousewheelscrolled">
-      <a href="../SF/Event/MouseWheelScrolled.html">MouseWheelScrolled</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelScrollEvent" data-name="sf::event::mousewheelscrollevent">
-      <a href="../SF/Event/MouseWheelScrollEvent.html">MouseWheelScrollEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/Resized" data-name="sf::event::resized">
-      <a href="../SF/Event/Resized.html">Resized</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SensorChanged" data-name="sf::event::sensorchanged">
-      <a href="../SF/Event/SensorChanged.html">SensorChanged</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SensorEvent" data-name="sf::event::sensorevent">
-      <a href="../SF/Event/SensorEvent.html">SensorEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SizeEvent" data-name="sf::event::sizeevent">
-      <a href="../SF/Event/SizeEvent.html">SizeEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TextEntered" data-name="sf::event::textentered">
-      <a href="../SF/Event/TextEntered.html">TextEntered</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TextEvent" data-name="sf::event::textevent">
-      <a href="../SF/Event/TextEvent.html">TextEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchBegan" data-name="sf::event::touchbegan">
-      <a href="../SF/Event/TouchBegan.html">TouchBegan</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchEnded" data-name="sf::event::touchended">
-      <a href="../SF/Event/TouchEnded.html">TouchEnded</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchEvent" data-name="sf::event::touchevent">
-      <a href="../SF/Event/TouchEvent.html">TouchEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchMoved" data-name="sf::event::touchmoved">
-      <a href="../SF/Event/TouchMoved.html">TouchMoved</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/FileInputStream" data-name="sf::fileinputstream">
-      <a href="../SF/FileInputStream.html">FileInputStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/FloatRect" data-name="sf::floatrect">
-      <a href="../SF/FloatRect.html">FloatRect</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Font" data-name="sf::font">
-      <a href="../SF/Font.html">Font</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Font/Info" data-name="sf::font::info">
-      <a href="../SF/Font/Info.html">Info</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Ftp" data-name="sf::ftp">
-      <a href="../SF/Ftp.html">Ftp</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/DirectoryResponse" data-name="sf::ftp::directoryresponse">
-      <a href="../SF/Ftp/DirectoryResponse.html">DirectoryResponse</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/ListingResponse" data-name="sf::ftp::listingresponse">
-      <a href="../SF/Ftp/ListingResponse.html">ListingResponse</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Ftp/Response" data-name="sf::ftp::response">
-      <a href="../SF/Ftp/Response.html">Response</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/Response/Status" data-name="sf::ftp::response::status">
-      <a href="../SF/Ftp/Response/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/TransferMode" data-name="sf::ftp::transfermode">
-      <a href="../SF/Ftp/TransferMode.html">TransferMode</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/GlResource" data-name="sf::glresource">
-      <a href="../SF/GlResource.html">GlResource</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Glyph" data-name="sf::glyph">
-      <a href="../SF/Glyph.html">Glyph</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Http" data-name="sf::http">
-      <a href="../SF/Http.html">Http</a>
-      
-        <ul>
-  
-  <li class="parent " data-id="CrSFML/SF/Http/Request" data-name="sf::http::request">
-      <a href="../SF/Http/Request.html">Request</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Http/Request/Method" data-name="sf::http::request::method">
-      <a href="../SF/Http/Request/Method.html">Method</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Http/Response" data-name="sf::http::response">
-      <a href="../SF/Http/Response.html">Response</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Http/Response/Status" data-name="sf::http::response::status">
-      <a href="../SF/Http/Response/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Image" data-name="sf::image">
-      <a href="../SF/Image.html">Image</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/InitError" data-name="sf::initerror">
-      <a href="../SF/InitError.html">InitError</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/InputStream" data-name="sf::inputstream">
-      <a href="../SF/InputStream.html">InputStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/IntRect" data-name="sf::intrect">
-      <a href="../SF/IntRect.html">IntRect</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/IpAddress" data-name="sf::ipaddress">
-      <a href="../SF/IpAddress.html">IpAddress</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Joystick" data-name="sf::joystick">
-      <a href="../SF/Joystick.html">Joystick</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Joystick/Axis" data-name="sf::joystick::axis">
-      <a href="../SF/Joystick/Axis.html">Axis</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Joystick/Identification" data-name="sf::joystick::identification">
-      <a href="../SF/Joystick/Identification.html">Identification</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Keyboard" data-name="sf::keyboard">
-      <a href="../SF/Keyboard.html">Keyboard</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Keyboard/Key" data-name="sf::keyboard::key">
-      <a href="../SF/Keyboard/Key.html">Key</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Listener" data-name="sf::listener">
-      <a href="../SF/Listener.html">Listener</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/MemoryInputStream" data-name="sf::memoryinputstream">
-      <a href="../SF/MemoryInputStream.html">MemoryInputStream</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Mouse" data-name="sf::mouse">
-      <a href="../SF/Mouse.html">Mouse</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Mouse/Button" data-name="sf::mouse::button">
-      <a href="../SF/Mouse/Button.html">Button</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Mouse/Wheel" data-name="sf::mouse::wheel">
-      <a href="../SF/Mouse/Wheel.html">Wheel</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Music" data-name="sf::music">
-      <a href="../SF/Music.html">Music</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Music/Span" data-name="sf::music::span(t)">
-      <a href="../SF/Music/Span.html">Span</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Music/TimeSpan" data-name="sf::music::timespan">
-      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Mutex" data-name="sf::mutex">
-      <a href="../SF/Mutex.html">Mutex</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/NonCopyable" data-name="sf::noncopyable">
-      <a href="../SF/NonCopyable.html">NonCopyable</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Packet" data-name="sf::packet">
-      <a href="../SF/Packet.html">Packet</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/PrimitiveType" data-name="sf::primitivetype">
-      <a href="../SF/PrimitiveType.html">PrimitiveType</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Rect" data-name="sf::rect(t)">
-      <a href="../SF/Rect.html">Rect</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RectangleShape" data-name="sf::rectangleshape">
-      <a href="../SF/RectangleShape.html">RectangleShape</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderStates" data-name="sf::renderstates">
-      <a href="../SF/RenderStates.html">RenderStates</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderTarget" data-name="sf::rendertarget">
-      <a href="../SF/RenderTarget.html">RenderTarget</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderTexture" data-name="sf::rendertexture">
-      <a href="../SF/RenderTexture.html">RenderTexture</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderWindow" data-name="sf::renderwindow">
-      <a href="../SF/RenderWindow.html">RenderWindow</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Sensor" data-name="sf::sensor">
-      <a href="../SF/Sensor.html">Sensor</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Sensor/Type" data-name="sf::sensor::type">
-      <a href="../SF/Sensor/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Shader" data-name="sf::shader">
-      <a href="../SF/Shader.html">Shader</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Shader/CurrentTextureType" data-name="sf::shader::currenttexturetype">
-      <a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Shader/Type" data-name="sf::shader::type">
-      <a href="../SF/Shader/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Shape" data-name="sf::shape">
-      <a href="../SF/Shape.html">Shape</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Socket" data-name="sf::socket">
-      <a href="../SF/Socket.html">Socket</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Socket/Status" data-name="sf::socket::status">
-      <a href="../SF/Socket/Status.html">Status</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Socket/Type" data-name="sf::socket::type">
-      <a href="../SF/Socket/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SocketSelector" data-name="sf::socketselector">
-      <a href="../SF/SocketSelector.html">SocketSelector</a>
-      
-    </li>
-  
-  <li class=" current" data-id="CrSFML/SF/Sound" data-name="sf::sound">
-      <a href="../SF/Sound.html">Sound</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundBuffer" data-name="sf::soundbuffer">
-      <a href="../SF/SoundBuffer.html">SoundBuffer</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundBufferRecorder" data-name="sf::soundbufferrecorder">
-      <a href="../SF/SoundBufferRecorder.html">SoundBufferRecorder</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundRecorder" data-name="sf::soundrecorder">
-      <a href="../SF/SoundRecorder.html">SoundRecorder</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/SoundSource" data-name="sf::soundsource">
-      <a href="../SF/SoundSource.html">SoundSource</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/SoundSource/Status" data-name="sf::soundsource::status">
-      <a href="../SF/SoundSource/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundStream" data-name="sf::soundstream">
-      <a href="../SF/SoundStream.html">SoundStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Sprite" data-name="sf::sprite">
-      <a href="../SF/Sprite.html">Sprite</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Style" data-name="sf::style">
-      <a href="../SF/Style.html">Style</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/TcpListener" data-name="sf::tcplistener">
-      <a href="../SF/TcpListener.html">TcpListener</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/TcpSocket" data-name="sf::tcpsocket">
-      <a href="../SF/TcpSocket.html">TcpSocket</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Text" data-name="sf::text">
-      <a href="../SF/Text.html">Text</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Text/Style" data-name="sf::text::style">
-      <a href="../SF/Text/Style.html">Style</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Texture" data-name="sf::texture">
-      <a href="../SF/Texture.html">Texture</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Texture/CoordinateType" data-name="sf::texture::coordinatetype">
-      <a href="../SF/Texture/CoordinateType.html">CoordinateType</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Thread" data-name="sf::thread">
-      <a href="../SF/Thread.html">Thread</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Time" data-name="sf::time">
-      <a href="../SF/Time.html">Time</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Touch" data-name="sf::touch">
-      <a href="../SF/Touch.html">Touch</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Transform" data-name="sf::transform">
-      <a href="../SF/Transform.html">Transform</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Transformable" data-name="sf::transformable">
-      <a href="../SF/Transformable.html">Transformable</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/UdpSocket" data-name="sf::udpsocket">
-      <a href="../SF/UdpSocket.html">UdpSocket</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2" data-name="sf::vector2(t)">
-      <a href="../SF/Vector2.html">Vector2</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2f" data-name="sf::vector2f">
-      <a href="../SF/Vector2f.html">Vector2f</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2i" data-name="sf::vector2i">
-      <a href="../SF/Vector2i.html">Vector2i</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2u" data-name="sf::vector2u">
-      <a href="../SF/Vector2u.html">Vector2u</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector3" data-name="sf::vector3(t)">
-      <a href="../SF/Vector3.html">Vector3</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector3f" data-name="sf::vector3f">
-      <a href="../SF/Vector3f.html">Vector3f</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vertex" data-name="sf::vertex">
-      <a href="../SF/Vertex.html">Vertex</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/VertexArray" data-name="sf::vertexarray">
-      <a href="../SF/VertexArray.html">VertexArray</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/VertexBuffer" data-name="sf::vertexbuffer">
-      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
-      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/VideoMode" data-name="sf::videomode">
-      <a href="../SF/VideoMode.html">VideoMode</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/View" data-name="sf::view">
-      <a href="../SF/View.html">View</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Window" data-name="sf::window">
-      <a href="../SF/Window.html">Window</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/WindowHandle" data-name="sf::windowhandle">
-      <a href="../SF/WindowHandle.html">WindowHandle</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-</ul>
-
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CrSFML
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Sound
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-<div class="main-content">
-<h1 class="type-name">
-
-  <span class="kind">class</span> SF::Sound
-
-</h1>
-
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../SF/Sound.html">SF::Sound</a></li><li class="superclass"><a href="../SF/SoundSource.html">SF::SoundSource</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
-
-
-
-
-  <h2>
-    <a id="overview" class="anchor" href="#overview">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
 </a>
-    Overview
-  </h2>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
 
-  <p>Regular sound that can be played in the audio environment</p>
 
-<p><code><a href="../SF/Sound.html">SF::Sound</a></code> is the class to use to play sounds.
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../system.html" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorials/system/time.html" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="CrSFML" class="md-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CrSFML
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        API
+      
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          API
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+    
+    <label class="md-nav__link" for="nav-1-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../system.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        System module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../system.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          System module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Clock.html" class="md-nav__link">
+      Clock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="FileInputStream.html" class="md-nav__link">
+      FileInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="InputStream.html" class="md-nav__link">
+      InputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="MemoryInputStream.html" class="md-nav__link">
+      MemoryInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mutex.html" class="md-nav__link">
+      Mutex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="NonCopyable.html" class="md-nav__link">
+      NonCopyable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Thread.html" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Time.html" class="md-nav__link">
+      Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2.html" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2f.html" class="md-nav__link">
+      Vector2f
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2i.html" class="md-nav__link">
+      Vector2i
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2u.html" class="md-nav__link">
+      Vector2u
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector3.html" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector3f.html" class="md-nav__link">
+      Vector3f
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+    
+    <label class="md-nav__link" for="nav-1-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../window.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Window module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../window.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Window module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Clipboard.html" class="md-nav__link">
+      Clipboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Context.html" class="md-nav__link">
+      Context
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="ContextSettings.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        ContextSettings
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="ContextSettings.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          ContextSettings
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="ContextSettings/Attribute.html" class="md-nav__link">
+      Attribute
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+    
+    <label class="md-nav__link" for="nav-1-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Cursor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Cursor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Cursor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Cursor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Cursor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Cursor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+    
+    <label class="md-nav__link" for="nav-1-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Event.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Event
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Event" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Event.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Event
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/Closed.html" class="md-nav__link">
+      Closed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/GainedFocus.html" class="md-nav__link">
+      GainedFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonEvent.html" class="md-nav__link">
+      JoystickButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonPressed.html" class="md-nav__link">
+      JoystickButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonReleased.html" class="md-nav__link">
+      JoystickButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickConnected.html" class="md-nav__link">
+      JoystickConnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickConnectEvent.html" class="md-nav__link">
+      JoystickConnectEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickDisconnected.html" class="md-nav__link">
+      JoystickDisconnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickMoved.html" class="md-nav__link">
+      JoystickMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickMoveEvent.html" class="md-nav__link">
+      JoystickMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyEvent.html" class="md-nav__link">
+      KeyEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyPressed.html" class="md-nav__link">
+      KeyPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyReleased.html" class="md-nav__link">
+      KeyReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/LostFocus.html" class="md-nav__link">
+      LostFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonEvent.html" class="md-nav__link">
+      MouseButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonPressed.html" class="md-nav__link">
+      MouseButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonReleased.html" class="md-nav__link">
+      MouseButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseEntered.html" class="md-nav__link">
+      MouseEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseLeft.html" class="md-nav__link">
+      MouseLeft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseMoved.html" class="md-nav__link">
+      MouseMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseMoveEvent.html" class="md-nav__link">
+      MouseMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelEvent.html" class="md-nav__link">
+      MouseWheelEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelMoved.html" class="md-nav__link">
+      MouseWheelMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelScrolled.html" class="md-nav__link">
+      MouseWheelScrolled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelScrollEvent.html" class="md-nav__link">
+      MouseWheelScrollEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/Resized.html" class="md-nav__link">
+      Resized
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SensorChanged.html" class="md-nav__link">
+      SensorChanged
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SensorEvent.html" class="md-nav__link">
+      SensorEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SizeEvent.html" class="md-nav__link">
+      SizeEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TextEntered.html" class="md-nav__link">
+      TextEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TextEvent.html" class="md-nav__link">
+      TextEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchBegan.html" class="md-nav__link">
+      TouchBegan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchEnded.html" class="md-nav__link">
+      TouchEnded
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchEvent.html" class="md-nav__link">
+      TouchEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchMoved.html" class="md-nav__link">
+      TouchMoved
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="GlResource.html" class="md-nav__link">
+      GlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+    
+    <label class="md-nav__link" for="nav-1-2-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Joystick.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Joystick
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Joystick" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Joystick.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Joystick
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Joystick/Axis.html" class="md-nav__link">
+      Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Joystick/Identification.html" class="md-nav__link">
+      Identification
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+    
+    <label class="md-nav__link" for="nav-1-2-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Keyboard.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Keyboard
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Keyboard.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Keyboard
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Keyboard/Key.html" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+    
+    <label class="md-nav__link" for="nav-1-2-9">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Mouse.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Mouse
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Mouse" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-9">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Mouse.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Mouse
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mouse/Button.html" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mouse/Wheel.html" class="md-nav__link">
+      Wheel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+    
+    <label class="md-nav__link" for="nav-1-2-10">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Sensor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Sensor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Sensor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-10">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Sensor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Sensor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Sensor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Touch.html" class="md-nav__link">
+      Touch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VideoMode.html" class="md-nav__link">
+      VideoMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Window.html" class="md-nav__link">
+      Window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="WindowHandle.html" class="md-nav__link">
+      WindowHandle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../graphics.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Graphics module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../graphics.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Graphics module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+    
+    <label class="md-nav__link" for="nav-1-3-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="BlendMode.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        BlendMode
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="BlendMode.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          BlendMode
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="BlendMode/Equation.html" class="md-nav__link">
+      Equation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="BlendMode/Factor.html" class="md-nav__link">
+      Factor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="CircleShape.html" class="md-nav__link">
+      CircleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Color.html" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="ConvexShape.html" class="md-nav__link">
+      ConvexShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Drawable.html" class="md-nav__link">
+      Drawable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="FloatRect.html" class="md-nav__link">
+      FloatRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+    
+    <label class="md-nav__link" for="nav-1-3-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Font.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Font
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Font" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Font.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Font
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Font/Info.html" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Glyph.html" class="md-nav__link">
+      Glyph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Image.html" class="md-nav__link">
+      Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="IntRect.html" class="md-nav__link">
+      IntRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="PrimitiveType.html" class="md-nav__link">
+      PrimitiveType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Rect.html" class="md-nav__link">
+      Rect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RectangleShape.html" class="md-nav__link">
+      RectangleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderStates.html" class="md-nav__link">
+      RenderStates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderTarget.html" class="md-nav__link">
+      RenderTarget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderTexture.html" class="md-nav__link">
+      RenderTexture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderWindow.html" class="md-nav__link">
+      RenderWindow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+    
+    <label class="md-nav__link" for="nav-1-3-18">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Shader.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Shader
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Shader" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-18">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Shader.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Shader
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shader/CurrentTextureType.html" class="md-nav__link">
+      CurrentTextureType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shader/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shape.html" class="md-nav__link">
+      Shape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Sprite.html" class="md-nav__link">
+      Sprite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+    
+    <label class="md-nav__link" for="nav-1-3-21">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Text.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Text
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Text" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-21">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Text.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Text
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Text/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+    
+    <label class="md-nav__link" for="nav-1-3-22">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Texture.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Texture
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Texture" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-22">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Texture.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Texture
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Texture/CoordinateType.html" class="md-nav__link">
+      CoordinateType
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Transform.html" class="md-nav__link">
+      Transform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Transformable.html" class="md-nav__link">
+      Transformable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vertex.html" class="md-nav__link">
+      Vertex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VertexArray.html" class="md-nav__link">
+      VertexArray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+    
+    <label class="md-nav__link" for="nav-1-3-27">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="VertexBuffer.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        VertexBuffer
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-27">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="VertexBuffer.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          VertexBuffer
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VertexBuffer/Usage.html" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="View.html" class="md-nav__link">
+      View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+    
+    <label class="md-nav__link" for="nav-1-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../audio.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Audio module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../audio.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Audio module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="AlResource.html" class="md-nav__link">
+      AlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Listener.html" class="md-nav__link">
+      Listener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+    
+    <label class="md-nav__link" for="nav-1-4-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Music.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Music
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Music" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Music.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Music
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Music/Span.html" class="md-nav__link">
+      Span
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Music/TimeSpan.html" class="md-nav__link">
+      TimeSpan
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Sound.html" class="md-nav__link md-nav__link--active"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Sound
+        </a>
+      </label>
+    
+    <a href="Sound.html" class="md-nav__link md-nav__link--active">
+      Sound
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#SF::Sound" class="md-nav__link">
+    Sound
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-methods" class="md-nav__link">
+    Class methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Class methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound.new(buffer)" class="md-nav__link">
+    .new
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#buffer=(buffer)" class="md-nav__link">
+    #buffer=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#finalize()" class="md-nav__link">
+    #finalize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#loop()" class="md-nav__link">
+    #loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#loop=(loop)" class="md-nav__link">
+    #loop=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#pause()" class="md-nav__link">
+    #pause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#play()" class="md-nav__link">
+    #play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#playing_offset()" class="md-nav__link">
+    #playing_offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#playing_offset=(time_offset)" class="md-nav__link">
+    #playing_offset=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#reset_buffer()" class="md-nav__link">
+    #reset_buffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#status()" class="md-nav__link">
+    #status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#stop()" class="md-nav__link">
+    #stop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundBuffer.html" class="md-nav__link">
+      SoundBuffer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundBufferRecorder.html" class="md-nav__link">
+      SoundBufferRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundRecorder.html" class="md-nav__link">
+      SoundRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+    
+    <label class="md-nav__link" for="nav-1-4-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SoundSource.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        SoundSource
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SoundSource.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          SoundSource
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundSource/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundStream.html" class="md-nav__link">
+      SoundStream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+    
+    <label class="md-nav__link" for="nav-1-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../network.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Network module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../network.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Network module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Ftp.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Ftp
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Ftp" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Ftp.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Ftp
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/DirectoryResponse.html" class="md-nav__link">
+      DirectoryResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/ListingResponse.html" class="md-nav__link">
+      ListingResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-5-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Ftp/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Ftp/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/TransferMode.html" class="md-nav__link">
+      TransferMode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Http
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Http" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Http
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http/Request.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Request
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Request" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http/Request.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Request
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Http/Request/Method.html" class="md-nav__link">
+      Method
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Http/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="IpAddress.html" class="md-nav__link">
+      IpAddress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Packet.html" class="md-nav__link">
+      Packet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Socket.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Socket
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Socket" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Socket.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Socket
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Socket/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Socket/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SocketSelector.html" class="md-nav__link">
+      SocketSelector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="TcpListener.html" class="md-nav__link">
+      TcpListener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="TcpSocket.html" class="md-nav__link">
+      TcpSocket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="UdpSocket.html" class="md-nav__link">
+      UdpSocket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="InitError.html" class="md-nav__link">
+      InitError
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Tutorials
+      
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Tutorials
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    
+    <label class="md-nav__link" for="nav-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        System module
+      
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          System module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/time.html" class="md-nav__link">
+      Handling time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/thread.html" class="md-nav__link">
+      Threads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/stream.html" class="md-nav__link">
+      User data streams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    
+    <label class="md-nav__link" for="nav-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Window module
+      
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Window module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/window.html" class="md-nav__link">
+      Opening and managing an SFML window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/events.html" class="md-nav__link">
+      Events explained
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/inputs.html" class="md-nav__link">
+      Keyboard, mouse and joysticks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/opengl.html" class="md-nav__link">
+      Using OpenGL in an SFML window
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+    
+    <label class="md-nav__link" for="nav-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Graphics module
+      
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Graphics module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/draw.html" class="md-nav__link">
+      Drawing 2D stuff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/sprite.html" class="md-nav__link">
+      Sprites and textures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/text.html" class="md-nav__link">
+      Text and fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/shape.html" class="md-nav__link">
+      Shapes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/vertex-array.html" class="md-nav__link">
+      Designing your own entities with vertex arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/transform.html" class="md-nav__link">
+      Position, rotation, scale: transforming entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/shader.html" class="md-nav__link">
+      Adding special effects with shaders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/view.html" class="md-nav__link">
+      Controlling the 2D camera with views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+    
+    <label class="md-nav__link" for="nav-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Audio module
+      
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Audio module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/sounds.html" class="md-nav__link">
+      Playing sounds and music
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/recording.html" class="md-nav__link">
+      Recording audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/streams.html" class="md-nav__link">
+      Custom audio streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/spatialization.html" class="md-nav__link">
+      Spatialization: Sounds in 3D
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+    
+    <label class="md-nav__link" for="nav-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Network module
+      
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Network module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/socket.html" class="md-nav__link">
+      Communication using sockets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/packet.html" class="md-nav__link">
+      Using packets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/http.html" class="md-nav__link">
+      Web requests with HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/ftp.html" class="md-nav__link">
+      File transfers with FTP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#SF::Sound" class="md-nav__link">
+    Sound
+  </a>
+  
+    <nav class="md-nav" aria-label="Sound">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-methods" class="md-nav__link">
+    Class methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Class methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound.new(buffer)" class="md-nav__link">
+    .new
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#buffer=(buffer)" class="md-nav__link">
+    #buffer=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#finalize()" class="md-nav__link">
+    #finalize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#loop()" class="md-nav__link">
+    #loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#loop=(loop)" class="md-nav__link">
+    #loop=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#pause()" class="md-nav__link">
+    #pause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#play()" class="md-nav__link">
+    #play
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#playing_offset()" class="md-nav__link">
+    #playing_offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#playing_offset=(time_offset)" class="md-nav__link">
+    #playing_offset=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#reset_buffer()" class="md-nav__link">
+    #reset_buffer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#status()" class="md-nav__link">
+    #status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::Sound#stop()" class="md-nav__link">
+    #stop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/blob/master/api/SF/Sound.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Sound</h1>
+                
+                <div class="doc doc-object doc-type class">
+<h2 class="doc doc-heading" id="SF::Sound">
+
+class <code>SF::Sound</code>
+      <br />
+<small>inherits <code><a href="SoundSource.html#SF::SoundSource">SF::SoundSource</a></code></small>
+  <a class="headerlink" href="#SF::Sound" title="Permanent link">#</a></h2>
+<div class="doc doc-contents first">
+<p>Regular sound that can be played in the audio environment</p>
+<p><a href="#SF::Sound"><code>SF::Sound</code></a> is the class to use to play sounds.
 It provides:</p>
-
-<ul><li>Control (play, pause, stop)</li><li>Ability to modify output parameters in real-time (pitch, volume, ...)</li><li>3D spatial features (position, attenuation, ...).</li></ul>
-
-<p><code><a href="../SF/Sound.html">SF::Sound</a></code> is perfect for playing short sounds that can
+<ul>
+<li>Control (play, pause, stop)</li>
+<li>Ability to modify output parameters in real-time (pitch, volume, ...)</li>
+<li>3D spatial features (position, attenuation, ...).</li>
+</ul>
+<p><a href="#SF::Sound"><code>SF::Sound</code></a> is perfect for playing short sounds that can
 fit in memory and require no latency, like foot steps or
 gun shots. For longer sounds, like background musics
-or long speeches, rather see <code><a href="../SF/Music.html">SF::Music</a></code> (which is based
+or long speeches, rather see <a href="Music.html#SF::Music"><code>SF::Music</code></a> (which is based
 on streaming).</p>
-
 <p>In order to work, a sound must be given a buffer of audio
-data to play. Audio data (samples) is stored in <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code>,
-and attached to a sound with the buffer=() function.
+data to play. Audio data (samples) is stored in <a href="SoundBuffer.html#SF::SoundBuffer"><code>SF::SoundBuffer</code></a>,
+and attached to a sound with the <a href="#SF::Sound#buffer=(buffer)"><code>buffer=()</code></a> function.
 The buffer object attached to a sound must remain alive
 as long as the sound uses it. Note that multiple sounds
 can use the same sound buffer at the same time.</p>
+<p>Usage example:
+<div class="highlight">
+<pre><span></span><code><span class="n">buffer</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"sound.wav"</span><span class="p">)</span>
 
-<p>Usage example:</p>
+<span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
+<span class="n">sound</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+</code></pre>
+</div>
+</p>
+<p><em>See also:</em> <a href="SoundBuffer.html#SF::SoundBuffer"><code>SF::SoundBuffer</code></a>, <a href="Music.html#SF::Music"><code>SF::Music</code></a></p>
+<div class="doc doc-children">
+<h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::Sound.new(buffer)">
 
-<pre><code>buffer <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">SoundBuffer</span>.from_file(<span class="s">&quot;sound.wav&quot;</span>)
-
-sound <span class="o">=</span> <span class="t">SF</span><span class="t">::</span><span class="t">Sound</span>.<span class="k">new</span>
-sound.buffer <span class="o">=</span> buffer
-sound.play()</code></pre>
-
-<p><em>See also:</em> <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code>, <code><a href="../SF/Music.html">SF::Music</a></code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2>
-    <a id="defined-in" class="anchor" href="#defined-in">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Defined in:
-  </h2>
-  
-    
-      <a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1081" target="_blank">
-        audio/obj.cr
-      </a>
-    
-    <br/>
-  
-
-
-
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new(buffer:SoundBuffer)-class-method" class="signature"><strong>.new</strong>(buffer : SoundBuffer)</a>
-        
-          <div class="summary"><p>Construct the sound with a buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-
-
-  <h2>
-    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Summary
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#buffer=(buffer:SoundBuffer)-instance-method" class="signature"><strong>#buffer=</strong>(buffer : SoundBuffer)</a>
-        
-          <div class="summary"><p>Set the source buffer containing the audio data to play</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
-        
-          <div class="summary"><p>Destructor</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#loop:Bool-instance-method" class="signature"><strong>#loop</strong> : Bool</a>
-        
-          <div class="summary"><p>Tell whether or not the sound is in loop mode</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#loop=(loop:Bool)-instance-method" class="signature"><strong>#loop=</strong>(loop : Bool)</a>
-        
-          <div class="summary"><p>Set whether or not the sound should loop after reaching the end</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#pause-instance-method" class="signature"><strong>#pause</strong></a>
-        
-          <div class="summary"><p>Pause the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#play-instance-method" class="signature"><strong>#play</strong></a>
-        
-          <div class="summary"><p>Start or resume playing the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#playing_offset:Time-instance-method" class="signature"><strong>#playing_offset</strong> : Time</a>
-        
-          <div class="summary"><p>Get the current playing position of the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#playing_offset=(time_offset:Time)-instance-method" class="signature"><strong>#playing_offset=</strong>(time_offset : Time)</a>
-        
-          <div class="summary"><p>Change the current playing position of the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#reset_buffer-instance-method" class="signature"><strong>#reset_buffer</strong></a>
-        
-          <div class="summary"><p>Reset the internal buffer of the sound</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#status:SoundSource::Status-instance-method" class="signature"><strong>#status</strong> : SoundSource::Status</a>
-        
-          <div class="summary"><p>Get the current status of the sound (stopped, paused, playing)</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#stop-instance-method" class="signature"><strong>#stop</strong></a>
-        
-          <div class="summary"><p>stop playing the sound</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-
-
-<div class="methods-inherited">
-  
-    
-
-  <h3>Instance methods inherited from class <code><a href="../SF/SoundSource.html">SF::SoundSource</a></code></h3>
-  
-  
-    <a href="../SF/SoundSource.html#attenuation:Float32-instance-method" class="tooltip">
-      <span>attenuation : Float32</span>
-    attenuation</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#attenuation=(attenuation:Number)-instance-method" class="tooltip">
-      <span>attenuation=(attenuation : Number)</span>
-    attenuation=</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#finalize-instance-method" class="tooltip">
-      <span>finalize</span>
-    finalize</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#min_distance:Float32-instance-method" class="tooltip">
-      <span>min_distance : Float32</span>
-    min_distance</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#min_distance=(distance:Number)-instance-method" class="tooltip">
-      <span>min_distance=(distance : Number)</span>
-    min_distance=</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#pause-instance-method" class="tooltip">
-      <span>pause</span>
-    pause</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#pitch:Float32-instance-method" class="tooltip">
-      <span>pitch : Float32</span>
-    pitch</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#pitch=(pitch:Number)-instance-method" class="tooltip">
-      <span>pitch=(pitch : Number)</span>
-    pitch=</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#play-instance-method" class="tooltip">
-      <span>play</span>
-    play</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#position:Vector3f-instance-method" class="tooltip">
-      <span>position : Vector3f</span>
-    position</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#position=(position:Vector3f)-instance-method" class="tooltip">
-      <span>position=(position : Vector3f)</span>
-    position=</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#relative_to_listener=(relative:Bool)-instance-method" class="tooltip">
-      <span>relative_to_listener=(relative : Bool)</span>
-    relative_to_listener=</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#relative_to_listener?:Bool-instance-method" class="tooltip">
-      <span>relative_to_listener? : Bool</span>
-    relative_to_listener?</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#set_position(x:Number,y:Number,z:Number)-instance-method" class="tooltip">
-      <span>set_position(x : Number, y : Number, z : Number)</span>
-    set_position</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#status:SoundSource::Status-instance-method" class="tooltip">
-      <span>status : SoundSource::Status</span>
-    status</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#stop-instance-method" class="tooltip">
-      <span>stop</span>
-    stop</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#volume:Float32-instance-method" class="tooltip">
-      <span>volume : Float32</span>
-    volume</a>, 
-    
-  
-    <a href="../SF/SoundSource.html#volume=(volume:Number)-instance-method" class="tooltip">
-      <span>volume=(volume : Number)</span>
-    volume=</a>
-    
-  
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">buffer</span> <span class="p">:</span> <span class="n">SoundBuffer</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound.new(buffer)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Construct the sound with a buffer</p>
+<ul>
+<li><em>buffer</em> - Sound buffer containing the audio data to play with the sound</li>
+</ul>
 </div>
 
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1091">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::Sound.new()">
 
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(buffer:SoundBuffer)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound.new()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Default constructor</p>
+</div>
 
-        <a class="method-permalink" href="#new(buffer:SoundBuffer)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Construct the sound with a buffer</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1084">View source</a>]
+</div>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#buffer=(buffer)">
 
-<ul><li><em>buffer</em> - Sound buffer containing the audio data to play with the sound</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1091" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Default constructor</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1084" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
-
-
-
-
-  <h2>
-    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Detail
-  </h2>
-  
-    <div class="entry-detail" id="buffer=(buffer:SoundBuffer)-instance-method">
-      <div class="signature">
-        
-        def <strong>buffer=</strong>(buffer : <a href="../SF/SoundBuffer.html">SoundBuffer</a>)
-
-        <a class="method-permalink" href="#buffer=(buffer:SoundBuffer)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Set the source buffer containing the audio data to play</p>
-
+    <code>
+      #buffer=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">buffer</span> <span class="p">:</span> <span class="n">SoundBuffer</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#buffer=(buffer)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Set the source buffer containing the audio data to play</p>
 <p>It is important to note that the sound buffer is not copied,
-thus the <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> instance must remain alive as long
+thus the <a href="SoundBuffer.html#SF::SoundBuffer"><code>SF::SoundBuffer</code></a> instance must remain alive as long
 as it is attached to the sound.</p>
-
-<ul><li><em>buffer</em> - Sound buffer to attach to the sound</li></ul>
-
+<ul>
+<li><em>buffer</em> - Sound buffer to attach to the sound</li>
+</ul>
 <p><em>See also:</em> <code>buffer</code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1141" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="finalize-instance-method">
-      <div class="signature">
-        
-        def <strong>finalize</strong>
+</div>
 
-        <a class="method-permalink" href="#finalize-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Destructor</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1097" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="loop:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>loop</strong> : Bool
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1141">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#finalize()">
 
-        <a class="method-permalink" href="#loop:Bool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Tell whether or not the sound is in loop mode</p>
+    <code>
+      #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#finalize()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Destructor</p>
+</div>
 
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1097">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#loop()">
+
+    <code>
+      #loop<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#loop()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Tell whether or not the sound is in loop mode</p>
 <p><em>Returns:</em> True if the sound is looping, false otherwise</p>
+<p><em>See also:</em> <a href="#SF::Sound#loop=(loop)"><code>loop=</code></a></p>
+</div>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#loop=(loop:Bool)-instance-method">#loop=</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1183" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="loop=(loop:Bool)-instance-method">
-      <div class="signature">
-        
-        def <strong>loop=</strong>(loop : Bool)
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1183">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#loop=(loop)">
 
-        <a class="method-permalink" href="#loop=(loop:Bool)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Set whether or not the sound should loop after reaching the end</p>
-
+    <code>
+      #loop=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="nb">loop</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#loop=(loop)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Set whether or not the sound should loop after reaching the end</p>
 <p>If set, the sound will restart from beginning after
 reaching the end and so on, until it is stopped or
 loop=(false) is called.
 The default looping state for sound is false.</p>
+<ul>
+<li><em>loop</em> - True to play in loop, false to play once</li>
+</ul>
+<p><em>See also:</em> <a href="#SF::Sound#loop()"><code>loop</code></a></p>
+</div>
 
-<ul><li><em>loop</em> - True to play in loop, false to play once</li></ul>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1156">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#pause()">
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#loop:Bool-instance-method">#loop</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1156" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="pause-instance-method">
-      <div class="signature">
-        
-        def <strong>pause</strong>
-
-        <a class="method-permalink" href="#pause-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Pause the sound</p>
-
+    <code>
+      #pause<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#pause()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Pause the sound</p>
 <p>This function pauses the sound if it was playing,
 otherwise (sound already paused or stopped) it has no effect.</p>
+<p><em>See also:</em> <a href="#SF::Sound#play()"><code>play</code></a>, <a href="#SF::Sound#stop()"><code>stop</code></a></p>
+</div>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1119" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="play-instance-method">
-      <div class="signature">
-        
-        def <strong>play</strong>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1119">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#play()">
 
-        <a class="method-permalink" href="#play-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Start or resume playing the sound</p>
-
+    <code>
+      #play<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#play()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Start or resume playing the sound</p>
 <p>This function starts the stream if it was stopped, resumes
 it if it was paused, and restarts it from beginning if it
 was it already playing.
 This function uses its own thread so that it doesn't block
 the rest of the program while the sound is played.</p>
+<p><em>See also:</em> <a href="#SF::Sound#pause()"><code>pause</code></a>, <a href="#SF::Sound#stop()"><code>stop</code></a></p>
+</div>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code>, <code><a href="../SF/Sound.html#stop-instance-method">#stop</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1110" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="playing_offset:Time-instance-method">
-      <div class="signature">
-        
-        def <strong>playing_offset</strong> : <a href="../SF/Time.html">Time</a>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1110">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#playing_offset()">
 
-        <a class="method-permalink" href="#playing_offset:Time-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Get the current playing position of the sound</p>
-
+    <code>
+      #playing_offset<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Time</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#playing_offset()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Get the current playing position of the sound</p>
 <p><em>Returns:</em> Current playing position, from the beginning of the sound</p>
+<p><em>See also:</em> <a href="#SF::Sound#playing_offset=(time_offset)"><code>playing_offset=</code></a></p>
+</div>
 
-<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset=(time_offset:Time)-instance-method">#playing_offset=</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1192" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="playing_offset=(time_offset:Time)-instance-method">
-      <div class="signature">
-        
-        def <strong>playing_offset=</strong>(time_offset : <a href="../SF/Time.html">Time</a>)
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1192">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#playing_offset=(time_offset)">
 
-        <a class="method-permalink" href="#playing_offset=(time_offset:Time)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Change the current playing position of the sound</p>
-
+    <code>
+      #playing_offset=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">time_offset</span> <span class="p">:</span> <span class="nb">Time</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#playing_offset=(time_offset)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Change the current playing position of the sound</p>
 <p>The playing position can be changed when the sound is
 either paused or playing. Changing the playing position
 when the sound is stopped has no effect, since playing
 the sound will reset its position.</p>
-
-<ul><li><em>time_offset</em> - New playing position, from the beginning of the sound</li></ul>
-
-<p><em>See also:</em> <code><a href="../SF/Sound.html#playing_offset:Time-instance-method">#playing_offset</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1169" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="reset_buffer-instance-method">
-      <div class="signature">
-        
-        def <strong>reset_buffer</strong>
-
-        <a class="method-permalink" href="#reset_buffer-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Reset the internal buffer of the sound</p>
-
-<p>This function is for internal use only, you don't have
-to use it. It is called by the <code><a href="../SF/SoundBuffer.html">SF::SoundBuffer</a></code> that
-this sound uses, when it is destroyed in order to prevent
-the sound from using a dead buffer.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1210" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="status:SoundSource::Status-instance-method">
-      <div class="signature">
-        
-        def <strong>status</strong> : <a href="../SF/SoundSource/Status.html">SoundSource::Status</a>
-
-        <a class="method-permalink" href="#status:SoundSource::Status-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Get the current status of the sound (stopped, paused, playing)</p>
-
-<p><em>Returns:</em> Current status of the sound</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1200" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="stop-instance-method">
-      <div class="signature">
-        
-        def <strong>stop</strong>
-
-        <a class="method-permalink" href="#stop-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>stop playing the sound</p>
-
-<p>This function stops the sound if it was playing or paused,
-and does nothing if it was already stopped.
-It also resets the playing position (unlike pause()).</p>
-
-<p><em>See also:</em> <code><a href="../SF/Sound.html#play-instance-method">#play</a></code>, <code><a href="../SF/Sound.html#pause-instance-method">#pause</a></code></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1129" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
-
-
-
+<ul>
+<li><em>time_offset</em> - New playing position, from the beginning of the sound</li>
+</ul>
+<p><em>See also:</em> <a href="#SF::Sound#playing_offset()"><code>playing_offset</code></a></p>
 </div>
 
-</body>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1169">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#reset_buffer()">
+
+    <code>
+      #reset_buffer<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#reset_buffer()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Reset the internal buffer of the sound</p>
+<p>This function is for internal use only, you don't have
+to use it. It is called by the <a href="SoundBuffer.html#SF::SoundBuffer"><code>SF::SoundBuffer</code></a> that
+this sound uses, when it is destroyed in order to prevent
+the sound from using a dead buffer.</p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1210">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#status()">
+
+    <code>
+      #status<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">SoundSource</span><span class="o">::</span><span class="n">Status</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#status()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Get the current status of the sound (stopped, paused, playing)</p>
+<p><em>Returns:</em> Current status of the sound</p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1200">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::Sound#stop()">
+
+    <code>
+      #stop<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::Sound#stop()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>stop playing the sound</p>
+<p>This function stops the sound if it was playing or paused,
+and does nothing if it was already stopped.
+It also resets the playing position (unlike <a href="#SF::Sound#pause()"><code>pause()</code></a>).</p>
+<p><em>See also:</em> <a href="#SF::Sound#play()"><code>play</code></a>, <a href="#SF::Sound#pause()"><code>pause</code></a></p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1129">View source</a>]
+</div>
+</div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="Music/TimeSpan.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                TimeSpan
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="SoundBuffer.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SoundBuffer
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
 </html>

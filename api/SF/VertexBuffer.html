@@ -1,1839 +1,4066 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="">
-<meta name="crystal_docs.project_name" content="CrSFML">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../js/doc.js"></script>
-
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="CrSFML">
-  <title>SF::VertexBuffer - CrSFML </title>
-  <script type="text/javascript">
-    CrystalDocs.base_path = "../";
-  </script>
-</head>
-<body>
-
-<div class="sidebar">
-  <div class="sidebar-header">
-    <div class="search-box">
-      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
-    </div>
-
-<a id="my-logo" href="https://github.com/oprypin/crsfml#readme"><img src="https://raw.githubusercontent.com/oprypin/crsfml/master/logo.png" alt="CrSFML"/></a>
-    <div class="project-summary">
-      <h1 class="project-name">
-        <a href="../index.html">
-          CrSFML
-        </a>
-      </h1>
-
-      <span class="project-version">
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>VertexBuffer - CrSFML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
         
-      </span>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#SF::VertexBuffer" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-  </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
 
-  <div class="search-results" class="hidden">
-    <ul class="search-list"></ul>
-  </div>
+  
 
-  <div class="types-list">
-    <ul>
-  
-  <li class="parent open current" data-id="CrSFML/SF" data-name="sf">
-      <a href="../SF.html">SF</a>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../index.html" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
       
-        <ul>
   
-  <li class=" " data-id="CrSFML/SF/AlResource" data-name="sf::alresource">
-      <a href="../SF/AlResource.html">AlResource</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/BlendMode" data-name="sf::blendmode">
-      <a href="../SF/BlendMode.html">BlendMode</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/BlendMode/Equation" data-name="sf::blendmode::equation">
-      <a href="../SF/BlendMode/Equation.html">Equation</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/BlendMode/Factor" data-name="sf::blendmode::factor">
-      <a href="../SF/BlendMode/Factor.html">Factor</a>
-      
-    </li>
-  
-</ul>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/CircleShape" data-name="sf::circleshape">
-      <a href="../SF/CircleShape.html">CircleShape</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Clipboard" data-name="sf::clipboard">
-      <a href="../SF/Clipboard.html">Clipboard</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Clock" data-name="sf::clock">
-      <a href="../SF/Clock.html">Clock</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Color" data-name="sf::color">
-      <a href="../SF/Color.html">Color</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Context" data-name="sf::context">
-      <a href="../SF/Context.html">Context</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/ContextSettings" data-name="sf::contextsettings">
-      <a href="../SF/ContextSettings.html">ContextSettings</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/ContextSettings/Attribute" data-name="sf::contextsettings::attribute">
-      <a href="../SF/ContextSettings/Attribute.html">Attribute</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/ConvexShape" data-name="sf::convexshape">
-      <a href="../SF/ConvexShape.html">ConvexShape</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Cursor" data-name="sf::cursor">
-      <a href="../SF/Cursor.html">Cursor</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Cursor/Type" data-name="sf::cursor::type">
-      <a href="../SF/Cursor/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Drawable" data-name="sf::drawable">
-      <a href="../SF/Drawable.html">Drawable</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Event" data-name="sf::event">
-      <a href="../SF/Event.html">Event</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Event/Closed" data-name="sf::event::closed">
-      <a href="../SF/Event/Closed.html">Closed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/GainedFocus" data-name="sf::event::gainedfocus">
-      <a href="../SF/Event/GainedFocus.html">GainedFocus</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonEvent" data-name="sf::event::joystickbuttonevent">
-      <a href="../SF/Event/JoystickButtonEvent.html">JoystickButtonEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonPressed" data-name="sf::event::joystickbuttonpressed">
-      <a href="../SF/Event/JoystickButtonPressed.html">JoystickButtonPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickButtonReleased" data-name="sf::event::joystickbuttonreleased">
-      <a href="../SF/Event/JoystickButtonReleased.html">JoystickButtonReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickConnected" data-name="sf::event::joystickconnected">
-      <a href="../SF/Event/JoystickConnected.html">JoystickConnected</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickConnectEvent" data-name="sf::event::joystickconnectevent">
-      <a href="../SF/Event/JoystickConnectEvent.html">JoystickConnectEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickDisconnected" data-name="sf::event::joystickdisconnected">
-      <a href="../SF/Event/JoystickDisconnected.html">JoystickDisconnected</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickMoved" data-name="sf::event::joystickmoved">
-      <a href="../SF/Event/JoystickMoved.html">JoystickMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/JoystickMoveEvent" data-name="sf::event::joystickmoveevent">
-      <a href="../SF/Event/JoystickMoveEvent.html">JoystickMoveEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyEvent" data-name="sf::event::keyevent">
-      <a href="../SF/Event/KeyEvent.html">KeyEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyPressed" data-name="sf::event::keypressed">
-      <a href="../SF/Event/KeyPressed.html">KeyPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/KeyReleased" data-name="sf::event::keyreleased">
-      <a href="../SF/Event/KeyReleased.html">KeyReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/LostFocus" data-name="sf::event::lostfocus">
-      <a href="../SF/Event/LostFocus.html">LostFocus</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonEvent" data-name="sf::event::mousebuttonevent">
-      <a href="../SF/Event/MouseButtonEvent.html">MouseButtonEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonPressed" data-name="sf::event::mousebuttonpressed">
-      <a href="../SF/Event/MouseButtonPressed.html">MouseButtonPressed</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseButtonReleased" data-name="sf::event::mousebuttonreleased">
-      <a href="../SF/Event/MouseButtonReleased.html">MouseButtonReleased</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseEntered" data-name="sf::event::mouseentered">
-      <a href="../SF/Event/MouseEntered.html">MouseEntered</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseLeft" data-name="sf::event::mouseleft">
-      <a href="../SF/Event/MouseLeft.html">MouseLeft</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseMoved" data-name="sf::event::mousemoved">
-      <a href="../SF/Event/MouseMoved.html">MouseMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseMoveEvent" data-name="sf::event::mousemoveevent">
-      <a href="../SF/Event/MouseMoveEvent.html">MouseMoveEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelEvent" data-name="sf::event::mousewheelevent">
-      <a href="../SF/Event/MouseWheelEvent.html">MouseWheelEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelMoved" data-name="sf::event::mousewheelmoved">
-      <a href="../SF/Event/MouseWheelMoved.html">MouseWheelMoved</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelScrolled" data-name="sf::event::mousewheelscrolled">
-      <a href="../SF/Event/MouseWheelScrolled.html">MouseWheelScrolled</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/MouseWheelScrollEvent" data-name="sf::event::mousewheelscrollevent">
-      <a href="../SF/Event/MouseWheelScrollEvent.html">MouseWheelScrollEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/Resized" data-name="sf::event::resized">
-      <a href="../SF/Event/Resized.html">Resized</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SensorChanged" data-name="sf::event::sensorchanged">
-      <a href="../SF/Event/SensorChanged.html">SensorChanged</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SensorEvent" data-name="sf::event::sensorevent">
-      <a href="../SF/Event/SensorEvent.html">SensorEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/SizeEvent" data-name="sf::event::sizeevent">
-      <a href="../SF/Event/SizeEvent.html">SizeEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TextEntered" data-name="sf::event::textentered">
-      <a href="../SF/Event/TextEntered.html">TextEntered</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TextEvent" data-name="sf::event::textevent">
-      <a href="../SF/Event/TextEvent.html">TextEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchBegan" data-name="sf::event::touchbegan">
-      <a href="../SF/Event/TouchBegan.html">TouchBegan</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchEnded" data-name="sf::event::touchended">
-      <a href="../SF/Event/TouchEnded.html">TouchEnded</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchEvent" data-name="sf::event::touchevent">
-      <a href="../SF/Event/TouchEvent.html">TouchEvent</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Event/TouchMoved" data-name="sf::event::touchmoved">
-      <a href="../SF/Event/TouchMoved.html">TouchMoved</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/FileInputStream" data-name="sf::fileinputstream">
-      <a href="../SF/FileInputStream.html">FileInputStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/FloatRect" data-name="sf::floatrect">
-      <a href="../SF/FloatRect.html">FloatRect</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Font" data-name="sf::font">
-      <a href="../SF/Font.html">Font</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Font/Info" data-name="sf::font::info">
-      <a href="../SF/Font/Info.html">Info</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Ftp" data-name="sf::ftp">
-      <a href="../SF/Ftp.html">Ftp</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/DirectoryResponse" data-name="sf::ftp::directoryresponse">
-      <a href="../SF/Ftp/DirectoryResponse.html">DirectoryResponse</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/ListingResponse" data-name="sf::ftp::listingresponse">
-      <a href="../SF/Ftp/ListingResponse.html">ListingResponse</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Ftp/Response" data-name="sf::ftp::response">
-      <a href="../SF/Ftp/Response.html">Response</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/Response/Status" data-name="sf::ftp::response::status">
-      <a href="../SF/Ftp/Response/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Ftp/TransferMode" data-name="sf::ftp::transfermode">
-      <a href="../SF/Ftp/TransferMode.html">TransferMode</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/GlResource" data-name="sf::glresource">
-      <a href="../SF/GlResource.html">GlResource</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Glyph" data-name="sf::glyph">
-      <a href="../SF/Glyph.html">Glyph</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Http" data-name="sf::http">
-      <a href="../SF/Http.html">Http</a>
-      
-        <ul>
-  
-  <li class="parent " data-id="CrSFML/SF/Http/Request" data-name="sf::http::request">
-      <a href="../SF/Http/Request.html">Request</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Http/Request/Method" data-name="sf::http::request::method">
-      <a href="../SF/Http/Request/Method.html">Method</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Http/Response" data-name="sf::http::response">
-      <a href="../SF/Http/Response.html">Response</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Http/Response/Status" data-name="sf::http::response::status">
-      <a href="../SF/Http/Response/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Image" data-name="sf::image">
-      <a href="../SF/Image.html">Image</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/InitError" data-name="sf::initerror">
-      <a href="../SF/InitError.html">InitError</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/InputStream" data-name="sf::inputstream">
-      <a href="../SF/InputStream.html">InputStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/IntRect" data-name="sf::intrect">
-      <a href="../SF/IntRect.html">IntRect</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/IpAddress" data-name="sf::ipaddress">
-      <a href="../SF/IpAddress.html">IpAddress</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Joystick" data-name="sf::joystick">
-      <a href="../SF/Joystick.html">Joystick</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Joystick/Axis" data-name="sf::joystick::axis">
-      <a href="../SF/Joystick/Axis.html">Axis</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Joystick/Identification" data-name="sf::joystick::identification">
-      <a href="../SF/Joystick/Identification.html">Identification</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Keyboard" data-name="sf::keyboard">
-      <a href="../SF/Keyboard.html">Keyboard</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Keyboard/Key" data-name="sf::keyboard::key">
-      <a href="../SF/Keyboard/Key.html">Key</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Listener" data-name="sf::listener">
-      <a href="../SF/Listener.html">Listener</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/MemoryInputStream" data-name="sf::memoryinputstream">
-      <a href="../SF/MemoryInputStream.html">MemoryInputStream</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Mouse" data-name="sf::mouse">
-      <a href="../SF/Mouse.html">Mouse</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Mouse/Button" data-name="sf::mouse::button">
-      <a href="../SF/Mouse/Button.html">Button</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Mouse/Wheel" data-name="sf::mouse::wheel">
-      <a href="../SF/Mouse/Wheel.html">Wheel</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Music" data-name="sf::music">
-      <a href="../SF/Music.html">Music</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Music/Span" data-name="sf::music::span(t)">
-      <a href="../SF/Music/Span.html">Span</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Music/TimeSpan" data-name="sf::music::timespan">
-      <a href="../SF/Music/TimeSpan.html">TimeSpan</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Mutex" data-name="sf::mutex">
-      <a href="../SF/Mutex.html">Mutex</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/NonCopyable" data-name="sf::noncopyable">
-      <a href="../SF/NonCopyable.html">NonCopyable</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Packet" data-name="sf::packet">
-      <a href="../SF/Packet.html">Packet</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/PrimitiveType" data-name="sf::primitivetype">
-      <a href="../SF/PrimitiveType.html">PrimitiveType</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Rect" data-name="sf::rect(t)">
-      <a href="../SF/Rect.html">Rect</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RectangleShape" data-name="sf::rectangleshape">
-      <a href="../SF/RectangleShape.html">RectangleShape</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderStates" data-name="sf::renderstates">
-      <a href="../SF/RenderStates.html">RenderStates</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderTarget" data-name="sf::rendertarget">
-      <a href="../SF/RenderTarget.html">RenderTarget</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderTexture" data-name="sf::rendertexture">
-      <a href="../SF/RenderTexture.html">RenderTexture</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/RenderWindow" data-name="sf::renderwindow">
-      <a href="../SF/RenderWindow.html">RenderWindow</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Sensor" data-name="sf::sensor">
-      <a href="../SF/Sensor.html">Sensor</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Sensor/Type" data-name="sf::sensor::type">
-      <a href="../SF/Sensor/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Shader" data-name="sf::shader">
-      <a href="../SF/Shader.html">Shader</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Shader/CurrentTextureType" data-name="sf::shader::currenttexturetype">
-      <a href="../SF/Shader/CurrentTextureType.html">CurrentTextureType</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Shader/Type" data-name="sf::shader::type">
-      <a href="../SF/Shader/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Shape" data-name="sf::shape">
-      <a href="../SF/Shape.html">Shape</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Socket" data-name="sf::socket">
-      <a href="../SF/Socket.html">Socket</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Socket/Status" data-name="sf::socket::status">
-      <a href="../SF/Socket/Status.html">Status</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Socket/Type" data-name="sf::socket::type">
-      <a href="../SF/Socket/Type.html">Type</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SocketSelector" data-name="sf::socketselector">
-      <a href="../SF/SocketSelector.html">SocketSelector</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Sound" data-name="sf::sound">
-      <a href="../SF/Sound.html">Sound</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundBuffer" data-name="sf::soundbuffer">
-      <a href="../SF/SoundBuffer.html">SoundBuffer</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundBufferRecorder" data-name="sf::soundbufferrecorder">
-      <a href="../SF/SoundBufferRecorder.html">SoundBufferRecorder</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundRecorder" data-name="sf::soundrecorder">
-      <a href="../SF/SoundRecorder.html">SoundRecorder</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/SoundSource" data-name="sf::soundsource">
-      <a href="../SF/SoundSource.html">SoundSource</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/SoundSource/Status" data-name="sf::soundsource::status">
-      <a href="../SF/SoundSource/Status.html">Status</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/SoundStream" data-name="sf::soundstream">
-      <a href="../SF/SoundStream.html">SoundStream</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Sprite" data-name="sf::sprite">
-      <a href="../SF/Sprite.html">Sprite</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Style" data-name="sf::style">
-      <a href="../SF/Style.html">Style</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/TcpListener" data-name="sf::tcplistener">
-      <a href="../SF/TcpListener.html">TcpListener</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/TcpSocket" data-name="sf::tcpsocket">
-      <a href="../SF/TcpSocket.html">TcpSocket</a>
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Text" data-name="sf::text">
-      <a href="../SF/Text.html">Text</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Text/Style" data-name="sf::text::style">
-      <a href="../SF/Text/Style.html">Style</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class="parent " data-id="CrSFML/SF/Texture" data-name="sf::texture">
-      <a href="../SF/Texture.html">Texture</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/Texture/CoordinateType" data-name="sf::texture::coordinatetype">
-      <a href="../SF/Texture/CoordinateType.html">CoordinateType</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Thread" data-name="sf::thread">
-      <a href="../SF/Thread.html">Thread</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Time" data-name="sf::time">
-      <a href="../SF/Time.html">Time</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Touch" data-name="sf::touch">
-      <a href="../SF/Touch.html">Touch</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Transform" data-name="sf::transform">
-      <a href="../SF/Transform.html">Transform</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Transformable" data-name="sf::transformable">
-      <a href="../SF/Transformable.html">Transformable</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/UdpSocket" data-name="sf::udpsocket">
-      <a href="../SF/UdpSocket.html">UdpSocket</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2" data-name="sf::vector2(t)">
-      <a href="../SF/Vector2.html">Vector2</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2f" data-name="sf::vector2f">
-      <a href="../SF/Vector2f.html">Vector2f</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2i" data-name="sf::vector2i">
-      <a href="../SF/Vector2i.html">Vector2i</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector2u" data-name="sf::vector2u">
-      <a href="../SF/Vector2u.html">Vector2u</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector3" data-name="sf::vector3(t)">
-      <a href="../SF/Vector3.html">Vector3</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vector3f" data-name="sf::vector3f">
-      <a href="../SF/Vector3f.html">Vector3f</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Vertex" data-name="sf::vertex">
-      <a href="../SF/Vertex.html">Vertex</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/VertexArray" data-name="sf::vertexarray">
-      <a href="../SF/VertexArray.html">VertexArray</a>
-      
-    </li>
-  
-  <li class="parent open current" data-id="CrSFML/SF/VertexBuffer" data-name="sf::vertexbuffer">
-      <a href="../SF/VertexBuffer.html">VertexBuffer</a>
-      
-        <ul>
-  
-  <li class=" " data-id="CrSFML/SF/VertexBuffer/Usage" data-name="sf::vertexbuffer::usage">
-      <a href="../SF/VertexBuffer/Usage.html">Usage</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/VideoMode" data-name="sf::videomode">
-      <a href="../SF/VideoMode.html">VideoMode</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/View" data-name="sf::view">
-      <a href="../SF/View.html">View</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/Window" data-name="sf::window">
-      <a href="../SF/Window.html">Window</a>
-      
-    </li>
-  
-  <li class=" " data-id="CrSFML/SF/WindowHandle" data-name="sf::windowhandle">
-      <a href="../SF/WindowHandle.html">WindowHandle</a>
-      
-    </li>
-  
-</ul>
-
-      
-    </li>
-  
-</ul>
-
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CrSFML
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              VertexBuffer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-
-<div class="main-content">
-<h1 class="type-name">
-
-  <span class="kind">class</span> SF::VertexBuffer
-
-</h1>
-
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
-
-
-
-
-  <h2>
-    <a id="overview" class="anchor" href="#overview">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
 </a>
-    Overview
-  </h2>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
 
-  <p>Vertex buffer storage for one or more 2D primitives</p>
 
-<p><code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code> is a simple wrapper around a dynamic
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../system.html" class="md-tabs__link md-tabs__link--active">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tutorials/system/time.html" class="md-tabs__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="CrSFML" class="md-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CrSFML
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        API
+      
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          API
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+    
+    <label class="md-nav__link" for="nav-1-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../system.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        System module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../system.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          System module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Clock.html" class="md-nav__link">
+      Clock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="FileInputStream.html" class="md-nav__link">
+      FileInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="InputStream.html" class="md-nav__link">
+      InputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="MemoryInputStream.html" class="md-nav__link">
+      MemoryInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mutex.html" class="md-nav__link">
+      Mutex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="NonCopyable.html" class="md-nav__link">
+      NonCopyable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Thread.html" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Time.html" class="md-nav__link">
+      Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2.html" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2f.html" class="md-nav__link">
+      Vector2f
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2i.html" class="md-nav__link">
+      Vector2i
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector2u.html" class="md-nav__link">
+      Vector2u
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector3.html" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vector3f.html" class="md-nav__link">
+      Vector3f
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+    
+    <label class="md-nav__link" for="nav-1-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../window.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Window module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../window.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Window module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Clipboard.html" class="md-nav__link">
+      Clipboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Context.html" class="md-nav__link">
+      Context
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="ContextSettings.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        ContextSettings
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="ContextSettings.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          ContextSettings
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="ContextSettings/Attribute.html" class="md-nav__link">
+      Attribute
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+    
+    <label class="md-nav__link" for="nav-1-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Cursor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Cursor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Cursor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Cursor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Cursor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Cursor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+    
+    <label class="md-nav__link" for="nav-1-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Event.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Event
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Event" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Event.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Event
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/Closed.html" class="md-nav__link">
+      Closed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/GainedFocus.html" class="md-nav__link">
+      GainedFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonEvent.html" class="md-nav__link">
+      JoystickButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonPressed.html" class="md-nav__link">
+      JoystickButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickButtonReleased.html" class="md-nav__link">
+      JoystickButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickConnected.html" class="md-nav__link">
+      JoystickConnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickConnectEvent.html" class="md-nav__link">
+      JoystickConnectEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickDisconnected.html" class="md-nav__link">
+      JoystickDisconnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickMoved.html" class="md-nav__link">
+      JoystickMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/JoystickMoveEvent.html" class="md-nav__link">
+      JoystickMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyEvent.html" class="md-nav__link">
+      KeyEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyPressed.html" class="md-nav__link">
+      KeyPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/KeyReleased.html" class="md-nav__link">
+      KeyReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/LostFocus.html" class="md-nav__link">
+      LostFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonEvent.html" class="md-nav__link">
+      MouseButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonPressed.html" class="md-nav__link">
+      MouseButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseButtonReleased.html" class="md-nav__link">
+      MouseButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseEntered.html" class="md-nav__link">
+      MouseEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseLeft.html" class="md-nav__link">
+      MouseLeft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseMoved.html" class="md-nav__link">
+      MouseMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseMoveEvent.html" class="md-nav__link">
+      MouseMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelEvent.html" class="md-nav__link">
+      MouseWheelEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelMoved.html" class="md-nav__link">
+      MouseWheelMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelScrolled.html" class="md-nav__link">
+      MouseWheelScrolled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/MouseWheelScrollEvent.html" class="md-nav__link">
+      MouseWheelScrollEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/Resized.html" class="md-nav__link">
+      Resized
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SensorChanged.html" class="md-nav__link">
+      SensorChanged
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SensorEvent.html" class="md-nav__link">
+      SensorEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/SizeEvent.html" class="md-nav__link">
+      SizeEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TextEntered.html" class="md-nav__link">
+      TextEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TextEvent.html" class="md-nav__link">
+      TextEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchBegan.html" class="md-nav__link">
+      TouchBegan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchEnded.html" class="md-nav__link">
+      TouchEnded
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchEvent.html" class="md-nav__link">
+      TouchEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Event/TouchMoved.html" class="md-nav__link">
+      TouchMoved
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="GlResource.html" class="md-nav__link">
+      GlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+    
+    <label class="md-nav__link" for="nav-1-2-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Joystick.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Joystick
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Joystick" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Joystick.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Joystick
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Joystick/Axis.html" class="md-nav__link">
+      Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Joystick/Identification.html" class="md-nav__link">
+      Identification
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+    
+    <label class="md-nav__link" for="nav-1-2-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Keyboard.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Keyboard
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Keyboard.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Keyboard
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Keyboard/Key.html" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+    
+    <label class="md-nav__link" for="nav-1-2-9">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Mouse.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Mouse
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Mouse" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-9">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Mouse.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Mouse
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mouse/Button.html" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Mouse/Wheel.html" class="md-nav__link">
+      Wheel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+    
+    <label class="md-nav__link" for="nav-1-2-10">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Sensor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Sensor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Sensor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-10">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Sensor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Sensor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Sensor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Touch.html" class="md-nav__link">
+      Touch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VideoMode.html" class="md-nav__link">
+      VideoMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Window.html" class="md-nav__link">
+      Window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="WindowHandle.html" class="md-nav__link">
+      WindowHandle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+    
+    <label class="md-nav__link" for="nav-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../graphics.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Graphics module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../graphics.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Graphics module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+    
+    <label class="md-nav__link" for="nav-1-3-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="BlendMode.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        BlendMode
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="BlendMode.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          BlendMode
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="BlendMode/Equation.html" class="md-nav__link">
+      Equation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="BlendMode/Factor.html" class="md-nav__link">
+      Factor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="CircleShape.html" class="md-nav__link">
+      CircleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Color.html" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="ConvexShape.html" class="md-nav__link">
+      ConvexShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Drawable.html" class="md-nav__link">
+      Drawable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="FloatRect.html" class="md-nav__link">
+      FloatRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+    
+    <label class="md-nav__link" for="nav-1-3-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Font.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Font
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Font" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Font.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Font
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Font/Info.html" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Glyph.html" class="md-nav__link">
+      Glyph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Image.html" class="md-nav__link">
+      Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="IntRect.html" class="md-nav__link">
+      IntRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="PrimitiveType.html" class="md-nav__link">
+      PrimitiveType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Rect.html" class="md-nav__link">
+      Rect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RectangleShape.html" class="md-nav__link">
+      RectangleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderStates.html" class="md-nav__link">
+      RenderStates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderTarget.html" class="md-nav__link">
+      RenderTarget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderTexture.html" class="md-nav__link">
+      RenderTexture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="RenderWindow.html" class="md-nav__link">
+      RenderWindow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+    
+    <label class="md-nav__link" for="nav-1-3-18">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Shader.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Shader
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Shader" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-18">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Shader.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Shader
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shader/CurrentTextureType.html" class="md-nav__link">
+      CurrentTextureType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shader/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Shape.html" class="md-nav__link">
+      Shape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Sprite.html" class="md-nav__link">
+      Sprite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+    
+    <label class="md-nav__link" for="nav-1-3-21">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Text.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Text
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Text" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-21">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Text.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Text
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Text/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+    
+    <label class="md-nav__link" for="nav-1-3-22">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Texture.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Texture
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Texture" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-22">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Texture.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Texture
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Texture/CoordinateType.html" class="md-nav__link">
+      CoordinateType
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Transform.html" class="md-nav__link">
+      Transform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Transformable.html" class="md-nav__link">
+      Transformable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Vertex.html" class="md-nav__link">
+      Vertex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VertexArray.html" class="md-nav__link">
+      VertexArray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" checked>
+    
+    <label class="md-nav__link" for="nav-1-3-27">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="VertexBuffer.html" class="md-nav__link md-nav__link--active"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        VertexBuffer
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-27">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="VertexBuffer.html" class="md-nav__link md-nav__link--active"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          VertexBuffer
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="VertexBuffer/Usage.html" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="View.html" class="md-nav__link">
+      View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" >
+    
+    <label class="md-nav__link" for="nav-1-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../audio.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Audio module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../audio.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Audio module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="AlResource.html" class="md-nav__link">
+      AlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Listener.html" class="md-nav__link">
+      Listener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+    
+    <label class="md-nav__link" for="nav-1-4-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Music.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Music
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Music" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Music.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Music
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Music/Span.html" class="md-nav__link">
+      Span
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Music/TimeSpan.html" class="md-nav__link">
+      TimeSpan
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Sound.html" class="md-nav__link">
+      Sound
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundBuffer.html" class="md-nav__link">
+      SoundBuffer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundBufferRecorder.html" class="md-nav__link">
+      SoundBufferRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundRecorder.html" class="md-nav__link">
+      SoundRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+    
+    <label class="md-nav__link" for="nav-1-4-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="SoundSource.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        SoundSource
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="SoundSource.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          SoundSource
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundSource/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SoundStream.html" class="md-nav__link">
+      SoundStream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+    
+    <label class="md-nav__link" for="nav-1-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../network.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Network module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../network.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Network module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Ftp.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Ftp
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Ftp" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Ftp.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Ftp
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/DirectoryResponse.html" class="md-nav__link">
+      DirectoryResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/ListingResponse.html" class="md-nav__link">
+      ListingResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-5-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Ftp/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Ftp/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Ftp/TransferMode.html" class="md-nav__link">
+      TransferMode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Http
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Http" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Http
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http/Request.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Request
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Request" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http/Request.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Request
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Http/Request/Method.html" class="md-nav__link">
+      Method
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Http/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Http/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Http/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="IpAddress.html" class="md-nav__link">
+      IpAddress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Packet.html" class="md-nav__link">
+      Packet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="Socket.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Socket
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Socket" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="Socket.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Socket
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Socket/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="Socket/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="SocketSelector.html" class="md-nav__link">
+      SocketSelector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="TcpListener.html" class="md-nav__link">
+      TcpListener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="TcpSocket.html" class="md-nav__link">
+      TcpSocket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="UdpSocket.html" class="md-nav__link">
+      UdpSocket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="InitError.html" class="md-nav__link">
+      InitError
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Tutorials
+      
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Tutorials
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    
+    <label class="md-nav__link" for="nav-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        System module
+      
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          System module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/time.html" class="md-nav__link">
+      Handling time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/thread.html" class="md-nav__link">
+      Threads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/system/stream.html" class="md-nav__link">
+      User data streams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    
+    <label class="md-nav__link" for="nav-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Window module
+      
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Window module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/window.html" class="md-nav__link">
+      Opening and managing an SFML window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/events.html" class="md-nav__link">
+      Events explained
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/inputs.html" class="md-nav__link">
+      Keyboard, mouse and joysticks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/window/opengl.html" class="md-nav__link">
+      Using OpenGL in an SFML window
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+    
+    <label class="md-nav__link" for="nav-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Graphics module
+      
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Graphics module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/draw.html" class="md-nav__link">
+      Drawing 2D stuff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/sprite.html" class="md-nav__link">
+      Sprites and textures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/text.html" class="md-nav__link">
+      Text and fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/shape.html" class="md-nav__link">
+      Shapes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/vertex-array.html" class="md-nav__link">
+      Designing your own entities with vertex arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/transform.html" class="md-nav__link">
+      Position, rotation, scale: transforming entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/shader.html" class="md-nav__link">
+      Adding special effects with shaders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/graphics/view.html" class="md-nav__link">
+      Controlling the 2D camera with views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+    
+    <label class="md-nav__link" for="nav-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Audio module
+      
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Audio module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/sounds.html" class="md-nav__link">
+      Playing sounds and music
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/recording.html" class="md-nav__link">
+      Recording audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/streams.html" class="md-nav__link">
+      Custom audio streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/audio/spatialization.html" class="md-nav__link">
+      Spatialization: Sounds in 3D
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+    
+    <label class="md-nav__link" for="nav-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Network module
+      
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Network module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/socket.html" class="md-nav__link">
+      Communication using sockets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/packet.html" class="md-nav__link">
+      Using packets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/http.html" class="md-nav__link">
+      Web requests with HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/network/ftp.html" class="md-nav__link">
+      File transfers with FTP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#SF::VertexBuffer" class="md-nav__link">
+    VertexBuffer
+  </a>
+  
+    <nav class="md-nav" aria-label="VertexBuffer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#included-modules" class="md-nav__link">
+    Included modules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-methods" class="md-nav__link">
+    Class methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Class methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer.available?()" class="md-nav__link">
+    .available?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer.bind(vertex_buffer)" class="md-nav__link">
+    .bind
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer.new(type,usage)" class="md-nav__link">
+    .new
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#create(vertex_count)" class="md-nav__link">
+    #create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#dup()" class="md-nav__link">
+    #dup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#finalize()" class="md-nav__link">
+    #finalize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#native_handle()" class="md-nav__link">
+    #native_handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#primitive_type()" class="md-nav__link">
+    #primitive_type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#primitive_type=(type)" class="md-nav__link">
+    #primitive_type=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#swap(right)" class="md-nav__link">
+    #swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#update(vertices,offset)" class="md-nav__link">
+    #update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#usage()" class="md-nav__link">
+    #usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#usage=(usage)" class="md-nav__link">
+    #usage=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SF::VertexBuffer#vertex_count()" class="md-nav__link">
+    #vertex_count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/blob/master/api/SF/VertexBuffer.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>VertexBuffer</h1>
+                
+                <div class="doc doc-object doc-type class">
+<h2 class="doc doc-heading" id="SF::VertexBuffer">
+
+class <code>SF::VertexBuffer</code>
+      <br />
+<small>inherits <code>Reference</code></small>
+  <a class="headerlink" href="#SF::VertexBuffer" title="Permanent link">#</a></h2>
+<div class="doc doc-contents first">
+<p>Vertex buffer storage for one or more 2D primitives</p>
+<p><a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a> is a simple wrapper around a dynamic
 buffer of vertices and a primitives type.</p>
-
-<p>Unlike <code><a href="../SF/VertexArray.html">SF::VertexArray</a></code>, the vertex data is stored in
+<p>Unlike <a href="VertexArray.html#SF::VertexArray"><code>SF::VertexArray</code></a>, the vertex data is stored in
 graphics memory.</p>
-
 <p>In situations where a large amount of vertex data would
 have to be transferred from system memory to graphics memory
-every frame, using <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code> can help. By using a
-<code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code>, data that has not been changed between frames
+every frame, using <a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a> can help. By using a
+<a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a>, data that has not been changed between frames
 does not have to be re-transferred from system to graphics
-memory as would be the case with <code><a href="../SF/VertexArray.html">SF::VertexArray</a></code>. If data transfer
+memory as would be the case with <a href="VertexArray.html#SF::VertexArray"><code>SF::VertexArray</code></a>. If data transfer
 is a bottleneck, this can lead to performance gains.</p>
-
-<p>Using <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code>, the user also has the ability to only modify
+<p>Using <a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a>, the user also has the ability to only modify
 a portion of the buffer in graphics memory. This way, a large buffer
 can be allocated at the start of the application and only the
 applicable portions of it need to be updated during the course of
 the application. This allows the user to take full control of data
 transfers between system and graphics memory if they need to.</p>
-
 <p>In special cases, the user can make use of multiple threads to update
 vertex data in multiple distinct regions of the buffer simultaneously.
 This might make sense when e.g. the position of multiple objects has to
 be recalculated very frequently. The computation load can be spread
 across multiple threads as long as there are no other data dependencies.</p>
-
 <p>Simultaneous updates to the vertex buffer are not guaranteed to be
 carried out by the driver in any specific order. Updating the same
 region of the buffer from multiple threads will not cause undefined
 behaviour, however the final state of the buffer will be unpredictable.</p>
-
 <p>Simultaneous updates of distinct non-overlapping regions of the buffer
 are also not guaranteed to complete in a specific order. However, in
 this case the user can make sure to synchronize the writer threads at
 well-defined points in their code. The driver will make sure that all
 pending data transfers complete before the vertex buffer is sourced
 by the rendering pipeline.</p>
-
-<p>It inherits <code><a href="../SF/Drawable.html">SF::Drawable</a></code>, but unlike other drawables it
+<p>It inherits <a href="Drawable.html#SF::Drawable"><code>SF::Drawable</code></a>, but unlike other drawables it
 is not transformable.</p>
-
-<p>Example:</p>
-
-<pre><code class="language-c++">sf::Vertex vertices[15];
-...
-sf::VertexBuffer triangles(sf::Triangles);
-triangles.create(15);
-triangles.update(vertices);
-...
-window.draw(triangles);</code></pre>
-
-<p><em>See also:</em> <code><a href="../SF/Vertex.html">SF::Vertex</a></code>, <code><a href="../SF/VertexArray.html">SF::VertexArray</a></code></p>
-
-
-
-
-
-  <h2>
-    <a id="included-modules" class="anchor" href="#included-modules">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Included Modules
-  </h2>
-  <ul class="other-types-list">
-    
-      <li class="other-type"><a href="../SF/Drawable.html">SF::Drawable</a></li>
-    
-      <li class="other-type"><a href="../SF/GlResource.html">SF::GlResource</a></li>
-    
-  </ul>
-
-
-
-
-
-
-
-
-
-
-  <h2>
-    <a id="defined-in" class="anchor" href="#defined-in">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Defined in:
-  </h2>
-  
-    
-      <a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6996" target="_blank">
-        graphics/obj.cr
-      </a>
-    
-    <br/>
-  
-
-
-
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType, usage : VertexBuffer::Usage)</a>
-        
-          <div class="summary"><p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new(type:PrimitiveType)-class-method" class="signature"><strong>.new</strong>(type : PrimitiveType)</a>
-        
-          <div class="summary"><p>Construct a VertexBuffer with a specific PrimitiveType</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new(usage:VertexBuffer::Usage)-class-method" class="signature"><strong>.new</strong>(usage : VertexBuffer::Usage)</a>
-        
-          <div class="summary"><p>Construct a VertexBuffer with a specific usage specifier</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Default constructor</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new(*args,**kwargs):self-class-method" class="signature"><strong>.new</strong>(*args, **kwargs) : <span class="k">self</span></a>
-        
-          <div class="summary"><p>Shorthand for <code>vertex_buffer = <a href="../SF/VertexBuffer.html#new-class-method">VertexBuffer.new</a>; vertex_buffer<a href="../SF/VertexBuffer.html#create(vertex_count:Int):Bool-instance-method">.create(...)</a>; vertex_buffer</code></p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-  <h2>
-    <a id="class-method-summary" class="anchor" href="#class-method-summary">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Class Method Summary
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#available?:Bool-class-method" class="signature"><strong>.available?</strong> : Bool</a>
-        
-          <div class="summary"><p>Tell whether or not the system supports vertex buffers</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#bind(vertex_buffer:VertexBuffer?)-class-method" class="signature"><strong>.bind</strong>(vertex_buffer : VertexBuffer?)</a>
-        
-          <div class="summary"><p>Bind a vertex buffer for rendering</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-  <h2>
-    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Summary
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#create(vertex_count:Int):Bool-instance-method" class="signature"><strong>#create</strong>(vertex_count : Int) : Bool</a>
-        
-          <div class="summary"><p>Create the vertex buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#dup:VertexBuffer-instance-method" class="signature"><strong>#dup</strong> : VertexBuffer</a>
-        
-          <div class="summary"><p>Returns a shallow copy of this object.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
-        
-          <div class="summary"><p>Destructor</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#native_handle:Int32-instance-method" class="signature"><strong>#native_handle</strong> : Int32</a>
-        
-          <div class="summary"><p>Get the underlying OpenGL handle of the vertex buffer.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#primitive_type:PrimitiveType-instance-method" class="signature"><strong>#primitive_type</strong> : PrimitiveType</a>
-        
-          <div class="summary"><p>Get the type of primitives drawn by the vertex buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#primitive_type=(type:PrimitiveType)-instance-method" class="signature"><strong>#primitive_type=</strong>(type : PrimitiveType)</a>
-        
-          <div class="summary"><p>Set the type of primitives to draw</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#swap(right:VertexBuffer)-instance-method" class="signature"><strong>#swap</strong>(right : VertexBuffer)</a>
-        
-          <div class="summary"><p>Swap the contents of this vertex buffer with those of another</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#update(vertices:Array(Vertex)%7CSlice(Vertex),offset:Int):Bool-instance-method" class="signature"><strong>#update</strong>(vertices : Array(Vertex) | Slice(Vertex), offset : Int) : Bool</a>
-        
-          <div class="summary"><p>Update a part of the buffer from an array of vertices</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#update(vertices:Vertex):Bool-instance-method" class="signature"><strong>#update</strong>(vertices : Vertex) : Bool</a>
-        
-          <div class="summary"><p>Update the whole buffer from an array of vertices</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#update(vertex_buffer:VertexBuffer):Bool-instance-method" class="signature"><strong>#update</strong>(vertex_buffer : VertexBuffer) : Bool</a>
-        
-          <div class="summary"><p>Copy the contents of another buffer into this buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#usage:VertexBuffer::Usage-instance-method" class="signature"><strong>#usage</strong> : VertexBuffer::Usage</a>
-        
-          <div class="summary"><p>Get the usage specifier of this vertex buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#usage=(usage:VertexBuffer::Usage)-instance-method" class="signature"><strong>#usage=</strong>(usage : VertexBuffer::Usage)</a>
-        
-          <div class="summary"><p>Set the usage specifier of this vertex buffer</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#vertex_count:Int32-instance-method" class="signature"><strong>#vertex_count</strong> : Int32</a>
-        
-          <div class="summary"><p>Return the vertex count</p></div>
-        
-      </li>
-    
-  </ul>
-
-
-
-
-
-<div class="methods-inherited">
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-  <h3>Instance methods inherited from module <code><a href="../SF/Drawable.html">SF::Drawable</a></code></h3>
-  
-  
-    <a href="../SF/Drawable.html#draw(target:RenderTarget,states:RenderStates)-instance-method" class="tooltip">
-      <span>draw(target : RenderTarget, states : RenderStates)</span>
-    draw</a>
-    
-  
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-  
+<p>Example:
+<div class="highlight">
+<pre><span></span><code><span class="n">sf</span><span class="o">::</span><span class="n">Vertex</span> <span class="n">vertices</span><span class="p">[</span><span class="mi">15</span><span class="p">];</span>
+<span class="p">...</span>
+<span class="n">sf</span><span class="o">::</span><span class="n">VertexBuffer</span> <span class="n">triangles</span><span class="p">(</span><span class="n">sf</span><span class="o">::</span><span class="n">Triangles</span><span class="p">);</span>
+<span class="n">triangles</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="n">triangles</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">vertices</span><span class="p">);</span>
+<span class="p">...</span>
+<span class="n">window</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">triangles</span><span class="p">);</span>
+</code></pre>
 </div>
+</p>
+<p><em>See also:</em> <a href="Vertex.html#SF::Vertex"><code>SF::Vertex</code></a>, <a href="VertexArray.html#SF::VertexArray"><code>SF::VertexArray</code></a></p>
+<div class="doc doc-children">
+<h3 id="included-modules">Included modules<a class="headerlink" href="#included-modules" title="Permanent link">#</a></h3>
+<code><a href="Drawable.html#SF::Drawable">SF::Drawable</a></code>
+              <code><a href="GlResource.html#SF::GlResource">SF::GlResource</a></code>
 
 
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>, usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
+            <h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.available?()">
 
-        <a class="method-permalink" href="#new(type:PrimitiveType,usage:VertexBuffer::Usage)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p>
-
-<p>Creates an empty vertex buffer and sets its primitive type
-to \p type and usage to \p usage.</p>
-
-<ul><li><em>type</em> - Type of primitive</li><li><em>usage</em> - Usage specifier</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7046" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(type:PrimitiveType)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
-
-        <a class="method-permalink" href="#new(type:PrimitiveType)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Construct a VertexBuffer with a specific PrimitiveType</p>
-
-<p>Creates an empty vertex buffer and sets its primitive type to \p type.</p>
-
-<ul><li><em>type</em> - Type of primitive</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7026" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(usage:VertexBuffer::Usage)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
-
-        <a class="method-permalink" href="#new(usage:VertexBuffer::Usage)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Construct a VertexBuffer with a specific usage specifier</p>
-
-<p>Creates an empty vertex buffer and sets its usage to \p usage.</p>
-
-<ul><li><em>usage</em> - Usage specifier</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7035" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Default constructor</p>
-
-<p>Creates an empty vertex buffer.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7017" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(*args,**kwargs):self-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(*args, **kwargs) : <span class="k">self</span>
-
-        <a class="method-permalink" href="#new(*args,**kwargs):self-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Shorthand for <code>vertex_buffer = <a href="../SF/VertexBuffer.html#new-class-method">VertexBuffer.new</a>; vertex_buffer<a href="../SF/VertexBuffer.html#create(vertex_count:Int):Bool-instance-method">.create(...)</a>; vertex_buffer</code></p>
-
-<p>Raises <code><a href="../SF/InitError.html">InitError</a></code> on failure</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7075" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
-
-
-  <h2>
-    <a id="class-method-detail" class="anchor" href="#class-method-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Class Method Detail
-  </h2>
-  
-    <div class="entry-detail" id="available?:Bool-class-method">
-      <div class="signature">
-        
-        def self.<strong>available?</strong> : Bool
-
-        <a class="method-permalink" href="#available?:Bool-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Tell whether or not the system supports vertex buffers</p>
-
+    <code>
+      .available?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.available?()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Tell whether or not the system supports vertex buffers</p>
 <p>This function should always be called before using
 the vertex buffer features. If it returns false, then
-any attempt to use <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code> will fail.</p>
-
+any attempt to use <a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a> will fail.</p>
 <p><em>Returns:</em> True if vertex buffers are supported, false otherwise</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7234" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="bind(vertex_buffer:VertexBuffer?)-class-method">
-      <div class="signature">
-        
-        def self.<strong>bind</strong>(vertex_buffer : <a href="../SF/VertexBuffer.html">VertexBuffer</a>?)
+</div>
 
-        <a class="method-permalink" href="#bind(vertex_buffer:VertexBuffer?)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Bind a vertex buffer for rendering</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7235">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.bind(vertex_buffer)">
 
+    <code>
+      .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_buffer</span> <span class="p">:</span> <span class="n">VertexBuffer?</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.bind(vertex_buffer)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Bind a vertex buffer for rendering</p>
 <p>This function is not part of the graphics API, it mustn't be
 used when drawing SFML entities. It must be used only if you
-mix <code><a href="../SF/VertexBuffer.html">SF::VertexBuffer</a></code> with OpenGL code.</p>
+mix <a href="#SF::VertexBuffer"><code>SF::VertexBuffer</code></a> with OpenGL code.</p>
+<div class="highlight">
+<pre><span></span><code><span class="n">sf</span><span class="o">::</span><span class="n">VertexBuffer</span> <span class="n">vb1</span><span class="p">,</span> <span class="n">vb2</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="n">sf</span><span class="o">::</span><span class="n">VertexBuffer</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vb1</span><span class="p">);</span>
+<span class="c1">// draw OpenGL stuff that use vb1...</span>
+<span class="n">sf</span><span class="o">::</span><span class="n">VertexBuffer</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vb2</span><span class="p">);</span>
+<span class="c1">// draw OpenGL stuff that use vb2...</span>
+<span class="n">sf</span><span class="o">::</span><span class="n">VertexBuffer</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<span class="c1">// draw OpenGL stuff that use no vertex buffer...</span>
+</code></pre>
+</div>
+<ul>
+<li><em>vertex_buffer</em> - Pointer to the vertex buffer to bind, can be null to use no vertex buffer</li>
+</ul>
+</div>
 
-<pre><code class="language-c++">sf::VertexBuffer vb1, vb2;
-...
-sf::VertexBuffer::bind(&vb1);
-// draw OpenGL stuff that use vb1...
-sf::VertexBuffer::bind(&vb2);
-// draw OpenGL stuff that use vb2...
-sf::VertexBuffer::bind(NULL);
-// draw OpenGL stuff that use no vertex buffer...</code></pre>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7225">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.new(type,usage)">
 
-<ul><li><em>vertex_buffer</em> - Pointer to the vertex buffer to bind, can be null to use no vertex buffer</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7224" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">PrimitiveType</span><span class="p">,</span> <span class="n">usage</span> <span class="p">:</span> <span class="n">VertexBuffer</span><span class="o">::</span><span class="n">Usage</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.new(type,usage)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Construct a VertexBuffer with a specific PrimitiveType and usage specifier</p>
+<p>Creates an empty vertex buffer and sets its primitive type
+to \p type and usage to \p usage.</p>
+<ul>
+<li><em>type</em> - Type of primitive</li>
+<li><em>usage</em> - Usage specifier</li>
+</ul>
+</div>
 
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7047">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.new(type)">
 
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">PrimitiveType</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.new(type)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Construct a VertexBuffer with a specific PrimitiveType</p>
+<p>Creates an empty vertex buffer and sets its primitive type to \p type.</p>
+<ul>
+<li><em>type</em> - Type of primitive</li>
+</ul>
+</div>
 
-  <h2>
-    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Detail
-  </h2>
-  
-    <div class="entry-detail" id="create(vertex_count:Int):Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>create</strong>(vertex_count : Int) : Bool
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7027">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.new(usage)">
 
-        <a class="method-permalink" href="#create(vertex_count:Int):Bool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Create the vertex buffer</p>
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">usage</span> <span class="p">:</span> <span class="n">VertexBuffer</span><span class="o">::</span><span class="n">Usage</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.new(usage)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Construct a VertexBuffer with a specific usage specifier</p>
+<p>Creates an empty vertex buffer and sets its usage to \p usage.</p>
+<ul>
+<li><em>usage</em> - Usage specifier</li>
+</ul>
+</div>
 
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7036">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.new()">
+
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.new()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Default constructor</p>
+<p>Creates an empty vertex buffer.</p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7018">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-class_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer.new(*args,**kwargs)">
+
+    <code>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer.new(*args,**kwargs)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Shorthand for <code>vertex_buffer = VertexBuffer.new; vertex_buffer.create(...); vertex_buffer</code></p>
+<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7076">View source</a>]
+</div>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#create(vertex_count)">
+
+    <code>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_count</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#create(vertex_count)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Create the vertex buffer</p>
 <p>Creates the vertex buffer and allocates enough graphics
 memory to hold \p vertex_count vertices. Any previously
 allocated memory is freed in the process.</p>
-
 <p>In order to deallocate previously allocated memory pass 0
 as \p vertex_count. Don't forget to recreate with a non-zero
 value when graphics memory should be allocated again.</p>
-
-<ul><li><em>vertex_count</em> - Number of vertices worth of memory to allocate</li></ul>
-
+<ul>
+<li><em>vertex_count</em> - Number of vertices worth of memory to allocate</li>
+</ul>
 <p><em>Returns:</em> True if creation was successful</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7068" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="dup:VertexBuffer-instance-method">
-      <div class="signature">
-        
-        def <strong>dup</strong> : <a href="../SF/VertexBuffer.html">VertexBuffer</a>
+</div>
 
-        <a class="method-permalink" href="#dup:VertexBuffer-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-            <div class="doc-inherited">
-              Description copied from class Reference
-            </div>
-          
-          <p>Returns a shallow copy of this object.</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7069">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#dup()">
 
+    <code>
+      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">VertexBuffer</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#dup()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Returns a shallow copy of this object.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7265" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="finalize-instance-method">
-      <div class="signature">
-        
-        def <strong>finalize</strong>
+</div>
 
-        <a class="method-permalink" href="#finalize-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Destructor</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7051" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="native_handle:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>native_handle</strong> : Int32
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7266">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#finalize()">
 
-        <a class="method-permalink" href="#native_handle:Int32-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Get the underlying OpenGL handle of the vertex buffer.</p>
+    <code>
+      #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#finalize()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Destructor</p>
+</div>
 
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7052">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#native_handle()">
+
+    <code>
+      #native_handle<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#native_handle()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Get the underlying OpenGL handle of the vertex buffer.</p>
 <p>You shouldn't need to use this function, unless you have
 very specific stuff to implement that SFML doesn't support,
 or implement a temporary workaround until a bug is fixed.</p>
-
 <p><em>Returns:</em> OpenGL handle of the vertex buffer or 0 if not yet created</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7162" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="primitive_type:PrimitiveType-instance-method">
-      <div class="signature">
-        
-        def <strong>primitive_type</strong> : <a href="../SF/PrimitiveType.html">PrimitiveType</a>
+</div>
 
-        <a class="method-permalink" href="#primitive_type:PrimitiveType-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Get the type of primitives drawn by the vertex buffer</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7163">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#primitive_type()">
 
+    <code>
+      #primitive_type<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">PrimitiveType</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#primitive_type()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Get the type of primitives drawn by the vertex buffer</p>
 <p><em>Returns:</em> Primitive type</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7180" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="primitive_type=(type:PrimitiveType)-instance-method">
-      <div class="signature">
-        
-        def <strong>primitive_type=</strong>(type : <a href="../SF/PrimitiveType.html">PrimitiveType</a>)
+</div>
 
-        <a class="method-permalink" href="#primitive_type=(type:PrimitiveType)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Set the type of primitives to draw</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7181">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#primitive_type=(type)">
 
+    <code>
+      #primitive_type=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">PrimitiveType</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#primitive_type=(type)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Set the type of primitives to draw</p>
 <p>This function defines how the vertices must be interpreted
 when it's time to draw them.</p>
-
 <p>The default primitive type is <code>SF::Points</code>.</p>
+<ul>
+<li><em>type</em> - Type of primitive</li>
+</ul>
+</div>
 
-<ul><li><em>type</em> - Type of primitive</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7174" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="swap(right:VertexBuffer)-instance-method">
-      <div class="signature">
-        
-        def <strong>swap</strong>(right : <a href="../SF/VertexBuffer.html">VertexBuffer</a>)
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7175">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#swap(right)">
 
-        <a class="method-permalink" href="#swap(right:VertexBuffer)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Swap the contents of this vertex buffer with those of another</p>
+    <code>
+      #swap<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <span class="n">VertexBuffer</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#swap(right)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Swap the contents of this vertex buffer with those of another</p>
+<ul>
+<li><em>right</em> - Instance to swap with</li>
+</ul>
+</div>
 
-<ul><li><em>right</em> - Instance to swap with</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7152" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="update(vertices:Array(Vertex)|Slice(Vertex),offset:Int):Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>update</strong>(vertices : Array(<a href="../SF/Vertex.html">Vertex</a>) | Slice(<a href="../SF/Vertex.html">Vertex</a>), offset : Int) : Bool
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7153">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#update(vertices,offset)">
 
-        <a class="method-permalink" href="#update(vertices:Array(Vertex)%7CSlice(Vertex),offset:Int):Bool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Update a part of the buffer from an array of vertices</p>
-
+    <code>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertices</span> <span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="n">Vertex</span><span class="p">)</span> <span class="o">|</span> <span class="nb">Slice</span><span class="p">(</span><span class="n">Vertex</span><span class="p">),</span> <span class="n">offset</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#update(vertices,offset)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Update a part of the buffer from an array of vertices</p>
 <p>\p offset is specified as the number of vertices to skip
 from the beginning of the buffer.</p>
-
 <p>If \p offset is 0 and \p vertex_count is equal to the size of
 the currently created buffer, its whole contents are replaced.</p>
-
 <p>If \p offset is 0 and \p vertex_count is greater than the
 size of the currently created buffer, a new buffer is created
 containing the vertex data.</p>
-
 <p>If \p offset is 0 and \p vertex_count is less than the size of
 the currently created buffer, only the corresponding region
 is updated.</p>
-
 <p>If \p offset is not 0 and \p offset + \p vertex_count is greater
 than the size of the currently created buffer, the update fails.</p>
-
 <p>No additional check is performed on the size of the vertex
 array, passing invalid arguments will lead to undefined
 behavior.</p>
-
-<ul><li><em>vertices</em> - Array of vertices to copy to the buffer</li><li><em>vertex_count</em> - Number of vertices to copy</li><li><em>offset</em> - Offset in the buffer to copy to</li></ul>
-
+<ul>
+<li><em>vertices</em> - Array of vertices to copy to the buffer</li>
+<li><em>vertex_count</em> - Number of vertices to copy</li>
+<li><em>offset</em> - Offset in the buffer to copy to</li>
+</ul>
 <p><em>Returns:</em> True if the update was successful</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7136" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="update(vertices:Vertex):Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>update</strong>(vertices : <a href="../SF/Vertex.html">Vertex</a>) : Bool
+</div>
 
-        <a class="method-permalink" href="#update(vertices:Vertex):Bool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Update the whole buffer from an array of vertices</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7137">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#update(vertices)">
 
+    <code>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertices</span> <span class="p">:</span> <span class="n">Vertex</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#update(vertices)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Update the whole buffer from an array of vertices</p>
 <p>The <em>vertex</em> array is assumed to have the same size as
 the <em>created</em> buffer.</p>
-
 <p>No additional check is performed on the size of the vertex
 array, passing invalid arguments will lead to undefined
 behavior.</p>
-
 <p>This function does nothing if <em>vertices</em> is null or if the
 buffer was not previously created.</p>
-
-<ul><li><em>vertices</em> - Array of vertices to copy to the buffer</li></ul>
-
+<ul>
+<li><em>vertices</em> - Array of vertices to copy to the buffer</li>
+</ul>
 <p><em>Returns:</em> True if the update was successful</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7104" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="update(vertex_buffer:VertexBuffer):Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>update</strong>(vertex_buffer : <a href="../SF/VertexBuffer.html">VertexBuffer</a>) : Bool
+</div>
 
-        <a class="method-permalink" href="#update(vertex_buffer:VertexBuffer):Bool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Copy the contents of another buffer into this buffer</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7105">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#update(vertex_buffer)">
 
-<ul><li><em>vertex_buffer</em> - Vertex buffer whose contents to copy into this vertex buffer</li></ul>
-
+    <code>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_buffer</span> <span class="p">:</span> <span class="n">VertexBuffer</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#update(vertex_buffer)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Copy the contents of another buffer into this buffer</p>
+<ul>
+<li><em>vertex_buffer</em> - Vertex buffer whose contents to copy into this vertex buffer</li>
+</ul>
 <p><em>Returns:</em> True if the copy was successful</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7145" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="usage:VertexBuffer::Usage-instance-method">
-      <div class="signature">
-        
-        def <strong>usage</strong> : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>
+</div>
 
-        <a class="method-permalink" href="#usage:VertexBuffer::Usage-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Get the usage specifier of this vertex buffer</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7146">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#usage()">
 
+    <code>
+      #usage<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">VertexBuffer</span><span class="o">::</span><span class="n">Usage</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#usage()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Get the usage specifier of this vertex buffer</p>
 <p><em>Returns:</em> Usage specifier</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7202" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="usage=(usage:VertexBuffer::Usage)-instance-method">
-      <div class="signature">
-        
-        def <strong>usage=</strong>(usage : <a href="../SF/VertexBuffer/Usage.html">VertexBuffer::Usage</a>)
+</div>
 
-        <a class="method-permalink" href="#usage=(usage:VertexBuffer::Usage)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Set the usage specifier of this vertex buffer</p>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7203">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#usage=(usage)">
 
+    <code>
+      #usage=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">usage</span> <span class="p">:</span> <span class="n">VertexBuffer</span><span class="o">::</span><span class="n">Usage</span><span class="p">)</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#usage=(usage)" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Set the usage specifier of this vertex buffer</p>
 <p>This function provides a hint about how this vertex buffer is
 going to be used in terms of data update frequency.</p>
-
 <p>After changing the usage specifier, the vertex buffer has
 to be updated with new data for the usage specifier to
 take effect.</p>
-
 <p>The default primitive type is <code>SF::VertexBuffer::Stream</code>.</p>
-
-<ul><li><em>usage</em> - Usage specifier</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7196" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="vertex_count:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>vertex_count</strong> : Int32
-
-        <a class="method-permalink" href="#vertex_count:Int32-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Return the vertex count</p>
-
-<p><em>Returns:</em> Number of vertices in the vertex buffer</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7085" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
-
-
-
+<ul>
+<li><em>usage</em> - Usage specifier</li>
+</ul>
 </div>
 
-</body>
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7197">View source</a>]
+</div>
+<div class="doc doc-object doc-method doc-instance_method">
+<h4 class="doc doc-heading" id="SF::VertexBuffer#vertex_count()">
+
+    <code>
+      #vertex_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+    </code>
+  <a class="headerlink" href="#SF::VertexBuffer#vertex_count()" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Return the vertex count</p>
+<p><em>Returns:</em> Number of vertices in the vertex buffer</p>
+</div>
+
+    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L7086">View source</a>]
+</div>
+</div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="VertexArray.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VertexArray
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="VertexBuffer/Usage.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Usage
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
 </html>

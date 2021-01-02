@@ -1,258 +1,3655 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Controlling the 2D camera with views - CrSFML Tutorials</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link href="../codehilite.css" rel="stylesheet" />
-  <link href="../style.css" rel="stylesheet" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Controlling the 2D camera with views";
-    var mkdocs_page_input_path = "graphics/view.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script> 
-  
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> CrSFML Tutorials</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Controlling the 2D camera with views - CrSFML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="teal">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#controlling-the-2d-camera-with-views" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <p class="caption"><span class="caption-text">System module</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../system/time.html">Handling time</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../system/thread.html">Threads</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../system/stream.html">User data streams</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Window module</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../window/window.html">Opening and managing an SFML window</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../window/events.html">Events explained</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../window/inputs.html">Keyboard, mouse and joysticks</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../window/opengl.html">Using OpenGL in an SFML window</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Graphics module</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="draw.html">Drawing 2D stuff</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="sprite.html">Sprites and textures</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="text.html">Text and fonts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="shape.html">Shapes</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vertex-array.html">Designing your own entities with vertex arrays</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="transform.html">Position, rotation, scale: transforming entities</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="shader.html">Adding special effects with shaders</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="view.html">Controlling the 2D camera with views</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-view">What is a view?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#defining-what-the-view-views">Defining what the view views</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#moving-scrolling-the-view">Moving (scrolling) the view</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rotating-the-view">Rotating the view</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#zooming-scaling-the-view">Zooming (scaling) the view</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#defining-how-the-view-is-viewed">Defining how the view is viewed</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using-a-view">Using a view</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#showing-more-when-the-window-is-resized">Showing more when the window is resized</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#coordinates-conversions">Coordinates conversions</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Audio module</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../audio/sounds.html">Playing sounds and music</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../audio/recording.html">Recording audio</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../audio/streams.html">Custom audio streams</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../audio/spatialization.html">Spatialization: Sounds in 3D</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Network module</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../network/socket.html">Communication using sockets</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../network/packet.html">Using packets</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../network/http.html">Web requests with HTTP</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../network/ftp.html">File transfers with FTP</a>
-                    </li>
-                </ul>
+  
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../index.html" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            CrSFML
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Controlling the 2D camera with views
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">CrSFML Tutorials</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
     
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
       
-        
-          <li>Graphics module &raquo;</li>
-        
-      
-    
-    <li>Controlling the 2D camera with views</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/oprypin/crsfml/blob/master/tutorials/graphics/view.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main">
-            <div class="section">
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api/system.html" class="md-tabs__link">
+        API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../system/time.html" class="md-tabs__link md-tabs__link--active">
+        Tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <h1 id="controlling-the-2d-camera-with-views">Controlling the 2D camera with views</h1>
-<h2 id="what-is-a-view">What is a view?</h2>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="CrSFML" class="md-nav__button md-logo" aria-label="CrSFML">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    CrSFML
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    
+    <label class="md-nav__link" for="nav-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        API
+      
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          API
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+    
+    <label class="md-nav__link" for="nav-1-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/system.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        System module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/system.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          System module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Clock.html" class="md-nav__link">
+      Clock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/FileInputStream.html" class="md-nav__link">
+      FileInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/InputStream.html" class="md-nav__link">
+      InputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/MemoryInputStream.html" class="md-nav__link">
+      MemoryInputStream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Mutex.html" class="md-nav__link">
+      Mutex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/NonCopyable.html" class="md-nav__link">
+      NonCopyable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Thread.html" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Time.html" class="md-nav__link">
+      Time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector2.html" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector2f.html" class="md-nav__link">
+      Vector2f
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector2i.html" class="md-nav__link">
+      Vector2i
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector2u.html" class="md-nav__link">
+      Vector2u
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector3.html" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vector3f.html" class="md-nav__link">
+      Vector3f
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+    
+    <label class="md-nav__link" for="nav-1-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/window.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Window module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/window.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Window module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Clipboard.html" class="md-nav__link">
+      Clipboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Context.html" class="md-nav__link">
+      Context
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+    
+    <label class="md-nav__link" for="nav-1-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/ContextSettings.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        ContextSettings
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/ContextSettings.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          ContextSettings
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/ContextSettings/Attribute.html" class="md-nav__link">
+      Attribute
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+    
+    <label class="md-nav__link" for="nav-1-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Cursor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Cursor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Cursor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Cursor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Cursor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Cursor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+    
+    <label class="md-nav__link" for="nav-1-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Event.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Event
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Event" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Event.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Event
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/Closed.html" class="md-nav__link">
+      Closed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/GainedFocus.html" class="md-nav__link">
+      GainedFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickButtonEvent.html" class="md-nav__link">
+      JoystickButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickButtonPressed.html" class="md-nav__link">
+      JoystickButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickButtonReleased.html" class="md-nav__link">
+      JoystickButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickConnected.html" class="md-nav__link">
+      JoystickConnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickConnectEvent.html" class="md-nav__link">
+      JoystickConnectEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickDisconnected.html" class="md-nav__link">
+      JoystickDisconnected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickMoved.html" class="md-nav__link">
+      JoystickMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/JoystickMoveEvent.html" class="md-nav__link">
+      JoystickMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/KeyEvent.html" class="md-nav__link">
+      KeyEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/KeyPressed.html" class="md-nav__link">
+      KeyPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/KeyReleased.html" class="md-nav__link">
+      KeyReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/LostFocus.html" class="md-nav__link">
+      LostFocus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseButtonEvent.html" class="md-nav__link">
+      MouseButtonEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseButtonPressed.html" class="md-nav__link">
+      MouseButtonPressed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseButtonReleased.html" class="md-nav__link">
+      MouseButtonReleased
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseEntered.html" class="md-nav__link">
+      MouseEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseLeft.html" class="md-nav__link">
+      MouseLeft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseMoved.html" class="md-nav__link">
+      MouseMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseMoveEvent.html" class="md-nav__link">
+      MouseMoveEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseWheelEvent.html" class="md-nav__link">
+      MouseWheelEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseWheelMoved.html" class="md-nav__link">
+      MouseWheelMoved
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseWheelScrolled.html" class="md-nav__link">
+      MouseWheelScrolled
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/MouseWheelScrollEvent.html" class="md-nav__link">
+      MouseWheelScrollEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/Resized.html" class="md-nav__link">
+      Resized
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/SensorChanged.html" class="md-nav__link">
+      SensorChanged
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/SensorEvent.html" class="md-nav__link">
+      SensorEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/SizeEvent.html" class="md-nav__link">
+      SizeEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TextEntered.html" class="md-nav__link">
+      TextEntered
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TextEvent.html" class="md-nav__link">
+      TextEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TouchBegan.html" class="md-nav__link">
+      TouchBegan
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TouchEnded.html" class="md-nav__link">
+      TouchEnded
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TouchEvent.html" class="md-nav__link">
+      TouchEvent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Event/TouchMoved.html" class="md-nav__link">
+      TouchMoved
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/GlResource.html" class="md-nav__link">
+      GlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+    
+    <label class="md-nav__link" for="nav-1-2-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Joystick.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Joystick
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Joystick" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Joystick.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Joystick
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Joystick/Axis.html" class="md-nav__link">
+      Axis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Joystick/Identification.html" class="md-nav__link">
+      Identification
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+    
+    <label class="md-nav__link" for="nav-1-2-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Keyboard.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Keyboard
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Keyboard.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Keyboard
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Keyboard/Key.html" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+    
+    <label class="md-nav__link" for="nav-1-2-9">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Mouse.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Mouse
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Mouse" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-9">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Mouse.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Mouse
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Mouse/Button.html" class="md-nav__link">
+      Button
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Mouse/Wheel.html" class="md-nav__link">
+      Wheel
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+    
+    <label class="md-nav__link" for="nav-1-2-10">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Sensor.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Sensor
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Sensor" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-10">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Sensor.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Sensor
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Sensor/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Touch.html" class="md-nav__link">
+      Touch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/VideoMode.html" class="md-nav__link">
+      VideoMode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Window.html" class="md-nav__link">
+      Window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/WindowHandle.html" class="md-nav__link">
+      WindowHandle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/graphics.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Graphics module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/graphics.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Graphics module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+    
+    <label class="md-nav__link" for="nav-1-3-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/BlendMode.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        BlendMode
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/BlendMode.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          BlendMode
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/BlendMode/Equation.html" class="md-nav__link">
+      Equation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/BlendMode/Factor.html" class="md-nav__link">
+      Factor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/CircleShape.html" class="md-nav__link">
+      CircleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Color.html" class="md-nav__link">
+      Color
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/ConvexShape.html" class="md-nav__link">
+      ConvexShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Drawable.html" class="md-nav__link">
+      Drawable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/FloatRect.html" class="md-nav__link">
+      FloatRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+    
+    <label class="md-nav__link" for="nav-1-3-7">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Font.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Font
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Font" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-7">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Font.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Font
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Font/Info.html" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Glyph.html" class="md-nav__link">
+      Glyph
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Image.html" class="md-nav__link">
+      Image
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/IntRect.html" class="md-nav__link">
+      IntRect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/PrimitiveType.html" class="md-nav__link">
+      PrimitiveType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Rect.html" class="md-nav__link">
+      Rect
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/RectangleShape.html" class="md-nav__link">
+      RectangleShape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/RenderStates.html" class="md-nav__link">
+      RenderStates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/RenderTarget.html" class="md-nav__link">
+      RenderTarget
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/RenderTexture.html" class="md-nav__link">
+      RenderTexture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/RenderWindow.html" class="md-nav__link">
+      RenderWindow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+    
+    <label class="md-nav__link" for="nav-1-3-18">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Shader.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Shader
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Shader" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-18">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Shader.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Shader
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Shader/CurrentTextureType.html" class="md-nav__link">
+      CurrentTextureType
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Shader/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Shape.html" class="md-nav__link">
+      Shape
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Sprite.html" class="md-nav__link">
+      Sprite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+    
+    <label class="md-nav__link" for="nav-1-3-21">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Text.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Text
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Text" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-21">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Text.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Text
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Text/Style.html" class="md-nav__link">
+      Style
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+    
+    <label class="md-nav__link" for="nav-1-3-22">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Texture.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Texture
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Texture" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-22">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Texture.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Texture
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Texture/CoordinateType.html" class="md-nav__link">
+      CoordinateType
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Transform.html" class="md-nav__link">
+      Transform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Transformable.html" class="md-nav__link">
+      Transformable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Vertex.html" class="md-nav__link">
+      Vertex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/VertexArray.html" class="md-nav__link">
+      VertexArray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+    
+    <label class="md-nav__link" for="nav-1-3-27">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/VertexBuffer.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        VertexBuffer
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-27">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/VertexBuffer.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          VertexBuffer
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/VertexBuffer/Usage.html" class="md-nav__link">
+      Usage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/View.html" class="md-nav__link">
+      View
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" >
+    
+    <label class="md-nav__link" for="nav-1-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/audio.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Audio module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/audio.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Audio module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/AlResource.html" class="md-nav__link">
+      AlResource
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Listener.html" class="md-nav__link">
+      Listener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+    
+    <label class="md-nav__link" for="nav-1-4-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Music.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Music
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Music" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Music.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Music
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Music/Span.html" class="md-nav__link">
+      Span
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Music/TimeSpan.html" class="md-nav__link">
+      TimeSpan
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Sound.html" class="md-nav__link">
+      Sound
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SoundBuffer.html" class="md-nav__link">
+      SoundBuffer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SoundBufferRecorder.html" class="md-nav__link">
+      SoundBufferRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SoundRecorder.html" class="md-nav__link">
+      SoundRecorder
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+    
+    <label class="md-nav__link" for="nav-1-4-8">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/SoundSource.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        SoundSource
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/SoundSource.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          SoundSource
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SoundSource/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SoundStream.html" class="md-nav__link">
+      SoundStream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+    
+    <label class="md-nav__link" for="nav-1-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/network.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Network module
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/network.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Network module
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Ftp.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Ftp
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Ftp" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Ftp.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Ftp
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Ftp/DirectoryResponse.html" class="md-nav__link">
+      DirectoryResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Ftp/ListingResponse.html" class="md-nav__link">
+      ListingResponse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+    
+    <label class="md-nav__link" for="nav-1-5-1-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Ftp/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Ftp/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Ftp/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Ftp/TransferMode.html" class="md-nav__link">
+      TransferMode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Http.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Http
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Http" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Http.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Http
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Http/Request.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Request
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Request" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Http/Request.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Request
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Http/Request/Method.html" class="md-nav__link">
+      Method
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+    
+    <label class="md-nav__link" for="nav-1-5-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Http/Response.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Response
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Response" data-md-level="4">
+      <label class="md-nav__title" for="nav-1-5-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Http/Response.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Response
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Http/Response/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/IpAddress.html" class="md-nav__link">
+      IpAddress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Packet.html" class="md-nav__link">
+      Packet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+    
+    <label class="md-nav__link" for="nav-1-5-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        <a href="../../api/SF/Socket.html" class="md-nav__link"
+          style="margin: initial; padding: initial; pointer-events: initial">
+      
+        Socket
+      </a>
+    </label>
+    <nav class="md-nav" aria-label="Socket" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-5-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="../../api/SF/Socket.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Socket
+        </a>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Socket/Status.html" class="md-nav__link">
+      Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/Socket/Type.html" class="md-nav__link">
+      Type
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/SocketSelector.html" class="md-nav__link">
+      SocketSelector
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/TcpListener.html" class="md-nav__link">
+      TcpListener
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/TcpSocket.html" class="md-nav__link">
+      TcpSocket
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/UdpSocket.html" class="md-nav__link">
+      UdpSocket
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../api/SF/InitError.html" class="md-nav__link">
+      InitError
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Tutorials
+      
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Tutorials
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    
+    <label class="md-nav__link" for="nav-2-1">
+      <span class="md-nav__icon md-icon"></span>
+      
+        System module
+      
+    </label>
+    <nav class="md-nav" aria-label="System module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        
+          System module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../system/time.html" class="md-nav__link">
+      Handling time
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../system/thread.html" class="md-nav__link">
+      Threads
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../system/stream.html" class="md-nav__link">
+      User data streams
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    
+    <label class="md-nav__link" for="nav-2-2">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Window module
+      
+    </label>
+    <nav class="md-nav" aria-label="Window module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Window module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../window/window.html" class="md-nav__link">
+      Opening and managing an SFML window
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../window/events.html" class="md-nav__link">
+      Events explained
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../window/inputs.html" class="md-nav__link">
+      Keyboard, mouse and joysticks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../window/opengl.html" class="md-nav__link">
+      Using OpenGL in an SFML window
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Graphics module
+      
+    </label>
+    <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Graphics module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="draw.html" class="md-nav__link">
+      Drawing 2D stuff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="sprite.html" class="md-nav__link">
+      Sprites and textures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="text.html" class="md-nav__link">
+      Text and fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="shape.html" class="md-nav__link">
+      Shapes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="vertex-array.html" class="md-nav__link">
+      Designing your own entities with vertex arrays
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="transform.html" class="md-nav__link">
+      Position, rotation, scale: transforming entities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="shader.html" class="md-nav__link">
+      Adding special effects with shaders
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="view.html" class="md-nav__link md-nav__link--active"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Controlling the 2D camera with views
+        </a>
+      </label>
+    
+    <a href="view.html" class="md-nav__link md-nav__link--active">
+      Controlling the 2D camera with views
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-view" class="md-nav__link">
+    What is a view?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-what-the-view-views" class="md-nav__link">
+    Defining what the view views
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining what the view views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-scrolling-the-view" class="md-nav__link">
+    Moving (scrolling) the view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotating-the-view" class="md-nav__link">
+    Rotating the view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zooming-scaling-the-view" class="md-nav__link">
+    Zooming (scaling) the view
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-how-the-view-is-viewed" class="md-nav__link">
+    Defining how the view is viewed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-view" class="md-nav__link">
+    Using a view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showing-more-when-the-window-is-resized" class="md-nav__link">
+    Showing more when the window is resized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinates-conversions" class="md-nav__link">
+    Coordinates conversions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+    
+    <label class="md-nav__link" for="nav-2-4">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Audio module
+      
+    </label>
+    <nav class="md-nav" aria-label="Audio module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Audio module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../audio/sounds.html" class="md-nav__link">
+      Playing sounds and music
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../audio/recording.html" class="md-nav__link">
+      Recording audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../audio/streams.html" class="md-nav__link">
+      Custom audio streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../audio/spatialization.html" class="md-nav__link">
+      Spatialization: Sounds in 3D
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+    
+    <label class="md-nav__link" for="nav-2-5">
+      <span class="md-nav__icon md-icon"></span>
+      
+        Network module
+      
+    </label>
+    <nav class="md-nav" aria-label="Network module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        
+          Network module
+        
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../network/socket.html" class="md-nav__link">
+      Communication using sockets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../network/packet.html" class="md-nav__link">
+      Using packets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../network/http.html" class="md-nav__link">
+      Web requests with HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../network/ftp.html" class="md-nav__link">
+      File transfers with FTP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-view" class="md-nav__link">
+    What is a view?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-what-the-view-views" class="md-nav__link">
+    Defining what the view views
+  </a>
+  
+    <nav class="md-nav" aria-label="Defining what the view views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-scrolling-the-view" class="md-nav__link">
+    Moving (scrolling) the view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotating-the-view" class="md-nav__link">
+    Rotating the view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zooming-scaling-the-view" class="md-nav__link">
+    Zooming (scaling) the view
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-how-the-view-is-viewed" class="md-nav__link">
+    Defining how the view is viewed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-view" class="md-nav__link">
+    Using a view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#showing-more-when-the-window-is-resized" class="md-nav__link">
+    Showing more when the window is resized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinates-conversions" class="md-nav__link">
+    Coordinates conversions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/blob/master/tutorials/graphics/view.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="controlling-the-2d-camera-with-views">Controlling the 2D camera with views<a class="headerlink" href="#controlling-the-2d-camera-with-views" title="Permanent link">#</a></h1>
+<h2 id="what-is-a-view">What is a view?<a class="headerlink" href="#what-is-a-view" title="Permanent link">#</a></h2>
 <p>In games, it is not uncommon to have levels which are much bigger than the window itself. You only see is a small part of them. This is typically the case in RPGs, platform games, and many other genres. What developers might tend to forget is that they define entities <em>in a 2D world</em>, not directly in the window. The window is just a view, it shows a specific area of the whole world. It is perfectly fine to draw several views of the same world in parallel, or draw the world to a texture rather than to a window. The world itself remains unchanged, what changes is just the way it is seen.</p>
 <p>Since what is seen in the window is just a small part of the entire 2D world, you need a way to specify which part of the world is shown in the window. Additionally, you may also want to define where/how this area will be shown <em>within</em> the window. These are the two main features of SFML views.</p>
 <p>To summarize, views are what you need if you want to scroll, rotate or zoom your world. They are also the key to creating split screens and mini-maps.</p>
-<h2 id="defining-what-the-view-views">Defining what the view views</h2>
-<p>The class which encapsulates views in SFML is <a href="http://oprypin.github.io/crsfml/api/SF/View.html">View</a>. It can be constructed directly with a definition of the area to view:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create a view with the rectangular area of the 2D world to show</span>
+<h2 id="defining-what-the-view-views">Defining what the view views<a class="headerlink" href="#defining-what-the-view-views" title="Permanent link">#</a></h2>
+<p>The class which encapsulates views in SFML is <a href="../../api/SF/View.html#SF::View">SF::View</a>. It can be constructed directly with a definition of the area to view:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># create a view with the rectangular area of the 2D world to show</span>
 <span class="n">view1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
 <span class="c1"># create a view with its center and size</span>
 <span class="n">view2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 </code></pre></div>
-
 <p>These two definitions are equivalent: Both views will show the same area of the 2D world, a 300x200 rectangle <em>centered</em> on the point (350, 300).</p>
 <p><img alt="" src="images/view-initial.png" /></p>
 <p>If you don't want to define the view upon construction or want to modify it later, you can use the equivalent setters:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">view1</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">view1</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
 <span class="n">view2</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Once your view is defined, you can transform it to make it show a translated/rotated/scaled version of your 2D world.</p>
-<h3 id="moving-scrolling-the-view">Moving (scrolling) the view</h3>
+<h3 id="moving-scrolling-the-view">Moving (scrolling) the view<a class="headerlink" href="#moving-scrolling-the-view" title="Permanent link">#</a></h3>
 <p>Unlike drawable entities, such as sprites or shapes whose positions are defined by their top-left corner (and can be changed to any other point), views are always manipulated by their center -- this is simply more convenient. That's why the method to change the position of a view is named <code>center=</code>, and not <code>position=</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># move the view at point (200, 200)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># move the view at point (200, 200)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 
 <span class="c1"># move the view by an offset of (100, 100) (so its final position is (300, 300))</span>
 <span class="n">view</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-translated.png" /></p>
-<h3 id="rotating-the-view">Rotating the view</h3>
+<h3 id="rotating-the-view">Rotating the view<a class="headerlink" href="#rotating-the-view" title="Permanent link">#</a></h3>
 <p>To rotate a view, use the <code>rotation=</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># rotate the view at 20 degrees</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># rotate the view at 20 degrees</span>
 <span class="n">view</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">20</span>
 
 <span class="c1"># rotate the view by 5 degrees relatively to its current orientation (so its final orientation is 25 degrees)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-rotated.png" /></p>
-<h3 id="zooming-scaling-the-view">Zooming (scaling) the view</h3>
+<h3 id="zooming-scaling-the-view">Zooming (scaling) the view<a class="headerlink" href="#zooming-scaling-the-view" title="Permanent link">#</a></h3>
 <p>Zooming in (or out) a view is done through to resizing it, so the method to use is <code>size=</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># resize the view to show a 1200x800 area (we see a bigger area, so this is a zoom out)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># resize the view to show a 1200x800 area (we see a bigger area, so this is a zoom out)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
 
 <span class="c1"># zoom the view relatively to its current size (apply a factor 0.5, so its final size is 600x400)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-scaled.png" /></p>
-<h2 id="defining-how-the-view-is-viewed">Defining how the view is viewed</h2>
+<h2 id="defining-how-the-view-is-viewed">Defining how the view is viewed<a class="headerlink" href="#defining-how-the-view-is-viewed" title="Permanent link">#</a></h2>
 <p>Now that you've defined which part of the 2D world is seen in the window, let's define <em>where</em> it is shown. By default, the viewed contents occupy the full window. If the view has the same size as the window, everything is rendered 1:1. If the view is smaller or larger than the window, everything is scaled to fit in the window.</p>
 <p>This default behavior is suitable for most situations, but it might need to be changed sometimes. For example, to split the screen in a multiplayer game, you may want to use two views which each only occupy half of the window. You can also implement a minimap by drawing your entire world to a view which is rendered in a small area in a corner of the window. The area in which the contents of the view is shown is called the <em>viewport</em>.</p>
 <p>To set the viewport of a view, you can use the <code>viewport=</code> method.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># define a centered viewport, with half the size of the window</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># define a centered viewport, with half the size of the window</span>
 <span class="n">view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-viewport.png" /></p>
 <p>You might have noticed something very important: The viewport is not defined in pixels, but instead as a ratio of the window size. This is more convenient: It allows you to not have to track resize events in order to update the size of the viewport every time the size of the window changes. It is also more intuitive: You would probably define your viewport as a fraction of the entire window area anyway, not as a fixed-size rectangle.</p>
 <p>Using a viewport, it is straightforward to split the screen for multiplayer games:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># player 1 (left side of the screen)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># player 1 (left side of the screen)</span>
 <span class="n">player1_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># player 2 (right side of the screen)</span>
 <span class="n">player2_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-split-screen.png" /></p>
 <p>... or a mini-map:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># the game view (full window)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># the game view (full window)</span>
 <span class="n">game_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># mini-map (upper-right corner)</span>
 <span class="n">minimap_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
 </code></pre></div>
-
 <p><img alt="" src="images/view-minimap.png" /></p>
-<h2 id="using-a-view">Using a view</h2>
-<p>To draw something using a view, you must draw it after calling the <code>view=</code> method of the target to which you are drawing (<a href="http://oprypin.github.io/crsfml/api/SF/RenderWindow.html">RenderWindow</a> or <a href="http://oprypin.github.io/crsfml/api/SF/RenderTexture.html">RenderTexture</a>).</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># let&#39;s define a view</span>
+<h2 id="using-a-view">Using a view<a class="headerlink" href="#using-a-view" title="Permanent link">#</a></h2>
+<p>To draw something using a view, you must draw it after calling the <code>view=</code> method of the target to which you are drawing (<a href="../../api/SF/RenderWindow.html#SF::RenderWindow">SF::RenderWindow</a> or <a href="../../api/SF/RenderTexture.html#SF::RenderTexture">SF::RenderTexture</a>).</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># let&#39;s define a view</span>
 <span class="n">view</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
 
 <span class="c1"># activate it</span>
@@ -266,9 +3663,8 @@
 
 <span class="o">...</span>
 </code></pre></div>
-
 <p>The view remains active until you set another one. This means that there is always a view which defines what appears in the target, and where it is drawn. If you don't explicitly set any view, the render-target uses its own default view, which matches its size 1:1. You can get the default view of a render-target with the <code>default_view</code> method. This can be useful if you want to define your own view based on it, or restore it to draw fixed entities (like a GUI) on top of your scene.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># create a view half the size of the default view</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># create a view half the size of the default view</span>
 <span class="n">view</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">default_view</span>
 <span class="n">view</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">view</span>
@@ -276,13 +3672,12 @@
 <span class="c1"># restore the default view</span>
 <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">default_view</span>
 </code></pre></div>
-
 <p>When you call <code>view=</code>, the render-target makes a <em>copy</em> of the view, and doesn't store a pointer to the one that is passed. This means that whenever you update your view, you need to call <code>view=</code> again to apply the modifications.<br />
 Don't be afraid to copy views or create them on the fly, they aren't expensive objects (they just hold a few floats).</p>
-<h2 id="showing-more-when-the-window-is-resized">Showing more when the window is resized</h2>
+<h2 id="showing-more-when-the-window-is-resized">Showing more when the window is resized<a class="headerlink" href="#showing-more-when-the-window-is-resized" title="Permanent link">#</a></h2>
 <p>Since the default view never changes after the window is created, the viewed contents are always the same. So when the window is resized, everything is squeezed/stretched to the new size.</p>
 <p>If, instead of this default behavior, you'd like to show more/less stuff depending on the new size of the window, all you have to do is update the size of the view with the size of the window.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># the event loop</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># the event loop</span>
 <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
   <span class="o">...</span>
 
@@ -294,71 +3689,95 @@ Don't be afraid to copy views or create them on the fly, they aren't expensive o
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div>
-
-<h2 id="coordinates-conversions">Coordinates conversions</h2>
+<h2 id="coordinates-conversions">Coordinates conversions<a class="headerlink" href="#coordinates-conversions" title="Permanent link">#</a></h2>
 <p>When you use a custom view, or when you resize the window without using the code above, pixels displayed on the target no longer match units in the 2D world. For example, clicking on pixel (10, 50) may hit the point (26.5, -84) of your world. You end up having to use a conversion method to map your pixel coordinates to world coordinates: <code>map_pixel_to_coords</code>.</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># get the current mouse position in the window</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># get the current mouse position in the window</span>
 <span class="n">pixel_pos</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 
 <span class="c1"># convert it to world coordinates</span>
 <span class="n">world_pos</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">map_pixel_to_coords</span><span class="p">(</span><span class="n">pixel_pos</span><span class="p">,</span> <span class="n">window</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
 </code></pre></div>
-
 <p>By default, <code>map_pixel_to_coords</code> uses the current view. If you want to convert the coordinates using view which is not the active one, you can pass it as an additional argument to the method.</p>
 <p>The opposite, converting world coordinates to pixel coordinates, is also possible with the <code>map_coords_to_pixel</code> method.</p>
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../audio/sounds.html" class="btn btn-neutral float-right" title="Playing sounds and music">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="shader.html" class="btn btn-neutral" title="Adding special effects with shaders"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="shader.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Adding special effects with shaders
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../audio/sounds.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Playing sounds and music
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
-          <a href="https://github.com/oprypin/crsfml/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-      
-        <span><a href="shader.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../audio/sounds.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+    
+  </body>
 </html>
