@@ -1,575 +1,575 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Clock.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/FileInputStream.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/InputStream.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/MemoryInputStream.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Mutex.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/NonCopyable.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Thread.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Time.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector2.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector2f.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector2i.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector2u.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector3.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vector3f.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Clipboard.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Context.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/ContextSettings/Attribute.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Cursor/Type.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/Closed.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/GainedFocus.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickButtonEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickButtonPressed.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickButtonReleased.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickConnected.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickConnectEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickDisconnected.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickMoved.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/JoystickMoveEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/KeyEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/KeyPressed.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/KeyReleased.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/LostFocus.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseButtonEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseButtonPressed.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseButtonReleased.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseEntered.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseLeft.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseMoved.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseMoveEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseWheelEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseWheelMoved.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseWheelScrolled.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/MouseWheelScrollEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/Resized.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/SensorChanged.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/SensorEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/SizeEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TextEntered.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TextEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TouchBegan.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TouchEnded.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TouchEvent.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Event/TouchMoved.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/GlResource.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Joystick/Axis.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Joystick/Identification.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Keyboard/Key.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Mouse/Button.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Mouse/Wheel.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Sensor/Type.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Style.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Touch.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/VideoMode.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Window.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/WindowHandle.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/BlendMode/Equation.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/BlendMode/Factor.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/CircleShape.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Color.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/ConvexShape.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Drawable.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/FloatRect.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Font/Info.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Glyph.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Image.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/IntRect.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/PrimitiveType.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Rect.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/RectangleShape.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/RenderStates.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/RenderTarget.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/RenderTexture.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/RenderWindow.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Shader/CurrentTextureType.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Shader/Type.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Shape.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Sprite.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Text/Style.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Texture/CoordinateType.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Transform.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Transformable.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Vertex.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/VertexArray.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/VertexBuffer/Usage.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/View.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/AlResource.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Listener.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Music/Span.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Music/TimeSpan.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Sound.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SoundBuffer.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SoundRecorder.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SoundSource/Status.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SoundStream.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Ftp/DirectoryResponse.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Ftp/ListingResponse.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Ftp/Response/Status.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Ftp/TransferMode.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Http/Request/Method.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Http/Response/Status.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/IpAddress.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Packet.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Socket/Status.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/Socket/Type.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/SocketSelector.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/TcpListener.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/TcpSocket.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/UdpSocket.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/api/SF/InitError.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/system/time.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/system/thread.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/system/stream.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/window/window.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/window/events.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/window/inputs.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/window/opengl.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/draw.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/sprite.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/text.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/shape.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/vertex-array.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/transform.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/shader.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/graphics/view.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/audio/sounds.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/audio/recording.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/audio/streams.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/audio/spatialization.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/network/socket.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/network/packet.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/network/http.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://oprypin.github.io/crsfml/tutorials/network/ftp.html</loc>
-     <lastmod>2021-01-06</lastmod>
+     <lastmod>2021-01-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
