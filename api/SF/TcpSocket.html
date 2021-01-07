@@ -3724,7 +3724,7 @@ the socket instance is still alive, you can call disconnect.</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#connect(remote_address,remote_port,timeout)">
 
     <code>
-      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_address</span> <span class="p">:</span> <span class="n">IpAddress</span><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <span class="nb">Time</span> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3794,7 +3794,7 @@ socket is not connected, this function has no effect.</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#receive(data)">
 
     <code>
-      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
+      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#receive(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3819,7 +3819,7 @@ This function will fail if the socket is not connected.</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#receive(packet)">
 
     <code>
-      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <span class="n">Packet</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#receive(packet)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3840,7 +3840,7 @@ This function will fail if the socket is not connected.</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#remote_address()">
 
     <code>
-      #remote_address<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">IpAddress</span></code></span>
+      #remote_address<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#remote_address()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3874,7 +3874,7 @@ the socket is connected</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#send(data)">
 
     <code>
-      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
+      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#send(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3897,7 +3897,7 @@ the socket is connected</p>
 <h4 class="doc doc-heading" id="SF::TcpSocket#send(packet)">
 
     <code>
-      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <span class="n">Packet</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#send(packet)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">

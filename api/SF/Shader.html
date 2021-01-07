@@ -3719,7 +3719,7 @@ any attempt to use <a href="#SF::Shader"><code>SF::Shader</code></a> will fail.<
 <h4 class="doc doc-heading" id="SF::Shader.bind(shader)">
 
     <code>
-      .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <span class="n">Shader?</span><span class="p">)</span></code></span>
+      .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <a href="#SF::Shader">Shader?</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader.bind(shader)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3869,7 +3869,7 @@ for it before writing your own shaders.</p>
 <h4 class="doc doc-heading" id="SF::Shader#load_from_file(filename,type)">
 
     <code>
-      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <span class="n">Shader</span><span class="o">::</span><span class="n">Type</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#load_from_file(filename,type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3948,7 +3948,7 @@ writing your own shaders.</p>
 <h4 class="doc doc-heading" id="SF::Shader#load_from_memory(shader,type)">
 
     <code>
-      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <span class="n">Shader</span><span class="o">::</span><span class="n">Type</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#load_from_memory(shader,type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3999,7 +3999,7 @@ writing your own shaders.</p>
 <h4 class="doc doc-heading" id="SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="n">geometry_shader_stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">geometry_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4026,7 +4026,7 @@ it before writing your own shaders.</p>
 <h4 class="doc doc-heading" id="SF::Shader#load_from_stream(stream,type)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <span class="n">Shader</span><span class="o">::</span><span class="n">Type</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#load_from_stream(stream,type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4051,7 +4051,7 @@ before writing your own shaders.</p>
 <h4 class="doc doc-heading" id="SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4133,7 +4133,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,vector)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <span class="n">Vector2</span> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,vector)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4147,7 +4147,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,vector)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <span class="n">Vector3f</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,vector)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4160,7 +4160,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,color)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4173,7 +4173,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,transform)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">transform</span> <span class="p">:</span> <span class="n">Transform</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">transform</span> <span class="p">:</span> <a href="Transform.html#SF::Transform">Transform</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,transform)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4186,7 +4186,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,texture)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">texture</span> <span class="p">:</span> <span class="n">Texture</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">texture</span> <span class="p">:</span> <a href="Texture.html#SF::Texture">Texture</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,texture)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4199,7 +4199,7 @@ or implement a temporary workaround until a bug is fixed.</p>
 <h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,p1)">
 
     <code>
-      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">p1</span> <span class="p">:</span> <span class="n">CurrentTextureType</span><span class="p">)</span></code></span>
+      #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">p1</span> <span class="p">:</span> <a href="Shader/CurrentTextureType.html#SF::Shader::CurrentTextureType">CurrentTextureType</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Shader#set_parameter(name,p1)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">

@@ -3608,7 +3608,7 @@ I&#39;m the main thread
 I&#39;m thread number one
 I&#39;m the main thread
 </code></pre></div>
-<p>The entry point of the thread, ie. the function that will be run when the thread is started, must be passed to the constructor of <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a>. <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> can accept any kind of <a href="http://crystal-lang.org/docs/syntax_and_semantics/literals/proc.html">procs</a> without parameters.</p>
+<p>The entry point of the thread, ie. the function that will be run when the thread is started, must be passed to the constructor of <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a>. <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> can accept any kind of <a href="https://crystal-lang.org/reference/syntax_and_semantics/literals/proc.html">procs</a> without parameters.</p>
 <h2 id="starting-threads">Starting threads<a class="headerlink" href="#starting-threads" title="Permanent link">#</a></h2>
 <p>Once you've created a <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> instance, you must start it with the <code>launch</code> method.</p>
 <div class="highlight"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
@@ -3717,7 +3717,7 @@ I&#39;m thread number one
 <span class="n">foo</span><span class="o">.</span><span class="n">main</span>
 </code></pre></div>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">#</a></h2>
-<p>One thing that is often overlooked by programmers is that a thread cannot live without its corresponding <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> instance.<br />
+<p>One thing that is often overlooked by programmers is that a thread cannot live without its corresponding <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> instance.
 The following code is often seen:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span>
   <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>

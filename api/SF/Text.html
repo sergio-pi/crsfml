@@ -3679,7 +3679,7 @@ uses a local <a href="Font.html#SF::Font"><code>SF::Font</code></a> instance for
 <h4 class="doc doc-heading" id="SF::Text.new(string,font,character_size)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">font</span> <span class="p">:</span> <span class="n">Font</span><span class="p">,</span> <span class="n">character_size</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">font</span> <span class="p">:</span> <a href="Font.html#SF::Font">Font</a><span class="p">,</span> <span class="n">character_size</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text.new(string,font,character_size)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3757,7 +3757,7 @@ font that supports that size is used.</p>
 <h4 class="doc doc-heading" id="SF::Text#color()">
 
     <code>
-      #color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Color</span></code></span>
+      #color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#color()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3775,7 +3775,7 @@ Use <a href="#SF::Text#fill_color()"><code>fill_color()</code></a> or outline_co
 <h4 class="doc doc-heading" id="SF::Text#color=(color)">
 
     <code>
-      #color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></span>
+      #color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#color=(color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3798,7 +3798,7 @@ Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or out
 <h4 class="doc doc-heading" id="SF::Text#dup()">
 
     <code>
-      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Text</span></code></span>
+      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="#SF::Text">Text</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#dup()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3813,7 +3813,7 @@ Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or out
 <h4 class="doc doc-heading" id="SF::Text#fill_color()">
 
     <code>
-      #fill_color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Color</span></code></span>
+      #fill_color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#fill_color()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3828,7 +3828,7 @@ Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or out
 <h4 class="doc doc-heading" id="SF::Text#fill_color=(color)">
 
     <code>
-      #fill_color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></span>
+      #fill_color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#fill_color=(color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3861,7 +3861,7 @@ will cause the outline to be displayed in the fill area of the text.</p>
 <h4 class="doc doc-heading" id="SF::Text#find_character_pos(index)">
 
     <code>
-      #find_character_pos<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Vector2f</span></code></span>
+      #find_character_pos<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#find_character_pos(index)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3884,7 +3884,7 @@ the string is returned.</p>
 <h4 class="doc doc-heading" id="SF::Text#font=(font)">
 
     <code>
-      #font=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">font</span> <span class="p">:</span> <span class="n">Font</span><span class="p">)</span></code></span>
+      #font=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">font</span> <span class="p">:</span> <a href="Font.html#SF::Font">Font</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#font=(font)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3907,7 +3907,7 @@ use it, the behavior is undefined.</p>
 <h4 class="doc doc-heading" id="SF::Text#global_bounds()">
 
     <code>
-      #global_bounds<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">FloatRect</span></code></span>
+      #global_bounds<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="FloatRect.html#SF::FloatRect">FloatRect</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#global_bounds()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4001,7 +4001,7 @@ between lines. By default the line spacing factor is 1.</p>
 <h4 class="doc doc-heading" id="SF::Text#local_bounds()">
 
     <code>
-      #local_bounds<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">FloatRect</span></code></span>
+      #local_bounds<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="FloatRect.html#SF::FloatRect">FloatRect</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#local_bounds()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4020,7 +4020,7 @@ entity in the entity's coordinate system.</p>
 <h4 class="doc doc-heading" id="SF::Text#outline_color()">
 
     <code>
-      #outline_color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Color</span></code></span>
+      #outline_color<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#outline_color()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4035,7 +4035,7 @@ entity in the entity's coordinate system.</p>
 <h4 class="doc doc-heading" id="SF::Text#outline_color=(color)">
 
     <code>
-      #outline_color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></span>
+      #outline_color=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#outline_color=(color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4136,7 +4136,7 @@ thickness will cause distorted rendering.</p>
 <h4 class="doc doc-heading" id="SF::Text#style=(style)">
 
     <code>
-      #style=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">style</span> <span class="p">:</span> <span class="n">Text</span><span class="o">::</span><span class="n">Style</span><span class="p">)</span></code></span>
+      #style=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">style</span> <span class="p">:</span> <a href="Text/Style.html#SF::Text::Style">Text::Style</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#style=(style)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">

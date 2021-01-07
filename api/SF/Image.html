@@ -3893,7 +3893,7 @@ pass or return them to avoid useless copies.</p>
 <h4 class="doc doc-heading" id="SF::Image#copy(source,dest_x,dest_y,source_rect,apply_alpha)">
 
     <code>
-      #copy<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">source</span> <span class="p">:</span> <span class="n">Image</span><span class="p">,</span> <span class="n">dest_x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">dest_y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">source_rect</span> <span class="p">:</span> <span class="n">IntRect</span> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">apply_alpha</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
+      #copy<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">source</span> <span class="p">:</span> <a href="#SF::Image">Image</a><span class="p">,</span> <span class="n">dest_x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">dest_y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">source_rect</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">apply_alpha</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#copy(source,dest_x,dest_y,source_rect,apply_alpha)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3921,7 +3921,7 @@ copied unchanged with their alpha value.</p>
 <h4 class="doc doc-heading" id="SF::Image#create(width,height,color)">
 
     <code>
-      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <span class="n">Color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></code></span>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#create(width,height,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3961,7 +3961,7 @@ If <em>pixels</em> is null, an empty image is created.</p>
 <h4 class="doc doc-heading" id="SF::Image#create_mask_from_color(color,alpha)">
 
     <code>
-      #create_mask_from_color<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
+      #create_mask_from_color<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#create_mask_from_color(color,alpha)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3981,7 +3981,7 @@ become transparent.</p>
 <h4 class="doc doc-heading" id="SF::Image#dup()">
 
     <code>
-      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Image</span></code></span>
+      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="#SF::Image">Image</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#dup()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4035,7 +4035,7 @@ become transparent.</p>
 <h4 class="doc doc-heading" id="SF::Image#get_pixel(x,y)">
 
     <code>
-      #get_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Color</span></code></span>
+      #get_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#get_pixel(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4101,7 +4101,7 @@ If this function fails, the image is left unchanged.</p>
 <h4 class="doc doc-heading" id="SF::Image#load_from_stream(stream)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#load_from_stream(stream)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4165,7 +4165,7 @@ if it already exists. This function fails if the image is empty.</p>
 <h4 class="doc doc-heading" id="SF::Image#set_pixel(x,y,color)">
 
     <code>
-      #set_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></span>
+      #set_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#set_pixel(x,y,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4187,7 +4187,7 @@ an undefined behavior.</p>
 <h4 class="doc doc-heading" id="SF::Image#size()">
 
     <code>
-      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Vector2u</span></code></span>
+      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector2u.html#SF::Vector2u">Vector2u</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#size()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">

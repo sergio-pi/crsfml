@@ -3725,7 +3725,7 @@ custom OpenGL geometry.
 <h4 class="doc doc-heading" id="SF::Texture.bind(texture,coordinate_type)">
 
     <code>
-      .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <span class="n">Texture?</span><span class="p">,</span> <span class="n">coordinate_type</span> <span class="p">:</span> <span class="n">Texture</span><span class="o">::</span><span class="n">CoordinateType</span> <span class="o">=</span> <span class="n">Normalized</span><span class="p">)</span></code></span>
+      .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <a href="#SF::Texture">Texture?</a><span class="p">,</span> <span class="n">coordinate_type</span> <span class="p">:</span> <a href="Texture/CoordinateType.html#SF::Texture::CoordinateType">Texture::CoordinateType</a> <span class="o">=</span> <span class="n">Normalized</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture.bind(texture,coordinate_type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3867,7 +3867,7 @@ card, and up to 8192 pixels or more for newer hardware.</p>
 <h4 class="doc doc-heading" id="SF::Texture#copy_to_image()">
 
     <code>
-      #copy_to_image<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Image</span></code></span>
+      #copy_to_image<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Image.html#SF::Image">Image</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#copy_to_image()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3905,7 +3905,7 @@ to pixels if necessary (texture may be padded or flipped).</p>
 <h4 class="doc doc-heading" id="SF::Texture#dup()">
 
     <code>
-      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Texture</span></code></span>
+      #dup<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="#SF::Texture">Texture</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#dup()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3962,7 +3962,7 @@ regenerate it.</p>
 <h4 class="doc doc-heading" id="SF::Texture#load_from_file(filename,area)">
 
     <code>
-      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <span class="n">IntRect</span> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#load_from_file(filename,area)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3997,7 +3997,7 @@ driver and can be retrieved with the maximum_size function.</p>
 <h4 class="doc doc-heading" id="SF::Texture#load_from_image(image,area)">
 
     <code>
-      #load_from_image<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <span class="n">Image</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <span class="n">IntRect</span> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_image<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <a href="Image.html#SF::Image">Image</a><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#load_from_image(image,area)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4024,7 +4024,7 @@ driver and can be retrieved with the maximum_size function.</p>
 <h4 class="doc doc-heading" id="SF::Texture#load_from_memory(data,area)">
 
     <code>
-      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <span class="n">IntRect</span> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#load_from_memory(data,area)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4059,7 +4059,7 @@ driver and can be retrieved with the maximum_size function.</p>
 <h4 class="doc doc-heading" id="SF::Texture#load_from_stream(stream,area)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <span class="n">IntRect</span> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">area</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#load_from_stream(stream,area)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4156,7 +4156,7 @@ Repeating is disabled by default.</p>
 <h4 class="doc doc-heading" id="SF::Texture#size()">
 
     <code>
-      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Vector2u</span></code></span>
+      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector2u.html#SF::Vector2u">Vector2u</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#size()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4251,7 +4251,7 @@ framebuffer. This can be requested during window creation.</p>
 <h4 class="doc doc-heading" id="SF::Texture#swap(right)">
 
     <code>
-      #swap<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <span class="n">Texture</span><span class="p">)</span></code></span>
+      #swap<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Texture">Texture</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#swap(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4267,7 +4267,7 @@ framebuffer. This can be requested during window creation.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(window)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">window</span> <span class="p">:</span> <span class="n">Window</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">window</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(window)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4292,7 +4292,7 @@ was not previously created.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(image)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <span class="n">Image</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <a href="Image.html#SF::Image">Image</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(image)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4340,7 +4340,7 @@ texture was not previously created.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(window,x,y)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">window</span> <span class="p">:</span> <span class="n">Window</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">window</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(window,x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4363,7 +4363,7 @@ was not previously created.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(image,x,y)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <span class="n">Image</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">image</span> <span class="p">:</span> <a href="Image.html#SF::Image">Image</a><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(image,x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4386,7 +4386,7 @@ previously created.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(texture,x,y)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <span class="n">Texture</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <a href="#SF::Texture">Texture</a><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(texture,x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4436,7 +4436,7 @@ texture was not previously created.</p>
 <h4 class="doc doc-heading" id="SF::Texture#update(texture)">
 
     <code>
-      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <span class="n">Texture</span><span class="p">)</span></code></span>
+      #update<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <a href="#SF::Texture">Texture</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Texture#update(texture)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">

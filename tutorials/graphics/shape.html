@@ -3700,7 +3700,7 @@
 <span class="n">shape</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="A textured shape" src="images/shape-texture.png" /></p>
-<p>Note that the outline is not textured.<br />
+<p>Note that the outline is not textured.
 It is important to know that the texture is modulated (multiplied) with the shape's fill color. If its fill color is <code>SF::Color::White</code>, the texture will appear unmodified.
 To disable texturing, call <code>set_texture(nil, false)</code>.</p>
 <h2 id="drawing-a-shape">Drawing a shape<a class="headerlink" href="#drawing-a-shape" title="Permanent link">#</a></h2>
@@ -3761,7 +3761,7 @@ To disable texturing, call <code>set_texture(nil, false)</code>.</p>
 </code></pre></div>
 <p>The order in which you define the points is very important. They must <em>all</em> be defined either in clockwise or counter-clockwise order. If you define them in an inconsistent order, the shape will be constructed incorrectly.</p>
 <p><img alt="A convex shape" src="images/shape-convex.png" /></p>
-<p>Although the name of <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a> implies that it should only be used to represent convex shapes, its requirements are a little more relaxed. In fact, the only requirement that your shape must meet is that if you went ahead and drew lines from its <em>center of gravity</em> to all of its points, these lines must be drawn in the same order. You are not allowed to "jump behind a previous line". Internally, convex shapes are automatically constructed using <a href="http://en.wikipedia.org/wiki/Triangle_fan" title="Go to Wikipedia's article about triangle fans">triangle fans</a>, so if your shape is representable by a triangle fan, you can use <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a>. With this relaxed definition, you can draw stars using <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a> for example.</p>
+<p>Although the name of <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a> implies that it should only be used to represent convex shapes, its requirements are a little more relaxed. In fact, the only requirement that your shape must meet is that if you went ahead and drew lines from its <em>center of gravity</em> to all of its points, these lines must be drawn in the same order. You are not allowed to "jump behind a previous line". Internally, convex shapes are automatically constructed using <a href="https://en.wikipedia.org/wiki/Triangle_fan" title="Go to Wikipedia's article about triangle fans">triangle fans</a>, so if your shape is representable by a triangle fan, you can use <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a>. With this relaxed definition, you can draw stars using <a href="../../api/SF/ConvexShape.html#SF::ConvexShape">SF::ConvexShape</a> for example.</p>
 <h3 id="lines">Lines<a class="headerlink" href="#lines" title="Permanent link">#</a></h3>
 <p>There's no shape class for lines. The reason is simple: If your line has a thickness, it is a rectangle. If it doesn't, it can be drawn with a line primitive.</p>
 <p>Line with thickness:</p>
@@ -3824,7 +3824,7 @@ To disable texturing, call <code>set_texture(nil, false)</code>.</p>
 <span class="p">)</span>
 </code></pre></div>
 <p><img alt="Aliased vs antialiased shape" src="images/shape-antialiasing.png" /></p>
-<p>Remember that anti-aliasing availability depends on the graphics card: It might not support it, or have it forced to disabled in the driver settings.<br />
+<p>Remember that anti-aliasing availability depends on the graphics card: It might not support it, or have it forced to disabled in the driver settings.
 Sometimes antialiasing does not work if <code>depth_bits</code> is not specified (use 24 if unsure).</p>
                 
               

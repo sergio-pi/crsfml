@@ -3751,7 +3751,7 @@ make the port available for other sockets.</p>
 <h4 class="doc doc-heading" id="SF::UdpSocket#bind(port,address)">
 
     <code>
-      #bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">address</span> <span class="p">:</span> <span class="n">IpAddress</span> <span class="o">=</span> <span class="n">IpAddress</span><span class="o">::</span><span class="n">Any</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a> <span class="o">=</span> <span class="n">IpAddress</span><span class="o">::</span><span class="n">Any</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::UdpSocket#bind(port,address)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3809,7 +3809,7 @@ returns 0.</p>
 <h4 class="doc doc-heading" id="SF::UdpSocket#receive(data)">
 
     <code>
-      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="p">,</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">IpAddress</span><span class="p">,</span> <span class="nb">UInt16</span><span class="p">)</span></code></span>
+      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="nb">Int32</span><span class="p">,</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="nb">UInt16</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::UdpSocket#receive(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3839,7 +3839,7 @@ be lost.</p>
 <h4 class="doc doc-heading" id="SF::UdpSocket#receive(packet)">
 
     <code>
-      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <span class="n">Packet</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><span class="n">Socket</span><span class="o">::</span><span class="n">Status</span><span class="p">,</span> <span class="n">IpAddress</span><span class="p">,</span> <span class="nb">UInt16</span><span class="p">)</span></code></span>
+      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="nb">UInt16</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::UdpSocket#receive(packet)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3864,7 +3864,7 @@ has been received.</p>
 <h4 class="doc doc-heading" id="SF::UdpSocket#send(data,remote_address,remote_port)">
 
     <code>
-      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">,</span> <span class="n">remote_address</span> <span class="p">:</span> <span class="n">IpAddress</span><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">,</span> <span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::UdpSocket#send(data,remote_address,remote_port)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3887,7 +3887,7 @@ fail and no data will be sent.</p>
 <h4 class="doc doc-heading" id="SF::UdpSocket#send(packet,remote_address,remote_port)">
 
     <code>
-      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <span class="n">Packet</span><span class="p">,</span> <span class="n">remote_address</span> <span class="p">:</span> <span class="n">IpAddress</span><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Socket</span><span class="o">::</span><span class="n">Status</span></code></span>
+      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">,</span> <span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::UdpSocket#send(packet,remote_address,remote_port)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
