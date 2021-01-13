@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/TcpListener.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3617,13 +3617,13 @@ function.</p>
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Create a listener socket and make it wait for new</span>
 <span class="c1"># connections on port 55001</span>
-<span class="n">listener</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<span class="n">listener</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">55001</span><span class="p">)</span>
 
 <span class="c1"># Endless loop that waits for new connections</span>
 <span class="k">while</span> <span class="n">running</span>
-  <span class="n">client</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
-  <span class="k">if</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+  <span class="n">client</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+  <span class="k">if</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
     <span class="c1"># A new client just connected!</span>
     <span class="nb">puts</span> <span class="s2">"New connection received from </span><span class="si">#{</span><span class="n">client</span><span class="o">.</span><span class="n">remote_address</span><span class="si">}</span><span class="s2">"</span>
     <span class="n">do_something_with</span> <span class="n">client</span>
@@ -3645,8 +3645,7 @@ function.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2093">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2093">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3666,8 +3665,7 @@ not return until a connection is actually received.</p>
 <p><em>Returns:</em> Status code</p>
 <p><em>See also:</em> <a href="#SF::TcpListener#listen(port,address)"><code>listen</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2147">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2147">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpListener#close()">
@@ -3682,8 +3680,7 @@ not return until a connection is actually received.</p>
 socket is not listening, this function has no effect.</p>
 <p><em>See also:</em> <a href="#SF::TcpListener#listen(port,address)"><code>listen</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2134">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2134">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpListener#finalize()">
@@ -3695,14 +3692,13 @@ socket is not listening, this function has no effect.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2088">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2088">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpListener#listen(port,address)">
 
     <code>
-      #listen<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a> <span class="o">=</span> <span class="n">IpAddress</span><span class="o">::</span><span class="n">Any</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
+      #listen<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">port</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a> <span class="o">=</span> <span class="n">IpAddress</span><span class="o">::</span><span class="n">Any</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpListener#listen(port,address)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3719,14 +3715,13 @@ port before starting to listen on the new port.</p>
 <p><em>Returns:</em> Status code</p>
 <p><em>See also:</em> <a href="#SF::TcpListener#accept(socket)"><code>accept</code></a>, <a href="#SF::TcpListener#close()"><code>close</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2124">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2124">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpListener#local_port()">
 
     <code>
-      #local_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt16</span></code></span>
+      #local_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpListener#local_port()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3736,8 +3731,7 @@ returns 0.</p>
 <p><em>Returns:</em> Port to which the socket is bound</p>
 <p><em>See also:</em> <a href="#SF::TcpListener#listen(port,address)"><code>listen</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2105">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2105">View source</a>
 </div>
 </div>
 </div>
@@ -3808,8 +3802,8 @@ returns 0.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

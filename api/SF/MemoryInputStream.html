@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/MemoryInputStream.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3656,7 +3656,7 @@ you create your own algorithms that operate on an InputStream.</p>
 <pre><span></span><code><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <span class="n">InputStream</span><span class="p">)</span>
 <span class="k">end</span>
 
-<span class="n">stream</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">MemoryInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">slice</span><span class="p">)</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">MemoryInputStream</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">slice</span><span class="p">)</span>
 <span class="n">process</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -3674,21 +3674,19 @@ you create your own algorithms that operate on an InputStream.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L605">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L605">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream.open(*args,**kwargs)">
 
     <code>
-      .open<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .open<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream.open(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>memory_input_stream = MemoryInputStream.new; memory_input_stream.open(...); memory_input_stream</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L616">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L616">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3703,8 +3701,7 @@ you create your own algorithms that operate on an InputStream.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L665">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L665">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#finalize()">
@@ -3715,14 +3712,13 @@ you create your own algorithms that operate on an InputStream.</p>
   <a class="headerlink" href="#SF::MemoryInputStream#finalize()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L600">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L600">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#open(data)">
 
     <code>
-      #open<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span></code></span>
+      #open<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream#open(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3731,14 +3727,13 @@ you create your own algorithms that operate on an InputStream.</p>
 <li><em>data</em> - Pointer to the data in memory</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L612">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L612">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#read(data)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int64</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream#read(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3750,14 +3745,13 @@ advanced by the amount of bytes read.</p>
 </ul>
 <p><em>Returns:</em> The number of bytes actually read, or -1 on error</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L629">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L629">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#seek(position)">
 
     <code>
-      #seek<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int64</span></code></span>
+      #seek<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream#seek(position)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3767,36 +3761,33 @@ advanced by the amount of bytes read.</p>
 </ul>
 <p><em>Returns:</em> The position actually sought to, or -1 on error</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L638">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L638">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#size()">
 
     <code>
-      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int64</span></code></span>
+      #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream#size()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Return the size of the stream</p>
 <p><em>Returns:</em> The total number of bytes available in the stream, or -1 on error</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L652">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L652">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::MemoryInputStream#tell()">
 
     <code>
-      #tell<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int64</span></code></span>
+      #tell<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::MemoryInputStream#tell()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Get the current reading position in the stream</p>
 <p><em>Returns:</em> The current position, or -1 on error.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L645">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L645">View source</a>
 </div>
 </div>
 </div>
@@ -3867,8 +3858,8 @@ advanced by the amount of bytes read.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

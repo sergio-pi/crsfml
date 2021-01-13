@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/TcpSocket.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3669,7 +3669,7 @@ the socket instance is still alive, you can call disconnect.</p>
 <pre><span></span><code><span class="c1"># ----- The client -----</span>
 
 <span class="c1"># Create a socket and connect it to 192.168.1.50 on port 55001</span>
-<span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 <span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"192.168.1.50"</span><span class="p">,</span> <span class="mi">55001</span><span class="p">)</span>
 
 <span class="c1"># Send a message to the connected host</span>
@@ -3677,23 +3677,23 @@ the socket instance is still alive, you can call disconnect.</p>
 <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">to_slice</span><span class="p">)</span>
 
 <span class="c1"># Receive an answer from the server</span>
-<span class="n">buffer</span> <span class="o">=</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="s2">"The server said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">"</span>
 
 <span class="c1"># ----- The server -----</span>
 
 <span class="c1"># Create a listener to wait for incoming connections on port 55001</span>
-<span class="n">listener</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<span class="n">listener</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">55001</span><span class="p">)</span>
 
 <span class="c1"># Wait for a connection</span>
-<span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">socket</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="s2">"New client connected: </span><span class="si">#{</span><span class="n">socket</span><span class="o">.</span><span class="n">remote_address</span><span class="si">}</span><span class="s2">"</span>
 
 <span class="c1"># Receive a message from the client</span>
-<span class="n">buffer</span> <span class="o">=</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="s2">"The client said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">"</span>
 
@@ -3716,15 +3716,14 @@ the socket instance is still alive, you can call disconnect.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L189">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L189">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#connect(remote_address,remote_port,timeout)">
 
     <code>
-      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
+      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="n">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3742,8 +3741,7 @@ forcibly disconnected before attempting to connect again.</p>
 <p><em>Returns:</em> Status code</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#disconnect()"><code>disconnect</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L244">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L244">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#disconnect()">
@@ -3758,8 +3756,7 @@ forcibly disconnected before attempting to connect again.</p>
 socket is not connected, this function has no effect.</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L254">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L254">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#finalize()">
@@ -3771,14 +3768,13 @@ socket is not connected, this function has no effect.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L184">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L184">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#local_port()">
 
     <code>
-      #local_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt16</span></code></span>
+      #local_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#local_port()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3787,14 +3783,13 @@ socket is not connected, this function has no effect.</p>
 <p><em>Returns:</em> Port to which the socket is bound</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a>, <a href="#SF::TcpSocket#remote_port()"><code>remote_port</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L200">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L200">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#receive(data)">
 
     <code>
-      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
+      #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="n">Int32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#receive(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3812,8 +3807,7 @@ This function will fail if the socket is not connected.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L304">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L304">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#receive(packet)">
@@ -3833,8 +3827,7 @@ This function will fail if the socket is not connected.</p>
 <p><em>Returns:</em> Status code</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L336">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L336">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#remote_address()">
@@ -3850,14 +3843,13 @@ This function will fail if the socket is not connected.</p>
 <p><em>Returns:</em> Address of the remote peer</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#remote_port()"><code>remote_port</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L212">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L212">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#remote_port()">
 
     <code>
-      #remote_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt16</span></code></span>
+      #remote_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#remote_port()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3867,14 +3859,13 @@ the socket is connected</p>
 <p><em>Returns:</em> Remote port to which the socket is connected</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#remote_address()"><code>remote_address</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L225">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L225">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#send(data)">
 
     <code>
-      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
+      #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="n">Int32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::TcpSocket#send(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3890,8 +3881,7 @@ the socket is connected</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L286">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L286">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::TcpSocket#send(packet)">
@@ -3913,8 +3903,7 @@ This function will fail if the socket is not connected.</p>
 <p><em>Returns:</em> Status code</p>
 <p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L321">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L321">View source</a>
 </div>
 </div>
 </div>
@@ -3985,8 +3974,8 @@ This function will fail if the socket is not connected.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

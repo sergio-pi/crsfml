@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/RenderWindow.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3611,7 +3611,7 @@ description of all these features, as well as code examples.</p>
 Here is a typical rendering and event loop with a <a href="#SF::RenderWindow"><code>SF::RenderWindow</code></a>:</p>
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Declare and create a new render-window</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
 
 <span class="c1"># Limit the framerate to 60 frames per second (this step is optional)</span>
 <span class="n">window</span><span class="o">.</span><span class="n">framerate_limit</span> <span class="o">=</span> <span class="mi">60</span>
@@ -3621,7 +3621,7 @@ Here is a typical rendering and event loop with a <a href="#SF::RenderWindow"><c
   <span class="c1"># Event processing</span>
   <span class="k">while</span> <span class="p">(</span><span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span><span class="p">)</span>
     <span class="c1"># Request for closing the window</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+    <span class="k">if</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
       <span class="n">window</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">end</span>
   <span class="k">end</span>
@@ -3644,11 +3644,11 @@ OpenGL stuff. It is even possible to mix together OpenGL calls
 and regular SFML drawing commands.</p>
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Create the render window</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML OpenGL"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML OpenGL"</span><span class="p">)</span>
 
 <span class="c1"># Create a sprite and a text to display</span>
-<span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span>
-<span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sprite</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
 <span class="o">...</span>
 
 <span class="c1"># Perform OpenGL initializations</span>
@@ -3692,7 +3692,7 @@ and regular SFML drawing commands.</p>
 <h4 class="doc doc-heading" id="SF::RenderWindow.new(mode,title,style,settings)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">mode</span> <span class="p">:</span> <a href="VideoMode.html#SF::VideoMode">VideoMode</a><span class="p">,</span> <span class="n">title</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">style</span> <span class="p">:</span> <a href="Style.html#SF::Style">Style</a> <span class="o">=</span> <span class="n">Style</span><span class="o">::</span><span class="n">Default</span><span class="p">,</span> <span class="n">settings</span> <span class="p">:</span> <a href="ContextSettings.html#SF::ContextSettings">ContextSettings</a> <span class="o">=</span> <span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">mode</span> <span class="p">:</span> <a href="VideoMode.html#SF::VideoMode">VideoMode</a><span class="p">,</span> <span class="n">title</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">style</span> <span class="p">:</span> <a href="Style.html#SF::Style">Style</a> <span class="o">=</span> <span class="n">Style</span><span class="o">::</span><span class="n">Default</span><span class="p">,</span> <span class="n">settings</span> <span class="p">:</span> <a href="ContextSettings.html#SF::ContextSettings">ContextSettings</a> <span class="o">=</span> <span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderWindow.new(mode,title,style,settings)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3712,8 +3712,7 @@ parameters for a regular usage of the graphics module.</p>
 <li><em>settings</em> - Additional settings for the underlying OpenGL context</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5239">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5239">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow.new(handle,settings)">
@@ -3736,8 +3735,7 @@ Windows, <em>%window</em> on Linux/FreeBSD, <em>ns_window</em> on OS X)</li>
 <li><em>settings</em> - Additional settings for the underlying OpenGL context</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5256">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5256">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow.new()">
@@ -3751,28 +3749,26 @@ Windows, <em>%window</em> on Linux/FreeBSD, <em>ns_window</em> on OS X)</li>
 <p>This constructor doesn't actually create the window,
 use the other constructors or call <code>create()</code> to do so.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5219">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5219">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow.new(*args,**kwargs)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderWindow.new(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>render_window = RenderWindow.new; render_window.create(...); render_window</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5335">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5335">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow#active=(active)">
 
     <code>
-      #active=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">active</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #active=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">active</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderWindow#active=(active)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3789,8 +3785,7 @@ This is not to be confused with <code>request_focus()</code>.</p>
 </ul>
 <p><em>Returns:</em> True if operation was successful, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5291">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5291">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow#capture()">
@@ -3805,7 +3800,7 @@ This is not to be confused with <code>request_focus()</code>.</p>
 Use a <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> and its <a href="Texture.html#SF::Texture#update(window)"><code>SF::Texture#update(window)</code></a>
 method and copy its contents into an <a href="Image.html#SF::Image"><code>SF::Image</code></a> instead.
 <div class="highlight">
-<pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">window</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">window</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
 <span class="n">texture</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 <span class="n">screenshot</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">copy_to_image</span><span class="p">()</span>
 </code></pre>
@@ -3820,8 +3815,7 @@ You can also draw things directly to a texture with the
 <a href="RenderTexture.html#SF::RenderTexture"><code>SF::RenderTexture</code></a> class.</p>
 <p><em>Returns:</em> Image containing the captured contents</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5315">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5315">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow#finalize()">
@@ -3834,8 +3828,7 @@ You can also draw things directly to a texture with the
 <p>Destructor</p>
 <p>Closes the window and frees all the resources attached to it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5263">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5263">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderWindow#size()">
@@ -3850,8 +3843,7 @@ You can also draw things directly to a texture with the
 of the window.</p>
 <p><em>Returns:</em> Size in pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5273">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5273">View source</a>
 </div>
 </div>
 </div>
@@ -3922,8 +3914,8 @@ of the window.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

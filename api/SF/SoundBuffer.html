@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/SoundBuffer.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3783,17 +3783,17 @@ uses a local <a href="#SF::SoundBuffer"><code>SF::SoundBuffer</code></a> instanc
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Load a new sound buffer from a file</span>
-<span class="n">buffer</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"sound.wav"</span><span class="p">)</span>
+<span class="n">buffer</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"sound.wav"</span><span class="p">)</span>
 
 <span class="c1"># Create a sound source and bind it to the buffer</span>
-<span class="n">sound1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sound1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
 <span class="n">sound1</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
 
 <span class="c1"># Play the sound</span>
 <span class="n">sound1</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 
 <span class="c1"># Create another sound source bound to the same buffer</span>
-<span class="n">sound2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sound2</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
 <span class="n">sound2</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
 
 <span class="c1"># Play it with a higher pitch -- the first sound remains unchanged</span>
@@ -3813,57 +3813,53 @@ uses a local <a href="#SF::SoundBuffer"><code>SF::SoundBuffer</code></a> instanc
 <h4 class="doc doc-heading" id="SF::SoundBuffer.from_file(*args,**kwargs)">
 
     <code>
-      .from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer.from_file(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_file(...); sound_buffer</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1366">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1366">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer.from_memory(*args,**kwargs)">
 
     <code>
-      .from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer.from_memory(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_memory(...); sound_buffer</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1390">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1390">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer.from_samples(*args,**kwargs)">
 
     <code>
-      .from_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer.from_samples(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_samples(...); sound_buffer</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1441">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1441">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer.from_stream(*args,**kwargs)">
 
     <code>
-      .from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer.from_stream(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>sound_buffer = SoundBuffer.new; sound_buffer.load_from_stream(...); sound_buffer</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1414">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1414">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer.new()">
@@ -3875,15 +3871,14 @@ uses a local <a href="#SF::SoundBuffer"><code>SF::SoundBuffer</code></a> instanc
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1340">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1340">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#channel_count()">
 
     <code>
-      #channel_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #channel_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#channel_count()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3893,8 +3888,7 @@ be 1, 2 for stereo, etc.</p>
 <p><em>Returns:</em> Number of channels</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#sample_rate()"><code>sample_rate</code></a>, <a href="#SF::SoundBuffer#duration()"><code>duration</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1508">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1508">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#duration()">
@@ -3908,8 +3902,7 @@ be 1, 2 for stereo, etc.</p>
 <p><em>Returns:</em> Sound duration</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#sample_rate()"><code>sample_rate</code></a>, <a href="#SF::SoundBuffer#channel_count()"><code>channel_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1517">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1517">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#finalize()">
@@ -3921,14 +3914,13 @@ be 1, 2 for stereo, etc.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1345">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1345">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#load_from_file(filename)">
 
     <code>
-      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#load_from_file(filename)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3941,14 +3933,13 @@ of supported formats.</p>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#load_from_memory(data)"><code>load_from_memory</code></a>, <a href="#SF::SoundBuffer#load_from_stream(stream)"><code>load_from_stream</code></a>, <a href="#SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)"><code>load_from_samples</code></a>, <a href="#SF::SoundBuffer#save_to_file(filename)"><code>save_to_file</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1359">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1359">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#load_from_memory(data)">
 
     <code>
-      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#load_from_memory(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3961,14 +3952,13 @@ of supported formats.</p>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::SoundBuffer#load_from_stream(stream)"><code>load_from_stream</code></a>, <a href="#SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)"><code>load_from_samples</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1383">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1383">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)">
 
     <code>
-      #load_from_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">),</span> <span class="n">channel_count</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">sample_rate</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="n">Array</span><span class="p">(</span><span class="n">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Int16</span><span class="p">),</span> <span class="n">channel_count</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">sample_rate</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3984,14 +3974,13 @@ of supported formats.</p>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::SoundBuffer#load_from_memory(data)"><code>load_from_memory</code></a>, <a href="#SF::SoundBuffer#save_to_file(filename)"><code>save_to_file</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1434">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1434">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#load_from_stream(stream)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#load_from_stream(stream)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4004,14 +3993,13 @@ of supported formats.</p>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::SoundBuffer#load_from_memory(data)"><code>load_from_memory</code></a>, <a href="#SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)"><code>load_from_samples</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1407">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1407">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#sample_count()">
 
     <code>
-      #sample_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt64</span></code></span>
+      #sample_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#sample_count()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4021,14 +4009,13 @@ function.</p>
 <p><em>Returns:</em> Number of samples</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#samples()"><code>samples</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1483">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1483">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#sample_rate()">
 
     <code>
-      #sample_rate<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #sample_rate<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#sample_rate()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4039,14 +4026,13 @@ samples/s is CD quality).</p>
 <p><em>Returns:</em> Sample rate (number of samples per second)</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#channel_count()"><code>channel_count</code></a>, <a href="#SF::SoundBuffer#duration()"><code>duration</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1496">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1496">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#samples()">
 
     <code>
-      #samples<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Pointer</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)</span></code></span>
+      #samples<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Pointer</span><span class="p">(</span><span class="n">Int16</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#samples()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4057,14 +4043,13 @@ is given by the <a href="#SF::SoundBuffer#sample_count()"><code>sample_count()</
 <p><em>Returns:</em> Read-only pointer to the array of sound samples</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#sample_count()"><code>sample_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1471">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1471">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBuffer#save_to_file(filename)">
 
     <code>
-      #save_to_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #save_to_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBuffer#save_to_file(filename)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4077,8 +4062,7 @@ of supported formats.</p>
 <p><em>Returns:</em> True if saving succeeded, false if it failed</p>
 <p><em>See also:</em> <a href="#SF::SoundBuffer#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::SoundBuffer#load_from_memory(data)"><code>load_from_memory</code></a>, <a href="#SF::SoundBuffer#load_from_samples(samples,channel_count,sample_rate)"><code>load_from_samples</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1458">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1458">View source</a>
 </div>
 </div>
 </div>
@@ -4149,8 +4133,8 @@ of supported formats.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

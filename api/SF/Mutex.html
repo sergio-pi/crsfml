@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Mutex.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3610,7 +3610,7 @@ one thread at a time to access a critical region of your code.</p>
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="vi">@database</span> <span class="o">=</span> <span class="n">Database</span><span class="o">.</span><span class="n">new</span> <span class="c1"># this is a critical resource that needs some protection</span>
-<span class="vi">@mutex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Mutex</span><span class="o">.</span><span class="n">new</span>
+<span class="vi">@mutex</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mutex</span><span class="o">.</span><span class="n">new</span>
 
 <span class="k">def</span> <span class="nf">thread1</span><span class="p">()</span>
   <span class="vi">@mutex</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span> <span class="c1"># this call will block the thread if the mutex is already locked by thread2</span>
@@ -3657,8 +3657,7 @@ called lock(). If you don't, the mutex won't be released.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L721">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L721">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3671,8 +3670,7 @@ called lock(). If you don't, the mutex won't be released.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L726">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L726">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Mutex#lock()">
@@ -3688,8 +3686,7 @@ this call will block the execution until the mutex
 is released.</p>
 <p><em>See also:</em> <a href="#SF::Mutex#unlock()"><code>unlock</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L737">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L737">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Mutex#synchronize()">
@@ -3702,8 +3699,7 @@ is released.</p>
 <p>Lock the mutex, execute the block, then unlock the mutex
 (even if an exception is raised).</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L271">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L271">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Mutex#unlock()">
@@ -3716,8 +3712,7 @@ is released.</p>
 <p>Unlock the mutex</p>
 <p><em>See also:</em> <a href="#SF::Mutex#lock()"><code>lock</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L743">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L743">View source</a>
 </div>
 </div>
 </div>
@@ -3788,8 +3783,8 @@ is released.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

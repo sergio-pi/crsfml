@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/SocketSelector.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3654,14 +3654,14 @@ that they are alive as long as they are used in the selector.</p>
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Create a socket to listen to new connections</span>
-<span class="n">listener</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<span class="n">listener</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">55001</span><span class="p">)</span>
 
 <span class="c1"># Create an array to store the future clients</span>
-<span class="n">clients</span> <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span>
+<span class="n">clients</span> <span class="o">=</span> <span class="o">[]</span> <span class="k">of</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span>
 
 <span class="c1"># Create a selector</span>
-<span class="n">selector</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
+<span class="n">selector</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># Add the listener to the selector</span>
 <span class="n">selector</span><span class="o">.</span><span class="n">add</span> <span class="n">listener</span>
@@ -3673,8 +3673,8 @@ that they are alive as long as they are used in the selector.</p>
     <span class="c1"># Test the listener</span>
     <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">ready?</span><span class="p">(</span><span class="n">listener</span><span class="p">)</span>
       <span class="c1"># The listener is ready: there is a pending connection</span>
-      <span class="n">client</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
-      <span class="k">if</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+      <span class="n">client</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+      <span class="k">if</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
         <span class="c1"># Add the new client to the clients list</span>
         <span class="n">clients</span> <span class="o">&lt;&lt;</span> <span class="n">client</span>
 
@@ -3687,8 +3687,8 @@ that they are alive as long as they are used in the selector.</p>
       <span class="n">clients</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">client</span><span class="o">|</span>
         <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">ready?</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
           <span class="c1"># The client has sent some data, we can receive it</span>
-          <span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
-          <span class="k">if</span> <span class="n">client</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+          <span class="n">packet</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
+          <span class="k">if</span> <span class="n">client</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
               <span class="o">...</span>
           <span class="k">end</span>
         <span class="k">end</span>
@@ -3712,8 +3712,7 @@ that they are alive as long as they are used in the selector.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1951">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1951">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3734,8 +3733,7 @@ This function does nothing if the socket is not valid.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::SocketSelector#remove(socket)"><code>remove</code></a>, <a href="#SF::SocketSelector#clear()"><code>clear</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1970">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1970">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#clear()">
@@ -3751,8 +3749,7 @@ removes all the references that the selector has to
 external sockets.</p>
 <p><em>See also:</em> <a href="#SF::SocketSelector#add(socket)"><code>add</code></a>, <a href="#SF::SocketSelector#remove(socket)"><code>remove</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1991">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1991">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#dup()">
@@ -3766,8 +3763,7 @@ external sockets.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2042">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2042">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#finalize()">
@@ -3779,14 +3775,13 @@ external sockets.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1956">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1956">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#ready?(socket)">
 
     <code>
-      #ready?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">socket</span> <span class="p">:</span> <a href="Socket.html#SF::Socket">Socket</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #ready?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">socket</span> <span class="p">:</span> <a href="Socket.html#SF::Socket">Socket</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SocketSelector#ready?(socket)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3803,8 +3798,7 @@ this means that it is ready to accept a new connection.</p>
 <p><em>Returns:</em> True if the socket is ready to read, false otherwise</p>
 <p><em>See also:</em> <a href="#SF::SocketSelector#ready?(socket)"><code>ready?</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2025">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2025">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#remove(socket)">
@@ -3822,14 +3816,13 @@ removes the reference that the selector has to it.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::SocketSelector#add(socket)"><code>add</code></a>, <a href="#SF::SocketSelector#clear()"><code>clear</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1981">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1981">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SocketSelector#wait(timeout)">
 
     <code>
-      #wait<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #wait<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="n">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SocketSelector#wait(timeout)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3845,8 +3838,7 @@ is over, the function returns false.</p>
 <p><em>Returns:</em> True if there are sockets ready, false otherwise</p>
 <p><em>See also:</em> <a href="#SF::SocketSelector#ready?(socket)"><code>ready?</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2007">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L2007">View source</a>
 </div>
 </div>
 </div>
@@ -3917,8 +3909,8 @@ is over, the function returns false.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

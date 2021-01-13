@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Color.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3915,7 +3915,7 @@ struct <code>SF::Color</code>
 the range <code>0..255</code>. Thus, colors can be constructed and
 manipulated very easily:</p>
 <div class="highlight">
-<pre><span></span><code><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># red</span>
+<pre><span></span><code><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># red</span>
 <span class="n">color</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span>                      <span class="c1"># make it black</span>
 <span class="n">color</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">128</span>                    <span class="c1"># make it dark blue</span>
 </code></pre>
@@ -3927,15 +3927,15 @@ make a color fully transparent, whatever the value of the
 other components is.</p>
 <p>The most common colors are already defined as static variables:
 <div class="highlight">
-<pre><span></span><code><span class="n">black</span>       <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span>
-<span class="n">white</span>       <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">White</span>
-<span class="n">red</span>         <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
-<span class="n">green</span>       <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Green</span>
-<span class="n">blue</span>        <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span>
-<span class="n">yellow</span>      <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Yellow</span>
-<span class="n">magenta</span>     <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Magenta</span>
-<span class="n">cyan</span>        <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Cyan</span>
-<span class="n">transparent</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Transparent</span>
+<pre><span></span><code><span class="n">black</span>       <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span>
+<span class="n">white</span>       <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">White</span>
+<span class="n">red</span>         <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
+<span class="n">green</span>       <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Green</span>
+<span class="n">blue</span>        <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span>
+<span class="n">yellow</span>      <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Yellow</span>
+<span class="n">magenta</span>     <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Magenta</span>
+<span class="n">cyan</span>        <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Cyan</span>
+<span class="n">transparent</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Transparent</span>
 </code></pre>
 </div>
 </p>
@@ -3946,7 +3946,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Black">
 
-    <code>Black</code>
+    <code>
+      Black = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Black" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Black predefined color</p>
@@ -3955,7 +3957,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Blue">
 
-    <code>Blue</code>
+    <code>
+      Blue = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Blue" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Blue predefined color</p>
@@ -3964,7 +3968,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Cyan">
 
-    <code>Cyan</code>
+    <code>
+      Cyan = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Cyan" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Cyan predefined color</p>
@@ -3973,7 +3979,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Green">
 
-    <code>Green</code>
+    <code>
+      Green = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Green" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Green predefined color</p>
@@ -3982,7 +3990,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Magenta">
 
-    <code>Magenta</code>
+    <code>
+      Magenta = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Magenta" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Magenta predefined color</p>
@@ -3991,7 +4001,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Red">
 
-    <code>Red</code>
+    <code>
+      Red = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Red" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Red predefined color</p>
@@ -4000,7 +4012,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Transparent">
 
-    <code>Transparent</code>
+    <code>
+      Transparent = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Transparent" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Transparent (black) predefined color</p>
@@ -4009,7 +4023,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::White">
 
-    <code>White</code>
+    <code>
+      White = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::White" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>White predefined color</p>
@@ -4018,7 +4034,9 @@ overloaded operators + and *.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Color::Yellow">
 
-    <code>Yellow</code>
+    <code>
+      Yellow = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Color::Yellow" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Yellow predefined color</p>
@@ -4029,7 +4047,7 @@ overloaded operators + and *.</p>
 <h4 class="doc doc-heading" id="SF::Color.new(red,green,blue,alpha)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">red</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">green</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">blue</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">255</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">red</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">green</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">blue</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">255</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color.new(red,green,blue,alpha)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4041,14 +4059,13 @@ overloaded operators + and *.</p>
 <li><em>alpha</em> - Alpha (opacity) component (in the range <code>0..255</code>)</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1263">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1263">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Color.new(color)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color.new(color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4057,8 +4074,7 @@ overloaded operators + and *.</p>
 <li><em>color</em> - Number containing the RGBA components (in that order)</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1273">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1273">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Color.new()">
@@ -4072,15 +4088,14 @@ overloaded operators + and *.</p>
 <p>Constructs an opaque black color. It is equivalent to
 <a href="#SF::Color"><code>SF::Color</code></a>(0, 0, 0, 255).</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1250">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1250">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#!=(right)">
 
     <code>
-      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Color">Color</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Color">Color</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#!=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4092,8 +4107,7 @@ overloaded operators + and *.</p>
 </ul>
 <p><em>Returns:</em> True if colors are different, false if they are equal</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1339">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1339">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#*(right)">
@@ -4114,8 +4128,7 @@ still in the range <code>0 .. 255</code>.</p>
 </ul>
 <p><em>Returns:</em> Result of <em>left</em> * <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1382">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1382">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#+(right)">
@@ -4134,8 +4147,7 @@ Components that exceed 255 are clamped to 255.</p>
 </ul>
 <p><em>Returns:</em> Result of <em>left</em> + <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1352">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1352">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#-(right)">
@@ -4154,14 +4166,13 @@ Components below 0 are clamped to 0.</p>
 </ul>
 <p><em>Returns:</em> Result of <em>left</em> - <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1366">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1366">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#==(right)">
 
     <code>
-      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Color">Color</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Color">Color</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#==(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4173,58 +4184,53 @@ Components below 0 are clamped to 0.</p>
 </ul>
 <p><em>Returns:</em> True if colors are equal, false if they are different</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1327">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1327">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#a()">
 
     <code>
-      #a<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt8</span></code></span>
+      #a<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#a()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Alpha (opacity) component</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1313">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1313">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#a=(a)">
 
     <code>
-      #a=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #a=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#a=(a)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1316">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1316">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#b()">
 
     <code>
-      #b<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt8</span></code></span>
+      #b<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#b()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Blue component</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1305">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1305">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#b=(b)">
 
     <code>
-      #b=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">b</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #b=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">b</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#b=(b)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1308">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1308">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#dup()">
@@ -4239,33 +4245,30 @@ Components below 0 are clamped to 0.</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1399">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1399">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#g()">
 
     <code>
-      #g<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt8</span></code></span>
+      #g<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#g()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Green component</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1297">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1297">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#g=(g)">
 
     <code>
-      #g=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">g</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #g=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">g</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#g=(g)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1300">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1300">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#inspect(io)">
@@ -4276,47 +4279,43 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::Color#inspect(io)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L156">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L156">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#r()">
 
     <code>
-      #r<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt8</span></code></span>
+      #r<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#r()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Red component</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1289">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1289">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#r=(r)">
 
     <code>
-      #r=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">r</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #r=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">r</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#r=(r)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1292">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1292">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Color#to_integer()">
 
     <code>
-      #to_integer<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #to_integer<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Color#to_integer()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Retrieve the color as a 32-bit unsigned integer</p>
 <p><em>Returns:</em> Color represented as a 32-bit unsigned integer</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1283">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1283">View source</a>
 </div>
 </div>
 </div>
@@ -4387,8 +4386,8 @@ value types are passed by value.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

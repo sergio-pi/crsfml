@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Sprite.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3707,13 +3707,13 @@ uses a local <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> ins
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Declare and load a texture</span>
-<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"texture.png"</span><span class="p">)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"texture.png"</span><span class="p">)</span>
 
 <span class="c1"># Create a sprite</span>
-<span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sprite</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span>
 <span class="n">sprite</span><span class="o">.</span><span class="n">texture</span> <span class="o">=</span> <span class="n">texture</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 <span class="n">sprite</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">{</span><span class="mi">100</span><span class="p">,</span> <span class="mi">25</span><span class="p">}</span>
 
 <span class="c1"># Draw it</span>
@@ -3743,8 +3743,7 @@ uses a local <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> ins
 </ul>
 <p><em>See also:</em> <a href="#SF::Sprite#texture=(texture)"><code>texture=</code></a>, <a href="#SF::Sprite#texture_rect=(rectangle)"><code>texture_rect=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6219">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6219">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Sprite.new(texture)">
@@ -3760,8 +3759,7 @@ uses a local <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> ins
 </ul>
 <p><em>See also:</em> <a href="#SF::Sprite#texture=(texture)"><code>texture=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6208">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6208">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Sprite.new()">
@@ -3774,8 +3772,7 @@ uses a local <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> ins
 <p>Default constructor</p>
 <p>Creates an empty sprite with no source texture.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6199">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6199">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3790,8 +3787,7 @@ uses a local <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> ins
 <p><em>Returns:</em> Global color of the sprite</p>
 <p><em>See also:</em> <a href="#SF::Sprite#color=(color)"><code>color=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6297">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6297">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#color=(color)">
@@ -3811,8 +3807,7 @@ By default, the sprite's color is opaque white.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Sprite#color()"><code>color</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6267">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6267">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#dup()">
@@ -3826,8 +3821,7 @@ By default, the sprite's color is opaque white.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6444">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6444">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#finalize()">
@@ -3839,8 +3833,7 @@ By default, the sprite's color is opaque white.</p>
 <div class="doc doc-contents ">
 <p>Virtual destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6192">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6192">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#global_bounds()">
@@ -3858,8 +3851,7 @@ In other words, this function returns the bounds of the
 sprite in the global 2D world's coordinate system.</p>
 <p><em>Returns:</em> Global bounding rectangle of the entity</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6325">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6325">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#local_bounds()">
@@ -3877,14 +3869,13 @@ In other words, this function returns the bounds of the
 entity in the entity's coordinate system.</p>
 <p><em>Returns:</em> Local bounding rectangle of the entity</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6311">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6311">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#set_texture(texture,reset_rect)">
 
     <code>
-      #set_texture<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <a href="Texture.html#SF::Texture">Texture</a><span class="p">,</span> <span class="n">reset_rect</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
+      #set_texture<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">texture</span> <span class="p">:</span> <a href="Texture.html#SF::Texture">Texture</a><span class="p">,</span> <span class="n">reset_rect</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Sprite#set_texture(texture,reset_rect)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3904,8 +3895,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
 </ul>
 <p><em>See also:</em> <code>texture</code>, <a href="#SF::Sprite#texture_rect=(rectangle)"><code>texture_rect=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6240">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6240">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#texture=(texture)">
@@ -3917,8 +3907,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
 <div class="doc doc-contents ">
 <p>Shorthand for <a href="#SF::Sprite#set_texture(texture,reset_rect)"><code>#set_texture</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L262">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L262">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#texture_rect()">
@@ -3932,8 +3921,7 @@ texture. If it is false, the texture rect is left unchanged.</p>
 <p><em>Returns:</em> Texture rectangle of the sprite</p>
 <p><em>See also:</em> <a href="#SF::Sprite#texture_rect=(rectangle)"><code>texture_rect=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6287">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6287">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sprite#texture_rect=(rectangle)">
@@ -3952,8 +3940,7 @@ By default, the texture rect covers the entire texture.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Sprite#texture_rect()"><code>texture_rect</code></a>, <a href="#SF::Sprite#texture=(texture)"><code>texture=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6254">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6254">View source</a>
 </div>
 </div>
 </div>
@@ -4024,8 +4011,8 @@ By default, the texture rect covers the entire texture.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

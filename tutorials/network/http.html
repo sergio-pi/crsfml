@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/network/http.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3509,15 +3509,15 @@
 <p>For basic interaction between your program and an HTTP server, it should be enough.</p>
 <h2 id="sfhttp">SF::Http<a class="headerlink" href="#sfhttp" title="Permanent link">#</a></h2>
 <p>To communicate with an HTTP server you must use the <a href="../../api/SF/Http.html#SF::Http">SF::Http</a> class.</p>
-<div class="highlight"><pre><span></span><code><span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">http</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span>
 <span class="n">http</span><span class="o">.</span><span class="n">set_host</span><span class="p">(</span><span class="s2">&quot;http://example.org/&quot;</span><span class="p">)</span>
 
 <span class="c1"># or</span>
-<span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://example.org/&quot;</span><span class="p">)</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://example.org/&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that setting the host doesn't trigger any connection. A temporary connection is created for each request.</p>
 <p>The only other method in <a href="../../api/SF/Http.html#SF::Http">SF::Http</a>, sends requests. This is basically all that the class does.</p>
-<div class="highlight"><pre><span></span><code><span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">request</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span>
 <span class="c1"># fill the request...</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </code></pre></div>
@@ -3530,8 +3530,8 @@
 <li>The header: a set of fields with key and value</li>
 <li>The body of the page (used only with the POST method)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span>
-<span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">::</span><span class="n">Post</span>
+<div class="highlight"><pre><span></span><code><span class="n">request</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span>
+<span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">::</span><span class="n">Post</span>
 <span class="n">request</span><span class="o">.</span><span class="n">uri</span> <span class="o">=</span> <span class="s2">&quot;/index.html&quot;</span>
 <span class="n">request</span><span class="o">.</span><span class="n">set_http_version</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># HTTP 1.1</span>
 <span class="n">request</span><span class="o">.</span><span class="n">set_field</span><span class="p">(</span><span class="s2">&quot;From&quot;</span><span class="p">,</span> <span class="s2">&quot;me&quot;</span><span class="p">)</span>
@@ -3560,13 +3560,13 @@
 <p>Here is a short example that demonstrates how to perform a simple task: Sending a score to an online database.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">send_score</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
   <span class="c1"># prepare the request</span>
-  <span class="n">request</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/send-score.html&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">::</span><span class="n">Post</span><span class="p">)</span>
+  <span class="n">request</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;/send-score.html&quot;</span><span class="p">,</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">::</span><span class="n">Request</span><span class="o">::</span><span class="n">Post</span><span class="p">)</span>
 
   <span class="c1"># encode the parameters in the request body</span>
   <span class="n">request</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;name=&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;&amp;score=&quot;</span> <span class="o">+</span> <span class="n">score</span>
 
   <span class="c1"># send the request</span>
-  <span class="n">http</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://www.myserver.com/&quot;</span><span class="p">)</span>
+  <span class="n">http</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Http</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;http://www.myserver.com/&quot;</span><span class="p">)</span>
   <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">send_request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 
   <span class="c1"># check the status</span>
@@ -3656,8 +3656,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

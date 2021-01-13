@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Text.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3655,13 +3655,13 @@ uses a local <a href="Font.html#SF::Font"><code>SF::Font</code></a> instance for
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Declare and load a font</span>
-<span class="n">font</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"arial.ttf"</span><span class="p">)</span>
+<span class="n">font</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"arial.ttf"</span><span class="p">)</span>
 
 <span class="c1"># Create a text</span>
-<span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">,</span> <span class="n">font</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">,</span> <span class="n">font</span><span class="p">)</span>
 <span class="n">text</span><span class="o">.</span><span class="n">character_size</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">text</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Bold</span>
-<span class="n">text</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
+<span class="n">text</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Bold</span>
+<span class="n">text</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
 
 <span class="c1"># Draw it</span>
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span> <span class="n">text</span>
@@ -3679,7 +3679,7 @@ uses a local <a href="Font.html#SF::Font"><code>SF::Font</code></a> instance for
 <h4 class="doc doc-heading" id="SF::Text.new(string,font,character_size)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">font</span> <span class="p">:</span> <a href="Font.html#SF::Font">Font</a><span class="p">,</span> <span class="n">character_size</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">font</span> <span class="p">:</span> <a href="Font.html#SF::Font">Font</a><span class="p">,</span> <span class="n">character_size</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text.new(string,font,character_size)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3696,8 +3696,7 @@ font that supports that size is used.</p>
 <li><em>character_size</em> - Base size of characters, in pixels</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6537">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6537">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Text.new()">
@@ -3710,15 +3709,14 @@ font that supports that size is used.</p>
 <p>Default constructor</p>
 <p>Creates an empty text.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6521">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6521">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#character_size()">
 
     <code>
-      #character_size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #character_size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#character_size()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3726,14 +3724,13 @@ font that supports that size is used.</p>
 <p><em>Returns:</em> Size of the characters, in pixels</p>
 <p><em>See also:</em> <a href="#SF::Text#character_size=(size)"><code>character_size=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6704">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6704">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#character_size=(size)">
 
     <code>
-      #character_size=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">size</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #character_size=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">size</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#character_size=(size)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3750,8 +3747,7 @@ font that supports that size is used.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#character_size()"><code>character_size</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6583">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6583">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#color()">
@@ -3768,8 +3764,7 @@ font that supports that size is used.</p>
 of a single global color.
 Use <a href="#SF::Text#fill_color()"><code>fill_color()</code></a> or outline_color() instead.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6744">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6744">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#color=(color)">
@@ -3791,8 +3786,7 @@ will cause the outline to be displayed in the fill area of the text.</p>
 of a single global color.
 Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or outline_color=() instead.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6640">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6640">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#dup()">
@@ -3806,8 +3800,7 @@ Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or out
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6937">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6937">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#fill_color()">
@@ -3821,8 +3814,7 @@ Use <a href="#SF::Text#fill_color=(color)"><code>fill_color=()</code></a> or out
 <p><em>Returns:</em> Fill color of the text</p>
 <p><em>See also:</em> <a href="#SF::Text#fill_color=(color)"><code>fill_color=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6754">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6754">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#fill_color=(color)">
@@ -3841,8 +3833,7 @@ will cause the outline to be displayed in the fill area of the text.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#fill_color()"><code>fill_color</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6652">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6652">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#finalize()">
@@ -3854,14 +3845,13 @@ will cause the outline to be displayed in the fill area of the text.</p>
 <div class="doc doc-contents ">
 <p>Virtual destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6499">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6499">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#find_character_pos(index)">
 
     <code>
-      #find_character_pos<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
+      #find_character_pos<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#find_character_pos(index)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3877,8 +3867,7 @@ the string is returned.</p>
 </ul>
 <p><em>Returns:</em> Position of the character</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6790">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6790">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#font=(font)">
@@ -3900,8 +3889,7 @@ use it, the behavior is undefined.</p>
 </ul>
 <p><em>See also:</em> <code>font</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6564">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6564">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#global_bounds()">
@@ -3919,14 +3907,13 @@ In other words, this function returns the bounds of the
 text in the global 2D world's coordinate system.</p>
 <p><em>Returns:</em> Global bounding rectangle of the entity</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6818">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6818">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#letter_spacing()">
 
     <code>
-      #letter_spacing<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #letter_spacing<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#letter_spacing()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3934,14 +3921,13 @@ text in the global 2D world's coordinate system.</p>
 <p><em>Returns:</em> Size of the letter spacing factor</p>
 <p><em>See also:</em> <a href="#SF::Text#letter_spacing=(spacing_factor)"><code>letter_spacing=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6713">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6713">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#letter_spacing=(spacing_factor)">
 
     <code>
-      #letter_spacing=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">spacing_factor</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #letter_spacing=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">spacing_factor</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#letter_spacing=(spacing_factor)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3959,14 +3945,13 @@ By default the letter spacing factor is 1.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#letter_spacing()"><code>letter_spacing</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6612">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6612">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#line_spacing()">
 
     <code>
-      #line_spacing<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #line_spacing<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#line_spacing()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3974,14 +3959,13 @@ By default the letter spacing factor is 1.</p>
 <p><em>Returns:</em> Size of the line spacing factor</p>
 <p><em>See also:</em> <a href="#SF::Text#line_spacing=(spacing_factor)"><code>line_spacing=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6722">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6722">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#line_spacing=(spacing_factor)">
 
     <code>
-      #line_spacing=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">spacing_factor</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #line_spacing=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">spacing_factor</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#line_spacing=(spacing_factor)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3994,8 +3978,7 @@ between lines. By default the line spacing factor is 1.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#line_spacing()"><code>line_spacing</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6595">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6595">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#local_bounds()">
@@ -4013,8 +3996,7 @@ In other words, this function returns the bounds of the
 entity in the entity's coordinate system.</p>
 <p><em>Returns:</em> Local bounding rectangle of the entity</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6804">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6804">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#outline_color()">
@@ -4028,8 +4010,7 @@ entity in the entity's coordinate system.</p>
 <p><em>Returns:</em> Outline color of the text</p>
 <p><em>See also:</em> <a href="#SF::Text#outline_color=(color)"><code>outline_color=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6764">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6764">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#outline_color=(color)">
@@ -4046,14 +4027,13 @@ entity in the entity's coordinate system.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#outline_color()"><code>outline_color</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6662">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6662">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#outline_thickness()">
 
     <code>
-      #outline_thickness<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #outline_thickness<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#outline_thickness()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4061,14 +4041,13 @@ entity in the entity's coordinate system.</p>
 <p><em>Returns:</em> Outline thickness of the text, in pixels</p>
 <p><em>See also:</em> <a href="#SF::Text#outline_thickness=(thickness)"><code>outline_thickness=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6774">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6774">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#outline_thickness=(thickness)">
 
     <code>
-      #outline_thickness=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">thickness</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #outline_thickness=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">thickness</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#outline_thickness=(thickness)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4081,14 +4060,13 @@ thickness will cause distorted rendering.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#outline_thickness()"><code>outline_thickness</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6675">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6675">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#string()">
 
     <code>
-      #string<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">String</span></code></span>
+      #string<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">String</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#string()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4096,14 +4074,13 @@ thickness will cause distorted rendering.</p>
 <p><em>Returns:</em> Text's string</p>
 <p><em>See also:</em> <a href="#SF::Text#string=(string)"><code>string=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6683">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6683">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#string=(string)">
 
     <code>
-      #string=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span></code></span>
+      #string=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">string</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#string=(string)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4114,14 +4091,13 @@ thickness will cause distorted rendering.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#string()"><code>string</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6549">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6549">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#style()">
 
     <code>
-      #style<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #style<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Text#style()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4129,8 +4105,7 @@ thickness will cause distorted rendering.</p>
 <p><em>Returns:</em> Text's style</p>
 <p><em>See also:</em> <a href="#SF::Text#style=(style)"><code>style=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6731">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6731">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Text#style=(style)">
@@ -4149,8 +4124,7 @@ The default style is <code>SF::Text::Regular</code>.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Text#style()"><code>style</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6624">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6624">View source</a>
 </div>
 </div>
 </div>
@@ -4221,8 +4195,8 @@ The default style is <code>SF::Text::Regular</code>.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

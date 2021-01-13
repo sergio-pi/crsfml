@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/CircleShape.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3631,9 +3631,9 @@ class <code>SF::CircleShape</code>
 functions of <a href="Shape.html#SF::Shape"><code>SF::Shape</code></a> (outline, color, texture, ...).</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="n">circle</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">CircleShape</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">circle</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">CircleShape</span><span class="o">.</span><span class="n">new</span>
 <span class="n">circle</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">150</span>
-<span class="n">circle</span><span class="o">.</span><span class="n">outline_color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
+<span class="n">circle</span><span class="o">.</span><span class="n">outline_color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
 <span class="n">circle</span><span class="o">.</span><span class="n">outline_thickness</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">circle</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">}</span>
 <span class="o">...</span>
@@ -3655,7 +3655,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 <h4 class="doc doc-heading" id="SF::CircleShape.new(radius,point_count)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="nb">Number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">point_count</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="n">Number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">point_count</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape.new(radius,point_count)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3665,8 +3665,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 <li><em>point_count</em> - Number of points composing the circle</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2118">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2118">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3681,8 +3680,7 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2341">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2341">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#finalize()">
@@ -3694,14 +3692,13 @@ equilateral triangle, square, pentagon, hexagon, ...</p>
 <div class="doc doc-contents ">
 <p>Virtual destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2110">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2110">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#get_point(index)">
 
     <code>
-      #get_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
+      #get_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape#get_point(index)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3715,14 +3712,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 </ul>
 <p><em>Returns:</em> index-th point of the shape</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2166">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2166">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#point_count()">
 
     <code>
-      #point_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #point_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape#point_count()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3730,14 +3726,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 <p><em>Returns:</em> Number of points of the circle</p>
 <p><em>See also:</em> <a href="#SF::CircleShape#point_count=(count)"><code>point_count=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2152">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2152">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#point_count=(count)">
 
     <code>
-      #point_count=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">count</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #point_count=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">count</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape#point_count=(count)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3747,14 +3742,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::CircleShape#point_count()"><code>point_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2144">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2144">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#radius()">
 
     <code>
-      #radius<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #radius<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape#radius()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3762,14 +3756,13 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 <p><em>Returns:</em> Radius of the circle</p>
 <p><em>See also:</em> <a href="#SF::CircleShape#radius=(radius)"><code>radius=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2135">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2135">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::CircleShape#radius=(radius)">
 
     <code>
-      #radius=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #radius=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::CircleShape#radius=(radius)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3779,8 +3772,7 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::CircleShape#radius()"><code>radius</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2127">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2127">View source</a>
 </div>
 </div>
 </div>
@@ -3851,8 +3843,8 @@ The result is undefined if <em>index</em> is out of the valid range.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

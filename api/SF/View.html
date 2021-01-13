@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/View.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3798,17 +3798,17 @@ Then, objects drawn in this render target will be
 affected by the view until you use another view.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span>
-<span class="n">view</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># Initialize the view to a rectangle located at (100, 100) and with a size of 400x200</span>
-<span class="n">view</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+<span class="n">view</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
 <span class="c1"># Rotate it by 45 degrees</span>
 <span class="n">view</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
 <span class="c1"># Set its target viewport to be half of the window</span>
-<span class="n">view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
 <span class="c1"># Apply it</span>
 <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">view</span>
@@ -3832,7 +3832,7 @@ affected by the view until you use another view.</p>
 <h4 class="doc doc-heading" id="SF::View.new(center,size)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">size</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">size</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View.new(center,size)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3842,8 +3842,7 @@ affected by the view until you use another view.</p>
 <li><em>size</em> - Size of zone to display</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4254">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4254">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::View.new(rectangle)">
@@ -3858,8 +3857,7 @@ affected by the view until you use another view.</p>
 <li><em>rectangle</em> - Rectangle defining the zone to display</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4246">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4246">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::View.new()">
@@ -3872,8 +3870,7 @@ affected by the view until you use another view.</p>
 <p>Default constructor</p>
 <p>This constructor creates a default view of (0, 0, 1000, 1000)</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4239">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4239">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3888,14 +3885,13 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Center of the view</p>
 <p><em>See also:</em> <a href="#SF::View#size()"><code>size</code></a>, <a href="#SF::View#center=(center)"><code>center=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4336">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4336">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#center=(center)">
 
     <code>
-      #center=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #center=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#center=(center)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3905,8 +3901,7 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#size=(size)"><code>size=</code></a>, <a href="#SF::View#center()"><code>center</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4274">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4274">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#dup()">
@@ -3920,8 +3915,7 @@ affected by the view until you use another view.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4449">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4449">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#finalize()">
@@ -3932,8 +3926,7 @@ affected by the view until you use another view.</p>
   <a class="headerlink" href="#SF::View#finalize()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4232">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4232">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#inverse_transform()">
@@ -3948,14 +3941,13 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Inverse of the projection transform defining the view</p>
 <p><em>See also:</em> <a href="#SF::View#transform()"><code>transform</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4431">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4431">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#move(offset_x,offset_y)">
 
     <code>
-      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">offset_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">offset_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#move(offset_x,offset_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3966,14 +3958,13 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#center=(center)"><code>center=</code></a>, <a href="#SF::View#rotate(angle)"><code>rotate</code></a>, <a href="#SF::View#zoom(factor)"><code>zoom</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4376">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4376">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#move(offset)">
 
     <code>
-      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#move(offset)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3983,8 +3974,7 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#center=(center)"><code>center=</code></a>, <a href="#SF::View#rotate(angle)"><code>rotate</code></a>, <a href="#SF::View#zoom(factor)"><code>zoom</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4384">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4384">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#reset(rectangle)">
@@ -4001,14 +3991,13 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#center=(center)"><code>center=</code></a>, <a href="#SF::View#size=(size)"><code>size=</code></a>, <a href="#SF::View#rotation=(angle)"><code>rotation=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4328">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4328">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#rotate(angle)">
 
     <code>
-      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#rotate(angle)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4018,14 +4007,13 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#rotation=(angle)"><code>rotation=</code></a>, <a href="#SF::View#move(offset_x,offset_y)"><code>move</code></a>, <a href="#SF::View#zoom(factor)"><code>zoom</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4393">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4393">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#rotation()">
 
     <code>
-      #rotation<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #rotation<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#rotation()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4033,14 +4021,13 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Rotation angle of the view, in degrees</p>
 <p><em>See also:</em> <a href="#SF::View#rotation=(angle)"><code>rotation=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4356">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4356">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#rotation=(angle)">
 
     <code>
-      #rotation=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #rotation=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#rotation=(angle)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4051,14 +4038,13 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#rotation()"><code>rotation</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4303">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4303">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#set_center(x,y)">
 
     <code>
-      #set_center<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #set_center<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#set_center(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4069,14 +4055,13 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#size=(size)"><code>size=</code></a>, <a href="#SF::View#center()"><code>center</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4266">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4266">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#set_size(width,height)">
 
     <code>
-      #set_size<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #set_size<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#set_size(width,height)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4087,8 +4072,7 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#center=(center)"><code>center=</code></a>, <a href="#SF::View#center()"><code>center</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4284">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4284">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#size()">
@@ -4102,14 +4086,13 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Size of the view</p>
 <p><em>See also:</em> <a href="#SF::View#center()"><code>center</code></a>, <a href="#SF::View#size=(size)"><code>size=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4346">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4346">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#size=(size)">
 
     <code>
-      #size=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">size</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #size=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">size</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#size=(size)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4119,8 +4102,7 @@ affected by the view until you use another view.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#center=(center)"><code>center=</code></a>, <a href="#SF::View#center()"><code>center</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4292">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4292">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#transform()">
@@ -4135,8 +4117,7 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Projection transform defining the view</p>
 <p><em>See also:</em> <a href="#SF::View#inverse_transform()"><code>inverse_transform</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4419">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4419">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#viewport()">
@@ -4150,8 +4131,7 @@ affected by the view until you use another view.</p>
 <p><em>Returns:</em> Viewport rectangle, expressed as a factor of the target size</p>
 <p><em>See also:</em> <a href="#SF::View#viewport=(viewport)"><code>viewport=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4365">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4365">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#viewport=(viewport)">
@@ -4173,14 +4153,13 @@ By default, a view has a viewport which covers the entire target.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::View#viewport()"><code>viewport</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4318">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4318">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::View#zoom(factor)">
 
     <code>
-      #zoom<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #zoom<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::View#zoom(factor)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4200,8 +4179,7 @@ screen grows or shrinks.
 </ul>
 <p><em>See also:</em> <a href="#SF::View#size=(size)"><code>size=</code></a>, <a href="#SF::View#move(offset_x,offset_y)"><code>move</code></a>, <a href="#SF::View#rotate(angle)"><code>rotate</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4409">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4409">View source</a>
 </div>
 </div>
 </div>
@@ -4272,8 +4250,8 @@ screen grows or shrinks.
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

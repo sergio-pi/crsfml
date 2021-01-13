@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/audio/recording.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3465,13 +3465,13 @@
 <p>The most common use for captured audio data is for it to be saved to a sound buffer (<a href="../../api/SF/SoundBuffer.html#SF::SoundBuffer">SF::SoundBuffer</a>) so that it can either be played or saved to a file.</p>
 <p>This can be achieved with the very simple interface of the <a href="../../api/SF/SoundBufferRecorder.html#SF::SoundBufferRecorder">SF::SoundBufferRecorder</a> class:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># first check if an input audio device is available on the system</span>
-<span class="k">if</span> <span class="o">!</span><span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
+<span class="k">if</span> <span class="o">!</span><span class="n">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
   <span class="c1"># error: audio capture is not available on this system</span>
   <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="c1"># create the recorder</span>
-<span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
+<span class="n">recorder</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># start the capture</span>
 <span class="n">recorder</span><span class="o">.</span><span class="n">start</span>
@@ -3495,7 +3495,7 @@
 <ul>
 <li>Play it directly</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">sound</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
 <span class="n">sound</span><span class="o">.</span><span class="n">play</span>
 </code></pre></div>
 <ul>
@@ -3511,13 +3511,13 @@
 <p>The name of the currently used device can be obtained by calling <code>device</code>. If you don't choose a device yourself, the default device will be used. Its name can be obtained through the <code>default_device</code> class method.</p>
 <p>Here is a small example of how to set the input device:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># get the available sound input device names</span>
-<span class="n">available_devices</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span><span class="o">.</span><span class="n">available_devices</span>
+<span class="n">available_devices</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundRecorder</span><span class="o">.</span><span class="n">available_devices</span>
 
 <span class="c1"># choose a device</span>
 <span class="n">input_device</span> <span class="o">=</span> <span class="n">available_devices</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 
 <span class="c1"># create the recorder</span>
-<span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
+<span class="n">recorder</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># set the device</span>
 <span class="k">unless</span> <span class="n">recorder</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">input_device</span>
@@ -3543,7 +3543,7 @@ There are also two additional virtual functions that you can optionally override
 
 Here is the skeleton of a complete derived class:
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyRecorder</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MyRecorder</span> <span class="o">&lt;</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
   <span class="k">def</span> <span class="nf">on_start</span> <span class="c1"># optional</span>
     <span class="c1"># initialize whatever has to be done before the capture starts</span>
     <span class="o">...</span>
@@ -3656,8 +3656,8 @@ If you're not familiar enough with threading, you can refer to the [correspondin
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

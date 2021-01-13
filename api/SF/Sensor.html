@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Sensor.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3476,15 +3476,15 @@ all disabled by default. You must call <code>SF::Sensor.enabled=</code> for each
 sensor in which you are interested.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="k">if</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">available?</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">)</span>
+<pre><span></span><code><span class="k">if</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">available?</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">)</span>
   <span class="c1"># gravity sensor is available</span>
 <span class="k">end</span>
 
 <span class="c1"># enable the gravity sensor</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">set_enabled</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">set_enabled</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 
 <span class="c1"># get the current value of gravity</span>
-<span class="n">gravity</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">)</span>
+<span class="n">gravity</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Sensor</span><span class="o">::</span><span class="n">Gravity</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -3494,7 +3494,7 @@ sensor in which you are interested.</p>
 <h4 class="doc doc-heading" id="SF::Sensor.available?(sensor)">
 
     <code>
-      .available?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sensor</span> <span class="p">:</span> <a href="Sensor/Type.html#SF::Sensor::Type">Sensor::Type</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      .available?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sensor</span> <span class="p">:</span> <a href="Sensor/Type.html#SF::Sensor::Type">Sensor::Type</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Sensor.available?(sensor)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3504,8 +3504,7 @@ sensor in which you are interested.</p>
 </ul>
 <p><em>Returns:</em> True if the sensor is available, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1203">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1203">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Sensor.get_value(sensor)">
@@ -3521,14 +3520,13 @@ sensor in which you are interested.</p>
 </ul>
 <p><em>Returns:</em> The current sensor value</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1225">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1225">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Sensor.set_enabled(sensor,enabled)">
 
     <code>
-      .set_enabled<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sensor</span> <span class="p">:</span> <a href="Sensor/Type.html#SF::Sensor::Type">Sensor::Type</a><span class="p">,</span> <span class="n">enabled</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+      .set_enabled<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sensor</span> <span class="p">:</span> <a href="Sensor/Type.html#SF::Sensor::Type">Sensor::Type</a><span class="p">,</span> <span class="n">enabled</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Sensor.set_enabled(sensor,enabled)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3542,8 +3540,7 @@ sending events of the corresponding type.</p>
 <li><em>enabled</em> - True to enable, false to disable</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1217">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1217">View source</a>
 </div>
 </div>
 </div>
@@ -3614,8 +3611,8 @@ sending events of the corresponding type.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

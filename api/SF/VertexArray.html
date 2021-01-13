@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/VertexArray.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3702,11 +3702,11 @@ array of vertices and a primitives type.</p>
 is not transformable.</p>
 <p>Example:
 <div class="highlight">
-<pre><span></span><code><span class="n">lines</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">LineStrip</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">lines</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="n">lines</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="n">lines</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<pre><span></span><code><span class="n">lines</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">VertexArray</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">LineStrip</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">lines</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">lines</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">lines</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">lines</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
 </code></pre>
@@ -3723,7 +3723,7 @@ is not transformable.</p>
 <h4 class="doc doc-heading" id="SF::VertexArray.new(type,vertex_count)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <a href="PrimitiveType.html#SF::PrimitiveType">PrimitiveType</a><span class="p">,</span> <span class="n">vertex_count</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <a href="PrimitiveType.html#SF::PrimitiveType">PrimitiveType</a><span class="p">,</span> <span class="n">vertex_count</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VertexArray.new(type,vertex_count)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3733,8 +3733,7 @@ is not transformable.</p>
 <li><em>vertex_count</em> - Initial number of vertices in the array</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1608">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1608">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::VertexArray.new()">
@@ -3747,15 +3746,14 @@ is not transformable.</p>
 <p>Default constructor</p>
 <p>Creates an empty vertex array.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1600">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1600">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#[](index)">
 
     <code>
-      #[]<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vertex.html#SF::Vertex">Vertex</a></code></span>
+      #[]<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vertex.html#SF::Vertex">Vertex</a></code></span>
     </code>
   <a class="headerlink" href="#SF::VertexArray#[](index)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3768,14 +3766,13 @@ is not transformable.</p>
 <p><em>Returns:</em> The index-th vertex</p>
 <p><em>See also:</em> <a href="#SF::VertexArray#vertex_count()"><code>vertex_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1640">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1640">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#[]=(index,value)">
 
     <code>
-      #[]=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <a href="Vertex.html#SF::Vertex">Vertex</a><span class="p">)</span></code></span>
+      #[]=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">index</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <a href="Vertex.html#SF::Vertex">Vertex</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VertexArray#[]=(index,value)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3787,8 +3784,7 @@ is not transformable.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::VertexArray#vertex_count()"><code>vertex_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1627">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1627">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#append(vertex)">
@@ -3803,8 +3799,7 @@ is not transformable.</p>
 <li><em>vertex</em> - Vertex to add</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1669">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1669">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#bounds()">
@@ -3819,8 +3814,7 @@ is not transformable.</p>
 that contains all the vertices of the array.</p>
 <p><em>Returns:</em> Bounding rectangle of the vertex array</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1700">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1700">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#clear()">
@@ -3836,8 +3830,7 @@ It doesn't deallocate the corresponding memory, so that
 adding new vertices after clearing doesn't involve
 reallocating all the memory.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1651">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1651">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#dup()">
@@ -3851,8 +3844,7 @@ reallocating all the memory.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1731">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1731">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#finalize()">
@@ -3863,8 +3855,7 @@ reallocating all the memory.</p>
   <a class="headerlink" href="#SF::VertexArray#finalize()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1593">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1593">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#primitive_type()">
@@ -3877,8 +3868,7 @@ reallocating all the memory.</p>
 <p>Get the type of primitives drawn by the vertex array</p>
 <p><em>Returns:</em> Primitive type</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1690">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1690">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#primitive_type=(type)">
@@ -3904,14 +3894,13 @@ The default primitive type is <code>SF::Points</code>.</p>
 </li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1684">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1684">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#resize(vertex_count)">
 
     <code>
-      #resize<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_count</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #resize<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_count</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VertexArray#resize(vertex_count)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3925,22 +3914,20 @@ are removed from the array.</p>
 <li><em>vertex_count</em> - New size of the array (number of vertices)</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1663">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1663">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VertexArray#vertex_count()">
 
     <code>
-      #vertex_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #vertex_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VertexArray#vertex_count()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Return the vertex count</p>
 <p><em>Returns:</em> Number of vertices in the array</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1615">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1615">View source</a>
 </div>
 </div>
 </div>
@@ -4011,8 +3998,8 @@ are removed from the array.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

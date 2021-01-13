@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/graphics/text.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3478,7 +3478,7 @@
 <h2 id="loading-a-font">Loading a font<a class="headerlink" href="#loading-a-font" title="Permanent link">#</a></h2>
 <p>Before drawing any text, you need to have an available font, just like any other program that prints text. Fonts are encapsulated in the <a href="../../api/SF/Font.html#SF::Font">SF::Font</a> class, which provides three main features: loading a font, getting glyphs (i.e. visual characters) from it, and reading its attributes. In a typical program, you'll only have to make use of the first feature, loading the font, so let's focus on that first.</p>
 <p>The most common way of loading a font is from a file on disk, which is done with the <code>from_file</code> class method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">font</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;DejaVuSans.ttf&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">font</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Font</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;DejaVuSans.ttf&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that SFML won't load your system fonts automatically, i.e. <code>SF::Font.from_file("Courier New")</code> won't work. Firstly, because SFML requires <em>file names</em>, not font names, and secondly because SFML doesn't have magical access to your system's font folder. If you want to load a font, you will need to include the font file with your application, just like every other resource (images, sounds, ...).</p>
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is: When you run the application from your desktop environment, the working directory is the executable folder. However, when you launch your program from your IDE (Visual Studio, Code::Blocks, ...) the working directory might sometimes be set to the <em>project</em> directory instead. This can usually be changed quite easily in the project settings.</p>
@@ -3487,7 +3487,7 @@
 <p>That's all you need to do. Once your font is loaded, you can start drawing text.</p>
 <h2 id="drawing-text">Drawing text<a class="headerlink" href="#drawing-text" title="Permanent link">#</a></h2>
 <p>To draw text, you will be using the <a href="../../api/SF/Text.html#SF::Text">SF::Text</a> class. It's very simple to use:</p>
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># select the font</span>
 <span class="n">text</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">font</span> <span class="c1"># font is a SF::Font</span>
@@ -3499,10 +3499,10 @@
 <span class="n">text</span><span class="o">.</span><span class="n">character_size</span> <span class="o">=</span> <span class="mi">24</span> <span class="c1"># in pixels, not points!</span>
 
 <span class="c1"># set the color</span>
-<span class="n">text</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
+<span class="n">text</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span>
 
 <span class="c1"># set the text style</span>
-<span class="n">text</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Bold</span> <span class="o">|</span> <span class="no">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Underlined</span><span class="p">)</span>
+<span class="n">text</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Bold</span> <span class="o">|</span> <span class="n">SF</span><span class="o">::</span><span class="n">Text</span><span class="o">::</span><span class="n">Underlined</span><span class="p">)</span>
 
 <span class="o">...</span>
 
@@ -3598,8 +3598,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

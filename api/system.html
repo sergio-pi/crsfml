@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/system.html">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3533,7 +3533,9 @@ module <code>SF</code>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::SFML_VERSION">
 
-    <code>SFML_VERSION</code>
+    <code>
+      SFML_VERSION = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="s2">"2.5.1"</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::SFML_VERSION" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
@@ -3541,7 +3543,9 @@ module <code>SF</code>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::VERSION">
 
-    <code>VERSION</code>
+    <code>
+      VERSION = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="s2">"2.5.2"</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::VERSION" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
@@ -3551,7 +3555,7 @@ module <code>SF</code>
 <h4 class="doc doc-heading" id="SF#microseconds(amount)">
 
     <code>
-      #microseconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
+      #microseconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
     </code>
   <a class="headerlink" href="#SF#microseconds(amount)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3562,14 +3566,13 @@ module <code>SF</code>
 <p><em>Returns:</em> Time value constructed from the amount of microseconds</p>
 <p><em>See also:</em> <a href="#SF#seconds(amount)"><code>seconds</code></a>, <a href="#SF#milliseconds(amount)"><code>milliseconds</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L283">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L283">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#milliseconds(amount)">
 
     <code>
-      #milliseconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
+      #milliseconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
     </code>
   <a class="headerlink" href="#SF#milliseconds(amount)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3580,14 +3583,13 @@ module <code>SF</code>
 <p><em>Returns:</em> Time value constructed from the amount of milliseconds</p>
 <p><em>See also:</em> <a href="#SF#seconds(amount)"><code>seconds</code></a>, <a href="#SF#microseconds(amount)"><code>microseconds</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L271">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L271">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#seconds(amount)">
 
     <code>
-      #seconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
+      #seconds<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">amount</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="SF/Time.html#SF::Time">Time</a></code></span>
     </code>
   <a class="headerlink" href="#SF#seconds(amount)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3598,8 +3600,7 @@ module <code>SF</code>
 <p><em>Returns:</em> Time value constructed from the amount of seconds</p>
 <p><em>See also:</em> <a href="#SF#milliseconds(amount)"><code>milliseconds</code></a>, <a href="#SF#microseconds(amount)"><code>microseconds</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L259">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L259">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#sleep(duration)">
@@ -3616,8 +3617,7 @@ threads, as it doesn't consume any CPU power.</p>
 <li><em>duration</em> - Time to sleep</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L762">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/obj.cr#L762">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#vector2(x,y)">
@@ -3631,36 +3631,33 @@ threads, as it doesn't consume any CPU power.</p>
 <p>If arguments are mixed between <code>Int32</code> and <code>Float</code>,
 they are converted to match <a href="SF/Vector2f.html#SF::Vector2f"><code>Vector2f</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L117">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L117">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#vector2f(x,y)">
 
     <code>
-      #vector2f<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #vector2f<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF#vector2f(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <a href="SF/Vector2.html#SF::Vector2.new(x,y)"><code>Vector2f.new</code></a></p>
 <p>Converts arguments to <code>Float32</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L144">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L144">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#vector2i(x,y)">
 
     <code>
-      #vector2i<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #vector2i<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF#vector2i(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <a href="SF/Vector2.html#SF::Vector2.new(x,y)"><code>Vector2i.new</code></a></p>
 <p>Converts arguments to <code>Int32</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L150">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L150">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#vector3(x,y,z)">
@@ -3672,22 +3669,20 @@ they are converted to match <a href="SF/Vector2f.html#SF::Vector2f"><code>Vector
 <div class="doc doc-contents ">
 <p>Shorthand for <a href="SF/Vector3.html#SF::Vector3.new(x,y,z)"><code>Vector3.new</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L250">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L250">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF#vector3f(x,y,z)">
 
     <code>
-      #vector3f<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #vector3f<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF#vector3f(x,y,z)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <a href="SF/Vector3.html#SF::Vector3.new(x,y,z)"><code>Vector3f.new</code></a></p>
 <p>Converts arguments to <code>Float32</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L259">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/system/system.cr#L259">View source</a>
 </div>
 </div>
 </div>
@@ -3744,8 +3739,8 @@ they are converted to match <a href="SF/Vector2f.html#SF::Vector2f"><code>Vector
       
     </div>
     
-      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

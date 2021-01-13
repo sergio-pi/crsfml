@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Sound.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3702,9 +3702,9 @@ as long as the sound uses it. Note that multiple sounds
 can use the same sound buffer at the same time.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="n">buffer</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"sound.wav"</span><span class="p">)</span>
+<pre><span></span><code><span class="n">buffer</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBuffer</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"sound.wav"</span><span class="p">)</span>
 
-<span class="n">sound</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
+<span class="n">sound</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sound</span><span class="o">.</span><span class="n">new</span>
 <span class="n">sound</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
 <span class="n">sound</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
 </code></pre>
@@ -3726,8 +3726,7 @@ can use the same sound buffer at the same time.</p>
 <li><em>buffer</em> - Sound buffer containing the audio data to play with the sound</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1091">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1091">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Sound.new()">
@@ -3739,8 +3738,7 @@ can use the same sound buffer at the same time.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1084">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1084">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3760,8 +3758,7 @@ as it is attached to the sound.</p>
 </ul>
 <p><em>See also:</em> <code>buffer</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1141">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1141">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#finalize()">
@@ -3773,14 +3770,13 @@ as it is attached to the sound.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1097">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1097">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#loop()">
 
     <code>
-      #loop<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #loop<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Sound#loop()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3788,14 +3784,13 @@ as it is attached to the sound.</p>
 <p><em>Returns:</em> True if the sound is looping, false otherwise</p>
 <p><em>See also:</em> <a href="#SF::Sound#loop=(loop)"><code>loop=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1183">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1183">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#loop=(loop)">
 
     <code>
-      #loop=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="nb">loop</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+      #loop=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="nb">loop</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Sound#loop=(loop)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3809,8 +3804,7 @@ The default looping state for sound is false.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Sound#loop()"><code>loop</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1156">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1156">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#pause()">
@@ -3825,8 +3819,7 @@ The default looping state for sound is false.</p>
 otherwise (sound already paused or stopped) it has no effect.</p>
 <p><em>See also:</em> <a href="#SF::Sound#play()"><code>play</code></a>, <a href="#SF::Sound#stop()"><code>stop</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1119">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1119">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#play()">
@@ -3844,8 +3837,7 @@ This function uses its own thread so that it doesn't block
 the rest of the program while the sound is played.</p>
 <p><em>See also:</em> <a href="#SF::Sound#pause()"><code>pause</code></a>, <a href="#SF::Sound#stop()"><code>stop</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1110">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1110">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#playing_offset()">
@@ -3859,8 +3851,7 @@ the rest of the program while the sound is played.</p>
 <p><em>Returns:</em> Current playing position, from the beginning of the sound</p>
 <p><em>See also:</em> <a href="#SF::Sound#playing_offset=(time_offset)"><code>playing_offset=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1192">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1192">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#playing_offset=(time_offset)">
@@ -3880,8 +3871,7 @@ the sound will reset its position.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Sound#playing_offset()"><code>playing_offset</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1169">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1169">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#reset_buffer()">
@@ -3897,8 +3887,7 @@ to use it. It is called by the <a href="SoundBuffer.html#SF::SoundBuffer"><code>
 this sound uses, when it is destroyed in order to prevent
 the sound from using a dead buffer.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1210">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1210">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#status()">
@@ -3911,8 +3900,7 @@ the sound from using a dead buffer.</p>
 <p>Get the current status of the sound (stopped, paused, playing)</p>
 <p><em>Returns:</em> Current status of the sound</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1200">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1200">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Sound#stop()">
@@ -3928,8 +3916,7 @@ and does nothing if it was already stopped.
 It also resets the playing position (unlike <a href="#SF::Sound#pause()"><code>pause()</code></a>).</p>
 <p><em>See also:</em> <a href="#SF::Sound#play()"><code>play</code></a>, <a href="#SF::Sound#pause()"><code>pause</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1129">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1129">View source</a>
 </div>
 </div>
 </div>
@@ -4000,8 +3987,8 @@ It also resets the playing position (unlike <a href="#SF::Sound#pause()"><code>p
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

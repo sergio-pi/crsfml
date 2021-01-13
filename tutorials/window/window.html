@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/window/window.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3605,7 +3605,7 @@
 <p>Windows in CrSFML are defined by the <a href="../../api/SF/Window.html#SF::Window">SF::Window</a> class. A window can be created and opened directly upon construction:</p>
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
 
 <span class="o">...</span>
 </code></pre></div>
@@ -3646,14 +3646,14 @@ The <a href="../../api/SF/VideoMode.html#SF::VideoMode">SF::VideoMode</a> class 
 <p>Let's add some code to make this program a bit more interesting:</p>
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
 
 <span class="c1"># run the program as long as the window is open</span>
 <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
   <span class="c1"># check all the window&#39;s events that were triggered since the last iteration of the loop</span>
   <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
     <span class="c1"># &quot;close requested&quot; event: we close the window</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+    <span class="k">if</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
       <span class="n">window</span><span class="o">.</span><span class="n">close</span>
     <span class="k">end</span>
   <span class="k">end</span>
@@ -3671,10 +3671,10 @@ The <a href="../../api/SF/VideoMode.html#SF::VideoMode">SF::VideoMode</a> class 
 <h2 id="playing-with-the-window">Playing with the window<a class="headerlink" href="#playing-with-the-window" title="Permanent link">#</a></h2>
 <p>Of course, CrSFML allows you to play with your windows a bit. Basic window operations such as changing the size, position, title or icon are supported, but unlike dedicated GUI libraries, SFML doesn't provide advanced features. SFML windows are only meant to provide an environment for OpenGL or SFML drawing.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># change the position of the window (relatively to the desktop)</span>
-<span class="n">window</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># change the size of the window</span>
-<span class="n">window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">)</span>
 
 <span class="c1"># change the title of the window</span>
 <span class="n">window</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;SFML window&quot;</span>
@@ -3689,10 +3689,10 @@ The <a href="../../api/SF/VideoMode.html#SF::VideoMode">SF::VideoMode</a> class 
 <p>You can refer to the API documentation for a complete list of <a href="../../api/SF/Window.html#SF::Window">SF::Window</a>'s methods.</p>
 <p>In case you really need advanced features for your window, you can create one (or even a full GUI) with another library, and embed SFML into it. To do so, you can use the other constructor of <a href="../../api/SF/Window.html#SF::Window">SF::Window</a> which takes the OS-specific handle of an existing window. In this case, SFML will create a drawing context inside the given window and catch all its events without interfering with the parent window management.</p>
 <div class="highlight"><pre><span></span><code><span class="n">handle</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># specific to what you&#39;re doing and the library you&#39;re using</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">Window</span><span class="o">.</span><span class="n">from_handle</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">Window</span><span class="o">.</span><span class="n">from_handle</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
 </code></pre></div>
 <p>If you just want an additional, very specific feature, you can also do it the other way round: create an SFML window and get its OS-specific handle to implement things that SFML itself doesn't support.</p>
-<div class="highlight"><pre><span></span><code><span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;SFML window&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;SFML window&quot;</span><span class="p">)</span>
 <span class="n">handle</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">system_handle</span>
 
 <span class="c1"># you can now use the handle with OS specific functions</span>
@@ -3788,8 +3788,8 @@ The solution to this problem is to activate <em>vertical synchronization</em>. I
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

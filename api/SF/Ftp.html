@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Ftp.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3598,7 +3598,7 @@ the task.</p>
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Create a new FTP client</span>
-<span class="n">ftp</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Ftp</span><span class="o">.</span><span class="n">new</span>
+<span class="n">ftp</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Ftp</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># Connect to the server</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">ftp</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"ftp://ftp.myserver.com"</span><span class="p">)</span>
@@ -3625,7 +3625,7 @@ the task.</p>
 <span class="k">end</span>
 
 <span class="c1"># Upload a file to this new directory</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">ftp</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="s2">"local-path/file.txt"</span><span class="p">,</span> <span class="s2">"files"</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Ftp</span><span class="o">::</span><span class="n">Ascii</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">ftp</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="s2">"local-path/file.txt"</span><span class="p">,</span> <span class="s2">"files"</span><span class="p">,</span> <span class="n">SF</span><span class="o">::</span><span class="n">Ftp</span><span class="o">::</span><span class="n">Ascii</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">ok?</span><span class="p">)</span>
   <span class="nb">puts</span> <span class="s2">"File uploaded"</span>
 <span class="k">end</span>
@@ -3656,15 +3656,14 @@ the task.</p>
   <a class="headerlink" href="#SF::Ftp.new()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L430">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L430">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#change_directory(directory)">
 
     <code>
-      #change_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">directory</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #change_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">directory</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#change_directory(directory)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3676,14 +3675,13 @@ the task.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#working_directory()"><code>working_directory</code></a>, <code>directory_listing</code>, <a href="#SF::Ftp#parent_directory()"><code>parent_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L809">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L809">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#connect(server,port,timeout)">
 
     <code>
-      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">server</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">port</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">server</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">port</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">21</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="n">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#connect(server,port,timeout)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3704,14 +3702,13 @@ system timeout will be used (which is usually pretty long).</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#disconnect()"><code>disconnect</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L719">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L719">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#create_directory(name)">
 
     <code>
-      #create_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #create_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#create_directory(name)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3724,14 +3721,13 @@ working directory.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#delete_directory(name)"><code>delete_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L834">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L834">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#delete_directory(name)">
 
     <code>
-      #delete_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #delete_directory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#delete_directory(name)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3746,14 +3742,13 @@ be removed permanently!</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#create_directory(name)"><code>create_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L851">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L851">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#delete_file(name)">
 
     <code>
-      #delete_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #delete_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#delete_file(name)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3768,8 +3763,7 @@ removed permanently!</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#rename_file(file,new_name)"><code>rename_file</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L884">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L884">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#disconnect()">
@@ -3783,14 +3777,13 @@ removed permanently!</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#connect(server,port,timeout)"><code>connect</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L729">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L729">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#download(remote_file,local_path,mode)">
 
     <code>
-      #download<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_file</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">local_path</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">mode</span> <span class="p">:</span> <a href="Ftp/TransferMode.html#SF::Ftp::TransferMode">Ftp::TransferMode</a> <span class="o">=</span> <span class="n">Binary</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #download<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_file</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">local_path</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">mode</span> <span class="p">:</span> <a href="Ftp/TransferMode.html#SF::Ftp::TransferMode">Ftp::TransferMode</a> <span class="o">=</span> <span class="n">Binary</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#download(remote_file,local_path,mode)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3810,8 +3803,7 @@ be overwritten.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#upload(local_file,remote_path,mode,append)"><code>upload</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L906">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L906">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#finalize()">
@@ -3825,14 +3817,13 @@ be overwritten.</p>
 <p>Automatically closes the connection with the server if
 it is still opened.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L697">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L697">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#get_directory_listing(directory)">
 
     <code>
-      #get_directory_listing<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">directory</span> <span class="p">:</span> <span class="nb">String</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/ListingResponse.html#SF::Ftp::ListingResponse">Ftp::ListingResponse</a></code></span>
+      #get_directory_listing<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">directory</span> <span class="p">:</span> <span class="n">String</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/ListingResponse.html#SF::Ftp::ListingResponse">Ftp::ListingResponse</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#get_directory_listing(directory)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3847,8 +3838,7 @@ working directory.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#working_directory()"><code>working_directory</code></a>, <a href="#SF::Ftp#change_directory(directory)"><code>change_directory</code></a>, <a href="#SF::Ftp#parent_directory()"><code>parent_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L795">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L795">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#keep_alive()">
@@ -3863,8 +3853,7 @@ working directory.</p>
 connection automatically if no command is sent.</p>
 <p><em>Returns:</em> Server response to the request</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L765">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L765">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#login()">
@@ -3879,14 +3868,13 @@ connection automatically if no command is sent.</p>
 Users that are not logged in cannot perform any operation.</p>
 <p><em>Returns:</em> Server response to the request</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L740">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L740">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#login(name,password)">
 
     <code>
-      #login<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">password</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #login<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">password</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#login(name,password)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3899,8 +3887,7 @@ Users that are not logged in cannot perform any operation.</p>
 </ul>
 <p><em>Returns:</em> Server response to the request</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L754">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L754">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#parent_directory()">
@@ -3914,14 +3901,13 @@ Users that are not logged in cannot perform any operation.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#working_directory()"><code>working_directory</code></a>, <code>directory_listing</code>, <a href="#SF::Ftp#change_directory(directory)"><code>change_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L819">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L819">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#rename_file(file,new_name)">
 
     <code>
-      #rename_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">file</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">new_name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #rename_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">file</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">new_name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#rename_file(file,new_name)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3935,14 +3921,13 @@ directory.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#delete_file(name)"><code>delete_file</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L867">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L867">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#send_command(command,parameter)">
 
     <code>
-      #send_command<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">command</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">parameter</span> <span class="p">:</span> <span class="nb">String</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #send_command<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">command</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">parameter</span> <span class="p">:</span> <span class="n">String</span> <span class="o">=</span> <span class="s2">""</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#send_command(command,parameter)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3959,14 +3944,13 @@ can extract it from the response using Response.message().</p>
 </ul>
 <p><em>Returns:</em> Server response to the request</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L947">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L947">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#upload(local_file,remote_path,mode,append)">
 
     <code>
-      #upload<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">local_file</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">remote_path</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">mode</span> <span class="p">:</span> <a href="Ftp/TransferMode.html#SF::Ftp::TransferMode">Ftp::TransferMode</a> <span class="o">=</span> <span class="n">Binary</span><span class="p">,</span> <span class="n">append</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
+      #upload<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">local_file</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">remote_path</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">mode</span> <span class="p">:</span> <a href="Ftp/TransferMode.html#SF::Ftp::TransferMode">Ftp::TransferMode</a> <span class="o">=</span> <span class="n">Binary</span><span class="p">,</span> <span class="n">append</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="p">:</span> <a href="Ftp/Response.html#SF::Ftp::Response">Ftp::Response</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Ftp#upload(local_file,remote_path,mode,append)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3986,8 +3970,7 @@ appended to or overwritten if it already exists.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <a href="#SF::Ftp#download(remote_file,local_path,mode)"><code>download</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L929">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L929">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Ftp#working_directory()">
@@ -4003,8 +3986,7 @@ operations involving directories and/or filenames.</p>
 <p><em>Returns:</em> Server response to the request</p>
 <p><em>See also:</em> <code>directory_listing</code>, <a href="#SF::Ftp#change_directory(directory)"><code>change_directory</code></a>, <a href="#SF::Ftp#parent_directory()"><code>parent_directory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L778">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L778">View source</a>
 </div>
 </div>
 </div>
@@ -4075,8 +4057,8 @@ operations involving directories and/or filenames.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Image.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3798,10 +3798,10 @@ pass or return them to avoid useless copies.</p>
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Load an image file from a file</span>
-<span class="n">background</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Image</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"background.jpg"</span><span class="p">)</span>
+<span class="n">background</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Image</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">"background.jpg"</span><span class="p">)</span>
 
 <span class="c1"># Create a 20x20 image filled with black color</span>
-<span class="n">image</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span><span class="p">)</span>
 
 <span class="c1"># Copy image1 on image2 at position (10, 10)</span>
 <span class="n">image</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -3823,43 +3823,40 @@ pass or return them to avoid useless copies.</p>
 <h4 class="doc doc-heading" id="SF::Image.from_file(*args,**kwargs)">
 
     <code>
-      .from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image.from_file(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>image = Image.new; image.load_from_file(...); image</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2779">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2779">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Image.from_memory(*args,**kwargs)">
 
     <code>
-      .from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image.from_memory(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>image = Image.new; image.load_from_memory(...); image</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2805">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2805">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Image.from_stream(*args,**kwargs)">
 
     <code>
-      .from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image.from_stream(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>image = Image.new; image.load_from_stream(...); image</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2831">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2831">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Image.new()">
@@ -3872,28 +3869,26 @@ pass or return them to avoid useless copies.</p>
 <p>Default constructor</p>
 <p>Creates an empty image.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2718">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2718">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Image.new(*args,**kwargs)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image.new(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>image = Image.new; image.create(...); image</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2755">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2755">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#copy(source,dest_x,dest_y,source_rect,apply_alpha)">
 
     <code>
-      #copy<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">source</span> <span class="p">:</span> <a href="#SF::Image">Image</a><span class="p">,</span> <span class="n">dest_x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">dest_y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">source_rect</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">apply_alpha</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
+      #copy<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">source</span> <span class="p">:</span> <a href="#SF::Image">Image</a><span class="p">,</span> <span class="n">dest_x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">dest_y</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">source_rect</span> <span class="p">:</span> <a href="IntRect.html#SF::IntRect">IntRect</a> <span class="o">=</span> <span class="n">IntRect</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">apply_alpha</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#copy(source,dest_x,dest_y,source_rect,apply_alpha)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3914,14 +3909,13 @@ copied unchanged with their alpha value.</p>
 <li><em>apply_alpha</em> - Should the copy take into account the source transparency?</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2890">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2890">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#create(width,height,color)">
 
     <code>
-      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></code></span>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#create(width,height,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3932,14 +3926,13 @@ copied unchanged with their alpha value.</p>
 <li><em>color</em> - Fill color</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2732">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2732">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#create(width,height,pixels)">
 
     <code>
-      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">pixels</span> <span class="p">:</span> <span class="nb">Pointer</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">))</span></code></span>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">pixels</span> <span class="p">:</span> <span class="n">Pointer</span><span class="p">(</span><span class="n">UInt8</span><span class="p">))</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#create(width,height,pixels)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3954,14 +3947,13 @@ If <em>pixels</em> is null, an empty image is created.</p>
 <li><em>pixels</em> - Array of pixels to copy to the image</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2751">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2751">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#create_mask_from_color(color,alpha)">
 
     <code>
-      #create_mask_from_color<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
+      #create_mask_from_color<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">,</span> <span class="n">alpha</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#create_mask_from_color(color,alpha)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3974,8 +3966,7 @@ become transparent.</p>
 <li><em>alpha</em> - Alpha value to assign to transparent pixels</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2870">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2870">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#dup()">
@@ -3989,8 +3980,7 @@ become transparent.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2959">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2959">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#finalize()">
@@ -4002,8 +3992,7 @@ become transparent.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2723">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2723">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#flip_horizontally()">
@@ -4015,8 +4004,7 @@ become transparent.</p>
 <div class="doc doc-contents ">
 <p>Flip the image horizontally (left &lt;-&gt; right)</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2939">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2939">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#flip_vertically()">
@@ -4028,14 +4016,13 @@ become transparent.</p>
 <div class="doc doc-contents ">
 <p>Flip the image vertically (top &lt;-&gt; bottom)</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2943">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2943">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#get_pixel(x,y)">
 
     <code>
-      #get_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
+      #get_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#get_pixel(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4050,14 +4037,13 @@ an undefined behavior.</p>
 <p><em>Returns:</em> Color of the pixel at coordinates (x, y)</p>
 <p><em>See also:</em> <code>pixel=</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2919">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2919">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#load_from_file(filename)">
 
     <code>
-      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#load_from_file(filename)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4072,14 +4058,13 @@ If this function fails, the image is left unchanged.</p>
 <p><em>Returns:</em> True if loading was successful</p>
 <p><em>See also:</em> <a href="#SF::Image#load_from_memory(data)"><code>load_from_memory</code></a>, <a href="#SF::Image#load_from_stream(stream)"><code>load_from_stream</code></a>, <a href="#SF::Image#save_to_file(filename)"><code>save_to_file</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2772">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2772">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#load_from_memory(data)">
 
     <code>
-      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#load_from_memory(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4094,14 +4079,13 @@ If this function fails, the image is left unchanged.</p>
 <p><em>Returns:</em> True if loading was successful</p>
 <p><em>See also:</em> <a href="#SF::Image#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::Image#load_from_stream(stream)"><code>load_from_stream</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2798">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2798">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#load_from_stream(stream)">
 
     <code>
-      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#load_from_stream(stream)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4116,14 +4100,13 @@ If this function fails, the image is left unchanged.</p>
 <p><em>Returns:</em> True if loading was successful</p>
 <p><em>See also:</em> <a href="#SF::Image#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::Image#load_from_memory(data)"><code>load_from_memory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2824">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2824">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#pixels_ptr()">
 
     <code>
-      #pixels_ptr<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Pointer</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)</span></code></span>
+      #pixels_ptr<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Pointer</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#pixels_ptr()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4136,14 +4119,13 @@ modify the image, so you should never store it for too long.
 If the image is empty, a null pointer is returned.</p>
 <p><em>Returns:</em> Read-only pointer to the array of pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2934">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2934">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#save_to_file(filename)">
 
     <code>
-      #save_to_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #save_to_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#save_to_file(filename)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4158,14 +4140,13 @@ if it already exists. This function fails if the image is empty.</p>
 <p><em>Returns:</em> True if saving was successful</p>
 <p><em>See also:</em> <a href="#SF::Image#create(width,height,color)"><code>create</code></a>, <a href="#SF::Image#load_from_file(filename)"><code>load_from_file</code></a>, <a href="#SF::Image#load_from_memory(data)"><code>load_from_memory</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2850">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2850">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#set_pixel(x,y,color)">
 
     <code>
-      #set_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
+      #set_pixel<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Image#set_pixel(x,y,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4180,8 +4161,7 @@ an undefined behavior.</p>
 </ul>
 <p><em>See also:</em> <code>pixel</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2904">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2904">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Image#size()">
@@ -4194,8 +4174,7 @@ an undefined behavior.</p>
 <p>Return the size (width and height) of the image</p>
 <p><em>Returns:</em> Size of the image, in pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2857">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L2857">View source</a>
 </div>
 </div>
 </div>
@@ -4266,8 +4245,8 @@ an undefined behavior.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/graphics/view.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3577,27 +3577,27 @@
 <h2 id="defining-what-the-view-views">Defining what the view views<a class="headerlink" href="#defining-what-the-view-views" title="Permanent link">#</a></h2>
 <p>The class which encapsulates views in SFML is <a href="../../api/SF/View.html#SF::View">SF::View</a>. It can be constructed directly with a definition of the area to view:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># create a view with the rectangular area of the 2D world to show</span>
-<span class="n">view1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+<span class="n">view1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
 <span class="c1"># create a view with its center and size</span>
-<span class="n">view2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+<span class="n">view2</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 </code></pre></div>
 <p>These two definitions are equivalent: Both views will show the same area of the 2D world, a 300x200 rectangle <em>centered</em> on the point (350, 300).</p>
 <p><img alt="" src="images/view-initial.png" /></p>
 <p>If you don't want to define the view upon construction or want to modify it later, you can use the equivalent setters:</p>
-<div class="highlight"><pre><span></span><code><span class="n">view1</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">view1</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
-<span class="n">view2</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
-<span class="n">view2</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">view2</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">view2</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
 <p>Once your view is defined, you can transform it to make it show a translated/rotated/scaled version of your 2D world.</p>
 <h3 id="moving-scrolling-the-view">Moving (scrolling) the view<a class="headerlink" href="#moving-scrolling-the-view" title="Permanent link">#</a></h3>
 <p>Unlike drawable entities, such as sprites or shapes whose positions are defined by their top-left corner (and can be changed to any other point), views are always manipulated by their center -- this is simply more convenient. That's why the method to change the position of a view is named <code>center=</code>, and not <code>position=</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># move the view at point (200, 200)</span>
-<span class="n">view</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 
 <span class="c1"># move the view by an offset of (100, 100) (so its final position is (300, 300))</span>
-<span class="n">view</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">view</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </code></pre></div>
 <p><img alt="" src="images/view-translated.png" /></p>
 <h3 id="rotating-the-view">Rotating the view<a class="headerlink" href="#rotating-the-view" title="Permanent link">#</a></h3>
@@ -3612,7 +3612,7 @@
 <h3 id="zooming-scaling-the-view">Zooming (scaling) the view<a class="headerlink" href="#zooming-scaling-the-view" title="Permanent link">#</a></h3>
 <p>Zooming in (or out) a view is done through to resizing it, so the method to use is <code>size=</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># resize the view to show a 1200x800 area (we see a bigger area, so this is a zoom out)</span>
-<span class="n">view</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
 
 <span class="c1"># zoom the view relatively to its current size (apply a factor 0.5, so its final size is 600x400)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">zoom</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
@@ -3623,30 +3623,30 @@
 <p>This default behavior is suitable for most situations, but it might need to be changed sometimes. For example, to split the screen in a multiplayer game, you may want to use two views which each only occupy half of the window. You can also implement a minimap by drawing your entire world to a view which is rendered in a small area in a corner of the window. The area in which the contents of the view is shown is called the <em>viewport</em>.</p>
 <p>To set the viewport of a view, you can use the <code>viewport=</code> method.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># define a centered viewport, with half the size of the window</span>
-<span class="n">view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="images/view-viewport.png" /></p>
 <p>You might have noticed something very important: The viewport is not defined in pixels, but instead as a ratio of the window size. This is more convenient: It allows you to not have to track resize events in order to update the size of the viewport every time the size of the window changes. It is also more intuitive: You would probably define your viewport as a fraction of the entire window area anyway, not as a fixed-size rectangle.</p>
 <p>Using a viewport, it is straightforward to split the screen for multiplayer games:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># player 1 (left side of the screen)</span>
-<span class="n">player1_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">player1_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># player 2 (right side of the screen)</span>
-<span class="n">player2_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">player2_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="images/view-split-screen.png" /></p>
 <p>... or a mini-map:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># the game view (full window)</span>
-<span class="n">game_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">game_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># mini-map (upper-right corner)</span>
-<span class="n">minimap_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+<span class="n">minimap_view</span><span class="o">.</span><span class="n">viewport</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="" src="images/view-minimap.png" /></p>
 <h2 id="using-a-view">Using a view<a class="headerlink" href="#using-a-view" title="Permanent link">#</a></h2>
 <p>To draw something using a view, you must draw it after calling the <code>view=</code> method of the target to which you are drawing (<a href="../../api/SF/RenderWindow.html#SF::RenderWindow">SF::RenderWindow</a> or <a href="../../api/SF/RenderTexture.html#SF::RenderTexture">SF::RenderTexture</a>).</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># let&#39;s define a view</span>
-<span class="n">view</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">600</span><span class="p">))</span>
 
 <span class="c1"># activate it</span>
 <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">view</span>
@@ -3678,17 +3678,17 @@ Don't be afraid to copy views or create them on the fly, they aren't expensive o
   <span class="o">...</span>
 
   <span class="c1"># catch the resize events</span>
-  <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
+  <span class="k">if</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
     <span class="c1"># update the view to the new size of the window</span>
-    <span class="n">visible_area</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">visible_area</span><span class="p">)</span>
+    <span class="n">visible_area</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">View</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">visible_area</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div>
 <h2 id="coordinates-conversions">Coordinates conversions<a class="headerlink" href="#coordinates-conversions" title="Permanent link">#</a></h2>
 <p>When you use a custom view, or when you resize the window without using the code above, pixels displayed on the target no longer match units in the 2D world. For example, clicking on pixel (10, 50) may hit the point (26.5, -84) of your world. You end up having to use a conversion method to map your pixel coordinates to world coordinates: <code>map_pixel_to_coords</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># get the current mouse position in the window</span>
-<span class="n">pixel_pos</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+<span class="n">pixel_pos</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 
 <span class="c1"># convert it to world coordinates</span>
 <span class="n">world_pos</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">map_pixel_to_coords</span><span class="p">(</span><span class="n">pixel_pos</span><span class="p">,</span> <span class="n">window</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
@@ -3761,8 +3761,8 @@ Don't be afraid to copy views or create them on the fly, they aren't expensive o
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Vertex.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3642,14 +3642,14 @@ systems, using vertices will allow you to get maximum performances.</p>
 <div class="highlight">
 <pre><span></span><code><span class="c1"># define a 100x100 square, red, with a 10x10 texture mapped on it</span>
 <span class="n">vertices</span> <span class="o">=</span> <span class="o">[</span>
-  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)),</span>
-  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
-  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
-  <span class="no">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>   <span class="mi">0</span><span class="p">),</span> <span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)),</span>
+  <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span>   <span class="mi">0</span><span class="p">),</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)),</span>
+  <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
+  <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)),</span>
+  <span class="n">SF</span><span class="o">::</span><span class="n">Vertex</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span>   <span class="mi">0</span><span class="p">),</span> <span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span>  <span class="mi">0</span><span class="p">)),</span>
 <span class="o">]</span>
 
 <span class="c1"># draw it</span>
-<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">Quads</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">SF</span><span class="o">::</span><span class="n">Quads</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -3663,7 +3663,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 <h4 class="doc doc-heading" id="SF::Vertex.new(position,color,tex_coords)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">,</span> <span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">,</span> <span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex.new(position,color,tex_coords)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3674,14 +3674,13 @@ drivers that are not able to process integer coordinates correctly.</p>
 <li><em>tex_coords</em> - Vertex texture coordinates</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1494">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1494">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Vertex.new(position,color)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex.new(position,color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3692,14 +3691,13 @@ drivers that are not able to process integer coordinates correctly.</p>
 <li><em>color</em> - Vertex color</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1468">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1468">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Vertex.new(position,tex_coords)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex.new(position,tex_coords)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3710,14 +3708,13 @@ drivers that are not able to process integer coordinates correctly.</p>
 <li><em>tex_coords</em> - Vertex texture coordinates</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1481">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1481">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Vertex.new(position)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex.new(position)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3727,8 +3724,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 <li><em>position</em> - Vertex position</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1455">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1455">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Vertex.new()">
@@ -3740,8 +3736,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1444">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1444">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3754,8 +3749,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 <div class="doc doc-contents ">
 <p>Color of the vertex</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1513">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1513">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#color=(color)">
@@ -3766,8 +3760,7 @@ drivers that are not able to process integer coordinates correctly.</p>
   <a class="headerlink" href="#SF::Vertex#color=(color)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1516">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1516">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#dup()">
@@ -3782,8 +3775,7 @@ drivers that are not able to process integer coordinates correctly.</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1539">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1539">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#position()">
@@ -3795,20 +3787,18 @@ value types are passed by value.</p>
 <div class="doc doc-contents ">
 <p>2D position of the vertex</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1504">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1504">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#position=(position)">
 
     <code>
-      #position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex#position=(position)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1507">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1507">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#tex_coords()">
@@ -3820,20 +3810,18 @@ value types are passed by value.</p>
 <div class="doc doc-contents ">
 <p>Coordinates of the texture's pixel to map to the vertex</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1521">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1521">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Vertex#tex_coords=(tex_coords)">
 
     <code>
-      #tex_coords=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #tex_coords=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">tex_coords</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Vertex#tex_coords=(tex_coords)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1524">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1524">View source</a>
 </div>
 </div>
 </div>
@@ -3904,8 +3892,8 @@ value types are passed by value.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

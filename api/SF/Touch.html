@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Touch.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3538,15 +3538,15 @@ sequential (i.e. touch number 0 may be released while touch number 1
 is still down).</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="k">if</span> <span class="no">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">down?</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<pre><span></span><code><span class="k">if</span> <span class="n">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">down?</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
   <span class="c1"># touch 0 is down</span>
 <span class="k">end</span>
 
 <span class="c1"># get global position of touch 1</span>
-<span class="n">global_pos</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">global_pos</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># get position of touch 1 relative to a window</span>
-<span class="n">relative_pos</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+<span class="n">relative_pos</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Touch</span><span class="o">.</span><span class="n">get_position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -3557,7 +3557,7 @@ is still down).</p>
 <h4 class="doc doc-heading" id="SF::Touch.down?(finger)">
 
     <code>
-      .down?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      .down?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Touch.down?(finger)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3567,14 +3567,13 @@ is still down).</p>
 </ul>
 <p><em>Returns:</em> True if <em>finger</em> is currently touching the screen, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1994">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1994">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Touch.get_position(finger,relative_to)">
 
     <code>
-      .get_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">relative_to</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">)</span> <span class="p">:</span> <a href="Vector2i.html#SF::Vector2i">Vector2i</a></code></span>
+      .get_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">relative_to</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">)</span> <span class="p">:</span> <a href="Vector2i.html#SF::Vector2i">Vector2i</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Touch.get_position(finger,relative_to)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3587,14 +3586,13 @@ relative to the given window.</p>
 </ul>
 <p><em>Returns:</em> Current position of <em>finger,</em> or undefined if it's not down</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2020">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2020">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Touch.get_position(finger)">
 
     <code>
-      .get_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2i.html#SF::Vector2i">Vector2i</a></code></span>
+      .get_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">finger</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2i.html#SF::Vector2i">Vector2i</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Touch.get_position(finger)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3606,8 +3604,7 @@ in global (desktop) coordinates.</p>
 </ul>
 <p><em>Returns:</em> Current position of <em>finger,</em> or undefined if it's not down</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2006">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2006">View source</a>
 </div>
 </div>
 </div>
@@ -3678,8 +3675,8 @@ in global (desktop) coordinates.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Mouse.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3485,15 +3485,15 @@ to the desktop) and one that operates in window coordinates
 (relative to a specific window).</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="k">if</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">button_pressed?</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">::</span><span class="n">Left</span><span class="p">)</span>
+<pre><span></span><code><span class="k">if</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">button_pressed?</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">::</span><span class="n">Left</span><span class="p">)</span>
   <span class="c1"># left click...</span>
 <span class="k">end</span>
 
 <span class="c1"># get global mouse position</span>
-<span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">position</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">position</span>
 
 <span class="c1"># set mouse position relative to a window</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2i</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">window</span><span class="p">)</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">Mouse</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2i</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">window</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -3504,7 +3504,7 @@ to the desktop) and one that operates in window coordinates
 <h4 class="doc doc-heading" id="SF::Mouse.button_pressed?(button)">
 
     <code>
-      .button_pressed?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">button</span> <span class="p">:</span> <a href="Mouse/Button.html#SF::Mouse::Button">Mouse::Button</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      .button_pressed?<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">button</span> <span class="p">:</span> <a href="Mouse/Button.html#SF::Mouse::Button">Mouse::Button</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Mouse.button_pressed?(button)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3514,8 +3514,7 @@ to the desktop) and one that operates in window coordinates
 </ul>
 <p><em>Returns:</em> True if the button is pressed, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1087">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1087">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Mouse.get_position(relative_to)">
@@ -3533,8 +3532,7 @@ cursor, relative to the given window.</p>
 </ul>
 <p><em>Returns:</em> Current position of the mouse</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1110">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1110">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Mouse.position()">
@@ -3549,14 +3547,13 @@ cursor, relative to the given window.</p>
 cursor on the desktop.</p>
 <p><em>Returns:</em> Current position of the mouse</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1097">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1097">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Mouse.position=(position)">
 
     <code>
-      .position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      .position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Mouse.position=(position)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3567,14 +3564,13 @@ cursor on the desktop.</p>
 <li><em>position</em> - New position of the mouse</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1121">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1121">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Mouse.set_position(position,relative_to)">
 
     <code>
-      .set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">relative_to</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">)</span></code></span>
+      .set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">relative_to</span> <span class="p">:</span> <a href="Window.html#SF::Window">Window</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Mouse.set_position(position,relative_to)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3586,8 +3582,7 @@ cursor, relative to the given window.</p>
 <li><em>relative_to</em> - Reference window</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1132">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L1132">View source</a>
 </div>
 </div>
 </div>
@@ -3658,8 +3653,8 @@ cursor, relative to the given window.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

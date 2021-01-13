@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/window/opengl.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3526,14 +3526,14 @@
 <p>Since SFML is based on OpenGL, its windows are ready for OpenGL calls without any extra effort.</p>
 <div class="highlight"><pre><span></span><code><span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span> <span class="c1"># Use @[Link(framework: &quot;OpenGL&quot;)] on Mac OSX</span>
 <span class="k">lib</span> <span class="nn">GL</span>
- <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+ <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span>
  <span class="n">TEXTURE_2D</span> <span class="o">=</span> <span class="mi">3553</span>
 <span class="k">end</span>
 
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
 
 <span class="c1"># it works out of the box</span>
-<span class="no">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
+<span class="n">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
 <span class="o">...</span>
 </code></pre></div>
 <p>In case you think it is <em>too</em> automatic, <a href="../../api/SF/Window.html#SF::Window">SF::Window</a>'s constructor has an extra argument that allows you to change the settings of the underlying OpenGL context. This argument is an instance of the structure, it provides access to the following settings:</p>
@@ -3543,13 +3543,13 @@
 <li><code>antialiasing_level</code> is the multisampling level</li>
 <li><code>major_version</code> and <code>minor_version</code> comprise the requested version of OpenGL</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
   <span class="ss">depth</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="ss">stencil</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="ss">antialiasing</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
   <span class="ss">major</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">minor</span><span class="p">:</span> <span class="mi">0</span>
 <span class="p">)</span>
 
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
-    <span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+    <span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span>
     <span class="s2">&quot;OpenGL&quot;</span><span class="p">,</span> <span class="ss">settings</span><span class="p">:</span> <span class="n">settings</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -3570,19 +3570,19 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <span class="c1"># create bindings</span>
 <span class="o">@[</span><span class="nd">Link</span><span class="p">(</span><span class="s2">&quot;GL&quot;</span><span class="p">)</span><span class="o">]</span>
 <span class="k">lib</span> <span class="nn">GL</span>
-  <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
-  <span class="k">fun</span> <span class="nf">viewport</span> <span class="o">=</span> <span class="n">glViewport</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">width</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
-  <span class="k">fun</span> <span class="nf">clear</span> <span class="o">=</span> <span class="n">glClear</span><span class="p">(</span><span class="n">mask</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">enable</span> <span class="o">=</span> <span class="n">glEnable</span><span class="p">(</span><span class="n">cap</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">viewport</span> <span class="o">=</span> <span class="n">glViewport</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">width</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">clear</span> <span class="o">=</span> <span class="n">glClear</span><span class="p">(</span><span class="n">mask</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span>
   <span class="n">TEXTURE_2D</span> <span class="o">=</span> <span class="mi">3553</span>
   <span class="no">COLOR_BUFFER_BIT</span> <span class="o">=</span> <span class="mi">16384</span>
   <span class="no">DEPTH_BUFFER_BIT</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="k">end</span>
 
-<span class="no">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
+<span class="n">GL</span><span class="o">.</span><span class="n">enable</span><span class="p">(</span><span class="n">GL</span><span class="o">::</span><span class="n">TEXTURE_2D</span><span class="p">)</span>
 
 <span class="c1"># create the window</span>
-<span class="n">settings</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">,</span> <span class="ss">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">)</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">,</span> <span class="ss">settings</span><span class="p">:</span> <span class="n">settings</span><span class="p">)</span>
 <span class="n">window</span><span class="o">.</span><span class="n">vertical_sync_enabled</span> <span class="o">=</span> <span class="kc">true</span>
 
 <span class="c1"># load resources, initialize the OpenGL states, ...</span>
@@ -3592,17 +3592,17 @@ In any case, you can check what settings SFML actually used with the <code>setti
 <span class="k">while</span> <span class="n">running</span>
   <span class="c1"># handle events</span>
   <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+    <span class="k">if</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
       <span class="c1"># end the program</span>
       <span class="n">running</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">elsif</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
+    <span class="k">elsif</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Resized</span>
       <span class="c1"># adjust the viewport when the window is resized</span>
-      <span class="no">GL</span><span class="o">.</span><span class="n">viewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+      <span class="n">GL</span><span class="o">.</span><span class="n">viewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">event</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
     <span class="k">end</span>
   <span class="k">end</span>
 
   <span class="c1"># clear the buffers</span>
-  <span class="no">GL</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">GL</span><span class="o">::</span><span class="no">COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="no">GL</span><span class="o">::</span><span class="no">DEPTH_BUFFER_BIT</span><span class="p">)</span>
+  <span class="n">GL</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">GL</span><span class="o">::</span><span class="no">COLOR_BUFFER_BIT</span> <span class="o">|</span> <span class="n">GL</span><span class="o">::</span><span class="no">DEPTH_BUFFER_BIT</span><span class="p">)</span>
 
   <span class="c1"># draw...</span>
 
@@ -3730,8 +3730,8 @@ If you do this, you'll still need to restore SFML's own states before drawing. T
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

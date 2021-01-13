@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/SoundRecorder.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3801,7 +3801,7 @@ in the destructor of your derived class, so that the recording
 thread finishes before your object is destroyed.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="k">class</span> <span class="nc">CustomRecorder</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
+<pre><span></span><code><span class="k">class</span> <span class="nc">CustomRecorder</span> <span class="o">&lt;</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundRecorder</span>
   <span class="k">def</span> <span class="nf">finalize</span>
     <span class="c1"># Make sure to stop the recording thread</span>
     <span class="n">stop</span><span class="p">()</span>
@@ -3855,7 +3855,7 @@ thread finishes before your object is destroyed.</p>
 <h4 class="doc doc-heading" id="SF::SoundRecorder.available?()">
 
     <code>
-      .available?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      .available?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder.available?()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3866,14 +3866,13 @@ any attempt to use <a href="#SF::SoundRecorder"><code>SF::SoundRecorder</code></
 classes will fail.</p>
 <p><em>Returns:</em> True if audio capture is supported, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1765">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1765">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder.available_devices()">
 
     <code>
-      .available_devices<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="nb">String</span><span class="p">)</span></code></span>
+      .available_devices<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Array</span><span class="p">(</span><span class="n">String</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder.available_devices()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3882,14 +3881,13 @@ classes will fail.</p>
 the names of all available audio capture devices.</p>
 <p><em>Returns:</em> A vector of strings containing the names</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1694">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1694">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder.default_device()">
 
     <code>
-      .default_device<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">String</span></code></span>
+      .default_device<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">String</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder.default_device()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3899,15 +3897,14 @@ capture device. If none is available, an empty string
 is returned.</p>
 <p><em>Returns:</em> The name of the default audio capture device</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1705">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1705">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#channel_count()">
 
     <code>
-      #channel_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #channel_count<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#channel_count()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3917,14 +3914,13 @@ value is either 1 (for mono) or 2 (for stereo).</p>
 <p><em>Returns:</em> Number of channels</p>
 <p><em>See also:</em> <a href="#SF::SoundRecorder#channel_count=(channel_count)"><code>channel_count=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1753">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1753">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#channel_count=(channel_count)">
 
     <code>
-      #channel_count=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">channel_count</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #channel_count=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">channel_count</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#channel_count=(channel_count)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3938,28 +3934,26 @@ mono (1) and stereo (2) are supported.</li>
 </ul>
 <p><em>See also:</em> <a href="#SF::SoundRecorder#channel_count()"><code>channel_count</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1742">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1742">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#device()">
 
     <code>
-      #device<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">String</span></code></span>
+      #device<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">String</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#device()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Get the name of the current audio capture device</p>
 <p><em>Returns:</em> The name of the current audio capture device</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1728">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1728">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#device=(name)">
 
     <code>
-      #device=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #device=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#device=(name)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3974,8 +3968,7 @@ opening the device fails, it stops the recording.</p>
 <p><em>Returns:</em> True, if it was able to set the requested device</p>
 <p><em>See also:</em> <a href="#SF::SoundRecorder.available_devices()"><code>available_devices</code></a>, <a href="#SF::SoundRecorder.default_device()"><code>default_device</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1721">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1721">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#finalize()">
@@ -3987,14 +3980,13 @@ opening the device fails, it stops the recording.</p>
 <div class="doc doc-contents ">
 <p>destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1644">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1644">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#on_process_samples(samples)">
 
 <small style="font-weight: normal">abstract</small>     <code>
-      #on_process_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">))</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #on_process_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="n">Array</span><span class="p">(</span><span class="n">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Int16</span><span class="p">))</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#on_process_samples(samples)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4009,14 +4001,13 @@ it over the network, etc.).</p>
 </ul>
 <p><em>Returns:</em> True to continue the capture, or false to stop it</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1816">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1816">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#on_start()">
 
     <code>
-      #on_start<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #on_start<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#on_start()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4027,8 +4018,7 @@ starts. If not, this function can be ignored; the default
 implementation does nothing.</p>
 <p><em>Returns:</em> True to start the capture, or false to abort it</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1801">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1801">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#on_stop()">
@@ -4044,8 +4034,7 @@ if something has to be done every time the capture
 ends. If not, this function can be ignored; the default
 implementation does nothing.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1823">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1823">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#processing_interval=(interval)">
@@ -4067,14 +4056,13 @@ So don't rely on this parameter to implement precise timing.</p>
 <li><em>interval</em> - Processing interval</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1790">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1790">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#sample_rate()">
 
     <code>
-      #sample_rate<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #sample_rate<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#sample_rate()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4084,14 +4072,13 @@ captured per second. The higher, the better the quality
 (for example, 44100 samples/sec is CD quality).</p>
 <p><em>Returns:</em> Sample rate, in samples per second</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1684">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1684">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#start(sample_rate)">
 
     <code>
-      #start<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sample_rate</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">44100</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #start<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">sample_rate</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">44100</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundRecorder#start(sample_rate)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4113,8 +4100,7 @@ available_devices().</p>
 <p><em>Returns:</em> True, if start of capture was successful</p>
 <p><em>See also:</em> <a href="#SF::SoundRecorder#stop()"><code>stop</code></a>, <a href="#SF::SoundRecorder.available_devices()"><code>available_devices</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1667">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1667">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundRecorder#stop()">
@@ -4127,8 +4113,7 @@ available_devices().</p>
 <p>Stop the capture</p>
 <p><em>See also:</em> <a href="#SF::SoundRecorder#start(sample_rate)"><code>start</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1674">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1674">View source</a>
 </div>
 </div>
 </div>
@@ -4199,8 +4184,8 @@ available_devices().</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

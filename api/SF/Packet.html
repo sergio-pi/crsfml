@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Packet.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3689,7 +3689,7 @@ to avoid possible differences between the sender and the receiver.</p>
 <span class="n">d</span> <span class="o">=</span> <span class="mf">5.89</span>
 
 <span class="c1"># Group the variables to send into a packet</span>
-<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
+<span class="n">packet</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
 <span class="n">packet</span><span class="o">.</span><span class="n">write</span> <span class="n">x</span>
 <span class="n">packet</span><span class="o">.</span><span class="n">write</span> <span class="n">s</span>
 <span class="n">packet</span><span class="o">.</span><span class="n">write</span> <span class="n">d</span>
@@ -3700,13 +3700,13 @@ to avoid possible differences between the sender and the receiver.</p>
 <span class="o">-----------------------------------------------------------------</span>
 
 <span class="c1"># Receive the packet at the other end</span>
-<span class="n">packet</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
+<span class="n">packet</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Packet</span><span class="o">.</span><span class="n">new</span>
 <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
 
 <span class="c1"># Extract the variables contained in the packet</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="nb">UInt32</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="nb">String</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="nb">Float64</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="n">UInt32</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="n">String</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span> <span class="n">Float64</span>
 <span class="k">if</span> <span class="n">packet</span><span class="o">.</span><span class="n">valid?</span>
   <span class="c1"># Data extracted successfully...</span>
 <span class="k">end</span>
@@ -3724,9 +3724,9 @@ to avoid possible differences between the sender and the receiver.</p>
 of these methods in order to handle your custom types.</p>
 <div class="highlight">
 <pre><span></span><code><span class="k">struct</span> <span class="nc">MyStruct</span>
-  <span class="n">number</span> <span class="p">:</span> <span class="nb">Float32</span>
-  <span class="n">integer</span> <span class="p">:</span> <span class="nb">Int8</span>
-  <span class="n">str</span> <span class="p">:</span> <span class="nb">String</span>
+  <span class="n">number</span> <span class="p">:</span> <span class="n">Float32</span>
+  <span class="n">integer</span> <span class="p">:</span> <span class="n">Int8</span>
+  <span class="n">str</span> <span class="p">:</span> <span class="n">String</span>
 <span class="k">end</span>
 
 <span class="k">class</span> <span class="nn">SF::</span><span class="nc">Packet</span>
@@ -3737,7 +3737,7 @@ of these methods in order to handle your custom types.</p>
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">MyStruct</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">MyStruct</span>
-    <span class="n">MyStruct</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">Float32</span><span class="p">),</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">Int8</span><span class="p">),</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">String</span><span class="p">))</span>
+    <span class="n">MyStruct</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">Float32</span><span class="p">),</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">Int8</span><span class="p">),</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">String</span><span class="p">))</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre>
@@ -3756,15 +3756,14 @@ of these methods in order to handle your custom types.</p>
 <p>Default constructor</p>
 <p>Creates an empty packet.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1643">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1643">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#append(data)">
 
     <code>
-      #append<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Slice</span><span class="p">)</span></code></span>
+      #append<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#append(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3775,8 +3774,7 @@ of these methods in order to handle your custom types.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Packet#clear()"><code>clear</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1658">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1658">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#clear()">
@@ -3790,14 +3788,13 @@ of these methods in order to handle your custom types.</p>
 <p>After calling Clear, the packet is empty.</p>
 <p><em>See also:</em> <a href="#SF::Packet#append(data)"><code>append</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1666">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1666">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#data()">
 
     <code>
-      #data<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Pointer</span><span class="p">(</span><span class="nb">Void</span><span class="p">)</span></code></span>
+      #data<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Pointer</span><span class="p">(</span><span class="n">Void</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#data()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3809,14 +3806,13 @@ The return pointer is NULL if the packet is empty.</p>
 <p><em>Returns:</em> Pointer to the data</p>
 <p><em>See also:</em> <a href="#SF::Packet#data_size()"><code>data_size</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1679">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1679">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#data_size()">
 
     <code>
-      #data_size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #data_size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#data_size()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3826,8 +3822,7 @@ what data returns.</p>
 <p><em>Returns:</em> Data size, in bytes</p>
 <p><em>See also:</em> <a href="#SF::Packet#data()"><code>data</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1691">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1691">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#dup()">
@@ -3841,14 +3836,13 @@ what data returns.</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1867">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1867">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#end_of_packet()">
 
     <code>
-      #end_of_packet<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #end_of_packet<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#end_of_packet()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3859,8 +3853,7 @@ left to be read, without actually reading it.</p>
 <p><em>Returns:</em> True if all data was read, false otherwise</p>
 <p><em>See also:</em> <code>operator</code> <code>bool</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1704">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1704">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#finalize()">
@@ -3872,182 +3865,169 @@ left to be read, without actually reading it.</p>
 <div class="doc doc-contents ">
 <p>Virtual destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1648">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1648">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Bool</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Bool</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1735">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1735">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Float32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Float32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1780">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1780">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">String</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">String</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">String</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">String</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1790">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1790">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Float64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Float64</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Float64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Float64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1785">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1785">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">UInt64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">UInt64</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">UInt64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">UInt64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1775">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1775">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Int64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int64</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Int64</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int64</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1770">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1770">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">UInt32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">UInt32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1765">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1765">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Int32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int32</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Int32</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1760">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1760">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">UInt16</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">UInt16</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">UInt16</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1755">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1755">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Int16</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int16</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Int16</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int16</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1750">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1750">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">UInt8</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">UInt8</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">UInt8</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">UInt8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1745">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1745">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#read(type)">
 
     <code>
-      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="nb">Int8</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Int8</span></code></span>
+      #read<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="k">type</span> <span class="p">:</span> <span class="n">Int8</span><span class="o">.</span><span class="n">class</span><span class="p">)</span> <span class="p">:</span> <span class="n">Int8</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#read(type)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Read data from the packet. The expected type corresponds to
 what was actually sent.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1740">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1740">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#valid?()">
 
     <code>
-      #valid?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #valid?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#valid?()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4059,7 +4039,7 @@ data to read.</p>
 <p>This behavior is the same as standard C++ streams.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">Float32</span><span class="p">)</span>
+<pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="n">packet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">Float32</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">packet</span><span class="o">.</span><span class="n">valid?</span>
    <span class="c1"># ok, x was extracted successfully</span>
 <span class="k">end</span>
@@ -4069,164 +4049,151 @@ data to read.</p>
 <p><em>Returns:</em> True if last data extraction from packet was successful</p>
 <p><em>See also:</em> <a href="#SF::Packet#end_of_packet()"><code>end_of_packet</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1729">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1729">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1850">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1850">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Float64</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Float64</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1845">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1845">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Float32</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Float32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1840">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1840">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">UInt64</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">UInt64</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1835">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1835">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Int64</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Int64</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1830">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1830">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">UInt32</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">UInt32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1825">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1825">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Int32</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Int32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1820">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1820">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">UInt16</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">UInt16</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1815">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1815">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Int16</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Int16</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1810">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1810">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">UInt8</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">UInt8</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1805">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1805">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Int8</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Int8</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1800">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1800">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Packet#write(data)">
 
     <code>
-      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+      #write<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Packet#write(data)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Write data into the packet</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1795">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1795">View source</a>
 </div>
 </div>
 </div>
@@ -4297,8 +4264,8 @@ data to read.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

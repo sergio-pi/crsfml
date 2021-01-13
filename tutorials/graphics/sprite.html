@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/graphics/sprite.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3512,19 +3512,19 @@
 <h2 id="loading-a-texture">Loading a texture<a class="headerlink" href="#loading-a-texture" title="Permanent link">#</a></h2>
 <p>Before creating any sprite, we need a valid texture. The class that encapsulates textures in CrSFML is, unsurprisingly, <a href="../../api/SF/Texture.html#SF::Texture">SF::Texture</a>. Since the only role of a texture is to be loaded and mapped to graphical entities, almost all its methods are about loading and updating it.</p>
 <p>The most common way of loading a texture is from an image file on disk, which is done with the <code>from_file</code> class method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>The <code>from_file</code> class method can sometimes fail with no obvious reason. First, check the error message that SFML prints to the standard output (check the console). If the message is unable to open file, make sure that the <em>working directory</em> (which is the directory that any file path will be interpreted relative to) is what you think it is.</p>
 <p>You can also load an image file from memory (<code>from_memory</code>), from a <a href="../system/stream.html" title="Input streams tutorial">custom input stream</a> (<code>from_stream</code>), or from an image that has already been loaded (<code>from_image</code>). The latter loads the texture from an <a href="../../api/SF/Image.html#SF::Image">SF::Image</a>, which is a utility class that helps store and manipulate image data (modify pixels, create transparency channel, etc.). The pixels of an <a href="../../api/SF/Image.html#SF::Image">SF::Image</a> stay in system memory, which ensures that operations on them will be as fast as possible, in contrast to the pixels of a texture which reside in video memory and are therefore slow to retrieve or update but very fast to draw.</p>
 <p>SFML supports most common image file formats. The full list is available in the API documentation.</p>
 <p>All these loading class methods have an optional argument, which can be used if you want to load a smaller part of the image.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># load a 32x32 rectangle that starts at (10, 10)</span>
-<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;image.png&quot;</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
 </code></pre></div>
 <p>The <a href="../../api/SF/IntRect.html#SF::IntRect">SF::IntRect</a> class is a simple utility type that represents a rectangle. Its constructor takes the coordinates of the top-left corner, and the size of the rectangle.</p>
 <p>If you don't want to load a texture from an image, but instead want to update it directly from an array of pixels, you can create it empty and update it later:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># create an empty 200x200 texture</span>
-<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that the contents of the texture are undefined at this point.</p>
 <p>To update the pixels of an existing texture, you have to use the <code>update</code> method. It has overloads for many kinds of data sources:</p>
@@ -3551,36 +3551,36 @@
 <p>This only works if your sprite is configured to show a rectangle which is larger than the texture, otherwise this property has no effect.</p>
 <h2 id="ok-can-i-have-my-sprite-now">Ok, can I have my sprite now?<a class="headerlink" href="#ok-can-i-have-my-sprite-now" title="Permanent link">#</a></h2>
 <p>Yes, you can now create your sprite.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">sprite</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
 </code></pre></div>
 <p>... and finally draw it.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># inside the main loop, between window.clear() and window.display()</span>
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
 </code></pre></div>
 <p>If you don't want your sprite to use the entire texture, you can set its texture rectangle.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">texture_rect</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">int_rect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
 </code></pre></div>
 <p>You can also change the color of a sprite. The color that you set is modulated (multiplied) with the texture of the sprite. This can also be used to change the global transparency (alpha) of the sprite.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># green</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span> <span class="c1"># half transparent</span>
+<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1"># green</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span> <span class="c1"># half transparent</span>
 </code></pre></div>
 <p>These sprites all use the same texture, but have a different color:</p>
 <p><img alt="" src="images/sprites-color.png" /></p>
 <p>Sprites can also be transformed: They have a position, an orientation and a scale.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># position</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="c1"># absolute position</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1"># offset relative to the current position</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="c1"># absolute position</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1"># offset relative to the current position</span>
 
 <span class="c1"># rotation</span>
 <span class="n">sprite</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span> <span class="c1"># absolute angle</span>
 <span class="n">sprite</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="c1"># offset relative to the current angle</span>
 
 <span class="c1"># scale</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span> <span class="c1"># absolute scale factor</span>
-<span class="n">sprite</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">))</span> <span class="c1"># factor relative to the current scale</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span> <span class="c1"># absolute scale factor</span>
+<span class="n">sprite</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">))</span> <span class="c1"># factor relative to the current scale</span>
 </code></pre></div>
 <p>By default, the origin for these three transformations is the top-left corner of the sprite. If you want to set the origin to a different point (for example the center of the sprite, or another corner), you can use the <code>origin=</code> method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">sprite</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 </code></pre></div>
 <p>Since transformation methods are common to all CrSFML entities, they are explained in a separate tutorial: <a href="transform.html" title="'Transforming entities' tutorial">Transforming entities</a>.</p>
 <h2 id="the-importance-of-using-as-few-textures-as-possible">The importance of using as few textures as possible<a class="headerlink" href="#the-importance-of-using-as-few-textures-as-possible" title="Permanent link">#</a></h2>
@@ -3593,12 +3593,12 @@
 <div class="highlight"><pre><span></span><code><span class="n">texture</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="c1"># bind the texture</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">bind</span> <span class="n">texture</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">bind</span> <span class="n">texture</span>
 
 <span class="c1"># draw your textured OpenGL entity here...</span>
 
 <span class="c1"># bind no texture</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">bind</span> <span class="kc">nil</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">Texture</span><span class="o">.</span><span class="n">bind</span> <span class="kc">nil</span>
 </code></pre></div>
                 
               
@@ -3666,8 +3666,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Transformable.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3814,11 +3814,11 @@ center, for example. To do such things, use <a href="Transform.html#SF::Transfor
 combined with <a href="Drawable.html#SF::Drawable"><code>SF::Drawable</code></a> -- that's what SFML's sprites,
 texts and shapes do.
 <div class="highlight">
-<pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span> <span class="o">&lt;</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
-  <span class="k">include</span> <span class="no">SF</span><span class="o">::</span><span class="n">Drawable</span>
+<pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span> <span class="o">&lt;</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="k">include</span> <span class="n">SF</span><span class="o">::</span><span class="n">Drawable</span>
 
   <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
-    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="kp">self</span><span class="o">.</span><span class="n">transform</span>
+    <span class="n">states</span><span class="o">.</span><span class="n">transform</span> <span class="o">*=</span> <span class="k">self</span><span class="o">.</span><span class="n">transform</span>
     <span class="n">target</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
@@ -3835,7 +3835,7 @@ its API directly (because you don't need all its functions,
 or you have different naming conventions for example).
 <div class="highlight">
 <pre><span></span><code><span class="k">class</span> <span class="nc">MyEntity</span>
-  <span class="vi">@transform</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transformable</span>
+  <span class="vi">@transform</span> <span class="p">:</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transformable</span>
   <span class="bp">forward_missing_to</span> <span class="vi">@transform</span>
 <span class="k">end</span>
 </code></pre>
@@ -3873,8 +3873,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
 <div class="doc doc-contents ">
 <p>Default constructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L938">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L938">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3889,8 +3888,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
 <p>This allocates a new object and copies the contents of
 <code>self</code> into it.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1197">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1197">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#finalize()">
@@ -3902,8 +3900,7 @@ to texels (pixels in the texture). More specifically, this means:</p>
 <div class="doc doc-contents ">
 <p>Virtual destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L943">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L943">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#inverse_transform()">
@@ -3917,14 +3914,13 @@ to texels (pixels in the texture). More specifically, this means:</p>
 <p><em>Returns:</em> Inverse of the combined transformations applied to the object</p>
 <p><em>See also:</em> <a href="#SF::Transformable#transform()"><code>transform</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1179">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1179">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#move(offset)">
 
     <code>
-      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#move(offset)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3942,14 +3938,13 @@ Thus, it is equivalent to the following code:
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#position=(position)"><code>position=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1113">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1113">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#move(offset_x,offset_y)">
 
     <code>
-      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">offset_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #move<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">offset_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#move(offset_x,offset_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3969,8 +3964,7 @@ Thus, it is equivalent to the following code:
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#position=(position)"><code>position=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1098">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1098">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#origin()">
@@ -3984,14 +3978,13 @@ Thus, it is equivalent to the following code:
 <p><em>Returns:</em> Current origin</p>
 <p><em>See also:</em> <a href="#SF::Transformable#origin=(origin)"><code>origin=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1079">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1079">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#origin=(origin)">
 
     <code>
-      #origin=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">origin</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #origin=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">origin</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#origin=(origin)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4007,8 +4000,7 @@ The default origin of a transformable object is (0, 0).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#origin()"><code>origin</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1039">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1039">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#position()">
@@ -4022,14 +4014,13 @@ The default origin of a transformable object is (0, 0).</p>
 <p><em>Returns:</em> Current position</p>
 <p><em>See also:</em> <a href="#SF::Transformable#position=(position)"><code>position=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1048">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1048">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#position=(position)">
 
     <code>
-      #position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#position=(position)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4042,14 +4033,13 @@ The default position of a transformable object is (0, 0).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#move(offset)"><code>move</code></a>, <a href="#SF::Transformable#position()"><code>position</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L969">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L969">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#rotate(angle)">
 
     <code>
-      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#rotate(angle)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4066,14 +4056,13 @@ Thus, it is equivalent to the following code:
 <li><em>angle</em> - Angle of rotation, in degrees</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1127">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1127">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#rotation()">
 
     <code>
-      #rotation<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Float32</span></code></span>
+      #rotation<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#rotation()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4082,14 +4071,13 @@ Thus, it is equivalent to the following code:
 <p><em>Returns:</em> Current rotation, in degrees</p>
 <p><em>See also:</em> <a href="#SF::Transformable#rotation=(angle)"><code>rotation=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1060">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1060">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#rotation=(angle)">
 
     <code>
-      #rotation=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #rotation=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#rotation=(angle)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4102,8 +4090,7 @@ The default rotation of a transformable object is 0.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#rotate(angle)"><code>rotate</code></a>, <a href="#SF::Transformable#rotation()"><code>rotation</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L982">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L982">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#scale()">
@@ -4117,14 +4104,13 @@ The default rotation of a transformable object is 0.</p>
 <p><em>Returns:</em> Current scale factors</p>
 <p><em>See also:</em> <a href="#SF::Transformable#scale=(factors)"><code>scale=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1069">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1069">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#scale(factor)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#scale(factor)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4143,14 +4129,13 @@ Thus, it is equivalent to the following code:
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#scale=(factors)"><code>scale=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1160">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1160">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#scale(factor_x,factor_y)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">factor_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">factor_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#scale(factor_x,factor_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4170,14 +4155,13 @@ Thus, it is equivalent to the following code:
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#scale=(factors)"><code>scale=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1144">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1144">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#scale=(factors)">
 
     <code>
-      #scale=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span></code></span>
+      #scale=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#scale=(factors)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4190,14 +4174,13 @@ The default scale of a transformable object is (1, 1).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#scale()"><code>scale</code></a>, <a href="#SF::Transformable#scale()"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1007">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1007">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#set_origin(x,y)">
 
     <code>
-      #set_origin<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #set_origin<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#set_origin(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4214,14 +4197,13 @@ The default origin of a transformable object is (0, 0).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#origin()"><code>origin</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1024">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1024">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#set_position(x,y)">
 
     <code>
-      #set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#set_position(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4235,14 +4217,13 @@ The default position of a transformable object is (0, 0).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#move(offset)"><code>move</code></a>, <a href="#SF::Transformable#position()"><code>position</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L957">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L957">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#set_scale(factor_x,factor_y)">
 
     <code>
-      #set_scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">factor_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      #set_scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factor_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">factor_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transformable#set_scale(factor_x,factor_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4256,8 +4237,7 @@ The default scale of a transformable object is (1, 1).</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::Transformable#scale()"><code>scale</code></a>, <a href="#SF::Transformable#scale()"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L995">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L995">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transformable#transform()">
@@ -4271,8 +4251,7 @@ The default scale of a transformable object is (1, 1).</p>
 <p><em>Returns:</em> Transform combining the position/rotation/scale/origin of the object</p>
 <p><em>See also:</em> <a href="#SF::Transformable#inverse_transform()"><code>inverse_transform</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1169">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L1169">View source</a>
 </div>
 </div>
 </div>
@@ -4343,8 +4322,8 @@ The default scale of a transformable object is (1, 1).</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

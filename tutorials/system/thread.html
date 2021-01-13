@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/system/thread.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3574,22 +3574,22 @@
 
   <span class="mi">7</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span>
     <span class="nb">puts</span> <span class="s2">&quot;I&#39;m thread number one&quot;</span>
-    <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
 
 <span class="c1"># create a thread with func() as entry point</span>
-<span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
 
 <span class="c1"># run it</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 
 <span class="c1"># the main thread continues to run...</span>
-<span class="no">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.15</span><span class="p">)</span>
 
 <span class="mi">7</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span>
   <span class="nb">puts</span> <span class="s2">&quot;I&#39;m the main thread&quot;</span>
-  <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+  <span class="n">SF</span><span class="o">.</span><span class="n">sleep</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="k">end</span>
 </code></pre></div>
 <p>In this code, both <code>main</code> and <code>func</code> run in parallel after <code>thread.launch()</code> has been called. The result is that text from both functions should be mixed in the console:</p>
@@ -3611,13 +3611,13 @@ I&#39;m the main thread
 <p>The entry point of the thread, ie. the function that will be run when the thread is started, must be passed to the constructor of <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a>. <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> can accept any kind of <a href="https://crystal-lang.org/reference/syntax_and_semantics/literals/proc.html">procs</a> without parameters.</p>
 <h2 id="starting-threads">Starting threads<a class="headerlink" href="#starting-threads" title="Permanent link">#</a></h2>
 <p>Once you've created a <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> instance, you must start it with the <code>launch</code> method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
 </code></pre></div>
 <p><code>launch</code> calls the function that you passed to the constructor in a new thread, and returns immediately so that the calling thread can continue to run.</p>
 <h2 id="stopping-threads">Stopping threads<a class="headerlink" href="#stopping-threads" title="Permanent link">#</a></h2>
 <p>A thread automatically stops when its entry point function returns. If you want to wait for a thread to finish from another thread, you can call its <code>wait</code> method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span>
 
 <span class="c1"># start the thread</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
@@ -3641,7 +3641,7 @@ Note that you can make any thread sleep with this function, even the main one.</
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
-  <span class="vi">@mutex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Mutex</span><span class="o">.</span><span class="n">new</span>
+  <span class="vi">@mutex</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mutex</span><span class="o">.</span><span class="n">new</span>
 
   <span class="k">def</span> <span class="nf">task</span>
     <span class="vi">@mutex</span><span class="o">.</span><span class="n">lock</span>
@@ -3652,7 +3652,7 @@ Note that you can make any thread sleep with this function, even the main one.</
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">main</span>
-    <span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">task</span><span class="p">)</span>
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">task</span><span class="p">)</span>
     <span class="n">thread</span><span class="o">.</span><span class="n">launch</span>
 
     <span class="vi">@mutex</span><span class="o">.</span><span class="n">lock</span>
@@ -3693,7 +3693,7 @@ I&#39;m thread number one
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/system&quot;</span>
 
 <span class="k">class</span> <span class="nc">Foo</span>
-  <span class="vi">@mutex</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Mutex</span><span class="o">.</span><span class="n">new</span>
+  <span class="vi">@mutex</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Mutex</span><span class="o">.</span><span class="n">new</span>
 
   <span class="k">def</span> <span class="nf">task</span>
     <span class="vi">@mutex</span><span class="o">.</span><span class="n">synchronize</span> <span class="k">do</span> <span class="c1"># lock mutex implicitly</span>
@@ -3702,7 +3702,7 @@ I&#39;m thread number one
   <span class="k">end</span>
 
   <span class="k">def</span> <span class="nf">main</span>
-    <span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">task</span><span class="p">)</span>
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">task</span><span class="p">)</span>
     <span class="n">thread</span><span class="o">.</span><span class="n">launch</span>
 
     <span class="vi">@mutex</span><span class="o">.</span><span class="n">synchronize</span> <span class="k">do</span> <span class="c1"># same as above</span>
@@ -3720,11 +3720,11 @@ I&#39;m thread number one
 <p>One thing that is often overlooked by programmers is that a thread cannot live without its corresponding <a href="../../api/SF/Thread.html#SF::Thread">SF::Thread</a> instance.
 The following code is often seen:</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">func</span>
-  <span class="no">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+  <span class="n">SF</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">start_thread</span>
-  <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span><span class="o">.</span><span class="n">launch</span>
+  <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">)</span><span class="o">.</span><span class="n">launch</span>
 <span class="k">end</span>
 
 <span class="n">start_thread</span><span class="p">()</span>
@@ -3799,8 +3799,8 @@ The following code is often seen:</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

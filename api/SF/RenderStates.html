@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/RenderStates.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3736,7 +3736,7 @@ default set of states is OK in most cases.
 <p>If you want to use a single specific render state, for example a
 shader, you can pass it to the constructor of <a href="#SF::RenderStates"><code>SF::RenderStates</code></a>.
 <div class="highlight">
-<pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">,</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">shader</span><span class="p">))</span>
+<pre><span></span><code><span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">,</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">shader</span><span class="p">))</span>
 </code></pre>
 </div>
 </p>
@@ -3753,7 +3753,9 @@ set its texture. Etc.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::RenderStates::Default">
 
-    <code>Default</code>
+    <code>
+      Default = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::RenderStates::Default" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Special instance holding the default render states</p>
@@ -3776,8 +3778,7 @@ set its texture. Etc.</p>
 <li><em>shader</em> - Shader to use</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L753">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L753">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderStates.new(blend_mode)">
@@ -3792,8 +3793,7 @@ set its texture. Etc.</p>
 <li><em>blend_mode</em> - Blend mode to use</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L708">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L708">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderStates.new(transform)">
@@ -3808,8 +3808,7 @@ set its texture. Etc.</p>
 <li><em>transform</em> - Transform to use</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L718">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L718">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderStates.new(texture)">
@@ -3824,8 +3823,7 @@ set its texture. Etc.</p>
 <li><em>texture</em> - Texture to use</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L728">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L728">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderStates.new(shader)">
@@ -3840,8 +3838,7 @@ set its texture. Etc.</p>
 <li><em>shader</em> - Shader to use</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L739">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L739">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderStates.new()">
@@ -3862,8 +3859,7 @@ The default set defines:</p>
 <li>a null shader</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L698">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L698">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3876,8 +3872,7 @@ The default set defines:</p>
 <div class="doc doc-contents ">
 <p>Blending mode</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L764">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L764">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#blend_mode=(blend_mode)">
@@ -3888,8 +3883,7 @@ The default set defines:</p>
   <a class="headerlink" href="#SF::RenderStates#blend_mode=(blend_mode)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L767">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L767">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#dup()">
@@ -3904,8 +3898,7 @@ The default set defines:</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L810">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L810">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#inspect(io)">
@@ -3916,8 +3909,7 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::RenderStates#inspect(io)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L171">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L171">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#shader()">
@@ -3929,8 +3921,7 @@ value types are passed by value.</p>
 <div class="doc doc-contents ">
 <p>Shader</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L790">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L790">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#shader=(shader)">
@@ -3941,8 +3932,7 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::RenderStates#shader=(shader)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L793">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L793">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#texture()">
@@ -3954,8 +3944,7 @@ value types are passed by value.</p>
 <div class="doc doc-contents ">
 <p>Texture</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L780">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L780">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#texture=(texture)">
@@ -3966,8 +3955,7 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::RenderStates#texture=(texture)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L783">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L783">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#transform()">
@@ -3979,8 +3967,7 @@ value types are passed by value.</p>
 <div class="doc doc-contents ">
 <p>Transform</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L772">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L772">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderStates#transform=(transform)">
@@ -3991,8 +3978,7 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::RenderStates#transform=(transform)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L775">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L775">View source</a>
 </div>
 </div>
 </div>
@@ -4063,8 +4049,8 @@ value types are passed by value.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

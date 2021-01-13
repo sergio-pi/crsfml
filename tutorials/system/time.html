@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/system/time.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3493,9 +3493,9 @@
 <p><a href="../../api/SF/Time.html#SF::Time">SF::Time</a> represents a time period (in other words, the time that elapses between two events). It is <em>not</em> a date-time class which would represent the current year/month/day/hour/minute/second as a timestamp, it's just a value that represents a certain amount of time, and how to interpret it depends on the context where it is used.</p>
 <h2 id="converting-time">Converting time<a class="headerlink" href="#converting-time" title="Permanent link">#</a></h2>
 <p>A <a href="../../api/SF/Time.html#SF::Time">SF::Time</a> value can be constructed from different source units: seconds, milliseconds and microseconds. There is a (non-member) function to turn each of them into a <a href="../../api/SF/Time.html#SF::Time">SF::Time</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">microseconds</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">t3</span> <span class="o">=</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">t1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">microseconds</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">milliseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
 </code></pre></div>
 <p>Note that these three times are all equal.</p>
 <p>Similarly, a <a href="../../api/SF/Time.html#SF::Time">SF::Time</a> can be converted back to either seconds, milliseconds or microseconds:</p>
@@ -3519,7 +3519,7 @@
 <p>Relevant example: <strong><a href="https://github.com/oprypin/crsfml/tree/master/examples/transformable.cr">transformable</a></strong></p>
 <p>Now that we've seen how to manipulate time values with CrSFML, let's see how to do something that almost every program needs: measuring the time elapsed.</p>
 <p>CrSFML has a very simple class for measuring time: <a href="../../api/SF/Clock.html#SF::Clock">SF::Clock</a>. It only has two methods: <code>elapsed_time</code>, to retrieve the time elapsed since the clock started, and <code>restart</code>, to restart the clock.</p>
-<div class="highlight"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span> <span class="c1"># Starts the clock</span>
+<div class="highlight"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span> <span class="c1"># Starts the clock</span>
 
 <span class="nb">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
@@ -3534,7 +3534,7 @@
 </code></pre></div>
 <p>Note that <code>restart</code> also returns the elapsed time, so that you can avoid the slight gap that would exist if you had to call <code>elapsed_time</code> explicitly before <code>restart</code>.<br />
 Here is an example that uses the time elapsed at each iteration of the game loop to update the game logic:</p>
-<div class="highlight"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">clock</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Clock</span><span class="o">.</span><span class="n">new</span>
 
 <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
   <span class="n">elapsed</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">restart</span>
@@ -3608,8 +3608,8 @@ Here is an example that uses the time elapsed at each iteration of the game loop
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/SoundBufferRecorder.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3610,9 +3610,9 @@ before using this class (see <a href="SoundRecorder.html#SF::SoundRecorder"><cod
 about this).</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="k">if</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
+<pre><span></span><code><span class="k">if</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">available?</span>
   <span class="c1"># Record some audio data</span>
-  <span class="n">recorder</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">recorder</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SoundBufferRecorder</span><span class="o">.</span><span class="n">new</span>
   <span class="n">recorder</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
   <span class="o">...</span>
   <span class="n">recorder</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
@@ -3638,8 +3638,7 @@ about this).</p>
   <a class="headerlink" href="#SF::SoundBufferRecorder.new()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1871">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1871">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
@@ -3657,8 +3656,7 @@ sound buffer, but it can be copied if you need to
 make any modification to it.</p>
 <p><em>Returns:</em> Read-only access to the sound buffer</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1888">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1888">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBufferRecorder#finalize()">
@@ -3670,14 +3668,13 @@ make any modification to it.</p>
 <div class="doc doc-contents ">
 <p>destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1876">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1876">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBufferRecorder#on_process_samples(samples)">
 
     <code>
-      #on_process_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><span class="nb">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">Int16</span><span class="p">))</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #on_process_samples<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">samples</span> <span class="p">:</span> <span class="n">Array</span><span class="p">(</span><span class="n">Int16</span><span class="p">)</span> <span class="o">|</span> <span class="n">Slice</span><span class="p">(</span><span class="n">Int16</span><span class="p">))</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBufferRecorder#on_process_samples(samples)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3688,22 +3685,20 @@ make any modification to it.</p>
 </ul>
 <p><em>Returns:</em> True to continue the capture, or false to stop it</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1904">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1904">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBufferRecorder#on_start()">
 
     <code>
-      #on_start<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #on_start<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::SoundBufferRecorder#on_start()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Start capturing audio data</p>
 <p><em>Returns:</em> True to start the capture, or false to abort it</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1895">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1895">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::SoundBufferRecorder#on_stop()">
@@ -3715,8 +3710,7 @@ make any modification to it.</p>
 <div class="doc doc-contents ">
 <p>Stop capturing audio data</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1908">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L1908">View source</a>
 </div>
 </div>
 </div>
@@ -3787,8 +3781,8 @@ make any modification to it.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Transform.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3764,11 +3764,11 @@ detection).</p>
 <p>Example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># define a translation transform</span>
-<span class="n">translation</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">translation</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">translation</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="c1"># define a rotation transform</span>
-<span class="n">rotation</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">rotation</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">rotation</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
 <span class="c1"># combine them</span>
@@ -3776,7 +3776,7 @@ detection).</p>
 
 <span class="c1"># use the result to transform stuff...</span>
 <span class="n">point</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform_point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">rect</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform_rect</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="n">rect</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">transform_rect</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">float_rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 </code></pre>
 </div>
 </p>
@@ -3786,7 +3786,9 @@ detection).</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::Transform::Identity">
 
-    <code>Identity</code>
+    <code>
+      Identity = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::Transform::Identity" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>The identity transform (does nothing)</p>
@@ -3797,7 +3799,7 @@ detection).</p>
 <h4 class="doc doc-heading" id="SF::Transform.new(a00,a01,a02,a10,a11,a12,a20,a21,a22)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">a00</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a01</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a02</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a10</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a11</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a12</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a20</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a21</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">a22</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">a00</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a01</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a02</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a10</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a11</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a12</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a20</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a21</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">a22</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform.new(a00,a01,a02,a10,a11,a12,a20,a21,a22)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3814,8 +3816,7 @@ detection).</p>
 <li><em>a22</em> - Element (2, 2) of the matrix</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L286">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L286">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::Transform.new()">
@@ -3828,15 +3829,14 @@ detection).</p>
 <p>Default constructor</p>
 <p>Creates an identity transform (a transform that does nothing).</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L271">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L271">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#!=(right)">
 
     <code>
-      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#!=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3848,14 +3848,13 @@ detection).</p>
 </ul>
 <p><em>Returns:</em> true if the transforms are not equal, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L623">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L623">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#*(right)">
 
     <code>
-      #*<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
+      #*<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#*(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3867,8 +3866,7 @@ detection).</p>
 </ul>
 <p><em>Returns:</em> New transformed point</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L596">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L596">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#*(right)">
@@ -3886,14 +3884,13 @@ detection).</p>
 </ul>
 <p><em>Returns:</em> New combined transform</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L583">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L583">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#==(right)">
 
     <code>
-      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#==(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3906,8 +3903,7 @@ left transform with the elements of the right transform.</p>
 </ul>
 <p><em>Returns:</em> true if the transforms are equal, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L611">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L611">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#combine(transform)">
@@ -3926,8 +3922,7 @@ equivalent to a matrix multiplication.</p>
 </ul>
 <p><em>Returns:</em> Reference to *this</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L364">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L364">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#dup()">
@@ -3942,8 +3937,7 @@ equivalent to a matrix multiplication.</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L636">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L636">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#inspect(io)">
@@ -3954,8 +3948,7 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::Transform#inspect(io)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L248">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L248">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#inverse()">
@@ -3970,14 +3963,13 @@ value types are passed by value.</p>
 is returned.</p>
 <p><em>Returns:</em> A new transform which is the inverse of self</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L312">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L312">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#matrix()">
 
     <code>
-      #matrix<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Pointer</span><span class="p">(</span><span class="nb">Float32</span><span class="p">)</span></code></span>
+      #matrix<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Pointer</span><span class="p">(</span><span class="n">Float32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#matrix()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3992,14 +3984,13 @@ is directly compatible with OpenGL functions.</p>
 </div>
 <p><em>Returns:</em> Pointer to a 4x4 matrix</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L302">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L302">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#rotate(angle,center)">
 
     <code>
-      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#rotate(angle,center)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4011,8 +4002,8 @@ translate(-center).rotate(angle).translate(center).</p>
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
-<span class="n">transform</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">transform</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
 </code></pre>
 </div>
 </p>
@@ -4023,14 +4014,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L474">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L474">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#rotate(angle,center_x,center_y)">
 
     <code>
-      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">center_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">center_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">center_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">center_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#rotate(angle,center_x,center_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4042,7 +4032,7 @@ translate(-center).rotate(angle).translate(center).</p>
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">transform</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -4055,14 +4045,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L449">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L449">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#rotate(angle)">
 
     <code>
-      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #rotate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">angle</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#rotate(angle)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4070,7 +4059,7 @@ can be chained.
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">transform</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -4081,14 +4070,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L423">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L423">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#scale(scale_x,scale_y,center_x,center_y)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">scale_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">scale_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">center_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">center_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">scale_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">scale_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">center_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">center_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4100,7 +4088,7 @@ translate(-center).scale(factors).translate(center).</p>
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -4114,14 +4102,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L522">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L522">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#scale(scale_x,scale_y)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">scale_x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">scale_y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">scale_x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">scale_y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#scale(scale_x,scale_y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4129,7 +4116,7 @@ can be chained.
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -4141,14 +4128,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L495">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L495">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#scale(factors,center)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">,</span> <span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">center</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#scale(factors,center)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4160,8 +4146,8 @@ translate(-center).scale(factors).translate(center).</p>
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
-<span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -4172,14 +4158,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L567">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L567">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#scale(factors)">
 
     <code>
-      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #scale<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">factors</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#scale(factors)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4187,8 +4172,8 @@ can be chained.
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
-<span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">transform</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -4198,14 +4183,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#translate(offset)"><code>translate</code></a>, <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L541">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L541">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#transform_point(point)">
 
     <code>
-      #transform_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">point</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
+      #transform_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">point</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#transform_point(point)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4215,14 +4199,13 @@ can be chained.
 </ul>
 <p><em>Returns:</em> Transformed point</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L333">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L333">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#transform_point(x,y)">
 
     <code>
-      #transform_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
+      #transform_point<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="Vector2f.html#SF::Vector2f">Vector2f</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#transform_point(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4233,8 +4216,7 @@ can be chained.
 </ul>
 <p><em>Returns:</em> Transformed point</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L323">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L323">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#transform_rect(rectangle)">
@@ -4255,14 +4237,13 @@ is returned.</p>
 </ul>
 <p><em>Returns:</em> Transformed rectangle</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L350">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L350">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#translate(offset)">
 
     <code>
-      #translate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="nb">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #translate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">offset</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#translate(offset)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4270,8 +4251,8 @@ is returned.</p>
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
-<span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="no">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">SF</span><span class="o">.</span><span class="n">vector2f</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -4281,14 +4262,13 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a>, <a href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L403">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L403">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::Transform#translate(x,y)">
 
     <code>
-      #translate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
+      #translate<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::Transform">Transform</a></code></span>
     </code>
   <a class="headerlink" href="#SF::Transform#translate(x,y)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4296,7 +4276,7 @@ can be chained.
 <p>This function returns a reference to *this, so that calls
 can be chained.
 <div class="highlight">
-<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
+<pre><span></span><code><span class="n">transform</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Transform</span><span class="o">.</span><span class="n">new</span>
 <span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 </code></pre>
 </div>
@@ -4308,8 +4288,7 @@ can be chained.
 <p><em>Returns:</em> Reference to *this</p>
 <p><em>See also:</em> <a href="#SF::Transform#rotate(angle,center)"><code>rotate</code></a>, <a href="#SF::Transform#scale(scale_x,scale_y,center_x,center_y)"><code>scale</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L384">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L384">View source</a>
 </div>
 </div>
 </div>
@@ -4380,8 +4359,8 @@ can be chained.
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/IpAddress.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3784,16 +3784,16 @@ conversion functions to easily build or transform an IP
 address from/to various representations.</p>
 <p>Usage example:
 <div class="highlight">
-<pre><span></span><code><span class="n">a0</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span>                    <span class="c1"># an invalid address</span>
-<span class="n">a1</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">::</span><span class="n">None</span>                  <span class="c1"># an invalid address (same as a0)</span>
-<span class="n">a2</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">)</span>       <span class="c1"># the local host address</span>
-<span class="n">a3</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">::</span><span class="n">Broadcast</span>             <span class="c1"># the broadcast address</span>
-<span class="n">a4</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">56</span><span class="p">)</span>   <span class="c1"># a local address</span>
-<span class="n">a5</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"my_computer"</span><span class="p">)</span>     <span class="c1"># a local address created from a network name</span>
-<span class="n">a6</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"89.54.1.169"</span><span class="p">)</span>     <span class="c1"># a distant address</span>
-<span class="n">a7</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"www.google.com"</span><span class="p">)</span>  <span class="c1"># a distant address created from a network name</span>
-<span class="n">a8</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">local_address</span>          <span class="c1"># my address on the local network</span>
-<span class="n">a9</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">get_public_address</span><span class="p">()</span>   <span class="c1"># my address on the internet</span>
+<pre><span></span><code><span class="n">a0</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span>                    <span class="c1"># an invalid address</span>
+<span class="n">a1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">::</span><span class="n">None</span>                  <span class="c1"># an invalid address (same as a0)</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"127.0.0.1"</span><span class="p">)</span>       <span class="c1"># the local host address</span>
+<span class="n">a3</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">::</span><span class="n">Broadcast</span>             <span class="c1"># the broadcast address</span>
+<span class="n">a4</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">192</span><span class="p">,</span> <span class="mi">168</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">56</span><span class="p">)</span>   <span class="c1"># a local address</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"my_computer"</span><span class="p">)</span>     <span class="c1"># a local address created from a network name</span>
+<span class="n">a6</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"89.54.1.169"</span><span class="p">)</span>     <span class="c1"># a distant address</span>
+<span class="n">a7</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"www.google.com"</span><span class="p">)</span>  <span class="c1"># a distant address created from a network name</span>
+<span class="n">a8</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">local_address</span>          <span class="c1"># my address on the local network</span>
+<span class="n">a9</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">get_public_address</span><span class="p">()</span>   <span class="c1"># my address on the internet</span>
 </code></pre>
 </div>
 </p>
@@ -3804,7 +3804,9 @@ nor other types of network addresses.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::IpAddress::Any">
 
-    <code>Any</code>
+    <code>
+      Any = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::IpAddress::Any" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Value representing any address (0.0.0.0)</p>
@@ -3813,7 +3815,9 @@ nor other types of network addresses.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::IpAddress::Broadcast">
 
-    <code>Broadcast</code>
+    <code>
+      Broadcast = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::IpAddress::Broadcast" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>The "broadcast" address (for sending UDP messages to everyone on a local network)</p>
@@ -3822,7 +3826,9 @@ nor other types of network addresses.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::IpAddress::LocalHost">
 
-    <code>LocalHost</code>
+    <code>
+      LocalHost = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span><span class="p">(</span><span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::IpAddress::LocalHost" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>The "localhost" address (for connecting a computer to itself locally)</p>
@@ -3831,7 +3837,9 @@ nor other types of network addresses.</p>
 <div class="doc doc-object doc-constant">
 <h4 class="doc doc-heading" id="SF::IpAddress::None">
 
-    <code>None</code>
+    <code>
+      None = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">new</span></code></span>
+    </code>
   <a class="headerlink" href="#SF::IpAddress::None" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Value representing an empty/invalid address</p>
@@ -3842,7 +3850,7 @@ nor other types of network addresses.</p>
 <h4 class="doc doc-heading" id="SF::IpAddress.get_public_address(timeout)">
 
     <code>
-      .get_public_address<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="nb">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a></code></span>
+      .get_public_address<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="n">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress.get_public_address(timeout)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3864,8 +3872,7 @@ limit is deactivated by default.</p>
 <p><em>Returns:</em> Public IP address of the computer</p>
 <p><em>See also:</em> <a href="#SF::IpAddress.local_address()"><code>local_address</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1114">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1114">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::IpAddress.local_address()">
@@ -3884,14 +3891,13 @@ used safely anywhere.</p>
 <p><em>Returns:</em> Local IP address of the computer</p>
 <p><em>See also:</em> <code>public_address</code></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1090">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1090">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::IpAddress.new(byte0,byte1,byte2,byte3)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">byte0</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">byte1</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">byte2</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">byte3</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">byte0</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">byte1</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">byte2</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">byte3</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress.new(byte0,byte1,byte2,byte3)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3906,14 +3912,13 @@ parse a string to get the address components.</p>
 <li><em>byte3</em> - Fourth byte of the address</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1031">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1031">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::IpAddress.new(address)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">address</span> <span class="p">:</span> <span class="nb">String</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">address</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress.new(address)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3927,14 +3932,13 @@ implicit conversions from literal strings to IpAddress work.</p>
 <li><em>address</em> - IP address or network name</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1016">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1016">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::IpAddress.new(address)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">address</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">address</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress.new(address)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3948,8 +3952,7 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::IpAddress#to_integer()"><code>to_integer</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1046">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1046">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::IpAddress.new()">
@@ -3962,15 +3965,14 @@ IpAddress.to_integer().</p>
 <p>Default constructor</p>
 <p>This constructor creates an empty (invalid) address</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L991">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L991">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#!=(right)">
 
     <code>
-      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#!=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3981,14 +3983,13 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if both addresses are different</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1137">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1137">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#&lt;(right)">
 
     <code>
-      #&lt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&lt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#&lt;(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3999,14 +4000,13 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1147">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1147">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#&lt;=(right)">
 
     <code>
-      #&lt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&lt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#&lt;=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4017,14 +4017,13 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1167">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1167">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#==(right)">
 
     <code>
-      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#==(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4035,14 +4034,13 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if both addresses are equal</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1127">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1127">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#&gt;(right)">
 
     <code>
-      #&gt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&gt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#&gt;(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4053,14 +4051,13 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1157">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1157">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#&gt;=(right)">
 
     <code>
-      #&gt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&gt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::IpAddress">IpAddress</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#&gt;=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4071,8 +4068,7 @@ IpAddress.to_integer().</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1177">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1177">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#dup()">
@@ -4087,8 +4083,7 @@ IpAddress.to_integer().</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1191">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1191">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#inspect(io)">
@@ -4099,14 +4094,13 @@ value types are passed by value.</p>
   <a class="headerlink" href="#SF::IpAddress#inspect(io)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/network.cr#L14">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/network.cr#L14">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#to_integer()">
 
     <code>
-      #to_integer<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #to_integer<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#to_integer()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4119,14 +4113,13 @@ back to a <a href="#SF::IpAddress"><code>SF::IpAddress</code></a> with the prope
 <p><em>Returns:</em> 32-bits unsigned integer representation of the address</p>
 <p><em>See also:</em> <a href="#SF::IpAddress#to_s()"><code>to_s</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1075">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1075">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::IpAddress#to_s()">
 
     <code>
-      #to_s<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">String</span></code></span>
+      #to_s<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">String</span></code></span>
     </code>
   <a class="headerlink" href="#SF::IpAddress#to_s()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4137,8 +4130,7 @@ from a host name.</p>
 <p><em>Returns:</em> String representation of the address</p>
 <p><em>See also:</em> <a href="#SF::IpAddress#to_integer()"><code>to_integer</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1060">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L1060">View source</a>
 </div>
 </div>
 </div>
@@ -4209,8 +4201,8 @@ from a host name.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

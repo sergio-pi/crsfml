@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/RenderTexture.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3725,10 +3725,10 @@ texture rather than being show in a window.</p>
 <p>Usage example:</p>
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Create a new render-window</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
 
 <span class="c1"># Create a new render-texture</span>
-<span class="n">texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
 <span class="c1"># The main loop</span>
 <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
@@ -3736,7 +3736,7 @@ texture rather than being show in a window.</p>
   <span class="c1"># ...</span>
 
   <span class="c1"># Clear the whole texture with red color</span>
-  <span class="n">texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">)</span>
+  <span class="n">texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Red</span><span class="p">)</span>
 
   <span class="c1"># Draw stuff to the texture</span>
   <span class="n">texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>  <span class="c1"># sprite is a SF::Sprite</span>
@@ -3750,7 +3750,7 @@ texture rather than being show in a window.</p>
   <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 
   <span class="c1"># Draw the texture</span>
-  <span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="p">(</span><span class="n">texture</span><span class="o">.</span><span class="n">texture</span><span class="p">)</span>
+  <span class="n">sprite</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="p">(</span><span class="n">texture</span><span class="o">.</span><span class="n">texture</span><span class="p">)</span>
   <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
 
   <span class="c1"># End the current frame and display its contents on screen</span>
@@ -3773,15 +3773,14 @@ and regular SFML drawing commands. If you need a depth buffer for
 <h4 class="doc doc-heading" id="SF::RenderTexture.maximum_antialiasing_level()">
 
     <code>
-      .maximum_antialiasing_level<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Int32</span></code></span>
+      .maximum_antialiasing_level<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture.maximum_antialiasing_level()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Get the maximum anti-aliasing level supported by the system</p>
 <p><em>Returns:</em> The maximum anti-aliasing level supported by the system</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4915">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4915">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture.new()">
@@ -3796,29 +3795,27 @@ and regular SFML drawing commands. If you need a depth buffer for
 call create to have a valid render-texture.</p>
 <p><em>See also:</em> <a href="#SF::RenderTexture#create(width,height,depth_buffer)"><code>create</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4843">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4843">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture.new(*args,**kwargs)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="kp">self</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture.new(*args,**kwargs)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Shorthand for <code>render_texture = RenderTexture.new; render_texture.create(...); render_texture</code></p>
 <p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4905">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4905">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#active=(active)">
 
     <code>
-      #active=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">active</span> <span class="p">:</span> <span class="nb">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #active=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">active</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#active=(active)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3834,14 +3831,13 @@ want to draw OpenGL geometry to another render target
 </ul>
 <p><em>Returns:</em> True if operation was successful, false otherwise</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4986">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4986">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#create(width,height,depth_buffer)">
 
     <code>
-      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">depth_buffer</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">depth_buffer</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#create(width,height,depth_buffer)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3861,14 +3857,13 @@ leave this parameter to false (which is its default value).</p>
 <p><em>Returns:</em> True if creation has been successful</p>
 <p>DEPRECATED: Use create(unsigned int, unsigned int, const ContextSettings&amp;) instead.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4869">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4869">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#create(width,height,settings)">
 
     <code>
-      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">settings</span> <span class="p">:</span> <a href="ContextSettings.html#SF::ContextSettings">ContextSettings</a> <span class="o">=</span> <span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">settings</span> <span class="p">:</span> <a href="ContextSettings.html#SF::ContextSettings">ContextSettings</a> <span class="o">=</span> <span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#create(width,height,settings)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3887,8 +3882,7 @@ you should leave this parameter at its default value.</p>
 </ul>
 <p><em>Returns:</em> True if creation has been successful</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4898">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4898">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#display()">
@@ -3904,8 +3898,7 @@ has been drawn so far. Like for windows, calling this
 function is mandatory at the end of rendering. Not calling
 it may leave the texture in an undefined state.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4996">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4996">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#finalize()">
@@ -3917,14 +3910,13 @@ it may leave the texture in an undefined state.</p>
 <div class="doc doc-contents ">
 <p>Destructor</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4848">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4848">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#generate_mipmap()">
 
     <code>
-      #generate_mipmap<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #generate_mipmap<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#generate_mipmap()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3938,14 +3930,13 @@ after subsequent drawing will lead to undefined behavior if a mipmap
 had been previously generated.</p>
 <p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4970">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4970">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#repeated=(repeated)">
 
     <code>
-      #repeated=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">repeated</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+      #repeated=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">repeated</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#repeated=(repeated)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3957,14 +3948,13 @@ This parameter is disabled by default.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::RenderTexture#repeated?()"><code>repeated?</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4947">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4947">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#repeated?()">
 
     <code>
-      #repeated?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #repeated?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#repeated?()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3972,8 +3962,7 @@ This parameter is disabled by default.</p>
 <p><em>Returns:</em> True if texture is repeated</p>
 <p><em>See also:</em> <a href="#SF::RenderTexture#repeated=(repeated)"><code>repeated=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4955">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4955">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#size()">
@@ -3988,14 +3977,13 @@ This parameter is disabled by default.</p>
 the create function.</p>
 <p><em>Returns:</em> Size in pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5005">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5005">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#smooth=(smooth)">
 
     <code>
-      #smooth=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">smooth</span> <span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span></code></span>
+      #smooth=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">smooth</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#smooth=(smooth)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4007,14 +3995,13 @@ This parameter is disabled by default.</p>
 </ul>
 <p><em>See also:</em> <a href="#SF::RenderTexture#smooth?()"><code>smooth?</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4927">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4927">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#smooth?()">
 
     <code>
-      #smooth?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #smooth?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::RenderTexture#smooth?()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4022,8 +4009,7 @@ This parameter is disabled by default.</p>
 <p><em>Returns:</em> True if texture smoothing is enabled</p>
 <p><em>See also:</em> <a href="#SF::RenderTexture#smooth=(smooth)"><code>smooth=</code></a></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4935">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4935">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::RenderTexture#texture()">
@@ -4043,8 +4029,7 @@ once and keep a reference to the texture even after it is
 modified.</p>
 <p><em>Returns:</em> Const reference to the texture</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5021">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5021">View source</a>
 </div>
 </div>
 </div>
@@ -4115,8 +4100,8 @@ modified.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/graphics/draw.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3512,20 +3512,20 @@
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml&quot;</span>
 
 <span class="c1"># create the window</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;My window&quot;</span><span class="p">)</span>
 
 <span class="c1"># run the program as long as the window is open</span>
 <span class="k">while</span> <span class="n">window</span><span class="o">.</span><span class="n">open?</span>
   <span class="c1"># check all the window&#39;s events that were triggered since the last iteration of the loop</span>
   <span class="k">while</span> <span class="n">event</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">poll_event</span>
     <span class="c1"># &quot;close requested&quot; event: we close the window</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">is_a?</span> <span class="no">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
+    <span class="k">if</span> <span class="n">event</span><span class="kp">.is_a?</span> <span class="n">SF</span><span class="o">::</span><span class="n">Event</span><span class="o">::</span><span class="n">Closed</span>
       <span class="n">window</span><span class="o">.</span><span class="n">close</span>
     <span class="k">end</span>
   <span class="k">end</span>
 
   <span class="c1"># clear the window with black color</span>
-  <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Black</span><span class="p">)</span>
 
   <span class="c1"># draw everything here...</span>
   <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
@@ -3551,10 +3551,10 @@ Modern graphics hardware and APIs are <em>really</em> made for repeated clear/dr
 <h2 id="off-screen-drawing">Off-screen drawing<a class="headerlink" href="#off-screen-drawing" title="Permanent link">#</a></h2>
 <p>SFML also provides a way to draw to a texture instead of directly to a window. To do so, use a <a href="../../api/SF/RenderTexture.html#SF::RenderTexture">SF::RenderTexture</a> instead of a <a href="../../api/SF/RenderWindow.html#SF::RenderWindow">SF::RenderWindow</a>. It has the same methods for drawing, inherited from their common base: <a href="../../api/SF/RenderTarget.html#SF::RenderTarget">SF::RenderTarget</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># create a 500x500 render-texture</span>
-<span class="n">render_texture</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">render_texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
 <span class="c1"># drawing uses the same methods</span>
-<span class="n">render_texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span><span class="p">)</span>
+<span class="n">render_texture</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">Color</span><span class="o">::</span><span class="n">Blue</span><span class="p">)</span>
 <span class="n">render_texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span> <span class="c1"># or any other drawable</span>
 <span class="n">render_texture</span><span class="o">.</span><span class="n">display</span>
 
@@ -3562,12 +3562,12 @@ Modern graphics hardware and APIs are <em>really</em> made for repeated clear/dr
 <span class="n">texture</span> <span class="o">=</span> <span class="n">render_texture</span><span class="o">.</span><span class="n">texture</span>
 
 <span class="c1"># draw it to the window</span>
-<span class="n">sprite</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
+<span class="n">sprite</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Sprite</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">texture</span><span class="p">)</span>
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
 </code></pre></div>
 <p>The <code>texture</code> method returns a read-only texture, which means that you can only use it, not modify it. If you need to modify it before using it, you can copy it to your own <a href="../../api/SF/Texture.html#SF::Texture">SF::Texture</a> instance and modify that instead.</p>
 <p><a href="../../api/SF/RenderTexture.html#SF::RenderTexture">SF::RenderTexture</a> also has the same methods as <a href="../../api/SF/RenderWindow.html#SF::RenderWindow">SF::RenderWindow</a> for handling views and OpenGL (see the corresponding tutorials for more details). If you use OpenGL to draw to the render-texture, you can request creation of a depth buffer by using the third optional argument of the constructor.</p>
-<div class="highlight"><pre><span></span><code><span class="no">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1"># enable depth buffer</span>
+<div class="highlight"><pre><span></span><code><span class="n">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="c1"># enable depth buffer</span>
 </code></pre></div>
 <h2 id="drawing-from-threads">Drawing from threads<a class="headerlink" href="#drawing-from-threads" title="Permanent link">#</a></h2>
 <p>CrSFML supports multi-threaded drawing, and you don't even have to do anything to make it work. The only thing to remember is to deactivate a window before using it in another thread. That's because a window (more precisely its OpenGL context) cannot be active in more than one thread at the same time.</p>
@@ -3582,13 +3582,13 @@ Modern graphics hardware and APIs are <em>really</em> made for repeated clear/dr
 <span class="k">end</span>
 
 <span class="c1"># create the window (remember: it&#39;s safer to create it in the main thread due to OS limitations)</span>
-<span class="n">window</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;OpenGL&quot;</span><span class="p">)</span>
 
 <span class="c1"># deactivate its OpenGL context</span>
 <span class="n">window</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="kc">false</span>
 
 <span class="c1"># launch the rendering thread</span>
-<span class="n">thread</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="p">{</span> <span class="n">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="p">})</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Thread</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">-&gt;</span><span class="p">{</span> <span class="n">render_thread</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="p">})</span>
 <span class="n">thread</span><span class="o">.</span><span class="n">launch</span>
 
 <span class="c1"># the event/logic/whatever loop</span>
@@ -3664,8 +3664,8 @@ Modern graphics hardware and APIs are <em>really</em> made for repeated clear/dr
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

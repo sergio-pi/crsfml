@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/tutorials/network/socket.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3548,9 +3548,9 @@ UDP is a <em>datagram</em> protocol. Datagrams are packets that can't be mixed w
 <p>On client side, things are simple: the user just needs to have a <a href="../../api/SF/TcpSocket.html#SF::TcpSocket">SF::TcpSocket</a> and call its <code>connect</code> method to start the connection attempt.</p>
 <div class="highlight"><pre><span></span><code><span class="k">require</span> <span class="s2">&quot;crsfml/network&quot;</span>
 
-<span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
-<span class="n">status</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">),</span> <span class="mi">53000</span><span class="p">)</span>
-<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">),</span> <span class="mi">53000</span><span class="p">)</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error</span>
 <span class="k">end</span>
 </code></pre></div>
@@ -3562,16 +3562,16 @@ UDP is a <em>datagram</em> protocol. Datagrams are packets that can't be mixed w
 You can change this behavior and make all methods non-blocking by using the <code>blocking=</code> method of the socket. See the next chapters for more details.</p>
 <p>On the server side, a few more things have to be done. Multiple sockets are required: One that listens for incoming connections, and one for each connected client.</p>
 <p>To listen for connections, you must use the special <a href="../../api/SF/TcpListener.html#SF::TcpListener">SF::TcpListener</a> class. Its only role is to wait for incoming connection attempts on a given port, it can't send or receive data.</p>
-<div class="highlight"><pre><span></span><code><span class="n">listener</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">listener</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># bind the listener to a port</span>
-<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">53000</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error...</span>
 <span class="k">end</span>
 
 <span class="c1"># accept a new connection</span>
-<span class="n">client</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
-<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="k">unless</span> <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">client</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error...</span>
 <span class="k">end</span>
 
@@ -3582,10 +3582,10 @@ You can change this behavior and make all methods non-blocking by using the <cod
 <p>After a successful call to <code>connect</code> (on client side) and <code>accept</code> (on server side), the communication is established and both sockets are ready to exchange data.</p>
 <h2 id="binding-a-udp-socket">Binding a UDP socket<a class="headerlink" href="#binding-a-udp-socket" title="Permanent link">#</a></h2>
 <p>UDP sockets need not be connected, however you need to bind them to a specific port if you want to be able to receive data on that port. A UDP socket cannot receive on multiple ports simultaneously.</p>
-<div class="highlight"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
 
 <span class="c1"># bind the socket to a port</span>
-<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="mi">54000</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="mi">54000</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error...</span>
 <span class="k">end</span>
 </code></pre></div>
@@ -3594,17 +3594,17 @@ You can change this behavior and make all methods non-blocking by using the <cod
 <h2 id="sending-and-receiving-data">Sending and receiving data<a class="headerlink" href="#sending-and-receiving-data" title="Permanent link">#</a></h2>
 <p>Sending and receiving data is done in the same way for both types of sockets. The only difference is that UDP has two extra arguments: the address and port of the sender/recipient. There are two different methods for each operation: the low-level one, that sends/receives a raw array of bytes, and the higher-level one, which uses the <a href="../../api/SF/Packet.html#SF::Packet">SF::Packet</a> class. See the <a href="packet.html" title="Tutorial on packets">tutorial on packets</a> for more details about this class. In this tutorial, we'll only explain the low-level methods.</p>
 <p>To send data, you must call the <code>send</code> method with a pointer to the data that you want to send, and the number of bytes to send.</p>
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">Slice</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span> <span class="p">{</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">to_u8</span> <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">Slice</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">77</span><span class="p">)</span> <span class="p">{</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span><span class="o">.</span><span class="n">to_u8</span> <span class="p">}</span>
 
 <span class="c1"># TCP socket:</span>
-<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error</span>
 <span class="k">end</span>
 
 <span class="c1"># UDP socket:</span>
-<span class="n">recipient</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">)</span>
+<span class="n">recipient</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">IpAddress</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;192.168.0.5&quot;</span><span class="p">)</span>
 <span class="n">port</span> <span class="o">=</span> <span class="mi">54000</span>
-<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">recipient</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error</span>
 <span class="k">end</span>
 </code></pre></div>
@@ -3612,18 +3612,18 @@ You can change this behavior and make all methods non-blocking by using the <cod
 <p>With UDP you can broadcast a message to an entire sub-network in a single call: to do so you can use the special address <code>SF::IpAddress::Broadcast</code>.</p>
 <p>There's another thing to keep in mind with UDP: Since data is sent in datagrams and the size of these datagrams has a limit, you are not allowed to exceed it. Every call to <code>send</code> must send less that <code>SF::UdpSocket.max_datagram_size</code> bytes -- which is a little less than 2^16 (65536) bytes.</p>
 <p>To receive data, you must call the <code>receive</code> method:</p>
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="nb">Slice</span><span class="p">(</span><span class="nb">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="c1"># TCP socket:</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error</span>
 <span class="k">end</span>
 <span class="nb">puts</span> <span class="s2">&quot;Received </span><span class="si">#{</span><span class="n">received</span><span class="si">}</span><span class="s2"> bytes&quot;</span>
 
 <span class="c1"># UDP socket:</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
+<span class="k">unless</span> <span class="n">status</span> <span class="o">==</span> <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">Done</span>
   <span class="c1"># error...</span>
 <span class="k">end</span>
 <span class="nb">puts</span> <span class="s2">&quot;Received </span><span class="si">#{</span><span class="n">received</span><span class="si">}</span><span class="s2"> bytes from </span><span class="si">#{</span><span class="n">sender</span><span class="si">}</span><span class="s2"> on port </span><span class="si">#{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -3635,14 +3635,14 @@ With UDP sockets, the last two arguments will contain the address and port of th
 <h2 id="blocking-on-a-group-of-sockets">Blocking on a group of sockets<a class="headerlink" href="#blocking-on-a-group-of-sockets" title="Permanent link">#</a></h2>
 <p>Blocking on a single socket can quickly become annoying, because you will most likely have to handle more than one client. You most likely don't want socket A to block your program while socket B has received something that could be processed. What you would like is to block on multiple sockets at once, i.e. waiting until <em>any of them</em> has received something. This is possible with socket selectors, represented by the <a href="../../api/SF/SocketSelector.html#SF::SocketSelector">SF::SocketSelector</a> class.</p>
 <p>A selector can monitor all types of sockets: <a href="../../api/SF/TcpSocket.html#SF::TcpSocket">SF::TcpSocket</a>, <a href="../../api/SF/UdpSocket.html#SF::UdpSocket">SF::UdpSocket</a>, and <a href="../../api/SF/TcpListener.html#SF::TcpListener">SF::TcpListener</a>. To add a socket to a selector, use its <code>add</code> method:</p>
-<div class="highlight"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 
-<span class="n">selector</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
+<span class="n">selector</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
 <span class="n">selector</span><span class="o">.</span><span class="n">add</span> <span class="n">socket</span>
 </code></pre></div>
 <p>A selector is not a socket container. It only references (points to) the sockets that you add, it doesn't store them. There is no way to retrieve or count the sockets that you put inside. Instead, it is up to you to have your own separate socket storage (like an <code>Array</code>).</p>
 <p>Once you have filled the selector with all the sockets that you want to monitor, you must call its <code>wait</code> method to wait until any one of them has received something (or has triggered an error). You can also pass an optional time out value, so that the method will fail if nothing has been received after a certain period of time -- this avoids staying stuck forever if nothing happens.</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
   <span class="c1"># received something</span>
 <span class="k">else</span>
   <span class="c1"># timeout reached, nothing was received...</span>
@@ -3650,7 +3650,7 @@ With UDP sockets, the last two arguments will contain the address and port of th
 </code></pre></div>
 <p>If the <code>wait</code> method returns <code>true</code>, it means that one or more socket(s) have received something, and you can safely call <code>receive</code> on the socket(s) with pending data without having them block. If the socket is a <a href="../../api/SF/TcpListener.html#SF::TcpListener">SF::TcpListener</a>, it means that an incoming connection is ready to be accepted and that you can call its <code>accept</code> method without having it block.</p>
 <p>Since the selector is not a socket container, it cannot return the sockets that are ready to receive. Instead, you must test each candidate socket with the <code>ready?</code> method:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="no">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span> <span class="n">SF</span><span class="o">.</span><span class="n">seconds</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
   <span class="n">my_sockets</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">socket</span><span class="o">|</span>
     <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">ready?</span><span class="p">(</span><span class="n">socket</span><span class="p">)</span>
       <span class="c1"># this socket is ready, you can receive (or accept if it&#39;s a listener)</span>
@@ -3661,25 +3661,25 @@ With UDP sockets, the last two arguments will contain the address and port of th
 </code></pre></div>
 <p>You can have a look at the API documentation of the <a href="../../api/SF/SocketSelector.html#SF::SocketSelector">SF::SocketSelector</a> class for a working example of how to use a selector to handle connections and messages from multiple clients.</p>
 <p>As a bonus, the timeout capability of <code>Selector#wait</code> allows you to implement a receive-with-timeout method, which is not directly available in the socket classes, very easily:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">receive_with_timeout</span><span class="p">(</span><span class="n">socket</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="p">,</span> <span class="n">packet</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="n">Packet</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <span class="no">SF</span><span class="o">::</span><span class="nb">Time</span><span class="p">)</span>
-  <span class="n">selector</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">receive_with_timeout</span><span class="p">(</span><span class="n">socket</span> <span class="p">:</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="p">,</span> <span class="n">packet</span> <span class="p">:</span> <span class="n">SF</span><span class="o">::</span><span class="n">Packet</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <span class="n">SF</span><span class="o">::</span><span class="n">Time</span><span class="p">)</span>
+  <span class="n">selector</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">SocketSelector</span><span class="o">.</span><span class="n">new</span>
   <span class="n">selector</span><span class="o">.</span><span class="n">add</span> <span class="n">socket</span>
   <span class="k">if</span> <span class="n">selector</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
     <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
   <span class="k">else</span>
-    <span class="no">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">NotReady</span>
+    <span class="n">SF</span><span class="o">::</span><span class="n">Socket</span><span class="o">::</span><span class="n">NotReady</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div>
 <h2 id="non-blocking-sockets">Non-blocking sockets<a class="headerlink" href="#non-blocking-sockets" title="Permanent link">#</a></h2>
 <p>All sockets are blocking by default, but you can change this behaviour at any time with the <code>setBlocking</code> method.</p>
-<div class="highlight"><pre><span></span><code><span class="n">tcp_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">tcp_socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 <span class="n">tcp_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
 
-<span class="n">listener_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
+<span class="n">listener_socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpListener</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
 
-<span class="n">udp_socket</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
+<span class="n">udp_socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">UdpSocket</span><span class="o">.</span><span class="n">new</span>
 <span class="n">udp_socket</span><span class="o">.</span><span class="n">blocking</span> <span class="o">=</span> <span class="kc">false</span>
 </code></pre></div>
 <p>Once a socket is set as non-blocking, all of its methods always return immediately. For example, <code>receive</code> will return with status <code>SF::Socket::NotReady</code> if there's no data available. Or, <code>accept</code> will return immediately, with the same status, if there's no pending connection.</p>
@@ -3751,8 +3751,8 @@ With UDP sockets, the last two arguments will contain the address and port of th
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

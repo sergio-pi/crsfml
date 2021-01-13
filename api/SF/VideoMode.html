@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/VideoMode.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
           
           
@@ -3772,13 +3772,13 @@ depth as the current resolution.</p>
 <p>Usage example:
 <div class="highlight">
 <pre><span></span><code><span class="c1"># Display the list of all the video modes available for fullscreen</span>
-<span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">fullscreen_modes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">mode</span><span class="o">|</span>
+<span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">fullscreen_modes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">mode</span><span class="o">|</span>
   <span class="nb">puts</span> <span class="s2">"Mode #</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">mode</span><span class="o">.</span><span class="n">width</span><span class="si">}</span><span class="s2">x</span><span class="si">#{</span><span class="n">mode</span><span class="o">.</span><span class="n">height</span><span class="si">}</span><span class="s2"> - </span><span class="si">#{</span><span class="n">mode</span><span class="o">.</span><span class="n">bits_per_pixel</span><span class="si">}</span><span class="s2"> bpp"</span>
 <span class="k">end</span>
 
 <span class="c1"># Create a window with the same pixel depth as the desktop</span>
-<span class="n">desktop</span> <span class="o">=</span> <span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">desktop_mode</span>
-<span class="n">window</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="no">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">,</span> <span class="n">desktop</span><span class="o">.</span><span class="n">bits_per_pixel</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
+<span class="n">desktop</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">desktop_mode</span>
+<span class="n">window</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="mi">768</span><span class="p">,</span> <span class="n">desktop</span><span class="o">.</span><span class="n">bits_per_pixel</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
 </code></pre>
 </div>
 </p>
@@ -3788,7 +3788,7 @@ depth as the current resolution.</p>
 <h4 class="doc doc-heading" id="SF::VideoMode.fullscreen_modes()">
 
     <code>
-      .fullscreen_modes<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Array</span><span class="p">(</span><a href="#SF::VideoMode">VideoMode</a><span class="p">)</span></code></span>
+      .fullscreen_modes<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Array</span><span class="p">(</span><a href="#SF::VideoMode">VideoMode</a><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode.fullscreen_modes()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3802,8 +3802,7 @@ the first element will always give the best mode (higher
 width, height and bits-per-pixel).</p>
 <p><em>Returns:</em> Array containing all the supported fullscreen modes</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2104">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2104">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::VideoMode.desktop_mode()">
@@ -3816,14 +3815,13 @@ width, height and bits-per-pixel).</p>
 <p>Get the current desktop video mode</p>
 <p><em>Returns:</em> Current desktop video mode</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2088">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2088">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::VideoMode.new(width,height,bits_per_pixel)">
 
     <code>
-      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">bits_per_pixel</span> <span class="p">:</span> <span class="nb">Int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">)</span></code></span>
+      .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">bits_per_pixel</span> <span class="p">:</span> <span class="n">Int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode.new(width,height,bits_per_pixel)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3834,8 +3832,7 @@ width, height and bits-per-pixel).</p>
 <li><em>bits_per_pixel</em> - Pixel depths in bits per pixel</li>
 </ul>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2079">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2079">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-class_method">
 <h4 class="doc doc-heading" id="SF::VideoMode.new()">
@@ -3848,15 +3845,14 @@ width, height and bits-per-pixel).</p>
 <p>Default constructor</p>
 <p>This constructors initializes all members to 0.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2068">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2068">View source</a>
 </div>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#!=(right)">
 
     <code>
-      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #!=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#!=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3867,14 +3863,13 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if modes are different</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2159">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2159">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#&lt;(right)">
 
     <code>
-      #&lt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&lt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#&lt;(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3885,14 +3880,13 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is lesser than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2169">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2169">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#&lt;=(right)">
 
     <code>
-      #&lt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&lt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#&lt;=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3903,14 +3897,13 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is lesser or equal than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2189">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2189">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#==(right)">
 
     <code>
-      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #==<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#==(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3921,14 +3914,13 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if modes are equal</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2149">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2149">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#&gt;(right)">
 
     <code>
-      #&gt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&gt;<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#&gt;(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3939,14 +3931,13 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is greater than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2179">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2179">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#&gt;=(right)">
 
     <code>
-      #&gt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #&gt;=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">right</span> <span class="p">:</span> <a href="#SF::VideoMode">VideoMode</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#&gt;=(right)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -3957,33 +3948,30 @@ width, height and bits-per-pixel).</p>
 </ul>
 <p><em>Returns:</em> True if <em>left</em> is greater or equal than <em>right</em></p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2199">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2199">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#bits_per_pixel()">
 
     <code>
-      #bits_per_pixel<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #bits_per_pixel<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#bits_per_pixel()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Video mode pixel depth, in bits per pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2137">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2137">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#bits_per_pixel=(bits_per_pixel)">
 
     <code>
-      #bits_per_pixel=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">bits_per_pixel</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #bits_per_pixel=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">bits_per_pixel</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#bits_per_pixel=(bits_per_pixel)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2140">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2140">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#dup()">
@@ -3998,39 +3986,36 @@ width, height and bits-per-pixel).</p>
 which already involves a shallow copy of this object because
 value types are passed by value.</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2214">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2214">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#height()">
 
     <code>
-      #height<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #height<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#height()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Video mode height, in pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2129">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2129">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#height=(height)">
 
     <code>
-      #height=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">height</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #height=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#height=(height)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2132">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2132">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#valid?()">
 
     <code>
-      #valid?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">Bool</span></code></span>
+      #valid?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#valid?()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
@@ -4040,33 +4025,30 @@ fullscreen windows; otherwise any video mode can be used
 with no restriction.</p>
 <p><em>Returns:</em> True if the video mode is valid for fullscreen mode</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2115">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2115">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#width()">
 
     <code>
-      #width<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="nb">UInt32</span></code></span>
+      #width<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt32</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#width()" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
 <p>Video mode width, in pixels</p>
 </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2121">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2121">View source</a>
 </div>
 <div class="doc doc-object doc-method doc-instance_method">
 <h4 class="doc doc-heading" id="SF::VideoMode#width=(width)">
 
     <code>
-      #width=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="nb">Int</span><span class="p">)</span></code></span>
+      #width=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">)</span></code></span>
     </code>
   <a class="headerlink" href="#SF::VideoMode#width=(width)" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
   </div>
-
-    [<a href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2124">View source</a>]
+<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/window/obj.cr#L2124">View source</a>
 </div>
 </div>
 </div>
@@ -4137,8 +4119,8 @@ with no restriction.</p>
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
