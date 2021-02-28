@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/TcpSocket.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -37,10 +37,12 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../style.css">
     
@@ -78,23 +80,23 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header__button md-logo" aria-label="CrSFML">
       
   <img src="../../icon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             CrSFML
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               TcpSocket
@@ -103,9 +105,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,10 +119,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -135,9 +140,9 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -211,7 +216,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -233,7 +238,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -259,23 +264,22 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
-      <label class="md-nav__link" for="nav-1">
+      <label class="md-nav__link" for="__nav_1">
         <span class="md-nav__icon md-icon"></span>
         
           API
         
       </label>
       <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="nav-1">
+        <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           
             API
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -285,9 +289,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
-      <label class="md-nav__link" for="nav-1-1">
+      <label class="md-nav__link" for="__nav_1_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../system.html" class="md-nav__link"
@@ -297,7 +301,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-1">
+        <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../system.html" class="md-nav__link"
@@ -307,7 +311,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -491,9 +494,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
       
-      <label class="md-nav__link" for="nav-1-2">
+      <label class="md-nav__link" for="__nav_1_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../window.html" class="md-nav__link"
@@ -503,7 +506,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-2">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../window.html" class="md-nav__link"
@@ -513,7 +516,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -547,9 +549,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_3" type="checkbox" id="__nav_1_2_3" >
       
-      <label class="md-nav__link" for="nav-1-2-3">
+      <label class="md-nav__link" for="__nav_1_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="ContextSettings.html" class="md-nav__link"
@@ -559,7 +561,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-3">
+        <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="ContextSettings.html" class="md-nav__link"
@@ -569,7 +571,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -597,9 +598,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_4" type="checkbox" id="__nav_1_2_4" >
       
-      <label class="md-nav__link" for="nav-1-2-4">
+      <label class="md-nav__link" for="__nav_1_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Cursor.html" class="md-nav__link"
@@ -609,7 +610,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Cursor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-4">
+        <label class="md-nav__title" for="__nav_1_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Cursor.html" class="md-nav__link"
@@ -619,7 +620,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -647,9 +647,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_5" type="checkbox" id="__nav_1_2_5" >
       
-      <label class="md-nav__link" for="nav-1-2-5">
+      <label class="md-nav__link" for="__nav_1_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Event.html" class="md-nav__link"
@@ -659,7 +659,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Event" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-5">
+        <label class="md-nav__title" for="__nav_1_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Event.html" class="md-nav__link"
@@ -669,7 +669,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1117,9 +1116,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_7" type="checkbox" id="__nav_1_2_7" >
       
-      <label class="md-nav__link" for="nav-1-2-7">
+      <label class="md-nav__link" for="__nav_1_2_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Joystick.html" class="md-nav__link"
@@ -1129,7 +1128,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Joystick" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-7">
+        <label class="md-nav__title" for="__nav_1_2_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Joystick.html" class="md-nav__link"
@@ -1139,7 +1138,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1179,9 +1177,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_8" type="checkbox" id="__nav_1_2_8" >
       
-      <label class="md-nav__link" for="nav-1-2-8">
+      <label class="md-nav__link" for="__nav_1_2_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Keyboard.html" class="md-nav__link"
@@ -1191,7 +1189,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-8">
+        <label class="md-nav__title" for="__nav_1_2_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Keyboard.html" class="md-nav__link"
@@ -1201,7 +1199,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1229,9 +1226,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_9" type="checkbox" id="__nav_1_2_9" >
       
-      <label class="md-nav__link" for="nav-1-2-9">
+      <label class="md-nav__link" for="__nav_1_2_9">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Mouse.html" class="md-nav__link"
@@ -1241,7 +1238,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Mouse" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-9">
+        <label class="md-nav__title" for="__nav_1_2_9">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Mouse.html" class="md-nav__link"
@@ -1251,7 +1248,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1291,9 +1287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_10" type="checkbox" id="__nav_1_2_10" >
       
-      <label class="md-nav__link" for="nav-1-2-10">
+      <label class="md-nav__link" for="__nav_1_2_10">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Sensor.html" class="md-nav__link"
@@ -1303,7 +1299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Sensor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-10">
+        <label class="md-nav__title" for="__nav_1_2_10">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Sensor.html" class="md-nav__link"
@@ -1313,7 +1309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1407,9 +1402,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
       
-      <label class="md-nav__link" for="nav-1-3">
+      <label class="md-nav__link" for="__nav_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../graphics.html" class="md-nav__link"
@@ -1419,7 +1414,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-3">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../graphics.html" class="md-nav__link"
@@ -1430,7 +1425,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1439,9 +1433,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_1" type="checkbox" id="__nav_1_3_1" >
       
-      <label class="md-nav__link" for="nav-1-3-1">
+      <label class="md-nav__link" for="__nav_1_3_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="BlendMode.html" class="md-nav__link"
@@ -1451,7 +1445,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-1">
+        <label class="md-nav__title" for="__nav_1_3_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="BlendMode.html" class="md-nav__link"
@@ -1461,7 +1455,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1561,9 +1554,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_7" type="checkbox" id="__nav_1_3_7" >
       
-      <label class="md-nav__link" for="nav-1-3-7">
+      <label class="md-nav__link" for="__nav_1_3_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Font.html" class="md-nav__link"
@@ -1573,7 +1566,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Font" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-7">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Font.html" class="md-nav__link"
@@ -1583,7 +1576,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1731,9 +1723,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_18" type="checkbox" id="__nav_1_3_18" >
       
-      <label class="md-nav__link" for="nav-1-3-18">
+      <label class="md-nav__link" for="__nav_1_3_18">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Shader.html" class="md-nav__link"
@@ -1743,7 +1735,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Shader" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-18">
+        <label class="md-nav__title" for="__nav_1_3_18">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Shader.html" class="md-nav__link"
@@ -1753,7 +1745,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1817,9 +1808,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_21" type="checkbox" id="__nav_1_3_21" >
       
-      <label class="md-nav__link" for="nav-1-3-21">
+      <label class="md-nav__link" for="__nav_1_3_21">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Text.html" class="md-nav__link"
@@ -1829,7 +1820,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Text" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-21">
+        <label class="md-nav__title" for="__nav_1_3_21">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Text.html" class="md-nav__link"
@@ -1839,7 +1830,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1867,9 +1857,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_22" type="checkbox" id="__nav_1_3_22" >
       
-      <label class="md-nav__link" for="nav-1-3-22">
+      <label class="md-nav__link" for="__nav_1_3_22">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Texture.html" class="md-nav__link"
@@ -1879,7 +1869,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Texture" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-22">
+        <label class="md-nav__title" for="__nav_1_3_22">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Texture.html" class="md-nav__link"
@@ -1889,7 +1879,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1965,9 +1954,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_27" type="checkbox" id="__nav_1_3_27" >
       
-      <label class="md-nav__link" for="nav-1-3-27">
+      <label class="md-nav__link" for="__nav_1_3_27">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="VertexBuffer.html" class="md-nav__link"
@@ -1977,7 +1966,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-27">
+        <label class="md-nav__title" for="__nav_1_3_27">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="VertexBuffer.html" class="md-nav__link"
@@ -1987,7 +1976,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2033,9 +2021,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
       
-      <label class="md-nav__link" for="nav-1-4">
+      <label class="md-nav__link" for="__nav_1_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../audio.html" class="md-nav__link"
@@ -2045,7 +2033,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-4">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../audio.html" class="md-nav__link"
@@ -2055,7 +2043,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2089,9 +2076,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
       
-      <label class="md-nav__link" for="nav-1-4-3">
+      <label class="md-nav__link" for="__nav_1_4_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Music.html" class="md-nav__link"
@@ -2101,7 +2088,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Music" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-3">
+        <label class="md-nav__title" for="__nav_1_4_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Music.html" class="md-nav__link"
@@ -2111,7 +2098,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2199,9 +2185,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_8" type="checkbox" id="__nav_1_4_8" >
       
-      <label class="md-nav__link" for="nav-1-4-8">
+      <label class="md-nav__link" for="__nav_1_4_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="SoundSource.html" class="md-nav__link"
@@ -2211,7 +2197,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-8">
+        <label class="md-nav__title" for="__nav_1_4_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="SoundSource.html" class="md-nav__link"
@@ -2221,7 +2207,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2269,9 +2254,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
       
-      <label class="md-nav__link" for="nav-1-5">
+      <label class="md-nav__link" for="__nav_1_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../network.html" class="md-nav__link"
@@ -2281,7 +2266,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-5">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../network.html" class="md-nav__link"
@@ -2292,7 +2277,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2301,9 +2285,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1" type="checkbox" id="__nav_1_5_1" >
       
-      <label class="md-nav__link" for="nav-1-5-1">
+      <label class="md-nav__link" for="__nav_1_5_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp.html" class="md-nav__link"
@@ -2313,7 +2297,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Ftp" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-1">
+        <label class="md-nav__title" for="__nav_1_5_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp.html" class="md-nav__link"
@@ -2323,7 +2307,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2357,9 +2340,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1_3" type="checkbox" id="__nav_1_5_1_3" >
       
-      <label class="md-nav__link" for="nav-1-5-1-3">
+      <label class="md-nav__link" for="__nav_1_5_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp/Response.html" class="md-nav__link"
@@ -2369,7 +2352,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-1-3">
+        <label class="md-nav__title" for="__nav_1_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp/Response.html" class="md-nav__link"
@@ -2379,7 +2362,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2425,9 +2407,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2">
+      <label class="md-nav__link" for="__nav_1_5_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http.html" class="md-nav__link"
@@ -2437,7 +2419,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Http" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-2">
+        <label class="md-nav__title" for="__nav_1_5_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http.html" class="md-nav__link"
@@ -2448,7 +2430,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2457,9 +2438,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_1" type="checkbox" id="__nav_1_5_2_1" >
       
-      <label class="md-nav__link" for="nav-1-5-2-1">
+      <label class="md-nav__link" for="__nav_1_5_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Request.html" class="md-nav__link"
@@ -2469,7 +2450,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Request" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-1">
+        <label class="md-nav__title" for="__nav_1_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Request.html" class="md-nav__link"
@@ -2479,7 +2460,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2507,9 +2487,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_2" type="checkbox" id="__nav_1_5_2_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2-2">
+      <label class="md-nav__link" for="__nav_1_5_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Response.html" class="md-nav__link"
@@ -2519,7 +2499,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-2">
+        <label class="md-nav__title" for="__nav_1_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Response.html" class="md-nav__link"
@@ -2529,7 +2509,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2587,9 +2566,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
       
-      <label class="md-nav__link" for="nav-1-5-5">
+      <label class="md-nav__link" for="__nav_1_5_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Socket.html" class="md-nav__link"
@@ -2599,7 +2578,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Socket" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-5">
+        <label class="md-nav__title" for="__nav_1_5_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Socket.html" class="md-nav__link"
@@ -2609,7 +2588,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2675,6 +2653,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           <span class="md-nav__icon md-icon"></span>
@@ -2694,23 +2674,17 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::TcpSocket" class="md-nav__link">
-    TcpSocket
-  </a>
-  
-    <nav class="md-nav" aria-label="TcpSocket">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::TcpSocket-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -2728,9 +2702,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::TcpSocket-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -2797,11 +2771,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -2858,23 +2827,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="nav-2">
+      <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
           Tutorials
         
       </label>
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
             Tutorials
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2884,23 +2852,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
-      <label class="md-nav__link" for="nav-2-1">
+      <label class="md-nav__link" for="__nav_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           System module
         
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-1">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             System module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2952,23 +2919,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="nav-2-2">
+      <label class="md-nav__link" for="__nav_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           Window module
         
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             Window module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3032,23 +2998,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="nav-2-3">
+      <label class="md-nav__link" for="__nav_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           Graphics module
         
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             Graphics module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3160,23 +3125,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="nav-2-4">
+      <label class="md-nav__link" for="__nav_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           Audio module
         
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-4">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             Audio module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3240,23 +3204,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="nav-2-5">
+      <label class="md-nav__link" for="__nav_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           Network module
         
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-5">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             Network module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3326,30 +3289,24 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::TcpSocket" class="md-nav__link">
-    TcpSocket
-  </a>
-  
-    <nav class="md-nav" aria-label="TcpSocket">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::TcpSocket-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -3367,9 +3324,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::TcpSocket-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -3436,11 +3393,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -3450,25 +3402,20 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/oprypin/crsfml/blob/master/docs/api/SF/TcpSocket.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L182" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>TcpSocket</h1>
-                
                 <div class="doc doc-object doc-type class">
-<h2 class="doc doc-heading" id="SF::TcpSocket">
-
-class <code>SF::TcpSocket</code>
-      <br />
-<small>inherits <code><a href="Socket.html#SF::Socket">SF::Socket</a></code></small>
-  <a class="headerlink" href="#SF::TcpSocket" title="Permanent link">#</a></h2>
-<div class="doc doc-contents first">
+<h1 id="SF::TcpSocket" class="doc doc-heading">class <code>SF::TcpSocket</code>
+      <br/><small>inherits <code><a href="Socket.html#SF::Socket">SF::Socket</a></code></small>
+<a href="#SF::TcpSocket" class="headerlink" title="Permanent link">#</a></h1>
+  <div class="doc doc-contents first">
 <p>Specialized socket using the TCP protocol</p>
 <p>TCP is a connected protocol, which means that a TCP
 socket can only communicate with the host it is connected
@@ -3495,21 +3442,20 @@ class to get more details about how they work.</p>
 but if you want to explicitly close the connection while
 the socket instance is still alive, you can call disconnect.</p>
 <p>Usage example:
-<div class="highlight">
-<pre><span></span><code><span class="c1"># ----- The client -----</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># ----- The client -----</span>
 
 <span class="c1"># Create a socket and connect it to 192.168.1.50 on port 55001</span>
 <span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
-<span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"192.168.1.50"</span><span class="p">,</span> <span class="mi">55001</span><span class="p">)</span>
+<span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;192.168.1.50&quot;</span><span class="p">,</span> <span class="mi">55001</span><span class="p">)</span>
 
 <span class="c1"># Send a message to the connected host</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">"Hi, I am a client"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hi, I am a client&quot;</span>
 <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">to_slice</span><span class="p">)</span>
 
 <span class="c1"># Receive an answer from the server</span>
 <span class="n">buffer</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
-<span class="nb">puts</span> <span class="s2">"The server said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">puts</span> <span class="s2">&quot;The server said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># ----- The server -----</span>
 
@@ -3520,43 +3466,41 @@ the socket instance is still alive, you can call disconnect.</p>
 <span class="c1"># Wait for a connection</span>
 <span class="n">socket</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">TcpSocket</span><span class="o">.</span><span class="n">new</span>
 <span class="n">listener</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">socket</span><span class="p">)</span>
-<span class="nb">puts</span> <span class="s2">"New client connected: </span><span class="si">#{</span><span class="n">socket</span><span class="o">.</span><span class="n">remote_address</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">puts</span> <span class="s2">&quot;New client connected: </span><span class="si">#{</span><span class="n">socket</span><span class="o">.</span><span class="n">remote_address</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># Receive a message from the client</span>
 <span class="n">buffer</span> <span class="o">=</span> <span class="n">Slice</span><span class="p">(</span><span class="n">UInt8</span><span class="p">)</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
 <span class="n">status</span><span class="p">,</span> <span class="n">received</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
-<span class="nb">puts</span> <span class="s2">"The client said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">"</span>
+<span class="nb">puts</span> <span class="s2">&quot;The client said: </span><span class="si">#{</span><span class="n">buffer</span><span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># Send an answer</span>
-<span class="n">message</span> <span class="o">=</span> <span class="s2">"Welcome, client"</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Welcome, client&quot;</span>
 <span class="n">socket</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">to_slice</span><span class="p">)</span>
-</code></pre>
-</div>
-</p>
+</code></pre></div></p>
 <p><em>See also:</em> <a href="Socket.html#SF::Socket"><code>SF::Socket</code></a>, <a href="UdpSocket.html#SF::UdpSocket"><code>SF::UdpSocket</code></a>, <a href="Packet.html#SF::Packet"><code>SF::Packet</code></a></p>
-<div class="doc doc-children">
-<h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket.new">
+      <div class="doc doc-children">
 
-    <code>
+
+
+<h2 id="SF::TcpSocket-class-methods">Class methods<a href="#SF::TcpSocket-class-methods" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::TcpSocket.new" class="doc doc-heading">    <code>
       .new<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket.new" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Default constructor</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L189">View source</a>
-</div>
-<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#connect(remote_address,remote_port,timeout)">
+<a href="#SF::TcpSocket.new" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Default constructor</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L189">View source</a>
+</div><h2 id="SF::TcpSocket-methods">Methods<a href="#SF::TcpSocket-methods" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#connect(remote_address,remote_port,timeout)" class="doc doc-heading">    <code>
       #connect<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">remote_address</span> <span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a><span class="p">,</span> <span class="n">remote_port</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">timeout</span> <span class="p">:</span> <a href="Time.html#SF::Time">Time</a> <span class="o">=</span> <span class="n">Time</span><span class="o">::</span><span class="n">Zero</span><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Connect the socket to a remote peer</p>
 <p>In blocking mode, this function may take a while, especially
 if the remote peer is not reachable. The last parameter allows
@@ -3569,60 +3513,56 @@ forcibly disconnected before attempting to connect again.</p>
 <li><em>timeout</em> - Optional maximum time to wait</li>
 </ul>
 <p><em>Returns:</em> Status code</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#disconnect"><code>disconnect</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L244">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#disconnect">
+<p><em>See also:</em> <a href="#SF::TcpSocket#disconnect"><code>disconnect</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L244">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#disconnect" class="doc doc-heading">    <code>
       #disconnect<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#disconnect" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#disconnect" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Disconnect the socket from its remote peer</p>
 <p>This function gracefully closes the connection. If the
 socket is not connected, this function has no effect.</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L254">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#finalize">
+<p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L254">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#finalize" class="doc doc-heading">    <code>
       #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#finalize" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Destructor</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L184">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#local_port">
+<a href="#SF::TcpSocket#finalize" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Destructor</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L184">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#local_port" class="doc doc-heading">    <code>
       #local_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#local_port" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#local_port" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the port to which the socket is bound locally</p>
 <p>If the socket is not connected, this function returns 0.</p>
 <p><em>Returns:</em> Port to which the socket is bound</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a>, <a href="#SF::TcpSocket#remote_port"><code>remote_port</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L200">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#receive(data)">
+<p><em>See also:</em> <a href="#SF::TcpSocket#connect(remote_address,remote_port,timeout)"><code>connect</code></a>, <a href="#SF::TcpSocket#remote_port"><code>remote_port</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L200">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#receive(data)" class="doc doc-heading">    <code>
       #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="n">Int32</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#receive(data)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#receive(data)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Receive raw data from the remote peer</p>
 <p>In blocking mode, this function will wait until some
 bytes are actually received.
@@ -3635,18 +3575,17 @@ This function will fail if the socket is not connected.</p>
 <li>Status code</li>
 <li>The actual number of bytes received</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L304">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#receive(packet)">
+<p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L304">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#receive(packet)" class="doc doc-heading">    <code>
       #receive<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#receive(packet)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#receive(packet)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Receive a formatted packet of data from the remote peer</p>
 <p>In blocking mode, this function will wait until the whole packet
 has been received.
@@ -3655,50 +3594,47 @@ This function will fail if the socket is not connected.</p>
 <li><em>packet</em> - Packet to fill with the received data</li>
 </ul>
 <p><em>Returns:</em> Status code</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L336">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#remote_address">
+<p><em>See also:</em> <a href="#SF::TcpSocket#send(data)"><code>send</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L336">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#remote_address" class="doc doc-heading">    <code>
       #remote_address<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="IpAddress.html#SF::IpAddress">IpAddress</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#remote_address" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#remote_address" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the address of the connected peer</p>
 <p>It the socket is not connected, this function returns
 <a href="IpAddress.html#SF::IpAddress::None"><code>SF::IpAddress::None</code></a>.</p>
 <p><em>Returns:</em> Address of the remote peer</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#remote_port"><code>remote_port</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L212">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#remote_port">
+<p><em>See also:</em> <a href="#SF::TcpSocket#remote_port"><code>remote_port</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L212">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#remote_port" class="doc doc-heading">    <code>
       #remote_port<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">UInt16</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#remote_port" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#remote_port" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the port of the connected peer to which
 the socket is connected</p>
 <p>If the socket is not connected, this function returns 0.</p>
 <p><em>Returns:</em> Remote port to which the socket is connected</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#remote_address"><code>remote_address</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L225">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#send(data)">
+<p><em>See also:</em> <a href="#SF::TcpSocket#remote_address"><code>remote_address</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L225">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#send(data)" class="doc doc-heading">    <code>
       #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">data</span> <span class="p">:</span> <span class="n">Slice</span><span class="p">)</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">(</span><a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a><span class="p">,</span> <span class="n">Int32</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#send(data)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#send(data)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Send raw data to the remote peer</p>
 <p>This function will fail if the socket is not connected.</p>
 <ul>
@@ -3709,18 +3645,17 @@ the socket is connected</p>
 <li>Status code</li>
 <li>The number of bytes sent</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L286">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::TcpSocket#send(packet)">
+<p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L286">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::TcpSocket#send(packet)" class="doc doc-heading">    <code>
       #send<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">packet</span> <span class="p">:</span> <a href="Packet.html#SF::Packet">Packet</a><span class="p">)</span> <span class="p">:</span> <a href="Socket/Status.html#SF::Socket::Status">Socket::Status</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::TcpSocket#send(packet)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::TcpSocket#send(packet)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Send a formatted packet of data to the remote peer</p>
 <p>In non-blocking mode, if this function returns <code>SF::Socket::Partial</code>,
 you <em>must</em> retry sending the same unmodified packet before sending
@@ -3731,12 +3666,12 @@ This function will fail if the socket is not connected.</p>
 <li><em>packet</em> - Packet to send</li>
 </ul>
 <p><em>Returns:</em> Status code</p>
-<p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L321">View source</a>
-</div>
-</div>
-</div>
+<p><em>See also:</em> <a href="#SF::TcpSocket#receive(data)"><code>receive</code></a></p>  </div>
+
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/network/obj.cr#L321">View source</a>
+</div>      </div>
+  </div>
+
 </div>
                 
               
@@ -3753,40 +3688,38 @@ This function will fail if the socket is not connected.</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="TcpListener.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="TcpListener.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              TcpListener
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                TcpListener
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="UdpSocket.html" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              UdpSocket
             </div>
-          </a>
-        
-        
-          <a href="UdpSocket.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                UdpSocket
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3803,19 +3736,13 @@ This function will fail if the socket is not connected.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>

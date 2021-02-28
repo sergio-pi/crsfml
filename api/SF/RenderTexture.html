@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/RenderTexture.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -37,10 +37,12 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../style.css">
     
@@ -78,23 +80,23 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header__button md-logo" aria-label="CrSFML">
       
   <img src="../../icon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             CrSFML
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               RenderTexture
@@ -103,9 +105,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,10 +119,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -135,9 +140,9 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -211,7 +216,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -233,7 +238,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -259,23 +264,22 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
-      <label class="md-nav__link" for="nav-1">
+      <label class="md-nav__link" for="__nav_1">
         <span class="md-nav__icon md-icon"></span>
         
           API
         
       </label>
       <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="nav-1">
+        <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           
             API
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -285,9 +289,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
-      <label class="md-nav__link" for="nav-1-1">
+      <label class="md-nav__link" for="__nav_1_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../system.html" class="md-nav__link"
@@ -297,7 +301,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-1">
+        <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../system.html" class="md-nav__link"
@@ -307,7 +311,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -491,9 +494,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
       
-      <label class="md-nav__link" for="nav-1-2">
+      <label class="md-nav__link" for="__nav_1_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../window.html" class="md-nav__link"
@@ -503,7 +506,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-2">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../window.html" class="md-nav__link"
@@ -513,7 +516,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -547,9 +549,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_3" type="checkbox" id="__nav_1_2_3" >
       
-      <label class="md-nav__link" for="nav-1-2-3">
+      <label class="md-nav__link" for="__nav_1_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="ContextSettings.html" class="md-nav__link"
@@ -559,7 +561,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-3">
+        <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="ContextSettings.html" class="md-nav__link"
@@ -569,7 +571,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -597,9 +598,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_4" type="checkbox" id="__nav_1_2_4" >
       
-      <label class="md-nav__link" for="nav-1-2-4">
+      <label class="md-nav__link" for="__nav_1_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Cursor.html" class="md-nav__link"
@@ -609,7 +610,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Cursor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-4">
+        <label class="md-nav__title" for="__nav_1_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Cursor.html" class="md-nav__link"
@@ -619,7 +620,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -647,9 +647,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_5" type="checkbox" id="__nav_1_2_5" >
       
-      <label class="md-nav__link" for="nav-1-2-5">
+      <label class="md-nav__link" for="__nav_1_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Event.html" class="md-nav__link"
@@ -659,7 +659,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Event" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-5">
+        <label class="md-nav__title" for="__nav_1_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Event.html" class="md-nav__link"
@@ -669,7 +669,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1117,9 +1116,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_7" type="checkbox" id="__nav_1_2_7" >
       
-      <label class="md-nav__link" for="nav-1-2-7">
+      <label class="md-nav__link" for="__nav_1_2_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Joystick.html" class="md-nav__link"
@@ -1129,7 +1128,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Joystick" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-7">
+        <label class="md-nav__title" for="__nav_1_2_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Joystick.html" class="md-nav__link"
@@ -1139,7 +1138,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1179,9 +1177,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_8" type="checkbox" id="__nav_1_2_8" >
       
-      <label class="md-nav__link" for="nav-1-2-8">
+      <label class="md-nav__link" for="__nav_1_2_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Keyboard.html" class="md-nav__link"
@@ -1191,7 +1189,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-8">
+        <label class="md-nav__title" for="__nav_1_2_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Keyboard.html" class="md-nav__link"
@@ -1201,7 +1199,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1229,9 +1226,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_9" type="checkbox" id="__nav_1_2_9" >
       
-      <label class="md-nav__link" for="nav-1-2-9">
+      <label class="md-nav__link" for="__nav_1_2_9">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Mouse.html" class="md-nav__link"
@@ -1241,7 +1238,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Mouse" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-9">
+        <label class="md-nav__title" for="__nav_1_2_9">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Mouse.html" class="md-nav__link"
@@ -1251,7 +1248,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1291,9 +1287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_10" type="checkbox" id="__nav_1_2_10" >
       
-      <label class="md-nav__link" for="nav-1-2-10">
+      <label class="md-nav__link" for="__nav_1_2_10">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Sensor.html" class="md-nav__link"
@@ -1303,7 +1299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Sensor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-10">
+        <label class="md-nav__title" for="__nav_1_2_10">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Sensor.html" class="md-nav__link"
@@ -1313,7 +1309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1409,9 +1404,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
       
-      <label class="md-nav__link" for="nav-1-3">
+      <label class="md-nav__link" for="__nav_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../graphics.html" class="md-nav__link"
@@ -1421,7 +1416,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-3">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../graphics.html" class="md-nav__link"
@@ -1432,7 +1427,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1441,9 +1435,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_1" type="checkbox" id="__nav_1_3_1" >
       
-      <label class="md-nav__link" for="nav-1-3-1">
+      <label class="md-nav__link" for="__nav_1_3_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="BlendMode.html" class="md-nav__link"
@@ -1453,7 +1447,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-1">
+        <label class="md-nav__title" for="__nav_1_3_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="BlendMode.html" class="md-nav__link"
@@ -1463,7 +1457,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1563,9 +1556,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_7" type="checkbox" id="__nav_1_3_7" >
       
-      <label class="md-nav__link" for="nav-1-3-7">
+      <label class="md-nav__link" for="__nav_1_3_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Font.html" class="md-nav__link"
@@ -1575,7 +1568,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Font" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-7">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Font.html" class="md-nav__link"
@@ -1585,7 +1578,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1711,6 +1703,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           <span class="md-nav__icon md-icon"></span>
@@ -1730,30 +1724,17 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::RenderTexture" class="md-nav__link">
-    RenderTexture
-  </a>
-  
-    <nav class="md-nav" aria-label="RenderTexture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#included-modules" class="md-nav__link">
-    Included modules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::RenderTexture-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -1778,9 +1759,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::RenderTexture-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -1868,11 +1849,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -1902,9 +1878,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_18" type="checkbox" id="__nav_1_3_18" >
       
-      <label class="md-nav__link" for="nav-1-3-18">
+      <label class="md-nav__link" for="__nav_1_3_18">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Shader.html" class="md-nav__link"
@@ -1914,7 +1890,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Shader" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-18">
+        <label class="md-nav__title" for="__nav_1_3_18">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Shader.html" class="md-nav__link"
@@ -1924,7 +1900,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1988,9 +1963,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_21" type="checkbox" id="__nav_1_3_21" >
       
-      <label class="md-nav__link" for="nav-1-3-21">
+      <label class="md-nav__link" for="__nav_1_3_21">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Text.html" class="md-nav__link"
@@ -2000,7 +1975,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Text" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-21">
+        <label class="md-nav__title" for="__nav_1_3_21">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Text.html" class="md-nav__link"
@@ -2010,7 +1985,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2038,9 +2012,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_22" type="checkbox" id="__nav_1_3_22" >
       
-      <label class="md-nav__link" for="nav-1-3-22">
+      <label class="md-nav__link" for="__nav_1_3_22">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Texture.html" class="md-nav__link"
@@ -2050,7 +2024,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Texture" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-22">
+        <label class="md-nav__title" for="__nav_1_3_22">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Texture.html" class="md-nav__link"
@@ -2060,7 +2034,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2136,9 +2109,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_27" type="checkbox" id="__nav_1_3_27" >
       
-      <label class="md-nav__link" for="nav-1-3-27">
+      <label class="md-nav__link" for="__nav_1_3_27">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="VertexBuffer.html" class="md-nav__link"
@@ -2148,7 +2121,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-27">
+        <label class="md-nav__title" for="__nav_1_3_27">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="VertexBuffer.html" class="md-nav__link"
@@ -2158,7 +2131,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2204,9 +2176,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
       
-      <label class="md-nav__link" for="nav-1-4">
+      <label class="md-nav__link" for="__nav_1_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../audio.html" class="md-nav__link"
@@ -2216,7 +2188,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-4">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../audio.html" class="md-nav__link"
@@ -2226,7 +2198,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2260,9 +2231,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
       
-      <label class="md-nav__link" for="nav-1-4-3">
+      <label class="md-nav__link" for="__nav_1_4_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Music.html" class="md-nav__link"
@@ -2272,7 +2243,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Music" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-3">
+        <label class="md-nav__title" for="__nav_1_4_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Music.html" class="md-nav__link"
@@ -2282,7 +2253,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2370,9 +2340,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_8" type="checkbox" id="__nav_1_4_8" >
       
-      <label class="md-nav__link" for="nav-1-4-8">
+      <label class="md-nav__link" for="__nav_1_4_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="SoundSource.html" class="md-nav__link"
@@ -2382,7 +2352,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-8">
+        <label class="md-nav__title" for="__nav_1_4_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="SoundSource.html" class="md-nav__link"
@@ -2392,7 +2362,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2438,9 +2407,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
       
-      <label class="md-nav__link" for="nav-1-5">
+      <label class="md-nav__link" for="__nav_1_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../network.html" class="md-nav__link"
@@ -2450,7 +2419,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-5">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../network.html" class="md-nav__link"
@@ -2461,7 +2430,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2470,9 +2438,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1" type="checkbox" id="__nav_1_5_1" >
       
-      <label class="md-nav__link" for="nav-1-5-1">
+      <label class="md-nav__link" for="__nav_1_5_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp.html" class="md-nav__link"
@@ -2482,7 +2450,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Ftp" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-1">
+        <label class="md-nav__title" for="__nav_1_5_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp.html" class="md-nav__link"
@@ -2492,7 +2460,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2526,9 +2493,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1_3" type="checkbox" id="__nav_1_5_1_3" >
       
-      <label class="md-nav__link" for="nav-1-5-1-3">
+      <label class="md-nav__link" for="__nav_1_5_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp/Response.html" class="md-nav__link"
@@ -2538,7 +2505,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-1-3">
+        <label class="md-nav__title" for="__nav_1_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp/Response.html" class="md-nav__link"
@@ -2548,7 +2515,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2594,9 +2560,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2">
+      <label class="md-nav__link" for="__nav_1_5_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http.html" class="md-nav__link"
@@ -2606,7 +2572,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Http" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-2">
+        <label class="md-nav__title" for="__nav_1_5_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http.html" class="md-nav__link"
@@ -2617,7 +2583,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2626,9 +2591,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_1" type="checkbox" id="__nav_1_5_2_1" >
       
-      <label class="md-nav__link" for="nav-1-5-2-1">
+      <label class="md-nav__link" for="__nav_1_5_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Request.html" class="md-nav__link"
@@ -2638,7 +2603,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Request" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-1">
+        <label class="md-nav__title" for="__nav_1_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Request.html" class="md-nav__link"
@@ -2648,7 +2613,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2676,9 +2640,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_2" type="checkbox" id="__nav_1_5_2_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2-2">
+      <label class="md-nav__link" for="__nav_1_5_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Response.html" class="md-nav__link"
@@ -2688,7 +2652,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-2">
+        <label class="md-nav__title" for="__nav_1_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Response.html" class="md-nav__link"
@@ -2698,7 +2662,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2756,9 +2719,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
       
-      <label class="md-nav__link" for="nav-1-5-5">
+      <label class="md-nav__link" for="__nav_1_5_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Socket.html" class="md-nav__link"
@@ -2768,7 +2731,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Socket" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-5">
+        <label class="md-nav__title" for="__nav_1_5_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Socket.html" class="md-nav__link"
@@ -2778,7 +2741,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2893,23 +2855,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="nav-2">
+      <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
           Tutorials
         
       </label>
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
             Tutorials
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2919,23 +2880,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
-      <label class="md-nav__link" for="nav-2-1">
+      <label class="md-nav__link" for="__nav_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           System module
         
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-1">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             System module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2987,23 +2947,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="nav-2-2">
+      <label class="md-nav__link" for="__nav_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           Window module
         
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             Window module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3067,23 +3026,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="nav-2-3">
+      <label class="md-nav__link" for="__nav_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           Graphics module
         
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             Graphics module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3195,23 +3153,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="nav-2-4">
+      <label class="md-nav__link" for="__nav_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           Audio module
         
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-4">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             Audio module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3275,23 +3232,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="nav-2-5">
+      <label class="md-nav__link" for="__nav_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           Network module
         
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-5">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             Network module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3361,37 +3317,24 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::RenderTexture" class="md-nav__link">
-    RenderTexture
-  </a>
-  
-    <nav class="md-nav" aria-label="RenderTexture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#included-modules" class="md-nav__link">
-    Included modules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::RenderTexture-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -3416,9 +3359,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::RenderTexture-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -3506,11 +3449,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -3520,25 +3458,20 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/oprypin/crsfml/blob/master/docs/api/SF/RenderTexture.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L237" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>RenderTexture</h1>
-                
                 <div class="doc doc-object doc-type class">
-<h2 class="doc doc-heading" id="SF::RenderTexture">
-
-class <code>SF::RenderTexture</code>
-      <br />
-<small>inherits <code>Reference</code></small>
-  <a class="headerlink" href="#SF::RenderTexture" title="Permanent link">#</a></h2>
-<div class="doc doc-contents first">
+<h1 id="SF::RenderTexture" class="doc doc-heading">class <code>SF::RenderTexture</code>
+      <br/><small>inherits <code>Reference</code></small>
+<a href="#SF::RenderTexture" class="headerlink" title="Permanent link">#</a></h1>
+  <div class="doc doc-contents first">
 <p>Target for off-screen 2D rendering into a texture</p>
 <p><a href="#SF::RenderTexture"><code>SF::RenderTexture</code></a> is the little brother of <a href="RenderWindow.html#SF::RenderWindow"><code>SF::RenderWindow</code></a>.
 It implements the same 2D drawing and OpenGL-related functions
@@ -3553,9 +3486,8 @@ texture rather than being show in a window.</p>
 <li>etc.</li>
 </ul>
 <p>Usage example:</p>
-<div class="highlight">
-<pre><span></span><code><span class="c1"># Create a new render-window</span>
-<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">"SFML window"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new render-window</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderWindow</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">SF</span><span class="o">::</span><span class="n">VideoMode</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">),</span> <span class="s2">&quot;SFML window&quot;</span><span class="p">)</span>
 
 <span class="c1"># Create a new render-texture</span>
 <span class="n">texture</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderTexture</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
@@ -3573,7 +3505,7 @@ texture rather than being show in a window.</p>
   <span class="n">texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>   <span class="c1"># shape is a SF::Shape</span>
   <span class="n">texture</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>    <span class="c1"># text is a SF::Text</span>
 
-  <span class="c1"># We're done drawing to the texture</span>
+  <span class="c1"># We&#39;re done drawing to the texture</span>
   <span class="n">texture</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 
   <span class="c1"># Now we start rendering to the window, clear it first</span>
@@ -3586,69 +3518,64 @@ texture rather than being show in a window.</p>
   <span class="c1"># End the current frame and display its contents on screen</span>
   <span class="n">window</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div>
 <p>Like <a href="RenderWindow.html#SF::RenderWindow"><code>SF::RenderWindow</code></a>, <a href="#SF::RenderTexture"><code>SF::RenderTexture</code></a> is still able to render direct
 OpenGL stuff. It is even possible to mix together OpenGL calls
 and regular SFML drawing commands. If you need a depth buffer for
 3D rendering, don't forget to request it when calling RenderTexture.create.</p>
 <p><em>See also:</em> <a href="RenderTarget.html#SF::RenderTarget"><code>SF::RenderTarget</code></a>, <a href="RenderWindow.html#SF::RenderWindow"><code>SF::RenderWindow</code></a>, <a href="View.html#SF::View"><code>SF::View</code></a>, <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a></p>
-<div class="doc doc-children">
-<h3 id="included-modules">Included modules<a class="headerlink" href="#included-modules" title="Permanent link">#</a></h3>
-<code><a href="RenderTarget.html#SF::RenderTarget">SF::RenderTarget</a></code>
+      <div class="doc doc-children">
+
+            <h2>Included modules</h2>
+              <code><a href="RenderTarget.html#SF::RenderTarget">SF::RenderTarget</a></code>
 
 
-            <h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
+<h2 id="SF::RenderTexture-class-methods">Class methods<a href="#SF::RenderTexture-class-methods" class="headerlink" title="Permanent link">#</a></h2>
+
 <div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture.maximum_antialiasing_level">
-
-    <code>
+<h3 id="SF::RenderTexture.maximum_antialiasing_level" class="doc doc-heading">    <code>
       .maximum_antialiasing_level<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture.maximum_antialiasing_level" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture.maximum_antialiasing_level" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the maximum anti-aliasing level supported by the system</p>
-<p><em>Returns:</em> The maximum anti-aliasing level supported by the system</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4915">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture.new">
+<p><em>Returns:</em> The maximum anti-aliasing level supported by the system</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4915">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::RenderTexture.new" class="doc doc-heading">    <code>
       .new<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture.new" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture.new" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Default constructor</p>
 <p>Constructs an empty, invalid render-texture. You must
 call create to have a valid render-texture.</p>
-<p><em>See also:</em> <a href="#SF::RenderTexture#create(width,height,depth_buffer)"><code>create</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4843">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture.new(*,**)">
+<p><em>See also:</em> <a href="#SF::RenderTexture#create(width,height,depth_buffer)"><code>create</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4843">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::RenderTexture.new(*,**)" class="doc doc-heading">    <code>
       .new<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture.new(*,**)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture.new(*,**)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Shorthand for <code>render_texture = RenderTexture.new; render_texture.create(...); render_texture</code></p>
-<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4905">View source</a>
-</div>
-<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#active=(active)">
+<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4905">View source</a>
+</div><h2 id="SF::RenderTexture-methods">Methods<a href="#SF::RenderTexture-methods" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#active=(active)" class="doc doc-heading">    <code>
       #active=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">active</span> <span class="p">:</span> <span class="n">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#active=(active)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#active=(active)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Activate or deactivate the render-texture for rendering</p>
 <p>This function makes the render-texture's context current for
 future OpenGL rendering operations (so you shouldn't care
@@ -3659,18 +3586,17 @@ want to draw OpenGL geometry to another render target
 <ul>
 <li><em>active</em> - True to activate, false to deactivate</li>
 </ul>
-<p><em>Returns:</em> True if operation was successful, false otherwise</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4986">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#create(width,height,depth_buffer)">
+<p><em>Returns:</em> True if operation was successful, false otherwise</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4986">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#create(width,height,depth_buffer)" class="doc doc-heading">    <code>
       #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">depth_buffer</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#create(width,height,depth_buffer)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#create(width,height,depth_buffer)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Create the render-texture</p>
 <p>Before calling this function, the render-texture is in
 an invalid state, thus it is mandatory to call it before
@@ -3685,18 +3611,17 @@ leave this parameter to false (which is its default value).</p>
 <li><em>depth_buffer</em> - Do you want this render-texture to have a depth buffer?</li>
 </ul>
 <p><em>Returns:</em> True if creation has been successful</p>
-<p>DEPRECATED: Use create(unsigned int, unsigned int, const ContextSettings&amp;) instead.</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4869">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#create(width,height,settings)">
+<p>DEPRECATED: Use create(unsigned int, unsigned int, const ContextSettings&amp;) instead.</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4869">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#create(width,height,settings)" class="doc doc-heading">    <code>
       #create<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">width</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">settings</span> <span class="p">:</span> <a href="ContextSettings.html#SF::ContextSettings">ContextSettings</a> <span class="o">=</span> <span class="n">ContextSettings</span><span class="o">.</span><span class="n">new</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#create(width,height,settings)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#create(width,height,settings)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Create the render-texture</p>
 <p>Before calling this function, the render-texture is in
 an invalid state, thus it is mandatory to call it before
@@ -3710,46 +3635,43 @@ you should leave this parameter at its default value.</p>
 <li><em>height</em> - Height of the render-texture</li>
 <li><em>settings</em> - Additional settings for the underlying OpenGL texture and context</li>
 </ul>
-<p><em>Returns:</em> True if creation has been successful</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4898">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#display">
+<p><em>Returns:</em> True if creation has been successful</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4898">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#display" class="doc doc-heading">    <code>
       #display<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#display" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#display" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Update the contents of the target texture</p>
 <p>This function updates the target texture with what
 has been drawn so far. Like for windows, calling this
 function is mandatory at the end of rendering. Not calling
-it may leave the texture in an undefined state.</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4996">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#finalize">
+it may leave the texture in an undefined state.</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4996">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#finalize" class="doc doc-heading">    <code>
       #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#finalize" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Destructor</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4848">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#generate_mipmap">
+<a href="#SF::RenderTexture#finalize" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Destructor</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4848">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#generate_mipmap" class="doc doc-heading">    <code>
       #generate_mipmap<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#generate_mipmap" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#generate_mipmap" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Generate a mipmap using the current texture data</p>
 <p>This function is similar to Texture.generate_mipmap and operates
 on the texture used as the target for drawing.
@@ -3758,97 +3680,91 @@ For this reason, calling this function only makes sense after all
 drawing is completed and display has been called. Not calling display
 after subsequent drawing will lead to undefined behavior if a mipmap
 had been previously generated.</p>
-<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4970">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#repeated=(repeated)">
+<p><em>Returns:</em> True if mipmap generation was successful, false if unsuccessful</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4970">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#repeated=(repeated)" class="doc doc-heading">    <code>
       #repeated=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">repeated</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#repeated=(repeated)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#repeated=(repeated)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Enable or disable texture repeating</p>
 <p>This function is similar to Texture.repeated=.
 This parameter is disabled by default.</p>
 <ul>
 <li><em>repeated</em> - True to enable repeating, false to disable it</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::RenderTexture#repeated?"><code>repeated?</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4947">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#repeated?">
+<p><em>See also:</em> <a href="#SF::RenderTexture#repeated?"><code>repeated?</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4947">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#repeated?" class="doc doc-heading">    <code>
       #repeated?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#repeated?" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#repeated?" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Tell whether the texture is repeated or not</p>
 <p><em>Returns:</em> True if texture is repeated</p>
-<p><em>See also:</em> <a href="#SF::RenderTexture#repeated=(repeated)"><code>repeated=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4955">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#size">
+<p><em>See also:</em> <a href="#SF::RenderTexture#repeated=(repeated)"><code>repeated=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4955">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#size" class="doc doc-heading">    <code>
       #size<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector2u.html#SF::Vector2u">Vector2u</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#size" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#size" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Return the size of the rendering region of the texture</p>
 <p>The returned value is the size that you passed to
 the create function.</p>
-<p><em>Returns:</em> Size in pixels</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5005">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#smooth=(smooth)">
+<p><em>Returns:</em> Size in pixels</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5005">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#smooth=(smooth)" class="doc doc-heading">    <code>
       #smooth=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">smooth</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#smooth=(smooth)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#smooth=(smooth)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Enable or disable texture smoothing</p>
 <p>This function is similar to Texture.smooth=.
 This parameter is disabled by default.</p>
 <ul>
 <li><em>smooth</em> - True to enable smoothing, false to disable it</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::RenderTexture#smooth?"><code>smooth?</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4927">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#smooth?">
+<p><em>See also:</em> <a href="#SF::RenderTexture#smooth?"><code>smooth?</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4927">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#smooth?" class="doc doc-heading">    <code>
       #smooth?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#smooth?" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#smooth?" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Tell whether the smooth filtering is enabled or not</p>
 <p><em>Returns:</em> True if texture smoothing is enabled</p>
-<p><em>See also:</em> <a href="#SF::RenderTexture#smooth=(smooth)"><code>smooth=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4935">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::RenderTexture#texture">
+<p><em>See also:</em> <a href="#SF::RenderTexture#smooth=(smooth)"><code>smooth=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L4935">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::RenderTexture#texture" class="doc doc-heading">    <code>
       #texture<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Texture.html#SF::Texture">Texture</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::RenderTexture#texture" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::RenderTexture#texture" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get a read-only reference to the target texture</p>
 <p>After drawing to the render-texture and calling Display,
 you can retrieve the updated texture using this function,
@@ -3857,12 +3773,12 @@ The internal <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> of 
 same instance, so that it is possible to call this function
 once and keep a reference to the texture even after it is
 modified.</p>
-<p><em>Returns:</em> Const reference to the texture</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5021">View source</a>
-</div>
-</div>
-</div>
+<p><em>Returns:</em> Const reference to the texture</p>  </div>
+
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5021">View source</a>
+</div>      </div>
+  </div>
+
 </div>
                 
               
@@ -3879,40 +3795,38 @@ modified.</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="RenderTarget.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="RenderTarget.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              RenderTarget
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                RenderTarget
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="RenderWindow.html" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              RenderWindow
             </div>
-          </a>
-        
-        
-          <a href="RenderWindow.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                RenderWindow
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3929,19 +3843,13 @@ modified.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>

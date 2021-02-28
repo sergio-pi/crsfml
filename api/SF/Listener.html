@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Listener.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -37,10 +37,12 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../style.css">
     
@@ -78,23 +80,23 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header__button md-logo" aria-label="CrSFML">
       
   <img src="../../icon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             CrSFML
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Listener
@@ -103,9 +105,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,10 +119,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -135,9 +140,9 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -211,7 +216,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -233,7 +238,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -259,23 +264,22 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
-      <label class="md-nav__link" for="nav-1">
+      <label class="md-nav__link" for="__nav_1">
         <span class="md-nav__icon md-icon"></span>
         
           API
         
       </label>
       <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="nav-1">
+        <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           
             API
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -285,9 +289,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
-      <label class="md-nav__link" for="nav-1-1">
+      <label class="md-nav__link" for="__nav_1_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../system.html" class="md-nav__link"
@@ -297,7 +301,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-1">
+        <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../system.html" class="md-nav__link"
@@ -307,7 +311,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -491,9 +494,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
       
-      <label class="md-nav__link" for="nav-1-2">
+      <label class="md-nav__link" for="__nav_1_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../window.html" class="md-nav__link"
@@ -503,7 +506,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-2">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../window.html" class="md-nav__link"
@@ -513,7 +516,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -547,9 +549,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_3" type="checkbox" id="__nav_1_2_3" >
       
-      <label class="md-nav__link" for="nav-1-2-3">
+      <label class="md-nav__link" for="__nav_1_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="ContextSettings.html" class="md-nav__link"
@@ -559,7 +561,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-3">
+        <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="ContextSettings.html" class="md-nav__link"
@@ -569,7 +571,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -597,9 +598,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_4" type="checkbox" id="__nav_1_2_4" >
       
-      <label class="md-nav__link" for="nav-1-2-4">
+      <label class="md-nav__link" for="__nav_1_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Cursor.html" class="md-nav__link"
@@ -609,7 +610,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Cursor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-4">
+        <label class="md-nav__title" for="__nav_1_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Cursor.html" class="md-nav__link"
@@ -619,7 +620,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -647,9 +647,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_5" type="checkbox" id="__nav_1_2_5" >
       
-      <label class="md-nav__link" for="nav-1-2-5">
+      <label class="md-nav__link" for="__nav_1_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Event.html" class="md-nav__link"
@@ -659,7 +659,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Event" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-5">
+        <label class="md-nav__title" for="__nav_1_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Event.html" class="md-nav__link"
@@ -669,7 +669,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1117,9 +1116,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_7" type="checkbox" id="__nav_1_2_7" >
       
-      <label class="md-nav__link" for="nav-1-2-7">
+      <label class="md-nav__link" for="__nav_1_2_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Joystick.html" class="md-nav__link"
@@ -1129,7 +1128,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Joystick" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-7">
+        <label class="md-nav__title" for="__nav_1_2_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Joystick.html" class="md-nav__link"
@@ -1139,7 +1138,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1179,9 +1177,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_8" type="checkbox" id="__nav_1_2_8" >
       
-      <label class="md-nav__link" for="nav-1-2-8">
+      <label class="md-nav__link" for="__nav_1_2_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Keyboard.html" class="md-nav__link"
@@ -1191,7 +1189,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-8">
+        <label class="md-nav__title" for="__nav_1_2_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Keyboard.html" class="md-nav__link"
@@ -1201,7 +1199,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1229,9 +1226,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_9" type="checkbox" id="__nav_1_2_9" >
       
-      <label class="md-nav__link" for="nav-1-2-9">
+      <label class="md-nav__link" for="__nav_1_2_9">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Mouse.html" class="md-nav__link"
@@ -1241,7 +1238,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Mouse" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-9">
+        <label class="md-nav__title" for="__nav_1_2_9">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Mouse.html" class="md-nav__link"
@@ -1251,7 +1248,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1291,9 +1287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_10" type="checkbox" id="__nav_1_2_10" >
       
-      <label class="md-nav__link" for="nav-1-2-10">
+      <label class="md-nav__link" for="__nav_1_2_10">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Sensor.html" class="md-nav__link"
@@ -1303,7 +1299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Sensor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-10">
+        <label class="md-nav__title" for="__nav_1_2_10">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Sensor.html" class="md-nav__link"
@@ -1313,7 +1309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1407,9 +1402,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
       
-      <label class="md-nav__link" for="nav-1-3">
+      <label class="md-nav__link" for="__nav_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../graphics.html" class="md-nav__link"
@@ -1419,7 +1414,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-3">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../graphics.html" class="md-nav__link"
@@ -1430,7 +1425,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1439,9 +1433,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_1" type="checkbox" id="__nav_1_3_1" >
       
-      <label class="md-nav__link" for="nav-1-3-1">
+      <label class="md-nav__link" for="__nav_1_3_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="BlendMode.html" class="md-nav__link"
@@ -1451,7 +1445,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-1">
+        <label class="md-nav__title" for="__nav_1_3_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="BlendMode.html" class="md-nav__link"
@@ -1461,7 +1455,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1561,9 +1554,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_7" type="checkbox" id="__nav_1_3_7" >
       
-      <label class="md-nav__link" for="nav-1-3-7">
+      <label class="md-nav__link" for="__nav_1_3_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Font.html" class="md-nav__link"
@@ -1573,7 +1566,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Font" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-7">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Font.html" class="md-nav__link"
@@ -1583,7 +1576,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1731,9 +1723,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_18" type="checkbox" id="__nav_1_3_18" >
       
-      <label class="md-nav__link" for="nav-1-3-18">
+      <label class="md-nav__link" for="__nav_1_3_18">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Shader.html" class="md-nav__link"
@@ -1743,7 +1735,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Shader" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-18">
+        <label class="md-nav__title" for="__nav_1_3_18">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Shader.html" class="md-nav__link"
@@ -1753,7 +1745,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1817,9 +1808,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_21" type="checkbox" id="__nav_1_3_21" >
       
-      <label class="md-nav__link" for="nav-1-3-21">
+      <label class="md-nav__link" for="__nav_1_3_21">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Text.html" class="md-nav__link"
@@ -1829,7 +1820,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Text" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-21">
+        <label class="md-nav__title" for="__nav_1_3_21">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Text.html" class="md-nav__link"
@@ -1839,7 +1830,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1867,9 +1857,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_22" type="checkbox" id="__nav_1_3_22" >
       
-      <label class="md-nav__link" for="nav-1-3-22">
+      <label class="md-nav__link" for="__nav_1_3_22">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Texture.html" class="md-nav__link"
@@ -1879,7 +1869,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Texture" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-22">
+        <label class="md-nav__title" for="__nav_1_3_22">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Texture.html" class="md-nav__link"
@@ -1889,7 +1879,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1965,9 +1954,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_27" type="checkbox" id="__nav_1_3_27" >
       
-      <label class="md-nav__link" for="nav-1-3-27">
+      <label class="md-nav__link" for="__nav_1_3_27">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="VertexBuffer.html" class="md-nav__link"
@@ -1977,7 +1966,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-27">
+        <label class="md-nav__title" for="__nav_1_3_27">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="VertexBuffer.html" class="md-nav__link"
@@ -1987,7 +1976,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2035,9 +2023,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
       
-      <label class="md-nav__link" for="nav-1-4">
+      <label class="md-nav__link" for="__nav_1_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../audio.html" class="md-nav__link"
@@ -2047,7 +2035,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-4">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../audio.html" class="md-nav__link"
@@ -2057,7 +2045,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2081,6 +2068,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           <span class="md-nav__icon md-icon"></span>
@@ -2100,23 +2089,17 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::Listener" class="md-nav__link">
-    Listener
-  </a>
-  
-    <nav class="md-nav" aria-label="Listener">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::Listener-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -2204,11 +2187,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -2226,9 +2204,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
       
-      <label class="md-nav__link" for="nav-1-4-3">
+      <label class="md-nav__link" for="__nav_1_4_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Music.html" class="md-nav__link"
@@ -2238,7 +2216,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Music" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-3">
+        <label class="md-nav__title" for="__nav_1_4_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Music.html" class="md-nav__link"
@@ -2248,7 +2226,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2336,9 +2313,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_8" type="checkbox" id="__nav_1_4_8" >
       
-      <label class="md-nav__link" for="nav-1-4-8">
+      <label class="md-nav__link" for="__nav_1_4_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="SoundSource.html" class="md-nav__link"
@@ -2348,7 +2325,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-8">
+        <label class="md-nav__title" for="__nav_1_4_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="SoundSource.html" class="md-nav__link"
@@ -2358,7 +2335,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2404,9 +2380,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
       
-      <label class="md-nav__link" for="nav-1-5">
+      <label class="md-nav__link" for="__nav_1_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../network.html" class="md-nav__link"
@@ -2416,7 +2392,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-5">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../network.html" class="md-nav__link"
@@ -2427,7 +2403,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2436,9 +2411,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1" type="checkbox" id="__nav_1_5_1" >
       
-      <label class="md-nav__link" for="nav-1-5-1">
+      <label class="md-nav__link" for="__nav_1_5_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp.html" class="md-nav__link"
@@ -2448,7 +2423,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Ftp" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-1">
+        <label class="md-nav__title" for="__nav_1_5_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp.html" class="md-nav__link"
@@ -2458,7 +2433,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2492,9 +2466,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1_3" type="checkbox" id="__nav_1_5_1_3" >
       
-      <label class="md-nav__link" for="nav-1-5-1-3">
+      <label class="md-nav__link" for="__nav_1_5_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp/Response.html" class="md-nav__link"
@@ -2504,7 +2478,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-1-3">
+        <label class="md-nav__title" for="__nav_1_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp/Response.html" class="md-nav__link"
@@ -2514,7 +2488,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2560,9 +2533,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2">
+      <label class="md-nav__link" for="__nav_1_5_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http.html" class="md-nav__link"
@@ -2572,7 +2545,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Http" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-2">
+        <label class="md-nav__title" for="__nav_1_5_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http.html" class="md-nav__link"
@@ -2583,7 +2556,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2592,9 +2564,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_1" type="checkbox" id="__nav_1_5_2_1" >
       
-      <label class="md-nav__link" for="nav-1-5-2-1">
+      <label class="md-nav__link" for="__nav_1_5_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Request.html" class="md-nav__link"
@@ -2604,7 +2576,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Request" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-1">
+        <label class="md-nav__title" for="__nav_1_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Request.html" class="md-nav__link"
@@ -2614,7 +2586,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2642,9 +2613,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_2" type="checkbox" id="__nav_1_5_2_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2-2">
+      <label class="md-nav__link" for="__nav_1_5_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Response.html" class="md-nav__link"
@@ -2654,7 +2625,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-2">
+        <label class="md-nav__title" for="__nav_1_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Response.html" class="md-nav__link"
@@ -2664,7 +2635,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2722,9 +2692,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
       
-      <label class="md-nav__link" for="nav-1-5-5">
+      <label class="md-nav__link" for="__nav_1_5_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Socket.html" class="md-nav__link"
@@ -2734,7 +2704,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Socket" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-5">
+        <label class="md-nav__title" for="__nav_1_5_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Socket.html" class="md-nav__link"
@@ -2744,7 +2714,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2859,23 +2828,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="nav-2">
+      <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
           Tutorials
         
       </label>
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
             Tutorials
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2885,23 +2853,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
-      <label class="md-nav__link" for="nav-2-1">
+      <label class="md-nav__link" for="__nav_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           System module
         
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-1">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             System module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2953,23 +2920,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="nav-2-2">
+      <label class="md-nav__link" for="__nav_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           Window module
         
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             Window module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3033,23 +2999,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="nav-2-3">
+      <label class="md-nav__link" for="__nav_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           Graphics module
         
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             Graphics module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3161,23 +3126,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="nav-2-4">
+      <label class="md-nav__link" for="__nav_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           Audio module
         
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-4">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             Audio module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3241,23 +3205,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="nav-2-5">
+      <label class="md-nav__link" for="__nav_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           Network module
         
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-5">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             Network module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3327,30 +3290,24 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::Listener" class="md-nav__link">
-    Listener
-  </a>
-  
-    <nav class="md-nav" aria-label="Listener">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+  <a href="#SF::Listener-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -3438,11 +3395,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -3452,23 +3404,19 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/oprypin/crsfml/blob/master/docs/api/SF/Listener.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L33" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Listener</h1>
-                
                 <div class="doc doc-object doc-type module">
-<h2 class="doc doc-heading" id="SF::Listener">
-
-module <code>SF::Listener</code>
-  <a class="headerlink" href="#SF::Listener" title="Permanent link">#</a></h2>
-<div class="doc doc-contents first">
+<h1 id="SF::Listener" class="doc doc-heading">module <code>SF::Listener</code>
+<a href="#SF::Listener" class="headerlink" title="Permanent link">#</a></h1>
+  <div class="doc doc-contents first">
 <p>The audio listener is the point in the scene
 from where all the sounds are heard</p>
 <p>The audio listener defines the global properties of the
@@ -3482,8 +3430,7 @@ up vector), and to adjust the global volume.</p>
 <p>Because the listener is unique in the scene, <a href="#SF::Listener"><code>SF::Listener</code></a> only
 contains static functions and doesn't have to be instantiated.</p>
 <p>Usage example:
-<div class="highlight">
-<pre><span></span><code><span class="c1"># Move the listener to the position (1, 0, -5)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Move the listener to the position (1, 0, -5)</span>
 <span class="n">SF</span><span class="o">::</span><span class="n">Listener</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># Make it face the right axis (1, 0, 0)</span>
@@ -3491,33 +3438,32 @@ contains static functions and doesn't have to be instantiated.</p>
 
 <span class="c1"># Reduce the global volume</span>
 <span class="n">SF</span><span class="o">::</span><span class="n">Listener</span><span class="o">.</span><span class="n">global_volume</span> <span class="o">=</span> <span class="mi">50</span>
-</code></pre>
-</div>
-</p>
-<div class="doc doc-children">
-<h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.direction">
+</code></pre></div></p>
+      <div class="doc doc-children">
 
-    <code>
+
+
+<h2 id="SF::Listener-class-methods">Class methods<a href="#SF::Listener-class-methods" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.direction" class="doc doc-heading">    <code>
       .direction<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.direction" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.direction" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the current forward vector of the listener in the scene</p>
 <p><em>Returns:</em> Listener's forward vector (not normalized)</p>
-<p><em>See also:</em> <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L124">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.direction=(direction)">
+<p><em>See also:</em> <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L124">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.direction=(direction)" class="doc doc-heading">    <code>
       .direction=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">direction</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.direction=(direction)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.direction=(direction)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the forward vector of the listener in the scene</p>
 <p>The direction (also called "at vector") is the vector
 pointing forward from the listener's perspective. Together
@@ -3528,32 +3474,30 @@ The default listener's direction is (0, 0, -1).</p>
 <ul>
 <li><em>direction</em> - New listener's direction</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.direction"><code>direction</code></a>, <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L116">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.global_volume">
+<p><em>See also:</em> <a href="#SF::Listener.direction"><code>direction</code></a>, <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L116">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.global_volume" class="doc doc-heading">    <code>
       .global_volume<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.global_volume" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.global_volume" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the current value of the global volume</p>
 <p><em>Returns:</em> Current global volume, in the range <code>0..100</code></p>
-<p><em>See also:</em> <a href="#SF::Listener.global_volume=(volume)"><code>global_volume=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L51">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.global_volume=(volume)">
+<p><em>See also:</em> <a href="#SF::Listener.global_volume=(volume)"><code>global_volume=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L51">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.global_volume=(volume)" class="doc doc-heading">    <code>
       .global_volume=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">volume</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.global_volume=(volume)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.global_volume=(volume)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Change the global volume of all the sounds and musics</p>
 <p>The volume is a number between 0 and 100; it is combined with
 the individual volume of each sound / music.
@@ -3561,49 +3505,46 @@ The default value for the volume is 100 (maximum).</p>
 <ul>
 <li><em>volume</em> - New global volume, in the range <code>0..100</code></li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.global_volume"><code>global_volume</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L43">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.position">
+<p><em>See also:</em> <a href="#SF::Listener.global_volume"><code>global_volume</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L43">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.position" class="doc doc-heading">    <code>
       .position<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.position" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.position" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the current position of the listener in the scene</p>
 <p><em>Returns:</em> Listener's position</p>
-<p><em>See also:</em> <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L82">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.position=(position)">
+<p><em>See also:</em> <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L82">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.position=(position)" class="doc doc-heading">    <code>
       .position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.position=(position)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.position=(position)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the position of the listener in the scene</p>
 <p>The default listener's position is (0, 0, 0).</p>
 <ul>
 <li><em>position</em> - New listener's position</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.position"><code>position</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L74">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.set_direction(x,y,z)">
+<p><em>See also:</em> <a href="#SF::Listener.position"><code>position</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L74">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.set_direction(x,y,z)" class="doc doc-heading">    <code>
       .set_direction<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.set_direction(x,y,z)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.set_direction(x,y,z)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the forward vector of the listener in the scene</p>
 <p>The direction (also called "at vector") is the vector
 pointing forward from the listener's perspective. Together
@@ -3616,18 +3557,17 @@ The default listener's direction is (0, 0, -1).</p>
 <li><em>y</em> - Y coordinate of the listener's direction</li>
 <li><em>z</em> - Z coordinate of the listener's direction</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.direction"><code>direction</code></a>, <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L101">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.set_position(x,y,z)">
+<p><em>See also:</em> <a href="#SF::Listener.direction"><code>direction</code></a>, <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L101">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.set_position(x,y,z)" class="doc doc-heading">    <code>
       .set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.set_position(x,y,z)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.set_position(x,y,z)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the position of the listener in the scene</p>
 <p>The default listener's position is (0, 0, 0).</p>
 <ul>
@@ -3635,18 +3575,17 @@ The default listener's direction is (0, 0, -1).</p>
 <li><em>y</em> - Y coordinate of the listener's position</li>
 <li><em>z</em> - Z coordinate of the listener's position</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.position"><code>position</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L64">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.set_up_vector(x,y,z)">
+<p><em>See also:</em> <a href="#SF::Listener.position"><code>position</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L64">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.set_up_vector(x,y,z)" class="doc doc-heading">    <code>
       .set_up_vector<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.set_up_vector(x,y,z)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.set_up_vector(x,y,z)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the upward vector of the listener in the scene</p>
 <p>The up vector is the vector that points upward from the
 listener's perspective. Together with the direction, it
@@ -3659,32 +3598,30 @@ not necessary to change it, especially in 2D scenarios.</p>
 <li><em>y</em> - Y coordinate of the listener's up vector</li>
 <li><em>z</em> - Z coordinate of the listener's up vector</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.up_vector"><code>up_vector</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L143">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.up_vector">
+<p><em>See also:</em> <a href="#SF::Listener.up_vector"><code>up_vector</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L143">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.up_vector" class="doc doc-heading">    <code>
       .up_vector<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.up_vector" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.up_vector" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the current upward vector of the listener in the scene</p>
 <p><em>Returns:</em> Listener's upward vector (not normalized)</p>
-<p><em>See also:</em> <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L166">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Listener.up_vector=(up_vector)">
+<p><em>See also:</em> <a href="#SF::Listener.up_vector=(up_vector)"><code>up_vector=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L166">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Listener.up_vector=(up_vector)" class="doc doc-heading">    <code>
       .up_vector=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">up_vector</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Listener.up_vector=(up_vector)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Listener.up_vector=(up_vector)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the upward vector of the listener in the scene</p>
 <p>The up vector is the vector that points upward from the
 listener's perspective. Together with the direction, it
@@ -3695,12 +3632,12 @@ not necessary to change it, especially in 2D scenarios.</p>
 <ul>
 <li><em>up_vector</em> - New listener's up vector</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::Listener.up_vector"><code>up_vector</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L158">View source</a>
-</div>
-</div>
-</div>
+<p><em>See also:</em> <a href="#SF::Listener.up_vector"><code>up_vector</code></a>, <a href="#SF::Listener.direction=(direction)"><code>direction=</code></a>, <a href="#SF::Listener.position=(position)"><code>position=</code></a></p>  </div>
+
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L158">View source</a>
+</div>      </div>
+  </div>
+
 </div>
                 
               
@@ -3717,40 +3654,38 @@ not necessary to change it, especially in 2D scenarios.</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="AlResource.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="AlResource.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              AlResource
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                AlResource
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="Music.html" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Music
             </div>
-          </a>
-        
-        
-          <a href="Music.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Music
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3767,19 +3702,13 @@ not necessary to change it, especially in 2D scenarios.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>

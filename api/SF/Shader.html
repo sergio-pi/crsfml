@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/Shader.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -37,10 +37,12 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../style.css">
     
@@ -78,23 +80,23 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header__button md-logo" aria-label="CrSFML">
       
   <img src="../../icon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             CrSFML
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Shader
@@ -103,9 +105,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,10 +119,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -135,9 +140,9 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -211,7 +216,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -233,7 +238,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -259,23 +264,22 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
-      <label class="md-nav__link" for="nav-1">
+      <label class="md-nav__link" for="__nav_1">
         <span class="md-nav__icon md-icon"></span>
         
           API
         
       </label>
       <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="nav-1">
+        <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           
             API
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -285,9 +289,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
-      <label class="md-nav__link" for="nav-1-1">
+      <label class="md-nav__link" for="__nav_1_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../system.html" class="md-nav__link"
@@ -297,7 +301,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-1">
+        <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../system.html" class="md-nav__link"
@@ -307,7 +311,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -491,9 +494,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
       
-      <label class="md-nav__link" for="nav-1-2">
+      <label class="md-nav__link" for="__nav_1_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../window.html" class="md-nav__link"
@@ -503,7 +506,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-2">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../window.html" class="md-nav__link"
@@ -513,7 +516,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -547,9 +549,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_3" type="checkbox" id="__nav_1_2_3" >
       
-      <label class="md-nav__link" for="nav-1-2-3">
+      <label class="md-nav__link" for="__nav_1_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="ContextSettings.html" class="md-nav__link"
@@ -559,7 +561,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-3">
+        <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="ContextSettings.html" class="md-nav__link"
@@ -569,7 +571,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -597,9 +598,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_4" type="checkbox" id="__nav_1_2_4" >
       
-      <label class="md-nav__link" for="nav-1-2-4">
+      <label class="md-nav__link" for="__nav_1_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Cursor.html" class="md-nav__link"
@@ -609,7 +610,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Cursor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-4">
+        <label class="md-nav__title" for="__nav_1_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Cursor.html" class="md-nav__link"
@@ -619,7 +620,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -647,9 +647,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_5" type="checkbox" id="__nav_1_2_5" >
       
-      <label class="md-nav__link" for="nav-1-2-5">
+      <label class="md-nav__link" for="__nav_1_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Event.html" class="md-nav__link"
@@ -659,7 +659,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Event" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-5">
+        <label class="md-nav__title" for="__nav_1_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Event.html" class="md-nav__link"
@@ -669,7 +669,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1117,9 +1116,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_7" type="checkbox" id="__nav_1_2_7" >
       
-      <label class="md-nav__link" for="nav-1-2-7">
+      <label class="md-nav__link" for="__nav_1_2_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Joystick.html" class="md-nav__link"
@@ -1129,7 +1128,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Joystick" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-7">
+        <label class="md-nav__title" for="__nav_1_2_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Joystick.html" class="md-nav__link"
@@ -1139,7 +1138,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1179,9 +1177,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_8" type="checkbox" id="__nav_1_2_8" >
       
-      <label class="md-nav__link" for="nav-1-2-8">
+      <label class="md-nav__link" for="__nav_1_2_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Keyboard.html" class="md-nav__link"
@@ -1191,7 +1189,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-8">
+        <label class="md-nav__title" for="__nav_1_2_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Keyboard.html" class="md-nav__link"
@@ -1201,7 +1199,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1229,9 +1226,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_9" type="checkbox" id="__nav_1_2_9" >
       
-      <label class="md-nav__link" for="nav-1-2-9">
+      <label class="md-nav__link" for="__nav_1_2_9">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Mouse.html" class="md-nav__link"
@@ -1241,7 +1238,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Mouse" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-9">
+        <label class="md-nav__title" for="__nav_1_2_9">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Mouse.html" class="md-nav__link"
@@ -1251,7 +1248,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1291,9 +1287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_10" type="checkbox" id="__nav_1_2_10" >
       
-      <label class="md-nav__link" for="nav-1-2-10">
+      <label class="md-nav__link" for="__nav_1_2_10">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Sensor.html" class="md-nav__link"
@@ -1303,7 +1299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Sensor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-10">
+        <label class="md-nav__title" for="__nav_1_2_10">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Sensor.html" class="md-nav__link"
@@ -1313,7 +1309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1409,9 +1404,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
       
-      <label class="md-nav__link" for="nav-1-3">
+      <label class="md-nav__link" for="__nav_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../graphics.html" class="md-nav__link"
@@ -1421,7 +1416,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-3">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../graphics.html" class="md-nav__link"
@@ -1432,7 +1427,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1441,9 +1435,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_1" type="checkbox" id="__nav_1_3_1" >
       
-      <label class="md-nav__link" for="nav-1-3-1">
+      <label class="md-nav__link" for="__nav_1_3_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="BlendMode.html" class="md-nav__link"
@@ -1453,7 +1447,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-1">
+        <label class="md-nav__title" for="__nav_1_3_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="BlendMode.html" class="md-nav__link"
@@ -1463,7 +1457,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1563,9 +1556,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_7" type="checkbox" id="__nav_1_3_7" >
       
-      <label class="md-nav__link" for="nav-1-3-7">
+      <label class="md-nav__link" for="__nav_1_3_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Font.html" class="md-nav__link"
@@ -1575,7 +1568,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Font" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-7">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Font.html" class="md-nav__link"
@@ -1585,7 +1578,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1735,9 +1727,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_18" type="checkbox" id="__nav_1_3_18" checked>
       
-      <label class="md-nav__link" for="nav-1-3-18">
+      <label class="md-nav__link" for="__nav_1_3_18">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Shader.html" class="md-nav__link md-nav__link--active"
@@ -1747,7 +1739,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Shader" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-18">
+        <label class="md-nav__title" for="__nav_1_3_18">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Shader.html" class="md-nav__link md-nav__link--active"
@@ -1757,7 +1749,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1821,9 +1812,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_21" type="checkbox" id="__nav_1_3_21" >
       
-      <label class="md-nav__link" for="nav-1-3-21">
+      <label class="md-nav__link" for="__nav_1_3_21">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Text.html" class="md-nav__link"
@@ -1833,7 +1824,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Text" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-21">
+        <label class="md-nav__title" for="__nav_1_3_21">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Text.html" class="md-nav__link"
@@ -1843,7 +1834,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1871,9 +1861,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_22" type="checkbox" id="__nav_1_3_22" >
       
-      <label class="md-nav__link" for="nav-1-3-22">
+      <label class="md-nav__link" for="__nav_1_3_22">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Texture.html" class="md-nav__link"
@@ -1883,7 +1873,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Texture" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-22">
+        <label class="md-nav__title" for="__nav_1_3_22">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Texture.html" class="md-nav__link"
@@ -1893,7 +1883,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1969,9 +1958,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_27" type="checkbox" id="__nav_1_3_27" >
       
-      <label class="md-nav__link" for="nav-1-3-27">
+      <label class="md-nav__link" for="__nav_1_3_27">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="VertexBuffer.html" class="md-nav__link"
@@ -1981,7 +1970,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-27">
+        <label class="md-nav__title" for="__nav_1_3_27">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="VertexBuffer.html" class="md-nav__link"
@@ -1991,7 +1980,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2037,9 +2025,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
       
-      <label class="md-nav__link" for="nav-1-4">
+      <label class="md-nav__link" for="__nav_1_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../audio.html" class="md-nav__link"
@@ -2049,7 +2037,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-4">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../audio.html" class="md-nav__link"
@@ -2059,7 +2047,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2093,9 +2080,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
       
-      <label class="md-nav__link" for="nav-1-4-3">
+      <label class="md-nav__link" for="__nav_1_4_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Music.html" class="md-nav__link"
@@ -2105,7 +2092,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Music" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-3">
+        <label class="md-nav__title" for="__nav_1_4_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Music.html" class="md-nav__link"
@@ -2115,7 +2102,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2203,9 +2189,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_8" type="checkbox" id="__nav_1_4_8" >
       
-      <label class="md-nav__link" for="nav-1-4-8">
+      <label class="md-nav__link" for="__nav_1_4_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="SoundSource.html" class="md-nav__link"
@@ -2215,7 +2201,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-8">
+        <label class="md-nav__title" for="__nav_1_4_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="SoundSource.html" class="md-nav__link"
@@ -2225,7 +2211,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2271,9 +2256,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
       
-      <label class="md-nav__link" for="nav-1-5">
+      <label class="md-nav__link" for="__nav_1_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../network.html" class="md-nav__link"
@@ -2283,7 +2268,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-5">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../network.html" class="md-nav__link"
@@ -2294,7 +2279,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2303,9 +2287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1" type="checkbox" id="__nav_1_5_1" >
       
-      <label class="md-nav__link" for="nav-1-5-1">
+      <label class="md-nav__link" for="__nav_1_5_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp.html" class="md-nav__link"
@@ -2315,7 +2299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Ftp" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-1">
+        <label class="md-nav__title" for="__nav_1_5_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp.html" class="md-nav__link"
@@ -2325,7 +2309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2359,9 +2342,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1_3" type="checkbox" id="__nav_1_5_1_3" >
       
-      <label class="md-nav__link" for="nav-1-5-1-3">
+      <label class="md-nav__link" for="__nav_1_5_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp/Response.html" class="md-nav__link"
@@ -2371,7 +2354,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-1-3">
+        <label class="md-nav__title" for="__nav_1_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp/Response.html" class="md-nav__link"
@@ -2381,7 +2364,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2427,9 +2409,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2">
+      <label class="md-nav__link" for="__nav_1_5_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http.html" class="md-nav__link"
@@ -2439,7 +2421,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Http" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-2">
+        <label class="md-nav__title" for="__nav_1_5_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http.html" class="md-nav__link"
@@ -2450,7 +2432,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2459,9 +2440,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_1" type="checkbox" id="__nav_1_5_2_1" >
       
-      <label class="md-nav__link" for="nav-1-5-2-1">
+      <label class="md-nav__link" for="__nav_1_5_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Request.html" class="md-nav__link"
@@ -2471,7 +2452,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Request" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-1">
+        <label class="md-nav__title" for="__nav_1_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Request.html" class="md-nav__link"
@@ -2481,7 +2462,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2509,9 +2489,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_2" type="checkbox" id="__nav_1_5_2_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2-2">
+      <label class="md-nav__link" for="__nav_1_5_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Response.html" class="md-nav__link"
@@ -2521,7 +2501,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-2">
+        <label class="md-nav__title" for="__nav_1_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Response.html" class="md-nav__link"
@@ -2531,7 +2511,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2589,9 +2568,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
       
-      <label class="md-nav__link" for="nav-1-5-5">
+      <label class="md-nav__link" for="__nav_1_5_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Socket.html" class="md-nav__link"
@@ -2601,7 +2580,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Socket" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-5">
+        <label class="md-nav__title" for="__nav_1_5_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Socket.html" class="md-nav__link"
@@ -2611,7 +2590,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2726,23 +2704,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="nav-2">
+      <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
           Tutorials
         
       </label>
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
             Tutorials
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2752,23 +2729,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
-      <label class="md-nav__link" for="nav-2-1">
+      <label class="md-nav__link" for="__nav_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           System module
         
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-1">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             System module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2820,23 +2796,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="nav-2-2">
+      <label class="md-nav__link" for="__nav_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           Window module
         
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             Window module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2900,23 +2875,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="nav-2-3">
+      <label class="md-nav__link" for="__nav_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           Graphics module
         
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             Graphics module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3028,23 +3002,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="nav-2-4">
+      <label class="md-nav__link" for="__nav_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           Audio module
         
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-4">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             Audio module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3108,23 +3081,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="nav-2-5">
+      <label class="md-nav__link" for="__nav_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           Network module
         
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-5">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             Network module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3194,37 +3166,24 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::Shader" class="md-nav__link">
-    Shader
-  </a>
-  
-    <nav class="md-nav" aria-label="Shader">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#included-modules" class="md-nav__link">
-    Included modules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#constants" class="md-nav__link">
+  <a href="#SF::Shader-constants" class="md-nav__link">
     Constants
   </a>
   
@@ -3242,9 +3201,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#class-methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::Shader-class-methods" class="md-nav__link">
     Class methods
   </a>
   
@@ -3304,9 +3263,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::Shader-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -3359,9 +3318,9 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#SF::Shader-macros" class="md-nav__link">
     Macros
   </a>
   
@@ -3369,14 +3328,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#SF::Shader:method_missing" class="md-nav__link">
+  <a href="#SF::Shader:method_missing(call)" class="md-nav__link">
     method_missing
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3393,25 +3347,20 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/oprypin/crsfml/blob/master/docs/api/SF/Shader.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L184" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Shader</h1>
-                
                 <div class="doc doc-object doc-type class">
-<h2 class="doc doc-heading" id="SF::Shader">
-
-class <code>SF::Shader</code>
-      <br />
-<small>inherits <code>Reference</code></small>
-  <a class="headerlink" href="#SF::Shader" title="Permanent link">#</a></h2>
-<div class="doc doc-contents first">
+<h1 id="SF::Shader" class="doc doc-heading">class <code>SF::Shader</code>
+      <br/><small>inherits <code>Reference</code></small>
+<a href="#SF::Shader" class="headerlink" title="Permanent link">#</a></h1>
+  <div class="doc doc-contents first">
 <p>Shader class (vertex, geometry and fragment)</p>
 <p>Shaders are programs written using a specific language,
 executed directly by the graphics card and allowing
@@ -3447,37 +3396,29 @@ called <em>uniforms</em> that you can set from your C++ application.
 <p>Every uniform variable in a shader can be set through one of the
 <a href="#SF::Shader#set_parameter(name,x,y,z)"><code>set_parameter</code></a> overloads, or through a shorthand. For example, if you
 have a shader with the following uniforms:
-<div class="highlight">
-<pre><span></span><code><span class="k">uniform</span> <span class="kt">float</span> <span class="n">offset</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">uniform</span> <span class="kt">float</span> <span class="n">offset</span><span class="p">;</span>
 <span class="k">uniform</span> <span class="kt">vec3</span> <span class="n">point</span><span class="p">;</span>
 <span class="k">uniform</span> <span class="kt">vec4</span> <span class="n">color</span><span class="p">;</span>
 <span class="k">uniform</span> <span class="kt">mat4</span> <span class="n">matrix</span><span class="p">;</span>
 <span class="k">uniform</span> <span class="kt">sampler2D</span> <span class="n">overlay</span><span class="p">;</span>
 <span class="k">uniform</span> <span class="kt">sampler2D</span> <span class="n">current</span><span class="p">;</span>
-</code></pre>
-</div>
+</code></pre></div>
 You can set their values from Crystal code as follows:
-<div class="highlight">
-<pre><span></span><code><span class="n">shader</span><span class="o">.</span><span class="n">offset</span> <span class="mf">2.0</span>
+<div class="highlight"><pre><span></span><code><span class="n">shader</span><span class="o">.</span><span class="n">offset</span> <span class="mf">2.0</span>
 <span class="n">shader</span><span class="o">.</span><span class="n">point</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.3</span>
 <span class="n">shader</span><span class="o">.</span><span class="n">color</span> <span class="n">color</span>          <span class="c1"># color is a SF::Color</span>
 <span class="n">shader</span><span class="o">.</span><span class="n">matrix</span> <span class="n">transform</span>     <span class="c1"># transform is a SF::Transform</span>
 <span class="n">shader</span><span class="o">.</span><span class="n">overlay</span> <span class="n">texture</span>      <span class="c1"># texture is a SF::Texture</span>
 <span class="n">shader</span><span class="o">.</span><span class="n">current</span> <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">::</span><span class="n">CurrentTexture</span>
-</code></pre>
-</div>
-</p>
+</code></pre></div></p>
 <p>The special Shader::CurrentTexture argument maps the
 given <code>sampler2d</code> uniform to the current texture of the
 object being drawn (which cannot be known in advance).</p>
 <p>To apply a shader to a drawable, you must pass it as an
 additional parameter to the <code>Window.draw</code> function:
-<div class="highlight">
-<pre><span></span><code><span class="n">states</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">states</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">RenderStates</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
 <span class="n">window</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">sprite</span><span class="p">,</span> <span class="n">states</span><span class="p">)</span>
-</code></pre>
-</div>
-</p>
+</code></pre></div></p>
 <p>In the code above we pass a pointer to the shader, because it may
 be null (which means "no shader").</p>
 <p>Shaders can be used on any drawable, but some combinations are
@@ -3505,61 +3446,54 @@ easily inserted anywhere without impacting all the code.</p>
 <p>Like <a href="Texture.html#SF::Texture"><code>SF::Texture</code></a> that can be used as a raw OpenGL texture,
 <a href="#SF::Shader"><code>SF::Shader</code></a> can also be used directly as a raw shader for
 custom OpenGL geometry.
-<div class="highlight">
-<pre><span></span><code><span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span> <span class="n">shader</span>
+<div class="highlight"><pre><span></span><code><span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span> <span class="n">shader</span>
 <span class="o">...</span> <span class="n">render</span> <span class="n">OpenGL</span> <span class="n">geometry</span> <span class="o">...</span>
 <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span> <span class="kc">nil</span>
-</code></pre>
-</div>
-</p>
-<div class="doc doc-children">
-<h3 id="included-modules">Included modules<a class="headerlink" href="#included-modules" title="Permanent link">#</a></h3>
-<code><a href="GlResource.html#SF::GlResource">SF::GlResource</a></code>
+</code></pre></div></p>
+      <div class="doc doc-children">
+
+            <h2>Included modules</h2>
+              <code><a href="GlResource.html#SF::GlResource">SF::GlResource</a></code>
               <code><a href="NonCopyable.html#SF::NonCopyable">SF::NonCopyable</a></code>
 
-          <h3 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-constant">
-<h4 class="doc doc-heading" id="SF::Shader::CurrentTexture">
+<h2 id="SF::Shader-constants">Constants<a href="#SF::Shader-constants" class="headerlink" title="Permanent link">#</a></h2>
 
-    <code>
+<div class="doc doc-object doc-constant">
+<h3 id="SF::Shader::CurrentTexture" class="doc doc-heading">    <code>
       CurrentTexture = <span style="font-weight: normal"><code class="highlight language-crystal"><span class="n">CurrentTextureType</span><span class="o">.</span><span class="n">new</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader::CurrentTexture" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Represents the texture of the object being drawn</p>
+<a href="#SF::Shader::CurrentTexture" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Represents the texture of the object being drawn</p>  </div>
 </div>
-</div>
-<h3 id="class-methods">Class methods<a class="headerlink" href="#class-methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.available?">
+<h2 id="SF::Shader-class-methods">Class methods<a href="#SF::Shader-class-methods" class="headerlink" title="Permanent link">#</a></h2>
 
-    <code>
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.available?" class="doc doc-heading">    <code>
       .available?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.available?" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.available?" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Tell whether or not the system supports shaders</p>
 <p>This function should always be called before using
 the shader features. If it returns false, then
 any attempt to use <a href="#SF::Shader"><code>SF::Shader</code></a> will fail.</p>
-<p><em>Returns:</em> True if shaders are supported, false otherwise</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6110">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.bind(shader)">
+<p><em>Returns:</em> True if shaders are supported, false otherwise</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6110">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.bind(shader)" class="doc doc-heading">    <code>
       .bind<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <a href="#SF::Shader">Shader?</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.bind(shader)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.bind(shader)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Bind a shader for rendering</p>
 <p>This function is not part of the graphics API, it mustn't be
 used when drawing SFML entities. It must be used only if you
 mix <a href="#SF::Shader"><code>SF::Shader</code></a> with OpenGL code.</p>
-<div class="highlight">
-<pre><span></span><code><span class="n">s1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">new</span>
+<div class="highlight"><pre><span></span><code><span class="n">s1</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">new</span>
 <span class="n">s2</span> <span class="o">=</span> <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">new</span>
 <span class="o">...</span>
 <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span> <span class="n">s1</span>
@@ -3568,22 +3502,20 @@ mix <a href="#SF::Shader"><code>SF::Shader</code></a> with OpenGL code.</p>
 <span class="c1"># draw OpenGL stuff that use s2...</span>
 <span class="n">SF</span><span class="o">::</span><span class="n">Shader</span><span class="o">.</span><span class="n">bind</span> <span class="kc">nil</span>
 <span class="c1"># draw OpenGL stuff that use no shader...</span>
-</code></pre>
-</div>
+</code></pre></div>
 <ul>
 <li><em>shader</em> - Shader to bind, can be null to use no shader</li>
-</ul>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6100">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.geometry_available?">
+</ul>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6100">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.geometry_available?" class="doc doc-heading">    <code>
       .geometry_available?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.geometry_available?" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.geometry_available?" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Tell whether or not the system supports geometry shaders</p>
 <p>This function should always be called before using
 the geometry shader features. If it returns false, then
@@ -3593,83 +3525,76 @@ return true, since shaders in general have to be supported in
 order for geometry shaders to be supported as well.</p>
 <p>Note: The first call to this function, whether by your
 code or SFML will result in a context switch.</p>
-<p><em>Returns:</em> True if geometry shaders are supported, false otherwise</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6128">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.from_file(*,**)">
+<p><em>Returns:</em> True if geometry shaders are supported, false otherwise</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6128">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.from_file(*,**)" class="doc doc-heading">    <code>
       .from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.from_file(*,**)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.from_file(*,**)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Shorthand for <code>shader = Shader.new; shader.load_from_file(...); shader</code></p>
-<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5840">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.from_memory(*,**)">
+<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5840">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.from_memory(*,**)" class="doc doc-heading">    <code>
       .from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.from_memory(*,**)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.from_memory(*,**)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Shorthand for <code>shader = Shader.new; shader.load_from_memory(...); shader</code></p>
-<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5930">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.from_stream(*,**)">
+<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5930">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.from_stream(*,**)" class="doc doc-heading">    <code>
       .from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="p">:</span> <span class="k">self</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.from_stream(*,**)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.from_stream(*,**)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Shorthand for <code>shader = Shader.new; shader.load_from_stream(...); shader</code></p>
-<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6020">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-class_method">
-<h4 class="doc doc-heading" id="SF::Shader.new">
+<p>Raises <a href="InitError.html#SF::InitError"><code>InitError</code></a> on failure</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6020">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-class_method">
+<h3 id="SF::Shader.new" class="doc doc-heading">    <code>
       .new<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader.new" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader.new" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Default constructor</p>
-<p>This constructor creates an invalid shader.</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5747">View source</a>
-</div>
-<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#finalize">
+<p>This constructor creates an invalid shader.</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5747">View source</a>
+</div><h2 id="SF::Shader-methods">Methods<a href="#SF::Shader-methods" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#finalize" class="doc doc-heading">    <code>
       #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#finalize" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Destructor</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5752">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)">
+<a href="#SF::Shader#finalize" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Destructor</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5752">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)" class="doc doc-heading">    <code>
       #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">geometry_shader_filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">fragment_shader_filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry and fragment shaders from files</p>
 <p>This function loads the vertex, geometry and fragment
 shaders. If one of them fails to load, the shader is left
@@ -3684,18 +3609,17 @@ for it before writing your own shaders.</p>
 <li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5833">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_file(filename,type)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5833">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_file(filename,type)" class="doc doc-heading">    <code>
       #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_file(filename,type)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_file(filename,type)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry or fragment shader from a file</p>
 <p>This function loads a single shader, vertex, geometry or
 fragment, identified by the second argument.
@@ -3709,18 +3633,17 @@ own shaders.</p>
 <li><em>type</em> - Type of shader (vertex, geometry or fragment)</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5772">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_file(vertex_shader_filename,fragment_shader_filename)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5772">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_file(vertex_shader_filename,fragment_shader_filename)" class="doc doc-heading">    <code>
       #load_from_file<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">fragment_shader_filename</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_file(vertex_shader_filename,fragment_shader_filename)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_file(vertex_shader_filename,fragment_shader_filename)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load both the vertex and fragment shaders from files</p>
 <p>This function loads both the vertex and the fragment
 shaders. If one of them fails to load, the shader is left
@@ -3734,18 +3657,17 @@ for it before writing your own shaders.</p>
 <li><em>fragment_shader_filename</em> - Path of the fragment shader file to load</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5802">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5802">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)" class="doc doc-heading">    <code>
       #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">geometry_shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">fragment_shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry and fragment shaders from source codes in memory</p>
 <p>This function loads the vertex, geometry and fragment
 shaders. If one of them fails to load, the shader is left
@@ -3760,18 +3682,17 @@ writing your own shaders.</p>
 <li><em>fragment_shader</em> - String containing the source code of the fragment shader</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5923">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_memory(shader,type)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5923">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_memory(shader,type)" class="doc doc-heading">    <code>
       #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_memory(shader,type)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_memory(shader,type)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry or fragment shader from a source code in memory</p>
 <p>This function loads a single shader, vertex, geometry
 or fragment, identified by the second argument.
@@ -3784,18 +3705,17 @@ it before writing your own shaders.</p>
 <li><em>type</em> - Type of shader (vertex, geometry or fragment)</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5862">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_memory(vertex_shader,fragment_shader)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5862">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_memory(vertex_shader,fragment_shader)" class="doc doc-heading">    <code>
       #load_from_memory<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">fragment_shader</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_memory(vertex_shader,fragment_shader)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_memory(vertex_shader,fragment_shader)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load both the vertex and fragment shaders from source codes in memory</p>
 <p>This function loads both the vertex and the fragment
 shaders. If one of them fails to load, the shader is left
@@ -3809,18 +3729,17 @@ writing your own shaders.</p>
 <li><em>fragment_shader</em> - String containing the source code of the fragment shader</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5892">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)"><code>load_from_stream</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5892">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)" class="doc doc-heading">    <code>
       #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">geometry_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_stream(vertex_shader_stream,geometry_shader_stream,fragment_shader_stream)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry and fragment shaders from custom streams</p>
 <p>This function loads the vertex, geometry and fragment
 shaders. If one of them fails to load, the shader is left
@@ -3835,18 +3754,17 @@ it before writing your own shaders.</p>
 <li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6013">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_stream(stream,type)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6013">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_stream(stream,type)" class="doc doc-heading">    <code>
       #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="k">type</span> <span class="p">:</span> <a href="Shader/Type.html#SF::Shader::Type">Shader::Type</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_stream(stream,type)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_stream(stream,type)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load the vertex, geometry or fragment shader from a custom stream</p>
 <p>This function loads a single shader, vertex, geometry
 or fragment, identified by the second argument.
@@ -3859,18 +3777,17 @@ before writing your own shaders.</p>
 <li><em>type</em> - Type of shader (vertex, geometry or fragment)</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5952">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5952">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)" class="doc doc-heading">    <code>
       #load_from_stream<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">vertex_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">,</span> <span class="n">fragment_shader_stream</span> <span class="p">:</span> <a href="InputStream.html#SF::InputStream">InputStream</a><span class="p">)</span> <span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#load_from_stream(vertex_shader_stream,fragment_shader_stream)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Load both the vertex and fragment shaders from custom streams</p>
 <p>This function loads both the vertex and the fragment
 shaders. If one of them fails to load, the shader is left
@@ -3884,163 +3801,150 @@ it before writing your own shaders.</p>
 <li><em>fragment_shader_stream</em> - Source stream to read the fragment shader from</li>
 </ul>
 <p><em>Returns:</em> True if loading succeeded, false if it failed</p>
-<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5982">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#native_handle">
+<p><em>See also:</em> <a href="#SF::Shader#load_from_file(vertex_shader_filename,geometry_shader_filename,fragment_shader_filename)"><code>load_from_file</code></a>, <a href="#SF::Shader#load_from_memory(vertex_shader,geometry_shader,fragment_shader)"><code>load_from_memory</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L5982">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#native_handle" class="doc doc-heading">    <code>
       #native_handle<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Int32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#native_handle" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#native_handle" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the underlying OpenGL handle of the shader.</p>
 <p>You shouldn't need to use this function, unless you have
 very specific stuff to implement that SFML doesn't support,
 or implement a temporary workaround until a bug is fixed.</p>
-<p><em>Returns:</em> OpenGL handle of the shader or 0 if not yet loaded</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6077">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,x,y,z)">
+<p><em>Returns:</em> OpenGL handle of the shader or 0 if not yet loaded</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6077">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,x,y,z)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,x,y,z)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a 3-components vector parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6036">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,x,y)">
+<a href="#SF::Shader#set_parameter(name,x,y,z)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a 3-components vector parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6036">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,x,y)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,x,y)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a 2-components vector parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6032">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,x)">
+<a href="#SF::Shader#set_parameter(name,x,y)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a 2-components vector parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6032">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,x)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,x)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a float parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6028">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,vector)">
+<a href="#SF::Shader#set_parameter(name,x)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a float parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6028">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,vector)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <a href="Vector2.html#SF::Vector2">Vector2</a> <span class="o">|</span> <span class="n">Tuple</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,vector)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader#set_parameter(name,vector)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Change a 2-components vector parameter of the shader</p>
-<p>DEPRECATED: Use uniform=(const std::string&amp;, const Glsl::Vec2&amp;) instead.</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6046">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,vector)">
+<p>DEPRECATED: Use uniform=(const std::string&amp;, const Glsl::Vec2&amp;) instead.</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6046">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,vector)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">vector</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,vector)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a 3-components vector parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6051">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,color)">
+<a href="#SF::Shader#set_parameter(name,vector)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a 3-components vector parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6051">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,color)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">color</span> <span class="p">:</span> <a href="Color.html#SF::Color">Color</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,color)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a color parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6055">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,transform)">
+<a href="#SF::Shader#set_parameter(name,color)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a color parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6055">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,transform)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">transform</span> <span class="p">:</span> <a href="Transform.html#SF::Transform">Transform</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,transform)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a matrix parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6059">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,texture)">
+<a href="#SF::Shader#set_parameter(name,transform)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a matrix parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6059">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,texture)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">texture</span> <span class="p">:</span> <a href="Texture.html#SF::Texture">Texture</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,texture)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a texture parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6063">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,p1)">
+<a href="#SF::Shader#set_parameter(name,texture)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a texture parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6063">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,p1)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">p1</span> <span class="p">:</span> <a href="Shader/CurrentTextureType.html#SF::Shader::CurrentTextureType">CurrentTextureType</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,p1)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a texture parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6067">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::Shader#set_parameter(name,x,y,z,w)">
+<a href="#SF::Shader#set_parameter(name,p1)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a texture parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6067">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::Shader#set_parameter(name,x,y,z,w)" class="doc doc-heading">    <code>
       #set_parameter<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">w</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader#set_parameter(name,x,y,z,w)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Change a 4-components vector parameter of the shader</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6040">View source</a>
-</div>
-<h3 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-macro">
-<h4 class="doc doc-heading" id="SF::Shader:method_missing">
+<a href="#SF::Shader#set_parameter(name,x,y,z,w)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Change a 4-components vector parameter of the shader</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/obj.cr#L6040">View source</a>
+</div><h2 id="SF::Shader-macros">Macros<a href="#SF::Shader-macros" class="headerlink" title="Permanent link">#</a></h2>
+
+<div class="doc doc-object doc-method doc-macro">
+<h3 id="SF::Shader:method_missing(call)" class="doc doc-heading">    <code>
       method_missing<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">call</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::Shader:method_missing" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::Shader:method_missing(call)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Forwards calls like <code>shader.param(arg1, arg2)</code> to
-<code>shader.set_parameter("param", arg1, arg2)</code></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L195">View source</a>
-</div>
-</div>
-</div>
+<code>shader.set_parameter("param", arg1, arg2)</code></p>  </div>
+
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/graphics/graphics.cr#L195">View source</a>
+</div>      </div>
+  </div>
+
 </div>
                 
               
@@ -4057,40 +3961,38 @@ or implement a temporary workaround until a bug is fixed.</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="RenderWindow.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="RenderWindow.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              RenderWindow
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                RenderWindow
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="Shader/CurrentTextureType.html" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CurrentTextureType
             </div>
-          </a>
-        
-        
-          <a href="Shader/CurrentTextureType.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                CurrentTextureType
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -4107,19 +4009,13 @@ or implement a temporary workaround until a bug is fixed.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>

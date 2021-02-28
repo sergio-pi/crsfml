@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://oprypin.github.io/crsfml/api/SF/SoundSource.html">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
         
           
           
@@ -37,10 +37,12 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../../style.css">
     
@@ -78,23 +80,23 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header-nav__button md-logo" aria-label="CrSFML">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://oprypin.github.io/crsfml/" title="CrSFML" class="md-header__button md-logo" aria-label="CrSFML">
       
   <img src="../../icon.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             CrSFML
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               SoundSource
@@ -103,9 +105,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -114,10 +119,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -135,9 +140,9 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -211,7 +216,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -233,7 +238,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source">
+<a href="https://github.com/oprypin/crsfml/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -259,23 +264,22 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
-      <label class="md-nav__link" for="nav-1">
+      <label class="md-nav__link" for="__nav_1">
         <span class="md-nav__icon md-icon"></span>
         
           API
         
       </label>
       <nav class="md-nav" aria-label="API" data-md-level="1">
-        <label class="md-nav__title" for="nav-1">
+        <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           
             API
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -285,9 +289,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
-      <label class="md-nav__link" for="nav-1-1">
+      <label class="md-nav__link" for="__nav_1_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../system.html" class="md-nav__link"
@@ -297,7 +301,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-1">
+        <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../system.html" class="md-nav__link"
@@ -307,7 +311,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -491,9 +494,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
       
-      <label class="md-nav__link" for="nav-1-2">
+      <label class="md-nav__link" for="__nav_1_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../window.html" class="md-nav__link"
@@ -503,7 +506,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-2">
+        <label class="md-nav__title" for="__nav_1_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../window.html" class="md-nav__link"
@@ -513,7 +516,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -547,9 +549,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_3" type="checkbox" id="__nav_1_2_3" >
       
-      <label class="md-nav__link" for="nav-1-2-3">
+      <label class="md-nav__link" for="__nav_1_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="ContextSettings.html" class="md-nav__link"
@@ -559,7 +561,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="ContextSettings" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-3">
+        <label class="md-nav__title" for="__nav_1_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="ContextSettings.html" class="md-nav__link"
@@ -569,7 +571,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -597,9 +598,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_4" type="checkbox" id="__nav_1_2_4" >
       
-      <label class="md-nav__link" for="nav-1-2-4">
+      <label class="md-nav__link" for="__nav_1_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Cursor.html" class="md-nav__link"
@@ -609,7 +610,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Cursor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-4">
+        <label class="md-nav__title" for="__nav_1_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Cursor.html" class="md-nav__link"
@@ -619,7 +620,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -647,9 +647,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_5" type="checkbox" id="__nav_1_2_5" >
       
-      <label class="md-nav__link" for="nav-1-2-5">
+      <label class="md-nav__link" for="__nav_1_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Event.html" class="md-nav__link"
@@ -659,7 +659,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Event" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-5">
+        <label class="md-nav__title" for="__nav_1_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Event.html" class="md-nav__link"
@@ -669,7 +669,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1117,9 +1116,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-7" type="checkbox" id="nav-1-2-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_7" type="checkbox" id="__nav_1_2_7" >
       
-      <label class="md-nav__link" for="nav-1-2-7">
+      <label class="md-nav__link" for="__nav_1_2_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Joystick.html" class="md-nav__link"
@@ -1129,7 +1128,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Joystick" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-7">
+        <label class="md-nav__title" for="__nav_1_2_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Joystick.html" class="md-nav__link"
@@ -1139,7 +1138,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1179,9 +1177,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-8" type="checkbox" id="nav-1-2-8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_8" type="checkbox" id="__nav_1_2_8" >
       
-      <label class="md-nav__link" for="nav-1-2-8">
+      <label class="md-nav__link" for="__nav_1_2_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Keyboard.html" class="md-nav__link"
@@ -1191,7 +1189,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Keyboard" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-8">
+        <label class="md-nav__title" for="__nav_1_2_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Keyboard.html" class="md-nav__link"
@@ -1201,7 +1199,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1229,9 +1226,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-9" type="checkbox" id="nav-1-2-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_9" type="checkbox" id="__nav_1_2_9" >
       
-      <label class="md-nav__link" for="nav-1-2-9">
+      <label class="md-nav__link" for="__nav_1_2_9">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Mouse.html" class="md-nav__link"
@@ -1241,7 +1238,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Mouse" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-9">
+        <label class="md-nav__title" for="__nav_1_2_9">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Mouse.html" class="md-nav__link"
@@ -1251,7 +1248,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1291,9 +1287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2-10" type="checkbox" id="nav-1-2-10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2_10" type="checkbox" id="__nav_1_2_10" >
       
-      <label class="md-nav__link" for="nav-1-2-10">
+      <label class="md-nav__link" for="__nav_1_2_10">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Sensor.html" class="md-nav__link"
@@ -1303,7 +1299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Sensor" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-2-10">
+        <label class="md-nav__title" for="__nav_1_2_10">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Sensor.html" class="md-nav__link"
@@ -1313,7 +1309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1407,9 +1402,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
       
-      <label class="md-nav__link" for="nav-1-3">
+      <label class="md-nav__link" for="__nav_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../graphics.html" class="md-nav__link"
@@ -1419,7 +1414,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-3">
+        <label class="md-nav__title" for="__nav_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../graphics.html" class="md-nav__link"
@@ -1430,7 +1425,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -1439,9 +1433,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_1" type="checkbox" id="__nav_1_3_1" >
       
-      <label class="md-nav__link" for="nav-1-3-1">
+      <label class="md-nav__link" for="__nav_1_3_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="BlendMode.html" class="md-nav__link"
@@ -1451,7 +1445,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="BlendMode" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-1">
+        <label class="md-nav__title" for="__nav_1_3_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="BlendMode.html" class="md-nav__link"
@@ -1461,7 +1455,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1561,9 +1554,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-7" type="checkbox" id="nav-1-3-7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_7" type="checkbox" id="__nav_1_3_7" >
       
-      <label class="md-nav__link" for="nav-1-3-7">
+      <label class="md-nav__link" for="__nav_1_3_7">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Font.html" class="md-nav__link"
@@ -1573,7 +1566,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Font" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-7">
+        <label class="md-nav__title" for="__nav_1_3_7">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Font.html" class="md-nav__link"
@@ -1583,7 +1576,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1731,9 +1723,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-18" type="checkbox" id="nav-1-3-18" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_18" type="checkbox" id="__nav_1_3_18" >
       
-      <label class="md-nav__link" for="nav-1-3-18">
+      <label class="md-nav__link" for="__nav_1_3_18">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Shader.html" class="md-nav__link"
@@ -1743,7 +1735,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Shader" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-18">
+        <label class="md-nav__title" for="__nav_1_3_18">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Shader.html" class="md-nav__link"
@@ -1753,7 +1745,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1817,9 +1808,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-21" type="checkbox" id="nav-1-3-21" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_21" type="checkbox" id="__nav_1_3_21" >
       
-      <label class="md-nav__link" for="nav-1-3-21">
+      <label class="md-nav__link" for="__nav_1_3_21">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Text.html" class="md-nav__link"
@@ -1829,7 +1820,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Text" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-21">
+        <label class="md-nav__title" for="__nav_1_3_21">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Text.html" class="md-nav__link"
@@ -1839,7 +1830,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1867,9 +1857,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-22" type="checkbox" id="nav-1-3-22" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_22" type="checkbox" id="__nav_1_3_22" >
       
-      <label class="md-nav__link" for="nav-1-3-22">
+      <label class="md-nav__link" for="__nav_1_3_22">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Texture.html" class="md-nav__link"
@@ -1879,7 +1869,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Texture" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-22">
+        <label class="md-nav__title" for="__nav_1_3_22">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Texture.html" class="md-nav__link"
@@ -1889,7 +1879,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -1965,9 +1954,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3-27" type="checkbox" id="nav-1-3-27" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_27" type="checkbox" id="__nav_1_3_27" >
       
-      <label class="md-nav__link" for="nav-1-3-27">
+      <label class="md-nav__link" for="__nav_1_3_27">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="VertexBuffer.html" class="md-nav__link"
@@ -1977,7 +1966,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="VertexBuffer" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-3-27">
+        <label class="md-nav__title" for="__nav_1_3_27">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="VertexBuffer.html" class="md-nav__link"
@@ -1987,7 +1976,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2035,9 +2023,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4" type="checkbox" id="nav-1-4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
       
-      <label class="md-nav__link" for="nav-1-4">
+      <label class="md-nav__link" for="__nav_1_4">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../audio.html" class="md-nav__link"
@@ -2047,7 +2035,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-4">
+        <label class="md-nav__title" for="__nav_1_4">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../audio.html" class="md-nav__link"
@@ -2057,7 +2045,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2091,9 +2078,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-3" type="checkbox" id="nav-1-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_3" type="checkbox" id="__nav_1_4_3" >
       
-      <label class="md-nav__link" for="nav-1-4-3">
+      <label class="md-nav__link" for="__nav_1_4_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Music.html" class="md-nav__link"
@@ -2103,7 +2090,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Music" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-3">
+        <label class="md-nav__title" for="__nav_1_4_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Music.html" class="md-nav__link"
@@ -2113,7 +2100,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2203,9 +2189,9 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-4-8" type="checkbox" id="nav-1-4-8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_8" type="checkbox" id="__nav_1_4_8" checked>
       
-      <label class="md-nav__link" for="nav-1-4-8">
+      <label class="md-nav__link" for="__nav_1_4_8">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="SoundSource.html" class="md-nav__link md-nav__link--active"
@@ -2215,7 +2201,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="SoundSource" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-4-8">
+        <label class="md-nav__title" for="__nav_1_4_8">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="SoundSource.html" class="md-nav__link md-nav__link--active"
@@ -2225,7 +2211,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2271,9 +2256,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5" type="checkbox" id="nav-1-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
       
-      <label class="md-nav__link" for="nav-1-5">
+      <label class="md-nav__link" for="__nav_1_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="../network.html" class="md-nav__link"
@@ -2283,7 +2268,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-1-5">
+        <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="../network.html" class="md-nav__link"
@@ -2294,7 +2279,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2303,9 +2287,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1" type="checkbox" id="nav-1-5-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1" type="checkbox" id="__nav_1_5_1" >
       
-      <label class="md-nav__link" for="nav-1-5-1">
+      <label class="md-nav__link" for="__nav_1_5_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp.html" class="md-nav__link"
@@ -2315,7 +2299,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Ftp" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-1">
+        <label class="md-nav__title" for="__nav_1_5_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp.html" class="md-nav__link"
@@ -2325,7 +2309,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2359,9 +2342,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-1-3" type="checkbox" id="nav-1-5-1-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_1_3" type="checkbox" id="__nav_1_5_1_3" >
       
-      <label class="md-nav__link" for="nav-1-5-1-3">
+      <label class="md-nav__link" for="__nav_1_5_1_3">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Ftp/Response.html" class="md-nav__link"
@@ -2371,7 +2354,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-1-3">
+        <label class="md-nav__title" for="__nav_1_5_1_3">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Ftp/Response.html" class="md-nav__link"
@@ -2381,7 +2364,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2427,9 +2409,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2" type="checkbox" id="nav-1-5-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2" type="checkbox" id="__nav_1_5_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2">
+      <label class="md-nav__link" for="__nav_1_5_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http.html" class="md-nav__link"
@@ -2439,7 +2421,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Http" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-2">
+        <label class="md-nav__title" for="__nav_1_5_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http.html" class="md-nav__link"
@@ -2450,7 +2432,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-          
             
   
   
@@ -2459,9 +2440,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-1" type="checkbox" id="nav-1-5-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_1" type="checkbox" id="__nav_1_5_2_1" >
       
-      <label class="md-nav__link" for="nav-1-5-2-1">
+      <label class="md-nav__link" for="__nav_1_5_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Request.html" class="md-nav__link"
@@ -2471,7 +2452,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Request" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-1">
+        <label class="md-nav__title" for="__nav_1_5_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Request.html" class="md-nav__link"
@@ -2481,7 +2462,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2509,9 +2489,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-2-2" type="checkbox" id="nav-1-5-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_2_2" type="checkbox" id="__nav_1_5_2_2" >
       
-      <label class="md-nav__link" for="nav-1-5-2-2">
+      <label class="md-nav__link" for="__nav_1_5_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Http/Response.html" class="md-nav__link"
@@ -2521,7 +2501,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Response" data-md-level="4">
-        <label class="md-nav__title" for="nav-1-5-2-2">
+        <label class="md-nav__title" for="__nav_1_5_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Http/Response.html" class="md-nav__link"
@@ -2531,7 +2511,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2589,9 +2568,9 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-5-5" type="checkbox" id="nav-1-5-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5_5" type="checkbox" id="__nav_1_5_5" >
       
-      <label class="md-nav__link" for="nav-1-5-5">
+      <label class="md-nav__link" for="__nav_1_5_5">
         <span class="md-nav__icon md-icon"></span>
         
           <a href="Socket.html" class="md-nav__link"
@@ -2601,7 +2580,7 @@
         </a>
       </label>
       <nav class="md-nav" aria-label="Socket" data-md-level="3">
-        <label class="md-nav__title" for="nav-1-5-5">
+        <label class="md-nav__title" for="__nav_1_5_5">
           <span class="md-nav__icon md-icon"></span>
           
             <a href="Socket.html" class="md-nav__link"
@@ -2611,7 +2590,6 @@
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2726,23 +2704,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="nav-2">
+      <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
           Tutorials
         
       </label>
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
             Tutorials
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2752,23 +2729,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
-      <label class="md-nav__link" for="nav-2-1">
+      <label class="md-nav__link" for="__nav_2_1">
         <span class="md-nav__icon md-icon"></span>
         
           System module
         
       </label>
       <nav class="md-nav" aria-label="System module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-1">
+        <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           
             System module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2820,23 +2796,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
-      <label class="md-nav__link" for="nav-2-2">
+      <label class="md-nav__link" for="__nav_2_2">
         <span class="md-nav__icon md-icon"></span>
         
           Window module
         
       </label>
       <nav class="md-nav" aria-label="Window module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-2">
+        <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           
             Window module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -2900,23 +2875,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
-      <label class="md-nav__link" for="nav-2-3">
+      <label class="md-nav__link" for="__nav_2_3">
         <span class="md-nav__icon md-icon"></span>
         
           Graphics module
         
       </label>
       <nav class="md-nav" aria-label="Graphics module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-3">
+        <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
           
             Graphics module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3028,23 +3002,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
       
-      <label class="md-nav__link" for="nav-2-4">
+      <label class="md-nav__link" for="__nav_2_4">
         <span class="md-nav__icon md-icon"></span>
         
           Audio module
         
       </label>
       <nav class="md-nav" aria-label="Audio module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-4">
+        <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
           
             Audio module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3108,23 +3081,22 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
-      <label class="md-nav__link" for="nav-2-5">
+      <label class="md-nav__link" for="__nav_2_5">
         <span class="md-nav__icon md-icon"></span>
         
           Network module
         
       </label>
       <nav class="md-nav" aria-label="Network module" data-md-level="2">
-        <label class="md-nav__title" for="nav-2-5">
+        <label class="md-nav__title" for="__nav_2_5">
           <span class="md-nav__icon md-icon"></span>
           
             Network module
           
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
           
             
   
@@ -3194,44 +3166,24 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#SF::SoundSource" class="md-nav__link">
-    SoundSource
-  </a>
-  
-    <nav class="md-nav" aria-label="SoundSource">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#included-modules" class="md-nav__link">
-    Included modules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#direct-known-subclasses" class="md-nav__link">
-    Direct known subclasses
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#SF::SoundSource-methods" class="md-nav__link">
     Methods
   </a>
   
@@ -3368,11 +3320,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -3382,25 +3329,20 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/oprypin/crsfml/blob/master/docs/api/SF/SoundSource.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L195" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>SoundSource</h1>
-                
                 <div class="doc doc-object doc-type class">
-<h2 class="doc doc-heading" id="SF::SoundSource">
-
-abstract class <code>SF::SoundSource</code>
-      <br />
-<small>inherits <code>Reference</code></small>
-  <a class="headerlink" href="#SF::SoundSource" title="Permanent link">#</a></h2>
-<div class="doc doc-contents first">
+<h1 id="SF::SoundSource" class="doc doc-heading">abstract class <code>SF::SoundSource</code>
+      <br/><small>inherits <code>Reference</code></small>
+<a href="#SF::SoundSource" class="headerlink" title="Permanent link">#</a></h1>
+  <div class="doc doc-contents first">
 <p>Base class defining a sound's properties</p>
 <p><a href="#SF::SoundSource"><code>SF::SoundSource</code></a> is not meant to be used directly, it
 only serves as a common base for all audio objects
@@ -3409,37 +3351,36 @@ that can live in the audio environment.</p>
 volume, position, attenuation, etc. All of them can be
 changed at any time with no impact on performances.</p>
 <p><em>See also:</em> <a href="Sound.html#SF::Sound"><code>SF::Sound</code></a>, <a href="SoundStream.html#SF::SoundStream"><code>SF::SoundStream</code></a></p>
-<div class="doc doc-children">
-<h3 id="included-modules">Included modules<a class="headerlink" href="#included-modules" title="Permanent link">#</a></h3>
-<code><a href="AlResource.html#SF::AlResource">SF::AlResource</a></code>
-            <h3 id="direct-known-subclasses">Direct known subclasses<a class="headerlink" href="#direct-known-subclasses" title="Permanent link">#</a></h3>
-<code><a href="Sound.html#SF::Sound">SF::Sound</a></code>
+      <div class="doc doc-children">
+
+            <h2>Included modules</h2>
+              <code><a href="AlResource.html#SF::AlResource">SF::AlResource</a></code>
+            <h2>Direct known subclasses</h2>
+              <code><a href="Sound.html#SF::Sound">SF::Sound</a></code>
               <code><a href="SoundStream.html#SF::SoundStream">SF::SoundStream</a></code>
 
 
-            <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">#</a></h3>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#attenuation">
+<h2 id="SF::SoundSource-methods">Methods<a href="#SF::SoundSource-methods" class="headerlink" title="Permanent link">#</a></h2>
 
-    <code>
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#attenuation" class="doc doc-heading">    <code>
       #attenuation<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#attenuation" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#attenuation" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the attenuation factor of the sound</p>
 <p><em>Returns:</em> Attenuation factor of the sound</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#attenuation=(attenuation)"><code>attenuation=</code></a>, <a href="#SF::SoundSource#min_distance"><code>min_distance</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L361">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#attenuation=(attenuation)">
+<p><em>See also:</em> <a href="#SF::SoundSource#attenuation=(attenuation)"><code>attenuation=</code></a>, <a href="#SF::SoundSource#min_distance"><code>min_distance</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L361">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#attenuation=(attenuation)" class="doc doc-heading">    <code>
       #attenuation=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">attenuation</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#attenuation=(attenuation)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#attenuation=(attenuation)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the attenuation factor of the sound</p>
 <p>The attenuation is a multiplicative factor which makes
 the sound more or less loud according to its distance
@@ -3452,44 +3393,41 @@ The default value of the attenuation is 1.</p>
 <ul>
 <li><em>attenuation</em> - New attenuation factor of the sound</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#attenuation"><code>attenuation</code></a>, <a href="#SF::SoundSource#min_distance=(distance)"><code>min_distance=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L306">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#finalize">
+<p><em>See also:</em> <a href="#SF::SoundSource#attenuation"><code>attenuation</code></a>, <a href="#SF::SoundSource#min_distance=(distance)"><code>min_distance=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L306">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#finalize" class="doc doc-heading">    <code>
       #finalize<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#finalize" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
-<p>Destructor</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L208">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#min_distance">
+<a href="#SF::SoundSource#finalize" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
+<p>Destructor</p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L208">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#min_distance" class="doc doc-heading">    <code>
       #min_distance<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#min_distance" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#min_distance" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the minimum distance of the sound</p>
 <p><em>Returns:</em> Minimum distance of the sound</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#min_distance=(distance)"><code>min_distance=</code></a>, <a href="#SF::SoundSource#attenuation"><code>attenuation</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L352">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#min_distance=(distance)">
+<p><em>See also:</em> <a href="#SF::SoundSource#min_distance=(distance)"><code>min_distance=</code></a>, <a href="#SF::SoundSource#attenuation"><code>attenuation</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L352">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#min_distance=(distance)" class="doc doc-heading">    <code>
       #min_distance=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">distance</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#min_distance=(distance)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#min_distance=(distance)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the minimum distance of the sound</p>
 <p>The "minimum distance" of a sound is the maximum
 distance at which it is heard at its maximum volume. Further
@@ -3500,47 +3438,44 @@ The default value of the minimum distance is 1.</p>
 <ul>
 <li><em>distance</em> - New minimum distance of the sound</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#min_distance"><code>min_distance</code></a>, <a href="#SF::SoundSource#attenuation=(attenuation)"><code>attenuation=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L289">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#pause">
+<p><em>See also:</em> <a href="#SF::SoundSource#min_distance"><code>min_distance</code></a>, <a href="#SF::SoundSource#attenuation=(attenuation)"><code>attenuation=</code></a></p>  </div>
 
-<small style="font-weight: normal">abstract</small>     <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L289">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#pause" class="doc doc-heading"><small style="font-weight: normal">abstract</small>     <code>
       #pause<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#pause" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#pause" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Pause the sound source</p>
 <p>This function pauses the source if it was playing,
 otherwise (source already paused or stopped) it has no effect.</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#play"><code>play</code></a>, <a href="#SF::SoundSource#stop"><code>stop</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L379">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#pitch">
+<p><em>See also:</em> <a href="#SF::SoundSource#play"><code>play</code></a>, <a href="#SF::SoundSource#stop"><code>stop</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L379">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#pitch" class="doc doc-heading">    <code>
       #pitch<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#pitch" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#pitch" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the pitch of the sound</p>
 <p><em>Returns:</em> Pitch of the sound</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#pitch=(pitch)"><code>pitch=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L314">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#pitch=(pitch)">
+<p><em>See also:</em> <a href="#SF::SoundSource#pitch=(pitch)"><code>pitch=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L314">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#pitch=(pitch)" class="doc doc-heading">    <code>
       #pitch=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">pitch</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#pitch=(pitch)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#pitch=(pitch)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the pitch of the sound</p>
 <p>The pitch represents the perceived fundamental frequency
 of a sound; thus you can make a sound more acute or grave
@@ -3550,48 +3485,45 @@ The default value for the pitch is 1.</p>
 <ul>
 <li><em>pitch</em> - New pitch to apply to the sound</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#pitch"><code>pitch</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L223">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#play">
+<p><em>See also:</em> <a href="#SF::SoundSource#pitch"><code>pitch</code></a></p>  </div>
 
-<small style="font-weight: normal">abstract</small>     <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L223">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#play" class="doc doc-heading"><small style="font-weight: normal">abstract</small>     <code>
       #play<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#play" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#play" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Start or resume playing the sound source</p>
 <p>This function starts the source if it was stopped, resumes
 it if it was paused, and restarts it from the beginning if
 it was already playing.</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#pause"><code>pause</code></a>, <a href="#SF::SoundSource#stop"><code>stop</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L372">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#position">
+<p><em>See also:</em> <a href="#SF::SoundSource#pause"><code>pause</code></a>, <a href="#SF::SoundSource#stop"><code>stop</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L372">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#position" class="doc doc-heading">    <code>
       #position<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#position" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#position" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the 3D position of the sound in the audio scene</p>
 <p><em>Returns:</em> Position of the sound</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#position=(position)"><code>position=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L332">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#position=(position)">
+<p><em>See also:</em> <a href="#SF::SoundSource#position=(position)"><code>position=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L332">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#position=(position)" class="doc doc-heading">    <code>
       #position=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">position</span> <span class="p">:</span> <a href="Vector3f.html#SF::Vector3f">Vector3f</a><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#position=(position)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#position=(position)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the 3D position of the sound in the audio scene</p>
 <p>Only sounds with one channel (mono sounds) can be
 spatialized.
@@ -3599,18 +3531,17 @@ The default position of a sound is (0, 0, 0).</p>
 <ul>
 <li><em>position</em> - Position of the sound in the scene</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#position"><code>position</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L260">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#relative_to_listener=(relative)">
+<p><em>See also:</em> <a href="#SF::SoundSource#position"><code>position</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L260">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#relative_to_listener=(relative)" class="doc doc-heading">    <code>
       #relative_to_listener=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">relative</span> <span class="p">:</span> <span class="n">Bool</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#relative_to_listener=(relative)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#relative_to_listener=(relative)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Make the sound's position relative to the listener or absolute</p>
 <p>Making a sound relative to the listener will ensure that it will always
 be played the same way regardless of the position of the listener.
@@ -3620,33 +3551,31 @@ The default value is false (position is absolute).</p>
 <ul>
 <li><em>relative</em> - True to set the position relative, false to set it absolute</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#relative_to_listener?"><code>relative_to_listener?</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L274">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#relative_to_listener?">
+<p><em>See also:</em> <a href="#SF::SoundSource#relative_to_listener?"><code>relative_to_listener?</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L274">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#relative_to_listener?" class="doc doc-heading">    <code>
       #relative_to_listener?<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Bool</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#relative_to_listener?" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#relative_to_listener?" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Tell whether the sound's position is relative to the
 listener or is absolute</p>
 <p><em>Returns:</em> True if the position is relative, false if it's absolute</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#relative_to_listener=(relative)"><code>relative_to_listener=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L343">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#set_position(x,y,z)">
+<p><em>See also:</em> <a href="#SF::SoundSource#relative_to_listener=(relative)"><code>relative_to_listener=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L343">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#set_position(x,y,z)" class="doc doc-heading">    <code>
       #set_position<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">Number</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#set_position(x,y,z)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#set_position(x,y,z)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the 3D position of the sound in the audio scene</p>
 <p>Only sounds with one channel (mono sounds) can be
 spatialized.
@@ -3656,73 +3585,69 @@ The default position of a sound is (0, 0, 0).</p>
 <li><em>y</em> - Y coordinate of the position of the sound in the scene</li>
 <li><em>z</em> - Z coordinate of the position of the sound in the scene</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#position"><code>position</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L248">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#status">
+<p><em>See also:</em> <a href="#SF::SoundSource#position"><code>position</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L248">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#status" class="doc doc-heading">    <code>
       #status<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <a href="SoundSource/Status.html#SF::SoundSource::Status">SoundSource::Status</a></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#status" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#status" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the current status of the sound (stopped, paused, playing)</p>
-<p><em>Returns:</em> Current status of the sound</p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L391">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#stop">
+<p><em>Returns:</em> Current status of the sound</p>  </div>
 
-<small style="font-weight: normal">abstract</small>     <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L391">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#stop" class="doc doc-heading"><small style="font-weight: normal">abstract</small>     <code>
       #stop<span style="font-weight: normal"><code class="highlight language-crystal"></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#stop" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#stop" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Stop playing the sound source</p>
 <p>This function stops the source if it was playing or paused,
 and does nothing if it was already stopped.
 It also resets the playing position (unlike <a href="#SF::SoundSource#pause"><code>pause()</code></a>).</p>
-<p><em>See also:</em> <a href="#SF::SoundSource#play"><code>play</code></a>, <a href="#SF::SoundSource#pause"><code>pause</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L387">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#volume">
+<p><em>See also:</em> <a href="#SF::SoundSource#play"><code>play</code></a>, <a href="#SF::SoundSource#pause"><code>pause</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L387">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#volume" class="doc doc-heading">    <code>
       #volume<span style="font-weight: normal"> <code class="highlight language-crystal"><span class="p">:</span> <span class="n">Float32</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#volume" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#volume" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Get the volume of the sound</p>
 <p><em>Returns:</em> Volume of the sound, in the range <code>0..100</code></p>
-<p><em>See also:</em> <a href="#SF::SoundSource#volume=(volume)"><code>volume=</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L323">View source</a>
-</div>
-<div class="doc doc-object doc-method doc-instance_method">
-<h4 class="doc doc-heading" id="SF::SoundSource#volume=(volume)">
+<p><em>See also:</em> <a href="#SF::SoundSource#volume=(volume)"><code>volume=</code></a></p>  </div>
 
-    <code>
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L323">View source</a>
+</div>
+
+<div class="doc doc-object doc-method doc-instance_method">
+<h3 id="SF::SoundSource#volume=(volume)" class="doc doc-heading">    <code>
       #volume=<span style="font-weight: normal"><code class="highlight language-crystal"><span class="p">(</span><span class="n">volume</span> <span class="p">:</span> <span class="n">Number</span><span class="p">)</span></code></span>
     </code>
-  <a class="headerlink" href="#SF::SoundSource#volume=(volume)" title="Permanent link">#</a></h4>
-<div class="doc doc-contents ">
+<a href="#SF::SoundSource#volume=(volume)" class="headerlink" title="Permanent link">#</a></h3>
+  <div class="doc doc-contents ">
 <p>Set the volume of the sound</p>
 <p>The volume is a value between 0 (mute) and 100 (full volume).
 The default value for the volume is 100.</p>
 <ul>
 <li><em>volume</em> - Volume of the sound</li>
 </ul>
-<p><em>See also:</em> <a href="#SF::SoundSource#volume"><code>volume</code></a></p>
-</div>
-<a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L234">View source</a>
-</div>
-</div>
-</div>
+<p><em>See also:</em> <a href="#SF::SoundSource#volume"><code>volume</code></a></p>  </div>
+
+    <a class="doc-source-link" href="https://github.com/oprypin/crsfml/blob/master/src/audio/obj.cr#L234">View source</a>
+</div>      </div>
+  </div>
+
 </div>
                 
               
@@ -3739,40 +3664,38 @@ The default value for the volume is 100.</p>
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="SoundRecorder.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="SoundRecorder.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SoundRecorder
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                SoundRecorder
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="SoundSource/Status.html" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Status
             </div>
-          </a>
-        
-        
-          <a href="SoundSource/Status.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Status
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3789,19 +3712,13 @@ The default value for the volume is 100.</p>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../../assets/javascripts/vendor.53cc9318.min.js"></script>
-      <script src="../../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.tabs'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>
